@@ -74,6 +74,11 @@ const megaMenuData = {
   },
   
   // Admissions Menu
+  'admissions-process': {
+    overview: `<h4 class="mega-heading">ADMISSIONS PROCESS</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s admission process is designed to guide students through their journey from eligibility and application to selection and enrolment. Applicants can explore programme requirements, entrance examination criteria, application details, fees and scholarships, while the admissions team provides guidance throughout the process. The institute’s approach aims to make admissions structured, transparent and accessible for aspiring management professionals.</p>`,
+    image: `<img src="images/collaboration.jpg" alt="Admissions Process" class="mega-image">`
+  },
   'pgdm-fee-structure': {
     overview: `<h4 class="mega-heading">PGDM FEE STRUCTURE</h4>
                <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The PGDM fee structure outlines the programme’s registration, first-year tuition, second-year tuition and development fees, along with their respective payment schedules. For the 2027–29 batch, the total programme fee is ₹6.95 lakh, plus applicable taxes, with payments scheduled across the admission and academic milestones.</p>`,
@@ -100,6 +105,60 @@ const megaMenuData = {
     overview: `<h4 class="mega-heading">FACULTY & INDUSTRY MENTORS</h4>
                <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE brings together accomplished faculty and experienced industry professionals who connect academic knowledge with real-world business challenges. Through its “A Mentor Every MILE” model, students engage with industry leaders through leadership sessions, one-on-one mentoring, fireside chats and industry-integrated projects. Regular interactions with C-suite leaders, entrepreneurs, policymakers and innovators further enrich the learning experience with practical insights and professional perspectives.</p>`,
     image: `<img src="images/collaboration.jpg" alt="Faculty & Mentors" class="mega-image">`
+  },
+  'faculty-directory': {
+    overview: `<h4 class="mega-heading">FACULTY DIRECTORY</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s faculty directory brings together accomplished academic scholars and experienced industry practitioners across management, analytics, marketing, business communication and other specialised areas. The directory features resident faculty and visiting industry leaders, bringing academic knowledge and practical business perspectives into the learning experience.</p>`,
+    image: `<img src="images/classroom.jpg" alt="Faculty Directory" class="mega-image">`
+  },
+  
+  // Placements Menu
+  'our-recruiters': {
+    overview: `<h4 class="mega-heading">OUR RECRUITERS</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE has built a strong industry network of 200+ recruiters, providing students with career opportunities across leading national and multinational organisations. Its recruiter ecosystem spans diverse industries and sectors, connecting students with companies for internships, placements and long-term career opportunities.</p>`,
+    image: `<img src="images/hospitality.jpg" alt="Our Recruiters" class="mega-image">`
+  },
+  'placements-overview': {
+    overview: `<h4 class="mega-heading">PLACEMENTS</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s placement ecosystem connects students with 200+ organisations across diverse sectors, supported by strong industry engagement and practical learning. For the 2024–26 PGDM batch, the institute reports 500+ placement offers, with the highest international package at ₹49 LPA and highest domestic package at ₹18 LPA. The placement process is focused on helping students transition from academic learning to industry-ready careers and professional opportunities.</p>`,
+    image: `<img src="images/global.jpg" alt="Placements" class="mega-image">`
+  },
+  'recruitment-process': {
+    overview: `<h4 class="mega-heading">RECRUITMENT PROCESS</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE has streamlined its recruitment process through technology, industry integration and outcome-driven education, enabling organisations to connect efficiently with the right talent. Its centralised recruitment platform helps recruiters identify Day Zero Professionals based on role requirements, skills and organisational needs. The Career Development & Placement Cell, supported by certified trainers and industry mentors, prepares students to perform, adapt and grow in dynamic corporate environments.</p>`,
+    image: `<img src="images/classroom.jpg" alt="Recruitment Process" class="mega-image">`
+  },
+  
+  // More Menu
+  'seat-vacancy': {
+    overview: `<h4 class="mega-heading">SEAT VACANCY DETAILS</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Seat Vacancy Details section provides applicants with updated information on available seats across the programmes offered by Lexicon MILE. It helps prospective students understand the current availability of seats, programme-wise vacancy details and admission opportunities, enabling them to make informed decisions and proceed with the admission process accordingly.</p>`,
+    image: `<img src="images/sliders/4.jpg-1.jpeg" alt="Seat Vacancy" class="mega-image">`
+  },
+  'campus': {
+    overview: `<h4 class="mega-heading">CAMPUS TOUR</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Lexicon MILE campus is designed as an interactive and collaborative learning environment, featuring modern classrooms, digital learning facilities and dedicated spaces for teamwork and practical exposure. The campus also houses Hyper Build – The Lexicon MILE AI Lab, where students work on real corporate challenges, data-driven solutions and practical AI applications. With collaborative spaces and a 360° virtual tour, students can experience the campus and its learning environment before they visit.</p>`,
+    image: `<img src="images/campus.jpg" alt="Campus Tour" class="mega-image">`
+  },
+  'blogs': {
+    overview: `<h4 class="mega-heading">BLOGS</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Lexicon MILE blog brings together current insights on management education, careers, business and industry trends. Covering topics across PGDM, MBA Global and BBA, the articles explore programme choices, career opportunities, placements, skills, international exposure and emerging trends—helping students make more informed academic and career decisions.</p>`,
+    image: `<img src="images/classroom.jpg" alt="Blogs" class="mega-image">`
+  },
+  'events-webinars': {
+    overview: `<h4 class="mega-heading">EVENTS & WEBINARS</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE creates a vibrant learning environment through leadership conclaves, industry summits, TEDx events, masterclasses, industrial visits and thought-leadership sessions. These experiences connect students with industry leaders, entrepreneurs and professionals, encouraging networking, practical learning and exposure to real-world business perspectives.</p>`,
+    image: `<img src="images/collaboration.jpg" alt="Events" class="mega-image">`
+  },
+  'partnerships': {
+    overview: `<h4 class="mega-heading">PARTNERSHIPS</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE collaborates with leading academic institutions, industry organisations and professional networks to strengthen learning beyond the classroom. These partnerships support joint research, faculty interactions, student learning opportunities, curriculum development, internships, live projects and industry-mentored experiences, helping students connect academic knowledge with real business challenges.</p>`,
+    image: `<img src="images/global.jpg" alt="Partnerships" class="mega-image">`
+  },
+  'contact': {
+    overview: `<h4 class="mega-heading">CONTACT US</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Connect with Lexicon MILE for admission, placement and general enquiries through its dedicated support channels. The institute’s Pune campus is located at MILE Tower, GAT No. 726, Pune-Nagar Road, Wagholi, with dedicated contacts available to assist prospective students, recruiters and other visitors.</p>`,
+    image: `<img src="images/sliders/1.jpg-1.jpeg" alt="Contact Us" class="mega-image">`
   }
 };
 
@@ -204,7 +263,7 @@ const information = {
   eligibility: { eyebrow: 'ADMISSIONS / ELIGIBILITY', title: 'Find your fit.', body: '<p>Eligibility requirements vary by program. Academic qualifications, entrance-test requirements and selection criteria will be published following institutional confirmation.</p><p>Explore each program to understand its focus. No unverified eligibility criteria are presented in this concept.</p>' },
   fees: { eyebrow: 'ADMISSIONS / PROGRAM FEES', title: 'Invest in what’s next.', body: '<p>A complete, program-specific fee schedule will be available before applications go live, including the payment schedule and any additional charges.</p><p class="dialog-notice">Fees have not been supplied for this design concept. Please rely only on the official fee structure once published.</p>' },
   scholarships: { eyebrow: 'ADMISSIONS / SCHOLARSHIPS', title: 'Make ambition possible.', body: '<p>Scholarship availability, eligibility, amounts and application timelines will be shared once the official policy is confirmed.</p><p class="dialog-notice">This concept does not promise scholarship funding or financial assistance.</p>' },
-  placements: { eyebrow: 'CAREERS / BUILT FOR THE WORLD OF WORK', title: 'Your potential. Real impact.', body: '<p>Industry exposure, practical learning and corporate relationships connect education to the world of work.</p><ul><li>500+ students placed</li><li>200+ recruiters / companies</li><li>49 LPA highest package — context to be confirmed</li><li>22 LPA highest package — context to be confirmed</li></ul><p class="dialog-notice">These figures were supplied for the homepage concept. Cohorts, reporting periods, program applicability and salary components have not been provided. They are not a placement guarantee. A verified placement report is required before publication.</p>' },
+  placements: { eyebrow: 'CAREERS / BUILT FOR THE WORLD OF WORK', title: 'Your potential. Real impact.', body: '<p>Industry exposure, practical learning and corporate relationships connect education to the world of work.</p><ul><li>500+ students placed</li><li>200+ recruiters / companies</li><li>49 LPA highest package — context to be confirmed</li><li>18 LPA highest package — context to be confirmed</li></ul><p class="dialog-notice">These figures were supplied for the homepage concept. Cohorts, reporting periods, program applicability and salary components have not been provided. They are not a placement guarantee. A verified placement report is required before publication.</p>' },
   contact: { eyebrow: 'CONNECT / LEXICON MILE', title: 'Let’s start a conversation.', body: '<p>Explore your next chapter with Lexicon MILE in Pune, Maharashtra, India.</p><p class="dialog-notice">The official campus address, admissions email and phone number have not been provided. Verified contact channels will be added before launch.</p>' },
   whatsapp: { eyebrow: 'CONNECT / WHATSAPP', title: 'One conversation away.', body: '<p>Our WhatsApp enquiry channel will make it easier to explore programs and admissions.</p><p class="dialog-notice">An official WhatsApp number has not yet been configured. No message has been sent. Verified contact details are needed before enabling this action.</p>' },
   call: { eyebrow: 'CONNECT / CALL', title: 'Talk about your next step.', body: '<p>Speak with the admissions team about choosing a program and preparing your application.</p><p class="dialog-notice">The official admissions phone number has not yet been provided. This preview does not place calls.</p>' },
