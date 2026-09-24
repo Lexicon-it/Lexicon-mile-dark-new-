@@ -1,0 +1,12 @@
+<h2>Choose Your Path<span class="period">.</span></h2>
+<h2>Education That Moves<br>Beyond The Classroom<span class="period">.</span></h2>
+<h2>Learn From People Who've<br>Built What Matters<span class="period">.</span></h2>
+<h2>Recognition That Speaks<span class="period">.</span></h2>
+<h2>Where Ambition<br>Meets Opportunity<span class="period">.</span></h2>
+<h2>Built For The<br>World Of Work<span class="period">.</span></h2>
+<h2>Where Our Alumni Go<span class="period">.</span></h2>
+<h2>Don't Just Take<br>Our Word For It<span class="period">.</span></h2>
+<h2>Experience Life<br>At Lexicon MILE<span class="period">.</span></h2>
+<h2>More Than A Degree<span class="period">.</span></h2>
+<h2>Real People.<br>Real Experiences<span class="period">.</span></h2>
+<h2>Your Next Chapter<br>Starts <span>Here.</span><span class="cta-arrow" aria-hidden="true">↗</span></h2>
