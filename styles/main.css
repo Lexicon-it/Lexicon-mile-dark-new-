@@ -506,7 +506,8 @@ button {
 .mega-col-image {
     flex: 1.5;
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .mega-heading {
@@ -1917,7 +1918,8 @@ button {
 .section-nav>div {
     display: flex;
     gap: 10px;
-    justify-content: flex-end
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .life-track {
@@ -3651,7 +3653,8 @@ button {
 
     .testimonial-controls {
         margin-top: 24px;
-        justify-content: flex-end
+        justify-content: flex-start;
+    align-items: flex-end;
     }
 
     .testimonial-controls .icon-button {
