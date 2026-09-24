@@ -4,161 +4,160 @@ const megaMenuData = {
   // About Us Menu
   'about-lexicon': {
     overview: `<h4 class="mega-heading">OVERVIEW</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Founded in 2006 in Pune, The Lexicon Group has evolved into a premier educational and business leader, empowering individuals at every stage of life.</p>`,
-    image: `<img src="images/06.Banner.png" alt="About Lexicon" class="mega-image">`
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Founded in 2006 in Pune, The Lexicon<br>Group has evolved into a premier<br>educational and business leader,<br>empowering individuals at every stage<br>of life through diverse initiatives.<br>The group continues to create<br>opportunities for learning, growth<br>and development with a strong<br>focus on excellence.</p>`,
+    image: `<img src="images/portrait-1.jpg" alt="About Lexicon" class="mega-image">`
   },
   'lexicon-group': {
     overview: `<h4 class="mega-heading">LEXICON GROUP</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Lexicon Group is a prominent Pune-based conglomerate founded in 2006, dedicated to fostering excellence across education, wellness, media, and innovative ventures. Headquartered in Pune, India, the group has evolved from its roots in education to a diverse ecosystem that impacts thousands of lives through quality-driven initiatives in multiple sectors.</p>`,
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Lexicon Group is a prominent<br>Pune-based conglomerate founded<br>in 2006, dedicated to fostering<br>excellence across education, wellness,<br>media, and innovative ventures.<br>Headquartered in Pune, the group<br>has evolved into a diverse ecosystem<br>that impacts thousands of lives<br>through quality-driven initiatives.</p>`,
     image: `<img src="images/campus.jpg" alt="Lexicon Group" class="mega-image">`
   },
   'managing-trustees': {
     overview: `<h4 class="mega-heading">MANAGING TRUSTEES</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Managing Trustees of Lexicon MILE bring together visionary leadership, industry experience and a strong commitment to quality education. Their collective vision focuses on innovation, excellence, values and holistic student development, while fostering industry relevance, lifelong learning and leadership for the future.</p>`,
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Managing Trustees of Lexicon MILE<br>bring together visionary leadership,<br>industry experience and a strong<br>commitment to quality education.<br>Their collective vision focuses on<br>innovation, excellence, values and<br>holistic student development, while<br>fostering industry relevance, lifelong<br>learning and leadership for the future.</p>`,
     image: `<img src="images/classroom.jpg" alt="Managing Trustees" class="mega-image">`
   },
   'ceo-message': {
-    overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">CEO'S MESSAGE</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.5; margin-top: 0; margin-bottom: 4px;">Dear Students, Faculty, & Industry Partners,</p>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.5; margin-top: 0; margin-bottom: 0;">Welcome to Lexicon Management Institute of Leadership & Excellence (Lexicon MILE). As CEO of this institution, I see Lexicon MILE as a long term commitment to developing leaders who think independently, act responsibly, and remain grounded while navigating complexity.</p>`,
+    overview: `<h4 class="mega-heading">CEO'S MESSAGE</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Dear Students, Faculty, & Industry<br>Partners, Welcome to Lexicon<br>Management Institute of Leadership<br>& Excellence (Lexicon MILE). As CEO,<br>I see Lexicon MILE as a long-term<br>commitment to developing leaders<br>who think independently, act responsibly,<br>and remain grounded while<br>navigating complexity.</p>`,
     image: `<img src="images/global.jpg" alt="CEO Message" class="mega-image">`
   },
   'governing-body': {
     overview: `<h4 class="mega-heading">GOVERNING BODY</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Board of Governors of Lexicon MILE brings together experienced academicians, industry professionals, technologists and education leaders from diverse fields. Their collective expertise supports academic excellence, industry relevance, strong governance and progressive learning, contributing to the institution’s continued growth and development.</p>`,
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Board of Governors of Lexicon<br>MILE brings together experienced<br>academicians, industry professionals,<br>technologists and education leaders<br>from diverse fields. Their collective<br>expertise supports academic excellence,<br>industry relevance, strong governance<br>and progressive learning, contributing<br>to continued institutional growth.</p>`,
     image: `<img src="images/collaboration.jpg" alt="Governing Body" class="mega-image">`
   },
   'ranking-accreditation': {
     overview: `<h4 class="mega-heading">RANKING & ACCREDITATION</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE has been recognised through prestigious awards and accolades for its excellence in management education, academic leadership and industry-oriented learning. These recognitions reflect the institution’s achievements in placements, innovation, digital initiatives, leadership development and its continued efforts to create industry-ready professionals</p>`,
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE has been recognised<br>through prestigious awards and<br>accolades for excellence in<br>management education, academic<br>leadership and industry-oriented<br>learning. These recognitions reflect<br>achievements in placements, innovation,<br>digital initiatives and leadership<br>development for industry-ready professionals.</p>`,
     image: `<img src="images/hospitality.jpg" alt="Ranking and Accreditation" class="mega-image">`
   },
 
   // Programs Menu
   'pgdm': {
-    overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">PGDM SPECIALIZATIONS</h4>
-               <a href="#pgdm-bm" class="mega-link" style="margin-bottom: 2px;">PGDM in Business Management <span>↗</span></a>
-               <a href="#pgdm-mf" class="mega-link" style="margin-bottom: 2px;">PGDM in Marketing & Finance <span>↗</span></a>
-               <a href="#pgdm-rba" class="mega-link" style="margin-bottom: 8px;">PGDM in Research and Business Analytics <span>↗</span></a>
-               <span style="display: inline-block; padding: 4px 10px; background: #ffffff1a; color: #8cb4f5; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; border-radius: 4px; margin-bottom: 8px; align-self: flex-start;">2 Years · AICTE Approved</span>
-               <p style="color: #b1bfd2; font-size: 13px; line-height: 1.5; margin-top: 0; margin-bottom: 0;">A 2-year, full-time, AICTE-approved PGDM (Approval No. 1-4259511) designed around entrepreneurship, applied AI, and a corporate co-learning model.</p>`,
+    overview: `<h4 class="mega-heading">PGDM SPECIALIZATIONS</h4>
+               <a href="#pgdm-bm" class="mega-link" style="margin-bottom: 5px;">PGDM in Business Management <span>↗</span></a>
+               <a href="#pgdm-mf" class="mega-link" style="margin-bottom: 5px;">PGDM in Marketing & Finance <span>↗</span></a>
+               <a href="#pgdm-rba" class="mega-link" style="margin-bottom: 15px;">PGDM in Research and Business Analytics <span>↗</span></a>
+               <span style="display: inline-block; padding: 4px 10px; background: #ffffff1a; color: #8cb4f5; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; border-radius: 4px; margin-bottom: 12px; align-self: flex-start;">2 Years · AICTE Approved</span>
+               <p style="color: #b1bfd2; font-size: 13px; line-height: 1.6;">A 2-year, full-time, AICTE-approved PGDM<br>(Approval No. 1-4259511) designed around<br>entrepreneurship, applied AI and a<br>corporate co-learning model.</p>`,
     image: `<img src="images/classroom.jpg" alt="PGDM" class="mega-image">`
   },
   'mba-global': {
-    overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">MBA GLOBAL TRACKS</h4>
-               <a href="#mba-uk" class="mega-link" style="margin-bottom: 2px;">MBA Global · USW, UK <span>↗</span></a>
-               <a href="#mba-malaysia" class="mega-link" style="margin-bottom: 2px;">MBA Global · INTI, Malaysia <span>↗</span></a>
-               <a href="#mba-sbs" class="mega-link" style="margin-bottom: 8px;">MBA Global · SBS Swiss Business School <span>↗</span></a>
-               <span style="display: inline-block; padding: 4px 10px; background: #ffffff1a; color: #8cb4f5; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; border-radius: 4px; margin-bottom: 8px; align-self: flex-start;">Global Exposure</span>
-               <p style="color: #b1bfd2; font-size: 13px; line-height: 1.5; margin-top: 0; margin-bottom: 0;">The MBA Global programme combines management education at Lexicon MILE with international learning through the University of South Wales, UK. Students complete the initial academic component at Lexicon MILE and progress to USW for the final term, subject to eligibility and document verification. The programme offers exposure to global academic standards, international learning and a UK university experience.</p>`,
+    overview: `<h4 class="mega-heading">MBA GLOBAL TRACKS</h4>
+               <a href="#mba-usw" class="mega-link" style="margin-bottom: 5px;">MBA Global · USW, UK <span>↗</span></a>
+               <a href="#mba-inti" class="mega-link" style="margin-bottom: 5px;">MBA Global · INTI, Malaysia <span>↗</span></a>
+               <a href="#mba-sbs" class="mega-link" style="margin-bottom: 15px;">MBA Global · SBS Swiss Business School <span>↗</span></a>
+               <span style="display: inline-block; padding: 4px 10px; background: #ffffff1a; color: #8cb4f5; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; border-radius: 4px; margin-bottom: 15px;">Global Exposure</span>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7;">The MBA Global programme combines<br>management education at Lexicon MILE<br>with international learning through partner<br>universities, offering global academic<br>standards, international learning and exposure.</p>`,
     image: `<img src="images/global.jpg" alt="MBA Global" class="mega-image">`
   },
   'bba': {
-    overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">BBA SPECIALIZATIONS</h4>
-               <a href="#bba-fm" class="mega-link" style="margin-bottom: 2px;">Finance Management (FM) <span>↗</span></a>
-               <a href="#bba-hrm" class="mega-link" style="margin-bottom: 2px;">Human Resource Management (HRM) <span>↗</span></a>
-               <a href="#bba-mm" class="mega-link" style="margin-bottom: 2px;">Marketing Management (MM) <span>↗</span></a>
-               <a href="#bba-abm" class="mega-link" style="margin-bottom: 2px;">Agri Business Management (ABM) <span>↗</span></a>
-               <a href="#bba-sm" class="mega-link" style="margin-bottom: 8px;">Services Management (SM) <span>↗</span></a>
-               <span style="display: inline-block; padding: 4px 10px; background: #ffffff1a; color: #8cb4f5; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; border-radius: 4px; margin-bottom: 8px; align-self: flex-start;">4 Years · AICTE Approved</span>
-               <p style="color: #b1bfd2; font-size: 13px; line-height: 1.5; margin-top: 0; margin-bottom: 0;">Lexicon MILE’s BBA goes beyond conventional business education by combining core business fundamentals with AI, analytics and hands-on industry exposure. The programme develops analytical thinking, AI-driven decision-making, practical business skills and professional confidence through real-world projects, internships and industry tools. Students can specialise in Finance, HR, Marketing, Agri Business or Services Management, while building the skills and mindset to become Day Zero Professionals.</p>`,
+    overview: `<h4 class="mega-heading">BBA SPECIALIZATIONS</h4>
+               <a href="#bba-fm" class="mega-link" style="margin-bottom: 5px;">Finance Management (FM) <span>↗</span></a>
+               <a href="#bba-hrm" class="mega-link" style="margin-bottom: 5px;">Human Resource Management (HRM) <span>↗</span></a>
+               <a href="#bba-mm" class="mega-link" style="margin-bottom: 5px;">Marketing Management (MM) <span>↗</span></a>
+               <a href="#bba-abm" class="mega-link" style="margin-bottom: 5px;">Agri Business Management (ABM) <span>↗</span></a>
+               <a href="#bba-sm" class="mega-link" style="margin-bottom: 15px;">Services Management (SM) <span>↗</span></a>
+               <span style="display: inline-block; padding: 4px 10px; background: #ffffff1a; color: #8cb4f5; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; border-radius: 4px; margin-bottom: 15px;">4 Years · AICTE Approved</span>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7;">Lexicon MILE’s BBA combines core business<br>fundamentals with AI, analytics and hands-on<br>industry exposure.</p>`,
     image: `<img src="images/collaboration.jpg" alt="BBA" class="mega-image">`
   },
   'hmct': {
-    overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">HMCT SPECIALIZATIONS</h4>
-               <a href="#hmct-bsc" class="mega-link" style="margin-bottom: 2px;">B.Sc in Hospitality Studies <span>↗</span></a>
-               <a href="#hmct-dip" class="mega-link" style="margin-bottom: 8px;">Diploma in Hospitality Studies <span>↗</span></a>
-               <span style="display: inline-block; padding: 4px 10px; background: #ffffff1a; color: #8cb4f5; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; border-radius: 4px; margin-bottom: 8px; align-self: flex-start;">Lexicon MILE H-School</span>
-               <p style="color: #b1bfd2; font-size: 13px; line-height: 1.5; margin-top: 0; margin-bottom: 0;">Lexicon MILE H-School, by the hoteliers, for the hoteliers, affiliated with YCMOU, a UGC-recognised, NAAC 'A' Grade University. Built for students who want hands-on exposure to the hospitality industry, with industry collaborations across leading hospitality brands.</p>`,
+    overview: `<h4 class="mega-heading">HMCT SPECIALIZATIONS</h4>
+               <a href="#bsc-hs" class="mega-link" style="margin-bottom: 5px;">B.Sc in Hospitality Studies <span>↗</span></a>
+               <a href="#dip-hs" class="mega-link" style="margin-bottom: 5px;">Diploma in Hospitality Studies <span>↗</span></a>
+               <a href="#h-school" class="mega-link" style="margin-bottom: 15px;">Lexicon MILE H-School <span>↗</span></a>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7;">Lexicon MILE H-School, by the hoteliers,<br>for the hoteliers, affiliated with YCMOU,<br>a UGC-recognised, NAAC 'A' Grade University.<br>Built for students seeking hands-on exposure<br>to the hospitality industry through<br>collaborations with leading hospitality brands.</p>`,
     image: `<img src="images/hospitality.jpg" alt="HMCT" class="mega-image">`
   },
-  
+
   // Admissions Menu
   'admissions-process': {
     overview: `<h4 class="mega-heading">ADMISSIONS PROCESS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s admission process is designed to guide students through their journey from eligibility and application to selection and enrolment. Applicants can explore programme requirements, entrance examination criteria, application details, fees and scholarships, while the admissions team provides guidance throughout the process. The institute’s approach aims to make admissions structured, transparent and accessible for aspiring management professionals.</p>`,
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s admission process guides<br>students through eligibility, application,<br>selection and enrolment. Applicants can<br>explore entrance requirements, application<br>details, fees and scholarships, while the<br>admissions team provides guidance<br>throughout the process. The approach<br>makes admissions structured and transparent<br>for aspiring management professionals.</p>`,
     image: `<img src="images/collaboration.jpg" alt="Admissions Process" class="mega-image">`
   },
   'pgdm-fee-structure': {
     overview: `<h4 class="mega-heading">PGDM FEE STRUCTURE</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The PGDM fee structure outlines the programme’s registration, first-year tuition, second-year tuition and development fees, along with their respective payment schedules. For the 2027–29 batch, the total programme fee is ₹6.95 lakh, plus applicable taxes, with payments scheduled across the admission and academic milestones.</p>`,
-    image: `<img src="images/classroom.jpg" alt="PGDM Fee Structure" class="mega-image">`
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The PGDM fee structure outlines<br>registration, first-year tuition, second-year<br>tuition and development fees, along with<br>their respective payment schedules.<br>For the 2027–29 batch, the total<br>programme fee is ₹6.95 lakh, plus<br>applicable taxes, with payments scheduled<br>across admission and academic<br>milestones.</p>`,
+    image: `<img src="images/campus.jpg" alt="Fees Structure" class="mega-image">`
   },
   'scholarships': {
     overview: `<h4 class="mega-heading">SCHOLARSHIPS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE offers scholarships designed to recognise academic excellence and support deserving students by reducing the financial burden of management education. For the PGDM 2026–28 batch, scholarships are available based on entrance examination performance, with awards of up to ₹1,00,000 for CAT, ₹75,000 for CMAT and ₹50,000 for MAT. Scholarships are limited and awarded on a first-come, first-served basis, subject to admission confirmation and applicable conditions.</p>`,
-    image: `<img src="images/global.jpg" alt="Scholarships" class="mega-image">`
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE offers scholarships designed<br>to recognise academic excellence and support<br>deserving students by reducing the financial<br>burden of management education. For the<br>PGDM 2026–28 batch, scholarships are based<br>on entrance examination performance, with<br>awards up to ₹1,00,000 for CAT, ₹75,000<br>for CMAT and ₹50,000 for MAT. Scholarships<br>are limited and subject to applicable conditions.</p>`,
+    image: `<img src="images/hero.jpg" alt="Scholarships" class="mega-image">`
   },
   'admission-guide': {
     overview: `<h4 class="mega-heading">ADMISSION GUIDE</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Lexicon MILE admission guide provides a step-by-step pathway for applicants, from creating an account and verifying their email to completing the online application. Candidates are guided to enter their academic and personal details, pay the application fee and submit the completed application, making the admission journey structured and easy to follow.</p>`,
-    image: `<img src="images/sliders/1.jpg-1.jpeg" alt="Admission Guide" class="mega-image">`
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Lexicon MILE admission guide provides<br>a step-by-step pathway for applicants, from<br>creating an account and verifying their email<br>to completing the online application. Candidates<br>enter their academic and personal details,<br>pay the application fee and submit<br>the completed application. The guide makes<br>the admission journey structured and<br>easy to follow.</p>`,
+    image: `<img src="images/classroom.jpg" alt="Admission Guide" class="mega-image">`
   },
   'education-loan': {
     overview: `<h4 class="mega-heading">EDUCATION LOAN ASSISTANCE</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE supports students seeking financial assistance for their education through partnerships with reputed banking institutions offering education loans at nominal interest rates. The admissions team also assists students who face difficulties with loan enquiries, documentation or the processing of their education loan, helping make the financing process more accessible.</p>`,
-    image: `<img src="images/campus.jpg" alt="Education Loan" class="mega-image">`
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE supports students seeking<br>financial assistance through partnerships<br>with reputed banking institutions offering<br>education loans at nominal interest rates.<br>The admissions team assists students with<br>loan enquiries, documentation and processing.<br>This support helps students navigate<br>the education loan process and<br>makes financing more accessible.</p>`,
+    image: `<img src="images/hospitality.jpg" alt="Education Loan" class="mega-image">`
   },
-  
-  // Faculty & Mentors Menu
+
+  // Faculty & Mentors
   'faculty-mentors': {
     overview: `<h4 class="mega-heading">FACULTY & INDUSTRY MENTORS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE brings together accomplished faculty and experienced industry professionals who connect academic knowledge with real-world business challenges. Through its “A Mentor Every MILE” model, students engage with industry leaders through leadership sessions, one-on-one mentoring, fireside chats and industry-integrated projects. Regular interactions with C-suite leaders, entrepreneurs, policymakers and innovators further enrich the learning experience with practical insights and professional perspectives.</p>`,
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE brings together accomplished<br>faculty and experienced industry professionals<br>who connect academic knowledge with<br>real-world business challenges. Through<br>the “A Mentor Every MILE” model, students<br>engage through leadership sessions,<br>one-on-one mentoring, fireside chats<br>and industry-integrated projects with<br>industry leaders and professionals.</p>`,
     image: `<img src="images/collaboration.jpg" alt="Faculty & Mentors" class="mega-image">`
   },
   'faculty-directory': {
     overview: `<h4 class="mega-heading">FACULTY DIRECTORY</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s faculty directory brings together accomplished academic scholars and experienced industry practitioners across management, analytics, marketing, business communication and other specialised areas. The directory features resident faculty and visiting industry leaders, bringing academic knowledge and practical business perspectives into the learning experience.</p>`,
-    image: `<img src="images/classroom.jpg" alt="Faculty Directory" class="mega-image">`
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s faculty directory brings<br>together accomplished academic scholars<br>and experienced industry practitioners<br>across management, analytics, marketing,<br>business communication and specialised areas.<br>The directory features resident faculty<br>and visiting industry leaders, bringing<br>academic knowledge and practical business<br>perspectives into the learning experience.</p>`,
+    image: `<img src="images/global.jpg" alt="Faculty Directory" class="mega-image">`
   },
-  
-  // Placements Menu
+
+  // Placements
   'our-recruiters': {
     overview: `<h4 class="mega-heading">OUR RECRUITERS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE has built a strong industry network of 200+ recruiters, providing students with career opportunities across leading national and multinational organisations. Its recruiter ecosystem spans diverse industries and sectors, connecting students with companies for internships, placements and long-term career opportunities.</p>`,
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE has built a strong industry<br>network of 200+ recruiters, providing<br>students with career opportunities across<br>leading national and multinational organisations.<br>Its recruiter ecosystem spans diverse<br>industries and sectors, connecting students<br>with companies for internships, placements<br>and long-term career opportunities<br>across multiple professional fields.</p>`,
     image: `<img src="images/hospitality.jpg" alt="Our Recruiters" class="mega-image">`
   },
   'placements-overview': {
     overview: `<h4 class="mega-heading">PLACEMENTS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s placement ecosystem connects students with 200+ organisations across diverse sectors, supported by strong industry engagement and practical learning. For the 2024–26 PGDM batch, the institute reports 500+ placement offers, with the highest international package at ₹49 LPA and highest domestic package at ₹18 LPA. The placement process is focused on helping students transition from academic learning to industry-ready careers and professional opportunities.</p>`,
-    image: `<img src="images/global.jpg" alt="Placements" class="mega-image">`
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s placement ecosystem connects<br>students with 200+ organisations across<br>diverse sectors, supported by strong<br>industry engagement and practical learning.<br>For the 2024–26 PGDM batch, the institute<br>reports 500+ placement offers, with the<br>highest international package at ₹49 LPA<br>and highest domestic package at ₹22 LPA,<br>supporting industry-ready careers.</p>`,
+    image: `<img src="images/hero.jpg" alt="Placements" class="mega-image">`
   },
   'recruitment-process': {
     overview: `<h4 class="mega-heading">RECRUITMENT PROCESS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE has streamlined its recruitment process through technology, industry integration and outcome-driven education, enabling organisations to connect efficiently with the right talent. Its centralised recruitment platform helps recruiters identify Day Zero Professionals based on role requirements, skills and organisational needs. The Career Development & Placement Cell, supported by certified trainers and industry mentors, prepares students to perform, adapt and grow in dynamic corporate environments.</p>`,
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE has streamlined its recruitment<br>process through technology, industry integration<br>and outcome-driven education, enabling<br>organisations to connect efficiently with talent.<br>Its recruitment platform helps identify<br>Day Zero Professionals based on role<br>requirements, skills and organisational needs.<br>The Career Development & Placement Cell<br>prepares students for dynamic corporate environments.</p>`,
     image: `<img src="images/classroom.jpg" alt="Recruitment Process" class="mega-image">`
   },
-  
-  // More Menu
+
+  // More
   'seat-vacancy': {
     overview: `<h4 class="mega-heading">SEAT VACANCY DETAILS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Seat Vacancy Details section provides applicants with updated information on available seats across the programmes offered by Lexicon MILE. It helps prospective students understand the current availability of seats, programme-wise vacancy details and admission opportunities, enabling them to make informed decisions and proceed with the admission process accordingly.</p>`,
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Seat Vacancy Details section provides<br>updated information on available seats<br>across programmes offered by Lexicon MILE.<br>It helps prospective students understand<br>current availability and programme-wise<br>vacancy details. The section provides<br>information on admission opportunities,<br>helping applicants make informed decisions<br>and proceed with the admission process.</p>`,
     image: `<img src="images/sliders/4.jpg-1.jpeg" alt="Seat Vacancy" class="mega-image">`
   },
   'campus': {
     overview: `<h4 class="mega-heading">CAMPUS TOUR</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Lexicon MILE campus is designed as an interactive and collaborative learning environment, featuring modern classrooms, digital learning facilities and dedicated spaces for teamwork and practical exposure. The campus also houses Hyper Build – The Lexicon MILE AI Lab, where students work on real corporate challenges, data-driven solutions and practical AI applications. With collaborative spaces and a 360° virtual tour, students can experience the campus and its learning environment before they visit.</p>`,
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Lexicon MILE campus provides an<br>interactive and collaborative learning<br>environment with modern classrooms,<br>digital learning facilities and dedicated<br>spaces for teamwork and practical exposure.<br>The campus also houses Hyper Build –<br>The Lexicon MILE AI Lab, where students<br>work on real corporate challenges and<br>practical AI applications.</p>`,
     image: `<img src="images/campus.jpg" alt="Campus Tour" class="mega-image">`
   },
   'blogs': {
     overview: `<h4 class="mega-heading">BLOGS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Lexicon MILE blog brings together current insights on management education, careers, business and industry trends. Covering topics across PGDM, MBA Global and BBA, the articles explore programme choices, career opportunities, placements, skills, international exposure and emerging trends—helping students make more informed academic and career decisions.</p>`,
-    image: `<img src="images/classroom.jpg" alt="Blogs" class="mega-image">`
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Lexicon MILE blog brings together<br>insights on management education, careers,<br>business and industry trends. Covering<br>PGDM, MBA Global and BBA, the articles<br>explore programme choices, career<br>opportunities, placements, skills and<br>international exposure. The content helps<br>students understand emerging trends and<br>make informed academic and career decisions.</p>`,
+    image: `<img src="images/global.jpg" alt="Blogs" class="mega-image">`
   },
   'events-webinars': {
     overview: `<h4 class="mega-heading">EVENTS & WEBINARS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE creates a vibrant learning environment through leadership conclaves, industry summits, TEDx events, masterclasses, industrial visits and thought-leadership sessions. These experiences connect students with industry leaders, entrepreneurs and professionals, encouraging networking, practical learning and exposure to real-world business perspectives.</p>`,
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE creates a vibrant learning<br>environment through leadership conclaves,<br>industry summits, TEDx events, masterclasses,<br>industrial visits and thought-leadership sessions.<br>These experiences connect students with<br>industry leaders, entrepreneurs and professionals,<br>encouraging networking, practical learning<br>and exposure to real-world business<br>perspectives.</p>`,
     image: `<img src="images/collaboration.jpg" alt="Events" class="mega-image">`
   },
   'partnerships': {
     overview: `<h4 class="mega-heading">PARTNERSHIPS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE collaborates with leading academic institutions, industry organisations and professional networks to strengthen learning beyond the classroom. These partnerships support joint research, faculty interactions, student learning opportunities, curriculum development, internships, live projects and industry-mentored experiences, helping students connect academic knowledge with real business challenges.</p>`,
-    image: `<img src="images/global.jpg" alt="Partnerships" class="mega-image">`
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE collaborates with leading<br>academic institutions, industry organisations<br>and professional networks to strengthen<br>learning beyond the classroom. These<br>partnerships support research, faculty<br>interactions, student learning opportunities,<br>curriculum development, internships and<br>live projects, connecting academic knowledge<br>with real business challenges.</p>`,
+    image: `<img src="images/hero.jpg" alt="Partnerships" class="mega-image">`
   },
   'contact': {
     overview: `<h4 class="mega-heading">CONTACT US</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Connect with Lexicon MILE for admission, placement and general enquiries through its dedicated support channels. The institute’s Pune campus is located at MILE Tower, GAT No. 726, Pune-Nagar Road, Wagholi, with dedicated contacts available to assist prospective students, recruiters and other visitors.</p>`,
-    image: `<img src="images/sliders/1.jpg-1.jpeg" alt="Contact Us" class="mega-image">`
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Connect with Lexicon MILE for admission,<br>placement and general enquiries through<br>dedicated support channels. The institute’s<br>Pune campus is located at MILE Tower,<br>GAT No. 726, Pune-Nagar Road, Wagholi.<br>Dedicated contacts are available to assist<br>prospective students, recruiters and<br>other visitors with relevant enquiries<br>and support.</p>`,
+    image: `<img src="images/portrait-1.jpg" alt="Contact Us" class="mega-image">`
   }
 };
 
@@ -179,9 +178,9 @@ document.querySelectorAll('.mega-link-large').forEach(link => {
 // This is a frontend concept. No enquiries or personal data are sent to a server.
 const programs = {
   pgdm: { title: 'PGDM', category: 'POSTGRADUATE / MANAGEMENT', image: 'classroom', description: 'An AI-integrated, industry-focused management program designed to develop future-ready business leaders.', highlights: ['AI-integrated business learning', 'Industry immersion and live projects', 'Leadership development', 'Business strategy and practical decision-making'] },
-  mba: { title: 'MBA Global', category: 'POSTGRADUATE / GLOBAL BUSINESS', image: 'global', description: 'Build a global business perspective through international exposure, strategic thinking and cross-cultural learning.', highlights: ['Global exposure and perspectives', 'International business', 'Strategic thinking', 'Cross-cultural learning and leadership'] },
-  bba: { title: 'BBA', category: 'UNDERGRADUATE / BUSINESS', image: 'collaboration', description: 'Start your business journey with a modern undergraduate program focused on practical learning, innovation and entrepreneurship.', highlights: ['Business foundations', 'Innovation and practical learning', 'Entrepreneurial thinking', 'Leadership development'] },
-  ihm: { title: 'IHM / HMCT', category: 'HOSPITALITY / MANAGEMENT', image: 'hospitality', description: 'Build a career in hospitality through practical learning, industry exposure and professional development.', highlights: ['Hospitality and service excellence', 'Tourism and management', 'Practical industry training', 'Professional development'] }
+  mba: { title: 'MBA Global', category: 'POSTGRADUATE / GLOBAL BUSINESS', image: 'global', description: 'Experience globally focused MBA programmes across the UK, Malaysia, and UAE, with dual-campus learning and international exposure. Choose from International Business, Business Analytics & AI, or Family Business Management and build global leadership skills. Gain practical experience, industry exposure, and a truly global MBA experience.', highlights: ['Global exposure and perspectives', 'International business', 'Strategic thinking', 'Cross-cultural learning and leadership'] },
+  bba: { title: 'BBA', category: 'UNDERGRADUATE / BUSINESS', image: 'collaboration', description: 'A future-ready BBA at Lexicon MILE combining business, AI, analytics, and hands-on industry exposure. Learn through real-world projects and AI-powered tools to build practical, analytical, and professional skills. Graduate as a confident Day Zero Professional, ready for an AI-driven business world.', highlights: ['Business foundations', 'Innovation and practical learning', 'Entrepreneurial thinking', 'Leadership development'] },
+  ihm: { title: 'IHM / HMCT', category: 'HOSPITALITY / MANAGEMENT', image: 'hospitality', description: 'Build a career in hospitality, tourism, and hotel management through academic excellence and hands-on industry exposure. Develop global perspectives, practical skills, and a passion for service excellence.', highlights: ['Hospitality and service excellence', 'Tourism and management', 'Practical industry training', 'Professional development'] }
 };
 
 const awards = [
@@ -263,7 +262,7 @@ const information = {
   eligibility: { eyebrow: 'ADMISSIONS / ELIGIBILITY', title: 'Find your fit.', body: '<p>Eligibility requirements vary by program. Academic qualifications, entrance-test requirements and selection criteria will be published following institutional confirmation.</p><p>Explore each program to understand its focus. No unverified eligibility criteria are presented in this concept.</p>' },
   fees: { eyebrow: 'ADMISSIONS / PROGRAM FEES', title: 'Invest in what’s next.', body: '<p>A complete, program-specific fee schedule will be available before applications go live, including the payment schedule and any additional charges.</p><p class="dialog-notice">Fees have not been supplied for this design concept. Please rely only on the official fee structure once published.</p>' },
   scholarships: { eyebrow: 'ADMISSIONS / SCHOLARSHIPS', title: 'Make ambition possible.', body: '<p>Scholarship availability, eligibility, amounts and application timelines will be shared once the official policy is confirmed.</p><p class="dialog-notice">This concept does not promise scholarship funding or financial assistance.</p>' },
-  placements: { eyebrow: 'CAREERS / BUILT FOR THE WORLD OF WORK', title: 'Your potential. Real impact.', body: '<p>Industry exposure, practical learning and corporate relationships connect education to the world of work.</p><ul><li>500+ students placed</li><li>200+ recruiters / companies</li><li>49 LPA highest package — context to be confirmed</li><li>18 LPA highest package — context to be confirmed</li></ul><p class="dialog-notice">These figures were supplied for the homepage concept. Cohorts, reporting periods, program applicability and salary components have not been provided. They are not a placement guarantee. A verified placement report is required before publication.</p>' },
+  placements: { eyebrow: 'CAREERS / BUILT FOR THE WORLD OF WORK', title: 'Your potential. Real impact.', body: '<p>Industry exposure, practical learning and corporate relationships connect education to the world of work.</p><ul><li>500+ students placed</li><li>200+ recruiters / companies</li><li>49 LPA highest package — context to be confirmed</li><li>22 LPA highest package — context to be confirmed</li></ul><p class="dialog-notice">These figures were supplied for the homepage concept. Cohorts, reporting periods, program applicability and salary components have not been provided. They are not a placement guarantee. A verified placement report is required before publication.</p>' },
   contact: { eyebrow: 'CONNECT / LEXICON MILE', title: 'Let’s start a conversation.', body: '<p>Explore your next chapter with Lexicon MILE in Pune, Maharashtra, India.</p><p class="dialog-notice">The official campus address, admissions email and phone number have not been provided. Verified contact channels will be added before launch.</p>' },
   whatsapp: { eyebrow: 'CONNECT / WHATSAPP', title: 'One conversation away.', body: '<p>Our WhatsApp enquiry channel will make it easier to explore programs and admissions.</p><p class="dialog-notice">An official WhatsApp number has not yet been configured. No message has been sent. Verified contact details are needed before enabling this action.</p>' },
   call: { eyebrow: 'CONNECT / CALL', title: 'Talk about your next step.', body: '<p>Speak with the admissions team about choosing a program and preparing your application.</p><p class="dialog-notice">The official admissions phone number has not yet been provided. This preview does not place calls.</p>' },
@@ -446,3 +445,54 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reducedM
     setInterval(next, interval);
   }
 })();
+    // ==========================================
+    // 16. Stacking Cards on Scroll Animation
+    // ==========================================
+    const stackCards = document.querySelectorAll('.practically-card.stack-card');
+    const pracHeader = document.querySelector('.practically-header');
+    if (stackCards.length > 0) {
+        let isStackTicking = false;
+        const lastCard = stackCards[stackCards.length - 1];
+
+        function updateCardStack() {
+            stackCards.forEach((card, index) => {
+                const nextCard = stackCards[index + 1];
+                if (nextCard) {
+                    const cardRect = card.getBoundingClientRect();
+                    const nextRect = nextCard.getBoundingClientRect();
+                    
+                    // How much the next card has overlapped with the current sticky card
+                    const overlapDistance = cardRect.bottom - nextRect.top;
+                    const cardHeight = cardRect.height || 450;
+                    
+                    if (overlapDistance > 0) {
+                        const progress = Math.min(Math.max(overlapDistance / cardHeight, 0), 1);
+                        // Scale down card proportionally as next card covers it like a deck of cards
+                        const scale = 1 - (progress * 0.05);
+                        const brightness = 1 - (progress * 0.12);
+                        const translateY = -progress * 8;
+                        card.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+                        card.style.filter = `brightness(${brightness})`;
+                    } else {
+                        card.style.transform = 'scale(1) translateY(0px)';
+                        card.style.filter = 'brightness(1)';
+                    }
+                }
+            });
+
+            isStackTicking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!isStackTicking) {
+                requestAnimationFrame(updateCardStack);
+                isStackTicking = true;
+            }
+        }, { passive: true });
+
+        // Initial calculation
+        updateCardStack();
+    }
+
+    // ==========================================
+
