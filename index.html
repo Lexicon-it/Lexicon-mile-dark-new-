@@ -8,84 +8,269 @@
   <title>Lexicon MILE | Future-Ready Business Education</title>
   <meta name="description"
     content="Lexicon MILE offers industry-integrated business education across PGDM, MBA Global, BBA and Hospitality Management programs, preparing students for global careers.">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon.png" type="image/png">
   <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="images/hero.jpg" as="image" imagesrcset="images/hero-mobile.jpg 900w, images/hero.jpg 1920w"
-    imagesizes="100vw">
+  <link rel="preload" href="images/sliders/1.jpg-1.jpeg" as="image">
   <link rel="stylesheet" href="styles/main.css">
   <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="announcement">
-    <div class="container announcement-inner">
-      <p><span class="status-dot"></span><strong>ADMISSIONS OPEN 2026–27</strong><span
-          class="announcement-description">Applications are now open for our next generation of business leaders.</span>
-      </p><button data-action="apply">Apply Now <span aria-hidden="true">↗</span></button>
+  <!-- Top Bar: Secondary links (Masters' Union style) -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span>Admission Open 2027</span>
+        <span class="top-bar-divider"></span>
+        <a href="tel:+919967427278" class="top-bar-link">+91 9967427278</a>
+        <span class="top-bar-divider"></span>
+        <a href="mailto:admissions@mile.education" class="top-bar-link">admissions@mile.education</a>
+      </div>
+      <nav class="top-bar-nav" aria-label="Secondary navigation">
+        <a href="#campus">Campus Tour</a>
+        <a href="#student-life">Events & Webinar</a>
+        <a href="#about">Partnerships</a>
+        <a href="#placements">Alumni</a>
+        <a href="#campus">Virtual Tour</a>
+      </nav>
     </div>
   </div>
+
+  <!-- Main Header: Logo + Primary Nav + CTA -->
   <header class="site-header" id="site-header">
-    <div class="header-inner container">
-      <a class="brand" href="#" aria-label="Lexicon MILE home"><span class="brand-mark"
-          aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-type">LEXICON <b>MILE<span
-              class="brand-dot">.</span></b><small>MANAGEMENT INSTITUTE OF LEADERSHIP & EXCELLENCE</small></span></a>
-      <nav class="desktop-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#programs">Programs</a><a
-          href="#admissions">Admissions</a><a href="#faculty">Faculty & Mentors</a><a
-          href="#placements">Placements</a><a href="#campus">Campus</a><a href="#student-life">Student Life</a><a
-          href="#contact">Contact</a></nav>
-      <button class="button button-small header-apply" data-action="apply">Apply Now <span>↗</span></button>
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Lexicon MILE home">
+        <img src="assets/lexicon_mile_logo.svg" alt="Lexicon MILE" class="brand-logo">
+      </a>
+      <nav class="primary-nav" id="desktop-nav" aria-label="Main navigation">
+        <div class="nav-item has-submenu">
+          <a href="#about" class="nav-link">ABOUT US <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></a>
+          <div class="mega-menu">
+            <div class="container mega-menu-inner">
+              <div class="mega-col mega-col-main">
+                <h4 class="mega-heading">ABOUT US</h4>
+                <a href="#about-lexicon" class="mega-link-large" data-hover="about-lexicon">About Lexicon
+                  <span>↗</span></a>
+                <a href="#lexicon-group" class="mega-link-large" data-hover="lexicon-group">Lexicon Group
+                  <span>↗</span></a>
+                <a href="#managing-trustees" class="mega-link-large" data-hover="managing-trustees">Managing Trustees
+                  <span>↗</span></a>
+                <a href="#ceo-message" class="mega-link-large" data-hover="ceo-message">CEO's Message <span>↗</span></a>
+                <a href="#governing-body" class="mega-link-large" data-hover="governing-body">Governing Body
+                  <span>↗</span></a>
+                <a href="#ranking-accreditation" class="mega-link-large" data-hover="ranking-accreditation">Ranking and
+                  Accreditation <span>↗</span></a>
+              </div>
+              <div class="mega-col mega-col-sub" id="mega-overview">
+                <h4 class="mega-heading">OVERVIEW</h4>
+                <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Founded in 2006 in Pune, The Lexicon Group has evolved into a premier educational and business leader, empowering individuals at every stage of life.</p>
+              </div>
+              <div class="mega-col mega-col-image" id="mega-image-container">
+                <img src="images/06.Banner.png" alt="Leader" class="mega-image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#about" class="nav-link">AI LABS</a>
+        </div>
+        <div class="nav-item has-submenu">
+          <a href="#programs" class="nav-link">PROGRAMS <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></a>
+          <div class="mega-menu">
+            <div class="container mega-menu-inner">
+              <div class="mega-col mega-col-main">
+                <h4 class="mega-heading">PROGRAMS</h4>
+                <a href="#pgdm" class="mega-link-large" data-hover="pgdm">PGDM <span>↗</span></a>
+                <a href="#mba-global" class="mega-link-large" data-hover="mba-global">MBA Global <span>↗</span></a>
+                <a href="#bba" class="mega-link-large" data-hover="bba">BBA <span>↗</span></a>
+                <a href="#hmct" class="mega-link-large" data-hover="hmct">HMCT <span>↗</span></a>
+              </div>
+              <div class="mega-col mega-col-sub" id="programs-overview">
+                <!-- Default content for Programs overview will go here via JS or placeholder -->
+                <h4 class="mega-heading" style="margin-bottom: 5px;">PGDM SPECIALIZATIONS</h4>
+                <a href="#pgdm-bm" class="mega-link" style="margin-bottom: 2px;">PGDM in Business Management
+                  <span>↗</span></a>
+                <a href="#pgdm-mf" class="mega-link" style="margin-bottom: 2px;">PGDM in Marketing & Finance
+                  <span>↗</span></a>
+                <a href="#pgdm-rba" class="mega-link" style="margin-bottom: 8px;">PGDM in Research and Business
+                  Analytics <span>↗</span></a>
+                <span
+                  style="display: inline-block; padding: 4px 10px; background: #ffffff1a; color: #8cb4f5; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; border-radius: 4px; margin-bottom: 8px; align-self: flex-start;">2
+                  Years · AICTE Approved</span>
+                <p style="color: #b1bfd2; font-size: 13px; line-height: 1.5; margin-top: 0; margin-bottom: 0;">A 2-year, full-time, AICTE-approved PGDM
+                  (Approval No. 1-4259511) designed around entrepreneurship, applied AI, and a corporate co-learning
+                  model.</p>
+              </div>
+              <div class="mega-col mega-col-image" id="programs-image-container">
+                <img src="images/classroom.jpg" alt="PGDM" class="mega-image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-submenu">
+          <a href="#admissions" class="nav-link">ADMISSIONS <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></a>
+          <div class="mega-menu">
+            <div class="container mega-menu-inner">
+              <div class="mega-col mega-col-main">
+                <h4 class="mega-heading">ADMISSIONS</h4>
+                <a href="#admissions-process" class="mega-link-large" data-hover="admissions-process">Admissions Process <span>↗</span></a>
+                <a href="#fees-structure" class="mega-link-large" data-hover="pgdm-fee-structure">Fees Structure <span>↗</span></a>
+                <a href="#scholarship" class="mega-link-large" data-hover="scholarships">Scholarship <span>↗</span></a>
+                <a href="#admission-guide" class="mega-link-large" data-hover="admission-guide">Admission Guide <span>↗</span></a>
+                <a href="#education-loan" class="mega-link-large" data-hover="education-loan">Education Loan <span>↗</span></a>
+              </div>
+              <div class="mega-col mega-col-sub">
+                <h4 class="mega-heading">ADMISSIONS PROCESS</h4>
+                <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s admission process is designed to guide students through their journey from eligibility and application to selection and enrolment. Applicants can explore programme requirements, entrance examination criteria, application details, fees and scholarships, while the admissions team provides guidance throughout the process. The institute’s approach aims to make admissions structured, transparent and accessible for aspiring management professionals.</p>
+              </div>
+              <div class="mega-col mega-col-image">
+                <img src="images/collaboration.jpg" alt="Admissions Process" class="mega-image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-submenu">
+          <a href="#faculty" class="nav-link">FACULTY & MENTORS <svg class="dropdown-icon" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></a>
+          <div class="mega-menu">
+            <div class="container mega-menu-inner">
+              <div class="mega-col mega-col-main">
+                <h4 class="mega-heading">FACULTY & MENTORS</h4>
+                <a href="#faculty-mentors" class="mega-link-large" data-hover="faculty-mentors">Faculty & Mentors <span>↗</span></a>
+                <a href="#faculty-directory" class="mega-link-large" data-hover="faculty-directory">Faculty Directory <span>↗</span></a>
+              </div>
+              <div class="mega-col mega-col-sub">
+                <h4 class="mega-heading">FACULTY & INDUSTRY MENTORS</h4>
+                <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE brings together accomplished faculty and experienced industry professionals who connect academic knowledge with real-world business challenges. Through its “A Mentor Every MILE” model, students engage with industry leaders through leadership sessions, one-on-one mentoring, fireside chats and industry-integrated projects. Regular interactions with C-suite leaders, entrepreneurs, policymakers and innovators further enrich the learning experience with practical insights and professional perspectives.</p>
+              </div>
+              <div class="mega-col mega-col-image">
+                <img src="images/collaboration.jpg" alt="Faculty & Mentors" class="mega-image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-submenu">
+          <a href="#placements" class="nav-link">PLACEMENTS <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></a>
+          <div class="mega-menu">
+            <div class="container mega-menu-inner">
+              <div class="mega-col mega-col-main">
+                <h4 class="mega-heading">PLACEMENTS</h4>
+                <a href="#our-recruiters" class="mega-link-large" data-hover="our-recruiters">Our Recruiters <span>↗</span></a>
+                <a href="#placements" class="mega-link-large" data-hover="placements-overview">Placements <span>↗</span></a>
+                <a href="#recruitment-process" class="mega-link-large" data-hover="recruitment-process">Recruitment Process <span>↗</span></a>
+              </div>
+              <div class="mega-col mega-col-sub">
+                <h4 class="mega-heading">OUR RECRUITERS</h4>
+                <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE has built a strong industry network of 200+ recruiters, providing students with career opportunities across leading national and multinational organisations. Its recruiter ecosystem spans diverse industries and sectors, connecting students with companies for internships, placements and long-term career opportunities.</p>
+              </div>
+              <div class="mega-col mega-col-image">
+                <img src="images/hospitality.jpg" alt="Our Recruiters" class="mega-image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-submenu">
+          <a href="#student-life" class="nav-link">MORE <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></a>
+          <div class="mega-menu">
+            <div class="container mega-menu-inner">
+              <div class="mega-col mega-col-main">
+                <h4 class="mega-heading">MORE</h4>
+                <a href="#seat-vacancy" class="mega-link-large" data-hover="seat-vacancy">Seat Vacancy Details <span>↗</span></a>
+                <a href="#campus" class="mega-link-large" data-hover="campus">Campus Tour <span>↗</span></a>
+                <a href="#blogs" class="mega-link-large" data-hover="blogs">Blogs <span>↗</span></a>
+                <a href="#events-webinars" class="mega-link-large" data-hover="events-webinars">Events & Webinars <span>↗</span></a>
+                <a href="#partnerships" class="mega-link-large" data-hover="partnerships">Partnerships <span>↗</span></a>
+                <a href="#contact" class="mega-link-large" data-hover="contact">Contact Us <span>↗</span></a>
+              </div>
+              <div class="mega-col mega-col-sub">
+                <h4 class="mega-heading">SEAT VACANCY DETAILS</h4>
+                <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Seat Vacancy Details section provides applicants with updated information on available seats across the programmes offered by Lexicon MILE. It helps prospective students understand the current availability of seats, programme-wise vacancy details and admission opportunities, enabling them to make informed decisions and proceed with the admission process accordingly.</p>
+              </div>
+              <div class="mega-col mega-col-image">
+                <img src="images/sliders/4.jpg-1.jpeg" alt="Seat Vacancy" class="mega-image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#contact" class="nav-link">CONTACT</a>
+        </div>
+      </nav>
+      <button class="button button-apply header-apply" data-action="apply">APPLY NOW <span>↗</span></button>
       <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false"
-        aria-controls="mobile-menu"><span></span><span></span></button>
+        aria-controls="mobile-menu"><span></span><span></span><span></span></button>
     </div>
   </header>
   <dialog class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-    <div class="mobile-menu-top"><span>LEXICON <b>MILE.</b></span><button id="menu-close" class="icon-button"
-        aria-label="Close menu">×</button></div>
-    <nav aria-label="Mobile navigation"><a href="#about">About <span>01</span></a><a href="#programs">Programs
-        <span>02</span></a><a href="#admissions">Admissions <span>03</span></a><a href="#faculty">Faculty & Mentors
-        <span>04</span></a><a href="#placements">Placements <span>05</span></a><a href="#campus">Campus
-        <span>06</span></a><a href="#student-life">Student Life <span>07</span></a><a href="#contact">Contact
-        <span>08</span></a></nav><button class="button" data-action="apply">Start your next chapter ↗</button>
+    <div class="mobile-menu-top">
+      <img src="assets/lexicon_mile_logo.svg" alt="Lexicon MILE" class="brand-logo">
+      <button id="menu-close" class="icon-button" aria-label="Close menu">×</button>
+    </div>
+    <nav aria-label="Mobile navigation">
+      <a href="#about">About <span>01</span></a>
+      <a href="#about">AI Labs <span>02</span></a>
+      <a href="#programs">Programs <span>03</span></a>
+      <a href="#admissions">Admissions <span>04</span></a>
+      <a href="#faculty">Faculty & Mentors <span>05</span></a>
+      <a href="#placements">Placements <span>06</span></a>
+      <a href="#campus">Campus Tour <span>07</span></a>
+      <a href="#student-life">Events & Webinar <span>08</span></a>
+      <a href="#about">Partnerships <span>09</span></a>
+      <a href="#placements">Alumni <span>10</span></a>
+      <a href="#campus">Virtual Tour <span>11</span></a>
+      <a href="#contact">Contact <span>12</span></a>
+    </nav>
+    <div class="mobile-menu-contact">
+      <a href="tel:+919967427278">📞 +91 9967427278</a>
+      <a href="mailto:admissions@mile.education">✉ admissions@mile.education</a>
+    </div>
+    <button class="button" data-action="apply">Start your next chapter ↗</button>
     <p>AMBITION HAS A NEW ADDRESS.</p>
   </dialog>
   <main id="main">
     <section class="hero" id="hero-section" aria-labelledby="hero-heading">
-      <img class="hero-image" src="images/hero.jpg" srcset="images/hero-mobile.jpg 900w, images/hero.jpg 1920w"
-        sizes="100vw"
-        alt="Young professionals collaborating in a contemporary workspace — illustrative campus photography"
-        fetchpriority="high" width="1920" height="1280">
-      <div class="hero-shade"></div><span class="hero-coordinate">PUNE, INDIA · A GLOBAL OUTLOOK</span>
+      <div class="hero-slider" aria-hidden="true">
+        <div class="hero-slide active" style="background-image: url('images/sliders/1.jpg-1.jpeg')"></div>
+        <div class="hero-slide" style="background-image: url('images/sliders/4.jpg-1.jpeg')"></div>
+        <div class="hero-slide" style="background-image: url('images/sliders/5.jpg-1.jpeg')"></div>
+        <div class="hero-slide" style="background-image: url('images/sliders/7.jpg.jpeg')"></div>
+        <div class="hero-slide" style="background-image: url('images/sliders/8.jpg.jpeg')"></div>
+      </div>
+      <div class="hero-shade"></div><span class="hero-coordinate">Best AI Integrated Courses in Pune</span>
       <div class="container hero-content">
         <p class="eyebrow"><span class="accent-line"></span>NOT JUST BUSINESS AS USUAL.</p>
-        <h1 id="hero-heading">Build Your Edge.<br>Lead What<br>Comes <span class="next-word">Next<span
-              class="period">.</span><svg viewBox="0 0 280 15" aria-hidden="true">
+        <h1 id="hero-heading">LEARN &nbsp;I&thinsp;T<br>BUILD &nbsp;I&thinsp;T<br><span class="next-word">LIVE &nbsp;I&thinsp;T<span class="period">.</span><svg
+              viewBox="0 0 280 15" aria-hidden="true">
               <path d="M3 11 Q120 0 275 6" />
             </svg></span></h1>
-        <p class="hero-description">An industry-integrated business education<br class="desktop-break"> built for
+        <p class="hero-description">An AI-integrated business education<br class="desktop-break"> built for
           ambitious leaders.</p>
         <div class="hero-buttons"><a class="button" href="#programs">Explore Programs <span>↗</span></a><button
             class="button button-outline" data-action="apply">Apply Now <span>↗</span></button></div>
-        <p class="hero-programs">PGDM <span>·</span> MBA GLOBAL <span>·</span> BBA <span>·</span> IHM</p>
+        <p class="hero-programs">PGDM <span>·</span> MBA GLOBAL <span>·</span> BBA <span>·</span> HMCT</p>
       </div>
       <div class="hero-bottom container"><a class="scroll-cue" href="#programs"><span>↓</span> SCROLL TO FIND YOUR
           EDGE</a>
-        <p>Global Exposure <span>·</span> Industry Immersion <span>·</span> Future-Ready Skills</p>
+        <p>Global Perspective <span>·</span> Real-World Projects <span>·</span> Future-Ready Leadership</p>
       </div>
-      <aside class="hero-stats" aria-label="Lexicon MILE at a glance">
-        <div><strong>16<span>+</span></strong>
-          <p>Years of<br>Excellence</p>
-        </div>
-        <div><strong>1600<span>+</span></strong>
-          <p>Career<br>Transformations</p>
-        </div>
-        <div><strong>98<span>%</span></strong>
-          <p>Placement<br>Success</p>
-        </div>
-        <div><strong>15<span>+</span></strong>
-          <p>Years of Industry<br>Experience</p>
-        </div><span class="stats-footnote">BUILT ON EXPERIENCE. DRIVEN BY AMBITION.</span>
-      </aside>
     </section>
     <div class="belief-strip">
       <div class="container"><span>A NEW GENERATION OF BUSINESS EDUCATION</span>
@@ -114,8 +299,7 @@
               <div class="program-title-row">
                 <h3>PGDM</h3><button class="circle-arrow" data-program="pgdm" aria-label="Explore PGDM">↗</button>
               </div>
-              <p>An AI-integrated, industry-focused management program designed to develop future-ready business
-                leaders.</p>
+              <p>AICTE-approved, case-driven, capstone projects.</p>
               <div class="tags"><span>AI Integrated</span><span>Industry
                   Immersion</span><span>Leadership</span><span>Business Strategy</span></div><button class="text-link"
                 data-program="pgdm">Explore PGDM <span>↗</span></button>
@@ -131,7 +315,8 @@
                 <h3>MBA Global</h3><button class="circle-arrow" data-program="mba"
                   aria-label="Explore MBA Global">↗</button>
               </div>
-              <p>Experience globally focused MBA programmes across the UK, Malaysia, and UAE, with dual-campus learning and international exposure. Choose from International Business, Business Analytics & AI, or Family Business Management and build global leadership skills. Gain practical experience, industry exposure, and a truly global MBA experience.</p>
+              <p>Build a global business perspective through international exposure, strategic thinking and
+                cross-cultural learning.</p>
               <div class="tags"><span>Global Exposure</span><span>International
                   Business</span><span>Strategy</span><span>Leadership</span></div><button class="text-link"
                 data-program="mba">Explore MBA Global <span>↗</span></button>
@@ -146,9 +331,11 @@
               <div class="program-title-row">
                 <h3>BBA</h3><button class="circle-arrow" data-program="bba" aria-label="Explore BBA">↗</button>
               </div>
-              <p>A future-ready BBA at Lexicon MILE combining business, AI, analytics, and hands-on industry exposure. Learn through real-world projects and AI-powered tools to build practical, analytical, and professional skills. Graduate as a confident Day Zero Professional, ready for an AI-driven business world.</p>
+              <p>Start your business journey with a modern undergraduate program focused on practical learning,
+                innovation and entrepreneurship.</p>
               <div class="tags">
-                <span>Business</span><span>Innovation</span><span>Entrepreneurship</span><span>Leadership</span></div>
+                <span>Business</span><span>Innovation</span><span>Entrepreneurship</span><span>Leadership</span>
+              </div>
               <button class="text-link" data-program="bba">Explore BBA <span>↗</span></button>
             </div>
           </article>
@@ -162,8 +349,8 @@
                 <h3>IHM / HMCT</h3><button class="circle-arrow" data-program="ihm"
                   aria-label="Explore IHM and HMCT">↗</button>
               </div>
-              <span style="display: block; color: #8cb4f5; font-size: 12px; font-weight: 700; letter-spacing: 0.03em; margin-bottom: 8px;">By the Hoteliers, For the Hoteliers.</span>
-              <p>Build a career in hospitality, tourism, and hotel management through academic excellence and hands-on industry exposure. Develop global perspectives, practical skills, and a passion for service excellence.</p>
+              <p>Build a career in hospitality through practical learning, industry exposure and professional
+                development.</p>
               <div class="tags"><span>Hospitality</span><span>Tourism</span><span>Management</span><span>Industry
                   Training</span></div><button class="text-link" data-program="ihm">Explore IHM <span>↗</span></button>
             </div>
@@ -342,10 +529,10 @@
             <p>RECRUITERS / COMPANIES</p>
           </div>
           <div class="reveal"><strong><span data-counter="49">49</span><em>LPA</em></strong>
-            <p>HIGHEST PACKAGE*</p>
+            <p>HIGHEST INTERNATIONAL PACKAGE</p>
           </div>
-          <div class="reveal"><strong><span data-counter="22">22</span><em>LPA</em></strong>
-            <p>HIGHEST PACKAGE*</p>
+          <div class="reveal"><strong><span data-counter="18">18</span><em>LPA</em></strong>
+            <p>HIGHEST DOMESTIC PACKAGE</p>
           </div>
           <p class="metric-note">*Figures supplied for this concept. Cohort, program and package context to be
             confirmed.</p>
@@ -522,10 +709,10 @@
   <footer class="site-footer" id="contact">
     <div class="container">
       <div class="footer-top">
-        <div class="footer-brand"><a class="brand" href="#" aria-label="Lexicon MILE home"><span class="brand-mark"
-              aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-type">LEXICON <b>MILE<span
-                  class="brand-dot">.</span></b><small>MANAGEMENT INSTITUTE OF LEADERSHIP &
-                EXCELLENCE</small></span></a>
+        <div class="footer-brand">
+          <a class="brand" href="#" aria-label="Lexicon MILE home">
+            <img src="assets/lexicon_mile_logo.svg" alt="Lexicon MILE" class="brand-logo">
+          </a>
           <p>Building future-ready leaders through industry-integrated business education.</p><span
             class="footer-location"><svg class="icon" aria-hidden="true">
               <use href="assets/icons.svg#pin" />
@@ -533,33 +720,110 @@
             conversation <span>↗</span></button>
         </div>
         <div class="footer-column">
-          <h3>EXPLORE</h3><a href="#about">About</a><a href="#programs">Programs</a><a href="#faculty">Faculty</a><a
-            href="#placements">Placements</a><a href="#campus">Campus</a><a href="#student-life">Student Life</a>
+          <h3>QUICK LINKS</h3>
+          <a href="#">PGDM Fee Portal</a>
+          <a href="https://lexiconmile.com/contact">Contact</a>
+          <a href="https://lexiconmile.com/careers-at-lexicon-mile/">Careers</a>
+          <a href="https://lexiconmile.com/blog">Blog</a>
+          <a href="https://lexiconmile.com/events-webinars/">Events & Webinar</a>
+          <a href="https://lexiconmile.com/partnerships/">Partnerships</a>
+          <a href="https://alumni.lexiconmile.com/">Alumni</a>
         </div>
         <div class="footer-column">
-          <h3>PROGRAMS</h3><button data-program="pgdm">PGDM</button><button data-program="mba">MBA
-            Global</button><button data-program="bba">BBA</button><button data-program="ihm">IHM / HMCT</button>
+          <h3>PGDM/MBA GLOBAL</h3>
+          <a href="https://lexiconmile.com/admission/#eligibility">PGDM Eligibility</a>
+          <a href="https://lexiconmile.com/admission/#how-to-apply">How to Apply for MBA Global</a>
+          <a href="https://lexiconmile.com/admission/#fees">PGDM/MBA Global Course Fees</a>
+          <a href="https://lexiconmile.com/scholarship/">PGDM/MBA Global Scholarship</a>
         </div>
         <div class="footer-column">
-          <h3>ADMISSIONS</h3><button data-action="admission-process">Admission Process</button><button
-            data-action="eligibility">Eligibility</button><button data-action="fees">Fees</button><button
-            data-action="scholarships">Scholarships</button><button data-action="apply">Apply Now
-            <span>↗</span></button><button data-action="brochure">Download Brochure</button>
+          <h3>EXPLORE</h3>
+          <a href="https://lexiconmile.com/faqs/">FAQ'S</a>
+          <a href="https://lexiconmile.com/mandatory-disclosure-lexicon-mile/">Mandatory Disclosure</a>
+          <a
+            href="https://lexiconmile.com/wp-content/uploads/2026/02/Updated-Self-Assesment-Report-SAR-Marketing-Finance-submitted-on-31st-Jan-2026.pdf">Self
+            Assessment Report (SAAR) : Marketing & Finance</a>
+          <a href="https://lexiconmile.com/wp-content/uploads/2026/02/Audit-Report.pdf">Audit Report</a>
+          <a href="https://lexiconmile.com/student-rules-regulations/">Student Rules & Regulation</a>
+          <a href="https://lexiconmile.com/partnerships/">Partnerships</a>
+          <a href="https://lexiconmile.com/research/">Research</a>
+          <a href="https://lexiconmile.com/wp-content/uploads/2025/11/Anti-Ragging-Committee.pdf">Anti Ragging Cell</a>
         </div>
         <div class="footer-column">
-          <h3>CONNECT</h3><button data-action="contact">Contact <span>↗</span></button><button
-            data-social="Instagram">Instagram <span>↗</span></button><button data-social="LinkedIn">LinkedIn
-            <span>↗</span></button><button data-social="YouTube">YouTube <span>↗</span></button><button
-            data-social="Facebook">Facebook <span>↗</span></button>
+          <h3>INFORMATION</h3>
+          <div style="display:flex;flex-direction:column;gap:3px;font-size:13px;color:#8e9bb0;line-height:1.4">
+            <strong style="color:#e0e7f2;font-weight:600">For Admission Enquiries</strong>
+            <span>Phone: +91 99674 27278</span>
+            <span>Phone: +91 8956059559</span>
+            <span>Email: admissions@mile.education</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:3px;font-size:13px;color:#8e9bb0;line-height:1.4">
+            <strong style="color:#e0e7f2;font-weight:600">For Placement Queries</strong>
+            <span>Phone: +91 99674 27278</span>
+            <span>Email: placements@mile.education</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:3px;font-size:13px;color:#8e9bb0;line-height:1.4">
+            <strong style="color:#e0e7f2;font-weight:600">For Other Queries</strong>
+            <span>Phone: +91 91460 14951</span>
+            <span>Email: info@mile.education</span>
+          </div>
         </div>
       </div>
-      <div class="footer-wordmark" aria-hidden="true">MAKE YOUR <span>MILE.</span></div>
-      <div class="footer-bottom"><span>© 2026 Lexicon MILE. All Rights Reserved.</span>
-        <div><button data-action="privacy">Privacy Policy</button><button data-action="terms">Terms &
-            Conditions</button><a href="#" aria-label="Back to top">BACK TO TOP ↑</a></div>
+      <div class="footer-wordmark" aria-hidden="true">LEARN &nbsp;I&thinsp;T&nbsp;&nbsp;BUILD &nbsp;I&thinsp;T&nbsp;&nbsp;<span>LIVE &nbsp;I&thinsp;T</span>
       </div>
-      <p class="prototype-note">Homepage design concept. Photography and wordmarks are illustrative; names, outcomes,
-        awards and affiliations supplied in the brief require institutional verification before publication.</p>
+      <div class="footer-bottom"
+        style="flex-direction: column; align-items: flex-start; gap: 6px; font-size: 13px; color: #8e9bb0; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 15px; margin-top: 25px;">
+        <div
+          style="display: flex; width: 100%; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <div style="display: flex; gap: 15px;">
+            <a href="https://lexiconmile.com/privacy-policy/"
+              style="color: #8e9bb0; text-decoration: none; font-size: 13px; letter-spacing: normal;">Privacy Policy</a>
+            <a href="https://lexiconmile.com/terms-conditions/"
+              style="color: #8e9bb0; text-decoration: none; font-size: 13px; letter-spacing: normal;">Terms &
+              Conditions</a>
+          </div>
+          <div class="social-icons" style="display: flex; gap: 12px; color: white; align-items: center;">
+            <a href="#" aria-label="Facebook" style="color: white; display:flex; transition: 0.2s opacity;"
+              onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'"><svg width="18" height="18"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+              </svg></a>
+            <a href="#" aria-label="Instagram" style="color: white; display:flex; transition: 0.2s opacity;"
+              onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'"><svg width="18" height="18"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg></a>
+            <a href="#" aria-label="YouTube" style="color: white; display:flex; transition: 0.2s opacity;"
+              onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'"><svg width="20" height="20"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg></a>
+            <a href="#" aria-label="LinkedIn" style="color: white; display:flex; transition: 0.2s opacity;"
+              onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'"><svg width="18" height="18"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.6 6.029-5.056 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+              </svg></a>
+            <a href="#" aria-label="WhatsApp" style="color: white; display:flex; transition: 0.2s opacity;"
+              onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'"><svg width="18" height="18"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12.031 0C5.388 0 0 5.39 0 12.031c0 2.131.556 4.212 1.614 6.046L.18 23.366l5.441-1.428A11.97 11.97 0 0 0 12.03 24c6.643 0 12.03-5.388 12.03-12.03C24.06 5.39 18.674 0 12.031 0zm0 21.996a9.96 9.96 0 0 1-5.093-1.4l-.365-.216-3.784.992.992-3.69-.238-.378A9.96 9.96 0 0 1 2.036 12.03C2.036 6.518 6.52 2.036 12.03 2.036s9.996 4.482 9.996 9.994-4.482 9.996-9.996 9.996zm5.485-7.498c-.301-.151-1.782-.88-2.059-.982-.277-.1-.478-.151-.678.151-.2.301-.778.981-.954 1.182-.176.201-.351.226-.653.075-.3-.151-1.272-.469-2.423-1.498-.895-.801-1.5-1.79-1.676-2.091-.176-.301-.019-.464.131-.614.136-.136.301-.351.452-.527.151-.176.201-.301.301-.502.1-.2.05-.376-.025-.527-.075-.15-.678-1.633-.928-2.235-.245-.587-.494-.507-.678-.517-.176-.008-.377-.008-.578-.008s-.527.075-.803.376c-.276.301-1.054 1.031-1.054 2.512s1.079 2.91 1.23 3.111c.15.2 2.122 3.238 5.14 4.542 2.545 1.099 3.195 1.019 3.797.943.834-.105 1.782-.728 2.033-1.431.251-.703.251-1.306.176-1.432-.075-.125-.276-.2-.577-.35z" />
+              </svg></a>
+          </div>
+        </div>
+        <div style="margin-top: 2px;">An initiative of Sukhdev and Kamal Sharma Educational Trust</div>
+        <div
+          style="display: flex; justify-content: space-between; width: 100%; margin-top: 2px; flex-wrap: wrap; gap: 5px;">
+          <span>© Copyright LexiconMile. All Rights Reserved. Designed by Lexicon</span>
+          <a href="#" aria-label="Back to top"
+            style="text-decoration:none; color:inherit; font-weight: 500; font-size: 13px; letter-spacing: normal;">BACK
+            TO TOP ↑</a>
+        </div>
+      </div>
     </div>
   </footer>
   <aside class="floating-actions" aria-label="Quick actions"><button data-action="apply" aria-label="Apply now"><svg
