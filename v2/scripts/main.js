@@ -350,3 +350,54 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reducedM
     setInterval(next, interval);
   }
 })();
+    // ==========================================
+    // 16. Stacking Cards on Scroll Animation
+    // ==========================================
+    const stackCards = document.querySelectorAll('.practically-card.stack-card');
+    const pracHeader = document.querySelector('.practically-header');
+    if (stackCards.length > 0) {
+        let isStackTicking = false;
+        const lastCard = stackCards[stackCards.length - 1];
+
+        function updateCardStack() {
+            stackCards.forEach((card, index) => {
+                const nextCard = stackCards[index + 1];
+                if (nextCard) {
+                    const cardRect = card.getBoundingClientRect();
+                    const nextRect = nextCard.getBoundingClientRect();
+                    
+                    // How much the next card has overlapped with the current sticky card
+                    const overlapDistance = cardRect.bottom - nextRect.top;
+                    const cardHeight = cardRect.height || 450;
+                    
+                    if (overlapDistance > 0) {
+                        const progress = Math.min(Math.max(overlapDistance / cardHeight, 0), 1);
+                        // Scale down card proportionally as next card covers it like a deck of cards
+                        const scale = 1 - (progress * 0.05);
+                        const brightness = 1 - (progress * 0.12);
+                        const translateY = -progress * 8;
+                        card.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+                        card.style.filter = `brightness(${brightness})`;
+                    } else {
+                        card.style.transform = 'scale(1) translateY(0px)';
+                        card.style.filter = 'brightness(1)';
+                    }
+                }
+            });
+
+            isStackTicking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!isStackTicking) {
+                requestAnimationFrame(updateCardStack);
+                isStackTicking = true;
+            }
+        }, { passive: true });
+
+        // Initial calculation
+        updateCardStack();
+    }
+
+    // ==========================================
+

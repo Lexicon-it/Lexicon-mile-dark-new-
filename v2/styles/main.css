@@ -3955,3 +3955,553 @@ button {
         scroll-behavior: auto
     }
 }
+/* --------------------------------------------------------------------------
+   Learn Practically by Building Real Businesses (Stacking Cards on Scroll)
+   -------------------------------------------------------------------------- */
+.practically-stack-section {
+    position: relative;
+    background: #000000;
+    padding: 155px 0 160px;
+    scroll-margin-top: 150px;
+    overflow: visible;
+}
+
+.practically-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+}
+
+.practically-header {
+    position: sticky;
+    top: 155px;
+    z-index: 5;
+    margin-bottom: 24px;
+    background: transparent;
+    pointer-events: none;
+}
+
+.practically-title {
+    font-size: clamp(1.85rem, 2.7vw, 2.35rem);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+.practically-serif-italic {
+    font-family: "Fraunces", Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 400;
+    background: linear-gradient(91deg, #39B5D7 -6.14%, #F7D544 47.02%, #E38330 99.71%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Stacking Cards Deck */
+.practically-cards-stack {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+}
+
+.practically-card.stack-card {
+    position: sticky;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 22px 26px;
+    color: #111827;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.45), 0 20px 55px rgba(0, 0, 0, 0.55);
+    transform-origin: center top;
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), filter 0.22s ease, box-shadow 0.22s ease;
+    will-change: transform;
+}
+
+.practically-card[data-index="0"] {
+    top: 245px;
+    z-index: 10;
+}
+
+.practically-card[data-index="1"] {
+    top: 260px;
+    z-index: 20;
+}
+
+.practically-card[data-index="2"] {
+    top: 275px;
+    z-index: 30;
+}
+
+.stack-card-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 32px;
+    align-items: center;
+}
+
+/* Left Media Column */
+.stack-media-col {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 330px;
+    background: #0f172a;
+}
+
+.stack-media-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.stack-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.practically-card:hover .stack-img {
+    transform: scale(1.03);
+}
+
+.stack-media-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.65) 100%);
+    pointer-events: none;
+}
+
+.stack-media-badge-text {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.stack-media-badge-text .sub-target {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.stack-media-badge-text .big-target {
+    font-size: 3.4rem;
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    text-shadow: 0 3px 14px rgba(0, 0, 0, 0.8);
+    margin: 2px 0;
+}
+
+.stack-media-badge-text .sub-days {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.stack-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    cursor: pointer;
+}
+
+.stack-play-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255, 255, 255, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.stack-play-circle svg {
+    margin-left: 2px;
+}
+
+.stack-play-btn:hover .stack-play-circle {
+    background: rgba(255, 255, 255, 0.45);
+    transform: scale(1.1);
+}
+
+/* Right Content Column */
+.stack-content-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 12px;
+}
+
+.stack-tag-badge {
+    background: #000000;
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+}
+
+.stack-card-title {
+    font-size: clamp(1.45rem, 2.2vw, 1.85rem);
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+
+.stack-serif-em {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #111827;
+}
+
+.stack-card-desc {
+    font-size: 0.88rem;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    max-width: 530px;
+}
+
+/* Metric Cards */
+.stack-metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.stack-metric-box {
+    background: #fbfcfd;
+    border: 1px solid #edf0f5;
+    border-radius: 12px;
+    padding: 10px 14px;
+    min-height: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.metric-lbl {
+    font-size: 0.72rem;
+    color: #6b7280;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.metric-val {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.1;
+    margin-bottom: 4px;
+    letter-spacing: -0.02em;
+}
+
+.metric-chart-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.metric-chart-svg {
+    width: 100%;
+    height: 36px;
+    display: block;
+}
+
+.metric-markers {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.65rem;
+    color: #9ca3af;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.milestone-badges {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.m-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.m-badge.pre-seed {
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+.m-badge.seed {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.m-badge.series-a {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.metric-avatars-row {
+    margin-top: 4px;
+}
+
+.founder-avatars {
+    display: flex;
+    align-items: center;
+}
+
+.founder-av {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    margin-left: -8px;
+}
+
+.founder-av:first-child {
+    margin-left: 0;
+}
+
+.metric-startup-logos {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+
+.startup-logo-pill {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 3px 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #334155;
+}
+
+.startup-logo-pill.brand-ulike {
+    color: #f97316;
+}
+
+.startup-logo-pill.brand-amzaar {
+    color: #0284c7;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.startup-logo-pill.brand-nikyaa {
+    color: #7c3aed;
+}
+
+.startup-logo-pill.brand-sequoia {
+    color: #047857;
+    font-weight: 800;
+}
+
+.startup-logo-pill.brand-blume {
+    color: #2563eb;
+    font-weight: 800;
+}
+
+.startup-logo-pill.brand-accel {
+    color: #d97706;
+    font-weight: 800;
+}
+
+/* Action Button */
+.stack-action-row {
+    margin-top: 4px;
+}
+
+.stack-download-btn {
+    border: 1.5px solid #111827;
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #111827;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    background: transparent;
+    text-decoration: none;
+}
+
+.stack-download-btn:hover {
+    background: #111827;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Stacking Cards */
+@media (max-width: 1024px) {
+    .stack-card-inner {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .stack-media-col {
+        height: 280px;
+    }
+
+    .practically-stack-section {
+        padding: 100px 0 130px;
+    }
+
+    .practically-header {
+        top: 85px;
+        margin-bottom: 24px;
+    }
+
+    .practically-cards-stack {
+        gap: 50px;
+    }
+
+    .practically-card[data-index="0"] {
+        top: 175px;
+    }
+
+    .practically-card[data-index="1"] {
+        top: 195px;
+    }
+
+    .practically-card[data-index="2"] {
+        top: 215px;
+    }
+}
+
+@media (max-width: 768px) {
+    .practically-stack-section {
+        padding: 30px 0 10px;
+        overflow: visible !important;
+    }
+
+    .practically-container {
+        padding: 0 16px;
+        overflow: visible !important;
+    }
+
+    .practically-header {
+        position: sticky !important;
+        top: 60px;
+        z-index: 40 !important;
+        background: #000000;
+        padding: 6px 0;
+        margin-bottom: 8px;
+        pointer-events: none;
+        box-shadow: 0 10px 20px 0 #000000 !important;
+    }
+
+    .practically-title {
+        font-size: clamp(1.35rem, 5vw, 1.65rem) !important;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+    }
+
+    .practically-cards-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        position: relative;
+    }
+
+    .practically-card.stack-card:not(:last-child) {
+        margin-bottom: 220px !important;
+    }
+
+    .practically-card.stack-card {
+        position: sticky !important;
+        background: #ffffff !important;
+        border-radius: 24px !important;
+        padding: 18px 18px 22px !important;
+        color: #111827 !important;
+        box-shadow: 0 -10px 28px rgba(0, 0, 0, 0.45), 0 18px 40px rgba(0, 0, 0, 0.55) !important;
+        transform-origin: center top;
+        transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), filter 0.22s ease, box-shadow 0.22s ease;
+        will-change: transform;
+    }
+
+    .practically-card[data-index="0"] {
+        top: 124px !important;
+        z-index: 10 !important;
+    }
+
+    .practically-card[data-index="1"] {
+        top: 134px !important;
+        z-index: 20 !important;
+    }
+
+    .practically-card[data-index="2"] {
+        top: 144px !important;
+        z-index: 30 !important;
+    }
+
+    .stack-card-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+
+    .stack-media-col {
+        position: relative;
+        border-radius: 18px;
+        overflow: hidden;
+        height: 220px !important;
+        background: #0f172a;
+        margin-bottom: 16px;
+    }
+
+    .stack-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .stack-media-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.65) 100%);
+    }
+
+    .stack-media-badge-text {
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+        z-index: 2;
+        color: #ffffff;
+
