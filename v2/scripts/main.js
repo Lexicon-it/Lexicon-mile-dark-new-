@@ -83,9 +83,9 @@ document.querySelectorAll('.mega-link-large').forEach(link => {
 // This is a frontend concept. No enquiries or personal data are sent to a server.
 const programs = {
   pgdm: { title: 'PGDM', category: 'POSTGRADUATE / MANAGEMENT', image: 'classroom', description: 'An AI-integrated, industry-focused management program designed to develop future-ready business leaders.', highlights: ['AI-integrated business learning', 'Industry immersion and live projects', 'Leadership development', 'Business strategy and practical decision-making'] },
-  mba: { title: 'MBA Global', category: 'POSTGRADUATE / GLOBAL BUSINESS', image: 'global', description: 'Build a global business perspective through international exposure, strategic thinking and cross-cultural learning.', highlights: ['Global exposure and perspectives', 'International business', 'Strategic thinking', 'Cross-cultural learning and leadership'] },
-  bba: { title: 'BBA', category: 'UNDERGRADUATE / BUSINESS', image: 'collaboration', description: 'Start your business journey with a modern undergraduate program focused on practical learning, innovation and entrepreneurship.', highlights: ['Business foundations', 'Innovation and practical learning', 'Entrepreneurial thinking', 'Leadership development'] },
-  ihm: { title: 'IHM / HMCT', category: 'HOSPITALITY / MANAGEMENT', image: 'hospitality', description: 'Build a career in hospitality through practical learning, industry exposure and professional development.', highlights: ['Hospitality and service excellence', 'Tourism and management', 'Practical industry training', 'Professional development'] }
+  mba: { title: 'MBA Global', category: 'POSTGRADUATE / GLOBAL BUSINESS', image: 'global', description: 'Experience globally focused MBA programmes across the UK, Malaysia, and UAE, with dual-campus learning and international exposure. Choose from International Business, Business Analytics & AI, or Family Business Management and build global leadership skills. Gain practical experience, industry exposure, and a truly global MBA experience.', highlights: ['Global exposure and perspectives', 'International business', 'Strategic thinking', 'Cross-cultural learning and leadership'] },
+  bba: { title: 'BBA', category: 'UNDERGRADUATE / BUSINESS', image: 'collaboration', description: 'A future-ready BBA at Lexicon MILE combining business, AI, analytics, and hands-on industry exposure. Learn through real-world projects and AI-powered tools to build practical, analytical, and professional skills. Graduate as a confident Day Zero Professional, ready for an AI-driven business world.', highlights: ['Business foundations', 'Innovation and practical learning', 'Entrepreneurial thinking', 'Leadership development'] },
+  ihm: { title: 'IHM / HMCT', category: 'HOSPITALITY / MANAGEMENT', image: 'hospitality', description: 'Build a career in hospitality, tourism, and hotel management through academic excellence and hands-on industry exposure. Develop global perspectives, practical skills, and a passion for service excellence.', highlights: ['Hospitality and service excellence', 'Tourism and management', 'Practical industry training', 'Professional development'] }
 };
 
 const awards = [
@@ -350,3 +350,54 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reducedM
     setInterval(next, interval);
   }
 })();
+    // ==========================================
+    // 16. Stacking Cards on Scroll Animation
+    // ==========================================
+    const stackCards = document.querySelectorAll('.practically-card.stack-card');
+    const pracHeader = document.querySelector('.practically-header');
+    if (stackCards.length > 0) {
+        let isStackTicking = false;
+        const lastCard = stackCards[stackCards.length - 1];
+
+        function updateCardStack() {
+            stackCards.forEach((card, index) => {
+                const nextCard = stackCards[index + 1];
+                if (nextCard) {
+                    const cardRect = card.getBoundingClientRect();
+                    const nextRect = nextCard.getBoundingClientRect();
+                    
+                    // How much the next card has overlapped with the current sticky card
+                    const overlapDistance = cardRect.bottom - nextRect.top;
+                    const cardHeight = cardRect.height || 450;
+                    
+                    if (overlapDistance > 0) {
+                        const progress = Math.min(Math.max(overlapDistance / cardHeight, 0), 1);
+                        // Scale down card proportionally as next card covers it like a deck of cards
+                        const scale = 1 - (progress * 0.05);
+                        const brightness = 1 - (progress * 0.12);
+                        const translateY = -progress * 8;
+                        card.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+                        card.style.filter = `brightness(${brightness})`;
+                    } else {
+                        card.style.transform = 'scale(1) translateY(0px)';
+                        card.style.filter = 'brightness(1)';
+                    }
+                }
+            });
+
+            isStackTicking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!isStackTicking) {
+                requestAnimationFrame(updateCardStack);
+                isStackTicking = true;
+            }
+        }, { passive: true });
+
+        // Initial calculation
+        updateCardStack();
+    }
+
+    // ==========================================
+
