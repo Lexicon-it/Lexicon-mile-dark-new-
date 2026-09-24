@@ -102,7 +102,7 @@ const megaMenuData = {
   // Faculty & Mentors
   'faculty-mentors': {
     overview: `<h4 class="mega-heading">FACULTY & INDUSTRY MENTORS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE brings together accomplished<br>faculty and experienced industry professionals<br>who connect academic knowledge with<br>real-world business challenges. Through<br>the “A Mentor Every MILE” model, students<br>engage through leadership sessions,<br>one-on-one mentoring, fireside chats<br>and industry-integrated projects with<br>industry leaders and professionals.</p>`,
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE brings together accomplished faculty and experienced industry professionals who connect academic knowledge with real-world business challenges.</p>`,
     image: `<img src="images/collaboration.jpg" alt="Faculty & Mentors" class="mega-image">`
   },
   'faculty-directory': {
@@ -119,7 +119,7 @@ const megaMenuData = {
   },
   'placements-overview': {
     overview: `<h4 class="mega-heading">PLACEMENTS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s placement ecosystem connects<br>students with 200+ organisations across<br>diverse sectors, supported by strong<br>industry engagement and practical learning.<br>For the 2024–26 PGDM batch, the institute<br>reports 500+ placement offers, with the<br>highest international package at ₹49 LPA<br>and highest domestic package at ₹22 LPA,<br>supporting industry-ready careers.</p>`,
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s placement ecosystem connects<br>students with 200+ organisations across<br>diverse sectors, supported by strong<br>industry engagement and practical learning.<br>For the 2024–26 PGDM batch, the institute<br>reports 500+ placement offers, with the<br>highest international package at ₹49 LPA<br>and highest domestic package at ₹18 LPA,<br>supporting industry-ready careers.</p>`,
     image: `<img src="images/hero.jpg" alt="Placements" class="mega-image">`
   },
   'recruitment-process': {
@@ -184,16 +184,16 @@ const programs = {
 };
 
 const awards = [
-  'Top 100 Institutes in India for Digital Distinction',
-  'Best B-School in Leadership Excellence',
-  'Best Private Management Institute in India for Placements',
-  'Dewang Mehta National Education Award',
-  'RRC Knowledge Education Leadership Award',
-  "AsiaOne World's Greatest Brand Award",
-  'Lead Lab Centre of Excellence Award',
-  'Best Management Institute for Placements'
+  { title: 'Top 100 Institutes in India for Digital Distinction', subtitle: 'Technology Conformance to NEP – ASSOCHAM 2022.' },
+  { title: 'Best B-School in Leadership Excellence', subtitle: 'BW Education, Future of Management Education Awards 2023.' },
+  { title: 'Best Private Management Institute in India for Placements', subtitle: 'CEGR 2022' },
+  { title: 'Dewang Mehta National Education Award', subtitle: 'Best Emerging B-School' },
+  { title: 'BBC Knowledge Education Leadership Award', subtitle: 'Best Academic & Industry Interface' },
+  { title: "AsiaOne World's Greatest Brand Award", subtitle: 'Singapore' },
+  { title: 'Lead Lab Centre of Excellence Award', subtitle: 'For nurturing youth leadership' },
+  { title: 'Best Management Institute for Placements', subtitle: 'Integrated Chambers of Commerce and Industry, 2020' }
 ];
-document.getElementById('awards-grid').innerHTML = awards.map((award, index) => `<article class="award-item reveal"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#award"/></svg><span class="award-index">${String(index + 1).padStart(2, '0')}</span><h3>${award}</h3></article>`).join('');
+document.getElementById('awards-grid').innerHTML = awards.map((award, index) => `<article class="award-item reveal"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#award"/></svg><span class="award-index">${String(index + 1).padStart(2, '0')}</span><h3>${award.title}</h3><p class="award-subtitle">${award.subtitle}</p></article>`).join('');
 
 const activities = [
   { title: 'Clubs & Communities', image: 'classroom', description: 'Find your people. Exchange perspectives. Build something bigger together.' },
@@ -262,7 +262,7 @@ const information = {
   eligibility: { eyebrow: 'ADMISSIONS / ELIGIBILITY', title: 'Find your fit.', body: '<p>Eligibility requirements vary by program. Academic qualifications, entrance-test requirements and selection criteria will be published following institutional confirmation.</p><p>Explore each program to understand its focus. No unverified eligibility criteria are presented in this concept.</p>' },
   fees: { eyebrow: 'ADMISSIONS / PROGRAM FEES', title: 'Invest in what’s next.', body: '<p>A complete, program-specific fee schedule will be available before applications go live, including the payment schedule and any additional charges.</p><p class="dialog-notice">Fees have not been supplied for this design concept. Please rely only on the official fee structure once published.</p>' },
   scholarships: { eyebrow: 'ADMISSIONS / SCHOLARSHIPS', title: 'Make ambition possible.', body: '<p>Scholarship availability, eligibility, amounts and application timelines will be shared once the official policy is confirmed.</p><p class="dialog-notice">This concept does not promise scholarship funding or financial assistance.</p>' },
-  placements: { eyebrow: 'CAREERS / BUILT FOR THE WORLD OF WORK', title: 'Your potential. Real impact.', body: '<p>Industry exposure, practical learning and corporate relationships connect education to the world of work.</p><ul><li>500+ students placed</li><li>200+ recruiters / companies</li><li>49 LPA highest package — context to be confirmed</li><li>22 LPA highest package — context to be confirmed</li></ul><p class="dialog-notice">These figures were supplied for the homepage concept. Cohorts, reporting periods, program applicability and salary components have not been provided. They are not a placement guarantee. A verified placement report is required before publication.</p>' },
+  placements: { eyebrow: 'CAREERS / BUILT FOR THE WORLD OF WORK', title: 'Your potential. Real impact.', body: '<p>Industry exposure, practical learning and corporate relationships connect education to the world of work.</p><ul><li>500+ students placed</li><li>200+ recruiters / companies</li><li>49 LPA highest package — context to be confirmed</li><li>18 LPA highest package — context to be confirmed</li></ul><p class="dialog-notice">These figures were supplied for the homepage concept. Cohorts, reporting periods, program applicability and salary components have not been provided. They are not a placement guarantee. A verified placement report is required before publication.</p>' },
   contact: { eyebrow: 'CONNECT / LEXICON MILE', title: 'Let’s start a conversation.', body: '<p>Explore your next chapter with Lexicon MILE in Pune, Maharashtra, India.</p><p class="dialog-notice">The official campus address, admissions email and phone number have not been provided. Verified contact channels will be added before launch.</p>' },
   whatsapp: { eyebrow: 'CONNECT / WHATSAPP', title: 'One conversation away.', body: '<p>Our WhatsApp enquiry channel will make it easier to explore programs and admissions.</p><p class="dialog-notice">An official WhatsApp number has not yet been configured. No message has been sent. Verified contact details are needed before enabling this action.</p>' },
   call: { eyebrow: 'CONNECT / CALL', title: 'Talk about your next step.', body: '<p>Speak with the admissions team about choosing a program and preparing your application.</p><p class="dialog-notice">The official admissions phone number has not yet been provided. This preview does not place calls.</p>' },
@@ -323,7 +323,10 @@ document.addEventListener('click', event => {
     return;
   }
   const action = target.dataset.action;
-  if (action === 'apply') return applicationDialog(target.dataset.selected);
+  if (action === 'apply') {
+    window.open('https://admissions.lexiconmile.com/', '_blank');
+    return;
+  }
   if (action === 'brochure') return downloadBrochure();
   const info = information[action];
   if (info) openDialog(`<p class="eyebrow">${info.eyebrow}</p><h2 id="dialog-title">${info.title}</h2>${info.body}`);
@@ -346,9 +349,9 @@ document.addEventListener('submit', event => {
 
 // Manual carousel: no auto-advance to interrupt reading or keyboard navigation.
 const testimonials = [
-  { quote: 'Lexicon MILE gave me the confidence to step outside the classroom and solve real business problems.', name: 'Mr. Siddhant Raj', program: 'PGDM · Batch details to be confirmed', image: 'student', note: 'Provided testimonial · illustrative portrait' },
-  { quote: 'The most valuable lessons happen when you turn an idea into action, alongside people who challenge you to think bigger.', name: 'The industry-immersion perspective', program: 'PGDM · Illustrative student voice', image: 'mentor-woman', note: 'Illustrative editorial quote · student name and batch pending' },
-  { quote: 'A global perspective starts with curiosity — about people, markets and the possibilities beyond your comfort zone.', name: 'The global-learning perspective', program: 'MBA Global · Illustrative student voice', image: 'mentor-man', note: 'Illustrative editorial quote · student name and batch pending' }
+  { quote: 'Lexicon MILE transformed my perspective on management. The faculty are industry veterans who bring real-world insights into every session.', name: 'Devyani Pardhi', program: 'PGDM Batch 2023-25', image: '1', note: '' },
+  { quote: 'The international exposure through the USW partnership was invaluable. I got to experience global business education firsthand.', name: 'Ajinkya', program: 'Lexicon MILE Alumni', image: '2', note: '' },
+  { quote: 'The placement mentorship program was exceptional. Right from building your resume to mock interviews, every step was supported professionally.', name: 'Palak Keshari', program: 'Lexicon MILE Alumni', image: '3', note: '' }
 ];
 let testimonialIndex = 0;
 function setTestimonial(direction) {
@@ -358,7 +361,7 @@ function setTestimonial(direction) {
   document.getElementById('testimonial-name').textContent = testimonial.name;
   document.getElementById('testimonial-program').textContent = testimonial.program;
   document.getElementById('testimonial-note').textContent = testimonial.note;
-  document.getElementById('testimonial-photo').src = `images/${testimonial.image}.jpg`;
+  document.getElementById('testimonial-photo').src = `images/testimonial/${testimonial.image}.jpeg`;
   document.getElementById('testimonial-index').innerHTML = `${String(testimonialIndex + 1).padStart(2, '0')} <span>/ 03</span>`;
 }
 document.getElementById('testimonial-prev').addEventListener('click', () => setTestimonial(-1));

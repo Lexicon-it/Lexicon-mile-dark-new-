@@ -126,7 +126,7 @@ All photographs, icons and fonts are project-local. There are no external runtim
 
 The homepage uses names and claims provided in the design brief. Stock portraits are not photographs of the named individuals. The mentor portrait overlays and alt text explicitly state this. Photography is not a representation of the actual campus. Recruiter logos are text-based placeholder treatments, not official supplied artwork.
 
-The supplied **49 LPA** and **22 LPA** figures both read “Highest Package.” Neither reporting period nor program/cohort context was supplied. The placement section and expanded dialog disclose this ambiguity rather than inventing an international/domestic distinction. All awards, statistics and affiliations must be checked before the page is represented as an official institutional website.
+The supplied **49 LPA** and **18 LPA** figures both read “Highest Package.” Neither reporting period nor program/cohort context was supplied. The placement section and expanded dialog disclose this ambiguity rather than inventing an international/domestic distinction. All awards, statistics and affiliations must be checked before the page is represented as an official institutional website.
 
 ## Verification performed
 
