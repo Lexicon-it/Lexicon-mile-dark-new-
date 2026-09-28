@@ -5985,23 +5985,19 @@ button {
 /* ==========================================================================
    CEO'S MESSAGE PAGE (DARK LUXURY THEME)
    ========================================================================== */
+.chairmans-desk-hero,
 .ceo-hero-section {
     position: relative;
-    padding-top: 130px;
-    padding-bottom: 30px;
+    padding-top: 140px;
+    padding-bottom: 36px;
+    background: radial-gradient(circle at 50% 15%, rgba(13, 30, 60, 0.95) 0%, #05070c 75%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     overflow: hidden;
 }
 
+.chairmans-desk-hero::before,
 .ceo-hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 10%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(102, 157, 239, 0.08) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 0;
+    display: none !important;
 }
 
 .ceo-pillars-strip {

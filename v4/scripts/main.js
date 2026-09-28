@@ -18,9 +18,9 @@ const megaMenuData = {
     image: `<img src="images/classroom.jpg" alt="Managing Trustees" class="mega-image">`
   },
   'ceo-message': {
-    overview: `<h4 class="mega-heading">CEO'S MESSAGE</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Perspectives on leadership, innovation, and future-ready education.<br><br>At Lexicon MILE, our CEO Mr. Sanjeev Yadav shares the vision and strategic commitments that guide our institution—shaping independent, responsible, and grounded business leaders.</p>`,
-    image: `<img src="images/trustees/sanjeev-yadav.jpg" alt="Mr. Sanjeev Yadav, CEO" class="mega-image">`
+    overview: `<h4 class="mega-heading">FROM THE CHAIRMAN'S DESK</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">A legacy of excellence founded in 2006.<br><br>Through his visionary leadership, Chairman Shri S.D. Sharma shares principles of value-based education, 'Believe in Yourself', and nurturing students into responsible global citizens.</p>`,
+    image: `<img src="images/trustees/sd-sharma.jpg" alt="Shri S.D. Sharma, Chairman" class="mega-image">`
   },
   'governing-body': {
     overview: `<h4 class="mega-heading">GOVERNING BODY</h4>
