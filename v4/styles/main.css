@@ -5982,6 +5982,480 @@ button {
     }
 }
 
+/* ==========================================================================
+   CEO'S MESSAGE PAGE (DARK LUXURY THEME)
+   ========================================================================== */
+.ceo-hero-section {
+    position: relative;
+    padding-top: 130px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
 
+.ceo-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(102, 157, 239, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
 
+.ceo-pillars-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 36px;
+    margin-bottom: 50px;
+}
 
+.ceo-pillar-pill {
+    background: #090e18;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ceo-pillar-pill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, #669def, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ceo-pillar-pill:hover {
+    border-color: rgba(102, 157, 239, 0.35);
+    transform: translateY(-3px);
+    background: #0d1524;
+}
+
+.ceo-pillar-pill:hover::before {
+    opacity: 1;
+}
+
+.ceo-pillar-tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #669def;
+}
+
+.ceo-pillar-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.ceo-pillar-desc {
+    font-size: 12.5px;
+    color: #92a4bf;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.ceo-main-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 70px;
+}
+
+.ceo-sidebar-card {
+    background: #0a101d;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 20px;
+    padding: 24px;
+    position: sticky;
+    top: 100px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.ceo-photo-frame {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #060b13;
+    border: 1px solid rgba(102, 157, 239, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.ceo-photo-frame img {
+    width: 100%;
+    aspect-ratio: 4 / 4.7;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.ceo-sidebar-card:hover .ceo-photo-frame img {
+    transform: scale(1.03);
+}
+
+.ceo-info-block {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ceo-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(102, 157, 239, 0.12);
+    border: 1px solid rgba(102, 157, 239, 0.28);
+    color: #669def;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.ceo-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+}
+
+.ceo-title-sub {
+    font-size: 13px;
+    color: #a0b2cc;
+    line-height: 1.5;
+    margin: 0 0 18px;
+}
+
+.ceo-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ceo-social-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #c0d1eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.ceo-social-btn:hover {
+    background: #669def;
+    color: #03060c;
+    border-color: #669def;
+    transform: translateY(-2px);
+}
+
+.ceo-quote-card {
+    margin-top: 22px;
+    padding: 16px 18px;
+    background: rgba(102, 157, 239, 0.06);
+    border-left: 3px solid #669def;
+    border-radius: 0 12px 12px 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #b7cbdf;
+    font-style: italic;
+    text-align: left;
+}
+
+.ceo-letter-card {
+    background: #090f1b;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 44px 48px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.ceo-letter-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 48px;
+    right: 48px;
+    height: 2px;
+    background: linear-gradient(90deg, #669def, transparent);
+}
+
+.ceo-salutation {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ceo-salutation::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.ceo-letter-body {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.ceo-letter-body p {
+    font-size: 15.5px;
+    line-height: 1.85;
+    color: #b8cadf;
+    margin: 0;
+}
+
+.ceo-letter-body p.lead {
+    font-size: 17.5px;
+    line-height: 1.8;
+    color: #e4edf8;
+    font-weight: 400;
+}
+
+.ceo-letter-body p:first-of-type::first-letter {
+    font-size: 44px;
+    float: left;
+    line-height: 1;
+    padding-right: 12px;
+    color: #669def;
+    font-weight: 800;
+}
+
+.ceo-highlight-quote {
+    padding: 24px 28px;
+    margin: 10px 0;
+    background: rgba(7, 59, 145, 0.18);
+    border: 1px solid rgba(102, 157, 239, 0.25);
+    border-left: 4px solid #669def;
+    border-radius: 12px;
+}
+
+.ceo-highlight-quote p {
+    font-size: 16px !important;
+    font-style: italic;
+    color: #d6e4f7 !important;
+    line-height: 1.7 !important;
+}
+
+.ceo-sign-off-block {
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ceo-signature-hand {
+    font-family: 'Times New Roman', Times, Georgia, serif;
+    font-size: 38px;
+    font-style: italic;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+}
+
+.ceo-signature-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.ceo-signature-title {
+    font-size: 13px;
+    color: #669def;
+    font-weight: 600;
+    margin: 3px 0 0;
+    letter-spacing: 0.02em;
+}
+
+.ceo-stamp-badge {
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: right;
+}
+
+.ceo-stamp-badge span {
+    display: block;
+    font-size: 11px;
+    color: #798da8;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.ceo-stamp-badge strong {
+    display: block;
+    font-size: 13px;
+    color: #dbe7f7;
+    margin-top: 2px;
+}
+
+/* Banner Feature Section */
+.ceo-banner-card {
+    background: #090e19;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 70px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.ceo-banner-img-wrap {
+    position: relative;
+    width: 100%;
+    max-height: 480px;
+    overflow: hidden;
+}
+
+.ceo-banner-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.ceo-banner-caption {
+    padding: 24px 32px;
+    background: #0b1220;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.ceo-banner-caption p {
+    margin: 0;
+    font-size: 14.5px;
+    color: #b5c7dd;
+    max-width: 780px;
+    line-height: 1.6;
+}
+
+/* Commitments 3 Grid */
+.ceo-commitments-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+    margin-bottom: 70px;
+}
+
+.ceo-commitment-card {
+    background: #0a101d;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.ceo-commitment-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(102, 157, 239, 0.35);
+}
+
+.ceo-commitment-num {
+    font-size: 32px;
+    font-weight: 800;
+    color: rgba(102, 157, 239, 0.25);
+    line-height: 1;
+    margin-bottom: 16px;
+    font-family: inherit;
+}
+
+.ceo-commitment-card h3 {
+    font-size: 18px;
+    color: #fff;
+    margin: 0 0 10px;
+}
+
+.ceo-commitment-card p {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #9eb1cb;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .ceo-pillars-strip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ceo-main-layout {
+        grid-template-columns: 300px 1fr;
+        gap: 30px;
+    }
+    .ceo-letter-card {
+        padding: 32px;
+    }
+}
+
+@media (max-width: 860px) {
+    .ceo-main-layout {
+        grid-template-columns: 1fr;
+    }
+    .ceo-sidebar-card {
+        position: static;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    .ceo-commitments-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .ceo-pillars-strip {
+        grid-template-columns: 1fr;
+    }
+    .ceo-letter-card {
+        padding: 24px 20px;
+    }
+    .ceo-salutation {
+        font-size: 18px;
+    }
+    .ceo-letter-body p {
+        font-size: 14.5px;
+    }
+    .ceo-sign-off-block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

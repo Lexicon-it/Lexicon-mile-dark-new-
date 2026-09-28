@@ -18,9 +18,9 @@ const megaMenuData = {
     image: `<img src="images/classroom.jpg" alt="Managing Trustees" class="mega-image">`
   },
   'ceo-message': {
-    overview: `<h4 class="mega-heading">FROM THE CHAIRMAN'S DESK</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Ideas that challenge convention. Perspectives that shape the future.<br><br>At Lexicon MILE, we believe meaningful education begins with meaningful conversations. Through his articles and reflections, our Chairman shares perspectives on leadership, business, education, innovation, and the evolving world of work.</p>`,
-    image: `<img src="images/global.jpg" alt="Chairman Message" class="mega-image">`
+    overview: `<h4 class="mega-heading">CEO'S MESSAGE</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Perspectives on leadership, innovation, and future-ready education.<br><br>At Lexicon MILE, our CEO Mr. Sanjeev Yadav shares the vision and strategic commitments that guide our institution—shaping independent, responsible, and grounded business leaders.</p>`,
+    image: `<img src="images/trustees/sanjeev-yadav.jpg" alt="Mr. Sanjeev Yadav, CEO" class="mega-image">`
   },
   'governing-body': {
     overview: `<h4 class="mega-heading">GOVERNING BODY</h4>
