@@ -8488,6 +8488,43 @@ button {
     border-radius: 4px;
 }
 
+/* Callout Action Button Group */
+.loan-assistance-text {
+    flex: 1 1 auto;
+    min-width: 260px;
+}
+
+.loan-assistance-text h3,
+.loan-assistance-text h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 6px 0;
+}
+
+.loan-action-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.loan-action-group .button {
+    min-height: 44px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    gap: 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.loan-action-group .button>span {
+    font-size: 16px;
+}
+
 /* Responsive adjustments for scholarship page */
 @media (max-width: 1024px) {
     .scholarship-tiers-grid {
@@ -8501,7 +8538,15 @@ button {
     .loan-assistance-card {
         flex-direction: column;
         align-items: flex-start;
-        gap: 14px;
+        gap: 16px;
+    }
+
+    .loan-action-group {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
     }
 }
 
@@ -8517,6 +8562,19 @@ button {
 
     .loan-assistance-card {
         padding: 18px 16px;
+    }
+}
+
+@media (max-width: 540px) {
+    .loan-action-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .loan-action-group .button {
+        width: 100%;
+        justify-content: center;
     }
 }
 
