@@ -1,284 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#05070C">
-    <title>CEO's Message | Lexicon MILE</title>
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        /* Modern Styles for CEO's Message Page */
-        .ceo-hero {
-            position: relative;
-            padding: 180px 0 100px;
-            background: radial-gradient(circle at top right, rgba(7, 59, 145, 0.15), transparent 60%),
-                        radial-gradient(circle at bottom left, rgba(11, 99, 206, 0.1), transparent 60%);
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .ceo-hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(180deg, transparent 0%, var(--bg) 100%);
-            z-index: -1;
-        }
-
-        .page-title {
-            font-size: clamp(48px, 6vw, 80px);
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff 0%, #a3c4ff 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .page-subtitle {
-            font-size: 18px;
-            color: var(--muted);
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
-            animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        /* CEO Section */
-        .ceo-section {
-            padding: 80px 0 120px;
-            position: relative;
-        }
-
-        .ceo-content {
-            display: grid;
-            grid-template-columns: 400px 1fr;
-            gap: 60px;
-            align-items: start;
-        }
-
-        @media (max-width: 991px) {
-            .ceo-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
-
-        .ceo-profile {
-            position: sticky;
-            top: 100px;
-            background: var(--card);
-            border-radius: 24px;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .ceo-image {
-            width: 100%;
-            border-radius: 16px;
-            overflow: hidden;
-            margin-bottom: 24px;
-            position: relative;
-        }
-
-        .ceo-image img {
-            width: 100%;
-            display: block;
-            filter: grayscale(20%);
-            transition: all 0.5s ease;
-        }
-
-        .ceo-profile:hover .ceo-image img {
-            filter: grayscale(0%);
-            transform: scale(1.05);
-        }
-
-        .ceo-name {
-            font-size: 28px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 8px;
-        }
-
-        .ceo-title {
-            font-size: 16px;
-            color: var(--bright);
-            font-weight: 600;
-            line-height: 1.4;
-            margin-bottom: 20px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--muted);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            background: var(--primary);
-            color: #fff;
-            transform: translateY(-3px);
-        }
-
-        .message-content h2 {
-            font-size: 36px;
-            margin-bottom: 30px;
-            background: linear-gradient(135deg, #fff, #a3c4ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .message-text {
-            color: var(--muted);
-            font-size: 17px;
-            line-height: 1.8;
-            text-align: justify;
-        }
-
-        .message-text p {
-            margin-bottom: 1.8em;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .message-text p:first-child::first-letter {
-            font-size: 3.5em;
-            float: left;
-            line-height: 0.8;
-            margin-right: 12px;
-            margin-top: 4px;
-            color: var(--primary);
-            font-weight: 800;
-        }
-
-        .quote-icon {
-            color: rgba(11, 99, 206, 0.15);
-            margin-bottom: 20px;
-            display: block;
-            width: 64px;
-            height: 64px;
-        }
-
-        /* Animations */
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070C">
+  <title>CEO's Message | Lexicon MILE</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
-
 <body>
-    <div id="header"></div>
-
-    <main id="main">
-        <!-- Hero Section -->
-        <section class="ceo-hero">
-            <div class="container">
-                <h1 class="page-title">CEO's Message.</h1>
-                <p class="page-subtitle">Developing leaders who think independently, act responsibly, and remain grounded while navigating complexity.</p>
+  <div id="header"></div>
+  <main id="main">
+    
+    <section class="section" style="padding-top: 120px;">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">FROM THE DESK OF</p>
+            <h2>Mr. Nasir Shaikh<span class="period">.</span></h2>
+          </div>
+          <p>Group CEO, The Lexicon Group of Institutes, MultiFit, EduCrack & EasyRecruit+</p>
+        </div>
+        
+        <div class="cta-main-layout reveal" style="margin-top: 40px; align-items: flex-start;">
+          <div class="cta-image-wrapper" style="position: sticky; top: 120px;">
+            <img src="images/nasir-shaikh.jpg" alt="Mr. Nasir Shaikh" loading="lazy" onerror="this.src='images/leaders/suresh.jpg'" style="border-radius: 12px;">
+          </div>
+          <div class="cta-text-content" style="padding-left: 40px;">
+            <h3 style="font-size: 28px; margin-bottom: 24px; color: #fff;">A warm welcome to Lexicon Management Institute of Leadership & Excellence!</h3>
+            
+            <p style="color: #c1c8d3; margin-bottom: 20px; font-size: 17px; line-height: 1.8;">"Education is not just about academics; it is about holistic development, critical thinking, and preparing oneself to face the challenges of the future."</p>
+            
+            <p style="color: #c1c8d3; margin-bottom: 20px; font-size: 16px; line-height: 1.7;">At Lexicon MILE, we believe in nurturing talent and molding individuals into future-ready leaders. Our comprehensive curriculum, combined with real-world exposure and a focus on practical learning, ensures that our students are well-equipped to excel in their chosen fields.</p>
+            
+            <p style="color: #c1c8d3; margin-bottom: 20px; font-size: 16px; line-height: 1.7;">We are committed to providing an environment that fosters innovation, creativity, and a spirit of entrepreneurship. Our distinguished faculty, state-of-the-art infrastructure, and strong industry connections play a crucial role in shaping the careers of our students.</p>
+            
+            <p style="color: #c1c8d3; margin-bottom: 40px; font-size: 16px; line-height: 1.7;">As you embark on this exciting journey with us, I encourage you to make the most of the opportunities available, engage actively in all aspects of campus life, and strive for excellence in everything you do. Together, let us build a brighter future.</p>
+            
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px;">
+                <p style="font-family: 'Times New Roman', serif; font-size: 32px; font-style: italic; color: #fff;">Nasir Shaikh</p>
+                <p style="color: #67aaff; font-size: 14px; font-weight: 600; margin-top: 5px; letter-spacing: 0.05em;">GROUP CEO</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- CEO Message Section -->
-        <section class="ceo-section">
-            <div class="container">
-                <div class="ceo-content">
-                    <div class="ceo-profile reveal">
-                        <div class="ceo-image">
-                            <img src="images/sanjeev-yadav.jpg" alt="Mr. Sanjeev Yadav" onerror="this.src='https://ui-avatars.com/api/?name=Sanjeev+Yadav&background=0d1422&color=fff&size=800'">
-                        </div>
-                        <h3 class="ceo-name">Mr. Sanjeev Yadav</h3>
-                        <p class="ceo-title">Chief Executive Officer<br>Lexicon Management Institute of Leadership and Excellence</p>
-                        <div class="social-links">
-                            <a href="#" class="social-link" aria-label="Facebook">
-                                <i data-lucide="facebook" width="20" height="20"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Twitter">
-                                <i data-lucide="twitter" width="20" height="20"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="LinkedIn">
-                                <i data-lucide="linkedin" width="20" height="20"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="message-content reveal" style="transition-delay: 0.2s;">
-                        <i data-lucide="quote" class="quote-icon"></i>
-                        <div class="message-text">
-                            <p>Dear Students, Faculty, & Industry Partners,</p>
-                            
-                            <p>Welcome to Lexicon Management Institute of Leadership & Excellence (Lexicon MILE). As CEO of this institution, I see Lexicon MILE as a long term commitment to developing leaders who think independently, act responsibly, and remain grounded while navigating complexity.</p>
-                            
-                            <p>Education, in my view, must do more than deliver curriculum. It must shape judgement, discipline thinking, and instil a sense of responsibility for outcomes. At Lexicon MILE, academic rigour is designed to challenge assumptions, encourage informed dialogue, and connect learning directly with the realities students will face in organisations and society.</p>
-                            
-                            <p>Our academic approach is anchored in sustained industry engagement, experiential exposure, and purposeful use of technology. Students interact closely with practitioners, participate in leadership conversations, and engage with real world contexts through structured initiatives. These experiences are central to building resilience, adaptability, and the confidence required to deal with uncertainty.</p>
-                            
-                            <p>I am deeply conscious that every student’s journey is different. That is why we emphasise personalised mentoring, transparent progress tracking, and structured self reflection. Our responsibility is to guide, challenge, and support students as they develop clarity about their strengths, aspirations, and professional direction.</p>
-                            
-                            <p>As we move forward, my commitment is to ensure that Lexicon MILE continues to evolve with integrity, relevance, and impact. Together with our faculty, staff, alumni, and industry partners, we will strengthen an institution that contributes thoughtful, capable, and responsible leaders to organisations and society.</p>
-                            
-                            <p>Thank you for placing your trust in Lexicon MILE. That trust guides every decision we make.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <div id="footer"></div>
-
-    <script src="js/main.js"></script>
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-
-        // Scroll Reveal Animation
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal(); // Trigger on load
-    </script>
+  </main>
+  <div id="footer"></div>
+  <script src="js/components.js"></script>
 </body>
 </html>

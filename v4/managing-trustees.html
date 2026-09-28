@@ -1,432 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#05070C">
-    <title>Managing Trustees | Lexicon MILE</title>
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        /* Modern Styles for Managing Trustees Page */
-        .trustees-hero {
-            position: relative;
-            padding: 180px 0 100px;
-            background: radial-gradient(circle at top right, rgba(7, 59, 145, 0.15), transparent 60%),
-                        radial-gradient(circle at bottom left, rgba(11, 99, 206, 0.1), transparent 60%);
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .page-title {
-            font-size: clamp(48px, 6vw, 80px);
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff 0%, #a3c4ff 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .page-subtitle {
-            font-size: 18px;
-            color: var(--muted);
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
-            animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        /* Desks Section */
-        .desk-section {
-            padding: 80px 0;
-            position: relative;
-        }
-
-        .desk-section:nth-child(even) {
-            background: linear-gradient(180deg, var(--bg) 0%, var(--card) 100%);
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .desk-content {
-            display: grid;
-            grid-template-columns: 400px 1fr;
-            gap: 60px;
-            align-items: start;
-        }
-
-        @media (max-width: 991px) {
-            .desk-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
-
-        .leader-profile {
-            position: sticky;
-            top: 100px;
-        }
-
-        .leader-image {
-            width: 100%;
-            border-radius: 20px;
-            overflow: hidden;
-            margin-bottom: 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-        }
-        
-        .leader-image::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(5,7,12,0.8), transparent 50%);
-        }
-
-        .leader-image img {
-            width: 100%;
-            display: block;
-            filter: grayscale(20%);
-            transition: all 0.5s ease;
-        }
-
-        .leader-profile:hover .leader-image img {
-            filter: grayscale(0%);
-            transform: scale(1.05);
-        }
-
-        .leader-name {
-            font-size: 28px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 8px;
-        }
-
-        .leader-title {
-            font-size: 16px;
-            color: var(--bright);
-            font-weight: 600;
-            line-height: 1.4;
-        }
-
-        .message-content h2 {
-            font-size: 36px;
-            margin-bottom: 30px;
-            background: linear-gradient(135deg, #fff, #a3c4ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .message-text {
-            column-count: 2;
-            column-gap: 40px;
-            column-rule: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--muted);
-            font-size: 16px;
-            line-height: 1.8;
-            text-align: justify;
-        }
-
-        @media (max-width: 767px) {
-            .message-text {
-                column-count: 1;
-            }
-        }
-
-        .message-text p {
-            margin-bottom: 1.5em;
-            break-inside: avoid;
-        }
-
-        .quote-icon {
-            color: rgba(11, 99, 206, 0.2);
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        /* Trustees Grid */
-        .trustees-section {
-            padding: 100px 0;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .team-card {
-            background: var(--card);
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .team-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(11, 99, 206, 0.3);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .team-image-wrapper {
-            position: relative;
-            padding-top: 100%;
-            background: #151f32;
-            overflow: hidden;
-        }
-
-        .team-image-wrapper img {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-            filter: grayscale(100%) contrast(1.1);
-        }
-
-        .team-card:hover .team-image-wrapper img {
-            transform: scale(1.05);
-            filter: grayscale(0%) contrast(1);
-        }
-
-        .team-info {
-            padding: 24px;
-        }
-
-        .team-name {
-            font-size: 20px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 6px;
-        }
-
-        .team-role {
-            font-size: 14px;
-            color: var(--bright);
-            font-weight: 600;
-            line-height: 1.4;
-            margin-bottom: 12px;
-        }
-
-        .team-desc {
-            font-size: 14px;
-            color: var(--muted);
-            line-height: 1.6;
-        }
-
-        /* Animations */
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070C">
+  <title>Managing Trustees | Lexicon MILE</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
-
 <body>
-    <div id="header"></div>
-
-    <main id="main">
-        <!-- Hero Section -->
-        <section class="trustees-hero">
-            <div class="container">
-                <h1 class="page-title">Board of Trustees.</h1>
-                <p class="page-subtitle">Guided by visionaries, Lexicon Group is built on a foundation of academic excellence, holistic development, and continuous learning.</p>
-            </div>
-        </section>
-
-        <!-- Chairman's Desk -->
-        <section class="desk-section reveal">
-            <div class="container">
-                <div class="desk-content">
-                    <div class="leader-profile">
-                        <div class="leader-image">
-                            <img src="images/sd-sharma.jpg" alt="Mr. S.D. Sharma" onerror="this.src='https://ui-avatars.com/api/?name=SD+Sharma&background=073b91&color=fff&size=800'">
-                        </div>
-                        <h3 class="leader-name">Mr. S. D. Sharma</h3>
-                        <p class="leader-title">Chairman, The Lexicon Group</p>
-                    </div>
-                    <div class="message-content">
-                        <h2>From the Chairman's Desk</h2>
-                        <i data-lucide="quote" width="48" height="48" class="quote-icon"></i>
-                        <div class="message-text">
-                            <p>The Lexicon Group was conceived in 2006, with the mission of providing value based education with highest standards of excellence. Over the years we have not only been successful in making this dream come true, but also with the group completing 15 years since its inception, we have been able to exponentially grow and expand in our operations to different parts of Pune. With over 10+ Educational Institutes under the Lexicon umbrella which currently includes a Post Graduate College, an Under Graduate College, 3 High Schools and 6+ Pre Schools. Our family has been growing to a manifold size of 15,000 odd students today, coming from across Pune and India.</p>
-                            
-                            <p>Lexicon Group's motto 'Believe in Yourself' has been the hallmark of the group's attempt to reach out to each student individually. The school curriculum is designed to make each child feel special and is inspired by the Eight Multiple Intelligences model by Howard Gardner. At the Post Graduate level, with Lexicon Management Institute of Leadership & Excellence aiming at 'Inspiration, Innovation and Discovery', we at Lexicon Group endeavor to ensure maximum return on investment for each student enrolled with us.</p>
-                            
-                            <p>We have seen a phenomenal growth at Lexicon Management Institute of Leadership & Excellence over the years, having won prestigious awards at the National and International levels, backed with International tie-ups and more than a dozen additional certifications with the Post Graduation program. We have process driven systems ensuring the best fit industry placements.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- President's Desk -->
-        <section class="desk-section reveal">
-            <div class="container">
-                <div class="desk-content" style="direction: rtl;">
-                    <div class="leader-profile" style="direction: ltr;">
-                        <div class="leader-image">
-                            <img src="images/pankaj-sharma.jpg" alt="Mr. Pankaj Sharma" onerror="this.src='https://ui-avatars.com/api/?name=Pankaj+Sharma&background=073b91&color=fff&size=800'">
-                        </div>
-                        <h3 class="leader-name">Mr. Pankaj Sharma</h3>
-                        <p class="leader-title">President, The Lexicon Group of Institutes and Chairman & MD Pune Times Mirror, Civic Mirror & MultiFit</p>
-                    </div>
-                    <div class="message-content" style="direction: ltr;">
-                        <h2>From the President's Desk</h2>
-                        <i data-lucide="quote" width="48" height="48" class="quote-icon"></i>
-                        <div class="message-text">
-                            <p>Lexicon Management Institute of Leadership & Excellence is an experience in itself; it is all about the arduous journey which every student coming here must embark. At Lexicon Management Institute of Leadership & Excellence, the academic curriculum is framed in a way which promotes the concept of Experiential Learning', that is learning by doing. Real life situations make the students understand and practically implement what is being taught.</p>
-                            
-                            <p>Lexicon Management Institute of Leadership & Excellence is an entirely student driven Institute. This is the reason why each and every student is designated as a 'Student Leader'. Discipline coupled with high quality education at Lexicon Management Institute of Leadership & Excellence prepares the students for their corporate lives. The main focus of the Institute lies in creating and nurturing responsible business leaders who would hold the reins of the corporate in the near future.</p>
-                            
-                            <p>Lexicon Management Institute of Leadership & Excellence inculcates in the students a sense of belonging and ownership for the Institute, thus enabling the Student Leaders to offer their fruitful contribution to the dynamism of the corporate. With the focus on the holistic development of our students, we prepare them for the comprehensive business environment and equip them with the ability to take over all kinds of challenges that they may face.</p>
-                            
-                            <p>A great pool of eminent dignitaries from the corporate world teach the Student Managers, making this process of overall student development a success. The Institute is all set upon skill building, strategy development and acquiring the much needed attitude.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div id="header"></div>
+  <main id="main">
+    
+    <section class="section faculty-section" style="padding-top: 120px;">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">LEADERSHIP</p>
+            <h2>Board of Managing Trustees<span class="period">.</span></h2>
+          </div>
+          <p>Our leaders are mentors first. The leadership philosophy emphasizes approachability, mentorship, and vision-driven education.</p>
+        </div>
         
-        <!-- Vice Chairman's Desk -->
-        <section class="desk-section reveal">
-            <div class="container">
-                <div class="desk-content">
-                    <div class="leader-profile">
-                        <div class="leader-image">
-                            <img src="images/neeraj-sharma.jpg" alt="Mr. Neeraj Sharma" onerror="this.src='https://ui-avatars.com/api/?name=Neeraj+Sharma&background=073b91&color=fff&size=800'">
-                        </div>
-                        <h3 class="leader-name">Mr. Neeraj Sharma</h3>
-                        <p class="leader-title">Vice Chairman, The Lexicon Group Director, Pune Mirror & Civic Mirror</p>
-                    </div>
-                    <div class="message-content">
-                        <h2>From the Vice Chairman's Desk</h2>
-                        <i data-lucide="quote" width="48" height="48" class="quote-icon"></i>
-                        <div class="message-text">
-                            <p>The Lexicon Management Institute of Leadership & Excellence carries a legacy as old as 2006, when the first Lexicon International School was established in Wagholi. Lexicon Management Institute of Leadership & Excellence was formed in the year 2009 and we have successfully completed a decade of excellence in higher management education.</p>
-                            
-                            <p>Lexicon Management Institute of Leadership & Excellence has achieved a great feat within a short span of time. Embarking on the path of successfully running a business school situated in Pune has not been a cake walk. We have been strong in our resolution to provide an ever evolving and expanding high quality education inculcating each domain of knowledge and catering only the best to the inquisitive and intellectual minds of India. The USP of Lexicon Management Institute of Leadership & Excellence lies in its contemporary pedagogies which in coalition with positive outlook, enviable global standards and great emphasis on moral values; makes us a league apart from our contemporaries.</p>
-                            
-                            <p>We take great pride in imparting traditional and social responsibilities, which are invoked in our scholars via frequent and timely celebration of all the festivals in accordance with the spirit of national secularism. We are highly conscious of the great challenges which lie ahead on this path of nation building which requires great dedication and humble service from the entire Lexicon Management Institute of Leadership & Excellence family. Still, there is a lot which is left to be done.</p>
-                            
-                            <p>There is a gap in the need of industry for skilled, efficient, adaptable and honest human resources as only 70% of the students studying in these business schools are employable. To bridge this gap the most talented team at Lexicon Management Institute of Leadership & Excellence with the help of extremely enlightened people from the academia have created the syllabus and the processes which are in sync with today's industry needs. To explore, innovate and execute is a habit of Lexiconites. Last but not the least are these famous lines from Robert Frost, "But I have promises to keep & miles to go before I sleep."</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="faculty-grid">
+          <article class="leader-card reveal" tabindex="0">
+            <div class="portrait">
+              <img src="images/sd-sharma.jpg" alt="Mr. S.D. Sharma" loading="lazy" onerror="this.src='images/leaders/kiran-bedi.jpg'">
+              <div class="leader-insight">Guiding the vision of<br>The Lexicon Group.</div>
             </div>
-        </section>
-
-        <!-- Board of Trustees Grid -->
-        <section class="trustees-section">
-            <div class="container">
-                <div class="section-heading centered reveal">
-                    <p class="eyebrow">OUR VISIONARIES</p>
-                    <h2>Board Of Managing Trustees</h2>
-                </div>
-
-                <div class="team-grid reveal">
-                    <div class="team-card">
-                        <div class="team-image-wrapper">
-                            <img src="images/sd-sharma.jpg" alt="Mr. S.D. Sharma" onerror="this.src='https://ui-avatars.com/api/?name=SD+Sharma&background=0d1422&color=fff&size=400'">
-                        </div>
-                        <div class="team-info">
-                            <h3 class="team-name">Mr. S.D. Sharma</h3>
-                            <p class="team-role">Chairman, The Lexicon Group</p>
-                            <p class="team-desc">The Founder and the Patriarch of the Lexicon Group, Mr. S.D Sharma armed with his outstanding and varied corporate experience, is the pioneering pillar.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="team-card">
-                        <div class="team-image-wrapper">
-                            <img src="images/pankaj-sharma.jpg" alt="Mr. Pankaj Sharma" onerror="this.src='https://ui-avatars.com/api/?name=Pankaj+Sharma&background=0d1422&color=fff&size=400'">
-                        </div>
-                        <div class="team-info">
-                            <h3 class="team-name">Mr. Pankaj Sharma</h3>
-                            <p class="team-role">President, The Lexicon Group of Institutes</p>
-                            <p class="team-desc">A fabulous corporate trainer well sought after speaker and an ardent believer in education being a continuous life long process.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="team-card">
-                        <div class="team-image-wrapper">
-                            <img src="images/neeraj-sharma.jpg" alt="Mr. Neeraj Sharma" onerror="this.src='https://ui-avatars.com/api/?name=Neeraj+Sharma&background=0d1422&color=fff&size=400'">
-                        </div>
-                        <div class="team-info">
-                            <h3 class="team-name">Mr. Neeraj Sharma</h3>
-                            <p class="team-role">Vice Chairman, The Lexicon Group</p>
-                            <p class="team-desc">A successful corporate trainer and a self-made entrepreneur, Mr. Neeraj Sharma is of the mantra of success in life lives on three words, 'Believe in yourself'.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="team-card">
-                        <div class="team-image-wrapper">
-                            <img src="images/monisha-sharma.jpg" alt="Mrs. Monisha Sharma" onerror="this.src='https://ui-avatars.com/api/?name=Monisha+Sharma&background=0d1422&color=fff&size=400'">
-                        </div>
-                        <div class="team-info">
-                            <h3 class="team-name">Mrs. Monisha Sharma</h3>
-                            <p class="team-role">Trustee, Director - The Lexicon Schools</p>
-                            <p class="team-desc">The charming, unassuming, and soft-spoken visionary has a penchant to attain new milestones in education. A B.Tech, MBA, PhD.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="team-card">
-                        <div class="team-image-wrapper">
-                            <img src="images/deepti-sharma.jpg" alt="Mrs. Deepti Sharma" onerror="this.src='https://ui-avatars.com/api/?name=Deepti+Sharma&background=0d1422&color=fff&size=400'">
-                        </div>
-                        <div class="team-info">
-                            <h3 class="team-name">Mrs. Deepti Sharma</h3>
-                            <p class="team-role">Trustee, Director - Lexicon KIDS</p>
-                            <p class="team-desc">The most enterprising and enthusiastic Trustee Member of the Lexicon Group, Mrs. Deepti Sharma is a strong believer in early childhood education.</p>
-                        </div>
-                    </div>
-                </div>
+            <h3>Mr. S.D. Sharma</h3>
+            <p>CHAIRMAN, THE LEXICON GROUP</p>
+          </article>
+          
+          <article class="leader-card reveal" tabindex="0">
+            <div class="portrait">
+              <img src="images/pankaj-sharma.jpg" alt="Mr. Pankaj Sharma" loading="lazy" onerror="this.src='images/leaders/suresh.jpg'">
+              <div class="leader-insight">Transforming education<br>for the next generation.</div>
             </div>
-        </section>
+            <h3>Mr. Pankaj Sharma</h3>
+            <p>PRESIDENT, THE LEXICON GROUP</p>
+          </article>
+          
+          <article class="leader-card reveal" tabindex="0">
+            <div class="portrait">
+              <img src="images/neeraj-sharma.jpg" alt="Mr. Neeraj Sharma" loading="lazy" onerror="this.src='images/leaders/anand.jpeg'">
+              <div class="leader-insight">Driving innovation and<br>excellence across domains.</div>
+            </div>
+            <h3>Mr. Neeraj Sharma</h3>
+            <p>VICE CHAIRMAN, THE LEXICON GROUP</p>
+          </article>
+          
+          <article class="leader-card reveal" tabindex="0">
+            <div class="portrait">
+              <img src="images/monisha-sharma.jpg" alt="Mrs. Monisha Sharma" loading="lazy" onerror="this.src='images/leaders/falguni-nayar.jpeg'">
+              <div class="leader-insight">Nurturing holistic development<br>in schools.</div>
+            </div>
+            <h3>Mrs. Monisha Sharma</h3>
+            <p>TRUSTEE, DIRECTOR - THE LEXICON SCHOOLS</p>
+          </article>
+          
+          <article class="leader-card reveal" tabindex="0">
+            <div class="portrait">
+              <img src="images/deepti-sharma.jpg" alt="Mrs. Deepti Sharma" loading="lazy" onerror="this.src='images/leaders/falguni-nayar.jpeg'">
+              <div class="leader-insight">Fostering early childhood<br>education.</div>
+            </div>
+            <h3>Mrs. Deepti Sharma</h3>
+            <p>TRUSTEE, DIRECTOR - LEXICON KIDS</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    </main>
-
-    <div id="footer"></div>
-
-    <script src="js/main.js"></script>
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-
-        // Scroll Reveal Animation
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal(); // Trigger on load
-    </script>
+  </main>
+  <div id="footer"></div>
+  <script src="js/components.js"></script>
 </body>
 </html>
