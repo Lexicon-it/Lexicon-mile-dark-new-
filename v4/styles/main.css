@@ -8241,3 +8241,281 @@ button {
         padding: 16px;
     }
 }
+
+/* ==========================================================================
+   SCHOLARSHIP PAGE (PRODUCTION-LEVEL, COMPACT & LUXURY)
+   ========================================================================== */
+.scholarship-hero {
+    position: relative;
+    padding-top: 130px;
+    padding-bottom: 28px;
+    background: radial-gradient(circle at 50% 10%, rgba(13, 30, 60, 0.95) 0%, #05070c 75%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+.scholarship-hero::before {
+    display: none !important;
+}
+
+/* 3-Tier Merit Scholarship Grid */
+.scholarship-tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.scholarship-tier-card {
+    background: rgba(10, 16, 28, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    position: relative;
+}
+
+.scholarship-tier-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(102, 157, 239, 0.35);
+    background: rgba(14, 23, 38, 0.7);
+}
+
+.scholarship-tier-card.featured-tier {
+    border-color: rgba(212, 175, 55, 0.3);
+    background: linear-gradient(180deg, rgba(16, 28, 48, 0.65) 0%, rgba(10, 16, 28, 0.65) 100%);
+}
+
+.tier-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.tier-exam-badge {
+    font-size: 13px;
+    font-weight: 800;
+    color: #669def;
+    background: rgba(102, 157, 239, 0.12);
+    border: 1px solid rgba(102, 157, 239, 0.25);
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.04em;
+}
+
+.scholarship-tier-card.featured-tier .tier-exam-badge {
+    color: #ffd066;
+    background: rgba(212, 175, 55, 0.12);
+    border-color: rgba(212, 175, 55, 0.25);
+}
+
+.tier-status-pill {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #ffd066;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.tier-amount {
+    font-size: 30px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    margin: 0 0 6px;
+    letter-spacing: -0.02em;
+}
+
+.scholarship-tier-card.featured-tier .tier-amount {
+    color: #ffd066;
+}
+
+.tier-amount-sub {
+    font-size: 12px;
+    color: #669def;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.tier-eligibility-box {
+    background: rgba(6, 11, 20, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+}
+
+.tier-eligibility-box .lbl {
+    font-size: 11px;
+    color: #7b8ea5;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.tier-eligibility-box .val {
+    font-size: 14px;
+    font-weight: 700;
+    color: #e2edfc;
+}
+
+.tier-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tier-features-list li {
+    font-size: 12px;
+    color: #9cb1cb;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.45;
+}
+
+.tier-features-list li::before {
+    content: "✓";
+    color: #4ee3c2;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* 4-Step Claim Process Workflow */
+.scholarship-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.scholarship-step-item {
+    background: rgba(10, 16, 28, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.scholarship-step-item:hover {
+    border-color: rgba(102, 157, 239, 0.35);
+    background: rgba(14, 23, 38, 0.65);
+}
+
+.scholarship-step-num {
+    font-size: 11px;
+    font-weight: 800;
+    color: #669def;
+    background: rgba(102, 157, 239, 0.12);
+    border: 1px solid rgba(102, 157, 239, 0.25);
+    padding: 2px 7px;
+    border-radius: 4px;
+    align-self: flex-start;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.scholarship-step-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 6px;
+    line-height: 1.35;
+}
+
+.scholarship-step-desc {
+    font-size: 12px;
+    color: #9cb1cb;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* Banking Loan Assistance Callout */
+.loan-assistance-card {
+    margin-top: 24px;
+    padding: 22px 26px;
+    background: linear-gradient(90deg, rgba(7, 59, 145, 0.16) 0%, rgba(11, 18, 30, 0.6) 100%);
+    border: 1px solid rgba(102, 157, 239, 0.25);
+    border-left: 3px solid #669def;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.loan-assistance-text h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 6px;
+}
+
+.loan-assistance-text p {
+    font-size: 13px;
+    color: #a4bcd8;
+    margin: 0;
+    line-height: 1.55;
+}
+
+.loan-bank-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.loan-bank-pill {
+    font-size: 11px;
+    font-weight: 600;
+    color: #cbdcf4;
+    background: rgba(6, 11, 20, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* Responsive adjustments for scholarship page */
+@media (max-width: 1024px) {
+    .scholarship-tiers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scholarship-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .loan-assistance-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+}
+
+@media (max-width: 720px) {
+    .scholarship-process-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .tier-amount {
+        font-size: 26px;
+    }
+
+    .loan-assistance-card {
+        padding: 18px 16px;
+    }
+}
