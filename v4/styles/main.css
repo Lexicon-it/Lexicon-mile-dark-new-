@@ -6517,7 +6517,7 @@ button {
 
 .governor-card-featured {
     background: linear-gradient(180deg, #0f182a 0%, #0b111e 100%);
-    border-color: rgba(102, 157, 239, 0.22);
+    border-color: rgba(212, 175, 55, 0.3);
 }
 
 .governor-card-featured::before {
@@ -6528,65 +6528,92 @@ button {
 
 .governor-thumb-wrap {
     width: 100%;
-    aspect-ratio: 1 / 1;
-    max-height: 360px;
+    padding: 26px 20px 12px;
     position: relative;
-    overflow: hidden;
-    background: #080e18;
+    background: radial-gradient(circle at 50% 35%, rgba(102, 157, 239, 0.09) 0%, rgba(8, 14, 24, 0.45) 75%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .governor-thumb-wrap img {
-    width: 100%;
-    height: 100%;
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
     object-fit: cover;
     object-position: center 20%;
-    filter: brightness(0.96);
-    transition: transform 0.5s ease, filter 0.5s ease;
+    border: 3px solid rgba(102, 157, 239, 0.35);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5), 0 0 18px rgba(7, 59, 145, 0.28);
+    filter: brightness(0.97);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
 }
 
 .governor-card:hover .governor-thumb-wrap img {
-    transform: scale(1.035);
-    filter: brightness(1.02);
+    transform: scale(1.06);
+    border-color: #669def;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65), 0 0 24px rgba(102, 157, 239, 0.45);
+    filter: brightness(1.03);
+}
+
+.governor-card-featured .governor-thumb-wrap {
+    padding: 30px 24px 14px;
+    background: radial-gradient(circle at 50% 35%, rgba(212, 175, 55, 0.1) 0%, rgba(13, 20, 34, 0.45) 75%);
+}
+
+.governor-card-featured .governor-thumb-wrap img {
+    width: 144px;
+    height: 144px;
+    border: 3px solid rgba(212, 175, 55, 0.45);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55), 0 0 22px rgba(212, 175, 55, 0.25);
+}
+
+.governor-card-featured:hover .governor-thumb-wrap img {
+    border-color: #ffd066;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.7), 0 0 28px rgba(212, 175, 55, 0.45);
 }
 
 .governor-emblem-wrap {
     width: 100%;
-    aspect-ratio: 1 / 1;
-    max-height: 360px;
+    padding: 24px 20px 14px;
     position: relative;
-    background: radial-gradient(circle at 50% 40%, rgba(102, 157, 239, 0.12) 0%, #070d18 75%);
+    background: radial-gradient(circle at 50% 35%, rgba(102, 157, 239, 0.09) 0%, rgba(8, 14, 24, 0.45) 75%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .governor-emblem-icon {
-    width: 76px;
-    height: 76px;
+    width: 104px;
+    height: 104px;
     border-radius: 50%;
-    background: rgba(102, 157, 239, 0.08);
-    border: 1px solid rgba(102, 157, 239, 0.25);
+    background: radial-gradient(circle at 50% 40%, rgba(102, 157, 239, 0.16) 0%, rgba(7, 13, 24, 0.9) 80%);
+    border: 3px solid rgba(102, 157, 239, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
     color: #669def;
-    margin-bottom: 14px;
-    box-shadow: 0 0 24px rgba(7, 59, 145, 0.25);
+    margin-bottom: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 18px rgba(7, 59, 145, 0.25);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease, color 0.3s ease;
 }
 
 .governor-emblem-icon svg {
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
+}
+
+.governor-card:hover .governor-emblem-icon {
+    transform: scale(1.06);
+    border-color: #669def;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65), 0 0 24px rgba(102, 157, 239, 0.4);
+    color: #a3c7ff;
 }
 
 .governor-emblem-type {
-    font-size: 11px;
+    font-size: 10.5px;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -6594,10 +6621,11 @@ button {
 }
 
 .governor-body {
-    padding: 22px 24px 26px;
+    padding: 18px 22px 22px;
     display: flex;
     flex-direction: column;
     flex: 1;
+    text-align: center;
 }
 
 .governor-badge {
@@ -6620,10 +6648,10 @@ button {
 }
 
 .governor-name {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 700;
     color: #ffffff;
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     line-height: 1.3;
 }
 
@@ -6632,22 +6660,30 @@ button {
     line-height: 1.6;
     color: #cbdcf4;
     font-weight: 500;
-    margin: 0 0 14px;
+    margin: 0 0 16px;
     flex: 1;
 }
 
 .governor-nomination {
-    font-size: 12px;
-    line-height: 1.55;
-    color: #8598b2;
-    padding-top: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 11.5px;
+    line-height: 1.5;
+    color: #8da4c4;
+    padding: 10px 14px;
+    background: rgba(5, 7, 12, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
     margin: 0;
+    text-align: left;
 }
 
 .governor-nomination strong {
-    color: #9cb4d4;
-    font-weight: 600;
+    color: #669def;
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 3px;
+    font-weight: 700;
 }
 
 .governors-featured-grid {
@@ -6704,8 +6740,26 @@ button {
         gap: 18px;
     }
     
-    .governor-thumb-wrap,
-    .governor-emblem-wrap {
-        max-height: 320px;
+    .governor-thumb-wrap {
+        padding: 22px 16px 10px;
+    }
+
+    .governor-thumb-wrap img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .governor-card-featured .governor-thumb-wrap img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .governor-emblem-icon {
+        width: 96px;
+        height: 96px;
+    }
+
+    .governor-body {
+        padding: 16px 18px 20px;
     }
 }
