@@ -1,480 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#05070C">
-    <title>Lexicon Group | Lexicon MILE</title>
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        /* Modern Styles for Lexicon Group Page */
-        .group-hero {
-            position: relative;
-            padding: 180px 0 100px;
-            background: radial-gradient(circle at top left, rgba(7, 59, 145, 0.15), transparent 60%),
-                        radial-gradient(circle at bottom right, rgba(11, 99, 206, 0.1), transparent 60%);
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .group-hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(180deg, transparent 0%, var(--bg) 100%);
-            z-index: -1;
-        }
-
-        .page-title {
-            font-size: clamp(48px, 6vw, 80px);
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff 0%, #a3c4ff 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .page-subtitle {
-            font-size: 18px;
-            color: var(--muted);
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
-            animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        /* Split Info Sections */
-        .info-section {
-            padding: 80px 0;
-        }
-
-        .split-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        
-        .split-content.reverse {
-            direction: rtl;
-        }
-        
-        .split-content.reverse > * {
-            direction: ltr;
-        }
-
-        @media (max-width: 991px) {
-            .split-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .split-content.reverse {
-                direction: ltr;
-            }
-        }
-
-        .info-text h2 {
-            font-size: clamp(32px, 4vw, 42px);
-            margin-bottom: 24px;
-            line-height: 1.2;
-            background: linear-gradient(135deg, #fff, #a3c4ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .info-text p {
-            color: var(--muted);
-            margin-bottom: 20px;
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
-        .info-image {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .info-image::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            pointer-events: none;
-        }
-
-        .info-image img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.6s ease;
-        }
-
-        .info-image:hover img {
-            transform: scale(1.03);
-        }
-
-        /* Subsidiaries Grid */
-        .subsidiaries-section {
-            background: linear-gradient(180deg, var(--bg) 0%, var(--card) 100%);
-            padding: 100px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .subs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .sub-card {
-            background: rgba(13, 20, 34, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 35px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .sub-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at top right, rgba(11, 99, 206, 0.1), transparent 70%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: 0;
-        }
-
-        .sub-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(11, 99, 206, 0.3);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .sub-card:hover::before {
-            opacity: 1;
-        }
-
-        .sub-content {
-            position: relative;
-            z-index: 1;
-            flex: 1;
-        }
-
-        .sub-icon {
-            width: 56px;
-            height: 56px;
-            background: rgba(11, 99, 206, 0.1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #67aaff;
-            margin-bottom: 24px;
-            transition: all 0.3s ease;
-        }
-
-        .sub-card:hover .sub-icon {
-            background: var(--bright);
-            color: #fff;
-            transform: scale(1.1);
-        }
-
-        .sub-title {
-            font-size: 20px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 12px;
-            line-height: 1.3;
-        }
-
-        .sub-desc {
-            color: var(--muted);
-            font-size: 15px;
-            line-height: 1.6;
-        }
-        
-        .sub-image {
-            margin-top: 24px;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .sub-image img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            filter: grayscale(80%) brightness(0.8);
-            transition: all 0.4s ease;
-        }
-        
-        .sub-card:hover .sub-image img {
-            filter: grayscale(0%) brightness(1);
-        }
-
-        /* Animations */
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070C">
+  <title>The Lexicon Group | Empowering Minds, Transforming Industries</title>
+  <meta name="description" content="Discover The Lexicon Group: founded in 2006, expanding across premier educational institutes (Lexicon MILE, The Lexicon Schools, Lexicon Kids, Lexicon IHM, LIMA) and pioneering enterprises (MultiFit, Pune Mirror, CITTA, ThinkerPlace, EduCrack, Rest The Case).">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
-
 <body>
-    <div id="header"></div>
+  <div id="header"></div>
 
-    <main id="main">
-        <!-- Hero Section -->
-        <section class="group-hero">
-            <div class="container">
-                <h1 class="page-title">Lexicon Group.</h1>
-                <p class="page-subtitle">A prominent Pune-based conglomerate dedicated to fostering excellence across education, wellness, media, and innovative ventures, impacting thousands of lives through quality-driven initiatives.</p>
+  <main id="main">
+
+    <!-- ============ HERO BANNER ============ -->
+    <section class="about-hero-banner" id="group-hero">
+      <div class="container">
+        <nav class="about-breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="about-lexicon.html">About Us</a>
+          <span>/</span>
+          <span class="current">The Lexicon Group</span>
+        </nav>
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">THE LEXICON GROUP &middot; ESTABLISHED 2006</p>
+            <h1>Empowering Minds, Shaping Futures<span class="period">.</span></h1>
+          </div>
+          <p>Founded in 2006 by Shri S. D. Sharma with just 19 students, The Lexicon Group has evolved into a premier multi-disciplinary conglomerate spanning world-class educational institutions, pan-India media publications, wellness giants, and transformative tech ventures.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4 KEY IMPACT STATS ============ -->
+    <section class="section" style="padding-top: 0; padding-bottom: 40px;">
+      <div class="container">
+        <div class="about-stats-grid">
+          <div class="about-stat-card reveal">
+            <div class="stat-number">16,000+</div>
+            <div class="stat-label">Students Nurtured Across Campuses</div>
+          </div>
+          <div class="about-stat-card reveal">
+            <div class="stat-number">2006</div>
+            <div class="stat-label">Year of Establishment &amp; Vision</div>
+          </div>
+          <div class="about-stat-card reveal">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Specialized Institutes &amp; Ventures</div>
+          </div>
+          <div class="about-stat-card reveal">
+            <div class="stat-number">40+</div>
+            <div class="stat-label">MultiFit Centers (India, UK &amp; UAE)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STORY & PHILOSOPHY (BALANCED SPLIT LAYOUT) ============ -->
+    <section class="section" id="group-story" style="padding-top: 20px; padding-bottom: 60px;">
+      <div class="container">
+        <div class="about-split-layout">
+          
+          <div class="about-split-content reveal">
+            <div class="story-block">
+              <p class="eyebrow">01 / GENESIS &amp; GUIDING ETHOS</p>
+              <h3>From 19 Students to an Educational &amp; Enterprise Powerhouse<span class="period">.</span></h3>
+              <p>Under the visionary leadership of Shri S. D. Sharma, alongside Mr. Pankaj Sharma (President) and Mr. Neeraj Sharma (Vice Chairman), The Lexicon Group was founded on the fundamental principle of <strong>&ldquo;Believe in Yourself&rdquo;</strong>.</p>
+              <p>What began as a single school in Wagholi, Pune has expanded exponentially. Driven by our guiding philosophy &mdash; <em>&ldquo;Day by Day, in every way, I am getting better &amp; better&rdquo;</em> &mdash; our mission has evolved from pioneering child-centric K-12 education to cultivating industry-ready business leaders, hoteliers, animators, and empowering communities through fearless media, wellness, and accessible justice.</p>
             </div>
-        </section>
 
-        <!-- Overview & History Sections -->
-        <section class="info-section">
-            <div class="container">
-                <div class="split-content reveal">
-                    <div class="info-text">
-                        <p class="eyebrow">WHO WE ARE</p>
-                        <h2>Empowering Lives Since 2006</h2>
-                        <p>The Lexicon Group has evolved from its roots in education to a diverse ecosystem. With a strong emphasis on self-belief, integrity, and community contribution, the Lexicon Group serves over 16,000 students and employs hundreds across its operations.</p>
-                        <p>All its subsidiaries are primarily based or originated in Pune, reflecting the group’s deep ties to the city as a hub for educational and entrepreneurial advancement, creating a holistic environment for growth and innovation.</p>
-                    </div>
-                    <div class="info-image">
-                        <img src="images/lexicon-overview.jpg" alt="Lexicon Group Overview" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
-                    </div>
-                </div>
+            <div class="group-pillars-grid" style="margin-top: 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;">
+              <div class="group-pillar-item" style="background: rgba(102, 157, 239, 0.05); border: 1px solid rgba(102, 157, 239, 0.15); padding: 16px 18px; border-radius: 8px;">
+                <h4 style="font-size: 13.5px; font-weight: 700; color: #fff; margin: 0 0 5px; display: flex; align-items: center; gap: 8px;">
+                  <span style="color: #669def;">✦</span> Child-Centric Pedagogy
+                </h4>
+                <p style="font-size: 12.5px; color: #9cb0cc; margin: 0; line-height: 1.5;">Fostering natural curiosity, creativity, and cognitive readiness from early childhood through higher education.</p>
+              </div>
+              <div class="group-pillar-item" style="background: rgba(102, 157, 239, 0.05); border: 1px solid rgba(102, 157, 239, 0.15); padding: 16px 18px; border-radius: 8px;">
+                <h4 style="font-size: 13.5px; font-weight: 700; color: #fff; margin: 0 0 5px; display: flex; align-items: center; gap: 8px;">
+                  <span style="color: #669def;">✦</span> Inclusive Empathy
+                </h4>
+                <p style="font-size: 12.5px; color: #9cb0cc; margin: 0; line-height: 1.5;">Dedicated therapy and specialized curricula ensuring neurodivergent learners achieve full potential.</p>
+              </div>
+              <div class="group-pillar-item" style="background: rgba(102, 157, 239, 0.05); border: 1px solid rgba(102, 157, 239, 0.15); padding: 16px 18px; border-radius: 8px;">
+                <h4 style="font-size: 13.5px; font-weight: 700; color: #fff; margin: 0 0 5px; display: flex; align-items: center; gap: 8px;">
+                  <span style="color: #669def;">✦</span> Industry Synergy
+                </h4>
+                <p style="font-size: 12.5px; color: #9cb0cc; margin: 0; line-height: 1.5;">Curricula co-designed with Fortune 500 executives and top hospitality chains for direct employability.</p>
+              </div>
+              <div class="group-pillar-item" style="background: rgba(102, 157, 239, 0.05); border: 1px solid rgba(102, 157, 239, 0.15); padding: 16px 18px; border-radius: 8px;">
+                <h4 style="font-size: 13.5px; font-weight: 700; color: #fff; margin: 0 0 5px; display: flex; align-items: center; gap: 8px;">
+                  <span style="color: #669def;">✦</span> Holistic Well-Being
+                </h4>
+                <p style="font-size: 12.5px; color: #9cb0cc; margin: 0; line-height: 1.5;">Integrating physical fitness, civic awareness, and emotional resilience across every institution.</p>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section class="info-section" style="padding-top: 0;">
-            <div class="container">
-                <div class="split-content reverse reveal">
-                    <div class="info-text">
-                        <p class="eyebrow">OUR HISTORY</p>
-                        <h2>From 19 Students to a Global Vision</h2>
-                        <p>Established by visionary educator Shri S. D. Sharma, Lexicon Group started modestly with just 19 students. Through persistence and a commitment to excellence, we built a sustainable educational ecosystem; including pre-schools, K-12 schools, and higher education institutes, expanding to over 10,000 students in Pune.</p>
-                        <p>Over the years, diversification into wellness, edtech, media, and consumer products occurred organically. Today, Lexicon Group stands as a testament to turning ideas into impactful realities, with plans for pan-India and international expansion, including the establishment of The Lexicon University.</p>
-                    </div>
-                    <div class="info-image">
-                        <img src="images/lexicon-history.jpg" alt="Lexicon Group History" onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
-                    </div>
-                </div>
+          <div class="about-media-col reveal">
+            <div class="about-media-card">
+              <img src="images/campus/lexicon-main.webp" alt="The Lexicon Campus Wagholi Pune" loading="lazy">
+              <div class="about-media-badge">
+                <span>PUNE HEADQUARTERS &middot; EST. 2006</span>
+                <strong>16,000+ Students &middot; 15+ Subsidiaries &middot; Global Reach</strong>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <!-- Subsidiaries Section -->
-        <section class="subsidiaries-section">
-            <div class="container">
-                <div class="section-heading centered reveal">
-                    <p class="eyebrow">OUR ECOSYSTEM</p>
-                    <h2>Subsidiaries in Pune</h2>
-                    <p>Lexicon Group’s subsidiaries are deeply integrated into Pune’s landscape, with operations spanning education, media, wellness, and beyond.</p>
-                </div>
+        </div>
+      </div>
+    </section>
 
-                <div class="subs-grid">
-                    <!-- Lexicon MILE -->
-                    <div class="sub-card reveal" style="transition-delay: 0.1s;">
-                        <div class="sub-content">
-                            <div class="sub-icon"><i data-lucide="graduation-cap" width="28" height="28"></i></div>
-                            <h3 class="sub-title">Lexicon MILE</h3>
-                            <p class="sub-desc">Established in 2009, this top-ranked MBA college offers AICTE-approved PGDM programs focused on entrepreneurship, leadership, and analytics.</p>
-                        </div>
-                        <div class="sub-image">
-                            <img src="images/sub-mile.jpg" alt="Lexicon MILE" onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
-                        </div>
-                    </div>
+    <!-- ============ DIVISION 1: THE LEXICON GROUP OF INSTITUTES ============ -->
+    <section class="section" id="institutes" style="background: #080d16; padding-top: 80px; padding-bottom: 80px; border-top: 1px solid rgba(255, 255, 255, 0.06); border-bottom: 1px solid rgba(255, 255, 255, 0.06);">
+      <div class="container">
+        
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">ACADEMIC EXCELLENCE &amp; LEADERSHIP</p>
+            <h2>The Lexicon Group of Institutes<span class="period">.</span></h2>
+          </div>
+          <p>From early childhood cognitive development to postgraduate management leadership and creative arts, our institutions offer world-class holistic learning grounded in experiential excellence.</p>
+        </div>
 
-                    <!-- The Lexicon Schools -->
-                    <div class="sub-card reveal" style="transition-delay: 0.2s;">
-                        <div class="sub-content">
-                            <div class="sub-icon"><i data-lucide="school" width="28" height="28"></i></div>
-                            <h3 class="sub-title">The Lexicon Schools</h3>
-                            <p class="sub-desc">Among the best CBSE schools in Pune, emphasizing child-centric, progressive, and global education to foster ethical leadership and innovation.</p>
-                        </div>
-                        <div class="sub-image">
-                            <img src="images/sub-schools.jpg" alt="The Lexicon Schools" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
-                        </div>
-                    </div>
+        <div class="group-subsidiaries-grid">
 
-                    <!-- Lexicon Kids -->
-                    <div class="sub-card reveal" style="transition-delay: 0.3s;">
-                        <div class="sub-content">
-                            <div class="sub-icon"><i data-lucide="baby" width="28" height="28"></i></div>
-                            <h3 class="sub-title">Lexicon Kids</h3>
-                            <p class="sub-desc">Pre-schools focused on early childhood development, promoting multiple intelligences and values-based learning for the youngest minds.</p>
-                        </div>
-                        <div class="sub-image">
-                            <img src="images/sub-kids.jpg" alt="Lexicon Kids" onerror="this.src='https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
-                        </div>
-                    </div>
-
-                    <!-- The Lexicon Rainbow School -->
-                    <div class="sub-card reveal" style="transition-delay: 0.1s;">
-                        <div class="sub-content">
-                            <div class="sub-icon"><i data-lucide="rainbow" width="28" height="28"></i></div>
-                            <h3 class="sub-title">Lexicon Rainbow School</h3>
-                            <p class="sub-desc">A specialized therapy center and school for specially-abled students, providing inclusive education and essential support services.</p>
-                        </div>
-                        <div class="sub-image">
-                            <img src="images/sub-rainbow.jpg" alt="Lexicon Rainbow School" onerror="this.src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
-                        </div>
-                    </div>
-
-                    <!-- Lexicon IHM -->
-                    <div class="sub-card reveal" style="transition-delay: 0.2s;">
-                        <div class="sub-content">
-                            <div class="sub-icon"><i data-lucide="utensils" width="28" height="28"></i></div>
-                            <h3 class="sub-title">Lexicon IHM</h3>
-                            <p class="sub-desc">Institute of Hotel Management offering comprehensive programs in hospitality, contributing to the region's growing service sector.</p>
-                        </div>
-                        <div class="sub-image">
-                            <img src="images/sub-ihm.jpg" alt="Lexicon IHM" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
-                        </div>
-                    </div>
-
-                    <!-- Lexicon Media -->
-                    <div class="sub-card reveal" style="transition-delay: 0.3s;">
-                        <div class="sub-content">
-                            <div class="sub-icon"><i data-lucide="clapperboard" width="28" height="28"></i></div>
-                            <h3 class="sub-title">Lexicon Media & Animation</h3>
-                            <p class="sub-desc">Provides expert training in media, animation, and related fields, aligning with the creative industries' modern demands.</p>
-                        </div>
-                        <div class="sub-image">
-                            <img src="images/sub-media.jpg" alt="Lexicon Media" onerror="this.src='https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
-                        </div>
-                    </div>
-
-                    <!-- MultiFit -->
-                    <div class="sub-card reveal" style="transition-delay: 0.1s;">
-                        <div class="sub-content">
-                            <div class="sub-icon"><i data-lucide="activity" width="28" height="28"></i></div>
-                            <h3 class="sub-title">MultiFit</h3>
-                            <p class="sub-desc">A wellness subsidiary with fitness gyms across India, UK, and UAE, promoting functional fitness, health, and community well-being.</p>
-                        </div>
-                        <div class="sub-image">
-                            <img src="images/sub-multifit.jpg" alt="MultiFit" onerror="this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
-                        </div>
-                    </div>
-
-                    <!-- Pune Times Mirror -->
-                    <div class="sub-card reveal" style="transition-delay: 0.2s;">
-                        <div class="sub-content">
-                            <div class="sub-icon"><i data-lucide="newspaper" width="28" height="28"></i></div>
-                            <h3 class="sub-title">Times Mirror & Civic Mirror</h3>
-                            <p class="sub-desc">Media arms delivering local news, civic issues, and insights to residents, with ambitions for digital and multi-city expansion.</p>
-                        </div>
-                        <div class="sub-image">
-                            <img src="images/sub-mirror.jpg" alt="Times Mirror" onerror="this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
-                        </div>
-                    </div>
-
-                    <!-- CITTA -->
-                    <div class="sub-card reveal" style="transition-delay: 0.3s;">
-                        <div class="sub-content">
-                            <div class="sub-icon"><i data-lucide="leaf" width="28" height="28"></i></div>
-                            <h3 class="sub-title">CITTA</h3>
-                            <p class="sub-desc">A baby care brand offering natural, cruelty-free bath and skincare products, inspired by modern parents and expanding pan-India.</p>
-                        </div>
-                        <div class="sub-image">
-                            <img src="images/sub-citta.jpg" alt="CITTA" onerror="this.src='https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
-                        </div>
-                    </div>
-
-                    <!-- EduCrack -->
-                    <div class="sub-card reveal" style="transition-delay: 0.1s;">
-                        <div class="sub-content">
-                            <div class="sub-icon"><i data-lucide="book-open" width="28" height="28"></i></div>
-                            <h3 class="sub-title">EduCrack</h3>
-                            <p class="sub-desc">An edtech platform for competitive exam preparation, targeting 500,000 users monthly and enhancing global educational access.</p>
-                        </div>
-                        <div class="sub-image">
-                            <img src="images/sub-educrack.jpg" alt="EduCrack" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
-                        </div>
-                    </div>
-
-                    <!-- Rest The Case -->
-                    <div class="sub-card reveal" style="transition-delay: 0.2s;">
-                        <div class="sub-content">
-                            <div class="sub-icon"><i data-lucide="scale" width="28" height="28"></i></div>
-                            <h3 class="sub-title">Rest The Case</h3>
-                            <p class="sub-desc">A legal services platform that helps people find verified lawyers and get legal documentation, business compliance, and guidance online.</p>
-                        </div>
-                        <div class="sub-image">
-                            <img src="images/sub-restthecase.jpg" alt="Rest The Case" onerror="this.src='https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
-                        </div>
-                    </div>
-
-                    <!-- ThinkerPlace -->
-                    <div class="sub-card reveal" style="transition-delay: 0.3s;">
-                        <div class="sub-content">
-                            <div class="sub-icon"><i data-lucide="lightbulb" width="28" height="28"></i></div>
-                            <h3 class="sub-title">ThinkerPlace</h3>
-                            <p class="sub-desc">An innovative educational initiative focusing on STEM learning and robotics for children, cultivating the next generation of innovators.</p>
-                        </div>
-                        <div class="sub-image">
-                            <img src="images/sub-thinkerplace.jpg" alt="ThinkerPlace" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
-                        </div>
-                    </div>
-
-                </div>
+          <!-- Card 1: Lexicon MILE -->
+          <article class="subsidiary-card reveal">
+            <div class="subsidiary-img-wrap logo-white-plate">
+              <div class="logo-inner-plate">
+                <img src="images/group/lexicon-mile.webp" alt="Lexicon MILE Management Campus" loading="lazy">
+              </div>
             </div>
-        </section>
-    </main>
+            <div class="subsidiary-body">
+              <span class="subsidiary-cat">POSTGRADUATE MANAGEMENT &middot; EST. 2009</span>
+              <h3>Lexicon MILE &mdash; Management Institute of Leadership &amp; Excellence</h3>
+              <p>Premier business school offering AICTE-approved PGDM, Global MBA, and Executive programs. Ranked among top private B-schools in India with 100% placement track record and curriculum curated alongside Fortune 500 leaders.</p>
+              <div class="subsidiary-features-list">
+                <span>AICTE Approved</span>
+                <span>PGDM &amp; Global MBA</span>
+                <span>Fortune 500 Network</span>
+                <span>100% Placement Track</span>
+              </div>
+              <div style="margin-top: 18px;">
+                <a href="about-lexicon.html" class="button button-outline" style="padding: 8px 16px; font-size: 12px; width: 100%; justify-content: center;">
+                  Explore Lexicon MILE <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
 
-    <div id="footer"></div>
+          <!-- Card 2: The Lexicon Schools -->
+          <article class="subsidiary-card reveal">
+            <div class="subsidiary-img-wrap logo-white-plate">
+              <div class="logo-inner-plate">
+                <img src="images/group/lexicon-schools.webp" alt="The Lexicon Schools Campus" loading="lazy">
+              </div>
+            </div>
+            <div class="subsidiary-body">
+              <span class="subsidiary-cat">K-12 CBSE SCHOOLS &middot; PUNE</span>
+              <h3>The Lexicon Schools</h3>
+              <p>Chain of premier CBSE schools across Pune (Wagholi, Kalyani Nagar, Hadapsar) serving 10,000+ students. Renowned for experiential pedagogy, digital classrooms, robotics labs, and athletic excellence.</p>
+              <div class="subsidiary-features-list">
+                <span>Wagholi</span>
+                <span>Kalyani Nagar</span>
+                <span>Hadapsar</span>
+                <span>10,000+ Learners</span>
+              </div>
+            </div>
+          </article>
 
-    <script src="js/main.js"></script>
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+          <!-- Card 3: Lexicon Kids -->
+          <article class="subsidiary-card reveal">
+            <div class="subsidiary-img-wrap logo-white-plate">
+              <div class="logo-inner-plate">
+                <img src="images/group/lexicon-kids.webp" alt="Lexicon Kids Early Learning" loading="lazy">
+              </div>
+            </div>
+            <div class="subsidiary-body">
+              <span class="subsidiary-cat">EARLY CHILDHOOD EDUCATION</span>
+              <h3>Lexicon Kids</h3>
+              <p>A chain of progressive preschools and daycares nurturing curiosity, emotional security, and foundational literacy through sensory learning, play-based methodologies, and caring environments.</p>
+              <div class="subsidiary-features-list">
+                <span>Playgroup &amp; Nursery</span>
+                <span>Kindergarten</span>
+                <span>Daycare Centers</span>
+                <span>Sensory Play</span>
+              </div>
+            </div>
+          </article>
 
-        // Scroll Reveal Animation
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal(); // Trigger on load
-    </script>
+          <!-- Card 4: The Lexicon Rainbow School -->
+          <article class="subsidiary-card reveal">
+            <div class="subsidiary-img-wrap logo-white-plate">
+              <div class="logo-inner-plate">
+                <img src="images/group/lexicon-rainbow.png" alt="The Lexicon Rainbow School" loading="lazy">
+              </div>
+            </div>
+            <div class="subsidiary-body">
+              <span class="subsidiary-cat">INCLUSIVE &amp; SPECIAL EDUCATION</span>
+              <h3>The Lexicon Rainbow School</h3>
+              <p>A dedicated haven for neurodivergent children and students with learning challenges. Provides speech therapy, occupational therapy, remedial tutoring, and social integration with boundless empathy.</p>
+              <div class="subsidiary-features-list">
+                <span>Speech Therapy</span>
+                <span>Occupational Therapy</span>
+                <span>Remedial Learning</span>
+                <span>Sensory Gym</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Lexicon IHM -->
+          <article class="subsidiary-card reveal">
+            <div class="subsidiary-img-wrap logo-white-plate">
+              <div class="logo-inner-plate">
+                <img src="images/group/lexicon-hmct.webp" alt="Lexicon Institute of Hotel Management" loading="lazy">
+              </div>
+            </div>
+            <div class="subsidiary-body">
+              <span class="subsidiary-cat">HOSPITALITY &amp; CULINARY ARTS</span>
+              <h3>Lexicon Institute of Hotel Management (IHM)</h3>
+              <p>World-class hospitality institute &ldquo;by the hoteliers, for the hoteliers&rdquo;. Features commercial production kitchens, front-office mockups, and paid global internships with premier luxury hotel chains.</p>
+              <div class="subsidiary-features-list">
+                <span>Production Kitchens</span>
+                <span>Global Internships</span>
+                <span>Culinary Arts</span>
+                <span>Hospitality Ops</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Lexicon Media & Animation -->
+          <article class="subsidiary-card reveal">
+            <div class="subsidiary-img-wrap logo-white-plate">
+              <div class="logo-inner-plate">
+                <img src="images/group/lexicon-media.webp" alt="Lexicon Institute of Media and Animation" loading="lazy">
+              </div>
+            </div>
+            <div class="subsidiary-body">
+              <span class="subsidiary-cat">CREATIVE ARTS &amp; DIGITAL MEDIA</span>
+              <h3>Lexicon Institute of Media &amp; Animation (LIMA)</h3>
+              <p>Cutting-edge academy preparing creative visionaries in VFX, 3D animation, broadcast journalism, digital film-making, sound engineering, and multimedia storytelling.</p>
+              <div class="subsidiary-features-list">
+                <span>VFX &amp; 3D Animation</span>
+                <span>Broadcast Journalism</span>
+                <span>Film Production</span>
+                <span>Creative Media</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ DIVISION 2: GROUP OF COMPANIES & VENTURES ============ -->
+    <section class="section" id="companies" style="padding-top: 80px; padding-bottom: 80px;">
+      <div class="container">
+        
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">ENTERPRISE &amp; INNOVATION</p>
+            <h2>Group of Companies<span class="period">.</span></h2>
+          </div>
+          <p>Extending beyond academia, The Lexicon Group actively shapes functional fitness, investigative journalism, dermo-cosmetic baby wellness, STEM robotics, competitive learning, and accessible justice.</p>
+        </div>
+
+        <div class="group-subsidiaries-grid">
+
+          <!-- Venture 1: MultiFit -->
+          <article class="subsidiary-card reveal">
+            <div class="subsidiary-img-wrap logo-white-plate">
+              <div class="logo-inner-plate">
+                <img src="images/group/multifit.png" alt="MultiFit Functional Fitness" loading="lazy">
+              </div>
+            </div>
+            <div class="subsidiary-body">
+              <span class="subsidiary-cat">WELLNESS &amp; ATHLETIC CHAIN</span>
+              <h3>MultiFit &mdash; Functional Fitness</h3>
+              <p>India&rsquo;s largest functional fitness and calisthenics gym chain with 40+ centers across India, the United Kingdom, and the United Arab Emirates. Specializes in customized functional movement, endurance, and holistic physical conditioning.</p>
+              <div class="subsidiary-features-list">
+                <span>40+ Centers</span>
+                <span>India, UK &amp; UAE</span>
+                <span>Calisthenics</span>
+                <span>Functional Movement</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Venture 2: Pune Times Mirror & Civic Mirror -->
+          <article class="subsidiary-card reveal">
+            <div class="subsidiary-img-wrap logo-white-plate">
+              <div class="logo-inner-plate">
+                <img src="images/group/pune-mirror.webp" alt="Pune Times Mirror & Civic Mirror" loading="lazy">
+              </div>
+            </div>
+            <div class="subsidiary-body">
+              <span class="subsidiary-cat">PRINT &amp; DIGITAL MEDIA</span>
+              <h3>Pune Times Mirror &amp; Civic Mirror</h3>
+              <p>Pune&rsquo;s leading civic daily and hyper-local media platform delivering fearless investigative journalism, community advocacy, lifestyle reporting, and city infrastructure coverage.</p>
+              <div class="subsidiary-features-list">
+                <span>Daily Print Newspaper</span>
+                <span>Civic Mirror</span>
+                <span>Investigative Journalism</span>
+                <span>Pune Community</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Venture 3: CITTA -->
+          <article class="subsidiary-card reveal">
+            <div class="subsidiary-img-wrap logo-white-plate">
+              <div class="logo-inner-plate">
+                <img src="images/group/citta.png" alt="CITTA Natural Baby Care" loading="lazy">
+              </div>
+            </div>
+            <div class="subsidiary-body">
+              <span class="subsidiary-cat">DERMO-COSMETICS &amp; WELLNESS</span>
+              <h3>CITTA &mdash; Pure, Natural Care</h3>
+              <p>Premium natural baby care and personal wellness brand rooted in grandmother&rsquo;s traditional wisdom blended with modern dermatological science. 100% toxin-free, cruelty-free, and safe for sensitive skin.</p>
+              <div class="subsidiary-features-list">
+                <span>100% Toxin-Free</span>
+                <span>Dermatologist Approved</span>
+                <span>Natural Botanicals</span>
+                <span>Cruelty-Free</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Venture 4: ThinkerPlace -->
+          <article class="subsidiary-card reveal">
+            <div class="subsidiary-img-wrap logo-white-plate">
+              <div class="logo-inner-plate">
+                <img src="images/group/thinkerplace.webp" alt="ThinkerPlace STEM Labs and Robotics" loading="lazy">
+              </div>
+            </div>
+            <div class="subsidiary-body">
+              <span class="subsidiary-cat">STEM, CODING &amp; ROBOTICS</span>
+              <h3>ThinkerPlace</h3>
+              <p>Revolutionary STEM educational platform delivering DIY educational kits, AI and robotics labs, and tinkering curricula to over 300+ schools across the nation, making experiential science accessible to all.</p>
+              <div class="subsidiary-features-list">
+                <span>STEM DIY Kits</span>
+                <span>AI &amp; Robotics Labs</span>
+                <span>300+ Partner Schools</span>
+                <span>Hands-on Tinkering</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Venture 5: EduCrack -->
+          <article class="subsidiary-card reveal">
+            <div class="subsidiary-img-wrap logo-white-plate">
+              <div class="logo-inner-plate">
+                <img src="images/group/educrack.png" alt="EduCrack EdTech Platform" loading="lazy">
+              </div>
+            </div>
+            <div class="subsidiary-body">
+              <span class="subsidiary-cat">EDTECH &amp; COMPETITIVE EXAMS</span>
+              <h3>EduCrack</h3>
+              <p>Advanced EdTech learning platform providing AI-enabled assessment, live masterclasses, and comprehensive test-prep modules for CAT, GMAT, GRE, UPSC, and defense examinations.</p>
+              <div class="subsidiary-features-list">
+                <span>AI Mock Testing</span>
+                <span>CAT / GMAT Prep</span>
+                <span>UPSC &amp; Defense</span>
+                <span>Live Masterclasses</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Venture 6: Rest The Case -->
+          <article class="subsidiary-card reveal">
+            <div class="subsidiary-img-wrap logo-white-plate">
+              <div class="logo-inner-plate">
+                <img src="images/group/rest-the-case.webp" alt="Rest The Case LegalTech Platform" loading="lazy">
+              </div>
+            </div>
+            <div class="subsidiary-body">
+              <span class="subsidiary-cat">LEGALTECH PLATFORM</span>
+              <h3>Rest The Case</h3>
+              <p>Pioneering legal tech aggregator connecting verified advocates and legal specialists with citizens and enterprises, simplifying access to affordable, confidential, and transparent justice across India.</p>
+              <div class="subsidiary-features-list">
+                <span>Verified Advocates</span>
+                <span>Online Consultations</span>
+                <span>Transparent Fees</span>
+                <span>Pan-India Network</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ VISION AHEAD: THE LEXICON UNIVERSITY & PUNE HUB ============ -->
+    <section class="section" style="padding-top: 20px; padding-bottom: 70px;">
+      <div class="container">
+        <div class="milestones-highlight-box reveal" style="background: radial-gradient(circle at 15% 50%, rgba(102, 157, 239, 0.12), transparent 50%), #0d1422; border: 1px solid rgba(102, 157, 239, 0.25); border-radius: 16px; padding: 45px 40px; box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);">
+          <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center;">
+            <div>
+              <p class="eyebrow" style="color: #669def; margin-bottom: 10px;">THE ROAD AHEAD &middot; UPCOMING MILESTONE</p>
+              <h3 style="font-size: 28px; font-weight: 700; color: #fff; margin: 0 0 16px; line-height: 1.25;">The Lexicon University, Pune<span class="period">.</span></h3>
+              <p style="font-size: 14.5px; line-height: 1.65; color: #acb8cb; margin: 0 0 24px;">Taking our educational journey to its zenith, The Lexicon Group is establishing The Lexicon University &mdash; an expansive, multidisciplinary higher education sanctuary in Pune merging technology, management leadership, liberal arts, media, and healthcare under one visionary academic campus.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <span style="font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 999px; background: rgba(102, 157, 239, 0.1); border: 1px solid rgba(102, 157, 239, 0.25); color: #d0e2ff;">Multidisciplinary Campus</span>
+                <span style="font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 999px; background: rgba(102, 157, 239, 0.1); border: 1px solid rgba(102, 157, 239, 0.25); color: #d0e2ff;">Global Research Centers</span>
+                <span style="font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 999px; background: rgba(102, 157, 239, 0.1); border: 1px solid rgba(102, 157, 239, 0.25); color: #d0e2ff;">World-Class Faculty</span>
+                <span style="font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 999px; background: rgba(102, 157, 239, 0.1); border: 1px solid rgba(102, 157, 239, 0.25); color: #d0e2ff;">Innovation &amp; Incubation Labs</span>
+              </div>
+            </div>
+            <div style="background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 28px 24px; text-align: center;">
+              <div style="font-size: 42px; font-weight: 800; color: #669def; line-height: 1;">20+</div>
+              <div style="font-size: 14px; font-weight: 600; color: #fff; margin: 8px 0 4px;">Years of Transformative Impact</div>
+              <p style="font-size: 12px; color: #8da2c0; margin: 0 0 20px;">Shaping generations from Wagholi to the globe.</p>
+              <a href="about-lexicon.html" class="button button-primary" style="width: 100%; justify-content: center; font-size: 13px;">
+                Explore Lexicon MILE Journey <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ADMISSIONS & INQUIRY CTA ============ -->
+    <section class="section" style="padding-top: 10px; padding-bottom: 90px;">
+      <div class="container">
+        <div class="about-cta-banner reveal">
+          <div class="about-cta-content">
+            <p class="eyebrow" style="color: #669def;">JOIN THE LEXICON LEGACY</p>
+            <h2>Shape Your Future With Leadership, Integrity &amp; Excellence<span class="period">.</span></h2>
+            <p>Whether you are seeking postgraduate management leadership at Lexicon MILE, school education for your child, or wish to partner across our ventures &mdash; we welcome you to our family.</p>
+            <div class="about-cta-actions">
+              <a href="about-lexicon.html" class="button button-primary">
+                About Lexicon MILE <span>&rarr;</span>
+              </a>
+              <a href="index.html#contact" class="button button-outline">
+                Contact Group Admissions <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/components.js"></script>
 </body>
 </html>
