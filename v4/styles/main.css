@@ -6071,38 +6071,40 @@ button {
 
 .ceo-main-layout {
     display: grid;
-    grid-template-columns: 350px 1fr;
-    gap: 40px;
-    align-items: flex-start;
-    margin-bottom: 70px;
+    grid-template-columns: 320px 1fr;
+    gap: 32px;
+    align-items: stretch;
+    margin-bottom: 50px;
 }
 
 .ceo-sidebar-card {
     background: #0a101d;
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
     padding: 24px;
-    position: sticky;
-    top: 100px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
 }
 
 .ceo-photo-frame {
     position: relative;
-    border-radius: 16px;
+    border-radius: 14px;
     overflow: hidden;
     background: #060b13;
     border: 1px solid rgba(102, 157, 239, 0.25);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    height: 280px;
 }
 
 .ceo-photo-frame img {
     width: 100%;
-    aspect-ratio: 4 / 4.7;
+    height: 100%;
     object-fit: cover;
     object-position: top center;
     display: block;
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
 }
 
 .ceo-sidebar-card:hover .ceo-photo-frame img {
@@ -6111,49 +6113,49 @@ button {
 
 .ceo-info-block {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 .ceo-badge {
     display: inline-block;
-    padding: 4px 12px;
+    padding: 3px 10px;
     border-radius: 20px;
     background: rgba(102, 157, 239, 0.12);
-    border: 1px solid rgba(102, 157, 239, 0.28);
+    border: 1px solid rgba(102, 157, 239, 0.25);
     color: #669def;
-    font-size: 11px;
+    font-size: 10.5px;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .ceo-name {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     color: #ffffff;
-    margin: 0 0 6px;
+    margin: 0 0 4px;
     letter-spacing: -0.01em;
 }
 
 .ceo-title-sub {
-    font-size: 13px;
-    color: #a0b2cc;
-    line-height: 1.5;
-    margin: 0 0 18px;
+    font-size: 12.5px;
+    color: #9cb0cb;
+    line-height: 1.45;
+    margin: 0 0 14px;
 }
 
 .ceo-socials {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    padding-top: 14px;
+    gap: 8px;
+    padding-top: 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .ceo-social-btn {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -6172,42 +6174,62 @@ button {
 }
 
 .ceo-quote-card {
-    margin-top: 22px;
-    padding: 16px 18px;
+    margin-top: 16px;
+    padding: 14px 16px;
     background: rgba(102, 157, 239, 0.06);
     border-left: 3px solid #669def;
-    border-radius: 0 12px 12px 0;
-    font-size: 13px;
-    line-height: 1.6;
+    border-radius: 0 10px 10px 0;
+    font-size: 12.5px;
+    line-height: 1.55;
     color: #b7cbdf;
     font-style: italic;
     text-align: left;
 }
 
+.ceo-focus-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+    justify-content: center;
+}
+
+.ceo-focus-pills span {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #9bb0cd;
+}
+
 .ceo-letter-card {
     background: #090f1b;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    padding: 44px 48px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    border-radius: 18px;
+    padding: 36px 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .ceo-letter-card::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 48px;
-    right: 48px;
+    left: 40px;
+    right: 40px;
     height: 2px;
     background: linear-gradient(90deg, #669def, transparent);
 }
 
 .ceo-salutation {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     color: #ffffff;
-    margin: 0 0 24px;
+    margin: 0 0 18px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -6223,86 +6245,78 @@ button {
 .ceo-letter-body {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 14px;
 }
 
 .ceo-letter-body p {
-    font-size: 15.5px;
-    line-height: 1.85;
-    color: #b8cadf;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #b7c7dc;
     margin: 0;
 }
 
 .ceo-letter-body p.lead {
-    font-size: 17.5px;
-    line-height: 1.8;
+    font-size: 15.5px;
+    line-height: 1.75;
     color: #e4edf8;
-    font-weight: 400;
-}
-
-.ceo-letter-body p:first-of-type::first-letter {
-    font-size: 44px;
-    float: left;
-    line-height: 1;
-    padding-right: 12px;
-    color: #669def;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 .ceo-highlight-quote {
-    padding: 24px 28px;
-    margin: 10px 0;
-    background: rgba(7, 59, 145, 0.18);
-    border: 1px solid rgba(102, 157, 239, 0.25);
-    border-left: 4px solid #669def;
-    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 4px 0;
+    background: rgba(7, 59, 145, 0.15);
+    border: 1px solid rgba(102, 157, 239, 0.22);
+    border-left: 3px solid #669def;
+    border-radius: 10px;
 }
 
 .ceo-highlight-quote p {
-    font-size: 16px !important;
+    font-size: 14px !important;
     font-style: italic;
-    color: #d6e4f7 !important;
-    line-height: 1.7 !important;
+    color: #d1e2f6 !important;
+    line-height: 1.65 !important;
+    margin: 0 !important;
 }
 
 .ceo-sign-off-block {
-    margin-top: 36px;
-    padding-top: 28px;
+    margin-top: 24px;
+    padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 16px;
 }
 
 .ceo-signature-hand {
     font-family: 'Times New Roman', Times, Georgia, serif;
-    font-size: 38px;
+    font-size: 32px;
     font-style: italic;
     color: #ffffff;
     letter-spacing: 0.02em;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .ceo-signature-name {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 700;
     color: #ffffff;
     margin: 0;
 }
 
 .ceo-signature-title {
-    font-size: 13px;
+    font-size: 12.5px;
     color: #669def;
     font-weight: 600;
-    margin: 3px 0 0;
+    margin: 2px 0 0;
     letter-spacing: 0.02em;
 }
 
 .ceo-stamp-badge {
-    padding: 10px 18px;
-    border-radius: 10px;
+    padding: 8px 16px;
+    border-radius: 8px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     text-align: right;
@@ -6310,7 +6324,7 @@ button {
 
 .ceo-stamp-badge span {
     display: block;
-    font-size: 11px;
+    font-size: 10.5px;
     color: #798da8;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -6318,7 +6332,7 @@ button {
 
 .ceo-stamp-badge strong {
     display: block;
-    font-size: 13px;
+    font-size: 12.5px;
     color: #dbe7f7;
     margin-top: 2px;
 }
