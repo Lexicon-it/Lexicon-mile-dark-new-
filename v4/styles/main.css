@@ -6527,8 +6527,9 @@ button {
 }
 
 .governor-thumb-wrap {
-    height: 250px;
     width: 100%;
+    aspect-ratio: 1 / 1;
+    max-height: 360px;
     position: relative;
     overflow: hidden;
     background: #080e18;
@@ -6541,7 +6542,7 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center;
+    object-position: center 20%;
     filter: brightness(0.96);
     transition: transform 0.5s ease, filter 0.5s ease;
 }
@@ -6552,8 +6553,9 @@ button {
 }
 
 .governor-emblem-wrap {
-    height: 250px;
     width: 100%;
+    aspect-ratio: 1 / 1;
+    max-height: 360px;
     position: relative;
     background: radial-gradient(circle at 50% 40%, rgba(102, 157, 239, 0.12) 0%, #070d18 75%);
     display: flex;
@@ -6704,6 +6706,6 @@ button {
     
     .governor-thumb-wrap,
     .governor-emblem-wrap {
-        height: 220px;
+        max-height: 320px;
     }
 }
