@@ -1,209 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#05070C">
-  <title>Lexicon Group | Lexicon MILE</title>
-  <link rel="icon" href="images/favicon.png" type="image/png">
-  <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles/main.css">
-  <style>
-    /* Scope styles for WP content to adapt to dark theme */
-    .wp-content {
-      color: rgba(255, 255, 255, 0.7);
-      line-height: 1.6;
-      font-size: 1.1rem;
-    }
-    .wp-content h1, .wp-content h2, .wp-content h3, .wp-content h4, .wp-content h5, .wp-content h6 {
-      color: #fff;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-    .wp-content a {
-      color: #8cb4f5;
-      text-decoration: underline;
-    }
-    .wp-content p {
-      margin-bottom: 1.5rem;
-    }
-    .wp-content ul, .wp-content ol {
-      margin-bottom: 1.5rem;
-      padding-left: 2rem;
-    }
-    .wp-content li {
-      margin-bottom: 0.5rem;
-    }
-    .wp-content table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 2rem;
-    }
-    .wp-content th, .wp-content td {
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 1rem;
-    }
-    .wp-content th {
-      background: rgba(255, 255, 255, 0.05);
-      color: #fff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#05070C">
+    <title>Lexicon Group | Lexicon MILE</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Modern Styles for Lexicon Group Page */
+        .group-hero {
+            position: relative;
+            padding: 180px 0 100px;
+            background: radial-gradient(circle at top left, rgba(7, 59, 145, 0.15), transparent 60%),
+                        radial-gradient(circle at bottom right, rgba(11, 99, 206, 0.1), transparent 60%);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .group-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, var(--bg) 100%);
+            z-index: -1;
+        }
+
+        .page-title {
+            font-size: clamp(48px, 6vw, 80px);
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #a3c4ff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .page-subtitle {
+            font-size: 18px;
+            color: var(--muted);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        /* Split Info Sections */
+        .info-section {
+            padding: 80px 0;
+        }
+
+        .split-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .split-content.reverse {
+            direction: rtl;
+        }
+        
+        .split-content.reverse > * {
+            direction: ltr;
+        }
+
+        @media (max-width: 991px) {
+            .split-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .split-content.reverse {
+                direction: ltr;
+            }
+        }
+
+        .info-text h2 {
+            font-size: clamp(32px, 4vw, 42px);
+            margin-bottom: 24px;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #fff, #a3c4ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-text p {
+            color: var(--muted);
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .info-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            pointer-events: none;
+        }
+
+        .info-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.6s ease;
+        }
+
+        .info-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Subsidiaries Grid */
+        .subsidiaries-section {
+            background: linear-gradient(180deg, var(--bg) 0%, var(--card) 100%);
+            padding: 100px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .subs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .sub-card {
+            background: rgba(13, 20, 34, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 35px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sub-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at top right, rgba(11, 99, 206, 0.1), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+
+        .sub-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(11, 99, 206, 0.3);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .sub-card:hover::before {
+            opacity: 1;
+        }
+
+        .sub-content {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+
+        .sub-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(11, 99, 206, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #67aaff;
+            margin-bottom: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .sub-card:hover .sub-icon {
+            background: var(--bright);
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .sub-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .sub-desc {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .sub-image {
+            margin-top: 24px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .sub-image img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            filter: grayscale(80%) brightness(0.8);
+            transition: all 0.4s ease;
+        }
+        
+        .sub-card:hover .sub-image img {
+            filter: grayscale(0%) brightness(1);
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
+
 <body>
-  <div id="header"></div>
-  <main id="main">
-    <section class="section" style="padding-top: 150px; min-height: 80vh;">
-      <div class="container">
-         <div class="section-heading reveal">
-           <div>
-             <p class="eyebrow">LEXICON MILE</p>
-             <h2>Lexicon Group<span class="period">.</span></h2>
-           </div>
-         </div>
-         <div class="wp-content">
-            		<div data-elementor-type="wp-page" data-elementor-id="53833" class="elementor elementor-53833" data-elementor-post-type="page">
-				<div class="elementor-element elementor-element-64889d7 e-flex e-con-boxed e-con e-parent" data-id="64889d7" data-element_type="container" data-e-type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-c2f535e elementor-widget elementor-widget-image" data-id="c2f535e" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-					</div>
-				</div>
-		<div class="elementor-element elementor-element-ea7571b e-flex e-con-boxed e-con e-parent" data-id="ea7571b" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-26a79cc thim-ekits-heading-text-center elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="26a79cc" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading text-center"><h3 class="title">Lexicon Group </h3></div>				</div>
-				</div>
-		<div class="elementor-element elementor-element-702d6d7 e-grid e-con-full e-con e-child" data-id="702d6d7" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-88df172 elementor-widget elementor-widget-text-editor" data-id="88df172" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>The Lexicon Group is a prominent Pune-based conglomerate founded in 2006, dedicated to fostering excellence across education, wellness, media, and innovative ventures. Headquartered in Pune, India, the group has evolved from its roots in education to a diverse ecosystem that impacts thousands of lives through quality-driven initiatives in multiple sectors. With a strong emphasis on self-belief, integrity, and community contribution, Lexicon Group serves over 16,000 students and employs hundreds across its operations, creating a holistic environment for growth and innovation. All its subsidiaries are primarily based or originated in Pune, reflecting the group’s deep ties to the city as a hub for educational and entrepreneurial advancement.</p>								</div>
-				<div class="elementor-element elementor-element-74a952d elementor-widget elementor-widget-image" data-id="74a952d" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				</div>
-		<div class="elementor-element elementor-element-f821e22 e-grid e-con-full e-con e-child" data-id="f821e22" data-element_type="container" data-e-type="container">
-				<div class="elementor-element elementor-element-c927e7c elementor-widget elementor-widget-text-editor" data-id="c927e7c" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<h2>Our History</h2><p>Lexicon Group was established in 2006 by visionary educator Shri S. D. Sharma, initially transitioning from a publishing background to focus on accessible, high-quality education in Pune. Starting modestly with just 19 students in its first year, the group faced early challenges like financial constraints but grew rapidly through persistence and a commitment to excellence. By building a sustainable educational ecosystem; including pre-schools, K-12 schools, and higher education institutes, the group expanded to over 10,000 students in Pune, cultivating a community of more than 20,000 students and parents. Over the years, diversification into wellness, edtech, media, and consumer products occurred organically, often through acquisitions and partnerships with passionate entrepreneurs, while maintaining a Pune-centric foundation. Today, Lexicon Group stands as a testament to turning ideas into impactful realities, with plans for pan-India and international expansion, including the establishment of The Lexicon University.</p>								</div>
-				</div>
-		<div class="elementor-element elementor-element-de794b7 e-grid e-con-full e-con e-child" data-id="de794b7" data-element_type="container" data-e-type="container">
-				<div class="elementor-element elementor-element-f85ce39 elementor-widget elementor-widget-text-editor" data-id="f85ce39" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<h2><strong>Our Subsidiaries in Pune</strong></h2><p>Lexicon Group’s subsidiaries are deeply integrated into Pune’s landscape, with operations spanning education, media, wellness, and beyond. Here’s an overview of key entities:</p>								</div>
-				</div>
-		<div class="elementor-element elementor-element-c911fb7 e-grid e-con-full e-con e-child" data-id="c911fb7" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-2339435 elementor-widget elementor-widget-text-editor" data-id="2339435" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<h3><strong>Lexicon Management Institute of Leadership &amp; Excellence (Lexicon MILE)</strong></h3><p>Established in 2009 in Wagholi, Pune, this top-ranked MBA college offers AICTE-approved PGDM programs in areas like Marketing, Finance, Research &amp; Business Analytics, and more. Focused on entrepreneurship and leadership, it boasts impressive placements with an average package of 8.25 LPA and a highest of 19 LPA, along with awards like Excellence in HR Leadership 2024. The institute features an Innovation &amp; Incubation Centre to nurture startups.</p>								</div>
-				<div class="elementor-element elementor-element-7c79a03 elementor-widget elementor-widget-image" data-id="7c79a03" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				</div>
-		<div class="elementor-element elementor-element-9d871a7 e-grid e-con-full e-con e-child" data-id="9d871a7" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-059b54c elementor-widget elementor-widget-text-editor" data-id="059b54c" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<h3><strong>The Lexicon Schools</strong></h3><p>Among the best CBSE schools in Pune, these institutions emphasize child-centric, progressive, and global education, fostering self-belief, ethical leadership, and innovation. Recognised by Forbes as a ‘Great Place to Study in India,’ they nurture character, confidence, and compassion through unconventional subjects and sustainable practices. Locations include The Lexicon International School (Wagholi and Kalyani Nagar) and The Lexicon School (Hadapsar), all in Pune.</p>								</div>
-				<div class="elementor-element elementor-element-f5deecf elementor-widget elementor-widget-image" data-id="f5deecf" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				</div>
-		<div class="elementor-element elementor-element-9c69a15 e-grid e-con-full e-con e-child" data-id="9c69a15" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-bf98b03 elementor-widget elementor-widget-text-editor" data-id="bf98b03" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<h3><strong>Lexicon Kids</strong></h3><p>Pre-schools focused on early childhood development, promoting multiple intelligences and values-based learning under the guidance of Mrs. Deepti Sharma.</p>								</div>
-				<div class="elementor-element elementor-element-c3e2b4c elementor-widget elementor-widget-image" data-id="c3e2b4c" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				</div>
-		<div class="elementor-element elementor-element-ad8b5c5 e-grid e-con-full e-con e-child" data-id="ad8b5c5" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-44d94fb elementor-widget elementor-widget-text-editor" data-id="44d94fb" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<h3><strong>The Lexicon Rainbow School</strong></h3><p>A specialized therapy center and school for specially-abled students, providing inclusive education and support services in Pune.</p>								</div>
-				<div class="elementor-element elementor-element-ca7bc35 elementor-widget elementor-widget-image" data-id="ca7bc35" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				</div>
-		<div class="elementor-element elementor-element-dced704 e-grid e-con-full e-con e-child" data-id="dced704" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-4e92844 elementor-widget elementor-widget-text-editor" data-id="4e92844" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<h3><strong>Lexicon Institute of Hotel Management</strong></h3><p>Offers programs in hospitality, contributing to Pune’s growing service sector.</p>								</div>
-				<div class="elementor-element elementor-element-56f27bc elementor-widget elementor-widget-image" data-id="56f27bc" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				</div>
-		<div class="elementor-element elementor-element-ef4bd9b e-grid e-con-full e-con e-child" data-id="ef4bd9b" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-9518bb3 elementor-widget elementor-widget-text-editor" data-id="9518bb3" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<h3><strong>Lexicon Institute of Media and Animation</strong></h3><p>Provides training in media, animation, and related fields, aligning with Pune’s creative industries.</p>								</div>
-				<div class="elementor-element elementor-element-26be550 elementor-widget elementor-widget-image" data-id="26be550" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				</div>
-		<div class="elementor-element elementor-element-31559a5 e-grid e-con-full e-con e-child" data-id="31559a5" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-35b3ba8 elementor-widget elementor-widget-text-editor" data-id="35b3ba8" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<h3><strong>MultiFit</strong></h3><p>A wellness subsidiary with fitness gyms across Pune and beyond (acquired with ~40 locations in India, UK, and UAE), promoting health and community well-being.</p>								</div>
-				<div class="elementor-element elementor-element-117ee81 elementor-widget elementor-widget-image" data-id="117ee81" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				</div>
-		<div class="elementor-element elementor-element-89f7b5b e-grid e-con-full e-con e-child" data-id="89f7b5b" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-85e5a69 elementor-widget elementor-widget-text-editor" data-id="85e5a69" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<h3><strong>Pune Times Mirror and Civic Mirror</strong></h3><p>Media arms acquired from the Times of India Group, delivering local news and insights to Pune’s residents, with ambitions for digital and multi-city expansion.</p>								</div>
-				<div class="elementor-element elementor-element-444c357 elementor-widget elementor-widget-image" data-id="444c357" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				</div>
-		<div class="elementor-element elementor-element-465f26f e-grid e-con-full e-con e-child" data-id="465f26f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-0c14438 elementor-widget elementor-widget-text-editor" data-id="0c14438" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<h3><strong>CITTA</strong></h3><p>A baby care brand offering natural, cruelty-free bath and skincare products, inspired by Pune’s millennial parents and expanding pan-India.</p>								</div>
-				<div class="elementor-element elementor-element-761e2ca elementor-widget elementor-widget-image" data-id="761e2ca" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				</div>
-		<div class="elementor-element elementor-element-3abc36c e-grid e-con-full e-con e-child" data-id="3abc36c" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-434afe3 elementor-widget elementor-widget-text-editor" data-id="434afe3" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<h3><strong>ThinkerPlace</strong></h3><p>A baby care brand offering natural, cruelty-free bath and skincare products, inspired by Pune’s millennial parents and expanding pan-India.</p>								</div>
-				<div class="elementor-element elementor-element-84478af elementor-widget elementor-widget-image" data-id="84478af" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				</div>
-		<div class="elementor-element elementor-element-32869dc e-grid e-con-full e-con e-child" data-id="32869dc" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-77f0cbb elementor-widget elementor-widget-text-editor" data-id="77f0cbb" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<h3><strong>EduCrack</strong></h3><p>An edtech platform for competitive exam preparation, targeting 500,000 users monthly and enhancing educational access in Pune and beyond.</p>								</div>
-				<div class="elementor-element elementor-element-00d3188 elementor-widget elementor-widget-image" data-id="00d3188" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				</div>
-		<div class="elementor-element elementor-element-97fd2cd e-grid e-con-full e-con e-child" data-id="97fd2cd" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-cb5ac20 elementor-widget elementor-widget-text-editor" data-id="cb5ac20" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<h3><strong>Rest The Case</strong></h3><p>Rest The Case (Pune) is a legal services platform that helps people find verified lawyers and get legal support online.</p><p>🔹 Lawyer consultation<br />🔹 Legal documentation<br />🔹 Business compliance support<br />🔹 Online legal guidance</p>								</div>
-				<div class="elementor-element elementor-element-c405192 elementor-widget elementor-widget-image" data-id="c405192" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				</div>
-		<div class="elementor-element elementor-element-c087016 e-grid e-con-full e-con e-child" data-id="c087016" data-element_type="container" data-e-type="container">
-				<div class="elementor-element elementor-element-8f87744 elementor-widget elementor-widget-text-editor" data-id="8f87744" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>Through these Pune-based subsidiaries, Lexicon Group continues to innovate and contribute to the city’s growth as an education and wellness powerhouse.</p>								</div>
-				</div>
-					</div>
-				</div>
-		<div class="elementor-element elementor-element-7cee9968 e-flex e-con-boxed e-con e-parent" data-id="7cee9968" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-9853e0e thim-ekits-heading-text-center elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="9853e0e" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading text-center"><h2 class="title">The Lexicon Group of Institutes </h2></div>				</div>
-				</div>
-				<div class="elementor-element elementor-element-5e9644fa elementor-widget elementor-widget-image-carousel" data-id="5e9644fa" data-element_type="widget" data-e-type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;5&quot;,&quot;slides_to_show_tablet&quot;:&quot;3&quot;,&quot;slides_to_show_mobile&quot;:&quot;2&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;slides_to_scroll_mobile&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;autoplay_speed&quot;:0,&quot;speed&quot;:2000,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:14,&quot;sizes&quot;:[]},&quot;autoplay&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image-carousel.default">
-							<div class="elementor-image-carousel-wrapper swiper" role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="ltr">
-			<div class="elementor-image-carousel swiper-wrapper" aria-live="off">
-								<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 8"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 8"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 8"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 8"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 of 8"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="6 of 8"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="7 of 8"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="8 of 8"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div>			</div>
-							
-									</div>
-						</div>
-					</div>
-				</div>
-		<div class="elementor-element elementor-element-5e06bd3a e-flex e-con-boxed e-con e-parent" data-id="5e06bd3a" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-20450d7c thim-ekits-heading-text-center elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="20450d7c" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading text-center"><h2 class="title">Group of Companies </h2></div>				</div>
-				</div>
-				<div class="elementor-element elementor-element-1b621add elementor-widget elementor-widget-image-carousel" data-id="1b621add" data-element_type="widget" data-e-type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;5&quot;,&quot;slides_to_show_tablet&quot;:&quot;3&quot;,&quot;slides_to_show_mobile&quot;:&quot;2&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;slides_to_scroll_mobile&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;autoplay_speed&quot;:0,&quot;speed&quot;:2000,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:14,&quot;sizes&quot;:[]},&quot;autoplay&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image-carousel.default">
-							<div class="elementor-image-carousel-wrapper swiper" role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="ltr">
-			<div class="elementor-image-carousel swiper-wrapper" aria-live="off">
-								<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 6"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 6"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 6"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 6"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 of 6"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="6 of 6"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div>			</div>
-							
-									</div>
-						</div>
-					</div>
-				</div>
-				</div>
-		
-         </div>
-      </div>
-    </section>
-  </main>
-  <div id="footer"></div>
-  <script src="js/components.js"></script>
+    <div id="header"></div>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="group-hero">
+            <div class="container">
+                <h1 class="page-title">Lexicon Group.</h1>
+                <p class="page-subtitle">A prominent Pune-based conglomerate dedicated to fostering excellence across education, wellness, media, and innovative ventures, impacting thousands of lives through quality-driven initiatives.</p>
+            </div>
+        </section>
+
+        <!-- Overview & History Sections -->
+        <section class="info-section">
+            <div class="container">
+                <div class="split-content reveal">
+                    <div class="info-text">
+                        <p class="eyebrow">WHO WE ARE</p>
+                        <h2>Empowering Lives Since 2006</h2>
+                        <p>The Lexicon Group has evolved from its roots in education to a diverse ecosystem. With a strong emphasis on self-belief, integrity, and community contribution, the Lexicon Group serves over 16,000 students and employs hundreds across its operations.</p>
+                        <p>All its subsidiaries are primarily based or originated in Pune, reflecting the group’s deep ties to the city as a hub for educational and entrepreneurial advancement, creating a holistic environment for growth and innovation.</p>
+                    </div>
+                    <div class="info-image">
+                        <img src="images/lexicon-overview.jpg" alt="Lexicon Group Overview" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section" style="padding-top: 0;">
+            <div class="container">
+                <div class="split-content reverse reveal">
+                    <div class="info-text">
+                        <p class="eyebrow">OUR HISTORY</p>
+                        <h2>From 19 Students to a Global Vision</h2>
+                        <p>Established by visionary educator Shri S. D. Sharma, Lexicon Group started modestly with just 19 students. Through persistence and a commitment to excellence, we built a sustainable educational ecosystem; including pre-schools, K-12 schools, and higher education institutes, expanding to over 10,000 students in Pune.</p>
+                        <p>Over the years, diversification into wellness, edtech, media, and consumer products occurred organically. Today, Lexicon Group stands as a testament to turning ideas into impactful realities, with plans for pan-India and international expansion, including the establishment of The Lexicon University.</p>
+                    </div>
+                    <div class="info-image">
+                        <img src="images/lexicon-history.jpg" alt="Lexicon Group History" onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subsidiaries Section -->
+        <section class="subsidiaries-section">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <p class="eyebrow">OUR ECOSYSTEM</p>
+                    <h2>Subsidiaries in Pune</h2>
+                    <p>Lexicon Group’s subsidiaries are deeply integrated into Pune’s landscape, with operations spanning education, media, wellness, and beyond.</p>
+                </div>
+
+                <div class="subs-grid">
+                    <!-- Lexicon MILE -->
+                    <div class="sub-card reveal" style="transition-delay: 0.1s;">
+                        <div class="sub-content">
+                            <div class="sub-icon"><i data-lucide="graduation-cap" width="28" height="28"></i></div>
+                            <h3 class="sub-title">Lexicon MILE</h3>
+                            <p class="sub-desc">Established in 2009, this top-ranked MBA college offers AICTE-approved PGDM programs focused on entrepreneurship, leadership, and analytics.</p>
+                        </div>
+                        <div class="sub-image">
+                            <img src="images/sub-mile.jpg" alt="Lexicon MILE" onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                        </div>
+                    </div>
+
+                    <!-- The Lexicon Schools -->
+                    <div class="sub-card reveal" style="transition-delay: 0.2s;">
+                        <div class="sub-content">
+                            <div class="sub-icon"><i data-lucide="school" width="28" height="28"></i></div>
+                            <h3 class="sub-title">The Lexicon Schools</h3>
+                            <p class="sub-desc">Among the best CBSE schools in Pune, emphasizing child-centric, progressive, and global education to foster ethical leadership and innovation.</p>
+                        </div>
+                        <div class="sub-image">
+                            <img src="images/sub-schools.jpg" alt="The Lexicon Schools" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                        </div>
+                    </div>
+
+                    <!-- Lexicon Kids -->
+                    <div class="sub-card reveal" style="transition-delay: 0.3s;">
+                        <div class="sub-content">
+                            <div class="sub-icon"><i data-lucide="baby" width="28" height="28"></i></div>
+                            <h3 class="sub-title">Lexicon Kids</h3>
+                            <p class="sub-desc">Pre-schools focused on early childhood development, promoting multiple intelligences and values-based learning for the youngest minds.</p>
+                        </div>
+                        <div class="sub-image">
+                            <img src="images/sub-kids.jpg" alt="Lexicon Kids" onerror="this.src='https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                        </div>
+                    </div>
+
+                    <!-- The Lexicon Rainbow School -->
+                    <div class="sub-card reveal" style="transition-delay: 0.1s;">
+                        <div class="sub-content">
+                            <div class="sub-icon"><i data-lucide="rainbow" width="28" height="28"></i></div>
+                            <h3 class="sub-title">Lexicon Rainbow School</h3>
+                            <p class="sub-desc">A specialized therapy center and school for specially-abled students, providing inclusive education and essential support services.</p>
+                        </div>
+                        <div class="sub-image">
+                            <img src="images/sub-rainbow.jpg" alt="Lexicon Rainbow School" onerror="this.src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                        </div>
+                    </div>
+
+                    <!-- Lexicon IHM -->
+                    <div class="sub-card reveal" style="transition-delay: 0.2s;">
+                        <div class="sub-content">
+                            <div class="sub-icon"><i data-lucide="utensils" width="28" height="28"></i></div>
+                            <h3 class="sub-title">Lexicon IHM</h3>
+                            <p class="sub-desc">Institute of Hotel Management offering comprehensive programs in hospitality, contributing to the region's growing service sector.</p>
+                        </div>
+                        <div class="sub-image">
+                            <img src="images/sub-ihm.jpg" alt="Lexicon IHM" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                        </div>
+                    </div>
+
+                    <!-- Lexicon Media -->
+                    <div class="sub-card reveal" style="transition-delay: 0.3s;">
+                        <div class="sub-content">
+                            <div class="sub-icon"><i data-lucide="clapperboard" width="28" height="28"></i></div>
+                            <h3 class="sub-title">Lexicon Media & Animation</h3>
+                            <p class="sub-desc">Provides expert training in media, animation, and related fields, aligning with the creative industries' modern demands.</p>
+                        </div>
+                        <div class="sub-image">
+                            <img src="images/sub-media.jpg" alt="Lexicon Media" onerror="this.src='https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                        </div>
+                    </div>
+
+                    <!-- MultiFit -->
+                    <div class="sub-card reveal" style="transition-delay: 0.1s;">
+                        <div class="sub-content">
+                            <div class="sub-icon"><i data-lucide="activity" width="28" height="28"></i></div>
+                            <h3 class="sub-title">MultiFit</h3>
+                            <p class="sub-desc">A wellness subsidiary with fitness gyms across India, UK, and UAE, promoting functional fitness, health, and community well-being.</p>
+                        </div>
+                        <div class="sub-image">
+                            <img src="images/sub-multifit.jpg" alt="MultiFit" onerror="this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                        </div>
+                    </div>
+
+                    <!-- Pune Times Mirror -->
+                    <div class="sub-card reveal" style="transition-delay: 0.2s;">
+                        <div class="sub-content">
+                            <div class="sub-icon"><i data-lucide="newspaper" width="28" height="28"></i></div>
+                            <h3 class="sub-title">Times Mirror & Civic Mirror</h3>
+                            <p class="sub-desc">Media arms delivering local news, civic issues, and insights to residents, with ambitions for digital and multi-city expansion.</p>
+                        </div>
+                        <div class="sub-image">
+                            <img src="images/sub-mirror.jpg" alt="Times Mirror" onerror="this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                        </div>
+                    </div>
+
+                    <!-- CITTA -->
+                    <div class="sub-card reveal" style="transition-delay: 0.3s;">
+                        <div class="sub-content">
+                            <div class="sub-icon"><i data-lucide="leaf" width="28" height="28"></i></div>
+                            <h3 class="sub-title">CITTA</h3>
+                            <p class="sub-desc">A baby care brand offering natural, cruelty-free bath and skincare products, inspired by modern parents and expanding pan-India.</p>
+                        </div>
+                        <div class="sub-image">
+                            <img src="images/sub-citta.jpg" alt="CITTA" onerror="this.src='https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                        </div>
+                    </div>
+
+                    <!-- EduCrack -->
+                    <div class="sub-card reveal" style="transition-delay: 0.1s;">
+                        <div class="sub-content">
+                            <div class="sub-icon"><i data-lucide="book-open" width="28" height="28"></i></div>
+                            <h3 class="sub-title">EduCrack</h3>
+                            <p class="sub-desc">An edtech platform for competitive exam preparation, targeting 500,000 users monthly and enhancing global educational access.</p>
+                        </div>
+                        <div class="sub-image">
+                            <img src="images/sub-educrack.jpg" alt="EduCrack" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                        </div>
+                    </div>
+
+                    <!-- Rest The Case -->
+                    <div class="sub-card reveal" style="transition-delay: 0.2s;">
+                        <div class="sub-content">
+                            <div class="sub-icon"><i data-lucide="scale" width="28" height="28"></i></div>
+                            <h3 class="sub-title">Rest The Case</h3>
+                            <p class="sub-desc">A legal services platform that helps people find verified lawyers and get legal documentation, business compliance, and guidance online.</p>
+                        </div>
+                        <div class="sub-image">
+                            <img src="images/sub-restthecase.jpg" alt="Rest The Case" onerror="this.src='https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                        </div>
+                    </div>
+
+                    <!-- ThinkerPlace -->
+                    <div class="sub-card reveal" style="transition-delay: 0.3s;">
+                        <div class="sub-content">
+                            <div class="sub-icon"><i data-lucide="lightbulb" width="28" height="28"></i></div>
+                            <h3 class="sub-title">ThinkerPlace</h3>
+                            <p class="sub-desc">An innovative educational initiative focusing on STEM learning and robotics for children, cultivating the next generation of innovators.</p>
+                        </div>
+                        <div class="sub-image">
+                            <img src="images/sub-thinkerplace.jpg" alt="ThinkerPlace" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Trigger on load
+    </script>
 </body>
 </html>
