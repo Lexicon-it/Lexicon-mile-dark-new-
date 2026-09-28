@@ -4,6 +4,7 @@
     font-weight: 100 900;
     font-display: swap
 }
+@import url('elementor-theme.css');
 
 :root {
     --bg: #05070c;
@@ -2159,13 +2160,60 @@ button {
     color: #81b0f5
 }
 
+.cta-main-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+@media (max-width: 991px) {
+    .cta-main-layout {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+    .cta-image-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.cta-text-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.cta-image-wrapper {
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    opacity: 0.6;
+    mix-blend-mode: luminosity;
+}
+
 .cta-arrow {
     font-weight: 250;
-    font-size: 170px;
+    font-size: clamp(100px, 15vw, 170px);
     position: absolute;
-    right: 15px;
-    top: -10px;
-    color: #a0bce8
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.9);
+    pointer-events: none;
+    line-height: 1;
 }
 
 .final-cta .container>p:not(.eyebrow) {
@@ -2910,10 +2958,6 @@ button {
         height: 340px
     }
 
-    .cta-arrow {
-        font-size: 140px;
-        right: 0
-    }
 
     .footer-top {
         grid-template-columns: repeat(4, 1fr);
@@ -3713,9 +3757,6 @@ button {
         line-height: 1.12
     }
 
-    .cta-arrow {
-        display: none
-    }
 
     .final-cta .container>p:not(.eyebrow) {
         font-size: 15px;

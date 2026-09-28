@@ -1,0 +1,292 @@
+/* 
+ * Elementor Dark Theme Override
+ * This stylesheet completely remaps Elementor's default grid, classes, and widgets 
+ * to match the Lexicon MILE dark theme, making all WP-generated pages look native.
+ */
+
+:root {
+  --e-global-color-primary: var(--bright);
+  --e-global-color-secondary: var(--bright);
+  --e-global-color-text: var(--muted);
+  --e-global-color-accent: var(--bright);
+  --e-global-typography-primary-font-family: var(--font);
+  --e-global-typography-secondary-font-family: var(--font);
+  --e-global-typography-text-font-family: var(--font);
+  --e-global-typography-accent-font-family: var(--font);
+}
+
+/* Base structural fixes */
+.elementor-section, .e-con-parent {
+  padding: 4rem 0 !important;
+  background: transparent !important;
+}
+
+.elementor-container, .e-con-inner {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 5% !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 2rem !important;
+  width: 100% !important;
+}
+
+.e-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 2rem !important;
+}
+
+/* Columns */
+.elementor-column, .e-con-child {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+@media (min-width: 768px) {
+  .elementor-col-25 { width: calc(25% - 1.5rem) !important; flex: none !important; }
+  .elementor-col-33 { width: calc(33.333% - 1.33rem) !important; flex: none !important; }
+  .elementor-col-50 { width: calc(50% - 1rem) !important; flex: none !important; }
+  .elementor-col-100 { width: 100% !important; flex: none !important; }
+}
+
+.elementor-widget-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+  width: 100% !important;
+  align-content: flex-start !important;
+}
+
+/* Headings (match .section-heading) */
+.thim-ekits-heading .title, .elementor-heading-title {
+  font-family: var(--font) !important;
+  font-size: clamp(2rem, 4vw, 3.5rem) !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.03em !important;
+  color: #fff !important;
+  line-height: 1.1 !important;
+  margin: 0 0 1rem 0 !important;
+}
+
+.thim-ekits-heading .sub-heading p {
+  font-size: 1.125rem !important;
+  color: var(--muted) !important;
+  line-height: 1.6 !important;
+  max-width: 600px !important;
+}
+
+.sc_heading .line { display: none !important; }
+
+/* Text Content */
+.elementor-widget-text-editor {
+  color: var(--muted) !important;
+  font-size: 1.125rem !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+}
+
+.elementor-widget-text-editor h1,
+.elementor-widget-text-editor h2,
+.elementor-widget-text-editor h3,
+.elementor-widget-text-editor h4 {
+  color: #fff !important;
+  margin: 2rem 0 1rem !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+}
+
+.elementor-widget-text-editor b, 
+.elementor-widget-text-editor strong {
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+
+.elementor-widget-text-editor ul {
+  padding-left: 1.5rem !important;
+  margin: 1rem 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+}
+
+.elementor-widget-text-editor li {
+  position: relative !important;
+  color: var(--muted) !important;
+}
+
+/* Icon Boxes / Feature Cards (Match .program-card) */
+.elementor-widget-icon-box, .elementor-widget-thim-icon-box {
+  background: var(--card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 16px !important;
+  padding: 2.5rem 2rem !important;
+  transition: all 0.3s ease !important;
+  height: 100% !important;
+}
+
+.elementor-widget-icon-box:hover, .elementor-widget-thim-icon-box:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-5px) !important;
+}
+
+.elementor-icon-box-wrapper, .thim-widget-icon-box {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+.elementor-icon-box-icon, .boxes-icon {
+  background: rgba(140, 180, 245, 0.1) !important;
+  width: 64px !important;
+  height: 64px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  color: var(--bright) !important;
+  font-size: 1.5rem !important;
+  margin: 0 !important;
+}
+
+.elementor-icon-box-icon svg, .boxes-icon svg {
+  width: 28px !important;
+  height: 28px !important;
+  fill: var(--bright) !important;
+}
+
+.elementor-icon-box-title span, .iconbox-title {
+  font-size: 1.5rem !important;
+  font-weight: 500 !important;
+  color: #fff !important;
+  margin: 0 !important;
+  font-family: var(--font) !important;
+}
+
+.elementor-icon-box-description, .iconbox-description {
+  color: var(--muted) !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+/* Team / Leaders (Match .leader-card) */
+.thim-ekit-team__article {
+  background: transparent !important;
+  text-align: left !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+  padding: 0 !important;
+}
+
+.thim-ekit-team__thumbnail {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  aspect-ratio: 4/5 !important;
+  background: rgba(255,255,255,0.05) !important;
+}
+
+.thim-ekit-team__thumbnail .elementor-widget-image div {
+  min-height: 100% !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.thim-ekit-team__content {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.thim-ekit-team__member-name {
+  font-size: 1.5rem !important;
+  font-weight: 500 !important;
+  color: #fff !important;
+  margin-bottom: 0.25rem !important;
+  font-family: var(--font) !important;
+}
+
+.thim-ekit-team__member-position, .thim-ekit-team__member-description {
+  color: var(--bright) !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  font-weight: 600 !important;
+}
+
+/* Counters (Match legacy-grid) */
+.thim-counters-box .counter-box {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 2rem 0 !important;
+}
+
+.content-box-percentage {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 1rem !important;
+}
+
+.wrap-percentage {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 0.2rem !important;
+}
+
+.display-percentage, .text_number {
+  font-size: clamp(3rem, 5vw, 4.5rem) !important;
+  font-weight: 400 !important;
+  color: #fff !important;
+  font-family: var(--font) !important;
+  line-height: 1 !important;
+}
+
+.text_number {
+  color: var(--bright) !important;
+  font-style: italic !important;
+  font-size: clamp(2rem, 3vw, 3rem) !important;
+}
+
+.counter-box-content {
+  color: var(--muted) !important;
+  font-size: 0.875rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  max-width: 200px !important;
+  margin: 0 auto !important;
+  font-weight: 500 !important;
+}
+
+/* Tables */
+table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 2rem 0 !important;
+  background: var(--card) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+th, td {
+  border: 1px solid var(--border) !important;
+  padding: 1rem 1.5rem !important;
+  text-align: left !important;
+  color: var(--muted) !important;
+}
+
+th {
+  background: rgba(255, 255, 255, 0.02) !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+}
+
+/* Cleanup elementor extras */
+.elementor-background-overlay { display: none !important; }
+.elementor-shape { display: none !important; }
+.thim-slider-pagination { display: none !important; }

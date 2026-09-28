@@ -18,9 +18,9 @@ const megaMenuData = {
     image: `<img src="images/classroom.jpg" alt="Managing Trustees" class="mega-image">`
   },
   'ceo-message': {
-    overview: `<h4 class="mega-heading">CEO'S MESSAGE</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Dear Students, Faculty, & Industry<br>Partners, Welcome to Lexicon<br>Management Institute of Leadership<br>& Excellence (Lexicon MILE). As CEO,<br>I see Lexicon MILE as a long-term<br>commitment to developing leaders<br>who think independently, act responsibly,<br>and remain grounded while<br>navigating complexity.</p>`,
-    image: `<img src="images/global.jpg" alt="CEO Message" class="mega-image">`
+    overview: `<h4 class="mega-heading">FROM THE CHAIRMAN'S DESK</h4>
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Ideas that challenge convention. Perspectives that shape the future.<br><br>At Lexicon MILE, we believe meaningful education begins with meaningful conversations. Through his articles and reflections, our Chairman shares perspectives on leadership, business, education, innovation, and the evolving world of work.</p>`,
+    image: `<img src="images/global.jpg" alt="Chairman Message" class="mega-image">`
   },
   'governing-body': {
     overview: `<h4 class="mega-heading">GOVERNING BODY</h4>

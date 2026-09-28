@@ -7,14 +7,14 @@ async function loadComponents() {
         
         if (headerRes.ok) {
             const headerHtml = await headerRes.text();
-            document.getElementById('header').innerHTML = headerHtml;
+            document.getElementById('header').outerHTML = headerHtml;
         } else {
             console.error('Failed to load header');
         }
         
         if (footerRes.ok) {
             const footerHtml = await footerRes.text();
-            document.getElementById('footer').innerHTML = footerHtml;
+            document.getElementById('footer').outerHTML = footerHtml;
         } else {
             console.error('Failed to load footer');
         }
