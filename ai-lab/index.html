@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lexicon MILE - India's First AI-Powered PGDM Program</title>
+<meta name="description" content="At Lexicon MILE, AI is practiced daily. Join India's first PGDM where students build real AI solutions for real business problems.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Inter','sans-serif'] },
+      animation: {
+        'float': 'float 3s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        glow: {
+          '0%, 100%': { boxShadow: '0 0 20px rgba(99, 102, 241, 0.5)' },
+          '50%': { boxShadow: '0 0 40px rgba(99, 102, 241, 0.8)' },
+        }
+      }
+    }
+  }
+}
+</script>
+<style>
+  .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+  .glass-strong { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); }
+  .gradient-text { background: linear-gradient(135deg, #6366f1, #a855f7, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .gradient-text-purple { background: linear-gradient(135deg, #a855f7, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .gradient-text-cyan { background: linear-gradient(135deg, #06b6d4, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  body { opacity: 0; transition: opacity 0.3s; }
+  body.loaded { opacity: 1; }
+</style>
+</head>
+
+<body class="bg-slate-950 text-white font-sans">
+
+<!-- NAVIGATION -->
+<header class="bg-white shadow-lg fixed w-full z-50 top-0">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+    <div class="flex justify-between items-center">
+      <a href="index.html" class="flex-shrink-0">
+        <img src="https://stage.lexiconmile.com/wp-content/uploads/2020/03/black_Logo.svg" alt="Lexicon MILE" class="h-16 w-auto">
+      </a>
+      
+      <nav class="hidden md:flex space-x-8 font-semibold text-slate-800">
+        <a href="about.html" class="hover:text-indigo-600 transition-colors duration-300">About</a>
+        <a href="program.html" class="hover:text-indigo-600 transition-colors duration-300">Program</a>
+        <a href="daily-lab.html" class="hover:text-indigo-600 transition-colors duration-300">Daily Lab</a>
+        <a href="industry.html" class="hover:text-indigo-600 transition-colors duration-300">Industry</a>
+        <a href="governance.html" class="hover:text-indigo-600 transition-colors duration-300">Governance</a>
+        <a href="admissions.html" class="hover:text-indigo-600 transition-colors duration-300">Admissions</a>
+      </nav>
+      
+      <a href="contact.html" class="hidden md:block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300">
+        Apply Now
+      </a>
+      
+      <button id="hamburger" class="md:hidden flex flex-col space-y-1.5">
+        <span class="block w-6 h-0.5 bg-slate-800 transition-all duration-300"></span>
+        <span class="block w-6 h-0.5 bg-slate-800 transition-all duration-300"></span>
+        <span class="block w-6 h-0.5 bg-slate-800 transition-all duration-300"></span>
+      </button>
+    </div>
+    
+    <div id="mobile-menu" class="md:hidden max-h-0 overflow-hidden transition-all duration-300">
+      <nav class="flex flex-col space-y-4 py-6 font-semibold text-slate-800">
+        <a href="about.html" class="hover:text-indigo-600 transition-colors">About</a>
+        <a href="program.html" class="hover:text-indigo-600 transition-colors">Program</a>
+        <a href="daily-lab.html" class="hover:text-indigo-600 transition-colors">Daily Lab</a>
+        <a href="industry.html" class="hover:text-indigo-600 transition-colors">Industry</a>
+        <a href="governance.html" class="hover:text-indigo-600 transition-colors">Governance</a>
+        <a href="admissions.html" class="hover:text-indigo-600 transition-colors">Admissions</a>
+        <a href="contact.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full text-center">Apply Now</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="pt-32 pb-20 px-4 sm:px-6 min-h-screen flex items-center bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 relative overflow-hidden">
+  <div class="absolute top-20 left-10 w-72 h-72 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+  <div class="absolute bottom-20 right-10 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style="animation-delay: 1s;"></div>
+  
+  <div class="max-w-7xl mx-auto text-center relative z-10">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-8 animate-fade-in">
+      India's First PGDM Where <br>
+      <span class="gradient-text">AI Is Practiced Daily</span> <br>
+      Not Taught Occasionally
+    </h1>
+    
+    <p class="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto text-slate-300 mb-12">
+      "At Lexicon MILE, AI is not a subject you study. It is a skill you use every single day." <br>
+      <span class="text-indigo-400 font-semibold mt-4 block">
+        Hyper Build runs daily from 8:00 AM to 1:00 PM — where students build real AI solutions for real business problems.
+      </span>
+    </p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+      <a href="about.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+        Why This Lab Exists
+      </a>
+      <a href="admissions.html" class="glass px-8 py-4 rounded-full font-semibold text-lg border-2 border-indigo-500 hover:bg-white/10 transition-all duration-300">
+        View Admissions
+      </a>
+    </div>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <div class="glass-strong rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300">
+        <div class="text-5xl font-black gradient-text" data-counter="5">5</div>
+        <p class="text-slate-400 mt-2">Hours Daily AI Lab</p>
+      </div>
+      <div class="glass-strong rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300">
+        <div class="text-5xl font-black gradient-text-purple" data-counter="6">6</div>
+        <p class="text-slate-400 mt-2">Trimesters</p>
+      </div>
+      <div class="glass-strong rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300">
+        <div class="text-5xl font-black gradient-text-cyan" data-counter="100">100</div>
+        <p class="text-slate-400 mt-2">% Practical AI</p>
+      </div>
+      <div class="glass-strong rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300">
+        <div class="text-5xl font-black gradient-text" data-counter="0">0</div>
+        <p class="text-slate-400 mt-2">Theory Exams</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="py-20 px-4 sm:px-6 bg-slate-900">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
+      Why <span class="gradient-text">Lexicon MILE</span>?
+    </h2>
+    <p class="text-center text-slate-400 text-lg mb-16">Not just another PGDM program. A complete transformation.</p>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="glass-strong rounded-2xl p-8 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Daily AI Practice</h3>
+        <p class="text-slate-300">5 hours every day building real AI solutions. Not theory, not lectures — actual hands-on building.</p>
+      </div>
+      
+      <div class="glass-strong rounded-2xl p-8 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Industry Projects</h3>
+        <p class="text-slate-300">Work on live projects from MSMEs, startups, and ecosystem companies. Build solutions that get deployed.</p>
+      </div>
+      
+      <div class="glass-strong rounded-2xl p-8 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-4">No Coding Required</h3>
+        <p class="text-slate-300">Business-focused AI learning. Use no-code and low-code tools to build powerful AI solutions.</p>
+      </div>
+      
+      <div class="glass-strong rounded-2xl p-8 hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Revenue Opportunities</h3>
+        <p class="text-slate-300">Work on paid projects worth ₹50,000 - ₹3,00,000. Build your portfolio while earning.</p>
+      </div>
+      
+      <div class="glass-strong rounded-2xl p-8 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-orange-600 to-red-600 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-4">No Theory Exams</h3>
+        <p class="text-slate-300">Assessed on working prototypes, business impact, and presentations. Build capability, not memorize theory.</p>
+      </div>
+      
+      <div class="glass-strong rounded-2xl p-8 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20 transition-all duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-violet-600 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Placement Advantage</h3>
+        <p class="text-slate-300">Recruiters don't ask for certificates. They ask: "What have you built?" Show them your AI portfolio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM HIGHLIGHTS -->
+<section class="py-20 px-4 sm:px-6 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
+      Your <span class="gradient-text-purple">AI Journey</span>
+    </h2>
+    <p class="text-center text-slate-400 text-lg mb-16">6 trimesters of hands-on AI learning and building</p>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="glass rounded-2xl p-8 border-l-4 border-indigo-500 hover:scale-105 transition-transform duration-300">
+        <div class="text-indigo-400 font-bold text-sm mb-2">TRIMESTER 1</div>
+        <h3 class="text-2xl font-bold mb-3">AI Literacy</h3>
+        <p class="text-slate-300 mb-4">Stop fearing AI. Understand where AI fits in business.</p>
+        <div class="text-sm text-slate-400"><strong class="text-white">Output:</strong> Personal AI Productivity Portfolio</div>
+      </div>
+      
+      <div class="glass rounded-2xl p-8 border-l-4 border-purple-500 hover:scale-105 transition-transform duration-300">
+        <div class="text-purple-400 font-bold text-sm mb-2">TRIMESTER 2</div>
+        <h3 class="text-2xl font-bold mb-3">Functional AI</h3>
+        <p class="text-slate-300 mb-4">AI for Marketing, HR, Finance, and Operations.</p>
+        <div class="text-sm text-slate-400"><strong class="text-white">Output:</strong> 1 Functional AI Prototype</div>
+      </div>
+      
+      <div class="glass rounded-2xl p-8 border-l-4 border-cyan-500 hover:scale-105 transition-transform duration-300">
+        <div class="text-cyan-400 font-bold text-sm mb-2">TRIMESTER 3</div>
+        <h3 class="text-2xl font-bold mb-3">Data + Decisions</h3>
+        <p class="text-slate-300 mb-4">Business dashboards, predictive insights, simulations.</p>
+        <div class="text-sm text-slate-400"><strong class="text-white">Output:</strong> AI-backed Decision Report</div>
+      </div>
+      
+      <div class="glass rounded-2xl p-8 border-l-4 border-emerald-500 hover:scale-105 transition-transform duration-300">
+        <div class="text-emerald-400 font-bold text-sm mb-2">TRIMESTER 4</div>
+        <h3 class="text-2xl font-bold mb-3">Industry Projects</h3>
+        <p class="text-slate-300 mb-4">Work with MSMEs, startups, and ecosystem companies.</p>
+        <div class="text-sm text-slate-400"><strong class="text-white">Output:</strong> Live AI Solution Deployed</div>
+      </div>
+      
+      <div class="glass rounded-2xl p-8 border-l-4 border-orange-500 hover:scale-105 transition-transform duration-300">
+        <div class="text-orange-400 font-bold text-sm mb-2">TRIMESTER 5</div>
+        <h3 class="text-2xl font-bold mb-3">AI Entrepreneurship</h3>
+        <p class="text-slate-300 mb-4">Build AI startups or internal automation systems.</p>
+        <div class="text-sm text-slate-400"><strong class="text-white">Output:</strong> Startup MVP or Automation Blueprint</div>
+      </div>
+      
+      <div class="glass rounded-2xl p-8 border-l-4 border-pink-500 hover:scale-105 transition-transform duration-300">
+        <div class="text-pink-400 font-bold text-sm mb-2">TRIMESTER 6</div>
+        <h3 class="text-2xl font-bold mb-3">Capstone Showcase</h3>
+        <p class="text-slate-300 mb-4">Demo Day, Portfolio Website, Industry Jury.</p>
+        <div class="text-sm text-slate-400"><strong class="text-white">Output:</strong> Industry-Validated Portfolio</div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-12">
+      <a href="program.html" class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+        View Full Program Details
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="py-20 px-4 sm:px-6 bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Ready to Build Your AI Future?</h2>
+    <p class="text-xl text-slate-300 mb-8">Other colleges promise placements. We build capability first — placements follow.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="contact.html" class="bg-white text-indigo-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-100 hover:scale-105 transition-all duration-300">
+        Apply Now
+      </a>
+      <a href="admissions.html" class="border-2 border-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 hover:scale-105 transition-all duration-300">
+        Learn More
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slate-900 text-slate-400 py-12 px-4 sm:px-6 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <img src="https://stage.lexiconmile.com/wp-content/uploads/2020/03/black_Logo.svg" alt="Lexicon MILE" class="h-16 mb-4 brightness-0 invert opacity-70">
+        <p class="text-sm">India's First AI-Powered PGDM Program</p>
+      </div>
+      
+      <div>
+        <h4 class="text-white font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="about.html" class="hover:text-indigo-400 transition-colors">About</a></li>
+          <li><a href="program.html" class="hover:text-indigo-400 transition-colors">Program</a></li>
+          <li><a href="daily-lab.html" class="hover:text-indigo-400 transition-colors">Daily Lab</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-white font-bold mb-4">Information</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="industry.html" class="hover:text-indigo-400 transition-colors">Industry</a></li>
+          <li><a href="governance.html" class="hover:text-indigo-400 transition-colors">Governance</a></li>
+          <li><a href="admissions.html" class="hover:text-indigo-400 transition-colors">Admissions</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-white font-bold mb-4">Contact</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Apply Now</a></li>
+          <li><a href="mailto:info@lexiconmile.com" class="hover:text-indigo-400 transition-colors">Email Us</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="border-t border-slate-800 pt-8 text-center text-sm">
+      <p>© 2026 Lexicon MILE – Hyper Build AI & Automation Lab. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

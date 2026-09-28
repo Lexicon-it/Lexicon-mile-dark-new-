@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Governance & Assessment | Lexicon MILE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        body {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white font-sans">
+
+    <!-- NAVIGATION -->
+    <header class="bg-white shadow-lg fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html"><img src="https://stage.lexiconmile.com/wp-content/uploads/2020/03/black_Logo.svg"
+                        alt="Lexicon MILE" class="h-16 w-auto"></a>
+                <nav class="hidden md:flex space-x-8 font-semibold text-slate-800">
+                    <a href="about.html" class="hover:text-indigo-600 transition-colors">About</a>
+                    <a href="program.html" class="hover:text-indigo-600 transition-colors">Program</a>
+                    <a href="daily-lab.html" class="hover:text-indigo-600 transition-colors">Daily Lab</a>
+                    <a href="industry.html" class="hover:text-indigo-600 transition-colors">Industry</a>
+                    <a href="governance.html" class="text-indigo-600 font-bold">Governance</a>
+                    <a href="admissions.html" class="hover:text-indigo-600 transition-colors">Admissions</a>
+                </nav>
+                <a href="contact.html"
+                    class="hidden md:block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-xl transition-all">Apply
+                    Now</a>
+                <button id="hamburger" class="md:hidden flex flex-col space-y-1.5">
+                    <span class="block w-6 h-0.5 bg-slate-800"></span>
+                    <span class="block w-6 h-0.5 bg-slate-800"></span>
+                    <span class="block w-6 h-0.5 bg-slate-800"></span>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden max-h-0 overflow-hidden transition-all duration-300">
+                <nav class="flex flex-col space-y-4 py-6 font-semibold text-slate-800">
+                    <a href="about.html">About</a>
+                    <a href="program.html">Program</a>
+                    <a href="daily-lab.html">Daily Lab</a>
+                    <a href="industry.html">Industry</a>
+                    <a href="governance.html" class="text-indigo-600">Governance</a>
+                    <a href="admissions.html">Admissions</a>
+                    <a href="contact.html"
+                        class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full text-center">Apply
+                        Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950">
+        <div class="max-w-5xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6">
+                <span class="gradient-text">Governance</span> Model
+            </h1>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+                A structured team ensuring quality, outcomes, and industry alignment.
+            </p>
+        </div>
+    </section>
+
+    <!-- TEAM STRUCTURE -->
+    <section class="py-20 px-4 sm:px-6 bg-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center">
+                Team <span class="gradient-text">Structure</span>
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center text-indigo-400">AI Lab Head</h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-indigo-400 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Industry exposure</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-indigo-400 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Owns outcomes & partnerships</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-indigo-400 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Aligns faculty and industry</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center text-purple-400">AI Coaches</h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Floor mentoring</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Tool training</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Sprint guidance</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center text-cyan-400">Domain Faculty</h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Business logic</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Use-case relevance</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Decision framing</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASSESSMENT MODEL -->
+    <section class="py-20 px-4 sm:px-6 bg-gradient-to-br from-slate-900 via-indigo-900/20 to-slate-900">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-center">
+                Assessment Model
+            </h2>
+            <p class="text-center text-2xl font-bold text-red-400 mb-12">(No Theory Exams)</p>
+
+            <div class="glass rounded-3xl p-8 md:p-12">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-lg font-semibold">Problem Relevance</span>
+                                <span class="text-2xl font-bold text-indigo-400">20%</span>
+                            </div>
+                            <div class="h-3 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full"
+                                    style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-lg font-semibold">Working Prototype</span>
+                                <span class="text-2xl font-bold text-purple-400">30%</span>
+                            </div>
+                            <div class="h-3 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"
+                                    style="width: 30%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-lg font-semibold">Business Impact</span>
+                                <span class="text-2xl font-bold text-cyan-400">25%</span>
+                            </div>
+                            <div class="h-3 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full"
+                                    style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-lg font-semibold">Presentation & Defence</span>
+                                <span class="text-2xl font-bold text-emerald-400">15%</span>
+                            </div>
+                            <div class="h-3 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full"
+                                    style="width: 15%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-lg font-semibold">Professional Behaviour</span>
+                                <span class="text-2xl font-bold text-orange-400">10%</span>
+                            </div>
+                            <div class="h-3 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-orange-600 to-red-600 rounded-full"
+                                    style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 pt-8 border-t border-slate-700">
+                    <p class="text-center text-lg text-slate-300">
+                        Evaluated by <span class="text-indigo-400 font-semibold">AI Coach</span>,
+                        <span class="text-purple-400 font-semibold">Domain Faculty</span>, and
+                        <span class="text-cyan-400 font-semibold">Industry Reviewers</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 px-4 sm:px-6 bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">Join a World-Class Program</h2>
+            <p class="text-xl text-slate-300 mb-8">Structured governance, expert mentorship, and outcome-based
+                assessment.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html"
+                    class="bg-white text-indigo-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-100 hover:scale-105 transition-all">
+                    Apply Now
+                </a>
+                <a href="admissions.html"
+                    class="border-2 border-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 hover:scale-105 transition-all">
+                    View Admissions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-4 sm:px-6 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="https://stage.lexiconmile.com/wp-content/uploads/2020/03/black_Logo.svg"
+                        alt="Lexicon MILE" class="h-16 mb-4 brightness-0 invert opacity-70">
+                    <p class="text-sm">India's First AI-Powered PGDM Program</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-indigo-400 transition-colors">About</a></li>
+                        <li><a href="program.html" class="hover:text-indigo-400 transition-colors">Program</a></li>
+                        <li><a href="daily-lab.html" class="hover:text-indigo-400 transition-colors">Daily Lab</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Information</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="industry.html" class="hover:text-indigo-400 transition-colors">Industry</a></li>
+                        <li><a href="governance.html" class="hover:text-indigo-400 transition-colors">Governance</a>
+                        </li>
+                        <li><a href="admissions.html" class="hover:text-indigo-400 transition-colors">Admissions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">Apply Now</a></li>
+                        <li><a href="mailto:info@lexiconmile.com" class="hover:text-indigo-400 transition-colors">Email
+                                Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-sm">
+                <p>© 2026 Lexicon MILE – Hyper Build AI & Automation Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
