@@ -2,553 +2,599 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#05070C">
-    <title>About Us | Lexicon MILE</title>
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        /* Custom Modern Styles for About Page */
-        .about-hero {
-            position: relative;
-            padding: 180px 0 100px;
-            background: radial-gradient(circle at top right, rgba(7, 59, 145, 0.15), transparent 50%),
-                        radial-gradient(circle at bottom left, rgba(11, 99, 206, 0.1), transparent 50%);
-            overflow: hidden;
-            text-align: center;
-        }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#05070C">
+	<title>About Us | Lexicon MILE</title>
+	<link rel="icon" href="images/favicon.png" type="image/png">
+	<link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="styles/main.css">
+	<script src="https://unpkg.com/lucide@latest"></script>
+	<style>
+		/* Custom Modern Styles for About Page */
+		.about-hero {
+			position: relative;
+			padding: 180px 0 100px;
+			background: radial-gradient(circle at top right, rgba(7, 59, 145, 0.15), transparent 50%),
+				radial-gradient(circle at bottom left, rgba(11, 99, 206, 0.1), transparent 50%);
+			overflow: hidden;
+			text-align: center;
+		}
 
-        .about-hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPgo8L3N2Zz4=') repeat;
-            opacity: 0.5;
-            z-index: -1;
-        }
+		.about-hero::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPgo8L3N2Zz4=') repeat;
+			opacity: 0.5;
+			z-index: -1;
+		}
 
-        .page-title {
-            font-size: clamp(48px, 6vw, 80px);
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff 0%, #a3c4ff 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+		.page-title {
+			font-size: clamp(48px, 6vw, 80px);
+			font-weight: 800;
+			background: linear-gradient(135deg, #fff 0%, #a3c4ff 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			margin-bottom: 20px;
+			animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+		}
 
-        .page-subtitle {
-            font-size: 18px;
-            color: var(--muted);
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-            animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
+		.page-subtitle {
+			font-size: 18px;
+			color: var(--muted);
+			max-width: 600px;
+			margin: 0 auto;
+			line-height: 1.6;
+			animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+			opacity: 0;
+			transform: translateY(20px);
+		}
 
-        /* Value Cards */
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: -40px;
-            padding: 0 20px;
-            position: relative;
-            z-index: 10;
-        }
+		/* Value Cards */
+		.values-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 30px;
+			margin-top: -40px;
+			padding: 0 20px;
+			position: relative;
+			z-index: 10;
+		}
 
-        .value-card {
-            background: rgba(13, 20, 34, 0.7);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
-        }
+		.value-card {
+			background: rgba(13, 20, 34, 0.7);
+			backdrop-filter: blur(20px);
+			border: 1px solid rgba(255, 255, 255, 0.05);
+			border-radius: 20px;
+			padding: 40px;
+			text-align: center;
+			transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+			position: relative;
+			overflow: hidden;
+		}
 
-        .value-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 2px;
-            background: linear-gradient(90deg, transparent, var(--bright), transparent);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
+		.value-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 2px;
+			background: linear-gradient(90deg, transparent, var(--bright), transparent);
+			transform: scaleX(0);
+			transition: transform 0.4s ease;
+		}
 
-        .value-card:hover {
-            transform: translateY(-10px);
-            background: rgba(13, 20, 34, 0.95);
-            border-color: rgba(11, 99, 206, 0.3);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(11, 99, 206, 0.1);
-        }
+		.value-card:hover {
+			transform: translateY(-10px);
+			background: rgba(13, 20, 34, 0.95);
+			border-color: rgba(11, 99, 206, 0.3);
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(11, 99, 206, 0.1);
+		}
 
-        .value-card:hover::before {
-            transform: scaleX(1);
-        }
+		.value-card:hover::before {
+			transform: scaleX(1);
+		}
 
-        .value-icon {
-            width: 70px;
-            height: 70px;
-            background: rgba(11, 99, 206, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px;
-            color: #67aaff;
-            border: 1px solid rgba(11, 99, 206, 0.2);
-            transition: all 0.3s ease;
-        }
+		.value-icon {
+			width: 70px;
+			height: 70px;
+			background: rgba(11, 99, 206, 0.1);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 24px;
+			color: #67aaff;
+			border: 1px solid rgba(11, 99, 206, 0.2);
+			transition: all 0.3s ease;
+		}
 
-        .value-card:hover .value-icon {
-            background: var(--bright);
-            color: #fff;
-            transform: scale(1.1);
-        }
+		.value-card:hover .value-icon {
+			background: var(--bright);
+			color: #fff;
+			transform: scale(1.1);
+		}
 
-        .value-title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: #fff;
-        }
+		.value-title {
+			font-size: 24px;
+			font-weight: 700;
+			margin-bottom: 16px;
+			color: #fff;
+		}
 
-        .value-desc {
-            color: var(--muted);
-            line-height: 1.7;
-            font-size: 15px;
-        }
+		.value-desc {
+			color: var(--muted);
+			line-height: 1.7;
+			font-size: 15px;
+		}
 
-        /* Split Section */
-        .split-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            padding: 120px 0;
-        }
+		/* Split Section */
+		.split-section {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 60px;
+			align-items: center;
+			padding: 120px 0;
+		}
 
-        @media (max-width: 991px) {
-            .split-section {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
+		@media (max-width: 991px) {
+			.split-section {
+				grid-template-columns: 1fr;
+				gap: 40px;
+			}
+		}
 
-        .split-content h2 {
-            font-size: clamp(32px, 4vw, 48px);
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
+		.split-content h2 {
+			font-size: clamp(32px, 4vw, 48px);
+			margin-bottom: 24px;
+			line-height: 1.2;
+		}
 
-        .split-content p {
-            color: var(--muted);
-            margin-bottom: 24px;
-            font-size: 16px;
-        }
+		.split-content p {
+			color: var(--muted);
+			margin-bottom: 24px;
+			font-size: 16px;
+		}
 
-        .split-image {
-            position: relative;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-        }
+		.split-image {
+			position: relative;
+			border-radius: 24px;
+			overflow: hidden;
+			box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+		}
 
-        .split-image::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            pointer-events: none;
-        }
+		.split-image::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			border-radius: 24px;
+			pointer-events: none;
+		}
 
-        .split-image img {
-            width: 100%;
-            height: auto;
-            transform: scale(1.02);
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+		.split-image img {
+			width: 100%;
+			height: auto;
+			transform: scale(1.02);
+			transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+		}
 
-        .split-image:hover img {
-            transform: scale(1.05);
-        }
+		.split-image:hover img {
+			transform: scale(1.05);
+		}
 
-        /* Impact Stats */
-        .impact-section {
-            background: linear-gradient(180deg, var(--bg) 0%, var(--card) 100%);
-            padding: 100px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
+		/* Impact Stats */
+		.impact-section {
+			background: linear-gradient(180deg, var(--bg) 0%, var(--card) 100%);
+			padding: 100px 0;
+			border-top: 1px solid rgba(255, 255, 255, 0.05);
+			border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+		}
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
+		.stats-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 30px;
+		}
 
-        @media (max-width: 991px) {
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        @media (max-width: 575px) {
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+		@media (max-width: 991px) {
+			.stats-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
 
-        .stat-item {
-            text-align: center;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            transition: transform 0.3s ease;
-        }
+		@media (max-width: 575px) {
+			.stats-grid {
+				grid-template-columns: 1fr;
+			}
+		}
 
-        .stat-item:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(11, 99, 206, 0.2);
-        }
+		.stat-item {
+			text-align: center;
+			padding: 30px;
+			background: rgba(255, 255, 255, 0.02);
+			border-radius: 16px;
+			border: 1px solid rgba(255, 255, 255, 0.03);
+			transition: transform 0.3s ease;
+		}
 
-        .stat-number {
-            font-size: 56px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff 0%, #67aaff 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+		.stat-item:hover {
+			transform: translateY(-5px);
+			background: rgba(255, 255, 255, 0.04);
+			border-color: rgba(11, 99, 206, 0.2);
+		}
 
-        .stat-label {
-            color: var(--muted);
-            font-size: 14px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
+		.stat-number {
+			font-size: 56px;
+			font-weight: 800;
+			background: linear-gradient(135deg, #fff 0%, #67aaff 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			margin-bottom: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
-        /* Team Grid */
-        .team-section {
-            padding: 120px 0;
-        }
+		.stat-label {
+			color: var(--muted);
+			font-size: 14px;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
 
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
+		/* Team Grid */
+		.team-section {
+			padding: 120px 0;
+		}
 
-        .team-card {
-            background: var(--card);
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
+		.team-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+			gap: 40px;
+			margin-top: 60px;
+		}
 
-        }
+		.team-card {
+			background: var(--card);
+			border-radius: 20px;
+			overflow: hidden;
+			border: 1px solid rgba(255, 255, 255, 0.05);
+			transition: all 0.3s ease;
 
-        .team-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(11, 99, 206, 0.3);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
+		}
 
-        .team-image-wrapper {
-            position: relative;
-            padding-top: 100%;
-            background: #151f32;
-            overflow: hidden;
-        }
+		.team-card:hover {
+			transform: translateY(-10px);
+			border-color: rgba(11, 99, 206, 0.3);
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+		}
 
-        .team-image-wrapper img {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-            filter: grayscale(100%) contrast(1.1);
-        }
+		.team-image-wrapper {
+			position: relative;
+			padding-top: 100%;
+			background: #151f32;
+			overflow: hidden;
+		}
 
-        .team-card:hover .team-image-wrapper img {
-            transform: scale(1.05);
-            filter: grayscale(0%) contrast(1);
-        }
+		.team-image-wrapper img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.5s ease;
+			filter: grayscale(100%) contrast(1.1);
+		}
 
-        .team-info {
-            padding: 24px;
-        }
+		.team-card:hover .team-image-wrapper img {
+			transform: scale(1.05);
+			filter: grayscale(0%) contrast(1);
+		}
 
-        .team-name {
-            font-size: 20px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 6px;
-        }
+		.team-info {
+			padding: 24px;
+		}
 
-        .team-role {
-            font-size: 14px;
-            color: var(--bright);
-            font-weight: 600;
-            line-height: 1.4;
-        }
+		.team-name {
+			font-size: 20px;
+			font-weight: 700;
+			color: #fff;
+			margin-bottom: 6px;
+		}
 
-        /* Animations */
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+		.team-role {
+			font-size: 14px;
+			color: var(--bright);
+			font-weight: 600;
+			line-height: 1.4;
+		}
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+		/* Animations */
+		@keyframes slideUp {
+			from {
+				opacity: 0;
+				transform: translateY(30px);
+			}
 
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.reveal {
+			opacity: 0;
+			transform: translateY(30px);
+			transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+		}
+
+		.reveal.active {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	</style>
 </head>
 
 <body>
-    <div id="header"></div>
+	<div id="header"></div>
 
-    <main id="main">
-        <!-- Hero Section -->
-        <section class="about-hero">
-            <div class="container">
-                <h1 class="page-title">About Us.</h1>
-                <p class="page-subtitle">A legacy of over 20 years, shaping the future of education and transforming lives through continuous learning, innovation, and unwavering core values.</p>
-            </div>
-        </section>
+	<main id="main">
+		<!-- Hero Section -->
+		<section class="about-hero">
+			<div class="container">
+				<h1 class="page-title">About Us.</h1>
+				<p class="page-subtitle">A legacy of over 20 years, shaping the future of education and transforming
+					lives through continuous learning, innovation, and unwavering core values.</p>
+			</div>
+		</section>
 
-        <!-- Values Section -->
-        <div class="container">
-            <div class="values-grid">
-                <div class="value-card reveal">
-                    <div class="value-icon">
-                        <i data-lucide="eye" width="32" height="32"></i>
-                    </div>
-                    <h3 class="value-title">Vision</h3>
-                    <p class="value-desc">To be an educational institution of choice for all stakeholders which promotes human well-being through continuous learning.</p>
-                </div>
-                <div class="value-card reveal" style="transition-delay: 0.1s;">
-                    <div class="value-icon">
-                        <i data-lucide="target" width="32" height="32"></i>
-                    </div>
-                    <h3 class="value-title">Mission</h3>
-                    <p class="value-desc">To foster a dynamic environment of academic excellence, equipping individuals with the skills and mindset to thrive globally.</p>
-                </div>
-                <div class="value-card reveal" style="transition-delay: 0.2s;">
-                    <div class="value-icon">
-                        <i data-lucide="heart-handshake" width="32" height="32"></i>
-                    </div>
-                    <h3 class="value-title">Core Values</h3>
-                    <p class="value-desc">Integrity, continuous innovation, empathy, and a steadfast commitment to delivering quality education and transformative services.</p>
-                </div>
-            </div>
-        </div>
+		<!-- Values Section -->
+		<div class="container">
+			<div class="values-grid">
+				<div class="value-card reveal">
+					<div class="value-icon">
+						<i data-lucide="eye" width="32" height="32"></i>
+					</div>
+					<h3 class="value-title">Vision</h3>
+					<p class="value-desc">To be an educational institution of choice for all stakeholders which promotes
+						human well-being through continuous learning.</p>
+				</div>
+				<div class="value-card reveal" style="transition-delay: 0.1s;">
+					<div class="value-icon">
+						<i data-lucide="target" width="32" height="32"></i>
+					</div>
+					<h3 class="value-title">Mission</h3>
+					<p class="value-desc">To foster a dynamic environment of academic excellence, equipping individuals
+						with the skills and mindset to thrive globally.</p>
+				</div>
+				<div class="value-card reveal" style="transition-delay: 0.2s;">
+					<div class="value-icon">
+						<i data-lucide="heart-handshake" width="32" height="32"></i>
+					</div>
+					<h3 class="value-title">Core Values</h3>
+					<p class="value-desc">Integrity, continuous innovation, empathy, and a steadfast commitment to
+						delivering quality education and transformative services.</p>
+				</div>
+			</div>
+		</div>
 
-        <!-- About Family Section -->
-        <section class="section">
-            <div class="container">
-                <div class="split-section reveal">
-                    <div class="split-content">
-                        <p class="eyebrow">OUR ROOTS</p>
-                        <h2>About the Lexicon Family</h2>
-                        <p>Founded in 2013 in Pune, The Lexicon Group has evolved into a premier educational and business leader, empowering individuals at every stage of life. From schools and preschools to institutes specializing in management, hotel management, media, and animation, as well as a dedicated therapy center for specially-abled students, we are committed to delivering quality education and transformative services.</p>
-                        <p>Beyond the educational sphere, The Lexicon Group has diversified into fields such as research, media, law, and wellness. Guided by a commitment to excellence and entrepreneurial values, we continue to grow, with an unwavering focus on quality and integrity at our core.</p>
-                    </div>
-                    <div class="split-image">
-                        <img src="images/lexicon-building.jpg" alt="Lexicon Campus" onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
-                    </div>
-                </div>
+		<!-- About Family Section -->
+		<section class="section">
+			<div class="container">
+				<div class="split-section reveal">
+					<div class="split-content">
+						<p class="eyebrow">OUR ROOTS</p>
+						<h2>About the Lexicon Family</h2>
+						<p>Founded in 2006 in Pune, The Lexicon Group has evolved into a premier educational and
+							business leader, empowering individuals at every stage of life. From schools and preschools
+							to institutes specializing in management, hotel management, media, and animation, as well as
+							a dedicated therapy center for specially-abled students, we are committed to delivering
+							quality education and transformative services.</p>
+						<p>Beyond the educational sphere, The Lexicon Group has diversified into fields such as
+							research, media, law, and wellness. Guided by a commitment to excellence and entrepreneurial
+							values, we continue to grow, with an unwavering focus on quality and integrity at our core.
+						</p>
+					</div>
+					<div class="split-image">
+						<img src="images/lexicon-building.jpg" alt="Lexicon Campus"
+							onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
+					</div>
+				</div>
 
-                <div class="split-section reveal" style="padding-top: 0;">
-                    <div class="split-image" style="order: -1;">
-                        <img src="images/lexicon-students.jpg" alt="Lexicon Students" onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
-                    </div>
-                    <div class="split-content">
-                        <p class="eyebrow">LEXICON MILE</p>
-                        <h2>Transforming Business Education</h2>
-                        <p>Lexicon Management Institute of Leadership & Excellence (Lexicon MILE), Pune founded in 2009 as part of the Lexicon Group, has been transforming business education for the past 15 years and is recognized among top management colleges in Pune.</p>
-                        <p>Our two-year, full-time Post Graduate Diploma in Management (PGDM) program goes beyond traditional learning, with a bold emphasis on entrepreneurship and start-up culture. At Lexicon MILE, we shape versatile leaders, ready to thrive in managerial roles at top organizations.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<div class="split-section reveal" style="padding-top: 0;">
+					<div class="split-image" style="order: -1;">
+						<img src="images/lexicon-students.jpg" alt="Lexicon Students"
+							onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
+					</div>
+					<div class="split-content">
+						<p class="eyebrow">LEXICON MILE</p>
+						<h2>Transforming Business Education</h2>
+						<p>Lexicon Management Institute of Leadership & Excellence (Lexicon MILE), Pune founded in 2009
+							as part of the Lexicon Group, has been transforming business education for the past 15 years
+							and is recognized among top management colleges in Pune.</p>
+						<p>Our two-year, full-time Post Graduate Diploma in Management (PGDM) program goes beyond
+							traditional learning, with a bold emphasis on entrepreneurship and start-up culture. At
+							Lexicon MILE, we shape versatile leaders, ready to thrive in managerial roles at top
+							organizations.</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-        <!-- Impact Section -->
-        <section class="impact-section reveal">
-            <div class="container">
-                <div class="section-heading centered">
-                    <p class="eyebrow">OUR IMPACT</p>
-                    <h2>Legacy & Excellence</h2>
-                    <p>Empowering students with the knowledge and skills they need to succeed academically, personally, and professionally in a rapidly changing world.</p>
-                </div>
+		<!-- Impact Section -->
+		<section class="impact-section reveal">
+			<div class="container">
+				<div class="section-heading centered">
+					<p class="eyebrow">OUR IMPACT</p>
+					<h2>Legacy & Excellence</h2>
+					<p>Empowering students with the knowledge and skills they need to succeed academically, personally,
+						and professionally in a rapidly changing world.</p>
+				</div>
 
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">16+</div>
-                        <div class="stat-label">Years of Legacy</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">16,000+</div>
-                        <div class="stat-label">Students Transformed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">95%+</div>
-                        <div class="stat-label">Placement Record</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Global Tie-Ups</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<div class="stats-grid">
+					<div class="stat-item">
+						<div class="stat-number">16+</div>
+						<div class="stat-label">Years of Legacy</div>
+					</div>
+					<div class="stat-item">
+						<div class="stat-number">16,000+</div>
+						<div class="stat-label">Students Transformed</div>
+					</div>
+					<div class="stat-item">
+						<div class="stat-number">95%+</div>
+						<div class="stat-label">Placement Record</div>
+					</div>
+					<div class="stat-item">
+						<div class="stat-number">15+</div>
+						<div class="stat-label">Global Tie-Ups</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-        <!-- Trustees Section -->
-        <section class="team-section">
-            <div class="container">
-                <div class="section-heading centered reveal">
-                    <p class="eyebrow">LEADERSHIP</p>
-                    <h2>Board Of Managing Trustees</h2>
-                    <p>Our leaders are mentors first. At Lexicon MILE, the leadership philosophy emphasizes approachability, mentorship, and vision-driven education ensuring every student walks their professional journey with “A Mentor Every MILE.”</p>
-                </div>
+		<!-- Trustees Section -->
+		<section class="team-section">
+			<div class="container">
+				<div class="section-heading centered reveal">
+					<p class="eyebrow">LEADERSHIP</p>
+					<h2>Board Of Managing Trustees</h2>
+					<p>Our leaders are mentors first. At Lexicon MILE, the leadership philosophy emphasizes
+						approachability, mentorship, and vision-driven education ensuring every student walks their
+						professional journey with “A Mentor Every MILE.”</p>
+				</div>
 
-                <div class="team-grid reveal">
-                    <div class="team-card">
-                        <div class="team-image-wrapper">
-                            <img src="images/sd-sharma.jpg" alt="Mr. S.D. Sharma" onerror="this.src='https://ui-avatars.com/api/?name=SD+Sharma&background=073b91&color=fff&size=400'">
-                        </div>
-                        <div class="team-info">
-                            <h3 class="team-name">Mr. S.D. Sharma</h3>
-                            <p class="team-role">Chairman, The Lexicon Group</p>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-image-wrapper">
-                            <img src="images/pankaj-sharma.jpg" alt="Mr. Pankaj Sharma" onerror="this.src='https://ui-avatars.com/api/?name=Pankaj+Sharma&background=073b91&color=fff&size=400'">
-                        </div>
-                        <div class="team-info">
-                            <h3 class="team-name">Mr. Pankaj Sharma</h3>
-                            <p class="team-role">President, The Lexicon Group of Institutes</p>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-image-wrapper">
-                            <img src="images/neeraj-sharma.jpg" alt="Mr. Neeraj Sharma" onerror="this.src='https://ui-avatars.com/api/?name=Neeraj+Sharma&background=073b91&color=fff&size=400'">
-                        </div>
-                        <div class="team-info">
-                            <h3 class="team-name">Mr. Neeraj Sharma</h3>
-                            <p class="team-role">Vice Chairman, The Lexicon Group</p>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-image-wrapper">
-                            <img src="images/monisha-sharma.jpg" alt="Mrs. Monisha Sharma" onerror="this.src='https://ui-avatars.com/api/?name=Monisha+Sharma&background=073b91&color=fff&size=400'">
-                        </div>
-                        <div class="team-info">
-                            <h3 class="team-name">Mrs. Monisha Sharma</h3>
-                            <p class="team-role">Trustee, Director - The Lexicon Schools</p>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-image-wrapper">
-                            <img src="images/deepti-sharma.jpg" alt="Mrs. Deepti Sharma" onerror="this.src='https://ui-avatars.com/api/?name=Deepti+Sharma&background=073b91&color=fff&size=400'">
-                        </div>
-                        <div class="team-info">
-                            <h3 class="team-name">Mrs. Deepti Sharma</h3>
-                            <p class="team-role">Trustee, Director - Lexicon KIDS</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<div class="team-grid reveal">
+					<div class="team-card">
+						<div class="team-image-wrapper">
+							<img src="images/sd-sharma.jpg" alt="Mr. S.D. Sharma"
+								onerror="this.src='https://ui-avatars.com/api/?name=SD+Sharma&background=073b91&color=fff&size=400'">
+						</div>
+						<div class="team-info">
+							<h3 class="team-name">Mr. S.D. Sharma</h3>
+							<p class="team-role">Chairman, The Lexicon Group</p>
+						</div>
+					</div>
+					<div class="team-card">
+						<div class="team-image-wrapper">
+							<img src="images/pankaj-sharma.jpg" alt="Mr. Pankaj Sharma"
+								onerror="this.src='https://ui-avatars.com/api/?name=Pankaj+Sharma&background=073b91&color=fff&size=400'">
+						</div>
+						<div class="team-info">
+							<h3 class="team-name">Mr. Pankaj Sharma</h3>
+							<p class="team-role">President, The Lexicon Group of Institutes</p>
+						</div>
+					</div>
+					<div class="team-card">
+						<div class="team-image-wrapper">
+							<img src="images/neeraj-sharma.jpg" alt="Mr. Neeraj Sharma"
+								onerror="this.src='https://ui-avatars.com/api/?name=Neeraj+Sharma&background=073b91&color=fff&size=400'">
+						</div>
+						<div class="team-info">
+							<h3 class="team-name">Mr. Neeraj Sharma</h3>
+							<p class="team-role">Vice Chairman, The Lexicon Group</p>
+						</div>
+					</div>
+					<div class="team-card">
+						<div class="team-image-wrapper">
+							<img src="images/monisha-sharma.jpg" alt="Mrs. Monisha Sharma"
+								onerror="this.src='https://ui-avatars.com/api/?name=Monisha+Sharma&background=073b91&color=fff&size=400'">
+						</div>
+						<div class="team-info">
+							<h3 class="team-name">Mrs. Monisha Sharma</h3>
+							<p class="team-role">Trustee, Director - The Lexicon Schools</p>
+						</div>
+					</div>
+					<div class="team-card">
+						<div class="team-image-wrapper">
+							<img src="images/deepti-sharma.jpg" alt="Mrs. Deepti Sharma"
+								onerror="this.src='https://ui-avatars.com/api/?name=Deepti+Sharma&background=073b91&color=fff&size=400'">
+						</div>
+						<div class="team-info">
+							<h3 class="team-name">Mrs. Deepti Sharma</h3>
+							<p class="team-role">Trustee, Director - Lexicon KIDS</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-        <!-- Executive Team Section -->
-        <section class="team-section" style="padding-top: 0;">
-            <div class="container">
-                <div class="section-heading centered reveal">
-                    <p class="eyebrow">MANAGEMENT</p>
-                    <h2>Our Executive Team</h2>
-                </div>
+		<!-- Executive Team Section -->
+		<section class="team-section" style="padding-top: 0;">
+			<div class="container">
+				<div class="section-heading centered reveal">
+					<p class="eyebrow">MANAGEMENT</p>
+					<h2>Our Executive Team</h2>
+				</div>
 
-                <div class="team-grid reveal">
-                    <div class="team-card">
-                        <div class="team-image-wrapper">
-                            <img src="images/raju-varghese.jpg" alt="Dr. Raju Varghese" onerror="this.src='https://ui-avatars.com/api/?name=Raju+Varghese&background=0d1422&color=fff&size=400'">
-                        </div>
-                        <div class="team-info">
-                            <h3 class="team-name">Dr. Raju Varghese</h3>
-                            <p class="team-role">Director - Global Programs</p>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-image-wrapper">
-                            <img src="images/parmeshwar-kawale.jpg" alt="Mr. Parmeshwar Kawale" onerror="this.src='https://ui-avatars.com/api/?name=Parmeshwar+Kawale&background=0d1422&color=fff&size=400'">
-                        </div>
-                        <div class="team-info">
-                            <h3 class="team-name">Mr. Parmeshwar Kawale</h3>
-                            <p class="team-role">Registrar & Controller of Examination</p>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-image-wrapper">
-                            <img src="images/rahul-wagh.jpg" alt="Mr. Rahul Wagh" onerror="this.src='https://ui-avatars.com/api/?name=Rahul+Wagh&background=0d1422&color=fff&size=400'">
-                        </div>
-                        <div class="team-info">
-                            <h3 class="team-name">Mr. Rahul Wagh</h3>
-                            <p class="team-role">Accounts Officer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<div class="team-grid reveal">
+					<div class="team-card">
+						<div class="team-image-wrapper">
+							<img src="images/raju-varghese.jpg" alt="Dr. Raju Varghese"
+								onerror="this.src='https://ui-avatars.com/api/?name=Raju+Varghese&background=0d1422&color=fff&size=400'">
+						</div>
+						<div class="team-info">
+							<h3 class="team-name">Dr. Raju Varghese</h3>
+							<p class="team-role">Director - Global Programs</p>
+						</div>
+					</div>
+					<div class="team-card">
+						<div class="team-image-wrapper">
+							<img src="images/parmeshwar-kawale.jpg" alt="Mr. Parmeshwar Kawale"
+								onerror="this.src='https://ui-avatars.com/api/?name=Parmeshwar+Kawale&background=0d1422&color=fff&size=400'">
+						</div>
+						<div class="team-info">
+							<h3 class="team-name">Mr. Parmeshwar Kawale</h3>
+							<p class="team-role">Registrar & Controller of Examination</p>
+						</div>
+					</div>
+					<div class="team-card">
+						<div class="team-image-wrapper">
+							<img src="images/rahul-wagh.jpg" alt="Mr. Rahul Wagh"
+								onerror="this.src='https://ui-avatars.com/api/?name=Rahul+Wagh&background=0d1422&color=fff&size=400'">
+						</div>
+						<div class="team-info">
+							<h3 class="team-name">Mr. Rahul Wagh</h3>
+							<p class="team-role">Accounts Officer</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    </main>
+	</main>
 
-    <div id="footer"></div>
+	<div id="footer"></div>
 
-    <script src="js/main.js"></script>
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+	<script src="js/main.js"></script>
+	<script>
+		// Initialize Lucide icons
+		lucide.createIcons();
 
-        // Scroll Reveal Animation
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal(); // Trigger on load
-    </script>
+		// Scroll Reveal Animation
+		function reveal() {
+			var reveals = document.querySelectorAll(".reveal");
+			for (var i = 0; i < reveals.length; i++) {
+				var windowHeight = window.innerHeight;
+				var elementTop = reveals[i].getBoundingClientRect().top;
+				var elementVisible = 100;
+				if (elementTop < windowHeight - elementVisible) {
+					reveals[i].classList.add("active");
+				}
+			}
+		}
+		window.addEventListener("scroll", reveal);
+		reveal(); // Trigger on load
+	</script>
 </body>
+
 </html>
