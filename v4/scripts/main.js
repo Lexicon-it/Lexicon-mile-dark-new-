@@ -23,9 +23,9 @@ const megaMenuData = {
     image: `<img src="images/trustees/sd-sharma.jpg" alt="Shri S.D. Sharma, Chairman" class="mega-image">`
   },
   'governing-body': {
-    overview: `<h4 class="mega-heading">GOVERNING BODY</h4>
+    overview: `<h4 class="mega-heading">BOARD OF GOVERNORS</h4>
                <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Board of Governors of Lexicon<br>MILE brings together experienced<br>academicians, industry professionals,<br>technologists and education leaders<br>from diverse fields. Their collective<br>expertise supports academic excellence,<br>industry relevance, strong governance<br>and progressive learning, contributing<br>to continued institutional growth.</p>`,
-    image: `<img src="images/collaboration.jpg" alt="Governing Body" class="mega-image">`
+    image: `<img src="images/governors/dr-bharat-bhushan.webp" alt="Dr. Bharat Bhushan, Chairman, Board of Governors" class="mega-image">`
   },
   'ranking-accreditation': {
     overview: `<h4 class="mega-heading">RANKING & ACCREDITATION</h4>

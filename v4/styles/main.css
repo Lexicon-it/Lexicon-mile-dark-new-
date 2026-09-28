@@ -6469,3 +6469,241 @@ button {
         align-items: flex-start;
     }
 }
+
+/* ==========================================================================
+   BOARD OF GOVERNORS PAGE (DARK LUXURY THEME)
+   ========================================================================== */
+.governors-hero {
+    position: relative;
+    padding-top: 140px;
+    padding-bottom: 36px;
+    background: radial-gradient(circle at 50% 15%, rgba(13, 30, 60, 0.95) 0%, #05070c 75%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+.governors-hero::before {
+    display: none !important;
+}
+
+.governor-card {
+    background: #0d1422;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.governor-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #073b91, #669def);
+    opacity: 0.75;
+    z-index: 2;
+}
+
+.governor-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(102, 157, 239, 0.38);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+.governor-card-featured {
+    background: linear-gradient(180deg, #0f182a 0%, #0b111e 100%);
+    border-color: rgba(102, 157, 239, 0.22);
+}
+
+.governor-card-featured::before {
+    height: 3.5px;
+    background: linear-gradient(90deg, #d4af37, #669def, #073b91);
+    opacity: 1;
+}
+
+.governor-thumb-wrap {
+    height: 250px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #080e18;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.governor-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    filter: brightness(0.96);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.governor-card:hover .governor-thumb-wrap img {
+    transform: scale(1.035);
+    filter: brightness(1.02);
+}
+
+.governor-emblem-wrap {
+    height: 250px;
+    width: 100%;
+    position: relative;
+    background: radial-gradient(circle at 50% 40%, rgba(102, 157, 239, 0.12) 0%, #070d18 75%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.governor-emblem-icon {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: rgba(102, 157, 239, 0.08);
+    border: 1px solid rgba(102, 157, 239, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #669def;
+    margin-bottom: 14px;
+    box-shadow: 0 0 24px rgba(7, 59, 145, 0.25);
+}
+
+.governor-emblem-icon svg {
+    width: 36px;
+    height: 36px;
+}
+
+.governor-emblem-type {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8da4c4;
+}
+
+.governor-body {
+    padding: 22px 24px 26px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.governor-badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #669def;
+    display: inline-block;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.governor-badge.badge-gold {
+    color: #ffd066;
+}
+
+.governor-badge.badge-cyan {
+    color: #4ee3c2;
+}
+
+.governor-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px;
+    line-height: 1.3;
+}
+
+.governor-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #cbdcf4;
+    font-weight: 500;
+    margin: 0 0 14px;
+    flex: 1;
+}
+
+.governor-nomination {
+    font-size: 12px;
+    line-height: 1.55;
+    color: #8598b2;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    margin: 0;
+}
+
+.governor-nomination strong {
+    color: #9cb4d4;
+    font-weight: 600;
+}
+
+.governors-featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.governors-grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.governors-stat-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.governor-stat-card {
+    background: rgba(13, 20, 34, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    padding: 16px 20px;
+}
+
+.governor-stat-card .num {
+    font-size: 22px;
+    font-weight: 700;
+    color: #669def;
+    margin-bottom: 4px;
+}
+
+.governor-stat-card .label {
+    font-size: 12.5px;
+    color: #92a4be;
+    line-height: 1.45;
+}
+
+@media (max-width: 1024px) {
+    .governors-grid-3col {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 720px) {
+    .governors-featured-grid,
+    .governors-grid-3col,
+    .governors-stat-strip {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    
+    .governor-thumb-wrap,
+    .governor-emblem-wrap {
+        height: 220px;
+    }
+}
