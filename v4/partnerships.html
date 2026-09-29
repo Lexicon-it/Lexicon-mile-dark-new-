@@ -9,344 +9,321 @@
   <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles/main.css">
   <style>
-    /* Scope styles for WP content to adapt to dark theme */
-    .wp-content {
-      color: rgba(255, 255, 255, 0.7);
+    .hero-partnerships {
+      padding-top: 160px;
+      padding-bottom: 80px;
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .partnerships-intro {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 800px;
+      margin-bottom: 80px;
+    }
+    
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-bottom: 100px;
+    }
+    
+    .feature-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 35px 30px;
+      transition: transform 0.3s, background 0.3s, border-color 0.3s;
+    }
+    
+    .feature-card:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-5px);
+    }
+    
+    .feature-icon {
+      width: 54px;
+      height: 54px;
+      background: var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      color: #fff;
+    }
+    
+    .feature-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: #e3e9f4;
+      line-height: 1.4;
+    }
+    
+    .feature-card p {
+      font-size: 1rem;
+      color: var(--muted);
       line-height: 1.6;
-      font-size: 1.1rem;
     }
-    .wp-content h1, .wp-content h2, .wp-content h3, .wp-content h4, .wp-content h5, .wp-content h6 {
-      color: #fff;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-    .wp-content a {
-      color: #8cb4f5;
-      text-decoration: underline;
-    }
-    .wp-content p {
-      margin-bottom: 1.5rem;
-    }
-    .wp-content ul, .wp-content ol {
-      margin-bottom: 1.5rem;
-      padding-left: 2rem;
-    }
-    .wp-content li {
-      margin-bottom: 0.5rem;
-    }
-    .wp-content table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 2rem;
-    }
-    .wp-content th, .wp-content td {
+
+    .cta-section {
+      background: linear-gradient(135deg, rgba(6, 27, 69, 0.6), rgba(5, 7, 12, 0.8));
       border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 1rem;
+      border-radius: 20px;
+      padding: 80px 40px;
+      text-align: center;
+      margin: 80px 0;
+      position: relative;
+      overflow: hidden;
     }
-    .wp-content th {
-      background: rgba(255, 255, 255, 0.05);
-      color: #fff;
+    
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(11, 99, 206, 0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .cta-section p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .cta-section .button {
+      position: relative;
+      z-index: 2;
+    }
+
+    .carousel-overflow {
+      overflow: hidden;
+      width: 100%;
+      padding: 20px 0;
+      margin-bottom: 60px;
+      position: relative;
+    }
+    
+    .carousel-overflow::before,
+    .carousel-overflow::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 150px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    
+    .carousel-overflow::before {
+      left: 0;
+      background: linear-gradient(to right, var(--bg) 0%, transparent 100%);
+    }
+    
+    .carousel-overflow::after {
+      right: 0;
+      background: linear-gradient(to left, var(--bg) 0%, transparent 100%);
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 30px;
+      width: max-content;
+      animation: scrollLeft 30s linear infinite;
+    }
+
+    .carousel-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-50% - 15px)); }
+    }
+
+    .carousel-item {
+      flex: 0 0 180px;
+      height: 120px;
+      background: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .carousel-item img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
   </style>
 </head>
 <body>
   <div id="header"></div>
+  
   <main id="main">
-    <section class="section" style="padding-top: 150px; min-height: 80vh;">
+    <section class="section hero-partnerships">
       <div class="container">
-         <div class="section-heading reveal">
-           <div>
-             <p class="eyebrow">LEXICON MILE</p>
-             <h2>Partnerships<span class="period">.</span></h2>
-           </div>
-         </div>
-         <div class="wp-content">
-            		<div data-elementor-type="wp-post" data-elementor-id="48413" class="elementor elementor-48413" data-elementor-post-type="page">
-				<div class="elementor-element elementor-element-a9ceebb e-flex e-con-boxed e-con e-parent" data-id="a9ceebb" data-element_type="container" data-e-type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-00d8469 elementor-widget elementor-widget-image" data-id="00d8469" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-					</div>
-				</div>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-71463fb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="71463fb" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-88b5840" data-id="88b5840" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-74968e3 thim-ekits-heading-text-center elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="74968e3" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading text-center"><h3 class="title">Partnerships </h3><div class="sub-heading"><p>At Lexicon MILE, we collaborate with leading universities and academic institutions to enhance the learning experience and bring diverse academic and industry insights into management education. These collaborations help future leaders gain broader exposure, practical knowledge, and a deeper understanding of evolving business environments.</p>
-</div></div>				</div>
-				</div>
-				<div class="elementor-element elementor-element-de200bb thim-ekits-heading-text-center elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="de200bb" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading text-center"><h3 class="title">Key Areas of Collaboration </h3></div>				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-3e13ad1 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3e13ad1" data-element_type="section" data-e-type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
-						<div class="elementor-container elementor-column-gap-custom">
-					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-f25b691" data-id="f25b691" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-3eab3d9 elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="3eab3d9" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
-							<div class="elementor-icon-box-wrapper">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">GLOBAL & INDUSTRY</p>
+            <h2>Partnerships<span class="period">.</span></h2>
+          </div>
+        </div>
+        
+        <p class="partnerships-intro reveal">
+          At Lexicon MILE, we collaborate with leading universities and academic institutions to enhance the learning experience and bring diverse academic and industry insights into management education. These collaborations help future leaders gain broader exposure, practical knowledge, and a deeper understanding of evolving business environments.
+        </p>
 
-						<div class="elementor-icon-box-icon">
-				<span  class="elementor-icon">
-				<svg aria-hidden="true" class="e-font-icon-svg e-far-handshake" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z"></path></svg>				</span>
-			</div>
-			
-						<div class="elementor-icon-box-content">
+        <div class="section-heading reveal" style="margin-top: 60px;">
+          <div>
+            <h3>Key Areas of Collaboration</h3>
+          </div>
+        </div>
+        
+        <div class="grid-4 reveal">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <h3>Joint Research Initiatives</h3>
+            <p>Collaborative research projects with reputed institutions to explore emerging business ideas and industry challenges.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Faculty Exchange & Visiting Experts</h3>
+            <p>Interaction with visiting faculty and industry experts to enrich classroom learning with diverse perspectives.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </div>
+            <h3>Student Exchange & Learning</h3>
+            <p>Opportunities for students to engage in academic experiences beyond the classroom and broaden their learning exposure.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            </div>
+            <h3>Collaborative Curriculum</h3>
+            <p>Jointly designed modules and electives aligned with evolving business and industry requirements.</p>
+          </div>
+        </div>
+        
+        <div class="section-heading reveal">
+          <div>
+            <h3>Industry at the Heart of Our Curriculum</h3>
+          </div>
+        </div>
 
-									<h3 class="elementor-icon-box-title">
-						<span  >
-							Joint Research Initiatives						</span>
-					</h3>
-				
-									<p class="elementor-icon-box-description">
-						Collaborative research projects with reputed institutions to explore emerging business ideas and industry challenges.
-					</p>
-				
-			</div>
-			
-		</div>
-						</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-7581677" data-id="7581677" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-d78ceb2 elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="d78ceb2" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
-							<div class="elementor-icon-box-wrapper">
+        <p class="partnerships-intro reveal" style="margin-bottom: 60px;">
+          At Lexicon MILE, strong connections with corporates, startups, and professional networks ensure that learning goes beyond the classroom and stays closely aligned with real industry practices.
+        </p>
 
-						<div class="elementor-icon-box-icon">
-				<span  class="elementor-icon">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-handshake" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M434.7 64h-85.9c-8 0-15.7 3-21.6 8.4l-98.3 90c-.1.1-.2.3-.3.4-16.6 15.6-16.3 40.5-2.1 56 12.7 13.9 39.4 17.6 56.1 2.7.1-.1.3-.1.4-.2l79.9-73.2c6.5-5.9 16.7-5.5 22.6 1 6 6.5 5.5 16.6-1 22.6l-26.1 23.9L504 313.8c2.9 2.4 5.5 5 7.9 7.7V128l-54.6-54.6c-5.9-6-14.1-9.4-22.6-9.4zM544 128.2v223.9c0 17.7 14.3 32 32 32h64V128.2h-96zm48 223.9c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zM0 384h64c17.7 0 32-14.3 32-32V128.2H0V384zm48-63.9c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16c0-8.9 7.2-16 16-16zm435.9 18.6L334.6 217.5l-30 27.5c-29.7 27.1-75.2 24.5-101.7-4.4-26.9-29.4-24.8-74.9 4.4-101.7L289.1 64h-83.8c-8.5 0-16.6 3.4-22.6 9.4L128 128v223.9h18.3l90.5 81.9c27.4 22.3 67.7 18.1 90-9.3l.2-.2 17.9 15.5c15.9 13 39.4 10.5 52.3-5.4l31.4-38.6 5.4 4.4c13.7 11.1 33.9 9.1 45-4.7l9.5-11.7c11.2-13.8 9.1-33.9-4.6-45.1z"></path></svg>				</span>
-			</div>
-			
-						<div class="elementor-icon-box-content">
+        <div class="grid-4 reveal">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <h3>Masterclasses</h3>
+            <p>Masterclasses with CXOs and business leaders for real-world insights.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h3>Internships</h3>
+            <p>Internships and live projects with leading companies to gain practical exposure.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3>Capstone Projects</h3>
+            <p>Industry-mentored capstone projects focused on solving real business challenges.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+            </div>
+            <h3>Placement Partnerships</h3>
+            <p>Strong placement partnerships across sectors such as FMCG, technology, consulting, and financial services.</p>
+          </div>
+        </div>
 
-									<h3 class="elementor-icon-box-title">
-						<span  >
-							Faculty Exchange &amp; Visiting Experts						</span>
-					</h3>
-				
-									<p class="elementor-icon-box-description">
-						Interaction with visiting faculty and industry experts to enrich classroom learning with diverse perspectives.
-					</p>
-				
-			</div>
-			
-		</div>
-						</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-77905de" data-id="77905de" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-f0d0fa5 elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="f0d0fa5" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
-							<div class="elementor-icon-box-wrapper">
+        <div class="section-heading reveal">
+          <div>
+            <h3>Our Recruiting Partners</h3>
+          </div>
+        </div>
+        
+        <div class="carousel-overflow reveal">
+          <div class="carousel-track">
+            <!-- First Set -->
+            <div class="carousel-item"><img src="images/logos/logo_1.png" alt="Flipkart"></div>
+            <div class="carousel-item"><img src="images/logos/logo_2.png" alt="HSBC"></div>
+            <div class="carousel-item"><img src="images/logos/logo_3.png" alt="Mahindra"></div>
+            <div class="carousel-item"><img src="images/logos/logo_4.png" alt="IDFC FIRST Bank"></div>
+            <div class="carousel-item"><img src="images/logos/logo_5.png" alt="KPMG"></div>
+            <div class="carousel-item"><img src="images/logos/logo_6.png" alt="Wipro"></div>
+            <div class="carousel-item"><img src="images/logos/logo_7.png" alt="Accenture"></div>
+            <div class="carousel-item"><img src="images/logos/logo_8.png" alt="Amazon"></div>
+            
+            <!-- Duplicated Set for infinite scroll -->
+            <div class="carousel-item"><img src="images/logos/logo_1.png" alt="Flipkart"></div>
+            <div class="carousel-item"><img src="images/logos/logo_2.png" alt="HSBC"></div>
+            <div class="carousel-item"><img src="images/logos/logo_3.png" alt="Mahindra"></div>
+            <div class="carousel-item"><img src="images/logos/logo_4.png" alt="IDFC FIRST Bank"></div>
+            <div class="carousel-item"><img src="images/logos/logo_5.png" alt="KPMG"></div>
+            <div class="carousel-item"><img src="images/logos/logo_6.png" alt="Wipro"></div>
+            <div class="carousel-item"><img src="images/logos/logo_7.png" alt="Accenture"></div>
+            <div class="carousel-item"><img src="images/logos/logo_8.png" alt="Amazon"></div>
+          </div>
+        </div>
 
-						<div class="elementor-icon-box-icon">
-				<span  class="elementor-icon">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-handshake" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M434.7 64h-85.9c-8 0-15.7 3-21.6 8.4l-98.3 90c-.1.1-.2.3-.3.4-16.6 15.6-16.3 40.5-2.1 56 12.7 13.9 39.4 17.6 56.1 2.7.1-.1.3-.1.4-.2l79.9-73.2c6.5-5.9 16.7-5.5 22.6 1 6 6.5 5.5 16.6-1 22.6l-26.1 23.9L504 313.8c2.9 2.4 5.5 5 7.9 7.7V128l-54.6-54.6c-5.9-6-14.1-9.4-22.6-9.4zM544 128.2v223.9c0 17.7 14.3 32 32 32h64V128.2h-96zm48 223.9c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zM0 384h64c17.7 0 32-14.3 32-32V128.2H0V384zm48-63.9c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16c0-8.9 7.2-16 16-16zm435.9 18.6L334.6 217.5l-30 27.5c-29.7 27.1-75.2 24.5-101.7-4.4-26.9-29.4-24.8-74.9 4.4-101.7L289.1 64h-83.8c-8.5 0-16.6 3.4-22.6 9.4L128 128v223.9h18.3l90.5 81.9c27.4 22.3 67.7 18.1 90-9.3l.2-.2 17.9 15.5c15.9 13 39.4 10.5 52.3-5.4l31.4-38.6 5.4 4.4c13.7 11.1 33.9 9.1 45-4.7l9.5-11.7c11.2-13.8 9.1-33.9-4.6-45.1z"></path></svg>				</span>
-			</div>
-			
-						<div class="elementor-icon-box-content">
 
-									<h3 class="elementor-icon-box-title">
-						<span  >
-							Student Exchange &amp; Learning Opportunities						</span>
-					</h3>
-				
-									<p class="elementor-icon-box-description">
-						 Opportunities for students to engage in academic experiences beyond the classroom and broaden their learning exposure.					</p>
-				
-			</div>
-			
-		</div>
-						</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-c9de454" data-id="c9de454" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-12ccd7e elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="12ccd7e" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
-							<div class="elementor-icon-box-wrapper">
 
-						<div class="elementor-icon-box-icon">
-				<span  class="elementor-icon">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-handshake" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M434.7 64h-85.9c-8 0-15.7 3-21.6 8.4l-98.3 90c-.1.1-.2.3-.3.4-16.6 15.6-16.3 40.5-2.1 56 12.7 13.9 39.4 17.6 56.1 2.7.1-.1.3-.1.4-.2l79.9-73.2c6.5-5.9 16.7-5.5 22.6 1 6 6.5 5.5 16.6-1 22.6l-26.1 23.9L504 313.8c2.9 2.4 5.5 5 7.9 7.7V128l-54.6-54.6c-5.9-6-14.1-9.4-22.6-9.4zM544 128.2v223.9c0 17.7 14.3 32 32 32h64V128.2h-96zm48 223.9c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zM0 384h64c17.7 0 32-14.3 32-32V128.2H0V384zm48-63.9c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16c0-8.9 7.2-16 16-16zm435.9 18.6L334.6 217.5l-30 27.5c-29.7 27.1-75.2 24.5-101.7-4.4-26.9-29.4-24.8-74.9 4.4-101.7L289.1 64h-83.8c-8.5 0-16.6 3.4-22.6 9.4L128 128v223.9h18.3l90.5 81.9c27.4 22.3 67.7 18.1 90-9.3l.2-.2 17.9 15.5c15.9 13 39.4 10.5 52.3-5.4l31.4-38.6 5.4 4.4c13.7 11.1 33.9 9.1 45-4.7l9.5-11.7c11.2-13.8 9.1-33.9-4.6-45.1z"></path></svg>				</span>
-			</div>
-			
-						<div class="elementor-icon-box-content">
-
-									<h3 class="elementor-icon-box-title">
-						<span  >
-							Collaborative Curriculum Development						</span>
-					</h3>
-				
-									<p class="elementor-icon-box-description">
-						Jointly designed modules and electives aligned with evolving business and industry requirements.
-					</p>
-				
-			</div>
-			
-		</div>
-						</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-8adb56f elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8adb56f" data-element_type="section" data-e-type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b27e8ec" data-id="b27e8ec" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<section class="elementor-section elementor-inner-section elementor-element elementor-element-985d674 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="985d674" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-custom">
-					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-aa88e70" data-id="aa88e70" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-87b8fd6 thim-ekits-heading-text-center elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="87b8fd6" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading text-center"><h3 class="title">Our Collaboration </h3></div>				</div>
-				</div>
-				<div class="elementor-element elementor-element-32da983 elementor-widget elementor-widget-text-editor" data-id="32da983" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p><span style="font-weight: 400;">At </span><b>Lexicon MILE</b><span style="font-weight: 400;">, partnerships with leading organizations such as </span><b>eClerx, TIAA, and NISM</b><span style="font-weight: 400;"> play an important role in strengthening industry engagement. These collaborations provide </span><b>future leaders</b><span style="font-weight: 400;"> with valuable industry insights, expert interactions, and exposure to real-world business challenges, helping them develop practical skills and strong career readiness.</span></p>								</div>
-					</div>
-		</div>
-					</div>
-		</section>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-1443e2d elementor-section-content-middle thim_1_col_tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1443e2d" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1c78c5c" data-id="1c78c5c" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<section class="elementor-section elementor-inner-section elementor-element elementor-element-502ddab elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="502ddab" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-extended">
-					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-918c01b" data-id="918c01b" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-6738c54 elementor-widget elementor-widget-image" data-id="6738c54" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-f9b5cc1" data-id="f9b5cc1" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-b9ddf84 elementor-widget elementor-widget-image" data-id="b9ddf84" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-5d13343" data-id="5d13343" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-2662078 elementor-widget elementor-widget-image" data-id="2662078" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-					</div>
-		</div>
-					</div>
-		</section>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2af4d4a feature-icon-box " data-id="2af4d4a" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-939bb53 iconbox-text-left elementor-widget elementor-widget-thim-icon-box" data-id="939bb53" data-element_type="widget" data-e-type="widget" data-widget_type="thim-icon-box.default">
-				<div class="elementor-widget-container">
-					<div class="thim-widget-icon-box"><div class="wrapper-box-icon text-left "><div class="smicon-box iconbox-right"><div class="boxes-icon"><a class="icon-box-link" href="tel:%20+919967427278" target="_blank"><span class="inner-icon"><span class="icon"><i aria-hidden="true" class="tk tk-arrow-right"></i></span></span></a></div><div class="content-inner"><div class="sc-heading"><h3 class="heading__primary" style="font-size:20px;font-weight:500;"><a class="icon-box-link" href="tel:%20+919967427278" target="_blank">Our Industry Collaborations</a></h3></div></div></div></div></div>				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-0fccd79 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0fccd79" data-element_type="section" data-e-type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
-							<div class="elementor-background-overlay"></div>
-							<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7ea097c" data-id="7ea097c" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-a7fbad4 thim-ekits-heading-text-center elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="a7fbad4" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading text-center"><h3 class="title">Industry at the Heart of Our Curriculum </h3><div class="sub-heading"><p>At Lexicon MILE, strong connections with corporates, startups, and professional networks ensure that learning goes beyond the classroom and stays closely aligned with real industry practices.</p>
-</div></div>				</div>
-				</div>
-		<div class="elementor-element elementor-element-c90c7a5 e-flex e-con-boxed e-con e-parent" data-id="c90c7a5" data-element_type="container" data-e-type="container">
-					<div class="e-con-inner">
-		<div class="elementor-element elementor-element-cb927c8 e-con-full e-flex e-con e-child" data-id="cb927c8" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-f723c7e elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="f723c7e" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading"><div class="sub-heading"><p>Masterclasses with CXOs and business leaders for real-world insights.</p>
-</div></div>				</div>
-				</div>
-				</div>
-		<div class="elementor-element elementor-element-2bc4ae2 e-con-full e-flex e-con e-child" data-id="2bc4ae2" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-ca39f62 elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="ca39f62" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading"><div class="sub-heading"><p>Internships and live projects with leading companies to gain practical exposure.</p>
-</div></div>				</div>
-				</div>
-				</div>
-		<div class="elementor-element elementor-element-54989f6 e-con-full e-flex e-con e-child" data-id="54989f6" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-2b75336 elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="2b75336" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading"><div class="sub-heading"><p>Industry-mentored capstone projects focused on solving real business challenges.</p>
-</div></div>				</div>
-				</div>
-				</div>
-		<div class="elementor-element elementor-element-7f64a80 e-con-full e-flex e-con e-child" data-id="7f64a80" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-9723558 elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="9723558" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading"><div class="sub-heading"><p>Strong placement partnerships across sectors such as FMCG, technology, consulting, and financial services.</p>
-</div></div>				</div>
-				</div>
-				</div>
-					</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-13f72de elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="13f72de" data-element_type="section" data-e-type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7560124" data-id="7560124" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-8311cdc thim-ekits-heading-text-center elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="8311cdc" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading text-center"><h2 class="title">Our Recruiting Partners </h2></div>				</div>
-				</div>
-				<div class="elementor-element elementor-element-6856073 elementor-widget elementor-widget-image-carousel" data-id="6856073" data-element_type="widget" data-e-type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;9&quot;,&quot;slides_to_show_tablet&quot;:&quot;3&quot;,&quot;slides_to_show_mobile&quot;:&quot;1&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;autoplay_speed&quot;:0,&quot;speed&quot;:600,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:9,&quot;sizes&quot;:[]},&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image-carousel.default">
-							<div class="elementor-image-carousel-wrapper swiper" role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="ltr">
-			<div class="elementor-image-carousel swiper-wrapper" aria-live="off">
-								<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="6 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="7 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="8 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="9 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="10 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="11 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="12 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="13 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="14 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="15 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="16 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="17 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="18 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="19 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="20 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="21 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="22 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="23 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="24 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="25 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="26 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="27 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="28 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="29 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="30 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="31 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="32 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="33 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="34 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="35 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="36 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="37 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="38 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="39 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="40 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="41 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="42 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="43 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="44 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="45 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="46 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="47 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="48 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="49 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="50 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="51 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="52 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="53 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="54 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="55 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="56 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="57 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="58 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="59 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="60 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="61 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="62 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="63 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="64 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="65 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="66 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="67 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="68 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="69 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="70 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="71 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="72 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="73 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="74 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="75 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="76 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="77 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="78 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="79 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="80 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="81 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="82 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="83 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="84 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="85 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="86 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="87 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="88 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="89 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="90 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="91 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="92 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="93 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="94 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="95 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="96 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="97 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="98 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="99 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="100 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="101 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="102 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="103 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="104 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="105 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="106 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="107 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="108 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="109 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="110 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="111 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="112 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="113 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="114 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="115 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="116 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="117 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="118 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="119 of 119"><figure class="swiper-slide-inner"><div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div></figure></div>			</div>
-							
-									</div>
-						</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-694365f elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="694365f" data-element_type="section" data-e-type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
-							<div class="elementor-background-overlay"></div>
-							<div class="elementor-container elementor-column-gap-custom">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-141256c" data-id="141256c" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-fc50bf0 thim-ekits-heading-text-center elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="fc50bf0" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading text-center"><h2 class="title">Partner with Lexicon MILE. Build the Future of Learning. </h2><div class="sub-heading"><p>At Lexicon MILE, we welcome collaborations with academic institutions, industry leaders, and organizations who share a vision for meaningful and forward-looking education. Together, we aim to create impactful learning experiences that connect academic knowledge with industry insights and practical application.</p>
-</div></div>				</div>
-				</div>
-				<div class="elementor-element elementor-element-b039b24 elementor-widget thim-widget-button" data-id="b039b24" data-element_type="widget" data-e-type="widget" data-widget_type="thim-button.default">
-				<div class="elementor-widget-container">
-					<a class="widget-button normal" href="/contact">Get in Touch →</a>				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				</div>
-		
-         </div>
+        <div class="cta-section reveal">
+          <h2>Partner with Lexicon MILE. <br>Build the Future of Learning.</h2>
+          <p>We welcome collaborations with academic institutions, industry leaders, and organizations who share a vision for meaningful and forward-looking education.</p>
+          <a href="contact.html" class="button">
+            Let's Collaborate <span>↗</span>
+          </a>
+        </div>
+        
       </div>
     </section>
   </main>
+  
   <div id="footer"></div>
+
   <script src="js/components.js"></script>
 </body>
 </html>
