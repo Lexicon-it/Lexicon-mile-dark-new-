@@ -19,13 +19,13 @@ const megaMenuData = {
   },
   'ceo-message': {
     overview: `<h4 class="mega-heading">FROM THE CHAIRMAN'S DESK</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Ideas that challenge convention. Perspectives that shape the future.<br><br>At Lexicon MILE, we believe meaningful education begins with meaningful conversations. Through his articles and reflections, our Chairman shares perspectives on leadership, business, education, innovation, and the evolving world of work.</p>`,
-    image: `<img src="images/global.jpg" alt="Chairman Message" class="mega-image">`
+               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">A legacy of excellence founded in 2006.<br><br>Through his visionary leadership, Chairman Shri S.D. Sharma shares principles of value-based education, 'Believe in Yourself', and nurturing students into responsible global citizens.</p>`,
+    image: `<img src="images/trustees/sd-sharma.jpg" alt="Shri S.D. Sharma, Chairman" class="mega-image">`
   },
   'governing-body': {
-    overview: `<h4 class="mega-heading">GOVERNING BODY</h4>
+    overview: `<h4 class="mega-heading">BOARD OF GOVERNORS</h4>
                <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Board of Governors of Lexicon<br>MILE brings together experienced<br>academicians, industry professionals,<br>technologists and education leaders<br>from diverse fields. Their collective<br>expertise supports academic excellence,<br>industry relevance, strong governance<br>and progressive learning, contributing<br>to continued institutional growth.</p>`,
-    image: `<img src="images/collaboration.jpg" alt="Governing Body" class="mega-image">`
+    image: `<img src="images/governors/dr-bharat-bhushan.webp" alt="Dr. Bharat Bhushan, Chairman, Board of Governors" class="mega-image">`
   },
   'ranking-accreditation': {
     overview: `<h4 class="mega-heading">RANKING & ACCREDITATION</h4>
