@@ -43,8 +43,11 @@
       position: relative;
       padding-top: 145px;
       padding-bottom: 50px;
-      background: radial-gradient(circle at 50% 15%, rgba(46, 196, 182, 0.14) 0%, rgba(7, 59, 145, 0.25) 45%, rgba(5, 7, 12, 0.98) 85%),
-                  url('images/campus-tour/hero-banner.jpeg') center/cover no-repeat;
+      background: radial-gradient(circle at 50% 15%, rgba(46, 196, 182, 0.14) 0%, rgba(7, 59, 145, 0.25) 45%, rgba(5, 7, 12, 0.98) 85%);
+    }
+
+    .vt-hero::before {
+      display: none !important;
     }
 
     .vt-hero-toolbar {
@@ -253,6 +256,12 @@
       cursor: pointer;
       transition: all 0.2s ease;
       font-family: inherit;
+    }
+    .vt-hotspot-btn svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      flex-shrink: 0;
     }
 
     .vt-hotspot-btn:hover, .vt-hotspot-btn.active {
@@ -735,12 +744,30 @@
           <div class="vt-theater-footer">
             <div class="vt-hotspot-chips">
               <span class="vt-hotspot-label">Quick Jump:</span>
-              <button type="button" class="vt-hotspot-btn active" onclick="jumpHotspot('gate')">🏛️ Main Entrance</button>
-              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('ai')">⚡ AI Lab</button>
-              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('class')">📚 Classrooms</button>
-              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('hall')">🎤 Amphitheater</button>
-              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('lib')">📖 Library</button>
-              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('sports')">⚽ Sports Ground</button>
+              <button type="button" class="vt-hotspot-btn active" onclick="jumpHotspot('gate')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 2 2 7h20z"/></svg>
+                Main Entrance
+              </button>
+              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('ai')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                AI Lab
+              </button>
+              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('class')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                Classrooms
+              </button>
+              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('hall')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                Amphitheater
+              </button>
+              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('lib')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                Library
+              </button>
+              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('sports')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+                Sports Ground
+              </button>
             </div>
 
             <a href="https://www.google.com/maps/@18.5876497,73.9965639,3a,75y,184.81h,91.99t/data=!3m8!1e1!3m6!1sAF1QipMSyRIdwgd3Xzw6aUVfO0ELK15LEqGJXb1lOcgn!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipMSyRIdwgd3Xzw6aUVfO0ELK15LEqGJXb1lOcgn%3Dw900-h600-k-no-pi-1.9899999999999949-ya12.00999694824219-ro0-fo100!7i6720!8i3360?entry=ttu" target="_blank" rel="noopener noreferrer" class="vt-fullscreen-link">
