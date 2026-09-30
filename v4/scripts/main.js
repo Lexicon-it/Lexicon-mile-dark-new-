@@ -90,7 +90,7 @@ const megaMenuData = {
                     <span style="color: #2ec4b6; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹7.50L + £7,500 ↗</span>
                   </a>
                   <a href="fee-bba.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
-                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">BBA (2026–29)</span>
+                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">BBA (2027–30)</span>
                     <span style="color: #f05624; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹5.70 Lakh Total ↗</span>
                   </a>
                   <a href="b-sc-fee-structure.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
@@ -115,7 +115,7 @@ const megaMenuData = {
   },
   'mba-global-fee-structure': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">MBA GLOBAL FEES</h4>
-               <span style="display: inline-block; padding: 3px 8px; background: rgba(46, 196, 182, 0.15); color: #2ec4b6; font-size: 11px; font-weight: 700; border-radius: 4px; margin-bottom: 8px;">Batch 2026–28 · UK Degree</span>
+               <span style="display: inline-block; padding: 3px 8px; background: rgba(46, 196, 182, 0.15); color: #2ec4b6; font-size: 11px; font-weight: 700; border-radius: 4px; margin-bottom: 8px;">Batch 2027–29 · UK Degree</span>
                <p style="color: #ffffff; font-size: 14px; font-weight: 700; margin: 0 0 6px 0;">India: ₹7,50,000 + GST &middot; UK: £7,500 GBP</p>
                <p style="color: #b1bfd2; font-size: 13px; line-height: 1.6; margin-bottom: 10px;">India component covers 60 credits delivered at Lexicon MILE (Terms 1–2) with structured installments. Progression to Term 3 at University of South Wales, UK (£7,500 payable directly to USW).</p>
                <a href="global-mba-usw-uk.html#fee-structure" class="mega-link" style="color: #2ec4b6; font-weight: 600; font-size: 12px;">View MBA Global Breakdown & Installments <span>↗</span></a>`,
@@ -123,7 +123,7 @@ const megaMenuData = {
   },
   'bba-fee-structure': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">BBA FEE STRUCTURE</h4>
-               <span style="display: inline-block; padding: 3px 8px; background: rgba(240, 86, 36, 0.15); color: #f05624; font-size: 11px; font-weight: 700; border-radius: 4px; margin-bottom: 8px;">Batch 2026–29 · SPPU Pune · NEP 2020</span>
+               <span style="display: inline-block; padding: 3px 8px; background: rgba(240, 86, 36, 0.15); color: #f05624; font-size: 11px; font-weight: 700; border-radius: 4px; margin-bottom: 8px;">Batch 2027–30 · SPPU Pune · NEP 2020</span>
                <p style="color: #ffffff; font-size: 14px; font-weight: 700; margin: 0 0 6px 0;">3-Year Grand Total: ₹5,70,000 <span style="font-weight: 400; color: #94a3b8; font-size: 12px;">(₹1,90,000 / year)</span></p>
                <p style="color: #b1bfd2; font-size: 13px; line-height: 1.6; margin-bottom: 10px;">Scheduled across 3 academic years: Enrolment (₹15,000), Part-A Tuition (₹20,000-₹35,000), Development Fee (₹3,500), and Part-B Industry Skills (₹1,51,500). Optional 4th Year Honours at ₹1,50,000.</p>
                <a href="fee-bba.html" class="mega-link" style="color: #f05624; font-weight: 600; font-size: 12px;">View Full BBA Fee Schedule & Bank A/C <span>↗</span></a>`,
@@ -131,7 +131,7 @@ const megaMenuData = {
   },
   'scholarships': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">SCHOLARSHIPS</h4>
-               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE offers scholarships designed to recognise academic excellence and support deserving students by reducing the financial burden of management education. For the PGDM 2026–28 batch, scholarships are based on entrance examination performance, with awards up to ₹1,00,000 for CAT, ₹75,000 for CMAT and ₹50,000 for MAT. Scholarships are limited and subject to applicable conditions.</p>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE offers scholarships designed to recognise academic excellence and support deserving students by reducing the financial burden of management education. For the PGDM 2027–29 batch, scholarships are based on entrance examination performance, with awards up to ₹1,00,000 for CAT, ₹75,000 for CMAT and ₹50,000 for MAT. Scholarships are limited and subject to applicable conditions.</p>
                <a href="scholarship.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Full Scholarship Criteria & Terms <span>↗</span></a>`,
     image: `<img src="images/hero.jpg" alt="Scholarships" class="mega-image">`
   },
@@ -171,7 +171,7 @@ const megaMenuData = {
   },
   'placements-overview': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">PLACEMENTS</h4>
-               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE’s placement ecosystem connects students with 200+ organisations across diverse sectors. For the 2024–26 PGDM batch, 500+ offers were received, with highest international package at ₹49 LPA and domestic at ₹18 LPA.</p>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE’s placement ecosystem connects students with 200+ organisations across diverse sectors. For the 2025–27 PGDM batch, 500+ offers were received, with highest international package at ₹49 LPA and domestic at ₹18 LPA.</p>
                <a href="placement.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Placement Report & Statistics <span>↗</span></a>`,
     image: `<img src="images/hero.jpg" alt="Placements" class="mega-image">`
   },
@@ -345,14 +345,14 @@ const awardsGrid = document.getElementById('awards-grid');
 if (awardsGrid) awardsGrid.innerHTML = awards.map((award, index) => `<article class="award-item reveal"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#award"/></svg><span class="award-index">${String(index + 1).padStart(2, '0')}</span><h3>${award.title}</h3><p class="award-subtitle">${award.subtitle}</p></article>`).join('');
 
 const activities = [
-  { title: 'Clubs & Communities', image: 'classroom', description: 'Find your people. Exchange perspectives. Build something bigger together.' },
-  { title: 'Competitions', image: 'collaboration', description: 'Take on new challenges and turn bold ideas into your competitive edge.' },
-  { title: 'Events & Experiences', image: 'auditorium', description: 'Be part of the moments, conversations and celebrations that stay with you.' },
-  { title: 'Industry Visits', image: 'global', description: 'Go behind the scenes and see the world of business in motion.' },
-  { title: 'Workshops', image: 'hero', description: 'Get hands-on with new tools, fresh perspectives and real-world skills.' },
-  { title: 'Student Activities', image: 'campus', description: 'Make room for curiosity, collaboration and a little friendly competition.' },
-  { title: 'Entrepreneurship', image: 'collaboration', description: 'Challenge assumptions. Test an idea. Take the first step towards building it.' },
-  { title: 'Leadership', image: 'classroom', description: 'Learn to inspire a team, take ownership and create meaningful change.' }
+  { title: 'Clubs & Communities', image: 'activities/act1', description: 'Find your people. Exchange perspectives. Build something bigger together.' },
+  { title: 'Competitions', image: 'activities/act2', description: 'Take on new challenges and turn bold ideas into your competitive edge.' },
+  { title: 'Events & Experiences', image: 'activities/act3', description: 'Be part of the moments, conversations and celebrations that stay with you.' },
+  { title: 'Industry Visits', image: 'activities/act4', description: 'Go behind the scenes and see the world of business in motion.' },
+  { title: 'Workshops', image: 'activities/act5', description: 'Get hands-on with new tools, fresh perspectives and real-world skills.' },
+  { title: 'Student Activities', image: 'activities/act6', description: 'Make room for curiosity, collaboration and a little friendly competition.' },
+  { title: 'Entrepreneurship', image: 'activities/act7', description: 'Challenge assumptions. Test an idea. Take the first step towards building it.' },
+  { title: 'Leadership', image: 'activities/act8', description: 'Learn to inspire a team, take ownership and create meaningful change.' }
 ];
 const lifeTrackEl = document.getElementById('life-track');
 if (lifeTrackEl) lifeTrackEl.innerHTML = activities.map((activity, index) => `<article class="life-card"><div class="life-image"><img src="images/${activity.image}.jpg" alt="Illustrative ${activity.title.toLowerCase()} experience" loading="lazy" width="700" height="470"><span>${String(index + 1).padStart(2, '0')}</span></div><h3>${activity.title}</h3><p>${activity.description}</p></article>`).join('');
@@ -409,7 +409,7 @@ function applicationDialog(selected) {
   let saved = null;
   try { saved = JSON.parse(localStorage.getItem('lexicon-program-interest')); } catch (_) { /* Storage may be unavailable. */ }
   const choice = programs[selected] ? selected : (saved && programs[saved.program] ? saved.program : 'pgdm');
-  openDialog(`<p class="eyebrow">ADMISSIONS / 2026–27</p><h2 id="dialog-title">Your next chapter<br>starts here<span class="period">.</span></h2><p>Choose the path that matches your ambition. Save your program preference and explore what comes next.</p><form class="interest-form" id="interest-form"><label for="program-interest">Which program are you interested in?</label><select id="program-interest" name="program">${Object.entries(programs).map(([key, program]) => `<option value="${key}" ${key === choice ? 'selected' : ''}>${program.title}</option>`).join('')}</select><button type="submit" class="button">Save My Interest <span>↗</span></button><div id="interest-status" role="status"></div></form><p class="dialog-notice">This is an admissions preview, not an application submission. Your program preference stays on this device only. Official application links and admissions contact details will be added before launch.</p>`);
+  openDialog(`<p class="eyebrow">ADMISSIONS / 2027–28</p><h2 id="dialog-title">Your next chapter<br>starts here<span class="period">.</span></h2><p>Choose the path that matches your ambition. Save your program preference and explore what comes next.</p><form class="interest-form" id="interest-form"><label for="program-interest">Which program are you interested in?</label><select id="program-interest" name="program">${Object.entries(programs).map(([key, program]) => `<option value="${key}" ${key === choice ? 'selected' : ''}>${program.title}</option>`).join('')}</select><button type="submit" class="button">Save My Interest <span>↗</span></button><div id="interest-status" role="status"></div></form><p class="dialog-notice">This is an admissions preview, not an application submission. Your program preference stays on this device only. Official application links and admissions contact details will be added before launch.</p>`);
 }
 const information = {
   'admission-process': { eyebrow: 'ADMISSIONS / YOUR NEXT STEP', title: 'Begin with ambition.', body: '<p>Explore our programs, identify the learning experience that fits your goals, and prepare for the next stage of your journey.</p><ul><li>Explore PGDM, MBA Global, BBA and IHM / HMCT.</li><li>Review the official eligibility criteria when published.</li><li>Prepare your academic records and supporting documents.</li><li>Complete the official application when its link is available.</li></ul><p class="dialog-notice">Institution-specific selection stages, deadlines and application instructions are awaiting confirmation.</p>' },
@@ -439,7 +439,7 @@ function downloadBrochure() {
     'An industry-integrated business education built for ambitious leaders.', '',
     ...Object.values(programs).flatMap(program => [program.title.toUpperCase(), program.description, ...program.highlights.map(item => `• ${item}`), '']),
     'NEXT STEPS', 'Official application links, eligibility, duration, accreditation, program fees and scholarship policies are awaiting institutional confirmation.',
-    'Admissions cycle shown in this concept: 2026–27.', '',
+    'Admissions cycle shown in this concept: 2027–28.', '',
     'IMPORTANT', 'This is a locally generated text overview of the homepage concept. It is not an official institutional brochure. No application is submitted through this site. Claims and affiliations require verification before publication.'
   ].join('\n');
   const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
@@ -489,7 +489,10 @@ document.addEventListener('click', event => {
     window.location.href = 'tel:+919967427278';
     return;
   }
-  if (action === 'brochure') return downloadBrochure();
+  if (action === 'brochure') {
+    window.open('https://admissions.lexiconmile.com/', '_blank');
+    return;
+  }
   const info = information[action];
   if (info) openDialog(`<p class="eyebrow">${info.eyebrow}</p><h2 id="dialog-title">${info.title}</h2>${info.body}`);
 });
@@ -511,9 +514,9 @@ document.addEventListener('submit', event => {
 
 // Manual carousel: no auto-advance to interrupt reading or keyboard navigation.
 const testimonials = [
-  { quote: 'Lexicon MILE transformed my perspective on management. The faculty are industry veterans who bring real-world insights into every session.', name: 'Devyani Pardhi', program: 'PGDM Batch 2023-25', image: '1', note: '' },
-  { quote: 'The international exposure through the USW partnership was invaluable. I got to experience global business education firsthand.', name: 'Ajinkya', program: 'Lexicon MILE Alumni', image: '2', note: '' },
-  { quote: 'The placement mentorship program was exceptional. Right from building your resume to mock interviews, every step was supported professionally.', name: 'Palak Keshari', program: 'Lexicon MILE Alumni', image: '3', note: '' }
+  { quote: 'Lexicon MILE consistently produces graduates who are not just academically sound, but corporately ready. Their strategic thinking and immediate impact on our projects is remarkable.', name: 'Vikram Malhotra', program: 'CEO, Global Nexus Tech', image: 'ceo1', note: '' },
+  { quote: 'We have hired from Lexicon MILE for three consecutive years. The students demonstrate incredible adaptability, global perspective, and a strong foundation in modern business analytics.', name: 'Priya Sharma', program: 'Founder & MD, Elevate Innovations', image: 'ceo2', note: '' },
+  { quote: 'The leadership qualities and ethical grounding we see in candidates from Lexicon MILE make them our top choice for future management roles. They truly understand the real-world business landscape.', name: 'Rajiv Singhania', program: 'Chairman, Navayuga Enterprises', image: 'ceo3', note: '' }
 ];
 let testimonialIndex = 0;
 function setTestimonial(direction) {
@@ -572,11 +575,14 @@ if ('IntersectionObserver' in window) {
       if (!entry.isIntersecting) return;
       counterObserver.unobserve(entry.target);
       if (reducedMotion.matches) return;
-      const target = Number(entry.target.dataset.counter);
+      const targetStr = entry.target.dataset.counter;
+      const target = Number(targetStr);
+      const isFloat = targetStr.includes('.');
       const start = performance.now();
       function tick(now) {
         const progress = Math.min((now - start) / 1150, 1);
-        entry.target.textContent = String(Math.round(target * (1 - Math.pow(1 - progress, 3))));
+        const currentVal = target * (1 - Math.pow(1 - progress, 3));
+        entry.target.textContent = isFloat ? currentVal.toFixed(1) : String(Math.round(currentVal));
         if (progress < 1) requestAnimationFrame(tick);
       }
       requestAnimationFrame(tick);
@@ -666,4 +672,75 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reducedM
     }
 
     // ==========================================
+    // Video Modal Logic
+    // ==========================================
+    
+    // Create modal HTML
+    const videoModalHTML = `
+      <div class="video-modal" id="videoModal" aria-hidden="true">
+        <div class="video-modal-backdrop" id="videoModalCloseBg"></div>
+        <div class="video-modal-content">
+          <button class="video-modal-close" id="videoModalCloseBtn" aria-label="Close video">&times;</button>
+          <div class="video-modal-iframe-container">
+            <iframe id="videoModalIframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', videoModalHTML);
+
+    const videoModal = document.getElementById('videoModal');
+    const videoModalCloseBg = document.getElementById('videoModalCloseBg');
+    const videoModalCloseBtn = document.getElementById('videoModalCloseBtn');
+    const videoModalIframe = document.getElementById('videoModalIframe');
+    const playButtons = document.querySelectorAll('.stack-play-btn, .js-open-video');
+
+    function openVideoModal(videoId, startParam = '') {
+        videoModalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1${startParam}`;
+        videoModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal() {
+        videoModal.classList.remove('active');
+        videoModalIframe.src = '';
+        document.body.style.overflow = '';
+    }
+
+    playButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const href = btn.getAttribute('href') || btn.getAttribute('data-video-url');
+            let videoId = '';
+            let startParam = '';
+            
+            if (href && href.includes('watch?v=')) {
+                videoId = href.split('watch?v=')[1].split('&')[0];
+                
+                const timeMatch = href.match(/[&?]t=([0-9smh]+)/);
+                if (timeMatch) {
+                    let timeStr = timeMatch[1];
+                    let totalSeconds = 0;
+                    if (timeStr.includes('h') || timeStr.includes('m') || timeStr.includes('s')) {
+                        const h = timeStr.match(/(\d+)h/) ? parseInt(timeStr.match(/(\d+)h/)[1]) : 0;
+                        const m = timeStr.match(/(\d+)m/) ? parseInt(timeStr.match(/(\d+)m/)[1]) : 0;
+                        const s = timeStr.match(/(\d+)s/) ? parseInt(timeStr.match(/(\d+)s/)[1]) : 0;
+                        totalSeconds = (h * 3600) + (m * 60) + s;
+                    } else {
+                        totalSeconds = parseInt(timeStr) || 0;
+                    }
+                    if (totalSeconds > 0) {
+                        startParam = `&start=${totalSeconds}`;
+                    }
+                }
+            } else if (href) {
+                videoId = href; // fallback
+            }
+            if(videoId) openVideoModal(videoId, startParam);
+        });
+    });
+
+    if (videoModalCloseBg) videoModalCloseBg.addEventListener('click', closeVideoModal);
+    if (videoModalCloseBtn) videoModalCloseBtn.addEventListener('click', closeVideoModal);
+
 

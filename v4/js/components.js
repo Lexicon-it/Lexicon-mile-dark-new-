@@ -1,24 +1,26 @@
-function getComponentPrefix() {
-    const segments = window.location.pathname.replace(/^\//, '').split('/').filter(s => s && !s.includes('.'));
-    return segments.length > 0 ? '../'.repeat(segments.length) : '';
+function getBasePath() {
+    const scriptTag = document.querySelector('script[src*="components.js"]');
+    if (scriptTag) {
+        // This will extract the base URL of the site, e.g. "https://example.com/v5/"
+        return scriptTag.src.replace(/js\/components\.js.*$/, '');
+    }
+    return '/'; // Fallback
 }
 
 async function loadComponents() {
     try {
-        const prefix = getComponentPrefix();
+        const basePath = getBasePath();
         const v = '?v=' + Date.now();
         const [headerRes, footerRes] = await Promise.all([
-            fetch(prefix + 'components/header.html' + v),
-            fetch(prefix + 'components/footer.html' + v)
+            fetch(basePath + 'components/header.html' + v),
+            fetch(basePath + 'components/footer.html' + v)
         ]);
         
         if (headerRes.ok) {
             let headerHtml = await headerRes.text();
-            if (prefix) {
-                headerHtml = headerHtml
-                    .replace(/href="([^"\/:]+\.html(?:#[^"]*)?)"/g, `href="${prefix}$1"`)
-                    .replace(/src="(assets|images)\//g, `src="${prefix}$1/`);
-            }
+            headerHtml = headerHtml
+                .replace(/href="([^"\/:]+\.html(?:#[^"]*)?)"/g, `href="${basePath}$1"`)
+                .replace(/src="(assets|images)\//g, `src="${basePath}$1/`);
             const headerEl = document.getElementById('header');
             if (headerEl) headerEl.outerHTML = headerHtml;
         } else {
@@ -27,11 +29,9 @@ async function loadComponents() {
         
         if (footerRes.ok) {
             let footerHtml = await footerRes.text();
-            if (prefix) {
-                footerHtml = footerHtml
-                    .replace(/href="([^"\/:]+\.html(?:#[^"]*)?)"/g, `href="${prefix}$1"`)
-                    .replace(/src="(assets|images)\//g, `src="${prefix}$1/`);
-            }
+            footerHtml = footerHtml
+                .replace(/href="([^"\/:]+\.html(?:#[^"]*)?)"/g, `href="${basePath}$1"`)
+                .replace(/src="(assets|images)\//g, `src="${basePath}$1/`);
             const footerEl = document.getElementById('footer');
             if (footerEl) footerEl.outerHTML = footerHtml;
         } else {
@@ -41,7 +41,7 @@ async function loadComponents() {
         // Dynamically load main.js after components to ensure DOM is ready
         if (!document.querySelector('script[src*="scripts/main.js"]')) {
             const script = document.createElement('script');
-            script.src = prefix + 'scripts/main.js' + v;
+            script.src = basePath + 'scripts/main.js' + v;
             document.body.appendChild(script);
         }
 
@@ -53,3 +53,4 @@ async function loadComponents() {
 }
 
 loadComponents();
+

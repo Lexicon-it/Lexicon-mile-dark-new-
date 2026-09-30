@@ -357,3 +357,4 @@ fs.writeFileSync('ceos-message.html', ceosMessage);
 fs.writeFileSync('awards-accolades.html', awards);
 
 console.log('Successfully generated all 6 pages with standard CSS styles!');
+

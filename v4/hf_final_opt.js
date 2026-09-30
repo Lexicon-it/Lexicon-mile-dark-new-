@@ -1,1 +1,0 @@
-document.querySelectorAll(".mega-desc").forEach(el=>{el.style.color="#b1bfd2";el.style.fontSize="14px";el.style.lineHeight="1.7";el.style.marginTop="15px"});
