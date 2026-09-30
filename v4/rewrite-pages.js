@@ -353,7 +353,7 @@ fs.writeFileSync('about-lexicon.html', aboutLexicon);
 fs.writeFileSync('lexicon-group.html', lexiconGroup);
 fs.writeFileSync('managing-trustees.html', trustees);
 fs.writeFileSync('board-of-governors.html', boardOfGov);
-fs.writeFileSync('ceos-message.html', ceosMessage);
+fs.writeFileSync('vice-chairmans-desk.html', ceosMessage);
 fs.writeFileSync('awards-accolades.html', awards);
 
 console.log('Successfully generated all 6 pages with standard CSS styles!');
