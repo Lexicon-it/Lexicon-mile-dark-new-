@@ -4,116 +4,175 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#05070C">
-  <title>MBA Global UFW SWS | Lexicon MILE</title>
+  <title>MBA Global Programs | Lexicon MILE Pune</title>
+  <meta name="description" content="Explore MBA Global tracks at Lexicon MILE: University of South Wales (USW, UK) and INTI International University (Malaysia - MBA in Business Analytics).">
   <link rel="icon" href="images/favicon.png" type="image/png">
   <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles/main.css">
   <style>
-    /* Scope styles for WP content to adapt to dark theme */
-    .wp-content {
-      color: rgba(255, 255, 255, 0.7);
-      line-height: 1.6;
-      font-size: 1.1rem;
+    .global-portal-banner {
+      padding-top: 140px;
+      padding-bottom: 80px;
+      background: radial-gradient(circle at 50% 20%, rgba(56, 189, 248, 0.15) 0%, rgba(5, 7, 12, 0.98) 70%);
+      min-height: 80vh;
     }
-    .wp-content h1, .wp-content h2, .wp-content h3, .wp-content h4, .wp-content h5, .wp-content h6 {
-      color: #fff;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
+    .global-portal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 40px;
     }
-    .wp-content a {
-      color: #8cb4f5;
-      text-decoration: underline;
+    .global-portal-card {
+      background: rgba(13, 20, 36, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 36px 30px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
     }
-    .wp-content p {
-      margin-bottom: 1.5rem;
+    .global-portal-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     }
-    .wp-content ul, .wp-content ol {
-      margin-bottom: 1.5rem;
-      padding-left: 2rem;
+    .global-portal-card.usw:hover {
+      border-color: rgba(56, 189, 248, 0.5);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(56, 189, 248, 0.15);
     }
-    .wp-content li {
-      margin-bottom: 0.5rem;
+    .global-portal-card.inti:hover {
+      border-color: rgba(46, 196, 182, 0.5);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(46, 196, 182, 0.15);
     }
-    .wp-content table {
+    .global-portal-img-wrap {
       width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 2rem;
+      height: 220px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      background: #080d1a;
     }
-    .wp-content th, .wp-content td {
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 1rem;
+    .global-portal-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
     }
-    .wp-content th {
-      background: rgba(255, 255, 255, 0.05);
+    .global-portal-card:hover .global-portal-img {
+      transform: scale(1.05);
+    }
+    .global-portal-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+    .global-portal-tag.usw {
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+    }
+    .global-portal-tag.inti {
+      background: rgba(46, 196, 182, 0.15);
+      color: #2ec4b6;
+      border: 1px solid rgba(46, 196, 182, 0.35);
+    }
+    .global-portal-title {
+      font-size: 24px;
+      font-weight: 800;
       color: #fff;
+      margin: 0 0 8px 0;
+    }
+    .global-portal-sub {
+      font-size: 15px;
+      color: #94a3b8;
+      margin: 0 0 18px 0;
+      font-weight: 500;
+    }
+    .global-portal-desc {
+      font-size: 14px;
+      line-height: 1.65;
+      color: #cbd5e1;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+    @media (max-width: 900px) {
+      .global-portal-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <div id="header"></div>
+
   <main id="main">
-    <section class="section" style="padding-top: 150px; min-height: 80vh;">
+    <section class="global-portal-banner">
       <div class="container">
-         <div class="section-heading reveal">
-           <div>
-             <p class="eyebrow">LEXICON MILE</p>
-             <h2>MBA Global UFW SWS<span class="period">.</span></h2>
-           </div>
-         </div>
-         <div class="wp-content">
-            		<div data-elementor-type="wp-page" data-elementor-id="55609" class="elementor elementor-55609" data-elementor-post-type="page">
-				<div class="elementor-element elementor-element-7294cef e-flex e-con-boxed e-con e-parent" data-id="7294cef" data-element_type="container" data-e-type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-d2b5b0e elementor-widget elementor-widget-image" data-id="d2b5b0e" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-					</div>
-				</div>
-		<div class="elementor-element elementor-element-ddfaa13 e-flex e-con-boxed e-con e-parent" data-id="ddfaa13" data-element_type="container" data-e-type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-4de2b9f thim-ekits-heading-text-center elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="4de2b9f" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading text-center"><h3 class="title">MBA Global or   <span class="thim-color">MBA in Business Analytics</span></h3><div class="sub-heading"><p>Choose your Path</p>
-</div></div>				</div>
-				</div>
-					</div>
-				</div>
-		<div class="elementor-element elementor-element-105460d e-grid e-con-boxed e-con e-parent" data-id="105460d" data-element_type="container" data-e-type="container">
-					<div class="e-con-inner">
-		<div class="elementor-element elementor-element-f7e5717 e-con-full e-flex e-con e-child" data-id="f7e5717" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-a62ac4d elementor-widget elementor-widget-image" data-id="a62ac4d" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				<div class="elementor-element elementor-element-a991108 thim-ekits-heading-text-center elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="a991108" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading text-center"><h3 class="title">MBA Global  </h3><div class="sub-heading"><p>University of South Wales, UK</p>
-</div></div>				</div>
-				</div>
-				<div class="elementor-element elementor-element-6ee7f35 elementor-widget thim-widget-button" data-id="6ee7f35" data-element_type="widget" data-e-type="widget" data-widget_type="thim-button.default">
-				<div class="elementor-widget-container">
-					<a class="widget-button normal" href="/programs/global-mba/">READ MORE</a>				</div>
-				</div>
-				</div>
-		<div class="elementor-element elementor-element-2248bf0 e-con-full e-flex e-con e-child" data-id="2248bf0" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-bf36597 elementor-widget elementor-widget-image" data-id="bf36597" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<div style="width:100%; min-height:300px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; margin: 2rem 0; color: rgba(255,255,255,0.5);">Image Placeholder</div>															</div>
-				<div class="elementor-element elementor-element-800f2b4 thim-ekits-heading-text-center elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="800f2b4" data-element_type="widget" data-e-type="widget" data-widget_type="thim-heading.default">
-				<div class="elementor-widget-container">
-					<div class="sc_heading text-center"><h3 class="title">MBA in Business Analytics </h3><div class="sub-heading"><p>INTI International University, Malaysia</p>
-</div></div>				</div>
-				</div>
-				<div class="elementor-element elementor-element-fd396b0 elementor-widget thim-widget-button" data-id="fd396b0" data-element_type="widget" data-e-type="widget" data-widget_type="thim-button.default">
-				<div class="elementor-widget-container">
-					<a class="widget-button normal" href="/mba-in-business-analytics/">READ MORE</a>				</div>
-				</div>
-				</div>
-					</div>
-				</div>
-				</div>
-		
-         </div>
+        
+        <!-- Breadcrumbs -->
+        <nav class="about-breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="programs.html">Programs</a>
+          <span>/</span>
+          <span class="current">MBA Global Pathways</span>
+        </nav>
+
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">INTERNATIONAL DUAL-COUNTRY PATHWAYS</span>
+            <h2>Choose Your MBA Global Pathway<span class="period">.</span></h2>
+            <p class="section-lead">Lexicon MILE offers prestigious international management degrees in partnership with top global institutions in the United Kingdom and Malaysia.</p>
+          </div>
+        </div>
+
+        <div class="global-portal-grid">
+          
+          <!-- Pathway 1: USW UK -->
+          <div class="global-portal-card usw reveal">
+            <div class="global-portal-img-wrap">
+              <img src="images/gmba/Building-Top.webp" alt="University of South Wales, UK" class="global-portal-img">
+            </div>
+            <span class="global-portal-tag usw">United Kingdom · 2 Years</span>
+            <h3 class="global-portal-title">MBA Global · USW, UK</h3>
+            <p class="global-portal-sub">University of South Wales, UK</p>
+            <p class="global-portal-desc">
+              Complete 60 credits in India at Lexicon MILE Pune followed by 120 credits in the UK at the University of South Wales. Includes 3-4 months UK corporate internship and £30k-£40k average placements.
+            </p>
+            <a href="global-mba.html#mba-usw" class="btn btn-primary" style="justify-content: center;">
+              Explore UK Program <span class="btn-arrow">→</span>
+            </a>
+          </div>
+
+          <!-- Pathway 2: INTI Malaysia -->
+          <div class="global-portal-card inti reveal">
+            <div class="global-portal-img-wrap">
+              <img src="images/inti/inti-banner.jpeg" alt="INTI International University, Malaysia" class="global-portal-img">
+            </div>
+            <span class="global-portal-tag inti">Malaysia · 2 Years</span>
+            <h3 class="global-portal-title">MBA in Business Analytics</h3>
+            <p class="global-portal-sub">INTI International University, Malaysia</p>
+            <p class="global-portal-desc">
+              Offered in partnership with INTI International University (QS Top 300 Globally for Business). Features HyperBuild AI Lab integration, big data engineering, predictive modeling, and global capstone dissertations.
+            </p>
+            <a href="mba-in-business-analytics.html" class="btn btn-primary" style="justify-content: center; background: linear-gradient(135deg, #2ec4b6 0%, #38bdf8 100%); border-color: #2ec4b6;">
+              Explore Malaysia Program <span class="btn-arrow">→</span>
+            </a>
+          </div>
+
+        </div>
+
       </div>
     </section>
   </main>
+
   <div id="footer"></div>
   <script src="js/components.js"></script>
 </body>
