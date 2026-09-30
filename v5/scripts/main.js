@@ -90,7 +90,7 @@ const megaMenuData = {
                     <span style="color: #2ec4b6; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹7.50L + £7,500 ↗</span>
                   </a>
                   <a href="fee-bba.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
-                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">BBA (2026–29)</span>
+                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">BBA (2027–30)</span>
                     <span style="color: #f05624; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹5.70 Lakh Total ↗</span>
                   </a>
                   <a href="b-sc-fee-structure.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
@@ -115,7 +115,7 @@ const megaMenuData = {
   },
   'mba-global-fee-structure': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">MBA GLOBAL FEES</h4>
-               <span style="display: inline-block; padding: 3px 8px; background: rgba(46, 196, 182, 0.15); color: #2ec4b6; font-size: 11px; font-weight: 700; border-radius: 4px; margin-bottom: 8px;">Batch 2026–28 · UK Degree</span>
+               <span style="display: inline-block; padding: 3px 8px; background: rgba(46, 196, 182, 0.15); color: #2ec4b6; font-size: 11px; font-weight: 700; border-radius: 4px; margin-bottom: 8px;">Batch 2027–29 · UK Degree</span>
                <p style="color: #ffffff; font-size: 14px; font-weight: 700; margin: 0 0 6px 0;">India: ₹7,50,000 + GST &middot; UK: £7,500 GBP</p>
                <p style="color: #b1bfd2; font-size: 13px; line-height: 1.6; margin-bottom: 10px;">India component covers 60 credits delivered at Lexicon MILE (Terms 1–2) with structured installments. Progression to Term 3 at University of South Wales, UK (£7,500 payable directly to USW).</p>
                <a href="global-mba-usw-uk.html#fee-structure" class="mega-link" style="color: #2ec4b6; font-weight: 600; font-size: 12px;">View MBA Global Breakdown & Installments <span>↗</span></a>`,
@@ -123,7 +123,7 @@ const megaMenuData = {
   },
   'bba-fee-structure': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">BBA FEE STRUCTURE</h4>
-               <span style="display: inline-block; padding: 3px 8px; background: rgba(240, 86, 36, 0.15); color: #f05624; font-size: 11px; font-weight: 700; border-radius: 4px; margin-bottom: 8px;">Batch 2026–29 · SPPU Pune · NEP 2020</span>
+               <span style="display: inline-block; padding: 3px 8px; background: rgba(240, 86, 36, 0.15); color: #f05624; font-size: 11px; font-weight: 700; border-radius: 4px; margin-bottom: 8px;">Batch 2027–30 · SPPU Pune · NEP 2020</span>
                <p style="color: #ffffff; font-size: 14px; font-weight: 700; margin: 0 0 6px 0;">3-Year Grand Total: ₹5,70,000 <span style="font-weight: 400; color: #94a3b8; font-size: 12px;">(₹1,90,000 / year)</span></p>
                <p style="color: #b1bfd2; font-size: 13px; line-height: 1.6; margin-bottom: 10px;">Scheduled across 3 academic years: Enrolment (₹15,000), Part-A Tuition (₹20,000-₹35,000), Development Fee (₹3,500), and Part-B Industry Skills (₹1,51,500). Optional 4th Year Honours at ₹1,50,000.</p>
                <a href="fee-bba.html" class="mega-link" style="color: #f05624; font-weight: 600; font-size: 12px;">View Full BBA Fee Schedule & Bank A/C <span>↗</span></a>`,
@@ -131,7 +131,7 @@ const megaMenuData = {
   },
   'scholarships': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">SCHOLARSHIPS</h4>
-               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE offers scholarships designed to recognise academic excellence and support deserving students by reducing the financial burden of management education. For the PGDM 2026–28 batch, scholarships are based on entrance examination performance, with awards up to ₹1,00,000 for CAT, ₹75,000 for CMAT and ₹50,000 for MAT. Scholarships are limited and subject to applicable conditions.</p>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE offers scholarships designed to recognise academic excellence and support deserving students by reducing the financial burden of management education. For the PGDM 2027–29 batch, scholarships are based on entrance examination performance, with awards up to ₹1,00,000 for CAT, ₹75,000 for CMAT and ₹50,000 for MAT. Scholarships are limited and subject to applicable conditions.</p>
                <a href="scholarship.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Full Scholarship Criteria & Terms <span>↗</span></a>`,
     image: `<img src="images/hero.jpg" alt="Scholarships" class="mega-image">`
   },
@@ -171,7 +171,7 @@ const megaMenuData = {
   },
   'placements-overview': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">PLACEMENTS</h4>
-               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE’s placement ecosystem connects students with 200+ organisations across diverse sectors. For the 2024–26 PGDM batch, 500+ offers were received, with highest international package at ₹49 LPA and domestic at ₹18 LPA.</p>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE’s placement ecosystem connects students with 200+ organisations across diverse sectors. For the 2025–27 PGDM batch, 500+ offers were received, with highest international package at ₹49 LPA and domestic at ₹18 LPA.</p>
                <a href="placement.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Placement Report & Statistics <span>↗</span></a>`,
     image: `<img src="images/hero.jpg" alt="Placements" class="mega-image">`
   },
@@ -409,7 +409,7 @@ function applicationDialog(selected) {
   let saved = null;
   try { saved = JSON.parse(localStorage.getItem('lexicon-program-interest')); } catch (_) { /* Storage may be unavailable. */ }
   const choice = programs[selected] ? selected : (saved && programs[saved.program] ? saved.program : 'pgdm');
-  openDialog(`<p class="eyebrow">ADMISSIONS / 2026–27</p><h2 id="dialog-title">Your next chapter<br>starts here<span class="period">.</span></h2><p>Choose the path that matches your ambition. Save your program preference and explore what comes next.</p><form class="interest-form" id="interest-form"><label for="program-interest">Which program are you interested in?</label><select id="program-interest" name="program">${Object.entries(programs).map(([key, program]) => `<option value="${key}" ${key === choice ? 'selected' : ''}>${program.title}</option>`).join('')}</select><button type="submit" class="button">Save My Interest <span>↗</span></button><div id="interest-status" role="status"></div></form><p class="dialog-notice">This is an admissions preview, not an application submission. Your program preference stays on this device only. Official application links and admissions contact details will be added before launch.</p>`);
+  openDialog(`<p class="eyebrow">ADMISSIONS / 2027–28</p><h2 id="dialog-title">Your next chapter<br>starts here<span class="period">.</span></h2><p>Choose the path that matches your ambition. Save your program preference and explore what comes next.</p><form class="interest-form" id="interest-form"><label for="program-interest">Which program are you interested in?</label><select id="program-interest" name="program">${Object.entries(programs).map(([key, program]) => `<option value="${key}" ${key === choice ? 'selected' : ''}>${program.title}</option>`).join('')}</select><button type="submit" class="button">Save My Interest <span>↗</span></button><div id="interest-status" role="status"></div></form><p class="dialog-notice">This is an admissions preview, not an application submission. Your program preference stays on this device only. Official application links and admissions contact details will be added before launch.</p>`);
 }
 const information = {
   'admission-process': { eyebrow: 'ADMISSIONS / YOUR NEXT STEP', title: 'Begin with ambition.', body: '<p>Explore our programs, identify the learning experience that fits your goals, and prepare for the next stage of your journey.</p><ul><li>Explore PGDM, MBA Global, BBA and IHM / HMCT.</li><li>Review the official eligibility criteria when published.</li><li>Prepare your academic records and supporting documents.</li><li>Complete the official application when its link is available.</li></ul><p class="dialog-notice">Institution-specific selection stages, deadlines and application instructions are awaiting confirmation.</p>' },
@@ -439,7 +439,7 @@ function downloadBrochure() {
     'An industry-integrated business education built for ambitious leaders.', '',
     ...Object.values(programs).flatMap(program => [program.title.toUpperCase(), program.description, ...program.highlights.map(item => `• ${item}`), '']),
     'NEXT STEPS', 'Official application links, eligibility, duration, accreditation, program fees and scholarship policies are awaiting institutional confirmation.',
-    'Admissions cycle shown in this concept: 2026–27.', '',
+    'Admissions cycle shown in this concept: 2027–28.', '',
     'IMPORTANT', 'This is a locally generated text overview of the homepage concept. It is not an official institutional brochure. No application is submitted through this site. Claims and affiliations require verification before publication.'
   ].join('\n');
   const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
@@ -742,4 +742,5 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reducedM
 
     if (videoModalCloseBg) videoModalCloseBg.addEventListener('click', closeVideoModal);
     if (videoModalCloseBtn) videoModalCloseBtn.addEventListener('click', closeVideoModal);
+
 
