@@ -533,9 +533,22 @@
     }
 
     .inti-insight-icon {
-      font-size: 32px;
-      margin-bottom: 14px;
-      display: inline-block;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(46, 196, 182, 0.12);
+      border: 1px solid rgba(46, 196, 182, 0.3);
+      color: #2ec4b6;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .inti-insight-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
     }
 
     .inti-insight-title {
@@ -808,12 +821,23 @@
     }
 
     .inti-campus-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
       padding: 6px 14px;
       border-radius: 20px;
       font-size: 12.5px;
       color: #e2e8f0;
+    }
+
+    .inti-campus-chip svg {
+      width: 14px;
+      height: 14px;
+      color: #2ec4b6;
+      stroke: currentColor;
+      flex-shrink: 0;
     }
 
     /* Eligibility & Fees Cards */
@@ -1265,7 +1289,9 @@
         <div class="inti-insights-grid">
           
           <div class="inti-insight-card reveal">
-            <span class="inti-insight-icon">📈</span>
+            <span class="inti-insight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </span>
             <h3 class="inti-insight-title">Global Analytics Hub</h3>
             <p class="inti-insight-desc">
               India has cemented its stature as the world's analytics nerve center, with <strong>17.4% of all modern managerial job postings</strong> demanding direct data analysis and predictive modeling capabilities.
@@ -1273,7 +1299,9 @@
           </div>
 
           <div class="inti-insight-card reveal">
-            <span class="inti-insight-icon">🤖</span>
+            <span class="inti-insight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+            </span>
             <h3 class="inti-insight-title">AI-Powered Experience</h3>
             <p class="inti-insight-desc">
               From Amazon's recommendation engine to Netflix's real-time personalized delivery, predictive analytics and artificial intelligence drive multi-billion-dollar enterprise engagement.
@@ -1281,7 +1309,9 @@
           </div>
 
           <div class="inti-insight-card reveal">
-            <span class="inti-insight-icon">🌍</span>
+            <span class="inti-insight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </span>
             <h3 class="inti-insight-title">$196B+ Market by 2033</h3>
             <p class="inti-insight-desc">
               The worldwide business analytics market is projected to skyrocket past <strong>$196 Billion by 2033</strong>, generating an unprecedented shortage of leaders who understand both algorithms and commercial ROI.
@@ -1289,7 +1319,9 @@
           </div>
 
           <div class="inti-insight-card reveal">
-            <span class="inti-insight-icon">💼</span>
+            <span class="inti-insight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </span>
             <h3 class="inti-insight-title">Insights Over Guesswork</h3>
             <p class="inti-insight-desc">
               Subjective gut feelings cost organizations millions. The MBA in Business Analytics prepares you to execute high-stakes corporate decisions backed by empirical clarity and predictive certainty.
@@ -1673,11 +1705,26 @@
             </p>
             
             <div class="inti-campus-chips">
-              <span class="inti-campus-chip">🏛️ 82-Acre Flagship Campus</span>
-              <span class="inti-campus-chip">🌍 80+ Nationalities Represented</span>
-              <span class="inti-campus-chip">💻 High-Performance Analytics Labs</span>
-              <span class="inti-campus-chip">🏊 Olympic Sports Complex</span>
-              <span class="inti-campus-chip">✈️ 45 Mins to Kuala Lumpur</span>
+              <span class="inti-campus-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 2 2 7h20z"/></svg>
+                82-Acre Flagship Campus
+              </span>
+              <span class="inti-campus-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                80+ Nationalities Represented
+              </span>
+              <span class="inti-campus-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                High-Performance Analytics Labs
+              </span>
+              <span class="inti-campus-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+                Olympic Sports Complex
+              </span>
+              <span class="inti-campus-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg>
+                45 Mins to Kuala Lumpur
+              </span>
             </div>
           </div>
 

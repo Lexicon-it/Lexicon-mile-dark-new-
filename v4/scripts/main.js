@@ -36,7 +36,7 @@ const megaMenuData = {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">RANKING & ACCREDITATION</h4>
                <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE has been recognised through prestigious awards and accolades for excellence in management education, academic leadership and industry-oriented learning. These recognitions reflect achievements in placements, innovation, digital initiatives and leadership development.</p>
                <a href="awards-accolades.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Recognitions & Accreditations <span>↗</span></a>`,
-    image: `<img src="images/hospitality.jpg" alt="Ranking and Accreditation" class="mega-image">`
+    image: `<img src="images/campus/lexicon-campus-building.png" alt="Ranking and Accreditation" class="mega-image">`
   },
 
   // Programs Menu
@@ -67,7 +67,7 @@ const megaMenuData = {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">HMCT SPECIALIZATIONS</h4>
                <a href="b-sc-hospitality-studies.html" class="mega-link" style="margin-bottom: 4px;">B.Sc in Hospitality Studies <span>↗</span></a>
                <a href="diploma-in-hospitality-studies.html" class="mega-link">Diploma in Hospitality Studies <span>↗</span></a>`,
-    image: `<img src="images/hospitality.jpg" alt="HMCT" class="mega-image">`
+    image: `<img src="images/campus/lexicon-campus-building.png" alt="HMCT" class="mega-image">`
   },
 
   // Admissions Menu
@@ -145,7 +145,7 @@ const megaMenuData = {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">EDUCATION LOAN ASSISTANCE</h4>
                <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE supports students seeking financial assistance through partnerships with reputed banking institutions offering education loans at nominal interest rates. The admissions team provides end-to-end guidance with documentation and processing.</p>
                <a href="education-loan.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Explore Partner Banks & Loan Support <span>↗</span></a>`,
-    image: `<img src="images/hospitality.jpg" alt="Education Loan" class="mega-image">`
+    image: `<img src="images/campus/lexicon-campus-building.png" alt="Education Loan" class="mega-image">`
   },
 
   // Faculty & Mentors
@@ -167,7 +167,7 @@ const megaMenuData = {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">OUR RECRUITERS</h4>
                <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE has built a strong industry network of 200+ recruiters, providing students with career opportunities across leading national and multinational organisations for internships and placements.</p>
                <a href="our-recruiters.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View 200+ Recruiting Partners <span>↗</span></a>`,
-    image: `<img src="images/hospitality.jpg" alt="Our Recruiters" class="mega-image">`
+    image: `<img src="images/campus/lexicon-campus-building.png" alt="Our Recruiters" class="mega-image">`
   },
   'placements-overview': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">PLACEMENTS</h4>
