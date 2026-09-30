@@ -95,7 +95,7 @@ const lexiconGroup = createPage('Lexicon Group', `
             </div>
           </div>
           <div class="cta-image-wrapper">
-            <img src="images/lexicon-group.jpg" alt="Lexicon Group Overview" loading="lazy" onerror="this.src='images/hospitality.jpg'">
+            <img src="images/lexicon-group.jpg" alt="Lexicon Group Overview" loading="lazy" onerror="this.src='images/campus/lexicon-campus-building.png'">
             <span class="cta-arrow" aria-hidden="true">↗</span>
           </div>
         </div>

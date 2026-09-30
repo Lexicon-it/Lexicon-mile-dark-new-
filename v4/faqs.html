@@ -200,15 +200,19 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 22px;
       flex-shrink: 0;
     }
+    .faq-cat-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+    }
 
-    .faq-cat-icon.blue { background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.25); }
-    .faq-cat-icon.cyan { background: rgba(46, 196, 182, 0.12); border: 1px solid rgba(46, 196, 182, 0.25); }
-    .faq-cat-icon.purple { background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.25); }
-    .faq-cat-icon.orange { background: rgba(240, 86, 36, 0.12); border: 1px solid rgba(240, 86, 36, 0.25); }
-    .faq-cat-icon.gold { background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.25); }
+    .faq-cat-icon.blue { background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.25); color: #3b82f6; }
+    .faq-cat-icon.cyan { background: rgba(46, 196, 182, 0.12); border: 1px solid rgba(46, 196, 182, 0.25); color: #2ec4b6; }
+    .faq-cat-icon.purple { background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.25); color: #c084fc; }
+    .faq-cat-icon.orange { background: rgba(240, 86, 36, 0.12); border: 1px solid rgba(240, 86, 36, 0.25); color: #fb923c; }
+    .faq-cat-icon.gold { background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.25); color: #fbbf24; }
 
     .faq-cat-meta h2 {
       font-size: 22px;
@@ -411,7 +415,9 @@
       <!-- ============ FEES & SCHOLARSHIPS ============ -->
       <div class="faq-category-section" data-category="fees" id="faq-fees">
         <div class="faq-cat-header">
-          <div class="faq-cat-icon blue">💰</div>
+          <div class="faq-cat-icon blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
           <div class="faq-cat-meta">
             <h2>Fees &amp; Scholarships</h2>
             <p>Programme fees, payment schedules, and merit scholarship details</p>
@@ -491,7 +497,9 @@
       <!-- ============ ADMISSIONS & ELIGIBILITY ============ -->
       <div class="faq-category-section" data-category="admissions" id="faq-admissions">
         <div class="faq-cat-header">
-          <div class="faq-cat-icon cyan">📋</div>
+          <div class="faq-cat-icon cyan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="m9 14 2 2 4-4"/></svg>
+          </div>
           <div class="faq-cat-meta">
             <h2>Admissions &amp; Eligibility</h2>
             <p>Application process, entrance exams, and eligibility criteria</p>
@@ -560,7 +568,9 @@
       <!-- ============ PLACEMENTS & RECRUITERS ============ -->
       <div class="faq-category-section" data-category="placements" id="faq-placements">
         <div class="faq-cat-header">
-          <div class="faq-cat-icon purple">🏆</div>
+          <div class="faq-cat-icon purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+          </div>
           <div class="faq-cat-meta">
             <h2>Placements &amp; Recruiters</h2>
             <p>Placement packages, recruiting partners, and career support</p>
@@ -654,7 +664,9 @@
       <!-- ============ PROGRAMME & AI LAB ============ -->
       <div class="faq-category-section" data-category="programme" id="faq-programme">
         <div class="faq-cat-header">
-          <div class="faq-cat-icon orange">🤖</div>
+          <div class="faq-cat-icon orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+          </div>
           <div class="faq-cat-meta">
             <h2>Programme &amp; AI Lab</h2>
             <p>AI-integrated PGDM, certifications, specializations, and curriculum</p>
@@ -770,7 +782,9 @@
       <!-- ============ CAMPUS & STUDENT LIFE ============ -->
       <div class="faq-category-section" data-category="campus" id="faq-campus">
         <div class="faq-cat-header">
-          <div class="faq-cat-icon gold">🏫</div>
+          <div class="faq-cat-icon gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
           <div class="faq-cat-meta">
             <h2>Campus &amp; Student Life</h2>
             <p>Industry exposure, learning model, and why Lexicon MILE</p>
