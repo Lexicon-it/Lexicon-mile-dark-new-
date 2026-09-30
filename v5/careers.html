@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070C">
+  <title>Careers at Lexicon MILE | Faculty & Administrative Job Openings Pune</title>
+  <meta name="description" content="Explore exciting career opportunities at Lexicon MILE Pune. Join our distinguished faculty and corporate leadership team in shaping tomorrow's business leaders.">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/main.css">
+  
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --primary-light: #60a5fa;
+      --accent: #2ec4b6;
+      --card-bg: rgba(13, 20, 34, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-border-hover: rgba(59, 130, 246, 0.35);
+      --text-muted: #94a3b8;
+    }
+
+    .careers-hero {
+      padding: 140px 0 60px;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 0%, rgba(11, 99, 206, 0.18) 0%, transparent 70%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .careers-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .careers-breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .careers-breadcrumb a:hover {
+      color: #ffffff;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--primary-light);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 10px #22c55e;
+    }
+
+    .careers-hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .careers-hero p.hero-lead {
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      color: #cbd5e1;
+      max-width: 780px;
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+
+    .hero-action-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-glow-primary {
+      background: linear-gradient(135deg, #0b63ce 0%, #073b91 100%);
+      color: #ffffff;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 20px rgba(11, 99, 206, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: all 0.25s ease;
+    }
+
+    .btn-glow-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(11, 99, 206, 0.5);
+    }
+
+    .btn-outline-secondary {
+      background: rgba(255, 255, 255, 0.04);
+      color: #ffffff;
+      padding: 14px 26px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Benefits Section */
+    .careers-benefits {
+      padding: 80px 0;
+      background: rgba(5, 7, 12, 0.6);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .benefit-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 32px 26px;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(12px);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--card-border-hover);
+      background: rgba(13, 20, 34, 0.95);
+    }
+
+    .benefit-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-light);
+      font-size: 24px;
+    }
+
+    .benefit-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .benefit-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Openings Section */
+    .openings-section {
+      padding: 80px 0 100px;
+    }
+
+    .filter-pills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      padding: 9px 18px;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    .filter-btn.active {
+      background: var(--bright);
+      border-color: var(--bright);
+      color: #ffffff;
+      box-shadow: 0 2px 12px rgba(11, 99, 206, 0.4);
+    }
+
+    .jobs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .job-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 28px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(12px);
+    }
+
+    .job-card:hover {
+      border-color: var(--card-border-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .job-meta-left {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-width: 650px;
+    }
+
+    .job-tags {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .job-tag {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .job-tag.academic {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .job-tag.corporate {
+      background: rgba(46, 196, 182, 0.15);
+      color: #2ec4b6;
+      border: 1px solid rgba(46, 196, 182, 0.3);
+    }
+
+    .job-tag.admin {
+      background: rgba(168, 85, 247, 0.15);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+
+    .job-tag.type {
+      background: rgba(255, 255, 255, 0.06);
+      color: #94a3b8;
+    }
+
+    .job-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .job-desc {
+      font-size: 14px;
+      color: #94a3b8;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .job-details-chips {
+      display: flex;
+      gap: 16px;
+      font-size: 13px;
+      color: #cbd5e1;
+      margin-top: 4px;
+      flex-wrap: wrap;
+    }
+
+    .chip-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-apply-job {
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-apply-job:hover {
+      background: var(--bright);
+      color: #ffffff;
+      border-color: var(--bright);
+      box-shadow: 0 4px 16px rgba(11, 99, 206, 0.4);
+    }
+
+    /* Application Process */
+    .process-section {
+      padding: 80px 0;
+      background: rgba(7, 12, 22, 0.6);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .step-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      position: relative;
+    }
+
+    .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(11, 99, 206, 0.2);
+      border: 1px solid rgba(11, 99, 206, 0.4);
+      color: var(--primary-light);
+      font-weight: 700;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .step-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 8px 0;
+    }
+
+    .step-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Contact Recruitment Callout */
+    .recruitment-callout {
+      margin: 80px 0 40px;
+      background: linear-gradient(135deg, rgba(11, 99, 206, 0.15) 0%, rgba(6, 27, 69, 0.5) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 24px;
+      padding: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 32px;
+      backdrop-filter: blur(16px);
+    }
+
+    .callout-info h3 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 10px 0;
+    }
+
+    .callout-info p {
+      font-size: 15px;
+      color: #cbd5e1;
+      max-width: 620px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .callout-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .careers-hero { padding: 120px 0 50px; }
+      .recruitment-callout { padding: 32px 24px; }
+      .job-card { flex-direction: column; align-items: flex-start; }
+      .btn-apply-job { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main id="main">
+    <!-- ============ HERO SECTION ============ -->
+    <section class="careers-hero">
+      <div class="container">
+        <nav class="careers-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span style="color:#ffffff;">Careers at Lexicon MILE</span>
+        </nav>
+
+        <div class="hero-badge">Join Our Academic & Leadership Community</div>
+
+        <h1>Shape Tomorrow's<br>Business Leaders<span style="color:var(--bright);">.</span></h1>
+        
+        <p class="hero-lead">
+          From Classroom to Boardroom: Your Career Journey Starts Here. Lexicon MILE invites distinguished academicians, industry executives, and passionate researchers to join eastern Pune's most sought-after B-School.
+        </p>
+
+        <div class="hero-action-row">
+          <a href="#openings" class="btn-glow-primary">
+            <span>Explore Current Openings</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="mailto:careers@mile.education?subject=Application%20for%20Faculty%20/%20Staff%20Role%20at%20Lexicon%20MILE" class="btn-outline-secondary">
+            <span>Send CV to HR Desk</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY WORK WITH US ============ -->
+    <section class="careers-benefits">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">THE LEXICON ADVANTAGE</p>
+            <h2>Why Build Your Career at Lexicon MILE<span style="color:var(--bright);">.</span></h2>
+          </div>
+          <p>We nurture an inspiring culture of academic autonomy, research excellence, and institutional innovation backed by the premier Sukhdev and Kamal Sharma Educational Trust.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Best-in-Class Pay & Relocation</h3>
+            <p>Attractive remuneration matching top UGC/AICTE benchmarks, residential benefits, and a seamless bonus to cover relocation.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3>Research & Academic Autonomy</h3>
+            <p>Generous research grants, conference travel sponsorship, and freedom to introduce cutting-edge industry electives and case studies.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>Global University Tie-Ups</h3>
+            <p>Collaborate with international partner institutions including University of South Wales (UK) and University of New Haven (USA).</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Vibrant Culture & Growth</h3>
+            <p>Work with forward-thinking leadership, an open-door policy, modern smart lecture theaters, and state-of-the-art AI labs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CURRENT OPENINGS ============ -->
+    <section class="openings-section" id="openings">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">EXPLORE OPPORTUNITIES</p>
+            <h2>Current Open Positions<span style="color:var(--bright);">.</span></h2>
+          </div>
+          <p>We are actively inviting applications for distinguished faculty and leadership positions for the upcoming academic terms.</p>
+        </div>
+
+        <div class="filter-pills" id="job-filters">
+          <button class="filter-btn active" data-filter="all">All Roles (5)</button>
+          <button class="filter-btn" data-filter="academic">Faculty & Academic (3)</button>
+          <button class="filter-btn" data-filter="corporate">Corporate & Placements (1)</button>
+          <button class="filter-btn" data-filter="admin">Admissions & Counseling (1)</button>
+        </div>
+
+        <div class="jobs-list">
+          <!-- Job 1 -->
+          <div class="job-card" data-category="academic">
+            <div class="job-meta-left">
+              <div class="job-tags">
+                <span class="job-tag academic">Faculty Position</span>
+                <span class="job-tag type">Full-Time &middot; Wagholi Pune</span>
+                <span class="job-tag type">AICTE Approved PGDM</span>
+              </div>
+              <h3>Professor / Associate Professor – Marketing & Digital Business</h3>
+              <p class="job-desc">
+                Leading classroom instruction, industry consulting, and empirical research in Digital Marketing, Brand Strategy, Consumer Behavior, and MarTech for 2-Year PGDM & Global MBA cohorts.
+              </p>
+              <div class="job-details-chips">
+                <div class="chip-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span>Min 5-8 Years Exp</span>
+                </div>
+                <div class="chip-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  <span>Ph.D / MBA with NET</span>
+                </div>
+              </div>
+            </div>
+            <a href="mailto:careers@mile.education?subject=Application%20for%20Professor%20-%20Marketing%20&amp;body=Dear%20Recruitment%20Team%2C%0A%0AI%20am%20applying%20for%20the%20position%20of%20Professor%20/%20Associate%20Professor%20-%20Marketing.%20Please%20find%20my%20attached%20CV." class="btn-apply-job">
+              <span>Apply via Email</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="job-card" data-category="academic">
+            <div class="job-meta-left">
+              <div class="job-tags">
+                <span class="job-tag academic">Faculty Position</span>
+                <span class="job-tag type">Full-Time &middot; Wagholi Pune</span>
+                <span class="job-tag type">Business Analytics</span>
+              </div>
+              <h3>Assistant / Associate Professor – AI, Business Analytics & FinTech</h3>
+              <p class="job-desc">
+                Facilitating hands-on data analytics, predictive modeling, machine learning for management, and FinTech systems in state-of-the-art computer labs. Strong Python/R/SQL orientation preferred.
+              </p>
+              <div class="job-details-chips">
+                <div class="chip-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span>Min 3-6 Years Exp</span>
+                </div>
+                <div class="chip-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  <span>M.Tech / MBA / Ph.D</span>
+                </div>
+              </div>
+            </div>
+            <a href="mailto:careers@mile.education?subject=Application%20for%20Faculty%20-%20AI%20and%20Business%20Analytics&amp;body=Dear%20Recruitment%20Team%2C%0A%0AI%20am%20applying%20for%20the%20position%20of%20Faculty%20in%20AI%20%26%20Business%20Analytics.%20Please%20find%20my%20attached%20CV." class="btn-apply-job">
+              <span>Apply via Email</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Job 3 -->
+          <div class="job-card" data-category="academic">
+            <div class="job-meta-left">
+              <div class="job-tags">
+                <span class="job-tag academic">Faculty Position</span>
+                <span class="job-tag type">Full-Time &middot; Wagholi Pune</span>
+                <span class="job-tag type">Finance & Banking</span>
+              </div>
+              <h3>Assistant Professor – Corporate Finance & Wealth Management</h3>
+              <p class="job-desc">
+                Conducting courses in Financial Modeling, Valuation, Investment Banking, and Security Analysis. Practical industry background or CFA/CA qualification is highly valued.
+              </p>
+              <div class="job-details-chips">
+                <div class="chip-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span>Min 3-5 Years Exp</span>
+                </div>
+                <div class="chip-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  <span>CA / CFA / MBA Finance</span>
+                </div>
+              </div>
+            </div>
+            <a href="mailto:careers@mile.education?subject=Application%20for%20Faculty%20-%20Finance&amp;body=Dear%20Recruitment%20Team%2C%0A%0AI%20am%20applying%20for%20the%20position%20of%20Faculty%20in%20Corporate%20Finance.%20Please%20find%20my%20attached%20CV." class="btn-apply-job">
+              <span>Apply via Email</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Job 4 -->
+          <div class="job-card" data-category="corporate">
+            <div class="job-meta-left">
+              <div class="job-tags">
+                <span class="job-tag corporate">Placement Cell</span>
+                <span class="job-tag type">Full-Time &middot; Wagholi Pune</span>
+                <span class="job-tag type">Industry Relations</span>
+              </div>
+              <h3>Senior Manager – Corporate Relations & Campus Placements</h3>
+              <p class="job-desc">
+                Strengthening national and international recruiter ties, driving campus placement drives, bringing Fortune 500 recruiters for internships and final placements, and organizing executive guest series.
+              </p>
+              <div class="job-details-chips">
+                <div class="chip-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span>Min 6-10 Years Exp</span>
+                </div>
+                <div class="chip-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  <span>Post Graduate Degree</span>
+                </div>
+              </div>
+            </div>
+            <a href="mailto:careers@mile.education?subject=Application%20for%20Senior%20Manager%20-%20Placements&amp;body=Dear%20Recruitment%20Team%2C%0A%0AI%20am%20applying%20for%20the%20position%20of%20Senior%20Manager%20-%20Corporate%20Relations%20%26%20Placements.%20Please%20find%20my%20attached%20CV." class="btn-apply-job">
+              <span>Apply via Email</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Job 5 -->
+          <div class="job-card" data-category="admin">
+            <div class="job-meta-left">
+              <div class="job-tags">
+                <span class="job-tag admin">Admissions Team</span>
+                <span class="job-tag type">Full-Time &middot; Wagholi Pune</span>
+                <span class="job-tag type">Student Outreach</span>
+              </div>
+              <h3>Senior Admissions Advisor & Student Counseling Specialist</h3>
+              <p class="job-desc">
+                Counseling prospective management candidates, conducting admission webinars, evaluating eligibility for PGDM/Global MBA programs, and coordinating pan-India entrance exam interview cycles.
+              </p>
+              <div class="job-details-chips">
+                <div class="chip-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span>Min 3-5 Years Exp</span>
+                </div>
+                <div class="chip-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  <span>Bachelor's / Master's</span>
+                </div>
+              </div>
+            </div>
+            <a href="mailto:careers@mile.education?subject=Application%20for%20Senior%20Admissions%20Advisor&amp;body=Dear%20Recruitment%20Team%2C%0A%0AI%20am%20applying%20for%20the%20position%20of%20Senior%20Admissions%20Advisor.%20Please%20find%20my%20attached%20CV." class="btn-apply-job">
+              <span>Apply via Email</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ============ APPLICATION CALLOUT ============ -->
+        <div class="recruitment-callout reveal">
+          <div class="callout-info">
+            <h3>Don't See Your Exact Role?</h3>
+            <p>
+              We are constantly seeking outstanding academicians, researchers, adjunct corporate mentors, and administrative leaders. Send your open CV along with a summary of your key strengths to our recruitment team.
+            </p>
+          </div>
+          <div class="callout-actions">
+            <a href="mailto:careers@mile.education?subject=General%20Application%20-%20Lexicon%20MILE%20Careers" class="btn-glow-primary">
+              <span>Email: careers@mile.education</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <span style="font-size: 13px; color: #94a3b8; text-align: center;">Direct Recruitment Desk: +91 99674 27278</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SELECTION PROCESS ============ -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">TRANSPARENT RECRUITMENT</p>
+            <h2>How Our Hiring Process Works<span style="color:var(--bright);">.</span></h2>
+          </div>
+          <p>Our collaborative four-stage selection process ensures alignment with Lexicon MILE's institutional values and educational excellence.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h4>Profile Scrutiny</h4>
+            <p>Our Board of Studies and HR team review your academic record, publication index, or corporate pedigree.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h4>Initial Dialogue</h4>
+            <p>A virtual or on-campus discussion on your research passions, teaching philosophy, and career objectives.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h4>Teaching Demo</h4>
+            <p>For faculty positions: interactive simulation with faculty peers and a presentation before our Academic Council.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">04</div>
+            <h4>Offer & Onboarding</h4>
+            <p>Competitive offer issuance, relocation grant disbursement, and structured academic orientation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/components.js"></script>
+  <script>
+    // Simple filter tabs for job openings
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const jobCards = document.querySelectorAll('.job-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter');
+
+          jobCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
