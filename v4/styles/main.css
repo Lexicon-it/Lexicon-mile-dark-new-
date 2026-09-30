@@ -12923,3 +12923,579 @@ button {
 }
 
 
+/* ==========================================================================
+   GLOBAL RESPONSIVE SAFEGUARDS & MOBILE OPTIMIZATIONS
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Prevent horizontal scrolling globally without breaking sticky headers */
+  html, body {
+    overflow-x: clip !important;
+    max-width: 100vw;
+  }
+
+  /* Images, videos, and objects must scale */
+  img, video, iframe, embed, object {
+    max-width: 100% !important;
+    height: auto;
+  }
+  
+  /* Enable horizontal scrolling for overflowing tables */
+  .table-container, table, .hmct-table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap; /* Prevents text from squishing unreadably */
+  }
+
+  /* Form inputs */
+  input, select, textarea {
+    max-width: 100%;
+  }
+
+  /* Reduce massive paddings on mobile */
+  .section, section, .hmct-section, .hmct-section-alt {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    max-width: 100% !important;
+  }
+
+  /* Prevent flex layouts from overflowing */
+  .cta-buttons, .hero-cta, .hmct-hero-cta, .buttons-row {
+    flex-wrap: wrap !important;
+    justify-content: center;
+  }
+  
+  /* Fallback for components missing explicit mobile grid overrides */
+  .advantages-grid, .features-eligibility-grid, .gallery-grid, 
+  .recruiters-strip, .curriculum-grid, .stats-strip, .roles-grid, .bank-details-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  
+  .final-cta .cta-main-layout {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  /* Tablet fallbacks */
+  .advantages-grid, .features-eligibility-grid, .gallery-grid, 
+  .curriculum-grid, .roles-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .recruiters-strip, .stats-strip {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .final-cta .cta-main-layout {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* ==========================================================================
+   MOBILE HEADER FIXES (Hamburger Menu & Logo Alignment)
+   ========================================================================== */
+@media (max-width: 991px) {
+  /* Move hamburger to the right side */
+  .site-header .header-inner {
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+  
+  .menu-toggle {
+    margin-left: auto !important;
+  }
+  
+  /* Ensure logo fits cleanly within the header and doesn't overlap the bottom line */
+  .site-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .brand-logo {
+    max-height: 44px !important;
+    width: auto !important;
+    object-fit: contain;
+    margin-bottom: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   FURTHER MOBILE REFINEMENTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Reduce container and section LR padding to 5px as requested */
+  .section, section, .hmct-section, .hmct-section-alt {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  .container {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  
+  /* Fix massive gap at bottom of hero section caused by min-height */
+  .hero {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 20px !important;
+  }
+  
+  /* Reduce gap between 'LEARN IT, BUILD IT, LIVE IT' */
+  #hero-heading {
+    line-height: 1 !important;
+  }
+  #hero-heading br {
+    display: block;
+    content: "";
+    margin-top: -8px;
+  }
+
+  /* 'Where Ambition Meets Opportunity' recruiter grid 2 columns */
+  .recruiter-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+}
+/* ==========================================================================
+   PATCH 3: HEADER LINE FIX, STICKY DARK BG, AND STUDENT SPEAK LAYOUT
+   ========================================================================== */
+
+/* 1. Fix "Students Speak" to have the same layout for all (like 2 and 3) */
+.stories-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+.story-stack {
+    display: contents !important;
+}
+.story-card.story-feature {
+    height: 245px !important;
+}
+@media (max-width: 991px) {
+  .stories-grid {
+      grid-template-columns: 1fr !important;
+  }
+}
+
+/* 2. Fix mobile header, recruiter grid, and practically gap */
+@media (max-width: 991px) {
+  /* Hide the top-bar completely on mobile so its border line disappears */
+  .top-bar {
+      display: none !important;
+  }
+
+  /* Make header sticky with dark bg, remove negative margin to stop overlapping */
+  .site-header {
+      background: #070c16f5 !important;
+      border-bottom: 1px solid #ffffff30 !important;
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 100 !important;
+      margin-bottom: 0 !important;
+      backdrop-filter: blur(15px);
+  }
+
+  .brand-logo {
+      max-height: 40px !important; 
+  }
+
+  /* Since header is no longer overlapping, adjust hero padding */
+  .hero, .pgdm-hero-banner {
+      padding-top: 85px !important;
+  }
+
+  /* Force grid instead of flex for recruiter grid so 1x2 layout applies */
+  .recruiter-grid, .recruiters-strip {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 12px !important;
+  }
+  .recruiter-card {
+      width: 100% !important;
+  }
+
+  /* Reduce massive 220px gap between Learn it, Build it, Live it */
+  .practically-card.stack-card:not(:last-child) {
+      margin-bottom: 30px !important;
+  }
+}
+/* ==========================================================================
+   PATCH 4: REMOVE LR PADDING ON MOBILE
+   ========================================================================== */
+@media (max-width: 991px) {
+  .section, section, .hmct-section, .hmct-section-alt {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  /* If programs grid has gaps or margins that add to the sides, clear them */
+  .programs-grid {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+/* ==========================================================================
+   PATCH 5: SET LR PADDING TO 2PX ON MOBILE
+   ========================================================================== */
+@media (max-width: 991px) {
+  .section, section, .hmct-section, .hmct-section-alt {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+  }
+  .container {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+  }
+}
+/* ==========================================================================
+   PATCH 6: LEARN IT, BUILD IT, LIVE IT IMAGE FULL WIDTH
+   ========================================================================== */
+@media (max-width: 991px) {
+  /* Reduce the card's horizontal padding so the image can stretch edge-to-edge (with 2px gap) */
+  .practically-card.stack-card {
+      padding: 18px 2px 22px !important;
+  }
+
+  /* Restore padding for the text content so it doesn't touch the edge of the card */
+  .stack-content-col {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+  }
+  
+  /* Match the image border radius to the card's 24px radius minus the 2px padding */
+  .stack-media-col {
+      border-radius: 22px !important;
+  }
+  .stack-media-col img {
+      border-radius: 22px !important;
+  }
+}
+/* ==========================================================================
+   PATCH 7: FORCE LEARN IT IMAGE FULL WIDTH
+   ========================================================================== */
+@media (max-width: 991px) {
+  /* Force the flex container to stretch children to full width instead of centering */
+  .stack-card-inner {
+      align-items: stretch !important;
+      width: 100% !important;
+  }
+  
+  /* Force media column to 100% width */
+  .stack-media-col {
+      width: 100% !important;
+      border-radius: 22px !important;
+      margin: 0 !important;
+  }
+
+  /* Make sure the image covers the container */
+  .stack-img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      border-radius: 22px !important;
+  }
+  
+  /* Re-assert the card padding to ensure 2px left/right gap */
+  .practically-card.stack-card {
+      padding: 18px 2px 22px !important;
+      width: 100% !important;
+  }
+}
+/* ==========================================================================
+   PATCH 8: ALIGN IMAGE AND CONTENT WIDTH
+   ========================================================================== */
+@media (max-width: 991px) {
+  /* Set consistent padding on the white card so image and text align perfectly */
+  .practically-card.stack-card {
+      padding: 18px 16px 22px !important;
+  }
+
+  /* Remove the individual text padding since the card now handles it */
+  .stack-content-col {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+  }
+}
+/* ==========================================================================
+   PATCH 9: LEARN IT TEXT BEFORE IMAGE ON MOBILE
+   ========================================================================== */
+@media (max-width: 991px) {
+  /* Reorder the columns so text comes first */
+  .stack-content-col {
+      order: 1 !important;
+      padding-top: 5px !important;     /* Card already provides top padding */
+      padding-bottom: 20px !important; /* Creates a clean gap between text and image */
+  }
+  
+  .stack-media-col {
+      order: 2 !important;
+  }
+}
+/* ==========================================================================
+   PATCH 10: "LEARN IT" BADGE BEFORE IMAGE, TITLE/DESC AFTER IMAGE
+   ========================================================================== */
+@media (max-width: 991px) {
+  /* Flatten the content column so its children become direct flex items of stack-card-inner */
+  .stack-content-col {
+      display: contents !important;
+  }
+
+  /* 1. The Badge comes first */
+  .stack-tag-badge {
+      order: 1 !important;
+      margin-top: 5px !important;
+      margin-bottom: 20px !important; /* Gap between badge and image */
+  }
+
+  /* 2. The Image comes right after the badge */
+  .stack-media-col {
+      order: 2 !important;
+      margin-bottom: 20px !important; /* Gap between image and title */
+  }
+
+  /* 3. The Title comes after the image */
+  .stack-card-title {
+      order: 3 !important;
+      margin-top: 0 !important;
+  }
+
+  /* 4. The Description or Outcome Box comes last */
+  .stack-card-desc,
+  .stack-outcome-box {
+      order: 4 !important;
+  }
+}
+/* ==========================================================================
+   PATCH 11: HERO BOTTOM TEXT RIGHT PADDING ON MOBILE
+   ========================================================================== */
+@media (max-width: 991px) {
+  .hero-bottom > p {
+      text-align: right !important;
+      padding-right: 14px !important;
+  }
+}
+/* ==========================================================================
+   PATCH 12: UNIVERSAL MOBILE RESPONSIVENESS (FOOTER UNTOUCHED)
+   ========================================================================== */
+@media (max-width: 991px) {
+  /* Restore the original footer container padding since patch 4/5 stripped it globally */
+  .site-footer .container {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+  }
+
+  /* 3. Universal grid fixes for other pages */
+  /* Any element that behaves as a grid should gracefully collapse to 1 column if it's struggling */
+  section[class*="grid"] {
+      grid-template-columns: 1fr !important;
+  }
+  
+  /* Ensure images don't break out of containers */
+  img {
+      max-width: 100% !important;
+      height: auto;
+  }
+}
+/* ==========================================================================
+   PATCH 13: FOOTER BRANDING INLINE (LOGO LEFT, TEXT RIGHT)
+   ========================================================================== */
+@media (max-width: 991px) {
+  .footer-brand {
+      display: grid !important;
+      grid-template-columns: auto 1fr !important;
+      gap: 0 20px !important; /* 20px gap between logo and text */
+      align-items: start !important;
+  }
+  
+  /* Place logo in the left column, spanning all 3 rows */
+  .footer-brand > a.brand {
+      grid-column: 1 !important;
+      grid-row: 1 / span 3 !important;
+  }
+  
+  /* Stack the text elements in the right column */
+  .footer-brand > p {
+      grid-column: 2 !important;
+      grid-row: 1 !important;
+      margin-top: 0 !important; /* Override the 20px margin */
+  }
+  
+  .footer-brand > span.footer-location {
+      grid-column: 2 !important;
+      grid-row: 2 !important;
+      margin-top: 5px !important;
+  }
+  
+  .footer-brand > a.text-link {
+      grid-column: 2 !important;
+      grid-row: 3 !important;
+      margin-top: 10px !important;
+  }
+}
+/* ==========================================================================
+   PATCH 14: ALIGN FOOTER BRAND TEXT TO RIGHT
+   ========================================================================== */
+@media (max-width: 991px) {
+  .footer-brand > p,
+  .footer-brand > span.footer-location,
+  .footer-brand > a.text-link {
+      text-align: right !important;
+      justify-self: end !important; 
+  }
+}
+/* ==========================================================================
+   PATCH 15: INCREASE FOOTER LOGO SIZE
+   ========================================================================== */
+@media (max-width: 991px) {
+  .footer-brand .brand-logo {
+      max-height: 75px !important; /* Increased from 40px */
+      width: auto !important;
+  }
+}
+/* ==========================================================================
+   PATCH 16: MOBILE ACCORDION MENU & SLIDE-IN
+   ========================================================================== */
+
+/* 1. Slide In From Left */
+.mobile-menu[open] {
+    animation: slideInLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* 2. Accordion Styling */
+.mobile-nav-details {
+    width: 100%;
+}
+
+.mobile-nav-details summary {
+    font-size: 21px;
+    letter-spacing: -.03em;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+}
+
+.mobile-nav-details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Push the number to the right */
+.mobile-nav-details summary span {
+    font-size: 14px;
+    color: var(--muted);
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+/* Add custom dropdown arrow */
+.mobile-nav-details summary::after {
+    content: "▼";
+    font-size: 12px;
+    color: var(--muted);
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav-details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+/* Remove bottom border from summary when open */
+.mobile-nav-details[open] summary {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 3. Submenu Links */
+.mobile-submenu {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.02);
+}
+
+.mobile-submenu a {
+    font-size: 17px !important;
+    padding: 14px 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+}
+
+.mobile-submenu a:last-child {
+    border-bottom: none !important;
+}
+
+/* Responsive adjustments for smaller screens */
+@media(max-width: 374px) {
+    .mobile-nav-details summary {
+        font-size: 18px;
+    }
+    .mobile-submenu a {
+        font-size: 15px !important;
+    }
+}
+/* ==========================================================================
+   PATCH 17: MOBILE MENU BLACK BG & NO BORDERS
+   ========================================================================== */
+@media (max-width: 991px) {
+  /* 1. Make the background pure black */
+  .mobile-menu {
+      background: #000000 !important;
+  }
+  
+  /* 2. Remove all borders between menu items and submenus */
+  .mobile-menu nav a,
+  .mobile-nav-details summary,
+  .mobile-nav-details[open] summary,
+  .mobile-submenu,
+  .mobile-submenu a {
+      border-bottom: none !important;
+  }
+  
+  /* 3. Push the custom dropdown arrow all the way to the right */
+  .mobile-nav-details summary::after {
+      margin-left: auto !important;
+  }
+}
+/* ==========================================================================
+   PATCH 18: GLOBAL STICKY HEADER (DESKTOP & MOBILE)
+   ========================================================================== */
+
+#header, 
+.site-header {
+    position: sticky !important;
+    top: -1px !important; /* Prevents 1px gap bug on some browsers */
+    z-index: 9999 !important;
+    background: #070c16fa !important; /* Solid dark background */
+    backdrop-filter: blur(8px);
+    width: 100%;
+    margin-top: 0 !important;
+}
