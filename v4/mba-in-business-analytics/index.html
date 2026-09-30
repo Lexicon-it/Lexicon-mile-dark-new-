@@ -60,17 +60,13 @@
       position: relative;
       padding-top: 140px;
       padding-bottom: 75px;
-      background: var(--inti-bg-gradient), url('images/inti/inti-banner.jpeg') center/cover no-repeat;
+      background: var(--inti-bg-gradient);
       border-bottom: 1px solid var(--border);
       overflow: hidden;
     }
 
     .inti-hero-banner::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(5, 7, 12, 0.88) 0%, rgba(5, 7, 12, 0.98) 100%);
-      pointer-events: none;
+      display: none !important;
     }
 
     .inti-hero-container {
