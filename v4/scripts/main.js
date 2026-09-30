@@ -6,7 +6,7 @@ const megaMenuData = {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">OVERVIEW</h4>
                <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Founded in 2006 in Pune, The Lexicon Group has evolved into a premier educational and business leader, empowering individuals at every stage of life through diverse initiatives. The group continues to create opportunities for learning, growth and development with a strong focus on excellence.</p>
                <a href="about-lexicon.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Learn More About Lexicon MILE <span>↗</span></a>`,
-    image: `<img src="images/portrait-1.jpg" alt="About Lexicon" class="mega-image">`
+    image: `<img src="images/06.Banner.png" alt="About Lexicon" class="mega-image">`
   },
   'lexicon-group': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">LEXICON GROUP</h4>
@@ -65,9 +65,8 @@ const megaMenuData = {
   },
   'hmct': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">HMCT SPECIALIZATIONS</h4>
-               <a href="hmct-b-sc-hospitality-studies.html" class="mega-link" style="margin-bottom: 4px;">B.Sc in Hospitality Studies <span>↗</span></a>
-               <a href="hmct-b-sc-hospitality-studies.html" class="mega-link" style="margin-bottom: 4px;">Diploma in Hospitality Studies <span>↗</span></a>
-               <a href="hmct-b-sc-hospitality-studies.html" class="mega-link">Lexicon MILE H-School <span>↗</span></a>`,
+               <a href="b-sc-hospitality-studies.html" class="mega-link" style="margin-bottom: 4px;">B.Sc in Hospitality Studies <span>↗</span></a>
+               <a href="diploma-in-hospitality-studies.html" class="mega-link">Diploma in Hospitality Studies <span>↗</span></a>`,
     image: `<img src="images/hospitality.jpg" alt="HMCT" class="mega-image">`
   },
 
@@ -87,12 +86,20 @@ const megaMenuData = {
                     <span style="color: #8cb4f5; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹6.95 Lakh + Tax ↗</span>
                   </a>
                   <a href="global-mba-usw-uk.html#fee-structure" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
-                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">MBA Global (USW UK)</span>
+                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">MBA Global</span>
                     <span style="color: #2ec4b6; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹7.50L + £7,500 ↗</span>
                   </a>
                   <a href="fee-bba.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
                     <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">BBA (2026–29)</span>
                     <span style="color: #f05624; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹5.70 Lakh Total ↗</span>
+                  </a>
+                  <a href="b-sc-fee-structure.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
+                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">B.Sc Hospitality (3 Yrs)</span>
+                    <span style="color: #38bdf8; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹6.50 Lakh Total ↗</span>
+                  </a>
+                  <a href="diploma-in-hospitality-studies-fees.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
+                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">Diploma Hospitality (1 Yr)</span>
+                    <span style="color: #38bdf8; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹1.50 Lakh Total ↗</span>
                   </a>
                 </div>
                <p style="color: #b1bfd2; font-size: 12.5px; line-height: 1.5; margin: 0;">Comprehensive breakdown including statutory tuition, development fees, scheduled milestone installments, wire transfer account numbers, and 100% educational loan facilitation.</p>`,
@@ -107,7 +114,7 @@ const megaMenuData = {
     image: `<img src="images/classroom.jpg" alt="PGDM Fees" class="mega-image">`
   },
   'mba-global-fee-structure': {
-    overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">MBA GLOBAL (USW UK) FEES</h4>
+    overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">MBA GLOBAL FEES</h4>
                <span style="display: inline-block; padding: 3px 8px; background: rgba(46, 196, 182, 0.15); color: #2ec4b6; font-size: 11px; font-weight: 700; border-radius: 4px; margin-bottom: 8px;">Batch 2026–28 · UK Degree</span>
                <p style="color: #ffffff; font-size: 14px; font-weight: 700; margin: 0 0 6px 0;">India: ₹7,50,000 + GST &middot; UK: £7,500 GBP</p>
                <p style="color: #b1bfd2; font-size: 13px; line-height: 1.6; margin-bottom: 10px;">India component covers 60 credits delivered at Lexicon MILE (Terms 1–2) with structured installments. Progression to Term 3 at University of South Wales, UK (£7,500 payable directly to USW).</p>
@@ -222,7 +229,7 @@ const megaMenuData = {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">CONTACT US</h4>
                <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Connect with Lexicon MILE for admission, placement and general enquiries through dedicated support channels. The campus is located at MILE Tower, GAT No. 726, Pune-Nagar Road, Wagholi.</p>
                <a href="contact.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Get In Touch & Campus Location <span>↗</span></a>`,
-    image: `<img src="images/portrait-1.jpg" alt="Contact Us" class="mega-image">`
+    image: `<img src="images/campus.jpg" alt="Contact Us" class="mega-image">`
   }
 };
 
@@ -233,8 +240,21 @@ function updateMegaMenuOverview(link) {
     if (!megaMenu) return;
     const overviewContainer = megaMenu.querySelector('.mega-col-sub');
     const imageContainer = megaMenu.querySelector('.mega-col-image');
-    if (overviewContainer) overviewContainer.innerHTML = megaMenuData[key].overview;
-    if (imageContainer) imageContainer.innerHTML = megaMenuData[key].image;
+    const prefix = typeof getComponentPrefix === 'function' ? getComponentPrefix() : '';
+    if (overviewContainer) {
+      let overviewHtml = megaMenuData[key].overview;
+      if (prefix) {
+        overviewHtml = overviewHtml.replace(/href="([^"\/:]+\.html(?:#[^"]*)?)"/g, `href="${prefix}$1"`);
+      }
+      overviewContainer.innerHTML = overviewHtml;
+    }
+    if (imageContainer) {
+      let imageHtml = megaMenuData[key].image;
+      if (prefix) {
+        imageHtml = imageHtml.replace(/src="(assets|images)\//g, `src="${prefix}$1/`);
+      }
+      imageContainer.innerHTML = imageHtml;
+    }
   }
 }
 
@@ -251,6 +271,14 @@ document.addEventListener('mouseout', function(e) {
   const navItem = e.target.closest('.nav-item.has-submenu');
   if (navItem && (!e.relatedTarget || !navItem.contains(e.relatedTarget))) {
     navItem.classList.remove('menu-closed');
+  }
+});
+
+// Non-clickable category items update the overview panel on click/tap
+document.addEventListener('click', function(e) {
+  const staticItem = e.target.closest('.mega-link-static[data-hover]');
+  if (staticItem) {
+    updateMegaMenuOverview(staticItem);
   }
 });
 
@@ -371,6 +399,10 @@ mobileMenu.querySelectorAll('nav a').forEach(link => link.addEventListener('clic
 function programDialog(key) {
   const program = programs[key];
   if (!program) return;
+  if (key === 'ihm') {
+    openDialog(`<p class="eyebrow">${program.category}</p><h2 id="dialog-title">${program.title}<span class="period">.</span></h2><img class="dialog-hero" src="images/${program.image}.jpg" alt="Illustrative ${program.title} learning environment"><p>${program.description}</p><ul>${program.highlights.map(item => `<li>${item}</li>`).join('')}</ul><div style="display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap;"><a href="b-sc-hospitality-studies.html" class="button" style="text-decoration: none;">B.Sc in Hospitality Studies <span>↗</span></a><a href="diploma-in-hospitality-studies.html" class="button" style="text-decoration: none; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2);">Diploma in Hospitality Studies <span>↗</span></a></div>`);
+    return;
+  }
   openDialog(`<p class="eyebrow">${program.category}</p><h2 id="dialog-title">${program.title}<span class="period">.</span></h2><img class="dialog-hero" src="images/${program.image}.jpg" alt="Illustrative ${program.title} learning environment"><p>${program.description}</p><ul>${program.highlights.map(item => `<li>${item}</li>`).join('')}</ul><p class="dialog-notice">Detailed curriculum, duration, accreditation, eligibility and fees will be added once confirmed by Lexicon MILE.</p><button class="button" data-action="apply" data-selected="${key}">I'm interested <span>↗</span></button>`);
 }
 function applicationDialog(selected) {
@@ -447,6 +479,14 @@ document.addEventListener('click', event => {
   const action = target.dataset.action;
   if (action === 'apply') {
     window.open('https://admissions.lexiconmile.com/', '_blank');
+    return;
+  }
+  if (action === 'whatsapp') {
+    window.open('https://api.whatsapp.com/send/?phone=%2B919967427278&text&type=phone_number&app_absent=0', '_blank');
+    return;
+  }
+  if (action === 'call') {
+    window.location.href = 'tel:+919967427278';
     return;
   }
   if (action === 'brochure') return downloadBrochure();
