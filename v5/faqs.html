@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070C">
+  <title>FAQs | Frequently Asked Questions | Lexicon MILE Pune</title>
+  <meta name="description" content="Find answers to frequently asked questions about PGDM, MBA Global, fees, scholarships, placements, AI Lab, eligibility, and admissions at Lexicon MILE Pune.">
+  <link rel="canonical" href="https://lexiconmile.com/faqs/">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/main.css">
+
+  <meta property="og:title" content="FAQs | Lexicon MILE Pune">
+  <meta property="og:description" content="Get answers to common questions about PGDM admission, MBA Global fees, placements, scholarships, and the AI-integrated learning model at Lexicon MILE Pune.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lexiconmile.com/faqs/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the total fee for PGDM at Lexicon MILE Pune?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The total tuition fee for the AI-Integrated PGDM program at Lexicon MILE is approximately ₹10.8 lakh, depending on specialization and additional components."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What entrance exams are accepted for Lexicon MILE PGDM admission?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lexicon MILE accepts national-level entrance exams, including CAT, XAT, MAT, CMAT, MH-CET, ATMA, and GMAT."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Lexicon MILE offer good placement packages?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Lexicon MILE has recorded strong placement outcomes, with the highest package going up to ₹49 LPA for MBA Global and ₹22 LPA for PGDM."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --faq-primary: #3b82f6;
+      --faq-primary-light: #60a5fa;
+      --faq-accent: #2ec4b6;
+      --faq-card-bg: rgba(13, 20, 34, 0.75);
+      --faq-card-border: rgba(255, 255, 255, 0.08);
+      --faq-card-border-hover: rgba(59, 130, 246, 0.3);
+    }
+
+    /* Hero */
+    .faq-hero {
+      padding: 140px 0 60px;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 50% -20%, rgba(11, 99, 206, 0.18) 0%, transparent 65%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #94a3b8;
+      margin-bottom: 24px;
+    }
+
+    .faq-breadcrumb a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .faq-breadcrumb a:hover {
+      color: #fff;
+    }
+
+    .faq-hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.12;
+      margin-bottom: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .faq-hero .hero-sub {
+      font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+      color: #cbd5e1;
+      max-width: 760px;
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+
+    /* Quick Stats */
+    .faq-stats-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .faq-stat-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--faq-card-bg);
+      border: 1px solid var(--faq-card-border);
+      border-radius: 12px;
+      padding: 12px 18px;
+      backdrop-filter: blur(12px);
+    }
+
+    .faq-stat-chip .num {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--faq-primary-light);
+    }
+
+    .faq-stat-chip .lbl {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.3;
+    }
+
+    /* Category Filter Pills */
+    .faq-filter-wrap {
+      padding: 30px 0 10px;
+      position: sticky;
+      top: 75px;
+      z-index: 40;
+      background: rgba(5, 7, 12, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .faq-filter-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .faq-filter-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      padding: 9px 18px;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .faq-filter-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .faq-filter-btn.active {
+      background: var(--bright);
+      border-color: var(--bright);
+      color: #fff;
+      box-shadow: 0 2px 12px rgba(11, 99, 206, 0.4);
+    }
+
+    /* FAQ Category Sections */
+    .faq-category-section {
+      padding: 50px 0 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .faq-category-section:last-child {
+      border-bottom: none;
+    }
+
+    .faq-cat-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .faq-cat-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .faq-cat-icon.blue { background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.25); }
+    .faq-cat-icon.cyan { background: rgba(46, 196, 182, 0.12); border: 1px solid rgba(46, 196, 182, 0.25); }
+    .faq-cat-icon.purple { background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.25); }
+    .faq-cat-icon.orange { background: rgba(240, 86, 36, 0.12); border: 1px solid rgba(240, 86, 36, 0.25); }
+    .faq-cat-icon.gold { background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.25); }
+
+    .faq-cat-meta h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+
+    .faq-cat-meta p {
+      font-size: 13px;
+      color: #94a3b8;
+      margin: 2px 0 0 0;
+    }
+
+    /* Accordion Items */
+    .faq-accordion-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-accord-item {
+      background: var(--faq-card-bg);
+      border: 1px solid var(--faq-card-border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color 0.25s ease;
+      backdrop-filter: blur(12px);
+    }
+
+    .faq-accord-item:hover {
+      border-color: var(--faq-card-border-hover);
+    }
+
+    .faq-accord-item.open {
+      border-color: rgba(59, 130, 246, 0.35);
+      background: rgba(13, 20, 34, 0.95);
+    }
+
+    .faq-accord-trigger {
+      width: 100%;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 15.5px;
+      font-weight: 600;
+      text-align: left;
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: inherit;
+      line-height: 1.45;
+      transition: color 0.2s;
+    }
+
+    .faq-accord-trigger:hover {
+      color: var(--faq-primary-light);
+    }
+
+    .faq-accord-chevron {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+      color: #94a3b8;
+    }
+
+    .faq-accord-item.open .faq-accord-chevron {
+      transform: rotate(180deg);
+      color: var(--faq-primary-light);
+    }
+
+    .faq-accord-answer {
+      display: none;
+      padding: 0 24px 20px 24px;
+      font-size: 14.5px;
+      color: #94a3b8;
+      line-height: 1.7;
+    }
+
+    .faq-accord-item.open .faq-accord-answer {
+      display: block;
+    }
+
+    .faq-accord-answer ul {
+      margin: 8px 0;
+      padding-left: 20px;
+    }
+
+    .faq-accord-answer li {
+      margin-bottom: 6px;
+    }
+
+    .faq-accord-answer strong {
+      color: #cbd5e1;
+    }
+
+    /* Bottom CTA */
+    .faq-cta-box {
+      background: linear-gradient(135deg, rgba(11, 99, 206, 0.15) 0%, rgba(6, 27, 69, 0.5) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 24px;
+      padding: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin: 60px 0;
+      backdrop-filter: blur(16px);
+    }
+
+    .faq-cta-text h3 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 10px 0;
+    }
+
+    .faq-cta-text p {
+      font-size: 15px;
+      color: #cbd5e1;
+      max-width: 620px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .faq-cta-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .faq-hero { padding: 120px 0 50px; }
+      .faq-cta-box { padding: 32px 20px; flex-direction: column; text-align: center; }
+      .faq-filter-row { justify-content: center; }
+      .faq-cta-actions { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="faq-hero">
+      <div class="container">
+        <nav class="faq-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span style="color:#fff;">FAQs</span>
+        </nav>
+
+        <div class="section-heading reveal" style="margin-bottom: 0;">
+          <div>
+            <p class="eyebrow">YOUR QUESTIONS &middot; ANSWERED</p>
+            <h1>Frequently Asked Questions<span style="color:var(--bright);">.</span></h1>
+          </div>
+          <p class="hero-sub">Everything you need to know about PGDM, MBA Global, admissions, fees, scholarships, placements, and our AI-integrated learning model at Lexicon MILE Pune.</p>
+        </div>
+
+        <div class="faq-stats-row">
+          <div class="faq-stat-chip">
+            <span class="num">30+</span>
+            <span class="lbl">Questions<br>Answered</span>
+          </div>
+          <div class="faq-stat-chip">
+            <span class="num" style="color:#2ec4b6;">5</span>
+            <span class="lbl">Categories<br>Covered</span>
+          </div>
+          <div class="faq-stat-chip">
+            <span class="num" style="color:#f59e0b;">24/7</span>
+            <span class="lbl">Counselor<br>Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATEGORY FILTERS ============ -->
+    <div class="faq-filter-wrap">
+      <div class="container">
+        <div class="faq-filter-row" id="faq-filters">
+          <button class="faq-filter-btn active" data-cat="all">All Questions</button>
+          <button class="faq-filter-btn" data-cat="fees">Fees & Scholarships</button>
+          <button class="faq-filter-btn" data-cat="admissions">Admissions & Eligibility</button>
+          <button class="faq-filter-btn" data-cat="placements">Placements & Recruiters</button>
+          <button class="faq-filter-btn" data-cat="programme">Programme & AI Lab</button>
+          <button class="faq-filter-btn" data-cat="campus">Campus & Student Life</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- ============ FEES & SCHOLARSHIPS ============ -->
+      <div class="faq-category-section" data-category="fees" id="faq-fees">
+        <div class="faq-cat-header">
+          <div class="faq-cat-icon blue">💰</div>
+          <div class="faq-cat-meta">
+            <h2>Fees &amp; Scholarships</h2>
+            <p>Programme fees, payment schedules, and merit scholarship details</p>
+          </div>
+        </div>
+        <div class="faq-accordion-list">
+
+          <div class="faq-accord-item open">
+            <button type="button" class="faq-accord-trigger" aria-expanded="true">
+              <span>What is the total fee for PGDM at Lexicon MILE Pune?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              The total tuition fee for the AI-Integrated PGDM program at Lexicon MILE is approximately <strong>₹10.8 lakh</strong>, depending on specialization and additional components. The fee is structured across milestone-based installments over the 2-year programme duration.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>What is the fee structure for MBA Global at Lexicon MILE?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              The MBA Global program follows a <strong>60 + 120 credit</strong> international pathway in academic partnership with the University of South Wales (UK). The fee structure includes:
+              <ul>
+                <li><strong>Registration Fee:</strong> ₹50,000 (non-refundable)</li>
+                <li><strong>Year 1 (India):</strong> Tuition at Lexicon MILE covering 60 credits</li>
+                <li><strong>Year 2 (UK):</strong> Tuition at USW covering 120 credits with UK living costs</li>
+              </ul>
+              Students may also avail education loan partnerships with SBI, HDFC Credila, Axis Bank, and Bank of Baroda.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>Does Lexicon MILE offer scholarships for PGDM students?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Yes, Lexicon MILE offers <strong>merit-based and need-based scholarships</strong> for eligible PGDM students based on entrance exam performance. Scholarships are awarded on a first-come, first-served basis, subject to admission confirmation and payment of the first installment.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>What is the scholarship amount for CAT students at Lexicon MILE?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Students scoring <strong>80 percentile and above in CAT</strong> are eligible for a scholarship of <strong>₹1,00,000</strong>.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>What scholarship is available for CMAT and MAT scores?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              <strong>CMAT</strong> candidates with 90 percentile and above can receive <strong>₹75,000</strong>, while <strong>MAT</strong> candidates with 90 percentile and above can receive <strong>₹50,000</strong>.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>Is the scholarship applicable for the second year?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Second-year scholarship continuation depends on the student's <strong>academic performance in the first year</strong>. The institute reserves the right to modify scholarship criteria or fee structures without prior notice.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============ ADMISSIONS & ELIGIBILITY ============ -->
+      <div class="faq-category-section" data-category="admissions" id="faq-admissions">
+        <div class="faq-cat-header">
+          <div class="faq-cat-icon cyan">📋</div>
+          <div class="faq-cat-meta">
+            <h2>Admissions &amp; Eligibility</h2>
+            <p>Application process, entrance exams, and eligibility criteria</p>
+          </div>
+        </div>
+        <div class="faq-accordion-list">
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>What entrance exams are accepted for Lexicon MILE PGDM admission?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Lexicon MILE accepts national-level entrance exams, including <strong>CAT, XAT, MAT, CMAT, MH-CET, ATMA, and GMAT</strong>. Candidates can submit their best score during Phase 3 of the application.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>What are the eligibility criteria for PGDM admission at Lexicon MILE?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Candidates must have a minimum of <strong>50% marks in Graduation</strong> from a recognized university along with a valid entrance exam score. Shortlisted candidates are called for a <strong>Personal Interview</strong>.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>Is there a Personal Interview for Lexicon MILE admission?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Yes, shortlisted candidates are required to appear for a <strong>Personal Interview</strong> as part of the final selection process. The candidate evaluation framework consists of: National Entrance Score (35%), Personal Interview &amp; Case Study (30%), Past Academic Consistency (20%), and Work Experience &amp; Leadership (15%).
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>How can I apply for Lexicon MILE PGDM or MBA Global?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Candidates can apply online through the <strong>official Lexicon MILE admissions portal</strong> by completing three simple phases:
+              <ul>
+                <li><strong>Phase 1:</strong> Register your profile with personal details and programme preference</li>
+                <li><strong>Phase 2:</strong> Pay the non-refundable ₹1,000 application fee online</li>
+                <li><strong>Phase 3:</strong> Submit academic details, entrance test scores, and book your interview venue</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>Are admissions open for the MBA Global at Lexicon MILE?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Yes, admissions are currently open for the <strong>MBA Global program</strong> offered in academic partnership with the University of South Wales (UK). Apply through the official admissions portal.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============ PLACEMENTS & RECRUITERS ============ -->
+      <div class="faq-category-section" data-category="placements" id="faq-placements">
+        <div class="faq-cat-header">
+          <div class="faq-cat-icon purple">🏆</div>
+          <div class="faq-cat-meta">
+            <h2>Placements &amp; Recruiters</h2>
+            <p>Placement packages, recruiting partners, and career support</p>
+          </div>
+        </div>
+        <div class="faq-accordion-list">
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>Does Lexicon MILE offer good placement packages?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Yes, Lexicon MILE has recorded strong placement outcomes, with the highest package going up to <strong>₹49 LPA for MBA Global</strong> and <strong>₹22 LPA for PGDM</strong>.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>Which companies recruit from Lexicon MILE?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Top recruiters include <strong>Apple, TIAA, EY, eClerx, IDFC FIRST Bank, BT, Lloyds Bank, UK Health Security Agency, Housekeep, HSBC, BNY Mellon, KPMG, LODHA, CRISIL, Accenture, Allstate, Reliance, Bajaj, Amazon, Axis Bank</strong>, and many more from consulting, BFSI, analytics, technology, FMCG, and e-commerce sectors.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>Does Lexicon MILE provide placement support?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Yes, the institute provides structured placement mentorship, including <strong>CV building, LinkedIn optimisation, mock interviews, and AI-driven interview preparation</strong>.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>Are there multiple placement opportunities at Lexicon MILE?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Yes, Lexicon MILE offers <strong>multiple placement opportunities</strong> supported by a strong returning recruiter network and corporate partnerships with <strong>200+ leading companies</strong>.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>What industries recruit students from Lexicon MILE?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Students are recruited across industries such as <strong>consulting, BFSI, analytics, technology, FMCG, and e-commerce</strong>, with opportunities in both national and global organizations.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>How does Lexicon MILE ensure strong placement outcomes?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              The institute maintains a strong recruiter network with <strong>200+ leading companies</strong> and focuses on practical learning, corporate mentorship, and industry projects. This approach prepares students for roles across multiple sectors.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>How does Lexicon MILE prepare students for placements?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              The institute offers placement mentorship, CV building support, LinkedIn profile optimization, mock interviews, and <strong>AI-driven interview preparation</strong>, ensuring students are ready for recruitment processes.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>What are &ldquo;Day Zero Professionals&rdquo; at Lexicon MILE?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Day Zero Professionals are graduates who are ready to contribute <strong>from the first day of their corporate roles</strong>, thanks to hands-on learning, real industry projects, and AI-integrated business training.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============ PROGRAMME & AI LAB ============ -->
+      <div class="faq-category-section" data-category="programme" id="faq-programme">
+        <div class="faq-cat-header">
+          <div class="faq-cat-icon orange">🤖</div>
+          <div class="faq-cat-meta">
+            <h2>Programme &amp; AI Lab</h2>
+            <p>AI-integrated PGDM, certifications, specializations, and curriculum</p>
+          </div>
+        </div>
+        <div class="faq-accordion-list">
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>What makes Lexicon MILE&rsquo;s PGDM programme unique?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Lexicon MILE offers India's first structured <strong>AI-integrated PGDM/MBA Global programme</strong>, where Artificial Intelligence is embedded across the entire learning journey. Through the <strong>HyperBuild &ndash; The Lexicon MILE AI Lab</strong>, students work on real-world AI business applications every day.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>What Makes the HyperBuild &ndash; The Lexicon MILE AI Lab Model Different?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              HyperBuild &ndash; The Lexicon MILE AI Lab is designed to integrate Artificial Intelligence directly into business learning and execution. Instead of only studying theory, students work in a <strong>daily AI corporate simulation lab for 5 hours</strong>, building real business dashboards, automation systems, and AI-powered solutions.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>Do students need coding knowledge to join the AI-integrated PGDM programme?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              <strong>No</strong>. Prior coding experience is not required. The programme begins with AI foundations and gradually introduces tools, frameworks, and applied AI concepts relevant to business management.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>What is the 6-trimester AI learning structure at Lexicon MILE?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              The programme follows a 6-trimester AI architecture that covers:
+              <ul>
+                <li>AI foundations and business thinking</li>
+                <li>Functional AI integration across marketing, finance, HR, and operations</li>
+                <li>Data-driven decision systems</li>
+                <li>Advanced automation and predictive analytics</li>
+                <li>AI-powered leadership and strategy</li>
+                <li>Capstone AI business project</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>What certifications are offered during the PGDM programme?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Students receive employment-enhancing certifications such as:
+              <ul>
+                <li>Six Sigma Certification</li>
+                <li>MS Office Suite (Excel, Power BI, etc.)</li>
+                <li>Data Analytics with Tableau</li>
+                <li>LinkedIn Profile Optimization</li>
+                <li>Financial Modelling &amp; Valuation</li>
+                <li>AI &amp; Automation Tools</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>What specializations are offered at Lexicon MILE?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              The PGDM programme offers multiple specializations including:
+              <ul>
+                <li>Business Management</li>
+                <li>Marketing &amp; Finance</li>
+                <li>Research and Business Analytics</li>
+              </ul>
+              Students can also choose electives across HR, Finance, Marketing, and Operations.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>How does Lexicon MILE combine AI learning with management education?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              The programme integrates Artificial Intelligence with core management disciplines such as <strong>marketing, finance, HR, operations, and strategy</strong>, enabling students to make data-driven business decisions.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>Can students build their own startup during the PGDM programme?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Yes. The programme encourages <strong>AI-driven entrepreneurship and venture execution</strong>, allowing students to develop and test their own business ideas while pursuing the PGDM.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============ CAMPUS & STUDENT LIFE ============ -->
+      <div class="faq-category-section" data-category="campus" id="faq-campus">
+        <div class="faq-cat-header">
+          <div class="faq-cat-icon gold">🏫</div>
+          <div class="faq-cat-meta">
+            <h2>Campus &amp; Student Life</h2>
+            <p>Industry exposure, learning model, and why Lexicon MILE</p>
+          </div>
+        </div>
+        <div class="faq-accordion-list">
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>What kind of industry exposure do students receive during the programme?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Students gain exposure through <strong>live corporate projects, internships, industry mentorship, corporate Saturdays, leadership sessions, and domain workshops</strong>, ensuring continuous interaction with the corporate world.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>What is the Corporate Co-Learning Model at Lexicon MILE?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              The Corporate Co-Learning Model integrates academic learning with real business exposure. Students learn from <strong>industry experts, work on live projects, and gain corporate insights</strong> alongside classroom learning.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>How does the HyperBuild AI Lab help students become industry-ready?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Students spend <strong>5 hours daily in the AI &amp; Automation Lab</strong>, working on real business cases, dashboards, automation systems, and AI-powered solutions. This hands-on approach ensures graduates are ready to contribute from Day 1.
+            </div>
+          </div>
+
+          <div class="faq-accord-item">
+            <button type="button" class="faq-accord-trigger" aria-expanded="false">
+              <span>Why Choose Lexicon MILE for Your PGDM Programme?</span>
+              <svg class="faq-accord-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-accord-answer">
+              Lexicon MILE offers one of India's most structured AI-integrated PGDM journeys, combining management education with real-world industry exposure. Key highlights:
+              <ul>
+                <li>AI-integrated PGDM &ndash; India's first structured model</li>
+                <li>AACSB member, NBA Accredited &amp; AIU Recognised</li>
+                <li>30+ Years of Lexicon Group educational legacy</li>
+                <li>200+ corporate recruiting partners</li>
+                <li>Highest package ₹49 LPA (MBA Global) / ₹22 LPA (PGDM)</li>
+                <li>9-month paid corporate internship model</li>
+                <li>Global university partnerships &ndash; USW (UK), UNH (USA)</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============ BOTTOM CTA ============ -->
+      <div class="faq-cta-box reveal">
+        <div class="faq-cta-text">
+          <h3>Still Have Questions?</h3>
+          <p>Our dedicated admissions counselors are available Monday through Saturday to guide you through the application process, eligibility queries, and campus tours.</p>
+        </div>
+        <div class="faq-cta-actions">
+          <a href="contact.html" class="button">Contact Admissions <span>↗</span></a>
+          <a href="admission.html" class="button button-outline">View Admissions Process <span>↗</span></a>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Accordion toggle
+      const allItems = document.querySelectorAll('.faq-accord-item');
+      allItems.forEach(item => {
+        const trigger = item.querySelector('.faq-accord-trigger');
+        trigger.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          // Close all in same section
+          const section = item.closest('.faq-accordion-list');
+          section.querySelectorAll('.faq-accord-item').forEach(i => {
+            i.classList.remove('open');
+            i.querySelector('.faq-accord-trigger').setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            item.classList.add('open');
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // Category filter
+      const filterBtns = document.querySelectorAll('.faq-filter-btn');
+      const catSections = document.querySelectorAll('.faq-category-section');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const cat = btn.getAttribute('data-cat');
+
+          catSections.forEach(sec => {
+            if (cat === 'all' || sec.getAttribute('data-category') === cat) {
+              sec.style.display = 'block';
+            } else {
+              sec.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

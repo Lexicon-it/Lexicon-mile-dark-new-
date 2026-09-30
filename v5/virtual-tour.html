@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070C">
+  <title>360° Virtual Campus Tour | Lexicon MILE Pune</title>
+  <meta name="description" content="Experience an immersive 360-degree virtual tour of Lexicon MILE Pune. Explore smart classrooms, the Hyper Build AI lab, executive seminar halls, library, and sports grounds online.">
+  <link rel="canonical" href="https://lexiconmile.com/virtual-tour/">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="360° Virtual Campus Tour | Lexicon MILE Pune">
+  <meta property="og:description" content="Step inside Lexicon MILE's state-of-the-art campus in 360° virtual reality. Interactive panoramas, Google Street View, and guided walkthroughs.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://lexiconmile.com/virtual-tour/">
+  <meta property="og:image" content="images/campus-tour/hero-banner.jpeg">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "360° Virtual Campus Tour | Lexicon MILE Pune",
+    "description": "Step inside Lexicon MILE's state-of-the-art campus in 360° virtual reality. Interactive panoramas, Google Street View, and guided walkthroughs.",
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "name": "Lexicon MILE",
+      "url": "https://lexiconmile.com"
+    }
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       VIRTUAL TOUR DEDICATED STYLES
+       ========================================================================== */
+
+    /* Hero Banner Customizations for Virtual Tour */
+    .vt-hero {
+      position: relative;
+      padding-top: 145px;
+      padding-bottom: 50px;
+      background: radial-gradient(circle at 50% 15%, rgba(46, 196, 182, 0.14) 0%, rgba(7, 59, 145, 0.25) 45%, rgba(5, 7, 12, 0.98) 85%),
+                  url('images/campus-tour/hero-banner.jpeg') center/cover no-repeat;
+    }
+
+    .vt-hero-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .vt-hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .vt-hero-actions .button {
+      gap: 10px;
+      min-height: 48px;
+      padding: 12px 22px;
+      font-size: 13.5px;
+    }
+
+    .vt-hero-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 18px;
+      background: rgba(46, 196, 182, 0.08);
+      border: 1px solid rgba(46, 196, 182, 0.28);
+      border-radius: 50px;
+      color: #2ec4b6;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      backdrop-filter: blur(10px);
+    }
+
+    .vt-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 20px;
+      background: rgba(46, 196, 182, 0.1);
+      border: 1px solid rgba(46, 196, 182, 0.35);
+      border-radius: 50px;
+      color: #2ec4b6;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      backdrop-filter: blur(10px);
+    }
+
+    .vt-live-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulseLive 2s infinite;
+      display: inline-block;
+    }
+
+    @keyframes pulseLive {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.3); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* Section 2: 360° Theater */
+    .vt-theater-section {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+
+    .vt-theater-card {
+      background: linear-gradient(135deg, rgba(16, 25, 45, 0.6) 0%, rgba(10, 16, 30, 0.8) 100%);
+      border: 1px solid rgba(46, 196, 182, 0.25);
+      border-radius: 28px;
+      padding: 40px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    .vt-theater-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .vt-theater-header__info h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 6px 0;
+      line-height: 1.2;
+    }
+
+    .vt-theater-header__info p {
+      color: #94a3b8;
+      font-size: 14.5px;
+      margin: 0;
+    }
+
+    /* Theater Switcher Tabs */
+    .vt-theater-tabs {
+      display: inline-flex;
+      gap: 10px;
+      background: rgba(5, 7, 12, 0.6);
+      padding: 6px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .vt-theater-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      background: transparent;
+      color: #94a3b8;
+      transition: all 0.25s ease;
+      font-family: inherit;
+    }
+
+    .vt-theater-tab:hover {
+      color: #ffffff;
+    }
+
+    .vt-theater-tab.active {
+      background: linear-gradient(135deg, #2ec4b6, #0e8388);
+      color: #05070c;
+      font-weight: 700;
+      box-shadow: 0 4px 18px rgba(46, 196, 182, 0.35);
+    }
+
+    /* Video & 360 Player Frame */
+    .vt-player-wrap {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #000;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }
+
+    .vt-player-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Hotspot Jump Bar below Player */
+    .vt-theater-footer {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .vt-hotspot-chips {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .vt-hotspot-label {
+      font-size: 13px;
+      color: #94a3b8;
+      font-weight: 600;
+      margin-right: 4px;
+    }
+
+    .vt-hotspot-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #cbd5e1;
+      padding: 7px 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .vt-hotspot-btn:hover, .vt-hotspot-btn.active {
+      background: rgba(46, 196, 182, 0.15);
+      border-color: #2ec4b6;
+      color: #2ec4b6;
+    }
+
+    .vt-fullscreen-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 50px;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .vt-fullscreen-link:hover {
+      background: rgba(46, 196, 182, 0.2);
+      border-color: #2ec4b6;
+      color: #2ec4b6;
+      transform: translateY(-2px);
+    }
+
+    /* Section 3: Signature Virtual Stops (6 Hotspot Cards) */
+    .vt-stops-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 2.2rem;
+    }
+
+    .vt-stop-card {
+      background: rgba(14, 20, 32, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .vt-stop-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(46, 196, 182, 0.35);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.6);
+    }
+
+    .vt-stop-card__media {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .vt-stop-card__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .vt-stop-card:hover .vt-stop-card__media img {
+      transform: scale(1.05);
+    }
+
+    .vt-stop-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      background: rgba(5, 7, 12, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 50px;
+      color: #fff;
+      font-size: 11.5px;
+      font-weight: 600;
+      backdrop-filter: blur(8px);
+    }
+
+    .vt-stop-card__body {
+      padding: 24px 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .vt-stop-card__body h4 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .vt-stop-card__body p {
+      font-size: 0.92rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin: 0 0 16px 0;
+    }
+
+    .vt-stop-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .vt-stop-tag {
+      font-size: 11px;
+      color: #2ec4b6;
+      background: rgba(46, 196, 182, 0.1);
+      border: 1px solid rgba(46, 196, 182, 0.25);
+      padding: 3px 9px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .vt-stop-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(46, 196, 182, 0.35);
+      border-radius: 50px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      font-family: inherit;
+      width: 100%;
+    }
+
+    .vt-stop-btn:hover {
+      background: rgba(46, 196, 182, 0.15);
+      border-color: #2ec4b6;
+      color: #2ec4b6;
+    }
+
+    /* Section 4: Technology Features */
+    .vt-features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 2rem;
+    }
+
+    .vt-feature-card {
+      background: rgba(14, 20, 32, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 28px 24px;
+      transition: all 0.25s ease;
+    }
+
+    .vt-feature-card:hover {
+      border-color: rgba(46, 196, 182, 0.3);
+      transform: translateY(-3px);
+    }
+
+    .vt-feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: rgba(46, 196, 182, 0.12);
+      border: 1px solid rgba(46, 196, 182, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2ec4b6;
+      margin-bottom: 18px;
+    }
+
+    .vt-feature-card h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 8px 0;
+    }
+
+    .vt-feature-card p {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Section 5: Transition to Physical Visit */
+    .vt-bridge-card {
+      background: linear-gradient(135deg, rgba(16, 25, 45, 0.7) 0%, rgba(10, 16, 30, 0.85) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 28px;
+      padding: 45px 50px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .vt-bridge-card::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .vt-bridge-card h3 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 12px 0;
+      line-height: 1.25;
+    }
+
+    .vt-bridge-card p {
+      color: #b1bfd2;
+      font-size: 1rem;
+      line-height: 1.65;
+      margin-bottom: 1.8rem;
+    }
+
+    .vt-bridge-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .vt-bridge-media {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 16 / 11;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    }
+
+    .vt-bridge-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Section 6: FAQ Accordion */
+    .vt-faq-item {
+      background: rgba(14, 20, 32, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .vt-faq-item.active {
+      border-color: rgba(46, 196, 182, 0.35);
+      background: rgba(16, 25, 42, 0.85);
+    }
+
+    .vt-faq-header {
+      width: 100%;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-align: left;
+      gap: 16px;
+    }
+
+    .vt-faq-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+      color: #94a3b8;
+    }
+
+    .vt-faq-item.active .vt-faq-icon {
+      transform: rotate(180deg);
+      background: #2ec4b6;
+      color: #05070c;
+    }
+
+    .vt-faq-body {
+      display: none;
+      padding: 0 24px 22px;
+      color: #94a3b8;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      margin-top: 4px;
+      padding-top: 16px;
+    }
+
+    .vt-faq-item.active .vt-faq-body {
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .vt-stops-grid { grid-template-columns: repeat(2, 1fr); }
+      .vt-features-grid { grid-template-columns: repeat(2, 1fr); }
+      .vt-bridge-card { grid-template-columns: 1fr; }
+      .vt-player-wrap { height: 480px; }
+    }
+
+    @media (max-width: 768px) {
+      .vt-hero { padding-top: 130px; }
+      .vt-hero-toolbar { flex-direction: column; align-items: stretch; gap: 14px; }
+      .vt-hero-actions { width: 100%; flex-direction: column; gap: 10px; }
+      .vt-hero-actions .button { width: 100%; justify-content: center; }
+      .vt-hero-status-pill { width: 100%; justify-content: center; text-align: center; }
+      .vt-theater-card { padding: 24px 18px; }
+      .vt-stops-grid { grid-template-columns: 1fr; }
+      .vt-features-grid { grid-template-columns: 1fr; }
+      .vt-player-wrap { height: 350px; }
+      .vt-theater-header { flex-direction: column; align-items: flex-start; }
+      .vt-theater-footer { flex-direction: column; align-items: stretch; }
+      .vt-fullscreen-link { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Global Header Inclusion -->
+  <div id="header"></div>
+
+  <main id="main">
+
+    <!-- ============ SECTION 1: HERO & BREADCRUMBS ============ -->
+    <section class="about-hero-banner vt-hero" id="vt-hero">
+      <div class="container">
+        
+        <!-- Standardized Breadcrumbs -->
+        <nav class="about-breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="campus-tour.html">Campus Tour</a>
+          <span>/</span>
+          <span class="current">Virtual Tour</span>
+        </nav>
+
+        <!-- Standard Two-Column Section Heading -->
+        <div class="section-heading reveal" style="margin-bottom: 0;">
+          <div>
+            <p class="eyebrow"><span class="vt-live-dot" style="margin-right: 8px;"></span>IMMERSIVE 360&deg; DIGITAL VR EXPERIENCE &middot; VIRTUAL CAMPUS</p>
+            <h1>Step Inside Lexicon MILE in 360°<span class="period">.</span></h1>
+          </div>
+          <p>Can&rsquo;t visit our Pune campus in person yet? Take a high-definition interactive tour from anywhere in the world &mdash; freely navigate through Harvard-style amphitheaters, the Hyper Build AI Lab, innovation archives, and recreation arenas.</p>
+        </div>
+
+        <!-- Hero Toolbar with CTA Action Buttons & Live VR Status -->
+        <div class="vt-hero-toolbar reveal">
+          <div class="vt-hero-actions">
+            <a href="#vt-theater" class="button button-primary">
+              Explore 360&deg; Theater <span>&darr;</span>
+            </a>
+            <a href="campus-tour.html" class="button button-outline">
+              In-Person Campus Tour <span>&nearr;</span>
+            </a>
+            <a href="https://admissions.lexiconmile.com/" target="_blank" rel="noopener noreferrer" class="button button-outline">
+              Apply for Admissions <span>&nearr;</span>
+            </a>
+          </div>
+          <div class="vt-hero-status-pill">
+            <span class="vt-live-dot"></span>
+            <span>Interactive 360&deg; VR &middot; Compatible on Mobile &amp; Desktop</span>
+          </div>
+        </div>
+
+        <!-- 4-Stat Hero Metrics (Matches site standard .placement-metrics-grid) -->
+        <div class="placement-metrics-grid reveal" style="margin-bottom: 0;">
+          <div class="placement-metric-card">
+            <span class="placement-metric-value">360&deg;</span>
+            <h4 class="placement-metric-title">Panoramic Freedom</h4>
+            <p class="placement-metric-sub">Explore every campus corner in ultra-high resolution with full 360-degree freedom.</p>
+          </div>
+
+          <div class="placement-metric-card">
+            <span class="placement-metric-value">10+</span>
+            <h4 class="placement-metric-title">Signature Hotspots</h4>
+            <p class="placement-metric-sub">Amphitheaters, Hyper Build AI Lab, corporate boardroom, library, and sports arena.</p>
+          </div>
+
+          <div class="placement-metric-card gold">
+            <span class="placement-metric-value">VR Ready</span>
+            <h4 class="placement-metric-title">Immersive Viewport</h4>
+            <p class="placement-metric-sub">Optimized for VR headsets, Google Cardboard, tablets, and mobile gyroscope sensors.</p>
+          </div>
+
+          <div class="placement-metric-card">
+            <span class="placement-metric-value">1080p HD</span>
+            <h4 class="placement-metric-title">Curated Walkthrough</h4>
+            <p class="placement-metric-sub">High-definition guided drone and student ambassador narrated video walkthrough.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============ SECTION 2: 360° THEATER ============ -->
+    <section class="section vt-theater-section" id="vt-theater">
+      <div class="container">
+        <div class="vt-theater-card reveal">
+          
+          <div class="vt-theater-header">
+            <div class="vt-theater-header__info">
+              <p class="eyebrow" style="color: #2ec4b6;">INTERACTIVE 360&deg; CONTROLS</p>
+              <h2>Lexicon MILE Virtual Theater<span class="period">.</span></h2>
+              <p>Click &amp; drag inside the frame to look in any direction. Use scroll to zoom in and out.</p>
+            </div>
+
+            <!-- View Switcher -->
+            <div class="vt-theater-tabs">
+              <button type="button" class="vt-theater-tab active" id="tabGoogle360" onclick="switchVirtualView('360')" aria-label="View Google 360° Virtual Tour">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                Google 360&deg; Street View
+              </button>
+              <button type="button" class="vt-theater-tab" id="tabVideoTour" onclick="switchVirtualView('video')" aria-label="View Video Walkthrough">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Guided Drone Video
+              </button>
+            </div>
+          </div>
+
+          <!-- Player Container -->
+          <div class="vt-player-wrap">
+            <iframe
+              id="frameGoogle360"
+              src="https://www.google.com/maps/embed?pb=!4v1727600000000!6m8!1m7!1sAF1QipMSyRIdwgd3Xzw6aUVfO0ELK15LEqGJXb1lOcgn!2m2!1d18.5876497!2d73.9965639!3f184.81!4f1.99!5f0.7820865974627469"
+              title="Lexicon MILE Campus Google 360° Virtual Tour"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <iframe
+              id="frameVideoTour"
+              src="https://www.youtube.com/embed/dO7F0lDiPJs?rel=0&modestbranding=1"
+              title="Lexicon MILE Campus Virtual Tour"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              style="display: none;">
+            </iframe>
+          </div>
+
+          <!-- Bottom Hotspot Bar -->
+          <div class="vt-theater-footer">
+            <div class="vt-hotspot-chips">
+              <span class="vt-hotspot-label">Quick Jump:</span>
+              <button type="button" class="vt-hotspot-btn active" onclick="jumpHotspot('gate')">🏛️ Main Entrance</button>
+              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('ai')">⚡ AI Lab</button>
+              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('class')">📚 Classrooms</button>
+              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('hall')">🎤 Amphitheater</button>
+              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('lib')">📖 Library</button>
+              <button type="button" class="vt-hotspot-btn" onclick="jumpHotspot('sports')">⚽ Sports Ground</button>
+            </div>
+
+            <a href="https://www.google.com/maps/@18.5876497,73.9965639,3a,75y,184.81h,91.99t/data=!3m8!1e1!3m6!1sAF1QipMSyRIdwgd3Xzw6aUVfO0ELK15LEqGJXb1lOcgn!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipMSyRIdwgd3Xzw6aUVfO0ELK15LEqGJXb1lOcgn%3Dw900-h600-k-no-pi-1.9899999999999949-ya12.00999694824219-ro0-fo100!7i6720!8i3360?entry=ttu" target="_blank" rel="noopener noreferrer" class="vt-fullscreen-link">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Open Fullscreen on Google Maps ↗
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ SECTION 3: SIGNATURE VIRTUAL STOPS ============ -->
+    <section class="section" id="vt-stops" style="padding-top: 30px; padding-bottom: 60px;">
+      <div class="container">
+        
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">HOTSPOTS &middot; CAMPUS ARCHITECTURE</p>
+            <h2>Signature Virtual Stops<span class="period">.</span></h2>
+          </div>
+          <p>Explore the flagship facilities that form the backbone of student life and academic rigor at Lexicon MILE Pune. Click on any stop to load it into the 360&deg; theater.</p>
+        </div>
+
+        <div class="vt-stops-grid reveal">
+          
+          <!-- Stop 1: Main Facade -->
+          <div class="vt-stop-card">
+            <div>
+              <div class="vt-stop-card__media">
+                <img src="images/campus-tour/outside-view-1.jpg" alt="Lexicon MILE Main Campus Facade" loading="lazy">
+                <span class="vt-stop-badge">Stop 01 &middot; Entrance</span>
+              </div>
+              <div class="vt-stop-card__body">
+                <h4>Main Entrance &amp; MILE Tower</h4>
+                <p>The landmark architectural entrance situated prominently on Pune-Nagar Road in Wagholi, featuring guarded security checkpoints and landscaped visitor reception.</p>
+                <div class="vt-stop-tags">
+                  <span class="vt-stop-tag">Wagholi, Pune</span>
+                  <span class="vt-stop-tag">Reception Atrium</span>
+                  <span class="vt-stop-tag">Lobby Concierge</span>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 0 22px 22px;">
+              <button type="button" class="vt-stop-btn" onclick="focusTheater('gate')">
+                <span>View in 360&deg; Theater</span> &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Stop 2: AI Lab -->
+          <div class="vt-stop-card">
+            <div>
+              <div class="vt-stop-card__media">
+                <img src="images/campus-tour/innovation-lab.jpg" alt="Hyper Build AI & Analytics Lab" loading="lazy">
+                <span class="vt-stop-badge">Stop 02 &middot; Tech Arena</span>
+              </div>
+              <div class="vt-stop-card__body">
+                <h4>Hyper Build &ndash; The AI Lab</h4>
+                <p>Advanced practical learning space where management scholars apply AI, Python analytics, algorithmic trading models, and prompt engineering to enterprise problems.</p>
+                <div class="vt-stop-tags">
+                  <span class="vt-stop-tag">9 AI Verticals</span>
+                  <span class="vt-stop-tag">Dual-Screen Workstations</span>
+                  <span class="vt-stop-tag">Cloud GPUs</span>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 0 22px 22px;">
+              <button type="button" class="vt-stop-btn" onclick="focusTheater('ai')">
+                <span>View in 360&deg; Theater</span> &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Stop 3: Classrooms -->
+          <div class="vt-stop-card">
+            <div>
+              <div class="vt-stop-card__media">
+                <img src="images/campus-tour/classroom-1.jpg" alt="Modern Interactive Smart Classrooms" loading="lazy">
+                <span class="vt-stop-badge">Stop 03 &middot; Academic Hub</span>
+              </div>
+              <div class="vt-stop-card__body">
+                <h4>Interactive Smart Classrooms</h4>
+                <p>Harvard-style lecture halls with stepped amphitheater seating, 4K digital smartboards, lecture capture capabilities, and acoustic optimization.</p>
+                <div class="vt-stop-tags">
+                  <span class="vt-stop-tag">Tiered Layout</span>
+                  <span class="vt-stop-tag">Digital Panels</span>
+                  <span class="vt-stop-tag">Climate Controlled</span>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 0 22px 22px;">
+              <button type="button" class="vt-stop-btn" onclick="focusTheater('class')">
+                <span>View in 360&deg; Theater</span> &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Stop 4: Seminar Hall -->
+          <div class="vt-stop-card">
+            <div>
+              <div class="vt-stop-card__media">
+                <img src="images/campus-tour/seminar-hall.jpg" alt="Main Seminar Amphitheater" loading="lazy">
+                <span class="vt-stop-badge">Stop 04 &middot; Auditorium</span>
+              </div>
+              <div class="vt-stop-card__body">
+                <h4>Executive Seminar Amphitheater</h4>
+                <p>Grand 250+ capacity auditorium equipped with surround acoustics and dual projection, hosting corporate conclaves, international symposia, and TEDx events.</p>
+                <div class="vt-stop-tags">
+                  <span class="vt-stop-tag">250+ Capacity</span>
+                  <span class="vt-stop-tag">Surround Audio</span>
+                  <span class="vt-stop-tag">Keynote Stage</span>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 0 22px 22px;">
+              <button type="button" class="vt-stop-btn" onclick="focusTheater('hall')">
+                <span>View in 360&deg; Theater</span> &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Stop 5: Library -->
+          <div class="vt-stop-card">
+            <div>
+              <div class="vt-stop-card__media">
+                <img src="images/campus-tour/library.webp" alt="Knowledge & Resource Library" loading="lazy">
+                <span class="vt-stop-badge">Stop 05 &middot; Research Hub</span>
+              </div>
+              <div class="vt-stop-card__body">
+                <h4>Knowledge &amp; Resource Library</h4>
+                <p>Spacious digital library with over 10,000 management volumes, international business journals, silent research carrels, and EBSCOhost subscriptions.</p>
+                <div class="vt-stop-tags">
+                  <span class="vt-stop-tag">10,000+ Titles</span>
+                  <span class="vt-stop-tag">EBSCO Databases</span>
+                  <span class="vt-stop-tag">Silent Study Pods</span>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 0 22px 22px;">
+              <button type="button" class="vt-stop-btn" onclick="focusTheater('lib')">
+                <span>View in 360&deg; Theater</span> &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Stop 6: Sports Complex -->
+          <div class="vt-stop-card">
+            <div>
+              <div class="vt-stop-card__media">
+                <img src="images/campus-tour/ground-1.jpg" alt="Outdoor Turf Sports Ground" loading="lazy">
+                <span class="vt-stop-badge">Stop 06 &middot; Recreation</span>
+              </div>
+              <div class="vt-stop-card__body">
+                <h4>Sports Arena &amp; Turf Grounds</h4>
+                <p>Multi-sport facilities featuring outdoor all-weather turf for football and cricket, basketball courts, and indoor recreation spaces for complete wellness.</p>
+                <div class="vt-stop-tags">
+                  <span class="vt-stop-tag">All-Weather Turf</span>
+                  <span class="vt-stop-tag">Floodlit Courts</span>
+                  <span class="vt-stop-tag">Indoor Game Lounge</span>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 0 22px 22px;">
+              <button type="button" class="vt-stop-btn" onclick="focusTheater('sports')">
+                <span>View in 360&deg; Theater</span> &rarr;
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============ SECTION 4: VIRTUAL TOUR FEATURES ============ -->
+    <section class="section" id="vt-tech" style="background: rgba(8, 12, 20, 0.6); padding-top: 50px; padding-bottom: 60px;">
+      <div class="container">
+        
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">TECH &amp; COMPATIBILITY</p>
+            <h2>Engineered for Seamless Exploration<span class="period">.</span></h2>
+          </div>
+          <p>Our virtual tour platform is designed to give you a true-to-life sense of proportion, lighting, and community culture before you set foot on campus.</p>
+        </div>
+
+        <div class="vt-features-grid reveal">
+          <div class="vt-feature-card">
+            <div class="vt-feature-icon">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
+            <h4>Cross-Device Ready</h4>
+            <p>Optimized for smartphones, tablets, laptops, and 4K desktops with buttery-smooth gyro and mouse navigation.</p>
+          </div>
+
+          <div class="vt-feature-card">
+            <div class="vt-feature-icon">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            </div>
+            <h4>VR Headset Compatible</h4>
+            <p>Slip on Meta Quest, Apple Vision Pro, or mobile VR headsets for true 1:1 scale stereoscopic walkthroughs.</p>
+          </div>
+
+          <div class="vt-feature-card">
+            <div class="vt-feature-icon">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h4>Google Verified</h4>
+            <p>Integrated directly with Google Street View coordinates, providing authentic, verified geographic placement.</p>
+          </div>
+
+          <div class="vt-feature-card">
+            <div class="vt-feature-icon">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            </div>
+            <h4>Live Virtual Counseling</h4>
+            <p>Need a guided walk? Schedule a live video call with an admissions counselor to walk through together.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============ SECTION 5: BRIDGE TO PHYSICAL IN-PERSON VISIT ============ -->
+    <section class="section" id="vt-visit-bridge" style="padding-top: 50px; padding-bottom: 50px;">
+      <div class="container">
+        
+        <div class="vt-bridge-card reveal">
+          <div>
+            <span class="vt-hero-badge" style="margin-bottom: 1rem;">
+              NEXT STEP &middot; EXPERIENCE IN PERSON
+            </span>
+            <h3>Loved the Virtual View? Come Visit Us in Pune.</h3>
+            <p>
+              Nothing compares to walking into our smart classrooms, feeling the energy of student group discussions, dining in the campus cafe, and having a one-on-one discussion with faculty directors.
+            </p>
+            <div class="vt-bridge-actions">
+              <a href="campus-tour.html" class="button button-primary">
+                Explore In-Person Campus Tour <span>↗</span>
+              </a>
+              <a href="campus-tour.html#visit-info" class="button button-outline">
+                Book Guided Campus Walk <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="vt-bridge-media">
+            <img src="images/campus-tour/outside-view-2.jpg" alt="Lexicon MILE Pune Campus In-Person Visit" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============ SECTION 6: VIRTUAL TOUR FAQS (ACCORDION) ============ -->
+    <section class="section" id="vt-faq" style="background: rgba(8, 12, 20, 0.7); padding-top: 45px; padding-bottom: 60px;">
+      <div class="container">
+        
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">COMMON QUERIES &middot; VIRTUAL GUIDANCE</p>
+            <h2>Virtual Tour FAQs<span class="period">.</span></h2>
+          </div>
+          <p>Find answers to common questions about device compatibility, virtual counseling sessions, and planning next steps.</p>
+        </div>
+
+        <div class="reveal" id="vtFaqAccordion">
+          
+          <!-- Item 1 -->
+          <div class="vt-faq-item active">
+            <button class="vt-faq-header" aria-expanded="true">
+              <span>What devices can I use to view the 360° virtual tour?</span>
+              <div class="vt-faq-icon">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="vt-faq-body">
+              The virtual tour works smoothly on all modern web browsers (Chrome, Safari, Firefox, Edge) across desktops, laptops, tablets, and smartphones. Mobile devices automatically support touch drag and gyroscopic motion sensors.
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="vt-faq-item">
+            <button class="vt-faq-header" aria-expanded="false">
+              <span>Does the virtual tour reflect the actual current campus facilities?</span>
+              <div class="vt-faq-icon">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="vt-faq-body">
+              Yes. The Google 360° Street View and video footage are captured on-site at MILE Tower, Wagholi, Pune. It accurately displays our active Harvard-style classrooms, the Hyper Build AI Lab, sports fields, library, and central circulation lobbies.
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="vt-faq-item">
+            <button class="vt-faq-header" aria-expanded="false">
+              <span>Can outstation or international students arrange a 1-on-1 counselor guided tour?</span>
+              <div class="vt-faq-icon">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="vt-faq-body">
+              Absolutely! If you are unable to travel to Pune immediately, you can schedule a personalized video meeting where an admissions officer will walk you through the campus, discuss curriculum tracks, and answer program-specific questions live.
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="vt-faq-item">
+            <button class="vt-faq-header" aria-expanded="false">
+              <span>How do I transition from the virtual tour to an in-person visit?</span>
+              <div class="vt-faq-icon">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="vt-faq-body">
+              Simply navigate to our <a href="campus-tour.html#visit-info" style="color:#2ec4b6; font-weight:600;">Plan Your Campus Visit</a> section or call our admissions desk at +91 99674 27278 to reserve your slot. Campus visits are open Monday through Saturday between 9:30 AM and 5:30 PM.
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="vt-faq-item">
+            <button class="vt-faq-header" aria-expanded="false">
+              <span>Can I view student hostel facilities through the virtual tour?</span>
+              <div class="vt-faq-icon">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="vt-faq-body">
+              Yes, the guided video tour covers residential life, mess dining halls, and student lounge amenities. Additional detailed photo archives of both girls&rsquo; and boys&rsquo; hostels can also be viewed on our <a href="campus-tour.html#photo-gallery" style="color:#2ec4b6; font-weight:600;">Campus Tour Photo Gallery</a>.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============ SECTION 7: FINAL CTA BANNER ============ -->
+    <section class="section" style="padding-top: 40px; padding-bottom: 70px;">
+      <div class="container">
+        <div class="campus-theater reveal" style="text-align: center; padding: 48px 30px; background: linear-gradient(135deg, rgba(16,25,45,0.7) 0%, rgba(10,16,30,0.9) 100%);">
+          <p class="eyebrow" style="color: #2ec4b6; margin-bottom: 8px;">AMBITION HAS A NEW ADDRESS</p>
+          <h2 style="font-size: 2.3rem; font-weight: 800; color: #fff; margin-bottom: 14px;">Ready to Begin Your Management Journey?</h2>
+          <p style="color: #b1bfd2; max-width: 650px; margin: 0 auto 28px; line-height: 1.6;">Admissions are currently open for PGDM &amp; Global MBA cohorts. Experience academic excellence, 9-month paid corporate internships, and 100% placement track record.</p>
+          <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+            <a href="https://admissions.lexiconmile.com/" target="_blank" class="button button-primary">Apply Now <span>↗</span></a>
+            <a href="campus-tour.html" class="button button-outline">Visit Pune Campus <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer Inclusion -->
+  <div id="footer"></div>
+
+  <!-- Component Includer -->
+  <script src="js/components.js"></script>
+
+  <script>
+    /* ==========================================================================
+       VIRTUAL THEATER VIEW SWITCHER
+       ========================================================================== */
+    function switchVirtualView(type) {
+      const gTab = document.getElementById('tabGoogle360');
+      const vTab = document.getElementById('tabVideoTour');
+      const gFrame = document.getElementById('frameGoogle360');
+      const vFrame = document.getElementById('frameVideoTour');
+      if (!gTab || !vTab || !gFrame || !vFrame) return;
+
+      if (type === '360') {
+        gTab.classList.add('active');
+        vTab.classList.remove('active');
+        gFrame.style.display = 'block';
+        vFrame.style.display = 'none';
+      } else {
+        vTab.classList.add('active');
+        gTab.classList.remove('active');
+        vFrame.style.display = 'block';
+        gFrame.style.display = 'none';
+      }
+    }
+
+    /* Hotspot Jump Coordinates for Google 360 */
+    const hotspotCoords = {
+      gate: 'https://www.google.com/maps/embed?pb=!4v1727600000000!6m8!1m7!1sAF1QipMSyRIdwgd3Xzw6aUVfO0ELK15LEqGJXb1lOcgn!2m2!1d18.5876497!2d73.9965639!3f184.81!4f1.99!5f0.7820865974627469',
+      ai: 'https://www.google.com/maps/embed?pb=!4v1727600000000!6m8!1m7!1sAF1QipMSyRIdwgd3Xzw6aUVfO0ELK15LEqGJXb1lOcgn!2m2!1d18.5876497!2d73.9965639!3f240.0!4f-5.0!5f0.7820865974627469',
+      class: 'https://www.google.com/maps/embed?pb=!4v1727600000000!6m8!1m7!1sAF1QipMSyRIdwgd3Xzw6aUVfO0ELK15LEqGJXb1lOcgn!2m2!1d18.5876497!2d73.9965639!3f90.0!4f0.0!5f0.7820865974627469',
+      hall: 'https://www.google.com/maps/embed?pb=!4v1727600000000!6m8!1m7!1sAF1QipMSyRIdwgd3Xzw6aUVfO0ELK15LEqGJXb1lOcgn!2m2!1d18.5876497!2d73.9965639!3f15.0!4f-2.0!5f0.7820865974627469',
+      lib: 'https://www.google.com/maps/embed?pb=!4v1727600000000!6m8!1m7!1sAF1QipMSyRIdwgd3Xzw6aUVfO0ELK15LEqGJXb1lOcgn!2m2!1d18.5876497!2d73.9965639!3f320.0!4f-8.0!5f0.7820865974627469',
+      sports: 'https://www.google.com/maps/embed?pb=!4v1727600000000!6m8!1m7!1sAF1QipMSyRIdwgd3Xzw6aUVfO0ELK15LEqGJXb1lOcgn!2m2!1d18.5876497!2d73.9965639!3f130.0!4f10.0!5f0.7820865974627469'
+    };
+
+    function jumpHotspot(key) {
+      switchVirtualView('360');
+      const gFrame = document.getElementById('frameGoogle360');
+      if (gFrame && hotspotCoords[key]) {
+        gFrame.src = hotspotCoords[key];
+      }
+      document.querySelectorAll('.vt-hotspot-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = Array.from(document.querySelectorAll('.vt-hotspot-btn')).find(b => b.getAttribute('onclick')?.includes(key));
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    function focusTheater(key) {
+      jumpHotspot(key);
+      const theater = document.getElementById('vt-theater');
+      if (theater) {
+        theater.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    /* ==========================================================================
+       ACCORDION (PER USER RULE)
+       ========================================================================== */
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqItems = document.querySelectorAll('#vtFaqAccordion .vt-faq-item');
+      faqItems.forEach(item => {
+        const header = item.querySelector('.vt-faq-header');
+        header.addEventListener('click', () => {
+          const wasActive = item.classList.contains('active');
+          faqItems.forEach(other => {
+            other.classList.remove('active');
+            other.querySelector('.vt-faq-header').setAttribute('aria-expanded', 'false');
+          });
+          if (!wasActive) {
+            item.classList.add('active');
+            header.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+

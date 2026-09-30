@@ -1,0 +1,3373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070C">
+  <title>Faculty Research Publications | Lexicon MILE Pune</title>
+  <meta name="description" content="Explore research publications by Lexicon MILE faculty. Academic papers, case studies, Scopus-indexed and UGC CARE-listed research in management, analytics, and business strategy.">
+  <link rel="canonical" href="https://lexiconmile.com/research/">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/main.css">
+
+  <meta property="og:title" content="Faculty Research Publications | Lexicon MILE Pune">
+  <meta property="og:description" content="Explore research publications by Lexicon MILE faculty across management, finance, business analytics, and marketing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lexiconmile.com/research/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Faculty Research Publications - Lexicon MILE",
+    "url": "https://lexiconmile.com/research/",
+    "description": "Scholarly publications, journal articles, books, and case studies authored by faculty members of Lexicon Management Institute of Leadership & Excellence.",
+    "publisher": {
+      "@type": "CollegeOrUniversity",
+      "name": "Lexicon Management Institute of Leadership & Excellence (Lexicon MILE)",
+      "url": "https://lexiconmile.com"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --res-primary: #3b82f6;
+      --res-primary-light: #60a5fa;
+      --res-accent: #2ec4b6;
+      --res-accent-glow: rgba(46, 196, 182, 0.25);
+      --res-card-bg: rgba(13, 20, 34, 0.78);
+      --res-card-border: rgba(255, 255, 255, 0.08);
+      --res-card-border-hover: rgba(59, 130, 246, 0.35);
+      --res-gold: #f59e0b;
+    }
+
+    /* Hero Section */
+    .research-hero {
+      padding: 140px 0 50px;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 50% -20%, rgba(11, 99, 206, 0.2) 0%, transparent 70%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .research-hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 10%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(46, 196, 182, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+      filter: blur(50px);
+    }
+
+    .research-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #94a3b8;
+      margin-bottom: 22px;
+    }
+
+    .research-breadcrumb a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .research-breadcrumb a:hover {
+      color: #fff;
+    }
+
+    .research-hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.12;
+      margin-bottom: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .research-hero .hero-sub {
+      font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+      color: #cbd5e1;
+      max-width: 820px;
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+
+    /* Stat Chips */
+    .res-stats-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .res-stat-chip {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--res-card-bg);
+      border: 1px solid var(--res-card-border);
+      border-radius: 14px;
+      padding: 12px 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .res-stat-chip:hover {
+      transform: translateY(-2px);
+      border-color: var(--res-card-border-hover);
+    }
+
+    .res-stat-chip .num {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--res-primary-light);
+      line-height: 1;
+    }
+
+    .res-stat-chip .lbl {
+      font-size: 12.5px;
+      color: #94a3b8;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+
+    /* Pillars Grid */
+    .pillars-section {
+      padding: 40px 0 20px;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+
+    .pillar-card {
+      background: rgba(13, 20, 34, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 16px;
+      padding: 22px;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pillar-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #3b82f6, #2ec4b6);
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    .pillar-card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-3px);
+      background: rgba(13, 20, 34, 0.9);
+    }
+
+    .pillar-card:hover::before {
+      opacity: 1;
+    }
+
+    .pillar-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+
+    .pillar-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 6px 0;
+    }
+
+    .pillar-card p {
+      font-size: 13px;
+      color: #94a3b8;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Journal Recognition Strip */
+    .journal-badges-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      background: rgba(11, 99, 206, 0.08);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 14px;
+      padding: 16px 24px;
+      margin-bottom: 35px;
+    }
+
+    .journal-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+
+    .journal-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #2ec4b6;
+      box-shadow: 0 0 8px #2ec4b6;
+    }
+
+    /* Sticky Filter Bar */
+    .res-filter-wrap {
+      position: sticky;
+      top: 75px;
+      z-index: 45;
+      background: rgba(5, 7, 12, 0.94);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 18px 0;
+      margin-bottom: 30px;
+    }
+
+    .filter-controls-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .search-box-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 260px;
+      max-width: 440px;
+    }
+
+    .search-box-wrap svg.search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 17px;
+      height: 17px;
+      color: #94a3b8;
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 30px;
+      padding: 11px 40px 11px 40px;
+      color: #fff;
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--res-primary);
+      background: rgba(13, 20, 34, 0.95);
+      box-shadow: 0 0 16px rgba(59, 130, 246, 0.25);
+    }
+
+    .search-input::placeholder {
+      color: #64748b;
+    }
+
+    .clear-search-btn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #94a3b8;
+      cursor: pointer;
+      font-size: 16px;
+      display: none;
+      padding: 4px;
+    }
+
+    .filter-right-tools {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .faculty-select {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 30px;
+      padding: 10px 18px;
+      color: #e2e8f0;
+      font-size: 13.5px;
+      font-family: inherit;
+      outline: none;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .faculty-select:focus {
+      border-color: var(--res-primary);
+    }
+
+    .faculty-select option {
+      background: #0d1422;
+      color: #fff;
+    }
+
+    .toggle-all-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .toggle-all-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    /* Year Pills Quick Nav */
+    .year-pills-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .year-pill-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #94a3b8;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .year-pill-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .year-pill-btn.active {
+      background: var(--bright);
+      border-color: var(--bright);
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(11, 99, 206, 0.4);
+    }
+
+    /* Results Counter */
+    .results-count-bar {
+      font-size: 13.5px;
+      color: #94a3b8;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .results-count-bar strong {
+      color: #e2e8f0;
+    }
+
+    /* Accordion List */
+    .research-accordion-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 50px;
+    }
+
+    .research-accord-item {
+      background: var(--res-card-bg);
+      border: 1px solid var(--res-card-border);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: border-color 0.25s, box-shadow 0.25s;
+      backdrop-filter: blur(12px);
+    }
+
+    .research-accord-item:hover {
+      border-color: var(--res-card-border-hover);
+    }
+
+    .research-accord-item.open {
+      border-color: rgba(59, 130, 246, 0.4);
+      background: rgba(13, 20, 34, 0.95);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .research-accord-header {
+      width: 100%;
+      background: none;
+      border: none;
+      color: #fff;
+      padding: 20px 26px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: inherit;
+      transition: background 0.2s;
+    }
+
+    .research-accord-header:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .year-header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .year-title-badge {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.01em;
+      position: relative;
+    }
+
+    .year-count-pill {
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: var(--res-primary-light);
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .year-header-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .accord-toggle-hint {
+      font-size: 12px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .research-chevron {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+      color: #94a3b8;
+    }
+
+    .research-accord-item.open .research-chevron {
+      transform: rotate(180deg);
+      color: var(--res-primary-light);
+    }
+
+    .research-accord-item.open .accord-toggle-hint {
+      display: none;
+    }
+
+    .research-accord-content {
+      display: none;
+      padding: 0 24px 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .research-accord-item.open .research-accord-content {
+      display: block;
+    }
+
+    /* Responsive Table Styles */
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 12px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(59, 130, 246, 0.4) rgba(255, 255, 255, 0.04);
+    }
+
+    .table-responsive::-webkit-scrollbar {
+      height: 6px;
+    }
+    .table-responsive::-webkit-scrollbar-thumb {
+      background: rgba(59, 130, 246, 0.4);
+      border-radius: 4px;
+    }
+
+    .research-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .research-table thead th {
+      background: rgba(255, 255, 255, 0.03);
+      color: #94a3b8;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: left;
+    }
+
+    .research-table tbody td {
+      padding: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      vertical-align: top;
+      color: #cbd5e1;
+    }
+
+    .research-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .research-table tbody tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .sr-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #94a3b8;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .fac-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .fac-avatar {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .fac-name {
+      font-weight: 600;
+      color: #f1f5f9;
+      white-space: nowrap;
+    }
+
+    .paper-title-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .paper-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.5;
+    }
+
+    .paper-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 2px;
+    }
+
+    .tag-scopus {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fbbf24;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .tag-ugc {
+      background: rgba(46, 196, 182, 0.15);
+      border: 1px solid rgba(46, 196, 182, 0.4);
+      color: #2ec4b6;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .tag-book {
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      color: #c084fc;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .tag-case {
+      background: rgba(240, 86, 36, 0.15);
+      border: 1px solid rgba(240, 86, 36, 0.4);
+      color: #fb923c;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .tag-lexipedia {
+      background: rgba(59, 130, 246, 0.18);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      color: #93c5fd;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .tag-issn, .tag-isbn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #94a3b8;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .journal-name {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    .year-pill {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #e2e8f0;
+      white-space: nowrap;
+    }
+
+    /* No Results State */
+    .no-results-msg {
+      display: none;
+      text-align: center;
+      padding: 50px 20px;
+      background: var(--res-card-bg);
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      margin: 20px 0;
+    }
+
+    .no-results-msg h4 {
+      font-size: 18px;
+      color: #fff;
+      margin: 0 0 8px 0;
+    }
+
+    .no-results-msg p {
+      color: #94a3b8;
+      font-size: 14px;
+      margin: 0 0 16px 0;
+    }
+
+    /* Lexipedia Journal Spotlight Card */
+    .journal-spotlight {
+      background: linear-gradient(135deg, rgba(13, 20, 34, 0.9) 0%, rgba(11, 40, 80, 0.45) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.28);
+      border-radius: 24px;
+      padding: 40px;
+      margin-bottom: 50px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .journal-spotlight-content h3 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .journal-spotlight-content p {
+      font-size: 14.5px;
+      color: #cbd5e1;
+      line-height: 1.65;
+      margin: 0 0 18px 0;
+      max-width: 780px;
+    }
+
+    .journal-meta-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .journal-meta-item {
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    .journal-meta-item strong {
+      color: #fff;
+    }
+
+    /* Bottom CTA Box */
+    .research-cta-box {
+      background: linear-gradient(135deg, rgba(11, 99, 206, 0.16) 0%, rgba(6, 27, 69, 0.5) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 24px;
+      padding: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 70px;
+    }
+
+    .research-cta-box h3 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 10px 0;
+    }
+
+    .research-cta-box p {
+      font-size: 15px;
+      color: #cbd5e1;
+      margin: 0;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .research-cta-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .journal-spotlight {
+        grid-template-columns: 1fr;
+      }
+      .research-table thead th:nth-child(1),
+      .research-table tbody td:nth-child(1) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .research-hero {
+        padding: 120px 0 40px;
+      }
+      .res-stats-row {
+        gap: 10px;
+      }
+      .res-stat-chip {
+        padding: 10px 14px;
+        flex: 1 1 calc(50% - 10px);
+      }
+      .res-stat-chip .num {
+        font-size: 20px;
+      }
+      .res-stat-chip .lbl {
+        font-size: 11.5px;
+      }
+      .research-accord-header {
+        padding: 16px 18px;
+      }
+      .year-title-badge {
+        font-size: 18px;
+      }
+      .research-accord-content {
+        padding: 0 14px 18px;
+      }
+      .research-table tbody td {
+        padding: 12px 10px;
+        font-size: 13px;
+      }
+      .research-cta-box {
+        padding: 30px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main id="main">
+
+    <!-- Hero Section -->
+    <section class="research-hero">
+      <div class="container">
+        <div class="research-breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="faculty.html">Academics</a>
+          <span>/</span>
+          <span style="color: #fff;">Faculty Research Publications</span>
+        </div>
+
+        <p class="eyebrow" style="color: var(--res-accent); font-weight: 700; letter-spacing: 0.15em; font-size: 12px; margin-bottom: 12px;">SCHOLARLY INQUIRY &amp; THOUGHT LEADERSHIP</p>
+        <h1>Faculty Research Publications<span class="period">.</span></h1>
+        <p class="hero-sub">
+          At Lexicon MILE, our academic philosophy bridges rigorous scholarly research with real-world managerial strategy. Explore over 77 published research papers, empirical studies, book editions, and peer-reviewed articles authored by our faculty members in Scopus-indexed and UGC-CARE listed journals.
+        </p>
+
+        <!-- Stats Chips -->
+        <div class="res-stats-row">
+          <div class="res-stat-chip">
+            <span class="num">77+</span>
+            <span class="lbl">Scholarly Papers<br>&amp; Publications</span>
+          </div>
+          <div class="res-stat-chip">
+            <span class="num">17</span>
+            <span class="lbl">Academic Years<br>(2004 – 2022)</span>
+          </div>
+          <div class="res-stat-chip">
+            <span class="num">11+</span>
+            <span class="lbl">Core Faculty<br>Researchers</span>
+          </div>
+          <div class="res-stat-chip">
+            <span class="num">100%</span>
+            <span class="lbl">Peer-Reviewed<br>&amp; Indexed Output</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Research Pillars -->
+    <section class="pillars-section">
+      <div class="container">
+        <div class="journal-badges-strip">
+          <div class="journal-badge-item">
+            <span class="journal-badge-dot"></span>
+            <span>Scopus Indexed Journals</span>
+          </div>
+          <div class="journal-badge-item">
+            <span class="journal-badge-dot"></span>
+            <span>UGC-CARE Listed Publications</span>
+          </div>
+          <div class="journal-badge-item">
+            <span class="journal-badge-dot"></span>
+            <span>Lexipedia Annual Research Journal</span>
+          </div>
+          <div class="journal-badge-item">
+            <span class="journal-badge-dot"></span>
+            <span>International Management Conferences</span>
+          </div>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">💳</div>
+            <h3>Fintech &amp; Banking Dynamics</h3>
+            <p>Empirical analyses on digital banking adoption, forex remittances, and non-performing asset management in emerging markets.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">👥</div>
+            <h3>HR Dynamics &amp; Leadership</h3>
+            <p>Studies investigating transformational leadership, psychological security, remote employee morale, and talent retention.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🌱</div>
+            <h3>CSR, Ethics &amp; Sustainability</h3>
+            <p>Comprehensive inquiries into Green HRM, corporate social responsibility frameworks, and ethical governance.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">📊</div>
+            <h3>Consumer Behavior &amp; Marketing</h3>
+            <p>Deep-dives into e-commerce security perceptions, brand endorsements, consumer sentiment, and startup strategy in VUCA markets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Sticky Search & Filters -->
+    <div class="res-filter-wrap">
+      <div class="container">
+        <div class="filter-controls-row">
+          <!-- Search Input -->
+          <div class="search-box-wrap">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="researchSearchInput" class="search-input" placeholder="Search papers, authors, topics, journals..." aria-label="Search research publications">
+            <button id="clearSearchBtn" class="clear-search-btn" title="Clear search">&times;</button>
+          </div>
+
+          <!-- Right Filters -->
+          <div class="filter-right-tools">
+            <select id="facultyFilterSelect" class="faculty-select" aria-label="Filter by Faculty Member">
+              <option value="all">All Faculty Authors</option>
+              <option value="dranujajohri">Dr. Anuja Johri</option>
+              <option value="drjitenderkumarsharma">Dr. Jitender Kumar Sharma</option>
+              <option value="drlambodarsaha">Dr. Lambodar Saha</option>
+              <option value="drswatiyeole">Dr. Swati Yeole</option>
+              <option value="drvineetaagrawal">Dr. Vineeta Agrawal</option>
+              <option value="mrrajuvarghese">Mr. Raju Varghese</option>
+              <option value="mstaranaagrawal">Ms. Tarana Agrawal</option>
+              <option value="mrparmeshwarkawale">Mr. Parmeshwar Kawale</option>
+              <option value="mssandracruz">Ms. Sandra Cruz</option>
+            </select>
+
+            <button id="toggleAllBtn" class="toggle-all-btn">Expand All Years</button>
+          </div>
+        </div>
+
+        <!-- Year Quick Filter Pills -->
+        <div class="year-pills-row" id="yearPillsRow">
+          <button class="year-pill-btn active" data-year="all">All Years</button>
+          <button class="year-pill-btn" data-year="2022">2022</button>
+          <button class="year-pill-btn" data-year="2020">2020</button>
+          <button class="year-pill-btn" data-year="2019">2019</button>
+          <button class="year-pill-btn" data-year="2018">2018</button>
+          <button class="year-pill-btn" data-year="2017">2017</button>
+          <button class="year-pill-btn" data-year="2016">2016</button>
+          <button class="year-pill-btn" data-year="2015">2015</button>
+          <button class="year-pill-btn" data-year="2014">2014</button>
+          <button class="year-pill-btn" data-year="2013">2013</button>
+          <button class="year-pill-btn" data-year="2012">2012</button>
+          <button class="year-pill-btn" data-year="2011">2011</button>
+          <button class="year-pill-btn" data-year="earlier">2010 &amp; Earlier</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Accordion List -->
+    <section class="section" style="padding: 10px 0 50px;">
+      <div class="container">
+        
+        <!-- Live Counter -->
+        <div class="results-count-bar">
+          <span id="resultsCount">Showing <strong>77</strong> research publications</span>
+          <span id="filterActiveNotice" style="display: none; color: var(--res-primary-light);">Filters Applied</span>
+        </div>
+
+        <!-- No Results Fallback -->
+        <div id="noResultsMsg" class="no-results-msg">
+          <h4>No Research Publications Found</h4>
+          <p>We could not find any publications matching your current search or filter criteria.</p>
+          <button id="resetFiltersBtn" class="button button-outline" style="padding: 8px 18px; font-size: 13px;">Reset All Filters</button>
+        </div>
+
+        <!-- Accordions Container -->
+        <div class="research-accordion-wrap" id="researchAccordionWrap">
+
+      <!-- Year Section 2022 -->
+      <div class="research-accord-item open" id="year-2022" data-year="2022">
+        <button class="research-accord-header" aria-expanded="true" aria-controls="content-2022">
+          <div class="year-header-left">
+            <span class="year-title-badge">2022</span>
+            <span class="year-count-pill">26 Publications</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2022">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="drvineetaagrawal" data-year="2022" data-title="embracing digital technology in banking : a study on trends &amp; challenges" data-details="lexipedia issn number -2321-6964 ( annual journal of lexicon mile)">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Vineeta Agrawal</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Embracing Digital Technology in Banking : A study on Trends &amp; Challenges</span>
+                          <div class="paper-tags"><span class="tag-lexipedia">Lexipedia Journal</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Lexipedia ISSN Number -2321-6964 ( Annual Journal of Lexicon MILE)</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2019</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drvineetaagrawal" data-year="2022" data-title="a study on the behavioral and attitudinal changes during covid-19 among the people of maharashtra" data-details="journal of education (rabindra bharti) issn – 0972-7175">
+                      <td class="col-sr"><span class="sr-badge">2</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Vineeta Agrawal</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A Study on the Behavioral and Attitudinal Changes During COVID-19 among the People of Maharashtra</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Journal of Education (Rabindra Bharti) ISSN – 0972-7175</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2022</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drvineetaagrawal" data-year="2022" data-title="an analysis of employee job satisfaction of commercial banks in pune region during covid-19 pandemic" data-details="journal of education (rabindra bharti) issn – 0972-7175">
+                      <td class="col-sr"><span class="sr-badge">3</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Vineeta Agrawal</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">An Analysis of Employee Job Satisfaction of Commercial Banks in Pune Region during Covid-19 Pandemic</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Journal of Education (Rabindra Bharti) ISSN – 0972-7175</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2022</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drlambodarsaha" data-year="2022" data-title="a study on the behavioral and attitudinal changes during covid-19 among the people of maharashtra" data-details="journal of education (rabindra bharti) issn – 0972-7175">
+                      <td class="col-sr"><span class="sr-badge">4</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Lambodar Saha</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A Study on the Behavioral and Attitudinal Changes During COVID-19 among the People of Maharashtra</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Journal of Education (Rabindra Bharti) ISSN – 0972-7175</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2022</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drlambodarsaha" data-year="2022" data-title="an analysis of employee job satisfaction of commercial banks in pune region during covid-19 pandemic" data-details="journal of education (rabindra bharti) issn – 0972-7175">
+                      <td class="col-sr"><span class="sr-badge">5</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Lambodar Saha</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">An Analysis of Employee Job Satisfaction of Commercial Banks in Pune Region during Covid-19 Pandemic</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Journal of Education (Rabindra Bharti) ISSN – 0972-7175</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2022</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drswatiyeole" data-year="2022" data-title="social media craze among children &amp; behavioural change" data-details="journal of education (rabindra bharti) issn – 0972-7175">
+                      <td class="col-sr"><span class="sr-badge">6</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Swati Yeole</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Social Media Craze Among Children &amp; Behavioural Change</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Journal of Education (Rabindra Bharti) ISSN – 0972-7175</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2022</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mrparmeshwarkawale" data-year="2022" data-title="importance of digitization in banking sector in india" data-details="kala sarovar vol-25-no.-2-2022">
+                      <td class="col-sr"><span class="sr-badge">7</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Mr. Parmeshwar Kawale</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Importance of Digitization in Banking Sector in India</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Kala Sarovar Vol-25-No.-2-2022</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2022</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drswatiyeole" data-year="2022" data-title="a case-article on a crying neonate in the organization: a case on insecurity &amp; psychological imbalance" data-details="modern thamizh research (a quarterly international multilateral thamizh journal) 12th &amp; 13th october, 2021 – special issue (issn : 2321-984x)">
+                      <td class="col-sr"><span class="sr-badge">8</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Swati Yeole</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A Case-Article On A Crying Neonate In The Organization: A Case On Insecurity &amp; Psychological Imbalance</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Modern Thamizh Research (A Quarterly International Multilateral Thamizh Journal) 12th &amp; 13th October, 2021 – Special Issue (ISSN : 2321-984x)</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2022</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mstaranaagrawal" data-year="2022" data-title="case study on kota talent academy: fighting the waves of uncertainty during covid 19" data-details="paper presented in 2nd international conference on management research, kiit school of management, kiit university, under publication">
+                      <td class="col-sr"><span class="sr-badge">9</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Ms. Tarana Agrawal</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Case Study on Kota Talent Academy: Fighting The Waves Of Uncertainty During Covid 19</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Paper presented in 2nd International Conference on Management Research, KIIT School of Management, KIIT UNIVERSITY, Under Publication</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2022</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mstaranaagrawal" data-year="2022" data-title="emerging trends in celebrity brand endorsement during covid 19 in india- shift from offline to online means" data-details="under review by modern thamizh research">
+                      <td class="col-sr"><span class="sr-badge">10</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Ms. Tarana Agrawal</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Emerging Trends In Celebrity Brand Endorsement During Covid 19 In India- Shift From Offline To Online Means</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Under Review by Modern Thamizh Research</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2022</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mstaranaagrawal" data-year="2022" data-title="from zero to hero, sri siddhivinayak agro food ltd.: a case study on a woman entreprenuer" data-details="“participated in “”celebrate womanhood with avyanna”” at mit-wpu school of management, pune, under publication”">
+                      <td class="col-sr"><span class="sr-badge">11</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Ms. Tarana Agrawal</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">From Zero to Hero, Sri Siddhivinayak Agro Food Ltd.: A case study on a woman entreprenuer</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">“Participated in “”CELEBRATE WOMANHOOD WITH AVYANNA”” at MIT-WPU School of Management, Pune, Under Publication”</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2022</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drswatiyeole" data-year="2022" data-title="sadhu ka sapna indian market apna" data-details="2nd prize in case study competition orgnaizsed by drushti case study research centre and inssan(western india chapter)">
+                      <td class="col-sr"><span class="sr-badge">12</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Swati Yeole</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Sadhu Ka Sapna Indian Market Apna</span>
+                          <div class="paper-tags"><span class="tag-case">Case Study</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">2nd Prize in Case Study Competition orgnaizsed by Drushti Case Study Research Centre and INSSAN(Western India Chapter)</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2021</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drvineetaagrawal" data-year="2022" data-title="&quot;punjab &amp; maharashtra co-operative bank (pmc): depositor’s nightmare" data-details="&quot;socio- economics of covid-19 in india&quot; by weser books isbn no. 978-3-96492-254-0">
+                      <td class="col-sr"><span class="sr-badge">13</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Vineeta Agrawal</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">&quot;Punjab &amp; Maharashtra Co-Operative Bank (PMC): Depositor’s Nightmare</span>
+                          <div class="paper-tags"><span class="tag-book">Book Publication</span><span class="tag-isbn">ISBN Registered</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">&quot;Socio- Economics Of Covid-19 In India&quot; by Weser Books ISBN No. 978-3-96492-254-0</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2021</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mrrajuvarghese" data-year="2022" data-title="evolution of business communities and its impact on business decisions. studies in indian place" data-details="studies in indian place names. (ugc care journal), issn:2394-3114, vol-40-issue-27-february-2020">
+                      <td class="col-sr"><span class="sr-badge">14</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Mr. Raju Varghese</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Evolution Of Business Communities And Its Impact On Business Decisions. Studies In Indian Place</span>
+                          <div class="paper-tags"><span class="tag-ugc">UGC-CARE Listed</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Studies In Indian Place Names. (Ugc Care Journal), ISSN:2394-3114, Vol-40-Issue-27-February-2020</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2021</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drvineetaagrawal" data-year="2022" data-title="online classes &amp; covid -19: experiences of remote learning from the perspective of students and educators" data-details="kanpur philosophers ugc care listed issn no.-2348-8301">
+                      <td class="col-sr"><span class="sr-badge">15</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Vineeta Agrawal</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Online Classes &amp; Covid -19: Experiences Of Remote Learning From The Perspective Of Students And Educators</span>
+                          <div class="paper-tags"><span class="tag-ugc">UGC-CARE Listed</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Kanpur Philosophers Ugc Care Listed ISSN No.-2348-8301</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2021</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drlambodarsaha" data-year="2022" data-title="to study of employee morale level during covid-19 pandemic situation at rsb transmissions (i) ltd. pune" data-details="the journal of oriental research madras (print only) journal issn 0022-3301">
+                      <td class="col-sr"><span class="sr-badge">16</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Lambodar Saha</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">To Study Of Employee Morale Level During Covid-19 Pandemic Situation At RSB Transmissions (I) Ltd. Pune</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">The Journal of Oriental Research Madras (print only) Journal ISSN 0022-3301</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2021</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drlambodarsaha" data-year="2022" data-title="a study on e-leadership trends in 21st century in corporate sector" data-details="the international research journal of social sciences and humanities issn- 2320 – 4702">
+                      <td class="col-sr"><span class="sr-badge">17</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Lambodar Saha</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A Study On E-Leadership Trends In 21st Century In Corporate Sector</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">The International Research Journal Of Social Sciences And Humanities ISSN- 2320 – 4702</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2021</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drlambodarsaha" data-year="2022" data-title="study on analysing the level of job satisfaction of employee of nationalised banks in pune region" data-details="the international research journal of social sciences and humanities issn- 2320 – 4702">
+                      <td class="col-sr"><span class="sr-badge">18</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Lambodar Saha</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Study On Analysing The Level Of Job Satisfaction Of Employee Of Nationalised Banks In Pune Region</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">The International Research Journal Of Social Sciences And Humanities ISSN- 2320 – 4702</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2021</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drlambodarsaha" data-year="2022" data-title="strategic human resource management (book)" data-details="thakur publications">
+                      <td class="col-sr"><span class="sr-badge">19</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Lambodar Saha</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Strategic Human Resource Management (Book)</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Thakur Publications</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2020</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drlambodarsaha" data-year="2022" data-title="a study of transformational leadership and organisational effectiveness in corporate sector, in pune region" data-details="studies in indian place name issn- 0971-1260">
+                      <td class="col-sr"><span class="sr-badge">20</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Lambodar Saha</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A Study Of Transformational Leadership And Organisational Effectiveness In Corporate Sector, In Pune Region</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Studies In Indian Place Name ISSN- 0971-1260</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2020</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drlambodarsaha" data-year="2022" data-title="organisational behaviour (revised edition) (book)" data-details="thakur publications">
+                      <td class="col-sr"><span class="sr-badge">21</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Lambodar Saha</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Organisational Behaviour (Revised Edition) (Book)</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Thakur Publications</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2019</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drswatiyeole" data-year="2022" data-title="eat me if you can——a case study on zomato" data-details="case study presented and awarded at “evolve”">
+                      <td class="col-sr"><span class="sr-badge">22</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Swati Yeole</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Eat Me If You Can——A Case Study On Zomato</span>
+                          <div class="paper-tags"><span class="tag-case">Case Study</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Case Study Presented And Awarded At “Evolve”</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2019</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drlambodarsaha" data-year="2022" data-title="strategic material purchasing practices of kirloskar brother limited, pune" data-details="yashomanthan 2019 (a peer review multidisciplinary research journal) issn- 2347-8039">
+                      <td class="col-sr"><span class="sr-badge">23</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Lambodar Saha</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Strategic Material Purchasing Practices Of Kirloskar Brother Limited, Pune</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Yashomanthan 2019 (A Peer Review Multidisciplinary Research Journal) ISSN- 2347-8039</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2019</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mssandracruz" data-year="2022" data-title="a study on consumer buying behaviour towards ready to eat food industry" data-details="lexipedia – a journal with research insight issn : 2321 – 6964">
+                      <td class="col-sr"><span class="sr-badge">24</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Ms. Sandra Cruz</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A Study On Consumer Buying Behaviour Towards Ready To Eat Food Industry</span>
+                          <div class="paper-tags"><span class="tag-lexipedia">Lexipedia Journal</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Lexipedia – A Journal With Research Insight ISSN : 2321 – 6964</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2019</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mssandracruz" data-year="2022" data-title="comparative analysis of public sector and private sector bank" data-details="lexipedia – a journal with research insight issn : 2321 – 6964">
+                      <td class="col-sr"><span class="sr-badge">25</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Ms. Sandra Cruz</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Comparative Analysis Of Public Sector And Private Sector Bank</span>
+                          <div class="paper-tags"><span class="tag-lexipedia">Lexipedia Journal</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Lexipedia – A Journal With Research Insight ISSN : 2321 – 6964</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2019</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drlambodarsaha" data-year="2022" data-title="a study on potential enhancement &amp; reward scheme (pers) of tata motors, pune." data-details="international journal of advance and innovative research issn- 2394-7780">
+                      <td class="col-sr"><span class="sr-badge">26</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Lambodar Saha</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A Study On Potential Enhancement &amp; Reward Scheme (Pers) Of Tata Motors, Pune.</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">International Journal Of Advance And Innovative Research ISSN- 2394-7780</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2019</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2020 -->
+      <div class="research-accord-item " id="year-2020" data-year="2020">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2020">
+          <div class="year-header-left">
+            <span class="year-title-badge">2020</span>
+            <span class="year-count-pill">4 Publications</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2020">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="drjitenderkumarsharma" data-year="2020" data-title="customer perception of security risk in e-commerce – a survey paper" data-details="scopus indexed journal international journal of advanced science &amp; technology, issn: 2207-6360 (online)">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Jitender Kumar Sharma</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Customer Perception of Security Risk in E-commerce – A survey paper</span>
+                          <div class="paper-tags"><span class="tag-scopus">Scopus Indexed</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Scopus Indexed journal International Journal of Advanced Science &amp; Technology, ISSN: 2207-6360 (Online)</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2020</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mrrajuvarghese" data-year="2020" data-title="kasar business community: traditional vs.current occupational patterns" data-details="international conference">
+                      <td class="col-sr"><span class="sr-badge">2</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Mr. Raju Varghese</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Kasar Business Community: Traditional Vs.Current Occupational Patterns</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">International Conference</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2020</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mrrajuvarghese" data-year="2020" data-title="industry relevance in management education through value additions" data-details="international journal of advanced science &amp; technology, vol.29, no.4">
+                      <td class="col-sr"><span class="sr-badge">3</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Mr. Raju Varghese</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Industry relevance in Management Education through Value Additions</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">International Journal of Advanced Science &amp; Technology, Vol.29, No.4</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2020</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mrrajuvarghese" data-year="2020" data-title="evolution of business communities and its impact on business decisions" data-details="studies in indian place names, issn: 2394-3114, vol 40 issue 27-february-2020">
+                      <td class="col-sr"><span class="sr-badge">4</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Mr. Raju Varghese</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Evolution of business communities and its impact on business decisions</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Studies in Indian Place Names, ISSN: 2394-3114, Vol 40 Issue 27-February-2020</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2020</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2019 -->
+      <div class="research-accord-item " id="year-2019" data-year="2019">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2019">
+          <div class="year-header-left">
+            <span class="year-title-badge">2019</span>
+            <span class="year-count-pill">7 Publications</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2019">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="drvineetaagrawal" data-year="2019" data-title="nabard shg bank-linkage model: progress, challenges &amp; recommendations" data-details="international journal for research in enginnering application &amp; management ugc care listed journal, (issn 2454 – 9150) (impact factor: 5.834)">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Vineeta Agrawal</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">NABARD SHG Bank-Linkage Model: Progress, Challenges &amp; Recommendations</span>
+                          <div class="paper-tags"><span class="tag-ugc">UGC-CARE Listed</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">International Journal for Research in Enginnering Application &amp; management UGC CARE LISTED Journal, (ISSN 2454 – 9150) (Impact Factor: 5.834)</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2019</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drvineetaagrawal" data-year="2019" data-title="technology and innovations in forex transactions and international remittance" data-details="think india journal – ugc care listed multidisciplinary journal, issn 0971-1260">
+                      <td class="col-sr"><span class="sr-badge">2</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Vineeta Agrawal</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Technology and Innovations in Forex transactions and International Remittance</span>
+                          <div class="paper-tags"><span class="tag-ugc">UGC-CARE Listed</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Think India Journal – UGC Care listed multidisciplinary journal, ISSN 0971-1260</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2019</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drswatimanojyeole" data-year="2019" data-title="a study on social media recruitment" data-details="journal – asm business review issn no. : 0974–9136">
+                      <td class="col-sr"><span class="sr-badge">3</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Swati Manoj Yeole</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A Study on Social Media Recruitment</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Journal – ASM Business Review ISSN No. : 0974–9136</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2019</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drswatimanojyeole" data-year="2019" data-title="a comprehensive study of existing &amp; future csr strategies for corporate sustainability : an interdisciplinary perspective." data-details="isbn : 978-81-925257-7-8">
+                      <td class="col-sr"><span class="sr-badge">4</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Swati Manoj Yeole</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A Comprehensive study of Existing &amp; Future CSR Strategies for Corporate Sustainability : An Interdisciplinary Perspective.</span>
+                          <div class="paper-tags"><span class="tag-isbn">ISBN Registered</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">ISBN : 978-81-925257-7-8</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2019</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2019" data-title="an impact of westernization on indian culture : an exploratory study" data-details="think india journalwith issn:0971-1260, ugc care approved international indexed and referred,journal impact factor 6.2.">
+                      <td class="col-sr"><span class="sr-badge">5</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">An Impact of Westernization on Indian Culture : An Exploratory Study</span>
+                          <div class="paper-tags"><span class="tag-ugc">UGC-CARE Listed</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Think India Journalwith ISSN:0971-1260, UGC Care Approved International Indexed And Referred,Journal Impact Factor 6.2.</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2019</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2019" data-title="an impact of westernization on indian culture : an exploratory study" data-details="think india journalwith issn:0971-1260, ugc care approved international indexed and referred,journal impact factor 6.2.">
+                      <td class="col-sr"><span class="sr-badge">6</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">An Impact of Westernization on Indian Culture : An Exploratory Study</span>
+                          <div class="paper-tags"><span class="tag-ugc">UGC-CARE Listed</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Think India Journalwith ISSN:0971-1260, UGC Care Approved International Indexed And Referred,Journal Impact Factor 6.2.</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2019</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2019" data-title="an empirical study on strategy implementation of sme in vuca: a case of health care &amp; wellness start up" data-details="indira management review (imr) volume xiii, issue i, issn (online): 2582-1261, pg no 34-44.">
+                      <td class="col-sr"><span class="sr-badge">7</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">An Empirical Study on Strategy Implementation of SME in VUCA: A Case of Health Care &amp; Wellness Start Up</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Indira Management Review (IMR) Volume XIII, Issue I, ISSN (Online): 2582-1261, Pg No 34-44.</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2019</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2018 -->
+      <div class="research-accord-item " id="year-2018" data-year="2018">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2018">
+          <div class="year-header-left">
+            <span class="year-title-badge">2018</span>
+            <span class="year-count-pill">3 Publications</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2018">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="drswatimanojyeole" data-year="2018" data-title="a study about the role of symbolic attributes in employer branding" data-details="khoj-journal of indian management issn no.: 0976-8262">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Swati Manoj Yeole</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A Study about the Role of Symbolic Attributes in Employer Branding</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">KHOJ-Journal of Indian Management ISSN No.: 0976-8262</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2018</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drswatimanojyeole" data-year="2018" data-title="a study on employee absenteeism in manufacturing sector" data-details="journal-research journey journal-research journey issn no.: 2348-7143">
+                      <td class="col-sr"><span class="sr-badge">2</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Swati Manoj Yeole</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A Study on Employee Absenteeism in Manufacturing Sector</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Journal-Research Journey Journal-Research Journey ISSN No.: 2348-7143</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2018</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drjitenderkumarsharma" data-year="2018" data-title="a study of causes &amp; characteristics of employee turnover: a case of it industry in pune" data-details="lexipedia, issn 2321-6964, 2018">
+                      <td class="col-sr"><span class="sr-badge">3</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Jitender Kumar Sharma</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A study of causes &amp; characteristics of employee turnover: A case of IT industry in Pune</span>
+                          <div class="paper-tags"><span class="tag-lexipedia">Lexipedia Journal</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Lexipedia, ISSN 2321-6964, 2018</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2018</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2017 -->
+      <div class="research-accord-item " id="year-2017" data-year="2017">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2017">
+          <div class="year-header-left">
+            <span class="year-title-badge">2017</span>
+            <span class="year-count-pill">1 Paper</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2017">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="drswatimanojyeole" data-year="2017" data-title="assessing the role of instrumental attributes in employer branding" data-details="international &amp; academic journal issn: 0974–3928">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Swati Manoj Yeole</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Assessing the Role of Instrumental Attributes in Employer Branding</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">International &amp; Academic Journal ISSN: 0974–3928</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2017</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2016 -->
+      <div class="research-accord-item " id="year-2016" data-year="2016">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2016">
+          <div class="year-header-left">
+            <span class="year-title-badge">2016</span>
+            <span class="year-count-pill">4 Publications</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2016">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="drvineetaagrawal" data-year="2016" data-title="a review of indian tourism industry with swot analysis" data-details="journal of tourism &amp; hospitality, issn 2167 – 0269) (impact factor: 0.325) (index copernicus value : 6.45)">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Vineeta Agrawal</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A Review of Indian Tourism Industry with SWOT Analysis</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Journal of Tourism &amp; Hospitality, ISSN 2167 – 0269) (Impact Factor: 0.325) (Index Copernicus Value : 6.45)</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2016</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drswatimanojyeole" data-year="2016" data-title="role &amp; challenges for hr in retail industry in indian context" data-details="e-issn – 2320-0065">
+                      <td class="col-sr"><span class="sr-badge">2</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Swati Manoj Yeole</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Role &amp; Challenges for HR in Retail Industry in Indian Context</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">E-ISSN – 2320-0065</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2016</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drjitenderkumarsharma" data-year="2016" data-title="role of skill development in make in india campaign" data-details="national conference">
+                      <td class="col-sr"><span class="sr-badge">3</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Jitender Kumar Sharma</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Role of Skill development in Make In India Campaign</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">National Conference</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2016</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mrrajuvarghese" data-year="2016" data-title="shoppers orbit" data-details="case conference-2016 – jansen school of business , coimbatore">
+                      <td class="col-sr"><span class="sr-badge">4</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Mr. Raju Varghese</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Shoppers Orbit</span>
+                          <div class="paper-tags"><span class="tag-case">Case Study</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Case Conference-2016 – Jansen School of Business , Coimbatore</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2016</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2015 -->
+      <div class="research-accord-item " id="year-2015" data-year="2015">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2015">
+          <div class="year-header-left">
+            <span class="year-title-badge">2015</span>
+            <span class="year-count-pill">5 Publications</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2015">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="drvineetaagrawal" data-year="2015" data-title="higher education in india : challenges and opportunities" data-details="international journal of scientific research, (issn 2277 – 8179) (impact factor: 0.3371)">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Vineeta Agrawal</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Higher Education in India : Challenges and Opportunities</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">International Journal of Scientific Research, (ISSN 2277 – 8179) (Impact Factor: 0.3371)</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2015</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drswatimanojyeole" data-year="2015" data-title="role &amp; challenges of women entrepreneurs" data-details="978-93-84916-76-3">
+                      <td class="col-sr"><span class="sr-badge">2</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Swati Manoj Yeole</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Role &amp; Challenges Of Women Entrepreneurs</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">978-93-84916-76-3</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2015</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2015" data-title="energizing economies through coffee retail business in india with special reference to pcmc area" data-details="energizing economies through business &amp; technology excellence organized by pratibha institute of management, chinchwad, pune">
+                      <td class="col-sr"><span class="sr-badge">3</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Energizing Economies through Coffee Retail Business in India with Special Reference to PCMC Area</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Energizing Economies through Business &amp; Technology Excellence organized by Pratibha Institute of Management, Chinchwad, Pune</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2015</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drjitenderkumarsharma" data-year="2015" data-title="marketing expenses &amp; profitability: evidence from telecom sector in kingdom of saudi arabia" data-details="european journal of business &amp; management, issn 2222-1905, 2222-2839 (online)vol 5, no 35, 2015, ugc listed : 7994">
+                      <td class="col-sr"><span class="sr-badge">4</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Jitender Kumar Sharma</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Marketing Expenses &amp; Profitability: Evidence from Telecom Sector in Kingdom of Saudi Arabia</span>
+                          <div class="paper-tags"><span class="tag-ugc">UGC-CARE Listed</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">European Journal of Business &amp; Management, ISSN 2222-1905, 2222-2839 (Online)Vol 5, No 35, 2015, UGC Listed : 7994</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2015</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mrrajuvarghese" data-year="2015" data-title="time for a change" data-details="a compendium of hr case studies by b-school faculties">
+                      <td class="col-sr"><span class="sr-badge">5</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Mr. Raju Varghese</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Time for a Change</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">A Compendium of HR Case Studies by B-School Faculties</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2015</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2014 -->
+      <div class="research-accord-item " id="year-2014" data-year="2014">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2014">
+          <div class="year-header-left">
+            <span class="year-title-badge">2014</span>
+            <span class="year-count-pill">2 Publications</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2014">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="drswatimanojyeole" data-year="2014" data-title="corporate social responsibility &amp; business sustainability" data-details="978-93-5158-004-1">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Swati Manoj Yeole</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Corporate Social Responsibility &amp; Business Sustainability</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">978-93-5158-004-1</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2014</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2014" data-title="competency as a strategic hr tool in manufacturing industry" data-details="iup journal of management research., vol. 13 issue 3, pg no -24.">
+                      <td class="col-sr"><span class="sr-badge">2</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Competency as a Strategic HR Tool in Manufacturing Industry</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">IUP Journal of Management Research., Vol. 13 Issue 3, Pg No -24.</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2014</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2013 -->
+      <div class="research-accord-item " id="year-2013" data-year="2013">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2013">
+          <div class="year-header-left">
+            <span class="year-title-badge">2013</span>
+            <span class="year-count-pill">2 Publications</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2013">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="drvineetaagrawal" data-year="2013" data-title="fdi in multi brand retail in india" data-details="international journal of new innovations (issn 2277 –4459)">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Vineeta Agrawal</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">FDI in Multi Brand Retail in India</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">International Journal of New Innovations (ISSN 2277 –4459)</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2013</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drswatimanojyeole" data-year="2013" data-title="use of social media for searching employment by management students with special reference to facebook, twitter, linkedin in chinchwad area." data-details="national conference at royal school of business, guwahati (assam)">
+                      <td class="col-sr"><span class="sr-badge">2</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Swati Manoj Yeole</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Use of social media for searching employment by management students with special reference to Facebook, Twitter, LinkedIn in Chinchwad area.</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">National Conference at Royal School of Business, Guwahati (Assam)</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2014</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2012 -->
+      <div class="research-accord-item " id="year-2012" data-year="2012">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2012">
+          <div class="year-header-left">
+            <span class="year-title-badge">2012</span>
+            <span class="year-count-pill">3 Publications</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2012">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2012" data-title="employee engagement: a survey in it industry" data-details="international journal of advances in management, technology &amp;engineering sciences, vol 1, issue 7 (1),issn: 2249-7455, pg no 127">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Employee Engagement: A Survey in IT industry</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">International Journal of Advances in Management, Technology &amp;Engineering Sciences, Vol 1, Issue 7 (1),ISSN: 2249-7455, Pg No 127</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2012</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2012" data-title="employee engagement: a survey in it industry" data-details="iind international symposium on management, technology &amp; engineering, science organized by dayan sagar institute of management &amp; research &amp; cimsr, pune">
+                      <td class="col-sr"><span class="sr-badge">2</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Employee Engagement: A Survey in IT industry</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">IInd international symposium on Management, Technology &amp; Engineering, Science organized by Dayan sagar Institute of Management &amp; Research &amp; CIMSR, Pune</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2012</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2012" data-title="employment engagement: a strategic hr tool in it industry" data-details="international conference asm –group of institute, pune 2012 ,isbn – 978-81-921443-0-4">
+                      <td class="col-sr"><span class="sr-badge">3</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Employment Engagement: A Strategic HR Tool in IT Industry</span>
+                          <div class="paper-tags"><span class="tag-isbn">ISBN Registered</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">International Conference ASM –Group of Institute, Pune 2012 ,ISBN – 978-81-921443-0-4</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2012</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2011 -->
+      <div class="research-accord-item " id="year-2011" data-year="2011">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2011">
+          <div class="year-header-left">
+            <span class="year-title-badge">2011</span>
+            <span class="year-count-pill">6 Publications</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2011">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2011" data-title="role of green hrm in combating climate change" data-details="economics and business analysis and applications,edited byprof. laxmi r. kulshrestha, dr. swami p. saxena, prof. s. p. kaushik, dr. jyoti gogia, a.k. publications">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Role of Green HRM in Combating Climate Change</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Economics and Business Analysis and Applications,Edited ByProf. Laxmi R. Kulshrestha, Dr. Swami P. Saxena, Prof. S. P. Kaushik, Dr. Jyoti Gogia, A.K. Publications</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2011</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2011" data-title="benchmarking the competencies and generating a competency model for sales &amp; marketing personnel with special reference to manufacturing industry" data-details="6th international conference (incon-vi) organized, asm –group of institute, pune, pg no 12-22,, isbn 978-81-921443-0-4">
+                      <td class="col-sr"><span class="sr-badge">2</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Benchmarking the Competencies and Generating a Competency Model for Sales &amp; Marketing Personnel with Special Reference to Manufacturing Industry</span>
+                          <div class="paper-tags"><span class="tag-isbn">ISBN Registered</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">6th International Conference (INCON-VI) organized, ASM –Group of Institute, Pune, pg no 12-22,, ISBN 978-81-921443-0-4</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2011</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2011" data-title="green hr-analytical study of indian industry" data-details="dayalbagh educational institute, agra">
+                      <td class="col-sr"><span class="sr-badge">3</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Green HR-Analytical study of Indian Industry</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Dayalbagh Educational Institute, Agra</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2011</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drjitenderkumarsharma" data-year="2011" data-title="a study of growth and issues in medical tourism-indian context" data-details="indian stream research journal issn 2230-7850 vol i, issue ix, sept 2011, ugc listed : 8280">
+                      <td class="col-sr"><span class="sr-badge">4</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Jitender Kumar Sharma</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A study of growth and issues in Medical Tourism-Indian Context</span>
+                          <div class="paper-tags"><span class="tag-ugc">UGC-CARE Listed</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Indian Stream Research Journal ISSN 2230-7850 Vol I, Issue IX, Sept 2011, UGC Listed : 8280</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2011</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drjitenderkumarsharma" data-year="2011" data-title="private label brands in apparels: buying pattern of consumers in eastern pune" data-details="indian stream research journal issn 2230-7850 vol i, issue xi, dec 2011, ugc listed : 8280">
+                      <td class="col-sr"><span class="sr-badge">5</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Jitender Kumar Sharma</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Private label brands in Apparels: Buying pattern of consumers in eastern Pune</span>
+                          <div class="paper-tags"><span class="tag-ugc">UGC-CARE Listed</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Indian Stream Research Journal ISSN 2230-7850 Vol I, Issue XI, Dec 2011, UGC Listed : 8280</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2011</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drjitenderkumarsharma" data-year="2011" data-title="advertisement effectiveness of ooh advertising in eastern pune city" data-details="national seminar">
+                      <td class="col-sr"><span class="sr-badge">6</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Jitender Kumar Sharma</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Advertisement effectiveness of OOH Advertising in Eastern Pune city</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">National Seminar</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2011</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2010 -->
+      <div class="research-accord-item " id="year-2010" data-year="2010">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2010">
+          <div class="year-header-left">
+            <span class="year-title-badge">2010</span>
+            <span class="year-count-pill">2 Publications</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2010">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="drjitenderkumarsharma" data-year="2010" data-title="recent trends in advertising with focus on online advertising." data-details="international symposium">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Jitender Kumar Sharma</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Recent Trends in Advertising with focus on Online Advertising.</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">International Symposium</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2010</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="drjitenderkumarsharma" data-year="2010" data-title="study of gap analysis of foreign students’ expectations and experiences of support provided by colleges in pune" data-details="international conference">
+                      <td class="col-sr"><span class="sr-badge">2</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Jitender Kumar Sharma</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Study of Gap Analysis of foreign students’ expectations and experiences of support provided by colleges in Pune</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">International Conference</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2010</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2009 -->
+      <div class="research-accord-item " id="year-2009" data-year="2009">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2009">
+          <div class="year-header-left">
+            <span class="year-title-badge">2009</span>
+            <span class="year-count-pill">1 Paper</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2009">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="drjitenderkumarsharma" data-year="2009" data-title="fdi in multi brand retail in india" data-details="sector specific study of the impact of global financial meltdown – indian context">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Jitender Kumar Sharma</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">FDI in Multi Brand Retail in India</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Sector specific study of the impact of global financial meltdown – Indian Context</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2009</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2008 -->
+      <div class="research-accord-item " id="year-2008" data-year="2008">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2008">
+          <div class="year-header-left">
+            <span class="year-title-badge">2008</span>
+            <span class="year-count-pill">1 Paper</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2008">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="drjitenderkumarsharma" data-year="2008" data-title="critical study on the impact of recent developments in us on indian economy" data-details="international conference">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Jitender Kumar Sharma</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Critical study on the impact of recent developments in US on Indian Economy</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">International Conference</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2008</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2006 -->
+      <div class="research-accord-item " id="year-2006" data-year="2006">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2006">
+          <div class="year-header-left">
+            <span class="year-title-badge">2006</span>
+            <span class="year-count-pill">2 Publications</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2006">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="drswatimanojyeole" data-year="2006" data-title="role of women &amp; facilities for women employees in manufacturing units with reference to factories act, 1947" data-details="national conference">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Swati Manoj Yeole</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Role of Women &amp; Facilities for Women Employees in Manufacturing Units with reference to Factories Act, 1947</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">National Conference</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2006</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2006" data-title="liberalization and rural insurance,prospects and challenges" data-details="life insurance today,pg no 9">
+                      <td class="col-sr"><span class="sr-badge">2</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Liberalization and Rural Insurance,Prospects and Challenges</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Life Insurance Today,Pg No 9</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2006</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2005 -->
+      <div class="research-accord-item " id="year-2005" data-year="2005">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2005">
+          <div class="year-header-left">
+            <span class="year-title-badge">2005</span>
+            <span class="year-count-pill">6 Publications</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2005">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2005" data-title="liberalization &amp; it’s impact on insurance sector: challenges and strategic changes." data-details="enhancing global business competitiveness, edited by k.l. chawla, ist edition,pg no 176-182, isbn 81 – 89547-03-08.">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Liberalization &amp; It’s Impact on Insurance Sector: Challenges and Strategic Changes.</span>
+                          <div class="paper-tags"><span class="tag-isbn">ISBN Registered</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Enhancing Global Business Competitiveness, edited by K.L. Chawla, Ist edition,Pg No 176-182, ISBN 81 – 89547-03-08.</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2005</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2005" data-title="global business competiveness &amp; lic of india strengths &amp; weaknesses." data-details="enhancing global business competitiveness, edited by k.l. chawla, ist edition,pg no 176-182, isbn 81 – 89547-03-08.">
+                      <td class="col-sr"><span class="sr-badge">2</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Global Business Competiveness &amp; LIC of India Strengths &amp; Weaknesses.</span>
+                          <div class="paper-tags"><span class="tag-isbn">ISBN Registered</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Enhancing Global Business Competitiveness, edited by K.L. Chawla, Ist edition,Pg No 176-182, ISBN 81 – 89547-03-08.</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2005</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2005" data-title="ethical dimensions in public expenditure management, theology, science &amp; technology. ethics &amp; moral values." data-details="vikas publishing house pvt ltd., pg no 306- 09, isbn: 18-259-1890-6.">
+                      <td class="col-sr"><span class="sr-badge">3</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Ethical Dimensions in Public Expenditure Management, Theology, Science &amp; Technology. Ethics &amp; Moral Values.</span>
+                          <div class="paper-tags"><span class="tag-isbn">ISBN Registered</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Vikas Publishing House Pvt Ltd., Pg No 306- 09, ISBN: 18-259-1890-6.</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2005</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mssandrafranciscruz" data-year="2005" data-title="a study on online shopping attitude with special reference to st. john technical campus – palghar" data-details="genius-volume vi issue – ii – issn 2279-0849 impact factor – 4.954">
+                      <td class="col-sr"><span class="sr-badge">4</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Ms. Sandra Francis Cruz</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A study on online shopping attitude with special reference to St. John Technical Campus – Palghar</span>
+                          <div class="paper-tags"><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">GENIUS-VOLUME VI ISSUE – II – ISSN 2279-0849 Impact Factor – 4.954</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2005</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mssandrafranciscruz" data-year="2005" data-title="a study on consumer buying behaviour towardsready to eat food industry." data-details="lexipedia issn 2321-6964.">
+                      <td class="col-sr"><span class="sr-badge">5</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Ms. Sandra Francis Cruz</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">A Study On Consumer Buying Behaviour TowardsReady To Eat Food Industry.</span>
+                          <div class="paper-tags"><span class="tag-lexipedia">Lexipedia Journal</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Lexipedia ISSN 2321-6964.</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2005</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="mssandrafranciscruz" data-year="2005" data-title="comparative analysis of public sector and private sector bank." data-details="lexipedia issn 2321-6964">
+                      <td class="col-sr"><span class="sr-badge">4</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Ms. Sandra Francis Cruz</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Comparative Analysis Of Public Sector And Private Sector Bank.</span>
+                          <div class="paper-tags"><span class="tag-lexipedia">Lexipedia Journal</span><span class="tag-issn">ISSN Certified</span></div>
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Lexipedia ISSN 2321-6964</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2005</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Section 2004 -->
+      <div class="research-accord-item " id="year-2004" data-year="2004">
+        <button class="research-accord-header" aria-expanded="false" aria-controls="content-2004">
+          <div class="year-header-left">
+            <span class="year-title-badge">2004</span>
+            <span class="year-count-pill">2 Publications</span>
+          </div>
+          <div class="year-header-right">
+            <span class="accord-toggle-hint">Click to expand</span>
+            <svg class="research-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="research-accord-content" id="content-2004">
+          <div class="table-responsive">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th style="width: 55px;">#</th>
+                  <th style="width: 200px;">Faculty Member</th>
+                  <th>Title of Research</th>
+                  <th style="width: 320px;">Publication Details / Journal</th>
+                  <th style="width: 85px;">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2004" data-title="bancassurance: a new marketing strategy, case study: sbi -life" data-details="journal of environment and management">
+                      <td class="col-sr"><span class="sr-badge">1</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Bancassurance: A New Marketing Strategy, Case Study: SBI -Life</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Journal of Environment and Management</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2004</span></td>
+                    </tr>
+
+                    <tr class="pub-row" data-faculty="dranujajohri" data-year="2004" data-title="bancassurance: future prospects of india." data-details="journal of management development and information technology, volume – 2, pg no. 31-36">
+                      <td class="col-sr"><span class="sr-badge">2</span></td>
+                      <td class="col-faculty">
+                        <div class="fac-chip">
+                          <span class="fac-avatar">👤</span>
+                          <span class="fac-name">Dr. Anuja Johri</span>
+                        </div>
+                      </td>
+                      <td class="col-title">
+                        <div class="paper-title-wrap">
+                          <span class="paper-title">Bancassurance: Future Prospects of India.</span>
+                          
+                        </div>
+                      </td>
+                      <td class="col-details">
+                        <div class="journal-name">Journal of Management Development and Information Technology, Volume – 2, Pg No. 31-36</div>
+                      </td>
+                      <td class="col-year"><span class="year-pill">2004</span></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+        </div>
+
+        <!-- Lexipedia Spotlight -->
+        <div class="journal-spotlight">
+          <div class="journal-spotlight-content">
+            <h3>📖 Lexipedia — Annual Journal of Lexicon MILE</h3>
+            <p>
+              <em>Lexipedia</em> (ISSN: 2321-6964) is the peer-reviewed scholarly journal published annually by the Lexicon Management Institute of Leadership &amp; Excellence. It features cutting-edge research papers, case studies, and conceptual frameworks by management educators, research scholars, and corporate practitioners.
+            </p>
+            <div class="journal-meta-row">
+              <div class="journal-meta-item">ISSN: <strong>2321-6964</strong></div>
+              <div class="journal-meta-item">Frequency: <strong>Annual</strong></div>
+              <div class="journal-meta-item">Discipline: <strong>Multi-Disciplinary Management Studies</strong></div>
+              <div class="journal-meta-item">Publisher: <strong>Lexicon MILE Pune</strong></div>
+            </div>
+          </div>
+          <div>
+            <a href="contact.html" class="button button-outline" style="white-space: nowrap;">Submit Paper <span>↗</span></a>
+          </div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="research-cta-box">
+          <div>
+            <h3>Driven by Research. Focused on Leadership.</h3>
+            <p>Experience how cutting-edge faculty research directly enriches classroom discussion and industry-ready mentorship in our PGDM and MBA Global programs.</p>
+          </div>
+          <div class="research-cta-actions">
+            <a href="faculty.html" class="button">Meet Faculty Directory <span>↗</span></a>
+            <a href="admission.html" class="button button-outline">Admissions Process <span>↗</span></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const accordionItems = document.querySelectorAll('.research-accord-item');
+      const searchInput = document.getElementById('researchSearchInput');
+      const clearSearchBtn = document.getElementById('clearSearchBtn');
+      const facultySelect = document.getElementById('facultyFilterSelect');
+      const yearPills = document.querySelectorAll('.year-pill-btn');
+      const toggleAllBtn = document.getElementById('toggleAllBtn');
+      const resultsCountEl = document.getElementById('resultsCount');
+      const filterActiveNotice = document.getElementById('filterActiveNotice');
+      const noResultsMsg = document.getElementById('noResultsMsg');
+      const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+
+      let currentYearFilter = 'all';
+      let currentFacultyFilter = 'all';
+      let currentSearchQuery = '';
+
+      // Accordion click toggle
+      accordionItems.forEach(item => {
+        const header = item.querySelector('.research-accord-header');
+        header.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          item.classList.toggle('open');
+          header.setAttribute('aria-expanded', !isOpen);
+          updateToggleAllBtnText();
+        });
+      });
+
+      // Toggle All functionality
+      let allExpanded = false;
+      toggleAllBtn.addEventListener('click', () => {
+        allExpanded = !allExpanded;
+        accordionItems.forEach(item => {
+          if (item.style.display !== 'none') {
+            if (allExpanded) {
+              item.classList.add('open');
+              item.querySelector('.research-accord-header').setAttribute('aria-expanded', 'true');
+            } else {
+              item.classList.remove('open');
+              item.querySelector('.research-accord-header').setAttribute('aria-expanded', 'false');
+            }
+          }
+        });
+        toggleAllBtn.textContent = allExpanded ? 'Collapse All Years' : 'Expand All Years';
+      });
+
+      function updateToggleAllBtnText() {
+        const visibleItems = Array.from(accordionItems).filter(item => item.style.display !== 'none');
+        if (visibleItems.length === 0) return;
+        const allOpen = visibleItems.every(item => item.classList.contains('open'));
+        allExpanded = allOpen;
+        toggleAllBtn.textContent = allOpen ? 'Collapse All Years' : 'Expand All Years';
+      }
+
+      // Year Filter Pills
+      yearPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          yearPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          currentYearFilter = pill.getAttribute('data-year');
+          applyFilters();
+        });
+      });
+
+      // Faculty Filter
+      facultySelect.addEventListener('change', (e) => {
+        currentFacultyFilter = e.target.value;
+        applyFilters();
+      });
+
+      // Search Input
+      searchInput.addEventListener('input', (e) => {
+        currentSearchQuery = e.target.value.trim().toLowerCase();
+        clearSearchBtn.style.display = currentSearchQuery.length > 0 ? 'block' : 'none';
+        applyFilters();
+      });
+
+      clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        currentSearchQuery = '';
+        clearSearchBtn.style.display = 'none';
+        searchInput.focus();
+        applyFilters();
+      });
+
+      resetFiltersBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        currentSearchQuery = '';
+        clearSearchBtn.style.display = 'none';
+        facultySelect.value = 'all';
+        currentFacultyFilter = 'all';
+        yearPills.forEach(p => p.classList.remove('active'));
+        yearPills[0].classList.add('active');
+        currentYearFilter = 'all';
+        applyFilters();
+      });
+
+      // Core Filter Logic
+      function applyFilters() {
+        let visiblePapersCount = 0;
+        let visibleSectionsCount = 0;
+        const isFiltering = (currentYearFilter !== 'all' || currentFacultyFilter !== 'all' || currentSearchQuery !== '');
+
+        filterActiveNotice.style.display = isFiltering ? 'inline-block' : 'none';
+
+        accordionItems.forEach(item => {
+          const itemYear = item.getAttribute('data-year');
+          let yearMatches = false;
+
+          if (currentYearFilter === 'all') {
+            yearMatches = true;
+          } else if (currentYearFilter === 'earlier') {
+            const numYear = parseInt(itemYear, 10);
+            yearMatches = (!isNaN(numYear) && numYear <= 2010);
+          } else {
+            yearMatches = (itemYear === currentYearFilter);
+          }
+
+          if (!yearMatches) {
+            item.style.display = 'none';
+            return;
+          }
+
+          // Check individual rows inside
+          const rows = item.querySelectorAll('.pub-row');
+          let visibleRowsInYear = 0;
+
+          rows.forEach(row => {
+            const fac = row.getAttribute('data-faculty') || '';
+            const title = row.getAttribute('data-title') || '';
+            const details = row.getAttribute('data-details') || '';
+            const yearStr = row.getAttribute('data-year') || '';
+
+            // Faculty filter
+            let facMatch = (currentFacultyFilter === 'all');
+            if (!facMatch) {
+              if (currentFacultyFilter === 'drswatiyeole') {
+                facMatch = fac.includes('swati');
+              } else if (currentFacultyFilter === 'mssandracruz') {
+                facMatch = fac.includes('sandra');
+              } else {
+                facMatch = fac.includes(currentFacultyFilter);
+              }
+            }
+
+            // Search filter
+            let searchMatch = true;
+            if (currentSearchQuery !== '') {
+              searchMatch = title.includes(currentSearchQuery) || 
+                            fac.includes(currentSearchQuery) || 
+                            details.includes(currentSearchQuery) || 
+                            yearStr.includes(currentSearchQuery);
+            }
+
+            if (facMatch && searchMatch) {
+              row.style.display = '';
+              visibleRowsInYear++;
+              visiblePapersCount++;
+            } else {
+              row.style.display = 'none';
+            }
+          });
+
+          if (visibleRowsInYear > 0) {
+            item.style.display = 'block';
+            visibleSectionsCount++;
+            // Update the year counter pill dynamically
+            const countPill = item.querySelector('.year-count-pill');
+            if (countPill) {
+              countPill.textContent = `${visibleRowsInYear} ${visibleRowsInYear === 1 ? 'Publication' : 'Publications'}`;
+            }
+            // If user is actively searching or filtering by faculty, auto-expand matching years
+            if (isFiltering && visibleRowsInYear > 0) {
+              item.classList.add('open');
+              item.querySelector('.research-accord-header').setAttribute('aria-expanded', 'true');
+            }
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        // Update total counter
+        resultsCountEl.innerHTML = `Showing <strong>${visiblePapersCount}</strong> of 77 research publications`;
+
+        // Handle empty state
+        if (visiblePapersCount === 0) {
+          noResultsMsg.style.display = 'block';
+        } else {
+          noResultsMsg.style.display = 'none';
+        }
+
+        updateToggleAllBtnText();
+      }
+
+      // Check URL hash on load (e.g. #2022 or #year-2022)
+      if (window.location.hash) {
+        const hash = window.location.hash.replace('#', '');
+        const targetYear = hash.replace('year-', '');
+        const targetItem = document.getElementById(`year-${targetYear}`) || document.getElementById(hash);
+        if (targetItem) {
+          targetItem.classList.add('open');
+          targetItem.querySelector('.research-accord-header').setAttribute('aria-expanded', 'true');
+          setTimeout(() => {
+            targetItem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 300);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+

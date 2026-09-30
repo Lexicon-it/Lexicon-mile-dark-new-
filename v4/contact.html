@@ -946,7 +946,7 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             </div>
             <h3>PGDM Admissions</h3>
-            <p class="dept-desc">Direct counseling for 2026&ndash;28 admissions, GD/PI booking, scholarship evaluations, and curriculum specializations.</p>
+            <p class="dept-desc">Direct counseling for 2027&ndash;29 admissions, GD/PI booking, scholarship evaluations, and curriculum specializations.</p>
             
             <ul class="dept-contacts">
               <li class="dept-contact-item">
@@ -1110,7 +1110,7 @@
                   <div class="form-input-wrap">
                     <select id="cDept" class="form-control" required>
                       <option value="" disabled selected>Select Department / Topic</option>
-                      <option value="pgdm">PGDM 2026&ndash;28 Admissions</option>
+                      <option value="pgdm">PGDM 2027&ndash;29 Admissions</option>
                       <option value="global-mba">MBA Global</option>
                       <option value="placements">Corporate Placements &amp; Hiring</option>
                       <option value="visit">Schedule In-Person Campus Visit</option>
@@ -1154,7 +1154,7 @@
             </form>
 
             <!-- Success Confirmation Box -->
-            <div id="formSuccessToast" class="form-status-msg success">
+            <div id="formSuccessToast" class="form-status-msg">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
               <div>
                 <strong>Thank you! Your inquiry has been received.</strong>
@@ -1437,7 +1437,7 @@
         btn.style.color = '#ffffff';
         btn.style.opacity = '1';
 
-        toast.style.display = 'flex';
+        toast.classList.add('success');
         toast.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
         // Reset form
