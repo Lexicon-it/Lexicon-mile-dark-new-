@@ -252,69 +252,245 @@
       </div>
     </section>
 
-    <!-- ============ SECTION 3: HOW TO APPLY (3-PHASE ROADMAP) ============ -->
-    <section class="section" id="how-to-apply" style="padding-top: 16px; padding-bottom: 32px;">
+    <!-- ============ SECTION 3: HOW TO APPLY (3-PHASE ROADMAP & ACCORDION) ============ -->
+    <section class="section" id="how-to-apply" style="padding-top: 24px; padding-bottom: 40px;">
       <div class="container">
         
         <div class="section-heading reveal">
           <div>
-            <p class="eyebrow">STEP-BY-STEP ADMISSION ROADMAP</p>
+            <p class="eyebrow">ADMISSION PROCESS &middot; MBA GLOBAL &amp; PGDM 2026&ndash;28</p>
             <h2>How to Apply in 3 Simple Phases<span class="period">.</span></h2>
           </div>
-          <p>The entire application process is conducted through a single common online window. Complete all three phases to confirm your eligibility for selection rounds.</p>
+          <p>The application process consists of three simple phases, and applicants must complete all three steps to qualify for the selection process. A single common online window facilitates applications for both MBA Global and PGDM programs.</p>
         </div>
 
-        <div class="application-roadmap-grid reveal">
-
-          <!-- Phase 1 -->
-          <div class="phase-step-card">
-            <div class="phase-header-row">
-              <span class="phase-num-pill">Phase 01</span>
-              <span style="font-size: 11px; color: #7b8ea5; font-weight: 600;">Step 1 of 3</span>
-            </div>
-            <h3 class="phase-title">Register Your Profile</h3>
-            <p class="phase-desc">Initiate your application on the official admissions portal by entering your basic personal profile coordinates and program preference.</p>
-            <ul class="phase-checklist">
-              <li>Full candidate name, email &amp; mobile verification</li>
-              <li>Choice of preferred programme (PGDM or MBA Global)</li>
-              <li>Instant generation of unique Application ID</li>
-            </ul>
+        <div class="hta-wrapper reveal">
+          
+          <!-- Program Compatibility Badges -->
+          <div class="hta-program-badges">
+            <span class="hta-prog-chip primary">
+              <span style="font-size: 14px;">🌍</span> Applicable to <strong>MBA Global (USW, UK)</strong>
+            </span>
+            <span class="hta-prog-chip primary">
+              <span style="font-size: 14px;">🎓</span> Applicable to <strong>PGDM (All Specializations)</strong>
+            </span>
+            <span class="hta-prog-chip gold">
+              <span style="font-size: 14px;">💳</span> Application Entrance Fee: <strong>₹1,000</strong>
+            </span>
+            <span class="hta-prog-chip">
+              <span style="font-size: 14px;">⏱️</span> Est. Completion Time: <strong>15–20 Mins</strong>
+            </span>
           </div>
 
-          <!-- Phase 2 -->
-          <div class="phase-step-card">
-            <div class="phase-header-row">
-              <span class="phase-num-pill">Phase 02</span>
-              <span class="phase-fee-tag">₹1,000 Application Fee</span>
-            </div>
-            <h3 class="phase-title">Pay Entrance Processing Fee</h3>
-            <p class="phase-desc">Pay the non-refundable entrance application fee of INR 1,000 online using the secure payment gateway to activate your full candidate file.</p>
-            <ul class="phase-checklist">
-              <li>Secure checkout via Net Banking, UPI, Cards</li>
-              <li>Instant digital payment receipt generation</li>
-              <li>Unlocks Phase 3 document &amp; score submission</li>
-            </ul>
+          <!-- Interactive Stepper Track -->
+          <div class="hta-stepper-track" id="htaStepperTrack">
+            <button class="hta-step-tab active" data-target="phase-1" aria-controls="phase-1-content">
+              <span class="hta-step-circle">01</span>
+              <div>
+                <span class="hta-step-info-label">Phase 01</span>
+                <span class="hta-step-info-title">Register Your Profile</span>
+              </div>
+            </button>
+            <button class="hta-step-tab" data-target="phase-2" aria-controls="phase-2-content">
+              <span class="hta-step-circle">02</span>
+              <div>
+                <span class="hta-step-info-label">Phase 02</span>
+                <span class="hta-step-info-title">Pay Entrance Fee (₹1,000)</span>
+              </div>
+            </button>
+            <button class="hta-step-tab" data-target="phase-3" aria-controls="phase-3-content">
+              <span class="hta-step-circle">03</span>
+              <div>
+                <span class="hta-step-info-label">Phase 03</span>
+                <span class="hta-step-info-title">Complete Application</span>
+              </div>
+            </button>
           </div>
 
-          <!-- Phase 3 -->
-          <div class="phase-step-card">
-            <div class="phase-header-row">
-              <span class="phase-num-pill">Phase 03</span>
-              <span style="font-size: 11px; color: #4ee3c2; font-weight: 700;">Final Step</span>
+          <!-- Accordion Cards List -->
+          <div class="hta-accordion-list" id="htaAccordionList">
+
+            <!-- Phase 1 Accordion -->
+            <div class="hta-accord-item open" id="phase-1">
+              <button class="hta-accord-header" aria-expanded="true" aria-controls="phase-1-content">
+                <div class="hta-header-left">
+                  <span class="hta-phase-tag">Phase 01</span>
+                  <span class="hta-phase-title-text">Register Your Profile</span>
+                </div>
+                <div class="hta-header-right">
+                  <span style="font-size: 12px; color: #94a3b8; font-weight: 500;">Step 1 of 3</span>
+                  <svg class="hta-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </button>
+              <div class="hta-accord-body" id="phase-1-content">
+                <p class="hta-lead-desc">
+                  This is the first step of your application. Fill out the common application form by providing your personal details and preferred programme.
+                </p>
+
+                <div class="hta-details-grid">
+                  <div class="hta-detail-card">
+                    <h4><span>👤</span> Personal &amp; Contact Details</h4>
+                    <p>Enter your full legal name matching your 10th marksheet or valid Passport, active mobile number (verified via instant OTP), and primary email address.</p>
+                  </div>
+                  <div class="hta-detail-card">
+                    <h4><span>🎯</span> Programme Preference Selection</h4>
+                    <p>Select your intended qualification: <strong>MBA Global (University of South Wales, UK)</strong> or <strong>PGDM (Marketing &amp; Finance / Research &amp; Business Analytics / Business Management)</strong>.</p>
+                  </div>
+                  <div class="hta-detail-card">
+                    <h4><span>🔑</span> Application ID Generation</h4>
+                    <p>Upon registration, a unique applicant credentials ID is instantly created for your personal candidate dashboard, tracking your progress throughout admissions.</p>
+                  </div>
+                </div>
+
+                <ul class="hta-checklist">
+                  <li>
+                    <span class="hta-check-icon">✓</span>
+                    <span><strong>Pro Tip for MBA Global Applicants:</strong> Ensure candidate name matches exactly with your Valid International Passport for subsequent UK CAS and Student Visa processing.</span>
+                  </li>
+                  <li>
+                    <span class="hta-check-icon">✓</span>
+                    <span>No document upload is required in Phase 1; profile registration takes under 3 minutes.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <h3 class="phase-title">Complete Credentials &amp; Slot Selection</h3>
-            <p class="phase-desc">Submit your academic background, test percentiles, and work history, then book your personal interview venue or online schedule.</p>
-            <ul class="phase-checklist">
-              <li>10th, 12th &amp; Graduation semester marks</li>
-              <li>Aptitude test score (CAT, XAT, CMAT, MAT, etc.)</li>
-              <li>Work experience, achievements &amp; interview venue</li>
-            </ul>
+
+            <!-- Phase 2 Accordion -->
+            <div class="hta-accord-item open" id="phase-2">
+              <button class="hta-accord-header" aria-expanded="true" aria-controls="phase-2-content">
+                <div class="hta-header-left">
+                  <span class="hta-phase-tag fee">Phase 02</span>
+                  <span class="hta-phase-title-text">Pay Your Admission Process Entrance Fee</span>
+                </div>
+                <div class="hta-header-right">
+                  <span style="font-size: 12px; color: #fbbf24; font-weight: 700;">INR 1,000 Online</span>
+                  <svg class="hta-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </button>
+              <div class="hta-accord-body" id="phase-2-content">
+                <p class="hta-lead-desc">
+                  You are required to make a non-refundable payment of <strong>INR 1000</strong> towards the admission process entrance fee online. Upon successful payment, you will be redirected to the next phase of the application, where you need to submit the required credentials to complete your application.
+                </p>
+
+                <div class="hta-details-grid">
+                  <div class="hta-detail-card">
+                    <h4><span>💳</span> Secure Payment Modes</h4>
+                    <p>Integrated payment gateway supporting UPI (Google Pay, PhonePe, Paytm, BHIM), Net Banking across 50+ banks, Debit Cards, and Credit Cards.</p>
+                  </div>
+                  <div class="hta-detail-card">
+                    <h4><span>🧾</span> Instant Payment Receipt</h4>
+                    <p>An official digital invoice and payment confirmation voucher is emailed and stored inside your portal immediately after checkout.</p>
+                  </div>
+                  <div class="hta-detail-card">
+                    <h4><span>⚡</span> Automated Phase 3 Unlocking</h4>
+                    <p>Zero processing delay. Once your INR 1,000 transaction succeeds, your application file immediately unlocks Phase 3 for credential submission.</p>
+                  </div>
+                </div>
+
+                <ul class="hta-checklist">
+                  <li>
+                    <span class="hta-check-icon">✓</span>
+                    <span>Fee is universally uniform across both PGDM and MBA Global candidate registrations.</span>
+                  </li>
+                  <li>
+                    <span class="hta-check-icon">✓</span>
+                    <span>100% encrypted 256-bit SSL transaction gateway. Non-refundable processing fee.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Phase 3 Accordion -->
+            <div class="hta-accord-item open" id="phase-3">
+              <button class="hta-accord-header" aria-expanded="true" aria-controls="phase-3-content">
+                <div class="hta-header-left">
+                  <span class="hta-phase-tag final">Phase 03</span>
+                  <span class="hta-phase-title-text">Complete Your Application</span>
+                </div>
+                <div class="hta-header-right">
+                  <span style="font-size: 12px; color: #2ec4b6; font-weight: 700;">Final Qualifying Step</span>
+                  <svg class="hta-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </button>
+              <div class="hta-accord-body" id="phase-3-content">
+                <p class="hta-lead-desc">
+                  Provide the following details to complete your application and qualify for the final personal interview and selection rounds:
+                </p>
+
+                <div class="hta-details-grid">
+                  <div class="hta-detail-card">
+                    <h4><span>📚</span> Academic Details</h4>
+                    <p>Class 10th &amp; 12th percentages/grades, Graduation degree stream, college name, and aggregate percentage. Final-year candidates can provide marks up to their latest completed semester.</p>
+                  </div>
+                  <div class="hta-detail-card">
+                    <h4><span>🏆</span> Extracurricular &amp; Work Experience</h4>
+                    <p>Details of sports, arts, leadership initiatives, internships, or full-time corporate work experience (if any; freshers are equally encouraged to apply).</p>
+                  </div>
+                  <div class="hta-detail-card">
+                    <h4><span>📊</span> Aptitude Test Score</h4>
+                    <p>Scorecard and roll number for accepted national exams: <strong>CAT, XAT, CMAT, MAT, GMAT, MH-CET, or ATMA</strong>. Candidates awaiting exam results can register roll numbers.</p>
+                  </div>
+                  <div class="hta-detail-card">
+                    <h4><span>📍</span> Address for Correspondence</h4>
+                    <p>Permanent and current correspondence postal address with accurate PIN code for official hardcopy offer letters and formal documentation.</p>
+                  </div>
+                  <div class="hta-detail-card" style="grid-column: 1 / -1;">
+                    <h4><span>🎙️</span> Preferred Interview Venue</h4>
+                    <p>Select your preferred personal interview venue from nationwide physical center locations (Pune Campus, Mumbai, Delhi, Bengaluru, Hyderabad, Kolkata, Patna, Ranchi, Jaipur, Indore, Lucknow) or choose <strong>Online Video Interview</strong>.</p>
+                  </div>
+                </div>
+
+                <ul class="hta-checklist">
+                  <li>
+                    <span class="hta-check-icon">✓</span>
+                    <span>Submission of Phase 3 confirms your seat in the upcoming personal evaluation and PI interview slot.</span>
+                  </li>
+                  <li>
+                    <span class="hta-check-icon">✓</span>
+                    <span>Interview schedule confirmation with date, panel link/venue details will be sent via email within 48 hours.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
 
-        </div>
+          <!-- Pre-requisites & Checklist Callout Box -->
+          <div class="hta-prereq-box">
+            <div>
+              <h4><span>📁</span> Documents to Keep Ready Before Starting</h4>
+              <p>Keep digital copies of these essential records handy for smooth Phase 3 submission:</p>
+              <div class="hta-prereq-tags">
+                <span class="hta-tag">Recent Color Photograph</span>
+                <span class="hta-tag">10th &amp; 12th Marksheets</span>
+                <span class="hta-tag">Graduation Marksheets / Degree</span>
+                <span class="hta-tag">National Test Scorecard (CAT/XAT/CMAT/MAT/GMAT/CET)</span>
+                <span class="hta-tag">Valid Passport (Mandatory for MBA Global UK Route)</span>
+              </div>
+            </div>
+            <div>
+              <a href="https://admissions.lexiconmile.com/" target="_blank" rel="noopener noreferrer" class="button" style="white-space: nowrap; padding: 12px 24px; font-size: 13.5px;">
+                Apply Now <span>↗</span>
+              </a>
+            </div>
+          </div>
 
-        <div style="text-align: center; margin-top: 24px;" class="reveal">
-          <a href="https://admissions.lexiconmile.com/" target="_blank" rel="noopener noreferrer" class="button" style="padding: 12px 28px; font-size: 14px;">Start Your Online Application <span>↗</span></a>
+          <!-- Bottom CTA Strip -->
+          <div class="hta-cta-strip">
+            <a href="https://admissions.lexiconmile.com/" target="_blank" rel="noopener noreferrer" class="button" style="padding: 13px 32px; font-size: 14px;">
+              Apply for MBA Global &amp; PGDM Now <span>↗</span>
+            </a>
+            <a href="tel:+919967427278" class="button button-outline" style="padding: 13px 24px; font-size: 14px;">
+              📞 Call Admissions: +91 99674 27278
+            </a>
+          </div>
+
         </div>
 
       </div>
@@ -595,26 +771,94 @@
 
   <script src="js/components.js"></script>
 
-  <!-- Interactive Accordion for FAQs -->
+  <!-- Interactive Scripts for How to Apply & FAQs -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // 1. FAQ Accordions
       const faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(item => {
         const trigger = item.querySelector('.faq-trigger');
+        if (!trigger) return;
         trigger.addEventListener('click', () => {
           const isOpen = item.classList.contains('open');
-          // Close other FAQs
           faqItems.forEach(i => {
             i.classList.remove('open');
-            i.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+            const trig = i.querySelector('.faq-trigger');
+            if (trig) trig.setAttribute('aria-expanded', 'false');
           });
-          // Toggle current
           if (!isOpen) {
             item.classList.add('open');
             trigger.setAttribute('aria-expanded', 'true');
           }
         });
       });
+
+      // 2. How to Apply Stepper & Accordions
+      const stepTabs = document.querySelectorAll('.hta-step-tab');
+      const accordItems = document.querySelectorAll('.hta-accord-item');
+
+      stepTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const targetId = tab.getAttribute('data-target');
+          const targetItem = document.getElementById(targetId);
+
+          stepTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+
+          if (targetItem) {
+            targetItem.classList.add('open');
+            const hdr = targetItem.querySelector('.hta-accord-header');
+            if (hdr) hdr.setAttribute('aria-expanded', 'true');
+            targetItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        });
+      });
+
+      accordItems.forEach(item => {
+        const header = item.querySelector('.hta-accord-header');
+        if (!header) return;
+        header.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          item.classList.toggle('open');
+          header.setAttribute('aria-expanded', !isOpen);
+
+          // Sync stepper tab active state
+          const itemId = item.getAttribute('id');
+          stepTabs.forEach(tab => {
+            if (tab.getAttribute('data-target') === itemId) {
+              if (!isOpen) {
+                tab.classList.add('active');
+              }
+            } else if (!isOpen) {
+              tab.classList.remove('active');
+            }
+          });
+        });
+      });
+
+      // 3. Smooth Scroll on Hash Link (e.g., #how-to-apply or #eligibility)
+      function handleHashJump() {
+        const hash = window.location.hash;
+        if (hash) {
+          const targetEl = document.querySelector(hash);
+          if (targetEl) {
+            setTimeout(() => {
+              targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              // If jumping to how-to-apply, ensure all 3 phases are open
+              if (hash === '#how-to-apply') {
+                accordItems.forEach(ai => {
+                  ai.classList.add('open');
+                  const h = ai.querySelector('.hta-accord-header');
+                  if (h) h.setAttribute('aria-expanded', 'true');
+                });
+              }
+            }, 350);
+          }
+        }
+      }
+
+      handleHashJump();
+      window.addEventListener('hashchange', handleHashJump);
     });
   </script>
 </body>

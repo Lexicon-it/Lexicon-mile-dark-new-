@@ -3,176 +3,324 @@
 const megaMenuData = {
   // About Us Menu
   'about-lexicon': {
-    overview: `<h4 class="mega-heading">OVERVIEW</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Founded in 2006 in Pune, The Lexicon<br>Group has evolved into a premier<br>educational and business leader,<br>empowering individuals at every stage<br>of life through diverse initiatives.<br>The group continues to create<br>opportunities for learning, growth<br>and development with a strong<br>focus on excellence.</p>`,
-    image: `<img src="images/portrait-1.jpg" alt="About Lexicon" class="mega-image">`
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">OVERVIEW</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Founded in 2006 in Pune, The Lexicon Group has evolved into a premier educational and business leader, empowering individuals at every stage of life through diverse initiatives. The group continues to create opportunities for learning, growth and development with a strong focus on excellence.</p>
+               <a href="about-lexicon.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Learn More About Lexicon MILE <span>↗</span></a>`,
+    image: `<img src="images/06.Banner.png" alt="About Lexicon" class="mega-image">`
   },
   'lexicon-group': {
-    overview: `<h4 class="mega-heading">LEXICON GROUP</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Lexicon Group is a prominent<br>Pune-based conglomerate founded<br>in 2006, dedicated to fostering<br>excellence across education, wellness,<br>media, and innovative ventures.<br>Headquartered in Pune, the group<br>has evolved into a diverse ecosystem<br>that impacts thousands of lives<br>through quality-driven initiatives.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">LEXICON GROUP</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">The Lexicon Group is a prominent Pune-based conglomerate founded in 2006, dedicated to fostering excellence across education, wellness, media, and innovative ventures. Headquartered in Pune, the group has evolved into a diverse ecosystem that impacts thousands of lives through quality-driven initiatives.</p>
+               <a href="lexicon-group.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Explore The Lexicon Group Legacy <span>↗</span></a>`,
     image: `<img src="images/campus.jpg" alt="Lexicon Group" class="mega-image">`
   },
   'managing-trustees': {
-    overview: `<h4 class="mega-heading">MANAGING TRUSTEES</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Managing Trustees of Lexicon MILE<br>bring together visionary leadership,<br>industry experience and a strong<br>commitment to quality education.<br>Their collective vision focuses on<br>innovation, excellence, values and<br>holistic student development, while<br>fostering industry relevance, lifelong<br>learning and leadership for the future.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">MANAGING TRUSTEES</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">The Managing Trustees of Lexicon MILE bring together visionary leadership, industry experience and a strong commitment to quality education. Their collective vision focuses on innovation, excellence, values and holistic student development, while fostering industry relevance, lifelong learning and leadership for the future.</p>
+               <a href="managing-trustees.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Meet Our Managing Trustees <span>↗</span></a>`,
     image: `<img src="images/classroom.jpg" alt="Managing Trustees" class="mega-image">`
   },
   'ceo-message': {
-    overview: `<h4 class="mega-heading">FROM THE CHAIRMAN'S DESK</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">A legacy of excellence founded in 2006.<br><br>Through his visionary leadership, Chairman Shri S.D. Sharma shares principles of value-based education, 'Believe in Yourself', and nurturing students into responsible global citizens.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">FROM THE CHAIRMAN'S DESK</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">A legacy of excellence founded in 2006. Through visionary leadership, Chairman Shri S.D. Sharma shares principles of value-based education, 'Believe in Yourself', and nurturing students into responsible global citizens.</p>
+               <a href="ceos-message.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Read Chairman's Full Address <span>↗</span></a>`,
     image: `<img src="images/trustees/sd-sharma.jpg" alt="Shri S.D. Sharma, Chairman" class="mega-image">`
   },
   'governing-body': {
-    overview: `<h4 class="mega-heading">BOARD OF GOVERNORS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Board of Governors of Lexicon<br>MILE brings together experienced<br>academicians, industry professionals,<br>technologists and education leaders<br>from diverse fields. Their collective<br>expertise supports academic excellence,<br>industry relevance, strong governance<br>and progressive learning, contributing<br>to continued institutional growth.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">BOARD OF GOVERNORS</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">The Board of Governors of Lexicon MILE brings together experienced academicians, industry professionals, technologists and education leaders from diverse fields. Their collective expertise supports academic excellence, industry relevance, strong governance and progressive learning.</p>
+               <a href="board-of-governors.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Board of Governors <span>↗</span></a>`,
     image: `<img src="images/governors/dr-bharat-bhushan.webp" alt="Dr. Bharat Bhushan, Chairman, Board of Governors" class="mega-image">`
   },
   'ranking-accreditation': {
-    overview: `<h4 class="mega-heading">RANKING & ACCREDITATION</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE has been recognised<br>through prestigious awards and<br>accolades for excellence in<br>management education, academic<br>leadership and industry-oriented<br>learning. These recognitions reflect<br>achievements in placements, innovation,<br>digital initiatives and leadership<br>development for industry-ready professionals.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">RANKING & ACCREDITATION</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE has been recognised through prestigious awards and accolades for excellence in management education, academic leadership and industry-oriented learning. These recognitions reflect achievements in placements, innovation, digital initiatives and leadership development.</p>
+               <a href="awards-accolades.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Recognitions & Accreditations <span>↗</span></a>`,
     image: `<img src="images/hospitality.jpg" alt="Ranking and Accreditation" class="mega-image">`
   },
 
   // Programs Menu
   'pgdm': {
-    overview: `<h4 class="mega-heading">PGDM SPECIALIZATIONS</h4>
-               <a href="#pgdm-bm" class="mega-link" style="margin-bottom: 5px;">PGDM in Business Management <span>↗</span></a>
-               <a href="#pgdm-mf" class="mega-link" style="margin-bottom: 5px;">PGDM in Marketing & Finance <span>↗</span></a>
-               <a href="#pgdm-rba" class="mega-link" style="margin-bottom: 15px;">PGDM in Research and Business Analytics <span>↗</span></a>
-               <span style="display: inline-block; padding: 4px 10px; background: #ffffff1a; color: #8cb4f5; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; border-radius: 4px; margin-bottom: 12px; align-self: flex-start;">2 Years · AICTE Approved</span>
-               <p style="color: #b1bfd2; font-size: 13px; line-height: 1.6;">A 2-year, full-time, AICTE-approved PGDM<br>(Approval No. 1-4259511) designed around<br>entrepreneurship, applied AI and a<br>corporate co-learning model.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">PGDM SPECIALIZATIONS</h4>
+               <a href="pgdm.html#pgdm-bm" class="mega-link" style="margin-bottom: 4px;">PGDM in Business Management <span>↗</span></a>
+               <a href="pgdm.html#pgdm-mf" class="mega-link" style="margin-bottom: 4px;">PGDM in Marketing & Finance <span>↗</span></a>
+               <a href="pgdm.html#pgdm-rba" class="mega-link">PGDM in Research and Business Analytics <span>↗</span></a>`,
     image: `<img src="images/classroom.jpg" alt="PGDM" class="mega-image">`
   },
   'mba-global': {
-    overview: `<h4 class="mega-heading">MBA GLOBAL TRACKS</h4>
-               <a href="#mba-usw" class="mega-link" style="margin-bottom: 5px;">MBA Global · USW, UK <span>↗</span></a>
-               <a href="#mba-inti" class="mega-link" style="margin-bottom: 5px;">MBA Global · INTI, Malaysia <span>↗</span></a>
-               <a href="#mba-sbs" class="mega-link" style="margin-bottom: 15px;">MBA Global · SBS Swiss Business School <span>↗</span></a>
-               <span style="display: inline-block; padding: 4px 10px; background: #ffffff1a; color: #8cb4f5; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; border-radius: 4px; margin-bottom: 15px;">Global Exposure</span>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7;">The MBA Global programme combines<br>management education at Lexicon MILE<br>with international learning through partner<br>universities, offering global academic<br>standards, international learning and exposure.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">MBA GLOBAL TRACKS</h4>
+               <a href="global-mba.html#mba-usw" class="mega-link" style="margin-bottom: 4px;">MBA Global · USW, UK <span>↗</span></a>
+               <a href="mba-in-business-analytics.html" class="mega-link" style="margin-bottom: 4px;">MBA Global · INTI, Malaysia <span>↗</span></a>
+               <a href="sbs.html" class="mega-link">MBA Global · SBS Swiss Business School <span>↗</span></a>`,
     image: `<img src="images/global.jpg" alt="MBA Global" class="mega-image">`
   },
   'bba': {
-    overview: `<h4 class="mega-heading">BBA SPECIALIZATIONS</h4>
-               <a href="#bba-fm" class="mega-link" style="margin-bottom: 5px;">Finance Management (FM) <span>↗</span></a>
-               <a href="#bba-hrm" class="mega-link" style="margin-bottom: 5px;">Human Resource Management (HRM) <span>↗</span></a>
-               <a href="#bba-mm" class="mega-link" style="margin-bottom: 5px;">Marketing Management (MM) <span>↗</span></a>
-               <a href="#bba-abm" class="mega-link" style="margin-bottom: 5px;">Agri Business Management (ABM) <span>↗</span></a>
-               <a href="#bba-sm" class="mega-link" style="margin-bottom: 15px;">Services Management (SM) <span>↗</span></a>
-               <span style="display: inline-block; padding: 4px 10px; background: #ffffff1a; color: #8cb4f5; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; border-radius: 4px; margin-bottom: 15px;">4 Years · AICTE Approved</span>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7;">Lexicon MILE’s BBA combines core business<br>fundamentals with AI, analytics and hands-on<br>industry exposure.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">BBA SPECIALIZATIONS</h4>
+               <a href="bba.html" class="mega-link" style="margin-bottom: 4px;">Finance Management (FM) <span>↗</span></a>
+               <a href="bba.html" class="mega-link" style="margin-bottom: 4px;">Human Resource Management (HRM) <span>↗</span></a>
+               <a href="bba.html" class="mega-link" style="margin-bottom: 4px;">Marketing Management (MM) <span>↗</span></a>
+               <a href="bba.html" class="mega-link" style="margin-bottom: 4px;">Agri Business Management (ABM) <span>↗</span></a>
+               <a href="bba.html" class="mega-link">Services Management (SM) <span>↗</span></a>`,
     image: `<img src="images/collaboration.jpg" alt="BBA" class="mega-image">`
   },
   'hmct': {
-    overview: `<h4 class="mega-heading">HMCT SPECIALIZATIONS</h4>
-               <a href="#bsc-hs" class="mega-link" style="margin-bottom: 5px;">B.Sc in Hospitality Studies <span>↗</span></a>
-               <a href="#dip-hs" class="mega-link" style="margin-bottom: 5px;">Diploma in Hospitality Studies <span>↗</span></a>
-               <a href="#h-school" class="mega-link" style="margin-bottom: 15px;">Lexicon MILE H-School <span>↗</span></a>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7;">Lexicon MILE H-School, by the hoteliers,<br>for the hoteliers, affiliated with YCMOU,<br>a UGC-recognised, NAAC 'A' Grade University.<br>Built for students seeking hands-on exposure<br>to the hospitality industry through<br>collaborations with leading hospitality brands.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">HMCT SPECIALIZATIONS</h4>
+               <a href="b-sc-hospitality-studies.html" class="mega-link" style="margin-bottom: 4px;">B.Sc in Hospitality Studies <span>↗</span></a>
+               <a href="diploma-in-hospitality-studies.html" class="mega-link">Diploma in Hospitality Studies <span>↗</span></a>`,
     image: `<img src="images/hospitality.jpg" alt="HMCT" class="mega-image">`
   },
 
   // Admissions Menu
   'admissions-process': {
-    overview: `<h4 class="mega-heading">ADMISSIONS PROCESS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s admission process guides<br>students through eligibility, application,<br>selection and enrolment. Applicants can<br>explore entrance requirements, application<br>details, fees and scholarships, while the<br>admissions team provides guidance<br>throughout the process. The approach<br>makes admissions structured and transparent<br>for aspiring management professionals.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">ADMISSIONS PROCESS</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE’s admission process guides candidates through eligibility, online application, document evaluation, personal interviews and final enrolment with complete transparency.</p>
+               <a href="admission.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Complete Admissions Process & Eligibility <span>↗</span></a>`,
     image: `<img src="images/collaboration.jpg" alt="Admissions Process" class="mega-image">`
   },
-  'pgdm-fee-structure': {
-    overview: `<h4 class="mega-heading">PGDM FEE STRUCTURE</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The PGDM fee structure outlines<br>registration, first-year tuition, second-year<br>tuition and development fees, along with<br>their respective payment schedules.<br>For the 2027–29 batch, the total<br>programme fee is ₹6.95 lakh, plus<br>applicable taxes, with payments scheduled<br>across admission and academic<br>milestones.</p>`,
+  'fee-structure': {
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">PROGRAM FEES STRUCTURE</h4>
+               <p style="color: #8cb4f5; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 10px 0;">Approved Academic Fees &middot; Transparent Installments</p>
+               <div style="display: flex; flex-direction: column; gap: 7px; margin-bottom: 12px;">
+                  <a href="fee-pgdm.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
+                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">PGDM (2027–29)</span>
+                    <span style="color: #8cb4f5; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹6.95 Lakh + Tax ↗</span>
+                  </a>
+                  <a href="global-mba-usw-uk.html#fee-structure" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
+                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">MBA Global</span>
+                    <span style="color: #2ec4b6; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹7.50L + £7,500 ↗</span>
+                  </a>
+                  <a href="fee-bba.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
+                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">BBA (2026–29)</span>
+                    <span style="color: #f05624; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹5.70 Lakh Total ↗</span>
+                  </a>
+                  <a href="b-sc-fee-structure.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
+                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">B.Sc Hospitality (3 Yrs)</span>
+                    <span style="color: #38bdf8; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹6.50 Lakh Total ↗</span>
+                  </a>
+                  <a href="diploma-in-hospitality-studies-fees.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
+                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">Diploma Hospitality (1 Yr)</span>
+                    <span style="color: #38bdf8; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹1.50 Lakh Total ↗</span>
+                  </a>
+                </div>
+               <p style="color: #b1bfd2; font-size: 12.5px; line-height: 1.5; margin: 0;">Comprehensive breakdown including statutory tuition, development fees, scheduled milestone installments, wire transfer account numbers, and 100% educational loan facilitation.</p>`,
     image: `<img src="images/campus.jpg" alt="Fees Structure" class="mega-image">`
   },
+  'pgdm-fee-structure': {
+    overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">PGDM FEE STRUCTURE</h4>
+               <span style="display: inline-block; padding: 3px 8px; background: rgba(140, 180, 245, 0.15); color: #8cb4f5; font-size: 11px; font-weight: 700; border-radius: 4px; margin-bottom: 8px;">Batch 2027–29 · AICTE Approved</span>
+               <p style="color: #ffffff; font-size: 14px; font-weight: 700; margin: 0 0 6px 0;">Total Programme Fee: ₹6,95,000 <span style="font-weight: 400; color: #94a3b8; font-size: 12px;">(+ applicable taxes)</span></p>
+               <p style="color: #b1bfd2; font-size: 13px; line-height: 1.6; margin-bottom: 10px;">Payment is scheduled across 4 academic milestones: Registration (₹50k within 3 days), 1st Year Tuition (₹2.00L within 1 month), 2nd Year Tuition (₹2.00L by Mar 2028), and Development Fees (₹2.45L by Jun 2027).</p>
+               <a href="fee-pgdm.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Full PGDM Fee Schedule & Bank A/C <span>↗</span></a>`,
+    image: `<img src="images/classroom.jpg" alt="PGDM Fees" class="mega-image">`
+  },
+  'mba-global-fee-structure': {
+    overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">MBA GLOBAL FEES</h4>
+               <span style="display: inline-block; padding: 3px 8px; background: rgba(46, 196, 182, 0.15); color: #2ec4b6; font-size: 11px; font-weight: 700; border-radius: 4px; margin-bottom: 8px;">Batch 2026–28 · UK Degree</span>
+               <p style="color: #ffffff; font-size: 14px; font-weight: 700; margin: 0 0 6px 0;">India: ₹7,50,000 + GST &middot; UK: £7,500 GBP</p>
+               <p style="color: #b1bfd2; font-size: 13px; line-height: 1.6; margin-bottom: 10px;">India component covers 60 credits delivered at Lexicon MILE (Terms 1–2) with structured installments. Progression to Term 3 at University of South Wales, UK (£7,500 payable directly to USW).</p>
+               <a href="global-mba-usw-uk.html#fee-structure" class="mega-link" style="color: #2ec4b6; font-weight: 600; font-size: 12px;">View MBA Global Breakdown & Installments <span>↗</span></a>`,
+    image: `<img src="images/global.jpg" alt="MBA Global Fees" class="mega-image">`
+  },
+  'bba-fee-structure': {
+    overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">BBA FEE STRUCTURE</h4>
+               <span style="display: inline-block; padding: 3px 8px; background: rgba(240, 86, 36, 0.15); color: #f05624; font-size: 11px; font-weight: 700; border-radius: 4px; margin-bottom: 8px;">Batch 2026–29 · SPPU Pune · NEP 2020</span>
+               <p style="color: #ffffff; font-size: 14px; font-weight: 700; margin: 0 0 6px 0;">3-Year Grand Total: ₹5,70,000 <span style="font-weight: 400; color: #94a3b8; font-size: 12px;">(₹1,90,000 / year)</span></p>
+               <p style="color: #b1bfd2; font-size: 13px; line-height: 1.6; margin-bottom: 10px;">Scheduled across 3 academic years: Enrolment (₹15,000), Part-A Tuition (₹20,000-₹35,000), Development Fee (₹3,500), and Part-B Industry Skills (₹1,51,500). Optional 4th Year Honours at ₹1,50,000.</p>
+               <a href="fee-bba.html" class="mega-link" style="color: #f05624; font-weight: 600; font-size: 12px;">View Full BBA Fee Schedule & Bank A/C <span>↗</span></a>`,
+    image: `<img src="images/collaboration.jpg" alt="BBA Fees" class="mega-image">`
+  },
   'scholarships': {
-    overview: `<h4 class="mega-heading">SCHOLARSHIPS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE offers scholarships designed<br>to recognise academic excellence and support<br>deserving students by reducing the financial<br>burden of management education. For the<br>PGDM 2026–28 batch, scholarships are based<br>on entrance examination performance, with<br>awards up to ₹1,00,000 for CAT, ₹75,000<br>for CMAT and ₹50,000 for MAT. Scholarships<br>are limited and subject to applicable conditions.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">SCHOLARSHIPS</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE offers scholarships designed to recognise academic excellence and support deserving students by reducing the financial burden of management education. For the PGDM 2026–28 batch, scholarships are based on entrance examination performance, with awards up to ₹1,00,000 for CAT, ₹75,000 for CMAT and ₹50,000 for MAT. Scholarships are limited and subject to applicable conditions.</p>
+               <a href="scholarship.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Full Scholarship Criteria & Terms <span>↗</span></a>`,
     image: `<img src="images/hero.jpg" alt="Scholarships" class="mega-image">`
   },
   'admission-guide': {
-    overview: `<h4 class="mega-heading">ADMISSION GUIDE</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Lexicon MILE admission guide provides<br>a step-by-step pathway for applicants, from<br>creating an account and verifying their email<br>to completing the online application. Candidates<br>enter their academic and personal details,<br>pay the application fee and submit<br>the completed application. The guide makes<br>the admission journey structured and<br>easy to follow.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">ADMISSION GUIDE</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">The Lexicon MILE admission guide provides a step-by-step pathway for applicants, from creating an account and verifying their email to completing the online application, submitting academic details, and scheduling selection rounds.</p>
+               <a href="admission-guide.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Open Step-by-Step Admission Guide <span>↗</span></a>`,
     image: `<img src="images/classroom.jpg" alt="Admission Guide" class="mega-image">`
   },
   'education-loan': {
-    overview: `<h4 class="mega-heading">EDUCATION LOAN ASSISTANCE</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE supports students seeking<br>financial assistance through partnerships<br>with reputed banking institutions offering<br>education loans at nominal interest rates.<br>The admissions team assists students with<br>loan enquiries, documentation and processing.<br>This support helps students navigate<br>the education loan process and<br>makes financing more accessible.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">EDUCATION LOAN ASSISTANCE</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE supports students seeking financial assistance through partnerships with reputed banking institutions offering education loans at nominal interest rates. The admissions team provides end-to-end guidance with documentation and processing.</p>
+               <a href="education-loan.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Explore Partner Banks & Loan Support <span>↗</span></a>`,
     image: `<img src="images/hospitality.jpg" alt="Education Loan" class="mega-image">`
   },
 
   // Faculty & Mentors
   'faculty-mentors': {
-    overview: `<h4 class="mega-heading">FACULTY & INDUSTRY MENTORS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE brings together accomplished faculty and experienced industry professionals who connect academic knowledge with real-world business challenges.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">FACULTY & INDUSTRY MENTORS</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE brings together accomplished faculty and experienced industry professionals who connect academic knowledge with real-world business challenges through its “A Mentor Every MILE” model.</p>
+               <a href="faculty-mentors.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Meet Our Industry Mentors <span>↗</span></a>`,
     image: `<img src="images/collaboration.jpg" alt="Faculty & Mentors" class="mega-image">`
   },
   'faculty-directory': {
-    overview: `<h4 class="mega-heading">FACULTY DIRECTORY</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s faculty directory brings<br>together accomplished academic scholars<br>and experienced industry practitioners<br>across management, analytics, marketing,<br>business communication and specialised areas.<br>The directory features resident faculty<br>and visiting industry leaders, bringing<br>academic knowledge and practical business<br>perspectives into the learning experience.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">FACULTY DIRECTORY</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE’s faculty directory brings together accomplished academic scholars and experienced industry practitioners across management, analytics, marketing, business communication and specialised areas.</p>
+               <a href="faculty.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Explore Full Faculty Profiles <span>↗</span></a>`,
     image: `<img src="images/global.jpg" alt="Faculty Directory" class="mega-image">`
   },
 
   // Placements
   'our-recruiters': {
-    overview: `<h4 class="mega-heading">OUR RECRUITERS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE has built a strong industry<br>network of 200+ recruiters, providing<br>students with career opportunities across<br>leading national and multinational organisations.<br>Its recruiter ecosystem spans diverse<br>industries and sectors, connecting students<br>with companies for internships, placements<br>and long-term career opportunities<br>across multiple professional fields.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">OUR RECRUITERS</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE has built a strong industry network of 200+ recruiters, providing students with career opportunities across leading national and multinational organisations for internships and placements.</p>
+               <a href="our-recruiters.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View 200+ Recruiting Partners <span>↗</span></a>`,
     image: `<img src="images/hospitality.jpg" alt="Our Recruiters" class="mega-image">`
   },
   'placements-overview': {
-    overview: `<h4 class="mega-heading">PLACEMENTS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE’s placement ecosystem connects<br>students with 200+ organisations across<br>diverse sectors, supported by strong<br>industry engagement and practical learning.<br>For the 2024–26 PGDM batch, the institute<br>reports 500+ placement offers, with the<br>highest international package at ₹49 LPA<br>and highest domestic package at ₹18 LPA,<br>supporting industry-ready careers.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">PLACEMENTS</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE’s placement ecosystem connects students with 200+ organisations across diverse sectors. For the 2024–26 PGDM batch, 500+ offers were received, with highest international package at ₹49 LPA and domestic at ₹18 LPA.</p>
+               <a href="placement.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Placement Report & Statistics <span>↗</span></a>`,
     image: `<img src="images/hero.jpg" alt="Placements" class="mega-image">`
   },
   'recruitment-process': {
-    overview: `<h4 class="mega-heading">RECRUITMENT PROCESS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE has streamlined its recruitment<br>process through technology, industry integration<br>and outcome-driven education, enabling<br>organisations to connect efficiently with talent.<br>Its recruitment platform helps identify<br>Day Zero Professionals based on role<br>requirements, skills and organisational needs.<br>The Career Development & Placement Cell<br>prepares students for dynamic corporate environments.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">RECRUITMENT PROCESS</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE has streamlined its recruitment process through technology, industry integration and outcome-driven education, connecting organisations efficiently with talent for dynamic corporate environments.</p>
+               <a href="recruitment-process.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Explore Campus Recruitment Process <span>↗</span></a>`,
     image: `<img src="images/classroom.jpg" alt="Recruitment Process" class="mega-image">`
   },
 
   // More
   'seat-vacancy': {
-    overview: `<h4 class="mega-heading">SEAT VACANCY DETAILS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Seat Vacancy Details section provides<br>updated information on available seats<br>across programmes offered by Lexicon MILE.<br>It helps prospective students understand<br>current availability and programme-wise<br>vacancy details. The section provides<br>information on admission opportunities,<br>helping applicants make informed decisions<br>and proceed with the admission process.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">SEAT VACANCY DETAILS</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">The Seat Vacancy Details section provides updated information on available seats across programmes offered by Lexicon MILE, helping applicants make informed decisions and proceed with the admission process.</p>
+               <a href="seat-vacancy-details.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Check Live Seat Availability <span>↗</span></a>`,
     image: `<img src="images/sliders/4.jpg-1.jpeg" alt="Seat Vacancy" class="mega-image">`
   },
   'campus': {
-    overview: `<h4 class="mega-heading">CAMPUS TOUR</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Lexicon MILE campus provides an<br>interactive and collaborative learning<br>environment with modern classrooms,<br>digital learning facilities and dedicated<br>spaces for teamwork and practical exposure.<br>The campus also houses Hyper Build –<br>The Lexicon MILE AI Lab, where students<br>work on real corporate challenges and<br>practical AI applications.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">CAMPUS TOUR</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">The Lexicon MILE campus provides an interactive and collaborative learning environment with modern classrooms, digital learning facilities, dedicated team spaces, and Hyper Build – The Lexicon MILE AI Lab.</p>
+               <a href="campus-tour.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Take Campus Tour <span>↗</span></a>`,
     image: `<img src="images/campus.jpg" alt="Campus Tour" class="mega-image">`
   },
   'blogs': {
-    overview: `<h4 class="mega-heading">BLOGS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">The Lexicon MILE blog brings together<br>insights on management education, careers,<br>business and industry trends. Covering<br>PGDM, MBA Global and BBA, the articles<br>explore programme choices, career<br>opportunities, placements, skills and<br>international exposure. The content helps<br>students understand emerging trends and<br>make informed academic and career decisions.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">BLOGS</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">The Lexicon MILE blog brings together insights on management education, careers, business and industry trends across PGDM, MBA Global and BBA to help students make informed academic decisions.</p>
+               <a href="lexicon-blog.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Read Latest Insights & Articles <span>↗</span></a>`,
     image: `<img src="images/global.jpg" alt="Blogs" class="mega-image">`
   },
   'events-webinars': {
-    overview: `<h4 class="mega-heading">EVENTS & WEBINARS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE creates a vibrant learning<br>environment through leadership conclaves,<br>industry summits, TEDx events, masterclasses,<br>industrial visits and thought-leadership sessions.<br>These experiences connect students with<br>industry leaders, entrepreneurs and professionals,<br>encouraging networking, practical learning<br>and exposure to real-world business<br>perspectives.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">EVENTS & WEBINARS</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE creates a vibrant learning environment through leadership conclaves, industry summits, TEDx events, masterclasses, and industrial visits connecting students with top business leaders.</p>
+               <a href="events-webinars.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Upcoming Conclaves & Summits <span>↗</span></a>`,
     image: `<img src="images/collaboration.jpg" alt="Events" class="mega-image">`
   },
   'partnerships': {
-    overview: `<h4 class="mega-heading">PARTNERSHIPS</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Lexicon MILE collaborates with leading<br>academic institutions, industry organisations<br>and professional networks to strengthen<br>learning beyond the classroom. These<br>partnerships support research, faculty<br>interactions, student learning opportunities,<br>curriculum development, internships and<br>live projects, connecting academic knowledge<br>with real business challenges.</p>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">PARTNERSHIPS</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE collaborates with leading academic institutions, industry organisations and professional networks to support research, student learning opportunities, curriculum development and live projects.</p>
+               <a href="partnerships.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Explore Academic & Industry Tie-ups <span>↗</span></a>`,
     image: `<img src="images/hero.jpg" alt="Partnerships" class="mega-image">`
   },
+  'alumni': {
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">ALUMNI</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Our strong global alumni network comprises accomplished professionals leading top corporations worldwide who actively mentor students and foster lifelong career connections.</p>
+               <a href="alumni.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Connect with Global Alumni Network <span>↗</span></a>`,
+    image: `<img src="images/alumni/1.png" alt="Alumni" class="mega-image">`
+  },
+  'virtual-tour': {
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">VIRTUAL TOUR</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Experience the Lexicon MILE campus through an immersive 360-degree virtual tour. Explore modern classrooms, seminar halls, Hyper Build AI Lab, library, and sports amenities from anywhere in the world.</p>
+               <a href="virtual-tour.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Launch 360° Virtual Campus Experience <span>↗</span></a>`,
+    image: `<img src="images/campus-tour/hero-banner.jpeg" alt="Virtual Tour" class="mega-image">`
+  },
   'contact': {
-    overview: `<h4 class="mega-heading">CONTACT US</h4>
-               <p style="color: #b1bfd2; font-size: 14px; line-height: 1.7; margin-top: 15px;">Connect with Lexicon MILE for admission,<br>placement and general enquiries through<br>dedicated support channels. The institute’s<br>Pune campus is located at MILE Tower,<br>GAT No. 726, Pune-Nagar Road, Wagholi.<br>Dedicated contacts are available to assist<br>prospective students, recruiters and<br>other visitors with relevant enquiries<br>and support.</p>`,
-    image: `<img src="images/portrait-1.jpg" alt="Contact Us" class="mega-image">`
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">CONTACT US</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Connect with Lexicon MILE for admission, placement and general enquiries through dedicated support channels. The campus is located at MILE Tower, GAT No. 726, Pune-Nagar Road, Wagholi.</p>
+               <a href="contact.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Get In Touch & Campus Location <span>↗</span></a>`,
+    image: `<img src="images/campus.jpg" alt="Contact Us" class="mega-image">`
   }
 };
 
-document.querySelectorAll('.mega-link-large').forEach(link => {
-  link.addEventListener('mouseenter', function() {
-    const key = this.getAttribute('data-hover');
-    if (key && megaMenuData[key]) {
-      const megaMenu = this.closest('.mega-menu');
-      if (!megaMenu) return;
-      const overviewContainer = megaMenu.querySelector('.mega-col-sub');
-      const imageContainer = megaMenu.querySelector('.mega-col-image');
-      if (overviewContainer) overviewContainer.innerHTML = megaMenuData[key].overview;
-      if (imageContainer) imageContainer.innerHTML = megaMenuData[key].image;
+function updateMegaMenuOverview(link) {
+  const key = link.getAttribute('data-hover');
+  if (key && megaMenuData[key]) {
+    const megaMenu = link.closest('.mega-menu');
+    if (!megaMenu) return;
+    const overviewContainer = megaMenu.querySelector('.mega-col-sub');
+    const imageContainer = megaMenu.querySelector('.mega-col-image');
+    const prefix = typeof getComponentPrefix === 'function' ? getComponentPrefix() : '';
+    if (overviewContainer) {
+      let overviewHtml = megaMenuData[key].overview;
+      if (prefix) {
+        overviewHtml = overviewHtml.replace(/href="([^"\/:]+\.html(?:#[^"]*)?)"/g, `href="${prefix}$1"`);
+      }
+      overviewContainer.innerHTML = overviewHtml;
     }
-  });
+    if (imageContainer) {
+      let imageHtml = megaMenuData[key].image;
+      if (prefix) {
+        imageHtml = imageHtml.replace(/src="(assets|images)\//g, `src="${prefix}$1/`);
+      }
+      imageContainer.innerHTML = imageHtml;
+    }
+  }
+}
+
+// Delegated hover on .mega-link-large and [data-hover] works regardless of when header HTML is injected
+document.addEventListener('mouseover', function(e) {
+  const link = e.target.closest('.mega-link-large, .mega-link-sub, [data-hover]');
+  if (link) {
+    updateMegaMenuOverview(link);
+  }
+});
+
+// Remove closing state when mouse leaves submenu nav item
+document.addEventListener('mouseout', function(e) {
+  const navItem = e.target.closest('.nav-item.has-submenu');
+  if (navItem && (!e.relatedTarget || !navItem.contains(e.relatedTarget))) {
+    navItem.classList.remove('menu-closed');
+  }
+});
+
+// Non-clickable category items update the overview panel on click/tap
+document.addEventListener('click', function(e) {
+  const staticItem = e.target.closest('.mega-link-static[data-hover]');
+  if (staticItem) {
+    updateMegaMenuOverview(staticItem);
+  }
+});
+
+// Handle clicking links inside the mega menu (smooth routing & clean menu dismissal)
+document.addEventListener('click', function(e) {
+  const link = e.target.closest('.mega-menu a');
+  if (!link) return;
+
+  const href = link.getAttribute('href');
+  if (!href) return;
+
+  // External / protocols pass through
+  if (href.startsWith('http') && !href.includes(window.location.host)) return;
+  if (href.startsWith('tel:') || href.startsWith('mailto:')) return;
+
+  const navItem = link.closest('.nav-item.has-submenu');
+  if (navItem) {
+    navItem.classList.add('menu-closed');
+    setTimeout(() => navItem.classList.remove('menu-closed'), 600);
+  }
+
+  // Same page anchor handling
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  let targetPath = '';
+  let targetHash = '';
+  try {
+    const url = new URL(link.href, window.location.origin);
+    targetPath = url.pathname.split('/').pop() || 'index.html';
+    targetHash = url.hash;
+  } catch (err) {}
+
+  if (targetPath === currentPath && targetHash) {
+    const targetEl = document.querySelector(targetHash);
+    if (targetEl) {
+      e.preventDefault();
+      targetEl.scrollIntoView({ behavior: 'smooth' });
+      history.pushState(null, null, targetHash);
+    }
+  } else if (targetPath === currentPath && !targetHash) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 });
 
 // This is a frontend concept. No enquiries or personal data are sent to a server.
@@ -251,6 +399,10 @@ mobileMenu.querySelectorAll('nav a').forEach(link => link.addEventListener('clic
 function programDialog(key) {
   const program = programs[key];
   if (!program) return;
+  if (key === 'ihm') {
+    openDialog(`<p class="eyebrow">${program.category}</p><h2 id="dialog-title">${program.title}<span class="period">.</span></h2><img class="dialog-hero" src="images/${program.image}.jpg" alt="Illustrative ${program.title} learning environment"><p>${program.description}</p><ul>${program.highlights.map(item => `<li>${item}</li>`).join('')}</ul><div style="display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap;"><a href="b-sc-hospitality-studies.html" class="button" style="text-decoration: none;">B.Sc in Hospitality Studies <span>↗</span></a><a href="diploma-in-hospitality-studies.html" class="button" style="text-decoration: none; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2);">Diploma in Hospitality Studies <span>↗</span></a></div>`);
+    return;
+  }
   openDialog(`<p class="eyebrow">${program.category}</p><h2 id="dialog-title">${program.title}<span class="period">.</span></h2><img class="dialog-hero" src="images/${program.image}.jpg" alt="Illustrative ${program.title} learning environment"><p>${program.description}</p><ul>${program.highlights.map(item => `<li>${item}</li>`).join('')}</ul><p class="dialog-notice">Detailed curriculum, duration, accreditation, eligibility and fees will be added once confirmed by Lexicon MILE.</p><button class="button" data-action="apply" data-selected="${key}">I'm interested <span>↗</span></button>`);
 }
 function applicationDialog(selected) {
@@ -327,6 +479,14 @@ document.addEventListener('click', event => {
   const action = target.dataset.action;
   if (action === 'apply') {
     window.open('https://admissions.lexiconmile.com/', '_blank');
+    return;
+  }
+  if (action === 'whatsapp') {
+    window.open('https://api.whatsapp.com/send/?phone=%2B919967427278&text&type=phone_number&app_absent=0', '_blank');
+    return;
+  }
+  if (action === 'call') {
+    window.location.href = 'tel:+919967427278';
     return;
   }
   if (action === 'brochure') return downloadBrochure();

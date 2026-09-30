@@ -1,0 +1,14 @@
+# Scratch and temporary directories
+scratch/
+**/scratch/
+
+# Temporary files
+*.tmp
+*.log
+chrome_history*
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
