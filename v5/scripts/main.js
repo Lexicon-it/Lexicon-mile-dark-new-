@@ -345,14 +345,14 @@ const awardsGrid = document.getElementById('awards-grid');
 if (awardsGrid) awardsGrid.innerHTML = awards.map((award, index) => `<article class="award-item reveal"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#award"/></svg><span class="award-index">${String(index + 1).padStart(2, '0')}</span><h3>${award.title}</h3><p class="award-subtitle">${award.subtitle}</p></article>`).join('');
 
 const activities = [
-  { title: 'Clubs & Communities', image: 'classroom', description: 'Find your people. Exchange perspectives. Build something bigger together.' },
-  { title: 'Competitions', image: 'collaboration', description: 'Take on new challenges and turn bold ideas into your competitive edge.' },
-  { title: 'Events & Experiences', image: 'auditorium', description: 'Be part of the moments, conversations and celebrations that stay with you.' },
-  { title: 'Industry Visits', image: 'global', description: 'Go behind the scenes and see the world of business in motion.' },
-  { title: 'Workshops', image: 'hero', description: 'Get hands-on with new tools, fresh perspectives and real-world skills.' },
-  { title: 'Student Activities', image: 'campus', description: 'Make room for curiosity, collaboration and a little friendly competition.' },
-  { title: 'Entrepreneurship', image: 'collaboration', description: 'Challenge assumptions. Test an idea. Take the first step towards building it.' },
-  { title: 'Leadership', image: 'classroom', description: 'Learn to inspire a team, take ownership and create meaningful change.' }
+  { title: 'Clubs & Communities', image: 'activities/act1', description: 'Find your people. Exchange perspectives. Build something bigger together.' },
+  { title: 'Competitions', image: 'activities/act2', description: 'Take on new challenges and turn bold ideas into your competitive edge.' },
+  { title: 'Events & Experiences', image: 'activities/act3', description: 'Be part of the moments, conversations and celebrations that stay with you.' },
+  { title: 'Industry Visits', image: 'activities/act4', description: 'Go behind the scenes and see the world of business in motion.' },
+  { title: 'Workshops', image: 'activities/act5', description: 'Get hands-on with new tools, fresh perspectives and real-world skills.' },
+  { title: 'Student Activities', image: 'activities/act6', description: 'Make room for curiosity, collaboration and a little friendly competition.' },
+  { title: 'Entrepreneurship', image: 'activities/act7', description: 'Challenge assumptions. Test an idea. Take the first step towards building it.' },
+  { title: 'Leadership', image: 'activities/act8', description: 'Learn to inspire a team, take ownership and create meaningful change.' }
 ];
 const lifeTrackEl = document.getElementById('life-track');
 if (lifeTrackEl) lifeTrackEl.innerHTML = activities.map((activity, index) => `<article class="life-card"><div class="life-image"><img src="images/${activity.image}.jpg" alt="Illustrative ${activity.title.toLowerCase()} experience" loading="lazy" width="700" height="470"><span>${String(index + 1).padStart(2, '0')}</span></div><h3>${activity.title}</h3><p>${activity.description}</p></article>`).join('');
@@ -489,7 +489,10 @@ document.addEventListener('click', event => {
     window.location.href = 'tel:+919967427278';
     return;
   }
-  if (action === 'brochure') return downloadBrochure();
+  if (action === 'brochure') {
+    window.open('https://admissions.lexiconmile.com/', '_blank');
+    return;
+  }
   const info = information[action];
   if (info) openDialog(`<p class="eyebrow">${info.eyebrow}</p><h2 id="dialog-title">${info.title}</h2>${info.body}`);
 });
@@ -511,9 +514,9 @@ document.addEventListener('submit', event => {
 
 // Manual carousel: no auto-advance to interrupt reading or keyboard navigation.
 const testimonials = [
-  { quote: 'Lexicon MILE transformed my perspective on management. The faculty are industry veterans who bring real-world insights into every session.', name: 'Devyani Pardhi', program: 'PGDM Batch 2023-25', image: '1', note: '' },
-  { quote: 'The international exposure through the USW partnership was invaluable. I got to experience global business education firsthand.', name: 'Ajinkya', program: 'Lexicon MILE Alumni', image: '2', note: '' },
-  { quote: 'The placement mentorship program was exceptional. Right from building your resume to mock interviews, every step was supported professionally.', name: 'Palak Keshari', program: 'Lexicon MILE Alumni', image: '3', note: '' }
+  { quote: 'Lexicon MILE consistently produces graduates who are not just academically sound, but corporately ready. Their strategic thinking and immediate impact on our projects is remarkable.', name: 'Vikram Malhotra', program: 'CEO, Global Nexus Tech', image: 'ceo1', note: '' },
+  { quote: 'We have hired from Lexicon MILE for three consecutive years. The students demonstrate incredible adaptability, global perspective, and a strong foundation in modern business analytics.', name: 'Priya Sharma', program: 'Founder & MD, Elevate Innovations', image: 'ceo2', note: '' },
+  { quote: 'The leadership qualities and ethical grounding we see in candidates from Lexicon MILE make them our top choice for future management roles. They truly understand the real-world business landscape.', name: 'Rajiv Singhania', program: 'Chairman, Navayuga Enterprises', image: 'ceo3', note: '' }
 ];
 let testimonialIndex = 0;
 function setTestimonial(direction) {
@@ -572,11 +575,14 @@ if ('IntersectionObserver' in window) {
       if (!entry.isIntersecting) return;
       counterObserver.unobserve(entry.target);
       if (reducedMotion.matches) return;
-      const target = Number(entry.target.dataset.counter);
+      const targetStr = entry.target.dataset.counter;
+      const target = Number(targetStr);
+      const isFloat = targetStr.includes('.');
       const start = performance.now();
       function tick(now) {
         const progress = Math.min((now - start) / 1150, 1);
-        entry.target.textContent = String(Math.round(target * (1 - Math.pow(1 - progress, 3))));
+        const currentVal = target * (1 - Math.pow(1 - progress, 3));
+        entry.target.textContent = isFloat ? currentVal.toFixed(1) : String(Math.round(currentVal));
         if (progress < 1) requestAnimationFrame(tick);
       }
       requestAnimationFrame(tick);
@@ -666,4 +672,74 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reducedM
     }
 
     // ==========================================
+    // Video Modal Logic
+    // ==========================================
+    
+    // Create modal HTML
+    const videoModalHTML = `
+      <div class="video-modal" id="videoModal" aria-hidden="true">
+        <div class="video-modal-backdrop" id="videoModalCloseBg"></div>
+        <div class="video-modal-content">
+          <button class="video-modal-close" id="videoModalCloseBtn" aria-label="Close video">&times;</button>
+          <div class="video-modal-iframe-container">
+            <iframe id="videoModalIframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', videoModalHTML);
+
+    const videoModal = document.getElementById('videoModal');
+    const videoModalCloseBg = document.getElementById('videoModalCloseBg');
+    const videoModalCloseBtn = document.getElementById('videoModalCloseBtn');
+    const videoModalIframe = document.getElementById('videoModalIframe');
+    const playButtons = document.querySelectorAll('.stack-play-btn, .js-open-video');
+
+    function openVideoModal(videoId, startParam = '') {
+        videoModalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1${startParam}`;
+        videoModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal() {
+        videoModal.classList.remove('active');
+        videoModalIframe.src = '';
+        document.body.style.overflow = '';
+    }
+
+    playButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const href = btn.getAttribute('href') || btn.getAttribute('data-video-url');
+            let videoId = '';
+            let startParam = '';
+            
+            if (href && href.includes('watch?v=')) {
+                videoId = href.split('watch?v=')[1].split('&')[0];
+                
+                const timeMatch = href.match(/[&?]t=([0-9smh]+)/);
+                if (timeMatch) {
+                    let timeStr = timeMatch[1];
+                    let totalSeconds = 0;
+                    if (timeStr.includes('h') || timeStr.includes('m') || timeStr.includes('s')) {
+                        const h = timeStr.match(/(\d+)h/) ? parseInt(timeStr.match(/(\d+)h/)[1]) : 0;
+                        const m = timeStr.match(/(\d+)m/) ? parseInt(timeStr.match(/(\d+)m/)[1]) : 0;
+                        const s = timeStr.match(/(\d+)s/) ? parseInt(timeStr.match(/(\d+)s/)[1]) : 0;
+                        totalSeconds = (h * 3600) + (m * 60) + s;
+                    } else {
+                        totalSeconds = parseInt(timeStr) || 0;
+                    }
+                    if (totalSeconds > 0) {
+                        startParam = `&start=${totalSeconds}`;
+                    }
+                }
+            } else if (href) {
+                videoId = href; // fallback
+            }
+            if(videoId) openVideoModal(videoId, startParam);
+        });
+    });
+
+    if (videoModalCloseBg) videoModalCloseBg.addEventListener('click', closeVideoModal);
+    if (videoModalCloseBtn) videoModalCloseBtn.addEventListener('click', closeVideoModal);
 
