@@ -13874,19 +13874,47 @@ a.mega-link-large {
 }
 
 /* ==========================================================================
-   PATCH 19: AI LAB TRIMESTERS 2x2 GRID & MOBILE LOGO SIZING
+   PATCH 19: AI LAB TRIMESTERS 4-COLUMN GRID (4 in Row 1, 2 in Row 2)
    ========================================================================== */
 
-.trimesters-grid-2x2 {
+.trimesters-grid-4x2,
+.trimesters-grid-2x2,
+.trimesters-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
-    .trimesters-grid-2x2 {
-        grid-template-columns: 1fr;
+.trimesters-grid .award-item,
+.trimesters-grid-4x2 .award-item,
+.trimesters-grid-2x2 .award-item {
+    padding: 1.75rem 1.5rem !important;
+    min-height: auto;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.trimesters-grid .award-item h3,
+.trimesters-grid-4x2 .award-item h3,
+.trimesters-grid-2x2 .award-item h3 {
+    max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .trimesters-grid-4x2,
+    .trimesters-grid-2x2,
+    .trimesters-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .trimesters-grid-4x2,
+    .trimesters-grid-2x2,
+    .trimesters-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
 }
 
