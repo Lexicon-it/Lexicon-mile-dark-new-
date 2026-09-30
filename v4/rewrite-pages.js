@@ -95,7 +95,7 @@ const lexiconGroup = createPage('Lexicon Group', `
             </div>
           </div>
           <div class="cta-image-wrapper">
-            <img src="images/lexicon-group.jpg" alt="Lexicon Group Overview" loading="lazy" onerror="this.src='images/hospitality.jpg'">
+            <img src="images/lexicon-group.jpg" alt="Lexicon Group Overview" loading="lazy" onerror="this.src='images/campus/lexicon-campus-building.png'">
             <span class="cta-arrow" aria-hidden="true">↗</span>
           </div>
         </div>
@@ -353,7 +353,7 @@ fs.writeFileSync('about-lexicon.html', aboutLexicon);
 fs.writeFileSync('lexicon-group.html', lexiconGroup);
 fs.writeFileSync('managing-trustees.html', trustees);
 fs.writeFileSync('board-of-governors.html', boardOfGov);
-fs.writeFileSync('ceos-message.html', ceosMessage);
+fs.writeFileSync('vice-chairmans-desk.html', ceosMessage);
 fs.writeFileSync('awards-accolades.html', awards);
 
 console.log('Successfully generated all 6 pages with standard CSS styles!');

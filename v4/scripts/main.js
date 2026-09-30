@@ -21,30 +21,30 @@ const megaMenuData = {
     image: `<img src="images/classroom.jpg" alt="Managing Trustees" class="mega-image">`
   },
   'ceo-message': {
-    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">FROM THE CHAIRMAN'S DESK</h4>
-               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">A legacy of excellence founded in 2006. Through visionary leadership, Chairman Shri S.D. Sharma shares principles of value-based education, 'Believe in Yourself', and nurturing students into responsible global citizens.</p>
-               <a href="ceos-message.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Read Chairman's Full Address <span>↗</span></a>`,
-    image: `<img src="images/trustees/sd-sharma.jpg" alt="Shri S.D. Sharma, Chairman" class="mega-image">`
+    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">FROM THE VICE CHAIRMAN'S DESK</h4>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Driving contemporary pedagogies, ethical leadership, and industry-synced management education. Vice Chairman Mr. Neeraj Sharma shares his directive on bridging the corporate employability gap and fostering global standards.</p>
+               <a href="vice-chairmans-desk.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Read Vice Chairman's Full Address <span>↗</span></a>`,
+    image: `<img src="images/trustees/neeraj-sharma.jpg" alt="Mr. Neeraj Sharma, Vice Chairman" class="mega-image">`
   },
   'governing-body': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">BOARD OF GOVERNORS</h4>
                <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">The Board of Governors of Lexicon MILE brings together experienced academicians, industry professionals, technologists and education leaders from diverse fields. Their collective expertise supports academic excellence, industry relevance, strong governance and progressive learning.</p>
                <a href="board-of-governors.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Board of Governors <span>↗</span></a>`,
-    image: `<img src="images/governors/dr-bharat-bhushan.webp" alt="Dr. Bharat Bhushan, Chairman, Board of Governors" class="mega-image">`
+    image: `<img src="images/campus/lexicon-campus-building.png" alt="Board of Governors - Lexicon MILE Campus" class="mega-image">`
   },
   'ranking-accreditation': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">RANKING & ACCREDITATION</h4>
                <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE has been recognised through prestigious awards and accolades for excellence in management education, academic leadership and industry-oriented learning. These recognitions reflect achievements in placements, innovation, digital initiatives and leadership development.</p>
                <a href="awards-accolades.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Recognitions & Accreditations <span>↗</span></a>`,
-    image: `<img src="images/hospitality.jpg" alt="Ranking and Accreditation" class="mega-image">`
+    image: `<img src="images/campus/lexicon-campus-building.png" alt="Ranking and Accreditation" class="mega-image">`
   },
 
   // Programs Menu
   'pgdm': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">PGDM SPECIALIZATIONS</h4>
-               <a href="pgdm.html#pgdm-bm" class="mega-link" style="margin-bottom: 4px;">PGDM in Business Management <span>↗</span></a>
-               <a href="pgdm.html#pgdm-mf" class="mega-link" style="margin-bottom: 4px;">PGDM in Marketing & Finance <span>↗</span></a>
-               <a href="pgdm.html#pgdm-rba" class="mega-link">PGDM in Research and Business Analytics <span>↗</span></a>`,
+               <div class="mega-link mega-link-static" style="margin-bottom: 4px;">PGDM in Business Management</div>
+               <div class="mega-link mega-link-static" style="margin-bottom: 4px;">PGDM in Marketing & Finance</div>
+               <div class="mega-link mega-link-static">PGDM in Research and Business Analytics</div>`,
     image: `<img src="images/classroom.jpg" alt="PGDM" class="mega-image">`
   },
   'mba-global': {
@@ -55,19 +55,19 @@ const megaMenuData = {
     image: `<img src="images/global.jpg" alt="MBA Global" class="mega-image">`
   },
   'bba': {
-    overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">BBA SPECIALIZATIONS</h4>
-               <a href="bba.html" class="mega-link" style="margin-bottom: 4px;">Finance Management (FM) <span>↗</span></a>
-               <a href="bba.html" class="mega-link" style="margin-bottom: 4px;">Human Resource Management (HRM) <span>↗</span></a>
-               <a href="bba.html" class="mega-link" style="margin-bottom: 4px;">Marketing Management (MM) <span>↗</span></a>
-               <a href="bba.html" class="mega-link" style="margin-bottom: 4px;">Agri Business Management (ABM) <span>↗</span></a>
-               <a href="bba.html" class="mega-link">Services Management (SM) <span>↗</span></a>`,
+    overview: `<h4 class="mega-heading" style="margin-bottom: 8px;">BBA SPECIALIZATIONS</h4>
+               <div class="mega-spec-item" style="color: #c1c8d3; font-size: 14px; margin-bottom: 5px; cursor: default; user-select: none;">Finance Management (FM)</div>
+               <div class="mega-spec-item" style="color: #c1c8d3; font-size: 14px; margin-bottom: 5px; cursor: default; user-select: none;">Human Resource Management (HRM)</div>
+               <div class="mega-spec-item" style="color: #c1c8d3; font-size: 14px; margin-bottom: 5px; cursor: default; user-select: none;">Marketing Management (MM)</div>
+               <div class="mega-spec-item" style="color: #c1c8d3; font-size: 14px; margin-bottom: 5px; cursor: default; user-select: none;">Agri Business Management (ABM)</div>
+               <div class="mega-spec-item" style="color: #c1c8d3; font-size: 14px; margin-bottom: 5px; cursor: default; user-select: none;">Services Management (SM)</div>`,
     image: `<img src="images/collaboration.jpg" alt="BBA" class="mega-image">`
   },
   'hmct': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">HMCT SPECIALIZATIONS</h4>
                <a href="b-sc-hospitality-studies.html" class="mega-link" style="margin-bottom: 4px;">B.Sc in Hospitality Studies <span>↗</span></a>
                <a href="diploma-in-hospitality-studies.html" class="mega-link">Diploma in Hospitality Studies <span>↗</span></a>`,
-    image: `<img src="images/hospitality.jpg" alt="HMCT" class="mega-image">`
+    image: `<img src="images/campus/lexicon-campus-building.png" alt="HMCT" class="mega-image">`
   },
 
   // Admissions Menu
@@ -80,26 +80,26 @@ const megaMenuData = {
   'fee-structure': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">PROGRAM FEES STRUCTURE</h4>
                <p style="color: #8cb4f5; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 10px 0;">Approved Academic Fees &middot; Transparent Installments</p>
-               <div style="display: flex; flex-direction: column; gap: 7px; margin-bottom: 12px;">
-                  <a href="fee-pgdm.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
-                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">PGDM (2027–29)</span>
-                    <span style="color: #8cb4f5; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹6.95 Lakh + Tax ↗</span>
+               <div class="mega-fee-list" style="display: flex; flex-direction: column; gap: 7px; margin-bottom: 12px;">
+                  <a href="fee-pgdm.html" class="mega-fee-btn" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 14px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid rgba(255,255,255,0.09); text-decoration: none; transition: all 0.22s ease;">
+                    <span class="fee-title" style="color: #ffffff; font-weight: 600; font-size: 12.5px; letter-spacing: -0.01em; white-space: nowrap;">PGDM</span>
+                    <span class="fee-arrow" style="color: #8cb4f5; font-size: 13px; font-weight: 700;">↗</span>
                   </a>
-                  <a href="global-mba-usw-uk.html#fee-structure" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
-                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">MBA Global</span>
-                    <span style="color: #2ec4b6; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹7.50L + £7,500 ↗</span>
+                  <a href="global-mba-usw-uk.html#fee-structure" class="mega-fee-btn" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 14px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid rgba(255,255,255,0.09); text-decoration: none; transition: all 0.22s ease;">
+                    <span class="fee-title" style="color: #ffffff; font-weight: 600; font-size: 12.5px; letter-spacing: -0.01em; white-space: nowrap;">MBA Global</span>
+                    <span class="fee-arrow" style="color: #8cb4f5; font-size: 13px; font-weight: 700;">↗</span>
                   </a>
                   <a href="fee-bba.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
                     <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">BBA (2027–30)</span>
                     <span style="color: #f05624; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹5.70 Lakh Total ↗</span>
                   </a>
-                  <a href="b-sc-fee-structure.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
-                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">B.Sc Hospitality (3 Yrs)</span>
-                    <span style="color: #38bdf8; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹6.50 Lakh Total ↗</span>
+                  <a href="b-sc-fee-structure.html" class="mega-fee-btn" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 14px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid rgba(255,255,255,0.09); text-decoration: none; transition: all 0.22s ease;">
+                    <span class="fee-title" style="color: #ffffff; font-weight: 600; font-size: 12.5px; letter-spacing: -0.01em; white-space: nowrap;">B.Sc Hospitality</span>
+                    <span class="fee-arrow" style="color: #8cb4f5; font-size: 13px; font-weight: 700;">↗</span>
                   </a>
-                  <a href="diploma-in-hospitality-studies-fees.html" style="display: flex; justify-content: space-between; align-items: center; padding: 7px 11px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; transition: 0.2s all;">
-                    <span style="color: #ffffff; font-weight: 600; font-size: 12.5px; opacity: 1; transform: none; white-space: nowrap;">Diploma Hospitality (1 Yr)</span>
-                    <span style="color: #38bdf8; font-size: 11.5px; font-weight: 700; opacity: 1; transform: none; white-space: nowrap;">₹1.50 Lakh Total ↗</span>
+                  <a href="diploma-in-hospitality-studies-fees.html" class="mega-fee-btn" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 14px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid rgba(255,255,255,0.09); text-decoration: none; transition: all 0.22s ease;">
+                    <span class="fee-title" style="color: #ffffff; font-weight: 600; font-size: 12.5px; letter-spacing: -0.01em; white-space: nowrap;">Diploma Hospitality</span>
+                    <span class="fee-arrow" style="color: #8cb4f5; font-size: 13px; font-weight: 700;">↗</span>
                   </a>
                 </div>
                <p style="color: #b1bfd2; font-size: 12.5px; line-height: 1.5; margin: 0;">Comprehensive breakdown including statutory tuition, development fees, scheduled milestone installments, wire transfer account numbers, and 100% educational loan facilitation.</p>`,
@@ -145,7 +145,7 @@ const megaMenuData = {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">EDUCATION LOAN ASSISTANCE</h4>
                <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE supports students seeking financial assistance through partnerships with reputed banking institutions offering education loans at nominal interest rates. The admissions team provides end-to-end guidance with documentation and processing.</p>
                <a href="education-loan.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Explore Partner Banks & Loan Support <span>↗</span></a>`,
-    image: `<img src="images/hospitality.jpg" alt="Education Loan" class="mega-image">`
+    image: `<img src="images/campus/lexicon-campus-building.png" alt="Education Loan" class="mega-image">`
   },
 
   // Faculty & Mentors
@@ -167,7 +167,7 @@ const megaMenuData = {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">OUR RECRUITERS</h4>
                <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE has built a strong industry network of 200+ recruiters, providing students with career opportunities across leading national and multinational organisations for internships and placements.</p>
                <a href="our-recruiters.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View 200+ Recruiting Partners <span>↗</span></a>`,
-    image: `<img src="images/hospitality.jpg" alt="Our Recruiters" class="mega-image">`
+    image: `<img src="images/campus/lexicon-campus-building.png" alt="Our Recruiters" class="mega-image">`
   },
   'placements-overview': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">PLACEMENTS</h4>
@@ -397,12 +397,32 @@ mobileMenu.addEventListener('close', () => {
 mobileMenu.querySelectorAll('nav a').forEach(link => link.addEventListener('click', () => mobileMenu.close()));
 
 function programDialog(key) {
-  const program = programs[key];
-  if (!program) return;
-  if (key === 'ihm') {
-    openDialog(`<p class="eyebrow">${program.category}</p><h2 id="dialog-title">${program.title}<span class="period">.</span></h2><img class="dialog-hero" src="images/${program.image}.jpg" alt="Illustrative ${program.title} learning environment"><p>${program.description}</p><ul>${program.highlights.map(item => `<li>${item}</li>`).join('')}</ul><div style="display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap;"><a href="b-sc-hospitality-studies.html" class="button" style="text-decoration: none;">B.Sc in Hospitality Studies <span>↗</span></a><a href="diploma-in-hospitality-studies.html" class="button" style="text-decoration: none; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2);">Diploma in Hospitality Studies <span>↗</span></a></div>`);
+  if (key === 'pgdm') {
+    window.location.href = 'pgdm.html#pgdm-bm';
     return;
   }
+  if (key === 'bba') {
+    window.location.href = 'bba.html';
+    return;
+  }
+  if (key === 'mba') {
+    const card = document.getElementById('card-mba');
+    if (card) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      card.classList.toggle('show-courses');
+      return;
+    }
+  }
+  if (key === 'ihm' || key === 'hmct') {
+    const card = document.getElementById('card-hmct');
+    if (card) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      card.classList.toggle('show-courses');
+      return;
+    }
+  }
+  const program = programs[key];
+  if (!program) return;
   openDialog(`<p class="eyebrow">${program.category}</p><h2 id="dialog-title">${program.title}<span class="period">.</span></h2><img class="dialog-hero" src="images/${program.image}.jpg" alt="Illustrative ${program.title} learning environment"><p>${program.description}</p><ul>${program.highlights.map(item => `<li>${item}</li>`).join('')}</ul><p class="dialog-notice">Detailed curriculum, duration, accreditation, eligibility and fees will be added once confirmed by Lexicon MILE.</p><button class="button" data-action="apply" data-selected="${key}">I'm interested <span>↗</span></button>`);
 }
 function applicationDialog(selected) {
@@ -463,6 +483,34 @@ function toast(message) {
 }
 
 document.addEventListener('click', event => {
+  const toggleBtn = event.target.closest('.program-course-toggle, [data-toggle-card]');
+  if (toggleBtn) {
+    event.preventDefault();
+    const cardId = toggleBtn.dataset.toggleCard;
+    const card = document.getElementById(cardId);
+    if (card) {
+      const isExpanded = card.classList.toggle('show-courses');
+      card.querySelectorAll('.program-course-toggle').forEach(b => {
+        b.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+      });
+      if (isExpanded) {
+        document.querySelectorAll('.program-card.show-courses').forEach(other => {
+          if (other !== card) {
+            other.classList.remove('show-courses');
+            other.querySelectorAll('.program-course-toggle').forEach(b => b.setAttribute('aria-expanded', 'false'));
+          }
+        });
+      }
+    }
+    return;
+  }
+  const campusCard = event.target.closest('.campus-photo');
+  if (campusCard && event.button === 0 && !event.ctrlKey && !event.metaKey && !event.shiftKey) {
+    if (!event.target.closest('a')) {
+      window.location.href = 'campus-tour.html';
+      return;
+    }
+  }
   const target = event.target.closest('[data-program], [data-action], [data-story], [data-social]');
   if (!target) return;
   if (target.dataset.program) return programDialog(target.dataset.program);

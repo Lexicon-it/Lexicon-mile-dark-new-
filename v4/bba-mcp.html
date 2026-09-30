@@ -48,6 +48,58 @@
       background: rgba(255, 255, 255, 0.05);
       color: #fff;
     }
+  
+    /* Modernized Refund Policy Section */
+    .refund-policy-section {
+      padding: 1.5rem 0;
+    }
+    .refund-policy-section .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .policy-card {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 20px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+    .policy-card:hover {
+      border-color: rgba(56, 189, 248, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    }
+    .policy-card-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .policy-icon {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: #38bdf8;
+      flex-shrink: 0;
+    }
+    .policy-icon svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+    .policy-card-inner p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
   </style>
 </head>
 <body>
@@ -72,7 +124,12 @@
 				<div class="elementor-element elementor-element-a85b064 elementor-widget elementor-widget-text-editor" data-id="a85b064" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
 									Elevate your potential with a futuristic curriculum. At Lexicon MILE, we prepare you for the real world through AI-powered tools, multi-disciplinary specializations, and extensive hands-on internships.								</div>
 				<div class="elementor-element elementor-element-9d8a915 elementor-widget elementor-widget-html" data-id="9d8a915" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
-					<div class="hero-usp-grid"><div class="usp-item"><span class="usp-icon">🤖</span><span class="usp-text">Analytical thinking & AI-driven decision-making</span></div><div class="usp-item"><span class="usp-icon">💼</span><span class="usp-text">Real-world business understanding & practical skills</span></div><div class="usp-item"><span class="usp-icon">📚</span><span class="usp-text">Professional mindset & leadership confidence</span></div><div class="usp-item"><span class="usp-icon">🎯</span><span class="usp-text">Day Zero Professional</span></div></div><style>.hero-usp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; width: 100%; margin: 12px 0 20px 0; } .usp-item { display: flex; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.05); padding: 14px 18px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease; } .usp-item:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(240, 86, 36, 0.4); transform: translateY(-2px); } .usp-icon { font-size: 22px; line-height: 1; } .usp-text {  font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; line-height: 1.4; } @media (max-width: 576px) { .hero-usp-grid { grid-template-columns: 1fr; gap: 10px; } .usp-item { padding: 12px 14px; } }</style>				</div>
+					<div class="hero-usp-grid">
+						<div class="usp-item"><span class="usp-icon" style="color: #38bdf8;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" y1="16" x2="8" y2="16"></line><line x1="16" y1="16" x2="16" y2="16"></line></svg></span><span class="usp-text">Analytical thinking &amp; AI-driven decision-making</span></div>
+						<div class="usp-item"><span class="usp-icon" style="color: #818cf8;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></span><span class="usp-text">Real-world business understanding &amp; practical skills</span></div>
+						<div class="usp-item"><span class="usp-icon" style="color: #fbbf24;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span><span class="usp-text">Professional mindset &amp; leadership confidence</span></div>
+						<div class="usp-item"><span class="usp-icon" style="color: #34d399;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span><span class="usp-text">Day Zero Professional</span></div>
+					</div><style>.hero-usp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; width: 100%; margin: 12px 0 20px 0; } .usp-item { display: flex; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.05); padding: 14px 18px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease; } .usp-item:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(240, 86, 36, 0.4); transform: translateY(-2px); } .usp-icon { display: inline-flex; align-items: center; justify-content: center; line-height: 1; flex-shrink: 0; } .usp-text {  font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; line-height: 1.4; } @media (max-width: 576px) { .hero-usp-grid { grid-template-columns: 1fr; gap: 10px; } .usp-item { padding: 12px 14px; } }</style>				</div>
 		<div class="elementor-element elementor-element-065a8f0 e-grid e-con-full e-con e-child" data-id="065a8f0" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-21d9f47 elementor-widget elementor-widget-button" data-id="21d9f47" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
 										<a class="elementor-button elementor-button-link elementor-size-md" href="http://lexiconmile.com/bba-admission-open-2027" target="_blank">
@@ -252,7 +309,13 @@ environments from day one.</p></div></div>				</div>
 		<div class="elementor-element elementor-element-32e36db e-flex e-con-boxed e-con e-child" data-id="32e36db" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 					<div class="e-con-inner">
 				<div class="elementor-element elementor-element-ffc7a75 elementor-widget elementor-widget-text-editor" data-id="ffc7a75" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<section class="refund-policy-section"><div class="container"><div class="policy-card"><div class="policy-card-inner"><div class="policy-icon">💳</div><p>Fees exclude hostel &amp; mess; exam fees applicable as per university norms.</p></div></div><div class="policy-card"><div class="policy-card-inner"><div class="policy-icon">📜</div><p>Refund (FRA-approved fees) will follow the guidelines of the All India Council for Technical Education &amp; Savitribai Phule Pune University.</p></div></div><div class="policy-card"><div class="policy-card-inner"><div class="policy-icon">🏛️</div><p>Other fee components will be governed by the institute’s policy.</p></div></div><div class="policy-card"><div class="policy-card-inner"><div class="policy-icon">✍️</div><p>Cancellation must be submitted in writing (email/in person) within the prescribed timelines.</p></div></div><div class="policy-card"><div class="policy-card-inner"><div class="policy-icon">⚖️</div><p>All disputes are subject to the Pune jurisdiction.</p></div></div></div></section>								</div>
+									<section class="refund-policy-section"><div class="container">
+<div class="policy-card"><div class="policy-card-inner"><div class="policy-icon" style="color: #38bdf8; background: rgba(56, 189, 248, 0.12); border-color: rgba(56, 189, 248, 0.25);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></div><p>Fees exclude hostel &amp; mess; exam fees applicable as per university norms.</p></div></div>
+<div class="policy-card"><div class="policy-card-inner"><div class="policy-icon" style="color: #f59e0b; background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.25);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div><p>Refund (FRA-approved fees) will follow the guidelines of the All India Council for Technical Education &amp; Savitribai Phule Pune University.</p></div></div>
+<div class="policy-card"><div class="policy-card-inner"><div class="policy-icon" style="color: #c084fc; background: rgba(192, 132, 252, 0.12); border-color: rgba(192, 132, 252, 0.25);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M3 10h18"></path><path d="M5 6l7-3 7 3"></path><path d="M4 10v11"></path><path d="M20 10v11"></path><path d="M8 14v4"></path><path d="M12 14v4"></path><path d="M16 14v4"></path></svg></div><p>Other fee components will be governed by the institute’s policy.</p></div></div>
+<div class="policy-card"><div class="policy-card-inner"><div class="policy-icon" style="color: #34d399; background: rgba(52, 211, 153, 0.12); border-color: rgba(52, 211, 153, 0.25);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg></div><p>Cancellation must be submitted in writing (email/in person) within the prescribed timelines.</p></div></div>
+<div class="policy-card"><div class="policy-card-inner"><div class="policy-icon" style="color: #60a5fa; background: rgba(96, 165, 250, 0.12); border-color: rgba(96, 165, 250, 0.25);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M5 21h14"></path><path d="M3 7l9-4 9 4"></path><path d="M4 14l-2-6h6l-2 6a3 3 0 0 1-2 0z"></path><path d="M18 14l-2-6h6l-2 6a3 3 0 0 1-2 0z"></path></svg></div><p>All disputes are subject to the Pune jurisdiction.</p></div></div>
+</div></section>								</div>
 					</div>
 				</div>
 				</div>
@@ -373,7 +436,9 @@ environments from day one.</p></div></div>				</div>
 
         <div class="advantage-card">
             <div class="advantage-card-inner">
-                <div class="advantage-icon">🚀</div>
+                <div class="advantage-icon" style="color: #38bdf8;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+                </div>
                 <div class="advantage-content">
                     Early career advantage with a strong start right after school.
                 </div>
@@ -382,7 +447,9 @@ environments from day one.</p></div></div>				</div>
 
         <div class="advantage-card">
             <div class="advantage-card-inner">
-                <div class="advantage-icon">📚</div>
+                <div class="advantage-icon" style="color: #818cf8;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                </div>
                 <div class="advantage-content">
                     Strong foundation in finance, marketing, HR, and operations.
                 </div>
@@ -391,7 +458,9 @@ environments from day one.</p></div></div>				</div>
 
         <div class="advantage-card">
             <div class="advantage-card-inner">
-                <div class="advantage-icon">🤖</div>
+                <div class="advantage-icon" style="color: #a855f7;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" y1="16" x2="8" y2="16"></line><line x1="16" y1="16" x2="16" y2="16"></line></svg>
+                </div>
                 <div class="advantage-content">
                     AI-driven learning with exposure to modern business tools.
                 </div>
@@ -400,7 +469,9 @@ environments from day one.</p></div></div>				</div>
 
         <div class="advantage-card">
             <div class="advantage-card-inner">
-                <div class="advantage-icon">💻</div>
+                <div class="advantage-icon" style="color: #06b6d4;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="2" y1="20" x2="22" y2="20"></line></svg>
+                </div>
                 <div class="advantage-content">
                     Hands-on experience with industry tools and platforms.
                 </div>
@@ -409,7 +480,9 @@ environments from day one.</p></div></div>				</div>
 
         <div class="advantage-card">
             <div class="advantage-card-inner">
-                <div class="advantage-icon">🏢</div>
+                <div class="advantage-icon" style="color: #3b82f6;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M8 10h.01"></path><path d="M16 10h.01"></path><path d="M8 14h.01"></path><path d="M16 14h.01"></path></svg>
+                </div>
                 <div class="advantage-content">
                     Practical exposure through internships, live projects, and events.
                 </div>
@@ -418,7 +491,9 @@ environments from day one.</p></div></div>				</div>
 
         <div class="advantage-card">
             <div class="advantage-card-inner">
-                <div class="advantage-icon">🌱</div>
+                <div class="advantage-icon" style="color: #10b981;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12A10 10 0 0 1 12 2z"></path><path d="M12 18v-7"></path><path d="M12 11c-2-2-4-2-4 0s2 3 4 3"></path><path d="M12 9c2-2 4-2 4 0s-2 3-4 3"></path></svg>
+                </div>
                 <div class="advantage-content">
                     Holistic development with a focus on personal and professional growth.
                 </div>
@@ -427,7 +502,9 @@ environments from day one.</p></div></div>				</div>
 
         <div class="advantage-card">
             <div class="advantage-card-inner">
-                <div class="advantage-icon">🎯</div>
+                <div class="advantage-icon" style="color: #f59e0b;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                </div>
                 <div class="advantage-content">
                     Development of communication, leadership, and professional skills.
                 </div>
@@ -436,7 +513,9 @@ environments from day one.</p></div></div>				</div>
 
         <div class="advantage-card">
             <div class="advantage-card-inner">
-                <div class="advantage-icon">💡</div>
+                <div class="advantage-icon" style="color: #fbbf24;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5.76.76 1.23 1.52 1.41 2.5h6.18z"></path></svg>
+                </div>
                 <div class="advantage-content">
                     Entrepreneurial mindset to think, create, and build ventures.
                 </div>
@@ -445,7 +524,9 @@ environments from day one.</p></div></div>				</div>
 
         <div class="advantage-card">
             <div class="advantage-card-inner">
-                <div class="advantage-icon">🎓</div>
+                <div class="advantage-icon" style="color: #6366f1;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                </div>
                 <div class="advantage-content">
                     Strong pathway for higher studies like MBA, PGDM, and competitive exams.
                 </div>
