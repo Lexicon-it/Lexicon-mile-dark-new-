@@ -38,33 +38,52 @@
        VIRTUAL TOUR DEDICATED STYLES
        ========================================================================== */
 
-    /* Hero Section */
+    /* Hero Banner Customizations for Virtual Tour */
     .vt-hero {
+      position: relative;
       padding-top: 145px;
       padding-bottom: 50px;
-      position: relative;
-      overflow: hidden;
+      background: radial-gradient(circle at 50% 15%, rgba(46, 196, 182, 0.14) 0%, rgba(7, 59, 145, 0.25) 45%, rgba(5, 7, 12, 0.98) 85%),
+                  url('images/campus-tour/hero-banner.jpeg') center/cover no-repeat;
     }
 
-    .vt-hero::before {
-      content: '';
-      position: absolute;
-      top: -30%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 900px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(46, 196, 182, 0.12) 0%, rgba(59, 130, 246, 0.08) 50%, transparent 80%);
-      pointer-events: none;
-      z-index: 0;
+    .vt-hero-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
 
-    .vt-hero__inner {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      max-width: 920px;
-      margin: 0 auto;
+    .vt-hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .vt-hero-actions .button {
+      gap: 10px;
+      min-height: 48px;
+      padding: 12px 22px;
+      font-size: 13.5px;
+    }
+
+    .vt-hero-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 18px;
+      background: rgba(46, 196, 182, 0.08);
+      border: 1px solid rgba(46, 196, 182, 0.28);
+      border-radius: 50px;
+      color: #2ec4b6;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      backdrop-filter: blur(10px);
     }
 
     .vt-hero-badge {
@@ -80,85 +99,23 @@
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      margin-bottom: 1.5rem;
       backdrop-filter: blur(10px);
     }
 
     .vt-live-dot {
-      width: 9px;
-      height: 9px;
-      background: #2ec4b6;
+      width: 8px;
+      height: 8px;
+      background: #10b981;
       border-radius: 50%;
-      box-shadow: 0 0 10px #2ec4b6;
+      box-shadow: 0 0 10px #10b981;
       animation: pulseLive 2s infinite;
+      display: inline-block;
     }
 
     @keyframes pulseLive {
       0% { opacity: 1; transform: scale(1); }
       50% { opacity: 0.4; transform: scale(1.3); }
       100% { opacity: 1; transform: scale(1); }
-    }
-
-    .vt-hero h1 {
-      font-size: 3.5rem;
-      font-weight: 900;
-      color: #fff;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-      margin-bottom: 1.2rem;
-    }
-
-    .vt-hero p.vt-hero__lead {
-      font-size: 1.15rem;
-      color: #b1bfd2;
-      line-height: 1.7;
-      max-width: 760px;
-      margin: 0 auto 2.2rem;
-    }
-
-    .vt-hero__actions {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 3rem;
-    }
-
-    /* Stats Strip */
-    .vt-stats-strip {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      background: rgba(14, 20, 32, 0.65);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      padding: 24px;
-      backdrop-filter: blur(14px);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
-    }
-
-    .vt-stat-box {
-      text-align: center;
-      padding: 8px 12px;
-    }
-
-    .vt-stat-val {
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: #ffffff;
-      line-height: 1.2;
-      background: linear-gradient(135deg, #ffffff 0%, #2ec4b6 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 4px;
-    }
-
-    .vt-stat-lbl {
-      font-size: 13px;
-      color: #94a3b8;
-      font-weight: 500;
     }
 
     /* Section 2: 360° Theater */
@@ -628,7 +585,6 @@
 
     /* Responsive */
     @media (max-width: 1024px) {
-      .vt-hero h1 { font-size: 2.8rem; }
       .vt-stops-grid { grid-template-columns: repeat(2, 1fr); }
       .vt-features-grid { grid-template-columns: repeat(2, 1fr); }
       .vt-bridge-card { grid-template-columns: 1fr; }
@@ -636,9 +592,11 @@
     }
 
     @media (max-width: 768px) {
-      .vt-hero { padding-top: 120px; }
-      .vt-hero h1 { font-size: 2.2rem; }
-      .vt-stats-strip { grid-template-columns: repeat(2, 1fr); }
+      .vt-hero { padding-top: 130px; }
+      .vt-hero-toolbar { flex-direction: column; align-items: stretch; gap: 14px; }
+      .vt-hero-actions { width: 100%; flex-direction: column; gap: 10px; }
+      .vt-hero-actions .button { width: 100%; justify-content: center; }
+      .vt-hero-status-pill { width: 100%; justify-content: center; text-align: center; }
       .vt-theater-card { padding: 24px 18px; }
       .vt-stops-grid { grid-template-columns: 1fr; }
       .vt-features-grid { grid-template-columns: 1fr; }
@@ -653,59 +611,73 @@
   <!-- Global Header Inclusion -->
   <div id="header"></div>
 
-  <main>
+  <main id="main">
 
-    <!-- ============ SECTION 1: HERO ============ -->
-    <section class="vt-hero" id="vt-hero">
-      <div class="container vt-hero__inner">
+    <!-- ============ SECTION 1: HERO & BREADCRUMBS ============ -->
+    <section class="about-hero-banner vt-hero" id="vt-hero">
+      <div class="container">
         
-        <div class="breadcrumbs" style="justify-content: center; margin-bottom: 1.5rem;">
+        <!-- Standardized Breadcrumbs -->
+        <nav class="about-breadcrumbs" aria-label="Breadcrumb">
           <a href="index.html">Home</a>
           <span>/</span>
           <a href="campus-tour.html">Campus Tour</a>
           <span>/</span>
-          <span>Virtual Tour</span>
+          <span class="current">Virtual Tour</span>
+        </nav>
+
+        <!-- Standard Two-Column Section Heading -->
+        <div class="section-heading reveal" style="margin-bottom: 0;">
+          <div>
+            <p class="eyebrow"><span class="vt-live-dot" style="margin-right: 8px;"></span>IMMERSIVE 360&deg; DIGITAL VR EXPERIENCE &middot; VIRTUAL CAMPUS</p>
+            <h1>Step Inside Lexicon MILE in 360°<span class="period">.</span></h1>
+          </div>
+          <p>Can&rsquo;t visit our Pune campus in person yet? Take a high-definition interactive tour from anywhere in the world &mdash; freely navigate through Harvard-style amphitheaters, the Hyper Build AI Lab, innovation archives, and recreation arenas.</p>
         </div>
 
-        <div class="vt-hero-badge">
-          <span class="vt-live-dot"></span> IMMERSIVE 360&deg; DIGITAL VR EXPERIENCE
+        <!-- Hero Toolbar with CTA Action Buttons & Live VR Status -->
+        <div class="vt-hero-toolbar reveal">
+          <div class="vt-hero-actions">
+            <a href="#vt-theater" class="button button-primary">
+              Explore 360&deg; Theater <span>&darr;</span>
+            </a>
+            <a href="campus-tour.html" class="button button-outline">
+              In-Person Campus Tour <span>&nearr;</span>
+            </a>
+            <a href="https://admissions.lexiconmile.com/" target="_blank" rel="noopener noreferrer" class="button button-outline">
+              Apply for Admissions <span>&nearr;</span>
+            </a>
+          </div>
+          <div class="vt-hero-status-pill">
+            <span class="vt-live-dot"></span>
+            <span>Interactive 360&deg; VR &middot; Compatible on Mobile &amp; Desktop</span>
+          </div>
         </div>
 
-        <h1>Step Inside Lexicon MILE in 360°<span class="period">.</span></h1>
-
-        <p class="vt-hero__lead">
-          Can&rsquo;t visit our Pune campus in person yet? Take a high-definition interactive tour from anywhere in the world &mdash; freely navigate through Harvard-style amphitheaters, the Hyper Build AI Lab, innovation archives, and recreation arenas.
-        </p>
-
-        <div class="vt-hero__actions">
-          <a href="#vt-theater" class="button button-primary">
-            Explore 360&deg; Theater <span>↓</span>
-          </a>
-          <a href="campus-tour.html" class="button button-outline">
-            In-Person Campus Tour <span>↗</span>
-          </a>
-          <a href="https://admissions.lexiconmile.com/" target="_blank" class="button" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15);">
-            Apply for Admissions <span>↗</span>
-          </a>
-        </div>
-
-        <!-- Stats Strip -->
-        <div class="vt-stats-strip reveal">
-          <div class="vt-stat-box">
-            <div class="vt-stat-val">360&deg;</div>
-            <div class="vt-stat-lbl">Full Panoramic Freedom</div>
+        <!-- 4-Stat Hero Metrics (Matches site standard .placement-metrics-grid) -->
+        <div class="placement-metrics-grid reveal" style="margin-bottom: 0;">
+          <div class="placement-metric-card">
+            <span class="placement-metric-value">360&deg;</span>
+            <h4 class="placement-metric-title">Panoramic Freedom</h4>
+            <p class="placement-metric-sub">Explore every campus corner in ultra-high resolution with full 360-degree freedom.</p>
           </div>
-          <div class="vt-stat-box">
-            <div class="vt-stat-val">10+</div>
-            <div class="vt-stat-lbl">Signature Campus Hotspots</div>
+
+          <div class="placement-metric-card">
+            <span class="placement-metric-value">10+</span>
+            <h4 class="placement-metric-title">Signature Hotspots</h4>
+            <p class="placement-metric-sub">Amphitheaters, Hyper Build AI Lab, corporate boardroom, library, and sports arena.</p>
           </div>
-          <div class="vt-stat-box">
-            <div class="vt-stat-val">VR Ready</div>
-            <div class="vt-stat-lbl">Headset &amp; Mobile Compatible</div>
+
+          <div class="placement-metric-card gold">
+            <span class="placement-metric-value">VR Ready</span>
+            <h4 class="placement-metric-title">Immersive Viewport</h4>
+            <p class="placement-metric-sub">Optimized for VR headsets, Google Cardboard, tablets, and mobile gyroscope sensors.</p>
           </div>
-          <div class="vt-stat-box">
-            <div class="vt-stat-val">1080p HD</div>
-            <div class="vt-stat-lbl">Curated Video Walkthrough</div>
+
+          <div class="placement-metric-card">
+            <span class="placement-metric-value">1080p HD</span>
+            <h4 class="placement-metric-title">Curated Walkthrough</h4>
+            <p class="placement-metric-sub">High-definition guided drone and student ambassador narrated video walkthrough.</p>
           </div>
         </div>
 
