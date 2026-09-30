@@ -6,6 +6,8 @@ function getBasePath() {
     }
     return '/'; // Fallback
 }
+window.getBasePath = getBasePath;
+window.getComponentPrefix = getBasePath;
 
 async function loadComponents() {
     try {
