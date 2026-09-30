@@ -13023,7 +13023,8 @@ button {
   }
 
   .brand-logo {
-    max-height: 44px !important;
+    height: 56px !important;
+    max-height: 58px !important;
     width: auto !important;
     object-fit: contain;
     margin-bottom: 0 !important;
@@ -13103,10 +13104,15 @@ button {
       z-index: 100 !important;
       margin-bottom: 0 !important;
       backdrop-filter: blur(15px);
+      height: 74px !important;
+      display: flex !important;
+      align-items: center !important;
   }
 
   .brand-logo {
-      max-height: 40px !important; 
+      height: 56px !important;
+      max-height: 58px !important;
+      width: auto !important;
   }
 
   /* Since header is no longer overlapping, adjust hero padding */
@@ -13453,6 +13459,70 @@ button {
     border-bottom: none !important;
 }
 
+/* 4. Submenu Inside Submenu (Nested Mobile Accordion) */
+.mobile-sub-details {
+    width: 100%;
+}
+
+.mobile-sub-summary {
+    font-size: 17px !important;
+    color: #e2e8f0;
+    padding: 13px 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.mobile-sub-summary::-webkit-details-marker {
+    display: none;
+}
+
+.mobile-sub-summary::after {
+    content: "▼";
+    font-size: 10px;
+    color: var(--muted, #94a3b8);
+    margin-left: auto;
+    transition: transform 0.3s ease, color 0.2s ease;
+}
+
+.mobile-sub-details[open] > .mobile-sub-summary::after {
+    transform: rotate(180deg);
+    color: #4a8ae2;
+}
+
+.mobile-sub-details[open] > .mobile-sub-summary {
+    color: #ffffff;
+}
+
+.mobile-sub-submenu {
+    padding-left: 14px;
+    margin: 3px 0 10px 4px;
+    border-left: 2px solid rgba(74, 138, 226, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.mobile-sub-submenu a {
+    font-size: 14.5px !important;
+    color: #b1bfd2 !important;
+    padding: 9px 0 !important;
+    font-weight: 400;
+    border-bottom: none !important;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.mobile-sub-submenu a:hover,
+.mobile-sub-submenu a:active {
+    color: #38bdf8 !important;
+    transform: translateX(4px);
+}
+
 /* Responsive adjustments for smaller screens */
 @media(max-width: 374px) {
     .mobile-nav-details summary {
@@ -13460,6 +13530,12 @@ button {
     }
     .mobile-submenu a {
         font-size: 15px !important;
+    }
+    .mobile-sub-summary {
+        font-size: 15px !important;
+    }
+    .mobile-sub-submenu a {
+        font-size: 13.5px !important;
     }
 }
 /* ==========================================================================
@@ -13476,12 +13552,17 @@ button {
   .mobile-nav-details summary,
   .mobile-nav-details[open] summary,
   .mobile-submenu,
-  .mobile-submenu a {
+  .mobile-submenu a,
+  .mobile-sub-summary,
+  .mobile-sub-details[open] .mobile-sub-summary,
+  .mobile-sub-submenu,
+  .mobile-sub-submenu a {
       border-bottom: none !important;
   }
   
   /* 3. Push the custom dropdown arrow all the way to the right */
-  .mobile-nav-details summary::after {
+  .mobile-nav-details summary::after,
+  .mobile-sub-summary::after {
       margin-left: auto !important;
   }
 }
@@ -13499,3 +13580,29 @@ button {
     width: 100%;
     margin-top: 0 !important;
 }
+
+/* ==========================================================================
+   PATCH 19: AI LAB TRIMESTERS 2x2 GRID & MOBILE LOGO SIZING
+   ========================================================================== */
+
+.trimesters-grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .trimesters-grid-2x2 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .mobile-menu-top .brand-logo {
+        height: 54px !important;
+        max-height: 56px !important;
+        width: auto !important;
+    }
+}
+

@@ -49,7 +49,8 @@ const megaMenuData = {
   },
   'mba-global': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">MBA GLOBAL TRACKS</h4>
-               <a href="global-mba.html#mba-usw" class="mega-link" style="margin-bottom: 4px;">MBA Global · USW, UK <span>↗</span></a>
+               <a href="global-mba.html" class="mega-link" style="margin-bottom: 4px;">MBA Global Overview <span>↗</span></a>
+               <a href="global-mba-usw-uk.html" class="mega-link" style="margin-bottom: 4px;">MBA Global · USW, UK <span>↗</span></a>
                <a href="mba-in-business-analytics.html" class="mega-link" style="margin-bottom: 4px;">MBA Global · INTI, Malaysia <span>↗</span></a>
                <a href="sbs.html" class="mega-link">MBA Global · SBS Swiss Business School <span>↗</span></a>`,
     image: `<img src="images/global.jpg" alt="MBA Global" class="mega-image">`
@@ -240,7 +241,7 @@ function updateMegaMenuOverview(link) {
     if (!megaMenu) return;
     const overviewContainer = megaMenu.querySelector('.mega-col-sub');
     const imageContainer = megaMenu.querySelector('.mega-col-image');
-    const prefix = typeof getComponentPrefix === 'function' ? getComponentPrefix() : '';
+    const prefix = typeof getComponentPrefix === 'function' ? getComponentPrefix() : (typeof getBasePath === 'function' ? getBasePath() : '');
     if (overviewContainer) {
       let overviewHtml = megaMenuData[key].overview;
       if (prefix) {
@@ -360,41 +361,82 @@ if (lifeTrackEl) lifeTrackEl.innerHTML = activities.map((activity, index) => `<a
 // Native dialogs provide keyboard focus containment and Escape-to-close.
 const detailDialog = document.getElementById('detail-dialog');
 const dialogContent = document.getElementById('dialog-content');
-const mobileMenu = document.getElementById('mobile-menu');
-const menuToggle = document.getElementById('menu-toggle');
 let previousFocus = null;
+
 function openDialog(content) {
-  if (mobileMenu.open) mobileMenu.close();
-  if (!detailDialog.open) previousFocus = document.activeElement;
-  dialogContent.innerHTML = content;
-  if (!detailDialog.open) detailDialog.showModal();
-  document.body.classList.add('menu-open');
-  detailDialog.scrollTop = 0;
-  document.getElementById('dialog-close').focus();
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileMenu && mobileMenu.open) mobileMenu.close();
+  if (detailDialog) {
+    if (!detailDialog.open) previousFocus = document.activeElement;
+    if (dialogContent) dialogContent.innerHTML = content;
+    if (!detailDialog.open) detailDialog.showModal();
+    document.body.classList.add('menu-open');
+    detailDialog.scrollTop = 0;
+    const dialogClose = document.getElementById('dialog-close');
+    if (dialogClose) dialogClose.focus();
+  }
 }
-function closeDialog() { detailDialog.close(); }
-document.getElementById('dialog-close').addEventListener('click', closeDialog);
-detailDialog.addEventListener('close', () => {
-  document.body.classList.remove('menu-open');
-  if (previousFocus && previousFocus.isConnected) previousFocus.focus({ preventScroll: true });
-});
-function closeOnBackdrop(event, dialog) {
-  if (event.target !== dialog) return;
-  const bounds = dialog.getBoundingClientRect();
-  if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+
+function closeDialog() { 
+  if (detailDialog) detailDialog.close(); 
 }
-detailDialog.addEventListener('click', event => closeOnBackdrop(event, detailDialog));
-menuToggle.addEventListener('click', () => {
-  mobileMenu.showModal();
-  menuToggle.setAttribute('aria-expanded', 'true');
-  document.body.classList.add('menu-open');
-});
-document.getElementById('menu-close').addEventListener('click', () => mobileMenu.close());
-mobileMenu.addEventListener('close', () => {
-  menuToggle.setAttribute('aria-expanded', 'false');
-  if (!detailDialog.open) document.body.classList.remove('menu-open');
-});
-mobileMenu.querySelectorAll('nav a').forEach(link => link.addEventListener('click', () => mobileMenu.close()));
+
+const dialogCloseBtn = document.getElementById('dialog-close');
+if (dialogCloseBtn) dialogCloseBtn.addEventListener('click', closeDialog);
+
+if (detailDialog) {
+  detailDialog.addEventListener('close', () => {
+    document.body.classList.remove('menu-open');
+    if (previousFocus && previousFocus.isConnected) previousFocus.focus({ preventScroll: true });
+  });
+  detailDialog.addEventListener('click', event => {
+    if (event.target !== detailDialog) return;
+    const bounds = detailDialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) {
+      detailDialog.close();
+    }
+  });
+}
+
+function initMobileMenu() {
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  if (!mobileMenu || !menuToggle) return;
+
+  if (!menuToggle.hasAttribute('data-menu-bound')) {
+    menuToggle.setAttribute('data-menu-bound', 'true');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.showModal();
+      menuToggle.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('menu-open');
+    });
+  }
+
+  if (menuClose && !menuClose.hasAttribute('data-menu-bound')) {
+    menuClose.setAttribute('data-menu-bound', 'true');
+    menuClose.addEventListener('click', () => mobileMenu.close());
+  }
+
+  if (!mobileMenu.hasAttribute('data-menu-bound')) {
+    mobileMenu.setAttribute('data-menu-bound', 'true');
+    mobileMenu.addEventListener('close', () => {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      const detailDialog = document.getElementById('detail-dialog');
+      if (!detailDialog || !detailDialog.open) document.body.classList.remove('menu-open');
+    });
+  }
+
+  mobileMenu.querySelectorAll('nav a').forEach(link => {
+    if (!link.hasAttribute('data-link-bound')) {
+      link.setAttribute('data-link-bound', 'true');
+      link.addEventListener('click', () => mobileMenu.close());
+    }
+  });
+}
+
+initMobileMenu();
+document.addEventListener('componentsLoaded', initMobileMenu);
 
 function programDialog(key) {
   const program = programs[key];
