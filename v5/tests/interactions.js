@@ -88,3 +88,4 @@ frame.addEventListener('load', async () => {
     output.dataset.complete = 'failed';
   }
 });
+
