@@ -466,18 +466,19 @@ button {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #05070cf8;
-    backdrop-filter: blur(10px);
-    border-top: 1px solid #ffffff15;
-    border-bottom: 1px solid #ffffff15;
+    background: #080d1a;
+    backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
-    transition: all .3s;
-    padding: 50px 0;
-    box-shadow: 0 20px 40px #0008;
+    transition: all .25s ease;
+    padding: 44px 0;
+    box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.95);
     pointer-events: none;
-    cursor: default
+    cursor: default;
+    z-index: 1050;
 }
 
 .nav-item.has-submenu:hover .mega-menu {
@@ -614,11 +615,68 @@ a.mega-link-large {
     transform: translateX(0)
 }
 
+.mega-image-card {
+    position: relative;
+    width: 100%;
+    height: 310px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #0b1324;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+    display: flex;
+}
+
 .mega-image {
     width: 100%;
-    height: 320px;
+    height: 310px;
     object-fit: cover;
-    border-radius: 12px
+    object-position: center;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mega-image-card .mega-image {
+    height: 100%;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.mega-image-card:hover .mega-image {
+    transform: scale(1.04);
+}
+
+.mega-image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 32px 18px 14px;
+    background: linear-gradient(180deg, transparent 0%, rgba(5, 8, 16, 0.72) 40%, rgba(5, 8, 16, 0.96) 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.mega-image-badge {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #2ec4b6;
+    text-transform: uppercase;
+}
+
+.mega-image-sub {
+    font-size: 12.5px;
+    color: #cbd5e1;
+    font-weight: 500;
+    line-height: 1.35;
 }
 
 /* Mega Menu Fee Structure Buttons */
@@ -1058,56 +1116,68 @@ a.mega-link-large {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg, #070b17b8, transparent 75%), #071b451f
+    background: linear-gradient(180deg, rgba(7, 11, 23, 0.35) 0%, transparent 45%, rgba(7, 11, 23, 0.75) 100%);
+    pointer-events: none;
 }
 
 .program-image img {
+    width: 100%;
     height: 100%;
-    filter: saturate(.55);
-    transition: transform .7s
+    object-fit: cover;
+    transition: transform .7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#card-mba .program-image img {
+    object-position: 24% 20%;
 }
 
 .program-card:hover img {
-    transform: scale(1.04)
+    transform: scale(1.04);
 }
 
 .image-kicker {
     position: absolute;
     top: 23px;
     left: 26px;
-    font-size: 12px;
-    letter-spacing: .15em;
-    z-index: 1;
-    color: var(--blue);
-    background: rgba(255, 255, 255, 0.9);
+    font-size: 11.5px;
+    letter-spacing: .12em;
+    z-index: 2;
+    color: #071b45;
+    background: rgba(255, 255, 255, 0.94);
     padding: 6px 12px;
     border-radius: 4px;
     font-weight: 700;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .program-number {
     position: absolute;
     bottom: 13px;
     left: 25px;
-    z-index: 1;
+    z-index: 2;
     font-size: 71px;
     font-weight: 600;
     letter-spacing: -.06em;
     line-height: 1;
-    color: #ffffffbd
+    color: rgba(255, 255, 255, 0.88);
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
 }
 
 .program-category {
     position: absolute;
     right: 25px;
     bottom: 23px;
-    z-index: 1;
-    border: 1px solid #ffffff60;
-    border-radius: 3px;
-    padding: 7px 9px;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 4px;
+    padding: 6px 10px;
     font-size: 11px;
-    letter-spacing: .15em;
-    background: #050b1560
+    font-weight: 600;
+    letter-spacing: .12em;
+    background: rgba(7, 11, 23, 0.72);
+    backdrop-filter: blur(8px);
+    color: #e2e8f0;
 }
 
 .program-body {

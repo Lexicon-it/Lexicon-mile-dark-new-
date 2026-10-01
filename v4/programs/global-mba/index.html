@@ -4,19 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#05070C">
-  <title>MBA Global · USW, UK | Dual-Country International Program | Lexicon MILE Pune</title>
-  <meta name="description" content="Pursue the 2-Year MBA Global Program in academic partnership with University of South Wales (USW), UK at Lexicon MILE Pune. 60 credits in India + 120 credits in UK, 3-4 months UK internship, £30k-£40k avg placements, 0% visa rejection.">
+  <title>MBA Global · University of South Wales, UK | Dual-Country MBA | Lexicon MILE Pune</title>
+  <meta name="description" content="Pursue the 2-Year MBA Global Program in strategic academic partnership with University of South Wales (USW), UK at Lexicon MILE Pune. 60 credits in India + 120 credits in UK, 3-4 months UK corporate internship, £30k-£40k avg placements, 0% visa rejection.">
   <link rel="canonical" href="https://lexiconmile.com/programs/global-mba/">
   <link rel="icon" href="../../images/favicon.png" type="image/png">
   <link rel="preload" href="../../assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- Open Graph / Meta -->
   <meta property="og:title" content="MBA Global · University of South Wales (USW), UK | Lexicon MILE">
   <meta property="og:description" content="Prestigious 2-year dual-country MBA pathway. 60 credits in India, 120 credits in UK, 3-4 months UK corporate internship, £30,000-£40,000 average placement.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://lexiconmile.com/programs/global-mba/">
-  <meta property="og:image" content="images/gmba/MBA-Global-Page-Banner.jpg.jpeg">
+  <meta property="og:image" content="../../images/gmba/MBA-Global-Page-Banner.jpg.jpeg">
+  <meta property="og:site_name" content="Lexicon MILE">
 
   <!-- Schema.org EducationalOccupationalProgram -->
   <script type="application/ld+json">
@@ -38,1085 +42,1254 @@
   </script>
 
   <style>
-    /* ==========================================================================
-       MBA Global Production Styles - Ultra Premium Dark Theme
-       ========================================================================== */
     :root {
       --gmba-accent: #38bdf8;
-      --gmba-accent-glow: rgba(56, 189, 248, 0.25);
+      --gmba-blue: #0b63ce;
       --gmba-gold: #f59e0b;
-      --gmba-gold-glow: rgba(245, 158, 11, 0.2);
-      --gmba-card-bg: rgba(13, 20, 36, 0.82);
-      --gmba-card-border: rgba(255, 255, 255, 0.08);
-      --gmba-card-hover-border: rgba(56, 189, 248, 0.45);
+      --gmba-glow: rgba(56, 189, 248, 0.18);
+      --gmba-card-bg: rgba(13, 20, 36, 0.85);
+      --gmba-card-border: rgba(255, 255, 255, 0.1);
       --gmba-text-muted: #94a3b8;
       --gmba-text-light: #e2e8f0;
-      --gmba-bg-gradient: radial-gradient(circle at 75% 20%, rgba(14, 116, 144, 0.22) 0%, rgba(5, 7, 12, 0.98) 70%);
     }
 
-    /* Hero Banner */
-    .gmba-hero-banner {
+    .pgdm-hero-banner {
       position: relative;
-      padding-top: 140px;
-      padding-bottom: 75px;
-      background: var(--gmba-bg-gradient);
-      border-bottom: 1px solid var(--border);
+      background-color: #05070c;
+      overflow: hidden;
+      padding-top: 140px !important;
+      padding-bottom: 50px !important;
+      min-height: 94vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .helix-bg-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
       overflow: hidden;
     }
 
-    .gmba-hero-banner::before {
-      display: none !important;
+    .helix-bg-img {
+      position: absolute;
+      top: -5%;
+      right: -6%;
+      width: 65%;
+      height: 110%;
+      background-image: url('../../images/activities/01-helix-accent.png');
+      background-size: cover;
+      background-position: center right;
+      background-repeat: no-repeat;
+      opacity: 0.38;
+      filter: brightness(0.85) contrast(1.25) hue-rotate(200deg) saturate(1.2);
+      mix-blend-mode: screen;
     }
 
-    .gmba-hero-container {
+    .helix-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: 
+        linear-gradient(90deg, #05070c 0%, #05070c 36%, rgba(5, 7, 12, 0.85) 54%, rgba(5, 7, 12, 0.25) 75%, rgba(5, 7, 12, 0.5) 100%),
+        linear-gradient(180deg, #05070c 0%, transparent 18%, transparent 80%, #05070c 100%),
+        radial-gradient(ellipse at 80% 45%, rgba(11, 99, 206, 0.35) 0%, rgba(56, 189, 248, 0.14) 40%, transparent 70%);
+    }
+
+    .pgdm-hero-container {
       position: relative;
       z-index: 2;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
     }
 
-    .gmba-hero-grid {
-      display: grid;
-      grid-template-columns: 1.22fr 0.88fr;
-      gap: 48px;
-      align-items: center;
-      margin-top: 24px;
+    .helix-content-wrap {
+      max-width: 980px;
+      margin-bottom: 48px;
     }
 
-    .gmba-pill-badge {
+    .helix-badge-wrap {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 6px 16px;
-      background: rgba(56, 189, 248, 0.12);
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      border-radius: 30px;
-      color: #38bdf8;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      margin-bottom: 16px;
-      backdrop-filter: blur(8px);
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
     }
 
-    .gmba-pill-badge .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #38bdf8;
-      box-shadow: 0 0 10px #38bdf8;
-      animation: gmbaPulseDot 2s infinite;
-    }
-
-    @keyframes gmbaPulseDot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.45; transform: scale(1.3); }
-    }
-
-    .gmba-hero-title {
-      font-size: 42px;
-      font-weight: 800;
-      line-height: 1.16;
+    .helix-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0b63ce 0%, #0284c7 100%);
       color: #ffffff;
-      margin: 0 0 20px 0;
-      letter-spacing: -0.025em;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
+      box-shadow: 0 2px 10px rgba(11, 99, 206, 0.4);
     }
 
-    .gmba-hero-title .highlight {
-      background: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .helix-badge-text {
+      color: #94a3b8;
+      font-size: 13.5px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
     }
 
-    .gmba-hero-text {
-      font-size: 16px;
-      line-height: 1.72;
-      color: #cbd5e1;
-      margin-bottom: 20px;
+    .helix-title {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: clamp(38px, 4.6vw, 68px);
+      font-weight: 600;
+      line-height: 1.08;
+      color: #ffffff;
+      margin: 0 0 22px 0;
+      max-width: 960px;
+      letter-spacing: -0.035em;
     }
 
-    .gmba-hero-actions {
+    .helix-title em {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic;
+      color: #38bdf8;
+      font-weight: 400;
+      padding: 0 4px;
+      letter-spacing: -0.01em;
+      text-shadow: 0 0 28px rgba(56, 189, 248, 0.45);
+    }
+
+    .helix-desc {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16.5px;
+      line-height: 1.65;
+      color: #94a3b8;
+      margin: 0 0 34px 0;
+      max-width: 620px;
+      font-weight: 400;
+    }
+
+    .helix-actions {
       display: flex;
+      align-items: center;
       flex-wrap: wrap;
       gap: 14px;
-      margin-top: 28px;
-      align-items: center;
     }
 
-    /* Hero Visual Card */
-    .gmba-hero-visual {
-      position: relative;
-      background: linear-gradient(145deg, rgba(20, 30, 52, 0.75), rgba(9, 14, 25, 0.95));
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      border-radius: 20px;
-      padding: 16px;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), 0 0 40px rgba(56, 189, 248, 0.15);
-      backdrop-filter: blur(16px);
-    }
-
-    .gmba-hero-img-wrap {
-      position: relative;
-      border-radius: 14px;
-      overflow: hidden;
-      background: #080d1a;
-      max-height: 480px;
-    }
-
-    .gmba-hero-img {
-      width: 100%;
-      height: 100%;
-      max-height: 480px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .gmba-hero-visual:hover .gmba-hero-img {
-      transform: scale(1.03);
-    }
-
-    .gmba-floating-chip {
-      position: absolute;
-      background: rgba(5, 8, 16, 0.92);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 12px;
-      padding: 10px 14px;
-      font-size: 12.5px;
+    .helix-btn-primary {
+      background: linear-gradient(135deg, #0b63ce 0%, #073b91 100%);
+      color: #ffffff;
+      font-size: 14.5px;
       font-weight: 600;
-      color: #fff;
-      display: flex;
+      padding: 13px 26px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      display: inline-flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
-      z-index: 3;
+      box-shadow: 0 4px 18px rgba(11, 99, 206, 0.35), 0 0 20px rgba(56, 189, 248, 0.15);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .gmba-floating-chip.top-left {
-      top: 24px;
-      left: 24px;
-      border-color: rgba(56, 189, 248, 0.45);
+    .helix-btn-primary:hover {
+      background: linear-gradient(135deg, #1579f6 0%, #0b63ce 100%);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(11, 99, 206, 0.5), 0 0 30px rgba(56, 189, 248, 0.25);
+      border-color: rgba(56, 189, 248, 0.6);
     }
 
-    .gmba-floating-chip.bottom-right {
-      bottom: 24px;
-      right: 24px;
-      border-color: rgba(245, 158, 11, 0.45);
+    .helix-btn-secondary {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #f1f5f9;
+      font-size: 14.5px;
+      font-weight: 500;
+      padding: 13px 24px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      text-decoration: none;
     }
 
-    /* KPI Stats Bar */
-    .gmba-stats-strip {
+    .helix-btn-secondary:hover {
+      background: rgba(11, 99, 206, 0.14);
+      border-color: rgba(56, 189, 248, 0.4);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .helix-action-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: #64748b;
+      text-transform: uppercase;
+      margin-left: 8px;
+    }
+
+    .helix-action-meta .meta-dot {
+      color: #38bdf8;
+      font-size: 10px;
+    }
+
+    .pgdm-stats-strip {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: 16px;
-      margin-top: 50px;
-      padding-top: 36px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      width: 100%;
+      margin-top: 15px;
+      background: rgba(8, 14, 26, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      overflow: hidden;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
-    .gmba-stat-item {
-      background: rgba(13, 20, 36, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 14px;
-      padding: 16px 14px;
-      text-align: center;
-      transition: all 0.3s ease;
+    .pgdm-stat-card {
+      padding: 22px 18px;
+      text-align: left;
+      position: relative;
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      background: transparent;
+      overflow: hidden;
     }
 
-    .gmba-stat-item:hover {
-      background: rgba(13, 20, 36, 0.85);
-      border-color: rgba(56, 189, 248, 0.35);
-      transform: translateY(-3px);
+    .pgdm-stat-card:last-child {
+      border-right: none;
     }
 
-    .gmba-stat-number {
+    .pgdm-stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #38bdf8, #0b63ce);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .pgdm-stat-card:hover {
+      background: rgba(11, 99, 206, 0.12);
+    }
+
+    .pgdm-stat-card:hover::before {
+      opacity: 1;
+    }
+
+    .pgdm-stat-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+
+    .pgdm-stat-indicator .ind-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 8px #38bdf8;
+    }
+
+    .pgdm-stat-num {
       display: block;
-      font-size: 26px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(22px, 2.2vw, 30px);
       font-weight: 800;
-      color: #38bdf8;
+      color: #ffffff;
       letter-spacing: -0.02em;
       line-height: 1.1;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
-    .gmba-stat-number.gold {
-      color: #fbbf24;
+    .pgdm-stat-num.accent-gold { color: #fbbf24; }
+
+    .pgdm-stat-label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 4px;
     }
 
-    .gmba-stat-label {
-      font-size: 12px;
-      color: #94a3b8;
+    .pgdm-stat-sub {
+      display: block;
+      font-size: 11px;
+      color: #64748b;
       line-height: 1.35;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      font-weight: 500;
     }
 
-    /* Section Subheadings */
-    .gmba-subhead {
-      color: #38bdf8;
-      font-size: 13px;
+    .section-eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      margin-bottom: 10px;
-      display: inline-block;
-    }
-
-    /* Partnership Dual Cards */
-    .gmba-partner-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      margin-top: 35px;
-    }
-
-    .gmba-partner-card {
-      background: var(--gmba-card-bg);
-      border: 1px solid var(--gmba-card-border);
-      border-radius: 20px;
-      padding: 36px 32px;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.35s ease;
-    }
-
-    .gmba-partner-card:hover {
-      border-color: var(--gmba-card-hover-border);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.1);
-      transform: translateY(-4px);
-    }
-
-    .gmba-partner-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 22px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .gmba-partner-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .gmba-partner-badge.india {
-      background: rgba(56, 189, 248, 0.15);
-      border: 1px solid rgba(56, 189, 248, 0.3);
       color: #38bdf8;
-    }
-
-    .gmba-partner-badge.uk {
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid rgba(245, 158, 11, 0.3);
-      color: #fbbf24;
-    }
-
-    .gmba-partner-title {
-      font-size: 24px;
-      font-weight: 700;
-      color: #ffffff;
       margin-bottom: 14px;
     }
 
-    .gmba-partner-desc {
-      font-size: 15px;
-      line-height: 1.7;
-      color: #cbd5e1;
+    .section-eyebrow-pill .pill-glow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 8px #38bdf8;
+    }
+
+    .section-title-wrap { margin-bottom: 38px; }
+
+    .section-title-wrap h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(28px, 3.2vw, 42px);
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.025em;
+    }
+
+    .section-title-wrap h2 em {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic;
+      color: #38bdf8;
+      font-weight: 400;
+    }
+
+    .section-title-wrap p {
+      font-size: 15.5px;
+      line-height: 1.65;
+      color: #94a3b8;
+      max-width: 720px;
+      margin: 0;
+    }
+
+    .objectives-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .objective-card {
+      background: linear-gradient(180deg, rgba(13, 20, 36, 0.75) 0%, rgba(8, 13, 24, 0.85) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 30px 24px;
+      text-align: left;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(14px);
+    }
+
+    .objective-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #38bdf8, #0b63ce, transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .objective-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(56, 189, 248, 0.45);
+      background: linear-gradient(180deg, rgba(16, 26, 48, 0.85) 0%, rgba(10, 16, 30, 0.95) 100%);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(11, 99, 206, 0.2);
+    }
+
+    .objective-card:hover::before { opacity: 1; }
+
+    .obj-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       margin-bottom: 20px;
     }
 
-    .gmba-pillar-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .obj-icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(11, 99, 206, 0.16);
+      border: 1px solid rgba(56, 189, 248, 0.3);
       display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .gmba-pillar-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 14px;
-      color: #e2e8f0;
-      line-height: 1.5;
-    }
-
-    .gmba-pillar-list li svg {
-      flex-shrink: 0;
-      width: 18px;
-      height: 18px;
+      align-items: center;
+      justify-content: center;
       color: #38bdf8;
-      margin-top: 2px;
+      transition: all 0.3s ease;
     }
 
-    /* Pathway Flowchart */
-    .gmba-pathway-timeline {
+    .objective-card:hover .obj-icon-wrap {
+      background: rgba(11, 99, 206, 0.3);
+      border-color: #38bdf8;
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+      transform: scale(1.05);
+    }
+
+    .obj-icon-wrap svg { width: 22px; height: 22px; }
+
+    .obj-num {
+      font-family: monospace;
+      font-size: 20px;
+      font-weight: 700;
+      color: rgba(56, 189, 248, 0.3);
+      letter-spacing: -0.02em;
+    }
+
+    .objective-card:hover .obj-num { color: #38bdf8; }
+
+    .obj-pillar-tag {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      margin-bottom: 6px;
+    }
+
+    .objective-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    .objective-card p {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin: 0 0 20px 0;
+      flex-grow: 1;
+    }
+
+    .obj-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .obj-pill {
+      font-size: 10.5px;
+      font-weight: 500;
+      color: #94a3b8;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 4px 9px;
+      border-radius: 6px;
+    }
+
+    .obj-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      padding-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11.5px;
+    }
+
+    .obj-foot-accent {
+      color: #38bdf8;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .obj-foot-meta { color: #64748b; }
+
+    .focus-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
-      margin-top: 36px;
-      position: relative;
+      gap: 16px;
     }
 
-    .gmba-timeline-step {
-      background: var(--gmba-card-bg);
-      border: 1px solid var(--gmba-card-border);
+    .focus-card {
+      background: rgba(13, 20, 36, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
-      padding: 24px 20px;
-      position: relative;
-      transition: all 0.3s ease;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      height: 100%;
+      transition: all 0.3s ease;
     }
 
-    .gmba-timeline-step:hover {
-      border-color: var(--gmba-card-hover-border);
+    .focus-card:hover {
+      border-color: rgba(56, 189, 248, 0.35);
       transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
     }
 
-    .gmba-timeline-step.active-uk {
-      border-color: rgba(245, 158, 11, 0.4);
-      background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, rgba(13, 20, 36, 0.85) 100%);
+    .focus-img-wrap {
+      width: 100%;
+      aspect-ratio: 1.3 / 1;
+      overflow: hidden;
+      background: #090e1a;
     }
 
-    .gmba-timeline-step.active-uk:hover {
-      border-color: rgba(245, 158, 11, 0.7);
+    .focus-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
     }
 
-    .gmba-step-tag {
+    .focus-card:hover .focus-img-wrap img { transform: scale(1.06); }
+
+    .focus-content {
+      padding: 16px 14px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .focus-content h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 6px 0;
+    }
+
+    .focus-content p {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: #94a3b8;
+      margin: 0;
+    }
+
+    .specializations-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .spec-card {
+      background: rgba(13, 20, 36, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s ease;
+    }
+
+    .spec-card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.15);
+    }
+
+    .spec-img-wrap {
+      width: 100%;
+      height: 190px;
+      overflow: hidden;
+      background: #080d1a;
+      position: relative;
+    }
+
+    .spec-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .spec-card:hover .spec-img-wrap img { transform: scale(1.07); }
+
+    .spec-body {
+      padding: 24px 22px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .spec-tag {
+      display: inline-block;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 6px;
-      width: fit-content;
-      margin-bottom: 12px;
-    }
-
-    .gmba-step-tag.india {
-      background: rgba(56, 189, 248, 0.15);
       color: #38bdf8;
+      margin-bottom: 8px;
     }
 
-    .gmba-step-tag.uk {
-      background: rgba(245, 158, 11, 0.18);
-      color: #fbbf24;
-    }
-
-    .gmba-step-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: #ffffff;
-      margin: 0 0 6px 0;
-    }
-
-    .gmba-step-location {
-      font-size: 13px;
-      color: #94a3b8;
-      margin-bottom: 12px;
-      font-weight: 500;
-    }
-
-    .gmba-step-credits {
-      display: inline-block;
-      font-size: 12px;
-      font-weight: 700;
-      color: #10b981;
-      background: rgba(16, 185, 129, 0.12);
-      padding: 2px 8px;
-      border-radius: 4px;
-      margin-bottom: 12px;
-    }
-
-    .gmba-step-desc {
-      font-size: 13.5px;
-      color: #cbd5e1;
-      line-height: 1.55;
-      margin: 0;
-      margin-top: auto;
-    }
-
-    /* Specializations Cards */
-    .gmba-spec-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-      margin-top: 36px;
-    }
-
-    .gmba-spec-card {
-      background: var(--gmba-card-bg);
-      border: 1px solid var(--gmba-card-border);
-      border-radius: 18px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.35s ease;
-    }
-
-    .gmba-spec-card:hover {
-      border-color: var(--gmba-card-hover-border);
-      transform: translateY(-5px);
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 25px rgba(56, 189, 248, 0.12);
-    }
-
-    .gmba-spec-img-wrap {
-      width: 100%;
-      height: 170px;
-      background: #090e1a;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .gmba-spec-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .gmba-spec-card:hover .gmba-spec-img {
-      transform: scale(1.08);
-    }
-
-    .gmba-spec-body {
-      padding: 20px 18px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    .gmba-spec-title {
-      font-size: 17px;
-      font-weight: 700;
-      color: #ffffff;
-      margin: 0 0 8px 0;
-    }
-
-    .gmba-spec-text {
-      font-size: 13px;
-      line-height: 1.55;
-      color: #94a3b8;
-      margin-bottom: 14px;
-    }
-
-    .gmba-spec-footer {
-      margin-top: auto;
-      padding-top: 12px;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      font-size: 12px;
-      color: #38bdf8;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* Features Grid (Why MBA Global) */
-    .gmba-features-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-top: 36px;
-    }
-
-    .gmba-feature-card {
-      background: var(--gmba-card-bg);
-      border: 1px solid var(--gmba-card-border);
-      border-radius: 16px;
-      padding: 24px 20px;
-      transition: all 0.3s ease;
-    }
-
-    .gmba-feature-card:hover {
-      border-color: var(--gmba-card-hover-border);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    }
-
-    .gmba-feature-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: rgba(56, 189, 248, 0.12);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #38bdf8;
-      margin-bottom: 16px;
-    }
-
-    .gmba-feature-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: #ffffff;
-      margin: 0 0 8px 0;
-    }
-
-    .gmba-feature-desc {
-      font-size: 13.5px;
-      line-height: 1.55;
-      color: #94a3b8;
-      margin: 0;
-    }
-
-    /* Business Clinics Grid */
-    .gmba-clinics-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-top: 24px;
-    }
-
-    .gmba-clinic-card {
-      background: var(--gmba-card-bg);
-      border: 1px solid var(--gmba-card-border);
-      border-radius: 16px;
-      padding: 20px 18px;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.3s ease;
-    }
-
-    .gmba-clinic-card:hover {
-      border-color: rgba(56, 189, 248, 0.4);
-      transform: translateY(-3px);
-    }
-
-    .gmba-clinic-img-wrap {
-      width: 100%;
-      height: 130px;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 14px;
-      background: #090e1a;
-    }
-
-    .gmba-clinic-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-
-    .gmba-clinic-card:hover .gmba-clinic-img {
-      transform: scale(1.06);
-    }
-
-    .gmba-clinic-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: #ffffff;
-      margin: 0 0 6px 0;
-    }
-
-    .gmba-clinic-desc {
-      font-size: 13px;
-      color: #cbd5e1;
-      line-height: 1.5;
-      margin: 0;
-    }
-
-    /* Curriculum Accordion / Tabs */
-    .gmba-curriculum-tabs {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-
-    .gmba-tab-btn {
-      padding: 10px 22px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 30px;
-      color: #94a3b8;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.25s ease;
-    }
-
-    .gmba-tab-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-    }
-
-    .gmba-tab-btn.active {
-      background: rgba(56, 189, 248, 0.2);
-      border-color: #38bdf8;
-      color: #38bdf8;
-      box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
-    }
-
-    .gmba-curriculum-panel {
-      display: none;
-      background: var(--gmba-card-bg);
-      border: 1px solid var(--gmba-card-border);
-      border-radius: 18px;
-      padding: 28px 24px;
-      animation: gmbaFadeIn 0.35s ease;
-    }
-
-    .gmba-curriculum-panel.active {
-      display: block;
-    }
-
-    @keyframes gmbaFadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Custom Dark Table */
-    .gmba-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 14px;
-    }
-
-    .gmba-table th,
-    .gmba-table td {
-      padding: 14px 18px;
-      text-align: left;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    }
-
-    .gmba-table th {
-      background: rgba(255, 255, 255, 0.03);
-      color: #94a3b8;
-      font-size: 12.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .gmba-table td {
-      font-size: 14.5px;
-      color: #e2e8f0;
-    }
-
-    .gmba-table tbody tr:hover td {
-      background: rgba(56, 189, 248, 0.04);
-    }
-
-    .gmba-table tfoot th,
-    .gmba-table tfoot td {
-      background: rgba(56, 189, 248, 0.08);
-      font-weight: 700;
-      color: #38bdf8;
-      border-bottom: none;
-    }
-
-    /* Certifications Grid */
-    .gmba-certs-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-      margin-top: 28px;
-    }
-
-    .gmba-cert-card {
-      background: var(--gmba-card-bg);
-      border: 1px solid var(--gmba-card-border);
-      border-radius: 14px;
-      padding: 18px 14px;
-      text-align: center;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .gmba-cert-card:hover {
-      border-color: var(--gmba-card-hover-border);
-      transform: translateY(-4px);
-    }
-
-    .gmba-cert-icon-wrap {
-      width: 58px;
-      height: 58px;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 12px;
-      background: rgba(255, 255, 255, 0.04);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .gmba-cert-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .gmba-cert-title {
-      font-size: 13.5px;
-      font-weight: 600;
-      color: #ffffff;
-      line-height: 1.4;
-      margin: 0;
-    }
-
-    /* Objectives Grid */
-    .gmba-obj-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-top: 32px;
-    }
-
-    .gmba-obj-card {
-      background: var(--gmba-card-bg);
-      border: 1px solid var(--gmba-card-border);
-      border-radius: 16px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.3s ease;
-    }
-
-    .gmba-obj-card:hover {
-      border-color: var(--gmba-card-hover-border);
-      transform: translateY(-4px);
-    }
-
-    .gmba-obj-img-wrap {
-      width: 100%;
-      height: 160px;
-      background: #080d1a;
-      overflow: hidden;
-    }
-
-    .gmba-obj-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-
-    .gmba-obj-card:hover .gmba-obj-img {
-      transform: scale(1.06);
-    }
-
-    .gmba-obj-content {
-      padding: 18px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .gmba-obj-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: #fff;
-      margin: 0 0 8px 0;
-    }
-
-    .gmba-obj-desc {
-      font-size: 13px;
-      color: #94a3b8;
-      line-height: 1.55;
-      margin: 0;
-    }
-
-    /* Gallery Grid */
-    .gmba-gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-top: 32px;
-    }
-
-    .gmba-gallery-item {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      height: 180px;
-      background: #090e1a;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      cursor: pointer;
-    }
-
-    .gmba-gallery-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .gmba-gallery-item:hover .gmba-gallery-img {
-      transform: scale(1.08);
-    }
-
-    /* Career Roles Grid */
-    .gmba-roles-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 32px;
-    }
-
-    .gmba-role-card {
-      background: var(--gmba-card-bg);
-      border: 1px solid var(--gmba-card-border);
-      border-radius: 16px;
-      padding: 22px 20px;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      transition: all 0.3s ease;
-    }
-
-    .gmba-role-card:hover {
-      border-color: rgba(56, 189, 248, 0.45);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
-    }
-
-    .gmba-role-icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 12px;
-      overflow: hidden;
-      background: rgba(56, 189, 248, 0.1);
-      flex-shrink: 0;
-    }
-
-    .gmba-role-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .gmba-role-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: #ffffff;
-      margin: 0 0 4px 0;
-    }
-
-    .gmba-role-salary {
-      font-size: 13px;
-      color: #10b981;
-      font-weight: 600;
-    }
-
-    /* Admission Requirements Split */
-    .gmba-admission-box {
-      background: var(--gmba-card-bg);
-      border: 1px solid var(--gmba-card-border);
-      border-radius: 20px;
-      padding: 36px 32px;
-      margin-top: 32px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 36px;
-    }
-
-    .gmba-adm-col h3 {
+    .spec-body h3 {
       font-size: 20px;
       font-weight: 700;
-      color: #fff;
-      margin-top: 0;
+      color: #ffffff;
+      margin: 0 0 10px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .spec-body p {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin: 0 0 16px 0;
+    }
+
+    .spec-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .spec-pill {
+      font-size: 11px;
+      font-weight: 500;
+      color: #94a3b8;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .spec-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .spec-link {
+      color: #38bdf8;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .ai-lab-spotlight {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+      background: linear-gradient(145deg, rgba(13, 20, 36, 0.85), rgba(7, 12, 22, 0.95));
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 24px;
+      padding: 44px 40px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(11, 99, 206, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ai-lab-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #38bdf8;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    .ai-lab-title {
+      font-size: clamp(26px, 2.8vw, 36px);
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .ai-lab-subtitle {
+      font-size: 14.5px;
+      color: #38bdf8;
+      font-weight: 600;
       margin-bottom: 16px;
+    }
+
+    .ai-lab-desc {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #cbd5e1;
+      margin-bottom: 14px;
+    }
+
+    .ai-quote-box {
+      border-left: 3px solid #38bdf8;
+      background: rgba(56, 189, 248, 0.06);
+      padding: 12px 18px;
+      border-radius: 0 10px 10px 0;
+      margin: 18px 0 22px 0;
+      font-style: italic;
+      color: #e2e8f0;
+      font-size: 14px;
+    }
+
+    .ai-modules-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 16px;
+      margin-top: 18px;
+    }
+
+    .ai-module-item {
       display: flex;
       align-items: center;
       gap: 10px;
-    }
-
-    .gmba-req-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 14px;
-      font-size: 14.5px;
-      line-height: 1.6;
+      font-size: 13px;
+      font-weight: 600;
       color: #cbd5e1;
     }
 
-    .gmba-req-item svg {
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
+    .ai-module-item svg {
+      width: 16px;
+      height: 16px;
       color: #38bdf8;
-      margin-top: 2px;
+      flex-shrink: 0;
     }
 
-    /* Recruiter Logos */
-    .gmba-recruiters-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 16px;
-      margin-top: 32px;
+    .ai-lab-showcase-card {
+      background: #080d1a;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     }
 
-    .gmba-recruiter-card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    .ai-lab-card-header {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .ai-lab-traffic-lights { display: flex; gap: 6px; }
+
+    .ai-lab-traffic-lights .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .ai-lab-traffic-lights .dot.red { background: #ef4444; }
+    .ai-lab-traffic-lights .dot.yellow { background: #f59e0b; }
+    .ai-lab-traffic-lights .dot.green { background: #10b981; }
+
+    .ai-lab-console-title {
+      font-family: monospace;
+      font-size: 11px;
+      color: #94a3b8;
+      letter-spacing: 0.05em;
+    }
+
+    .ai-lab-live-pill {
+      font-size: 9.5px;
+      font-weight: 800;
+      background: rgba(16, 185, 129, 0.18);
+      color: #10b981;
+      padding: 2px 7px;
+      border-radius: 10px;
+    }
+
+    .ai-lab-media-wrap {
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at center, rgba(11, 99, 206, 0.25) 0%, transparent 70%);
+    }
+
+    .ai-lab-media-wrap img {
+      width: 100%;
+      height: auto;
+      max-height: 280px;
+      object-fit: cover;
       border-radius: 12px;
-      padding: 16px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .ai-lab-card-footer {
+      padding: 14px 18px;
+      background: rgba(0, 0, 0, 0.35);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .ai-lab-meta-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      text-align: center;
+    }
+
+    .ai-meta-item .ai-meta-label {
+      display: block;
+      font-size: 10px;
+      color: #64748b;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 2px;
+    }
+
+    .ai-meta-item .ai-meta-val {
+      font-size: 12.5px;
+      color: #38bdf8;
+      font-weight: 700;
+    }
+
+    .curriculum-nav {
+      display: flex;
+      gap: 10px;
+      background: rgba(13, 20, 36, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 6px;
+      border-radius: 30px;
+      margin-bottom: 28px;
+      width: fit-content;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    .curriculum-tab-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .curriculum-tab-btn.active {
+      background: linear-gradient(135deg, rgba(11, 99, 206, 0.35), rgba(56, 189, 248, 0.25));
+      color: #ffffff;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+    }
+
+    .curriculum-tab-content { display: none; }
+    .curriculum-tab-content.active {
+      display: block;
+      animation: fadeInTab 0.3s ease forwards;
+    }
+
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .subject-card {
+      background: var(--gmba-card-bg);
+      border: 1px solid var(--gmba-card-border);
+      border-radius: 14px;
+      padding: 18px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all 0.25s ease;
+    }
+
+    .subject-card:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+      background: rgba(18, 28, 48, 0.85);
+      transform: translateY(-2px);
+    }
+
+    .subject-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 75px;
+      flex-shrink: 0;
+      padding: 6px;
+    }
+
+    .subject-icon-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .subject-name {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #f1f5f9;
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    .certs-marquee-wrap {
+      background: rgba(10, 16, 28, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 28px 0;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .certs-marquee-wrap::before, .certs-marquee-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 80px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .certs-marquee-wrap::before {
+      left: 0;
+      background: linear-gradient(90deg, rgba(5, 7, 12, 1), transparent);
+    }
+
+    .certs-marquee-wrap::after {
+      right: 0;
+      background: linear-gradient(-90deg, rgba(5, 7, 12, 1), transparent);
+    }
+
+    .certs-track {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: marqueeScroll 26s linear infinite;
+    }
+
+    .certs-track:hover { animation-play-state: paused; }
+
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .cert-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 40px;
+      padding: 10px 20px;
+      color: #ffffff;
+      font-size: 13.5px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: all 0.25s ease;
+    }
+
+    .cert-pill:hover {
+      background: rgba(56, 189, 248, 0.1);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .cert-pill img { width: 22px; height: 22px; object-fit: contain; }
+
+    .eligibility-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .eligibility-card {
+      background: var(--gmba-card-bg);
+      border: 1px solid var(--gmba-card-border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
       transition: all 0.3s ease;
     }
 
-    .gmba-recruiter-card:hover {
-      background: rgba(255, 255, 255, 0.07);
+    .eligibility-card:hover {
       border-color: rgba(56, 189, 248, 0.35);
       transform: translateY(-3px);
     }
 
-    .gmba-recruiter-img {
-      max-height: 42px;
-      max-width: 90%;
-      object-fit: contain;
-      filter: brightness(0.9) contrast(1.1);
-      transition: filter 0.3s ease;
-    }
-
-    .gmba-recruiter-card:hover .gmba-recruiter-img {
-      filter: brightness(1.1);
-    }
-
-    /* FAQ Accordion */
-    .gmba-faq-list {
-      margin-top: 32px;
+    .eligibility-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: #38bdf8;
       display: flex;
-      flex-direction: column;
-      gap: 14px;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: monospace;
     }
 
-    .gmba-faq-item {
-      background: var(--gmba-card-bg);
-      border: 1px solid var(--gmba-card-border);
-      border-radius: 14px;
-      overflow: hidden;
+    .eligibility-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .eligibility-card p {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin: 0;
+    }
+
+    .recruiter-logos-row {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .recruiter-logo-box {
+      background: rgba(13, 20, 36, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 12px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: all 0.25s ease;
     }
 
-    .gmba-faq-item:hover {
-      border-color: rgba(56, 189, 248, 0.3);
+    .recruiter-logo-box:hover {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: rgba(56, 189, 248, 0.5);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     }
 
-    .gmba-faq-header {
-      padding: 18px 22px;
-      font-size: 16px;
-      font-weight: 600;
-      color: #ffffff;
-      cursor: pointer;
+    .recruiter-logo-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: none;
+      opacity: 1;
+      transition: transform 0.25s ease;
+    }
+
+    .recruiter-logo-box:hover img { transform: scale(1.06); }
+
+    .pgdm-faq-container {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      user-select: none;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 960px;
+      margin: 0 auto;
     }
 
-    .gmba-faq-icon {
-      font-size: 18px;
+    .pgdm-accordion-item {
+      background: rgba(13, 20, 36, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .pgdm-accordion-item.active {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(16, 25, 45, 0.95);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .pgdm-accordion-header {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 20px 24px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 650;
+      line-height: 1.4;
+    }
+
+    .pgdm-accordion-header:hover { color: #38bdf8; }
+
+    .pgdm-accordion-header .acc-icon {
+      width: 22px;
+      height: 22px;
       color: #38bdf8;
+      flex-shrink: 0;
       transition: transform 0.3s ease;
     }
 
-    .gmba-faq-item.open .gmba-faq-icon {
-      transform: rotate(45deg);
-    }
+    .pgdm-accordion-item.active .acc-icon { transform: rotate(180deg); }
 
-    .gmba-faq-content {
-      padding: 0 22px;
+    .pgdm-accordion-body {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.35s ease, padding 0.35s ease;
-      color: #cbd5e1;
+      transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+    }
+
+    .pgdm-accordion-item.active .pgdm-accordion-body {
+      max-height: 800px;
+      transition: max-height 0.45s ease-in-out;
+    }
+
+    .pgdm-accordion-inner {
+      padding: 0 24px 22px 24px;
       font-size: 14.5px;
-      line-height: 1.65;
+      line-height: 1.7;
+      color: #cbd5e1;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 14px;
     }
 
-    .gmba-faq-item.open .gmba-faq-content {
-      padding: 0 22px 20px 22px;
-      max-height: 300px;
+    .pgdm-accordion-inner p:last-child { margin-bottom: 0; }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
 
-    /* Final CTA Bar */
-    .gmba-cta-strip {
-      background: linear-gradient(135deg, rgba(14, 116, 144, 0.25) 0%, rgba(13, 20, 36, 0.95) 100%);
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      border-radius: 22px;
-      padding: 45px 40px;
-      margin-top: 60px;
+    .modal-backdrop.open {
+      display: flex;
+      animation: fadeInModal 0.25s ease forwards;
+    }
+
+    .modal-card {
+      background: #0d1422;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 20px;
+      padding: 36px;
+      max-width: 520px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 18px; right: 18px;
+      background: rgba(255, 255, 255, 0.08);
+      border: none;
+      border-radius: 50%;
+      width: 32px; height: 32px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(56, 189, 248, 0.15);
-    }
-
-    .gmba-cta-text h3 {
-      font-size: 28px;
-      font-weight: 800;
+      justify-content: center;
       color: #ffffff;
-      margin: 0 0 10px 0;
+      cursor: pointer;
     }
 
-    .gmba-cta-text p {
-      font-size: 15px;
+    .modal-form-group {
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .modal-form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
       color: #cbd5e1;
-      margin: 0;
-      max-width: 620px;
-      line-height: 1.6;
+      margin-bottom: 6px;
     }
 
-    .gmba-cta-buttons {
-      display: flex;
-      gap: 14px;
-      flex-shrink: 0;
+    .modal-form-group input, .modal-form-group select {
+      width: 100%;
+      background: rgba(5, 8, 15, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      padding: 12px 14px;
+      color: #ffffff;
+      font-size: 14px;
+      outline: none;
     }
 
-    /* Responsive Queries */
-    @media (max-width: 1200px) {
-      .gmba-stats-strip { grid-template-columns: repeat(3, 1fr); }
-      .gmba-spec-grid { grid-template-columns: repeat(3, 1fr); }
-      .gmba-certs-grid { grid-template-columns: repeat(3, 1fr); }
-      .gmba-recruiters-grid { grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 1100px) {
+      .pgdm-stats-strip { grid-template-columns: repeat(3, 1fr); }
+      .pgdm-stat-card:nth-child(3) { border-right: none; }
+      .pgdm-stat-card:nth-child(-n+3) { border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+      .objectives-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .specializations-grid { grid-template-columns: repeat(2, 1fr); }
+      .ai-lab-spotlight { grid-template-columns: 1fr; }
+      .subjects-grid { grid-template-columns: repeat(3, 1fr); }
+      .focus-grid { grid-template-columns: repeat(3, 1fr); }
+      .recruiter-logos-row { grid-template-columns: repeat(4, 1fr); }
     }
 
-    @media (max-width: 992px) {
-      .gmba-hero-grid { grid-template-columns: 1fr; gap: 36px; }
-      .gmba-partner-grid { grid-template-columns: 1fr; }
-      .gmba-pathway-timeline { grid-template-columns: 1fr; }
-      .gmba-features-grid { grid-template-columns: repeat(2, 1fr); }
-      .gmba-clinics-grid { grid-template-columns: repeat(2, 1fr); }
-      .gmba-obj-grid { grid-template-columns: repeat(2, 1fr); }
-      .gmba-roles-grid { grid-template-columns: 1fr; }
-      .gmba-admission-box { grid-template-columns: 1fr; }
-      .gmba-cta-strip { flex-direction: column; text-align: center; }
-      .gmba-cta-buttons { justify-content: center; }
+    @media (max-width: 768px) {
+      .pgdm-hero-banner { padding-top: 110px; padding-bottom: 40px; min-height: auto; }
+      .helix-bg-img { width: 100%; right: 0; opacity: 0.16; }
+      .helix-title { font-size: 38px; line-height: 1.15; }
+      .helix-title br { display: none; }
+      .helix-desc { font-size: 15px; margin-bottom: 24px; }
+      .helix-badge-wrap { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+      .helix-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .helix-btn-primary, .helix-btn-secondary { width: 100%; justify-content: center; }
+      .helix-action-meta { margin-left: 0; margin-top: 6px; }
+      .pgdm-stats-strip { grid-template-columns: 1fr; }
+      .pgdm-stat-card { border-right: none !important; border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+      .pgdm-stat-card:last-child { border-bottom: none; }
+      .objectives-grid, .specializations-grid, .eligibility-grid { grid-template-columns: 1fr; }
+      .subjects-grid { grid-template-columns: 1fr 1fr; }
+      .focus-grid { grid-template-columns: 1fr; }
+      .recruiter-logos-row { grid-template-columns: repeat(3, 1fr); }
     }
 
-    @media (max-width: 600px) {
-      .gmba-hero-title { font-size: 30px; }
-      .gmba-stats-strip { grid-template-columns: repeat(2, 1fr); }
-      .gmba-spec-grid { grid-template-columns: 1fr; }
-      .gmba-features-grid { grid-template-columns: 1fr; }
-      .gmba-clinics-grid { grid-template-columns: 1fr; }
-      .gmba-certs-grid { grid-template-columns: repeat(2, 1fr); }
-      .gmba-gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .gmba-recruiters-grid { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 480px) {
+      .helix-title { font-size: 30px; }
+      .subjects-grid { grid-template-columns: 1fr; }
+      .recruiter-logos-row { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -1125,1404 +1298,847 @@
 
   <main id="main">
 
-    <!-- ==================== HERO SECTION (#mba-usw) ==================== -->
-    <section class="gmba-hero-banner" id="mba-usw">
-      <div class="container gmba-hero-container">
-        
-        <!-- Breadcrumb Navigation -->
-        <nav class="about-breadcrumbs" aria-label="Breadcrumb">
-          <a href="../../index.html">Home</a>
-          <span>/</span>
-          <a href="../../programs.html">Programs</a>
-          <span>/</span>
-          <span class="current">MBA Global · USW, UK</span>
-        </nav>
+    <!-- ============ SECTION 1: HERO BANNER & NARRATIVE ============ -->
+    <section class="pgdm-hero-banner" id="mba-usw">
+      <div class="helix-bg-layer" aria-hidden="true">
+        <div class="helix-bg-img"></div>
+        <div class="helix-bg-overlay"></div>
+      </div>
 
-        <div class="gmba-hero-grid">
-          <div class="gmba-hero-content reveal">
-            <div class="gmba-pill-badge">
-              <span class="dot"></span>
-              <span>Dual-Country International Degree Pathway · Batch 2027–29</span>
+      <div class="container pgdm-hero-container">
+        
+        <div class="helix-content-wrap">
+          <div class="helix-badge-wrap">
+            <span class="helix-badge-pill">UK Degree Pathway</span>
+            <span class="helix-badge-text">Lexicon MILE &bull; University of South Wales, UK (Batch 2027&ndash;29)</span>
+          </div>
+
+          <h1 class="helix-title">
+            MBA Global &mdash; USW, UK<br>
+            for leaders that <em>command markets</em><br>
+            without boundaries.
+          </h1>
+
+          <p class="helix-desc">
+            Delivered through a strategic academic partnership between Lexicon MILE (Pune, India) and the University of South Wales (USW, UK), this premier 2-year Master of Business Administration combines 60 credits in India with 120 credits in the United Kingdom, featuring a guaranteed 3&ndash;4 month UK corporate work placement and 100% visa track record.
+          </p>
+
+          <div class="helix-actions">
+            <a href="https://admissions.lexiconmile.com/" target="_blank" rel="noopener noreferrer" class="helix-btn-primary">
+              Apply Online Now <span class="btn-arrow">&rarr;</span>
+            </a>
+            <button type="button" class="helix-btn-secondary" id="btn-open-brochure">Download Brochure</button>
+            <a href="../../global-mba-usw-uk.html" class="helix-btn-secondary" style="border-color: rgba(245, 158, 11, 0.4); color: #fbbf24;">
+              Fee Structure &amp; Pathway <span>&rarr;</span>
+            </a>
+            <div class="helix-action-meta">
+              <span>PRIVY COUNCIL ACCREDITED</span>
+              <span class="meta-dot">&bull;</span>
+              <span>100% VISA TRACK RECORD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metric Facts Strip (Glass Dock) -->
+        <div class="pgdm-stats-strip">
+          <div class="pgdm-stat-card">
+            <div class="pgdm-stat-indicator">
+              <span class="ind-dot"></span>
+              <span>Degree Pathway</span>
+            </div>
+            <span class="pgdm-stat-num">60 + 120</span>
+            <span class="pgdm-stat-label">Credits (India + UK)</span>
+            <span class="pgdm-stat-sub">Lexicon MILE + Univ. of South Wales</span>
+          </div>
+          <div class="pgdm-stat-card">
+            <div class="pgdm-stat-indicator">
+              <span class="ind-dot"></span>
+              <span>UK Placement</span>
+            </div>
+            <span class="pgdm-stat-num accent-gold">3–4 Mo.</span>
+            <span class="pgdm-stat-label">UK Corporate Internship</span>
+            <span class="pgdm-stat-sub">Hands-on UK Executive Experience</span>
+          </div>
+          <div class="pgdm-stat-card">
+            <div class="pgdm-stat-indicator">
+              <span class="ind-dot"></span>
+              <span>Heritage</span>
+            </div>
+            <span class="pgdm-stat-num">100+ Yrs</span>
+            <span class="pgdm-stat-label">USW Academic Legacy</span>
+            <span class="pgdm-stat-sub">Privy Council &amp; QAA Accredited</span>
+          </div>
+          <div class="pgdm-stat-card">
+            <div class="pgdm-stat-indicator">
+              <span class="ind-dot"></span>
+              <span>Average Package</span>
+            </div>
+            <span class="pgdm-stat-num accent-gold">&pound;30K–40K</span>
+            <span class="pgdm-stat-label">Avg. UK Placements</span>
+            <span class="pgdm-stat-sub">Approx. ₹30&ndash;40 LPA Global Earnings</span>
+          </div>
+          <div class="pgdm-stat-card">
+            <div class="pgdm-stat-indicator">
+              <span class="ind-dot"></span>
+              <span>Visa Grant</span>
+            </div>
+            <span class="pgdm-stat-num">0%</span>
+            <span class="pgdm-stat-label">Visa Rejections</span>
+            <span class="pgdm-stat-sub">100% Visa Track Record Across 7 Batches</span>
+          </div>
+          <div class="pgdm-stat-card">
+            <div class="pgdm-stat-indicator">
+              <span class="ind-dot"></span>
+              <span>Global Reach</span>
+            </div>
+            <span class="pgdm-stat-num">120+</span>
+            <span class="pgdm-stat-label">Countries Alumni Network</span>
+            <span class="pgdm-stat-sub">Global Mobility &amp; NHS Coverage</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 2: PROGRAM OBJECTIVES (4 PILLARS) ============ -->
+    <section class="section" id="program-objectives" style="padding-top: 60px; padding-bottom: 70px;">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <div class="section-eyebrow-pill">
+            <span class="pill-glow-dot"></span>
+            <span>INTERNATIONAL EXCELLENCE &bull; DUAL-COUNTRY PATHWAY</span>
+          </div>
+          <h2>Program Objectives: Engineered for <em>Global Leadership</em><span class="period">.</span></h2>
+          <p>
+            The MBA Global unites Lexicon MILE's forward-looking pedagogy with the century-long heritage and industry pedigree of the University of South Wales, UK:
+          </p>
+        </div>
+
+        <div class="objectives-grid">
+          
+          <article class="objective-card">
+            <div>
+              <div class="obj-card-top">
+                <div class="obj-icon-wrap" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+                <span class="obj-num">01</span>
+              </div>
+              <span class="obj-pillar-tag">Pillar 01 &bull; Dual-Country Mastery</span>
+              <h3>Transnational Business Acumen</h3>
+              <p>Master multi-jurisdictional finance, UK statutory frameworks, cross-border corporate governance, and international market entry dynamics.</p>
+              
+              <div class="obj-pills">
+                <span class="obj-pill">Global Supply Chain</span>
+                <span class="obj-pill">Cross-Border Mergers</span>
+                <span class="obj-pill">UK Regulations</span>
+                <span class="obj-pill">Forex Hedging</span>
+              </div>
             </div>
 
-            <h1 class="gmba-hero-title">
-              MBA Global<br>
-              <span class="highlight">University of South Wales, UK</span><span class="period">.</span>
-            </h1>
+            <div class="obj-footer">
+              <span class="obj-foot-accent">Dual Country Credit Model</span>
+              <span class="obj-foot-meta">Pune &bull; South Wales</span>
+            </div>
+          </article>
 
-            <p class="gmba-hero-text">
-              Delivered through a strategic academic partnership between <strong>Lexicon MILE (Pune, India)</strong> and the <strong>University of South Wales (USW, UK)</strong>, this 2-year Master of Business Administration combines <strong>60 credits in India</strong> with <strong>120 credits in the United Kingdom</strong>.
-            </p>
-            <p class="gmba-hero-text" style="font-size: 14.5px; color: #94a3b8; margin-top: -6px;">
-              Featuring an exclusive <strong>3–4 month corporate internship</strong> with companies across the UK, industry-led Business Clinics, NHS health coverage, and a proven <strong>100% visa grant record</strong> across 7 batches.
-            </p>
+          <article class="objective-card">
+            <div>
+              <div class="obj-card-top">
+                <div class="obj-icon-wrap" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                </div>
+                <span class="obj-num">02</span>
+              </div>
+              <span class="obj-pillar-tag">Pillar 02 &bull; Corporate Immersion</span>
+              <h3>Guaranteed UK Internship</h3>
+              <p>Accelerate your international career with an embedded 3–4 month corporate work placement at leading British and multinational enterprises.</p>
+              
+              <div class="obj-pills">
+                <span class="obj-pill">3-4 Mo. UK Residency</span>
+                <span class="obj-pill">Live Corporate Briefs</span>
+                <span class="obj-pill">UK Executive Mentors</span>
+                <span class="obj-pill">Post-Study Visa Support</span>
+              </div>
+            </div>
 
-            <div class="gmba-hero-actions">
-              <a href="https://admissions.lexiconmile.com/" target="_blank" rel="noopener noreferrer" class="button">
-                Apply for 2027–29 <span>↗</span>
-              </a>
-              <a href="#curriculum" class="button button-outline">
-                Explore Curriculum ↓
-              </a>
-              <a href="../../global-mba-usw-uk.html" class="button button-outline" style="border-color: rgba(245, 158, 11, 0.4); color: #fbbf24;">
-                Fees &amp; Pathway <span>→</span>
-              </a>
+            <div class="obj-footer">
+              <span class="obj-foot-accent">&pound;30k–&pound;40k Placements</span>
+              <span class="obj-foot-meta">High Return on Investment</span>
+            </div>
+          </article>
+
+          <article class="objective-card">
+            <div>
+              <div class="obj-card-top">
+                <div class="obj-icon-wrap" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+                <span class="obj-num">03</span>
+              </div>
+              <span class="obj-pillar-tag">Pillar 03 &bull; Applied Advisory</span>
+              <h3>Business Clinics Practice</h3>
+              <p>Resolve high-impact strategic briefs through specialized clinics spanning Strategy Consulting, Legal &amp; Finance, Talent Systems, and AI Automation.</p>
+              
+              <div class="obj-pills">
+                <span class="obj-pill">Consulting Clinic</span>
+                <span class="obj-pill">Finance Clinic</span>
+                <span class="obj-pill">Talent Clinic</span>
+                <span class="obj-pill">Tech &amp; Automation</span>
+              </div>
+            </div>
+
+            <div class="obj-footer">
+              <span class="obj-foot-accent">Clinics Model</span>
+              <span class="obj-foot-meta">Client-Facing Projects</span>
+            </div>
+          </article>
+
+          <article class="objective-card">
+            <div>
+              <div class="obj-card-top">
+                <div class="obj-icon-wrap" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <span class="obj-num">04</span>
+              </div>
+              <span class="obj-pillar-tag">Pillar 04 &bull; Security &amp; Mobility</span>
+              <h3>Seamless Visa &amp; NHS Benefits</h3>
+              <p>Zero percent visa rejection rate across seven batches with complete institutional visa documentation, full NHS health coverage, and campus housing.</p>
+              
+              <div class="obj-pills">
+                <span class="obj-pill">100% Visa Grant</span>
+                <span class="obj-pill">Free NHS Coverage</span>
+                <span class="obj-pill">USW Campus Life</span>
+                <span class="obj-pill">Cardiff &amp; Newport</span>
+              </div>
+            </div>
+
+            <div class="obj-footer">
+              <span class="obj-foot-accent">0% Rejections</span>
+              <span class="obj-foot-meta">7 Batches Proven</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 3: KEY FOCUS AREAS (5 PILLARS) ============ -->
+    <section class="section" id="focus-areas" style="padding-top: 40px; padding-bottom: 50px;">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="eyebrow">GLOBAL CAREER COMPETENCIES</span>
+          <h2>Key Focus Areas<span class="period">.</span></h2>
+          <p>
+            The MBA Global equips managers with global readiness, cross-border negotiation skills, and corporate problem-solving for competitive international roles:
+          </p>
+        </div>
+
+        <div class="focus-grid">
+          
+          <div class="focus-card">
+            <div class="focus-img-wrap">
+              <img src="../../images/gmba/Supply-Chain-Managements.webp" alt="Supply Chain Management" width="1400" height="1080" loading="lazy">
+            </div>
+            <div class="focus-content">
+              <h4>Supply Chain Management</h4>
+              <p>Navigate complex transnational freight, digital warehouse operations, and procurement resilience.</p>
             </div>
           </div>
 
-          <!-- Hero Right Visual Card -->
-          <div class="gmba-hero-visual reveal">
-            <div class="gmba-floating-chip top-left">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-              <span>Privy Council UK Accredited</span>
+          <div class="focus-card">
+            <div class="focus-img-wrap">
+              <img src="../../images/gmba/Finance.webp" alt="Global Finance" width="1400" height="1080" loading="lazy">
+            </div>
+            <div class="focus-content">
+              <h4>Global Corporate Finance</h4>
+              <p>Master international investment banking, forex risk management, and capital structuring across markets.</p>
+            </div>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-img-wrap">
+              <img src="../../images/gmba/Human-Resources.webp" alt="Human Resource Management" width="1400" height="1080" loading="lazy">
+            </div>
+            <div class="focus-content">
+              <h4>Strategic International HRM</h4>
+              <p>Lead multicultural workforces, transnational talent acquisition, and global labor law compliance.</p>
+            </div>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-img-wrap">
+              <img src="../../images/gmba/Marketing.webp" alt="Global Marketing" width="1400" height="1080" loading="lazy">
+            </div>
+            <div class="focus-content">
+              <h4>Omnichannel Global Marketing</h4>
+              <p>Deploy digital marketing stacks, brand localization, and predictive consumer analytics across Europe and Asia.</p>
+            </div>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-img-wrap">
+              <img src="../../images/gmba/International.webp" alt="Information Technology & AI" width="1400" height="1080" loading="lazy">
+            </div>
+            <div class="focus-content">
+              <h4>Enterprise IT &amp; Analytics</h4>
+              <p>Harness data-driven dashboards, enterprise ERP systems, and cloud management for international scalability.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 4: 5-STAGE DEGREE PATHWAY ============ -->
+    <section class="section" id="pathway" style="padding-top: 40px; padding-bottom: 50px;">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="eyebrow">TRANSNATIONAL CURRICULUM JOURNEY</span>
+          <h2>The 5-Stage Degree Pathway<span class="period">.</span></h2>
+          <p>
+            A carefully synchronized dual-country roadmap taking you from foundational managerial excellence in India to cutting-edge executive delivery in the United Kingdom:
+          </p>
+        </div>
+
+        <div class="specializations-grid">
+          
+          <article class="spec-card">
+            <div class="spec-img-wrap">
+              <img src="../../images/gmba/A-business-fundamentals.webp" alt="Term 1 Foundation" loading="lazy">
+            </div>
+            <div class="spec-body">
+              <div>
+                <span class="spec-tag">Stage 01 &bull; Pune (30 Credits)</span>
+                <h3>Core Business Foundations</h3>
+                <p>
+                  Terms 1 establishes fundamental rigor in Financial Accounting, Economics, Quantitative Analysis, Marketing Foundations, and Managerial Communication at Lexicon MILE Pune.
+                </p>
+                <div class="spec-pills">
+                  <span class="spec-pill">Term 1</span>
+                  <span class="spec-pill">Managerial Acumen</span>
+                  <span class="spec-pill">Financial Reporting</span>
+                </div>
+              </div>
+              <div class="spec-footer">
+                <span style="font-size: 12px; color: #94a3b8;">Location: Lexicon MILE, India</span>
+                <span class="spec-link">30 Credits</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="spec-card">
+            <div class="spec-img-wrap">
+              <img src="../../images/gmba/Building-Top.webp" alt="Term 2 Advanced Management" loading="lazy">
+            </div>
+            <div class="spec-body">
+              <div>
+                <span class="spec-tag">Stage 02 &bull; Pune (30 Credits)</span>
+                <h3>Advanced Strategy &amp; AI</h3>
+                <p>
+                  Term 2 delivers high-velocity modules in Strategic Management, Predictive Analytics, Supply Chain Execution, and specialized HyperBuild AI tools before departure to the UK.
+                </p>
+                <div class="spec-pills">
+                  <span class="spec-pill">Term 2</span>
+                  <span class="spec-pill">AI Lab Tools</span>
+                  <span class="spec-pill">Operations Execution</span>
+                </div>
+              </div>
+              <div class="spec-footer">
+                <span style="font-size: 12px; color: #94a3b8;">Location: Lexicon MILE, India</span>
+                <span class="spec-link">30 Credits</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="spec-card">
+            <div class="spec-img-wrap">
+              <img src="../../images/gmba/MBA-Global-Page-Banner.jpg.jpeg" alt="Term 3 & 4 UK Modules" loading="lazy">
+            </div>
+            <div class="spec-body">
+              <div>
+                <span class="spec-tag">Stage 03 &bull; USW, UK (120 Credits)</span>
+                <h3>UK Modules &amp; Internship</h3>
+                <p>
+                  Transition to the University of South Wales, UK for advanced seminars, Business Clinic simulations, executive capstone projects, and the mandatory 3–4 month corporate work placement.
+                </p>
+                <div class="spec-pills">
+                  <span class="spec-pill">Terms 3, 4 &amp; 5</span>
+                  <span class="spec-pill">UK Placement</span>
+                  <span class="spec-pill">USW Degree</span>
+                </div>
+              </div>
+              <div class="spec-footer">
+                <span style="font-size: 12px; color: #94a3b8;">Location: USW Campus, United Kingdom</span>
+                <span class="spec-link">120 Credits</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 5: SPOTLIGHT - BUSINESS CLINICS & UK ADVANTAGE ============ -->
+    <section class="section" id="business-clinics" style="padding-top: 40px; padding-bottom: 50px;">
+      <div class="container">
+        
+        <div class="ai-lab-spotlight">
+          
+          <div>
+            <span class="ai-lab-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              CLIENT-FACING ADVISORY LAB
+            </span>
+            <h2 class="ai-lab-title">Industry-Led Business Clinics<span class="period">.</span></h2>
+            <div class="ai-lab-subtitle">The Practical Engine Connecting MBA Scholars Directly to UK Boardrooms</div>
+            
+            <p class="ai-lab-desc">
+              At the University of South Wales, learning transcends traditional lectures through specialized <strong>Business Clinics</strong>. MBA Global candidates act as junior corporate consultants, taking real live briefs from enterprises across Wales, London, and international commerce hubs.
+            </p>
+
+            <p class="ai-lab-desc">
+              Working directly alongside faculty mentors and British industry leaders, scholars produce actionable market analyses, supply chain optimizations, and financial turnarounds that deliver verified commercial impact.
+            </p>
+
+            <div class="ai-quote-box">
+              &ldquo;The UK corporate internship is not merely an observational visit &mdash; it is a full-time, hands-on professional placement that places our graduates directly into competitive global careers.&rdquo;
+            </div>
+
+            <div class="ai-modules-grid">
+              <div class="ai-module-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>01. Strategy &amp; Growth Clinic</span>
+              </div>
+              <div class="ai-module-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>02. Legal, Tax &amp; Finance Clinic</span>
+              </div>
+              <div class="ai-module-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>03. Cross-Border Talent Clinic</span>
+              </div>
+              <div class="ai-module-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>04. MarTech &amp; Consumer Insights</span>
+              </div>
+              <div class="ai-module-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>05. Supply Chain &amp; Logistics Clinic</span>
+              </div>
+              <div class="ai-module-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>06. Global Capstone Showcase</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="../../global-mba-usw-uk.html" class="button">View Complete Fee &amp; Pathway Details <span>↗</span></a>
+              <button type="button" class="button button-outline" id="btn-open-brochure-mid">Request Syllabus PDF <span>&darr;</span></button>
+            </div>
+          </div>
+
+          <div class="ai-lab-showcase-card">
+            <div class="ai-lab-card-header">
+              <div class="ai-lab-traffic-lights">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="ai-lab-console-title">USW WALES &bull; EXECUTIVE CLINIC PLATFORM</span>
+              <span class="ai-lab-live-pill">ACCREDITED</span>
+            </div>
+
+            <div class="ai-lab-media-wrap">
+              <img src="../../images/gmba/clinic.webp" alt="University of South Wales Business Clinics" width="640" height="400" loading="lazy">
+            </div>
+
+            <div class="ai-lab-card-footer">
+              <div class="ai-lab-meta-row">
+                <div class="ai-meta-item">
+                  <span class="ai-meta-label">INTERNSHIP</span>
+                  <span class="ai-meta-val">3–4 Months UK</span>
+                </div>
+                <div class="ai-meta-item">
+                  <span class="ai-meta-label">VISA RECORD</span>
+                  <span class="ai-meta-val">100% Granted</span>
+                </div>
+                <div class="ai-meta-item">
+                  <span class="ai-meta-label">HEALTHCARE</span>
+                  <span class="ai-meta-val">Full NHS Benefit</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 6: COMPREHENSIVE CURRICULUM ARCHITECTURE ============ -->
+    <section class="section" id="curriculum" style="padding-top: 40px; padding-bottom: 50px;">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="eyebrow">ACADEMIC RIGOR &bull; 180 CREDITS TOTAL</span>
+          <h2>Comprehensive Curriculum Architecture<span class="period">.</span></h2>
+          <p>
+            An exhaustive curriculum blending rigorous core management foundations in India with cutting-edge global executive specialization at the University of South Wales:
+          </p>
+        </div>
+
+        <div class="curriculum-nav" role="tablist">
+          <button type="button" class="curriculum-tab-btn active" data-tab="term1-subjects" role="tab" aria-selected="true">
+            Core Foundations (6)
+          </button>
+          <button type="button" class="curriculum-tab-btn" data-tab="term2-subjects" role="tab" aria-selected="false">
+            Advanced Strategy (6)
+          </button>
+          <button type="button" class="curriculum-tab-btn" data-tab="uk-subjects" role="tab" aria-selected="false">
+            UK Modules &amp; Internship (5)
+          </button>
+        </div>
+
+        <div class="curriculum-tab-content active" id="term1-subjects" role="tabpanel">
+          <div class="subjects-grid">
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/A-business-fundamentals.webp" alt="Economics" loading="lazy"></div>
+              <h4 class="subject-name">Economics for Global Managers</h4>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/D-Basic-Accounting.webp" alt="Accounting" loading="lazy"></div>
+              <h4 class="subject-name">Financial &amp; Managerial Accounting</h4>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/A-business-analytics.webp" alt="Analytics" loading="lazy"></div>
+              <h4 class="subject-name">Quantitative Methods &amp; Analytics</h4>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/Marketing.webp" alt="Marketing" loading="lazy"></div>
+              <h4 class="subject-name">International Marketing Management</h4>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/Human-Resources.webp" alt="Leadership" loading="lazy"></div>
+              <h4 class="subject-name">Organizational Behaviour &amp; Leadership</h4>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/Language-Training.webp" alt="Communication" loading="lazy"></div>
+              <h4 class="subject-name">Executive English &amp; Corporate Communication</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="curriculum-tab-content" id="term2-subjects" role="tabpanel">
+          <div class="subjects-grid">
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/Finance.webp" alt="Finance" loading="lazy"></div>
+              <h4 class="subject-name">Corporate Financial Management &amp; Forex</h4>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/Supply-Chain-Managements.webp" alt="Supply Chain" loading="lazy"></div>
+              <h4 class="subject-name">Global Supply Chain &amp; Logistics</h4>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/c-ai-fundamentals.webp" alt="AI Tools" loading="lazy"></div>
+              <h4 class="subject-name">Business Intelligence &amp; AI Tools</h4>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/B-geopolitcs.webp" alt="Law" loading="lazy"></div>
+              <h4 class="subject-name">Geopolitics &amp; International Business Law</h4>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/C-business-reserch.webp" alt="Research" loading="lazy"></div>
+              <h4 class="subject-name">Applied Business Research Methodology</h4>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/Lead-the-way.webp" alt="Strategy" loading="lazy"></div>
+              <h4 class="subject-name">Strategic Global Management</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="curriculum-tab-content" id="uk-subjects" role="tabpanel">
+          <div class="subjects-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/QAA.webp" alt="Strategic Leadership" loading="lazy"></div>
+              <div><h4 class="subject-name">Strategic Leadership &amp; Transformation</h4><p style="font-size: 11.5px; color: #94a3b8; margin: 4px 0 0 0;">USW &bull; Term 3</p></div>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/clinic.webp" alt="Business Clinics" loading="lazy"></div>
+              <div><h4 class="subject-name">Industry Business Clinics (Live Briefs)</h4><p style="font-size: 11.5px; color: #94a3b8; margin: 4px 0 0 0;">British Client Projects</p></div>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/career-accelerator.webp" alt="UK Internship" loading="lazy"></div>
+              <div><h4 class="subject-name">3–4 Month UK Corporate Work Placement</h4><p style="font-size: 11.5px; color: #94a3b8; margin: 4px 0 0 0;">UK Work Placement</p></div>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/International.webp" alt="Sustainability" loading="lazy"></div>
+              <div><h4 class="subject-name">Innovation, Technology &amp; Sustainability</h4><p style="font-size: 11.5px; color: #94a3b8; margin: 4px 0 0 0;">ESG Frameworks</p></div>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon-wrap"><img src="../../images/gmba/busiinesss-Plan.webp" alt="Capstone" loading="lazy"></div>
+              <div><h4 class="subject-name">Major Capstone Consulting Project</h4><p style="font-size: 11.5px; color: #94a3b8; margin: 4px 0 0 0;">Master's Dissertation</p></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 7: EMPLOYMENT ENHANCING CERTIFICATIONS ============ -->
+    <section class="section" id="certifications" style="padding-top: 40px; padding-bottom: 50px;">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="eyebrow">INTERNATIONAL CREDENTIALS</span>
+          <h2>Employment Enhancing Certifications<span class="period">.</span></h2>
+          <p>
+            Earn industry-recognized badges and international certificates embedded directly into the MBA Global pathway to bolster your worldwide employability:
+          </p>
+        </div>
+
+        <div class="certs-marquee-wrap">
+          <div class="certs-track">
+            <div class="cert-pill"><img src="../../images/pgdm/cert-digital-marketing.png" alt="Marketing" loading="lazy"><span>Global Digital Marketing</span></div>
+            <div class="cert-pill"><img src="../../images/pgdm/cert-fin-modelling.png" alt="Financial Modelling" loading="lazy"><span>Financial Modelling &amp; Valuation</span></div>
+            <div class="cert-pill"><img src="../../images/pgdm/cert-six-sigma.png" alt="Six Sigma" loading="lazy"><span>Lean Six Sigma Green Belt</span></div>
+            <div class="cert-pill"><img src="../../images/pgdm/cert-python.svg" alt="Python" loading="lazy"><span>Python &amp; Business Intelligence</span></div>
+            <div class="cert-pill"><img src="../../images/pgdm/cert-linkedin.svg" alt="LinkedIn" loading="lazy"><span>LinkedIn Executive Branding</span></div>
+            <div class="cert-pill"><img src="../../images/pgdm/cert-powerbi.svg" alt="Power BI" loading="lazy"><span>Microsoft Power BI &amp; Analytics</span></div>
+            <!-- Duplicates for marquee -->
+            <div class="cert-pill"><img src="../../images/pgdm/cert-digital-marketing.png" alt="Marketing" loading="lazy"><span>Global Digital Marketing</span></div>
+            <div class="cert-pill"><img src="../../images/pgdm/cert-fin-modelling.png" alt="Financial Modelling" loading="lazy"><span>Financial Modelling &amp; Valuation</span></div>
+            <div class="cert-pill"><img src="../../images/pgdm/cert-six-sigma.png" alt="Six Sigma" loading="lazy"><span>Lean Six Sigma Green Belt</span></div>
+            <div class="cert-pill"><img src="../../images/pgdm/cert-python.svg" alt="Python" loading="lazy"><span>Python &amp; Business Intelligence</span></div>
+            <div class="cert-pill"><img src="../../images/pgdm/cert-linkedin.svg" alt="LinkedIn" loading="lazy"><span>LinkedIn Executive Branding</span></div>
+            <div class="cert-pill"><img src="../../images/pgdm/cert-powerbi.svg" alt="Power BI" loading="lazy"><span>Microsoft Power BI &amp; Analytics</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 8: ELIGIBILITY CRITERIA & ROADMAP ============ -->
+    <section class="section" id="eligibility" style="padding-top: 40px; padding-bottom: 50px;">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="eyebrow">ADMISSION PREREQUISITES &bull; BATCH 2027&ndash;29</span>
+          <h2>Eligibility Criteria<span class="period">.</span></h2>
+          <p>
+            Review the minimum academic prerequisites and admission requirements for the dual-country MBA Global with the University of South Wales, UK:
+          </p>
+        </div>
+
+        <div class="eligibility-grid">
+          <div class="eligibility-card">
+            <span class="eligibility-num">01</span>
+            <h3>Bachelor&rsquo;s Degree</h3>
+            <p>Graduation degree in any discipline from a UGC / AIU recognized university with a minimum aggregate score of 55% (final year students may apply provisionally).</p>
+          </div>
+          <div class="eligibility-card">
+            <span class="eligibility-num">02</span>
+            <h3>Valid Passport &amp; English MOI</h3>
+            <p>Possession of a valid passport is mandatory. Candidates must demonstrate English language proficiency through Medium of Instruction (MOI) certificate or equivalent.</p>
+          </div>
+          <div class="eligibility-card">
+            <span class="eligibility-num">03</span>
+            <h3>Entrance Score &amp; Interview</h3>
+            <p>Applicants must hold valid score in CAT, MAT, XAT, CMAT, GMAT, or Lexicon LAT, followed by a personal interview evaluation with the International Admissions Panel.</p>
+          </div>
+        </div>
+
+        <div style="background: rgba(13, 20, 36, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 28px 32px; margin-top: 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+          <div>
+            <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin: 0 0 6px 0;">Official Fee Structure (AY 2027–28)</h4>
+            <p style="font-size: 13.5px; color: #94a3b8; margin: 0;">India Component: ₹4,75,000/- + applicable taxes (4 installments) &bull; UK Component: GBP 7,500/- direct to USW.</p>
+          </div>
+          <div style="display: flex; gap: 12px;">
+            <a href="../../global-mba-usw-uk.html" class="button" style="background: #38bdf8; border-color: #38bdf8; color: #05070c; font-weight: 700;">View Full Fee Breakdown &rarr;</a>
+            <a href="https://admissions.lexiconmile.com/" target="_blank" class="button button-outline" style="border-color: rgba(245, 158, 11, 0.4); color: #fbbf24;">Apply Online <span>↗</span></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 9: PLACEMENTS & RECRUITER NETWORK ============ -->
+    <section class="section" id="placements" style="padding-top: 40px; padding-bottom: 50px;">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="eyebrow">GLOBAL CAREER OUTCOMES &bull; &pound;30K&ndash;&pound;40K AVERAGE</span>
+          <h2>Where Our Global Graduates Excel<span class="period">.</span></h2>
+          <p>
+            With extensive recruiter relationships across both India and the United Kingdom, MBA Global graduates step into rewarding executive roles worldwide:
+          </p>
+        </div>
+
+        <div class="recruiter-logos-row">
+          <div class="recruiter-logo-box"><img src="../../images/gmba/h-lloydsbank.webp" alt="Lloyds Bank UK" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/gmba/h-british-gas.webp" alt="British Gas" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/gmba/h-bnymellon.webp" alt="BNY Mellon" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/gmba/h-aviva.webp" alt="Aviva" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/gmba/h-bt.webp" alt="BT Group UK" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/gmba/h-simens.webp" alt="Siemens" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/gmba/h-tata.webp" alt="Tata Group UK" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/gmba/h-eclerx.webp" alt="eClerx" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_1_Apple-Logo-1.png" alt="Apple" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_7_IDFC.jpg" alt="IDFC FIRST Bank" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_15_14.jpg" alt="Amazon" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_37_61.jpg" alt="KPMG" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_41_83.jpg" alt="Larsen & Toubro" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_45_93.jpg" alt="IBM" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_20_21.jpg" alt="CRISIL" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_33_51.jpg" alt="Asian Paints" loading="lazy"></div>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 14px; margin-top: 24px; flex-wrap: wrap;">
+          <a href="../../our-recruiters.html" class="button button-outline">View All 500+ Recruiters <span>&rarr;</span></a>
+          <a href="../../placement.html" class="button button-outline">View Placement Report <span>&rarr;</span></a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 10: FREQUENTLY ASKED QUESTIONS (ACCORDION) ============ -->
+    <section class="section" id="faqs" style="padding-top: 40px; padding-bottom: 60px;">
+      <div class="container">
+        
+        <div class="section-title-wrap" style="text-align: center; margin-bottom: 36px;">
+          <span class="eyebrow">COMMON QUERIES</span>
+          <h2>Frequently Asked Questions<span class="period">.</span></h2>
+          <p style="margin: 0 auto;">Everything you need to know about the MBA Global (USW, UK) with Lexicon MILE:</p>
+        </div>
+
+        <div class="pgdm-faq-container">
+          <div class="pgdm-accordion-item active">
+            <button type="button" class="pgdm-accordion-header" aria-expanded="true">
+              <span>How is the MBA Global degree awarded, and who recognizes it?</span>
+              <svg class="acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="pgdm-accordion-body">
+              <div class="pgdm-accordion-inner">
+                <p>The Master of Business Administration (MBA Global) is conferred directly by the <strong>University of South Wales, United Kingdom</strong>. USW is established by UK Royal Charter, accredited through the Privy Council, and monitored by the Quality Assurance Agency for Higher Education (QAA). The degree carries full international equivalence and is recognized worldwide across both industry and academia.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pgdm-accordion-item">
+            <button type="button" class="pgdm-accordion-header" aria-expanded="false">
+              <span>What is the structure of the credit distribution between India and the UK?</span>
+              <svg class="acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="pgdm-accordion-body">
+              <div class="pgdm-accordion-inner">
+                <p>The programme comprises 180 total academic credits. Students complete the foundational 60 credits (Terms 1 and 2) at Lexicon MILE Pune covering core managerial disciplines, business analytics, and executive communication. Scholars then transition to the UK for the remaining 120 credits across Terms 3, 4, and 5, culminating in British corporate clinic projects and the work placement.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pgdm-accordion-item">
+            <button type="button" class="pgdm-accordion-header" aria-expanded="false">
+              <span>How does the 3–4 month UK corporate work placement operate?</span>
+              <svg class="acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="pgdm-accordion-body">
+              <div class="pgdm-accordion-inner">
+                <p>During the UK residency, students participate in an exclusive 3–4 month corporate work placement arranged in partnership with USW's dedicated Careers and Employability service. Students work within British businesses and international organizations, gaining verifiable UK corporate experience on their CVs and earning stipends based on placement agreements.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pgdm-accordion-item">
+            <button type="button" class="pgdm-accordion-header" aria-expanded="false">
+              <span>What is the visa grant success rate for Lexicon MILE students travelling to the UK?</span>
+              <svg class="acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="pgdm-accordion-body">
+              <div class="pgdm-accordion-inner">
+                <p>Lexicon MILE holds a flawless <strong>100% visa grant track record with 0% rejections across all 7 preceding batches</strong>. Our dedicated international desk guides students step-by-step through Confirmation of Acceptance for Studies (CAS) issuance, financial documentation, biometrics, and immigration compliance.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pgdm-accordion-item">
+            <button type="button" class="pgdm-accordion-header" aria-expanded="false">
+              <span>Are healthcare benefits included while studying in the United Kingdom?</span>
+              <svg class="acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="pgdm-accordion-body">
+              <div class="pgdm-accordion-inner">
+                <p>Yes. As full-time students enrolled in an accredited UK university with a standard Student Visa, candidates gain complete access to the UK's renowned <strong>National Health Service (NHS)</strong>, providing comprehensive medical care and protection throughout their stay in the UK.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pgdm-accordion-item">
+            <button type="button" class="pgdm-accordion-header" aria-expanded="false">
+              <span>What are the career and post-study opportunities following completion?</span>
+              <svg class="acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="pgdm-accordion-body">
+              <div class="pgdm-accordion-inner">
+                <p>Graduates achieve high-impact positions across the UK, Europe, the Middle East, and India, with average international packages ranging between £30,000 and £40,000 (approx. ₹30–40 LPA). Depending on prevailing UK immigration regulations, students are eligible to apply for post-study work visas (Graduate Route) or transition directly into sponsored corporate roles.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 11: BOTTOM FINAL CTA BANNER ============ -->
+    <section class="final-cta" id="admissions">
+      <div class="cta-orb" aria-hidden="true"></div>
+      <div class="container reveal">
+        <div class="cta-main-layout">
+          <div class="cta-text-content">
+            <p class="eyebrow"><span class="status-dot"></span>BATCH 2027-29 ADMISSIONS OPEN</p>
+            <h2>Launch Your Global<br>Career <em>Today</em><span class="period">.</span></h2>
+            <p>Ready to Step in as a Borderless Day Zero Professional?<br>Secure your seat and international scholarship consideration.</p>
+            <div class="cta-buttons">
+              <a href="https://admissions.lexiconmile.com/" target="_blank" class="button">Apply Online Now <span>↗</span></a>
+              <button type="button" class="button button-outline" id="btn-open-brochure-bottom">Download Brochure <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px; vertical-align: text-bottom;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg></button>
             </div>
             
-            <div class="gmba-hero-img-wrap">
-              <img src="../../images/gmba/MBA-Global-Page-Banner.jpg.jpeg" alt="MBA Global University of South Wales UK" class="gmba-hero-img">
-            </div>
-
-            <div class="gmba-floating-chip bottom-right">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-              <span>100% Visa Track Record (7 Batches)</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Key Program Stats Strip -->
-        <div class="gmba-stats-strip reveal">
-          <div class="gmba-stat-item">
-            <span class="gmba-stat-number">60 + 120</span>
-            <span class="gmba-stat-label">Credits (India + UK)</span>
-          </div>
-          <div class="gmba-stat-item">
-            <span class="gmba-stat-number gold">3–4 Mo.</span>
-            <span class="gmba-stat-label">UK Corporate Internship</span>
-          </div>
-          <div class="gmba-stat-item">
-            <span class="gmba-stat-number">100+ Yrs</span>
-            <span class="gmba-stat-label">USW Academic Legacy</span>
-          </div>
-          <div class="gmba-stat-item">
-            <span class="gmba-stat-number gold">&#163;30K&#8211;40K</span>
-            <span class="gmba-stat-label">Avg. UK Placements (30&#8211;40 LPA)</span>
-          </div>
-          <div class="gmba-stat-item">
-            <span class="gmba-stat-number">0%</span>
-            <span class="gmba-stat-label">Visa Rejections to Date</span>
-          </div>
-          <div class="gmba-stat-item">
-            <span class="gmba-stat-number gold">120+</span>
-            <span class="gmba-stat-label">Countries Alumni Network</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== STRATEGIC PARTNERSHIP SECTION ==================== -->
-    <section class="section" id="partnership">
-      <div class="container">
-        
-        <div class="section-heading reveal">
-          <div>
-            <span class="gmba-subhead">Global Academic Partnership</span>
-            <h2>Two Premier Institutions. One World-Class Degree<span class="period">.</span></h2>
-          </div>
-          <p>
-            The MBA Global unites Lexicon MILE's forward-looking pedagogy with the century-long heritage and industry pedigree of the University of South Wales, UK.
-          </p>
-        </div>
-
-        <div class="gmba-partner-grid">
-          <!-- Lexicon MILE Card -->
-          <div class="gmba-partner-card reveal">
-            <div class="gmba-partner-header">
-              <span class="gmba-partner-badge india">Host Institution · India</span>
-              <span style="font-size: 13px; color: #94a3b8; font-weight: 600;">Est. 2009 · Pune</span>
-            </div>
-            <h3 class="gmba-partner-title">Lexicon MILE, Pune</h3>
-            <p class="gmba-partner-desc">
-              Founded in 2009 as part of the esteemed Lexicon Group of Institutes (est. 2006), Lexicon MILE represents a shared commitment to building leaders who thrive in a borderless world. Rooted in the philosophy of <em>"A Mentor Every MILE"</em>, we prepare agile <strong>Day Zero Professionals</strong> through experiential learning, executive mentorship, and state-of-the-art incubation.
-            </p>
-            <ul class="gmba-pillar-list">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Terms 1 &amp; 2 Delivery (60 credits of foundation &amp; core management mastery)</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Executive mentorship by Fortune 500 business leaders and corporate titans</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Full on-campus Tier 4 UK student visa processing and IELTS academic training</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- University of South Wales Card -->
-          <div class="gmba-partner-card reveal">
-            <div class="gmba-partner-header">
-              <span class="gmba-partner-badge uk">Degree Awarding Body · United Kingdom</span>
-              <span style="font-size: 13px; color: #fbbf24; font-weight: 600;">100+ Years Legacy</span>
-            </div>
-            <h3 class="gmba-partner-title">University of South Wales, UK</h3>
-            <p class="gmba-partner-desc">
-              With a legacy spanning over a century, the University of South Wales (USW) is a modern, industry-focused public university accredited and recognized by the <strong>Privy Council</strong>. Programs meet the rigorous benchmarks of the <strong>Quality Assurance Agency (QAA), UK</strong>, ensuring world-class standards in teaching, innovation, and career outcomes across 120+ countries.
-            </p>
-            <ul class="gmba-pillar-list">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Terms 3 &amp; 4 Delivery in the UK (120 credits: Advanced Strategy &amp; Consultancy)</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Guaranteed 3–4 month UK corporate work placement and capstone dissertation</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Degree conferred directly by the University of South Wales with global validity</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== PROGRAM PATHWAY TIMELINE ==================== -->
-    <section class="section" id="pathway" style="background: rgba(8, 13, 26, 0.6); border-top: 1px solid rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-      <div class="container">
-        
-        <div class="section-heading reveal">
-          <div>
-            <span class="gmba-subhead">Structured 2-Year Roadmap</span>
-            <h2>The 60 + 120 Credit Pathway Mechanics<span class="period">.</span></h2>
-          </div>
-          <p>
-            A seamlessly synchronized transition from foundational business competence in Pune to global strategic leadership and corporate placement in the United Kingdom.
-          </p>
-        </div>
-
-        <div class="gmba-pathway-timeline reveal">
-          <!-- Step 1 -->
-          <div class="gmba-timeline-step">
-            <span class="gmba-step-tag india">Term 1</span>
-            <h3 class="gmba-step-title">Foundation &amp; Tech</h3>
-            <span class="gmba-step-location">Lexicon MILE, Pune</span>
-            <span class="gmba-step-credits">40 Credits</span>
-            <p class="gmba-step-desc">
-              8 core courses including OB, HR, Leadership, Marketing, Accounting, Financial Mgmt, and Evolving Tech. Induction Business Clinics &amp; IELTS immersion.
-            </p>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="gmba-timeline-step">
-            <span class="gmba-step-tag india">Term 2</span>
-            <h3 class="gmba-step-title">Advanced Core</h3>
-            <span class="gmba-step-location">Lexicon MILE, Pune</span>
-            <span class="gmba-step-credits">40 Credits</span>
-            <p class="gmba-step-desc">
-              Cross-Culture Learning, Ethics, Industrial Marketing, Corporate Finance, SAPM, PPC &amp; Operations. UK visa filing and pre-departure briefings.
-            </p>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="gmba-timeline-step active-uk">
-            <span class="gmba-step-tag uk">Term 3 (Spring)</span>
-            <h3 class="gmba-step-title">UK Strategic Core</h3>
-            <span class="gmba-step-location">USW, United Kingdom</span>
-            <span class="gmba-step-credits">60 UK Credits</span>
-            <p class="gmba-step-desc">
-              Global Strategy &amp; Decision-Making, Global Challenges, and Project Management &amp; Consultancy Skills delivered at the USW UK campus.
-            </p>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="gmba-timeline-step active-uk">
-            <span class="gmba-step-tag uk">Term 4 (Summer)</span>
-            <h3 class="gmba-step-title">Placement &amp; Capstone</h3>
-            <span class="gmba-step-location">USW &amp; UK Companies</span>
-            <span class="gmba-step-credits">60 UK Credits</span>
-            <p class="gmba-step-desc">
-              Hands-on 3–4 month Work Placement with UK corporations and an intensive Specialization-Specific Capstone Consulting Project.
-            </p>
-          </div>
-
-          <!-- Step 5 -->
-          <div class="gmba-timeline-step">
-            <span class="gmba-step-tag india">Term 5</span>
-            <h3 class="gmba-step-title">Executive Launch</h3>
-            <span class="gmba-step-location">Lexicon MILE / Corporate</span>
-            <span class="gmba-step-credits">Degree Conferred</span>
-            <p class="gmba-step-desc">
-              Industry Preparedness Project, corporate internship completion, master's dissertation defense, and executive placement placement cycles.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== USW UK SPECIALIZATIONS ==================== -->
-    <section class="section" id="specializations">
-      <div class="container">
-        
-        <div class="section-heading reveal">
-          <div>
-            <span class="gmba-subhead">High-Demand International Tracks</span>
-            <h2>5 Global MBA Specializations (Offered by USW, UK)<span class="period">.</span></h2>
-          </div>
-          <p>
-            Curated to address cross-border market shifts, international supply dynamics, and digital disruptions in multinational corporations.
-          </p>
-        </div>
-
-        <div class="gmba-spec-grid reveal">
-          <!-- Spec 1: Marketing -->
-          <div class="gmba-spec-card">
-            <div class="gmba-spec-img-wrap">
-              <img src="../../images/gmba/Marketing.webp" alt="Marketing Specialization" class="gmba-spec-img">
-            </div>
-            <div class="gmba-spec-body">
-              <h3 class="gmba-spec-title">Marketing</h3>
-              <p class="gmba-spec-text">
-                Master multinational consumer insights, Marketing 6.0 AI tools, international brand positioning, and digital omnichannel strategies.
-              </p>
-              <div class="gmba-spec-footer">
-                <span>Cert: Marketing 6.0 Tools</span>
-                <span>&rarr;</span>
+            <div style="margin-top: 30px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-wrap: wrap; gap: 24px; font-size: 13.5px; color: #94a3b8;">
+              <div>
+                <strong style="color: #fff;">Admissions Helpline:</strong>
+                <a href="tel:+919967427278" style="color: #38bdf8; text-decoration: none; margin-left: 6px;">+91 99674 27278</a> &bull;
+                <a href="tel:+918956059559" style="color: #38bdf8; text-decoration: none; margin-left: 6px;">+91 89560 59559</a>
+              </div>
+              <div>
+                <strong style="color: #fff;">Email Desk:</strong>
+                <a href="mailto:admissions@mile.education" style="color: #38bdf8; text-decoration: none; margin-left: 6px;">admissions@mile.education</a>
               </div>
             </div>
           </div>
-
-          <!-- Spec 2: Human Resources -->
-          <div class="gmba-spec-card">
-            <div class="gmba-spec-img-wrap">
-              <img src="../../images/gmba/Human-Resources.webp" alt="Human Resources Specialization" class="gmba-spec-img">
-            </div>
-            <div class="gmba-spec-body">
-              <h3 class="gmba-spec-title">Human Resources</h3>
-              <p class="gmba-spec-text">
-                Focus on international HR governance, global talent acquisition, multicultural cohort dynamics, and Neuro-Linguistic Programming (NLP).
-              </p>
-              <div class="gmba-spec-footer">
-                <span>Cert: Global Talent &amp; NLP</span>
-                <span>&rarr;</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Spec 3: Finance -->
-          <div class="gmba-spec-card">
-            <div class="gmba-spec-img-wrap">
-              <img src="../../images/gmba/Finance.webp" alt="Finance Specialization" class="gmba-spec-img">
-            </div>
-            <div class="gmba-spec-body">
-              <h3 class="gmba-spec-title">Finance</h3>
-              <p class="gmba-spec-text">
-                Navigate multinational corporate finance, foreign exchange exposure, global portfolio diversification, and financial risk mitigation.
-              </p>
-              <div class="gmba-spec-footer">
-                <span>Cert: Financial Risk Mgmt</span>
-                <span>&rarr;</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Spec 4: Entrepreneurship -->
-          <div class="gmba-spec-card">
-            <div class="gmba-spec-img-wrap">
-              <img src="../../images/gmba/Entrepreneurship.webp" alt="Entrepreneurship Specialization" class="gmba-spec-img">
-            </div>
-            <div class="gmba-spec-body">
-              <h3 class="gmba-spec-title">Entrepreneurship</h3>
-              <p class="gmba-spec-text">
-                Build and scale cross-border ventures through Business Model Canvas, incubator acceleration, pitching to UK VCs, and seed funding access.
-              </p>
-              <div class="gmba-spec-footer">
-                <span>Cert: Venture Incubation</span>
-                <span>&rarr;</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Spec 5: Supply Chain -->
-          <div class="gmba-spec-card">
-            <div class="gmba-spec-img-wrap">
-              <img src="../../images/gmba/Supply-Chain-Managements.webp" alt="Supply Chain Management Specialization" class="gmba-spec-img">
-            </div>
-            <div class="gmba-spec-body">
-              <h3 class="gmba-spec-title">Supply Chain Management</h3>
-              <p class="gmba-spec-text">
-                Engineer resilient global logistics corridors, strategic procurement, end-to-end supply visibility, and Industry 4.0 automation.
-              </p>
-              <div class="gmba-spec-footer">
-                <span>Cert: Logistics &amp; Analytics</span>
-                <span>&rarr;</span>
-              </div>
-            </div>
+          <div class="cta-image-wrapper">
+            <img src="../../images/06.Banner.png" alt="Lexicon MILE Pune Campus" loading="lazy">
+            <span class="cta-arrow" aria-hidden="true">↗</span>
           </div>
         </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== WHY MBA GLOBAL / SALIENT FEATURES ==================== -->
-    <section class="section" id="why-global-mba" style="background: rgba(8, 13, 26, 0.4); border-top: 1px solid rgba(255, 255, 255, 0.05);">
-      <div class="container">
-        
-        <div class="section-heading reveal">
-          <div>
-            <span class="gmba-subhead">Unrivaled Institutional Credibility</span>
-            <h2>Why MBA Global? Salient Program Features<span class="period">.</span></h2>
-          </div>
-          <p>
-            Now accepting applications for our <strong>8th Batch</strong> — backed by a proven track record of zero visa rejections, NHS healthcare benefits, and corporate masterclasses.
-          </p>
-        </div>
-
-        <div class="gmba-features-grid reveal">
-          <div class="gmba-feature-card">
-            <div class="gmba-feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h3 class="gmba-feature-title">0% Visa Rejection Record</h3>
-            <p class="gmba-feature-desc">
-              100% student visa grant success over 7 consecutive batches through thorough pre-visa documentation, compliance training, and official guidance.
-            </p>
-          </div>
-
-          <div class="gmba-feature-card">
-            <div class="gmba-feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-            </div>
-            <h3 class="gmba-feature-title">Free NHS Medical Cover</h3>
-            <p class="gmba-feature-desc">
-              Healthcare services in the UK are fully covered through the UK National Health Service (NHS) under the standard student immigration health surcharge.
-            </p>
-          </div>
-
-          <div class="gmba-feature-card">
-            <div class="gmba-feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <h3 class="gmba-feature-title">Distinguished Leaders</h3>
-            <p class="gmba-feature-desc">
-              Addresses and interactions by eminent luminaries including <strong>Dr. Kiran Bedi</strong>, <strong>Shri Prahlad Kakkar</strong>, and <strong>Lord Karan Bilimoria</strong>.
-            </p>
-          </div>
-
-          <div class="gmba-feature-card">
-            <div class="gmba-feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <h3 class="gmba-feature-title">UK English &amp; IELTS Prep</h3>
-            <p class="gmba-feature-desc">
-              Dedicated coaching for UK-stylised corporate English communication and comprehensive IELTS Academic preparation during your initial term.
-            </p>
-          </div>
-
-          <div class="gmba-feature-card">
-            <div class="gmba-feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            </div>
-            <h3 class="gmba-feature-title">MNC Mentorship Sessions</h3>
-            <p class="gmba-feature-desc">
-              Regular leadership masterclasses by corporate representatives from <strong>Deloitte</strong>, <strong>Tata</strong>, <strong>Sandvik</strong>, <strong>Arete</strong>, and <strong>Jubilant</strong>.
-            </p>
-          </div>
-
-          <div class="gmba-feature-card">
-            <div class="gmba-feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-            </div>
-            <h3 class="gmba-feature-title">Business &amp; Master Clinics</h3>
-            <p class="gmba-feature-desc">
-              Hands-on consulting practice solving live enterprise challenges during induction, placement readiness clinics, and entrepreneurship incubators.
-            </p>
-          </div>
-
-          <div class="gmba-feature-card">
-            <div class="gmba-feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-            </div>
-            <h3 class="gmba-feature-title">UK Direct Degree Award</h3>
-            <p class="gmba-feature-desc">
-              Upon successful completion of all 180 credits, your degree is conferred directly by the <strong>University of South Wales, UK</strong> under Privy Council accreditation.
-            </p>
-          </div>
-
-          <div class="gmba-feature-card">
-            <div class="gmba-feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
-            </div>
-            <h3 class="gmba-feature-title">RSR Global UK Partnership</h3>
-            <p class="gmba-feature-desc">
-              Strategic alliance with <strong>RSR Global (UK)</strong> assisting students with dedicated training, corporate placement, and career navigation in the UK.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== BUSINESS CLINICS & START-UP WORKSHOP ==================== -->
-    <div id="clinics"></div>
-    <section class="section" id="business-clinics">
-      <div class="container">
-        
-        <div class="section-heading reveal">
-          <div>
-            <span class="gmba-subhead">Experiential Industry Pedagogy</span>
-            <h2>Business Clinics &amp; Global Start-up Workshop<span class="period">.</span></h2>
-          </div>
-          <p>
-            Moving beyond conventional lecture halls: students act as junior business consultants solving real corporate problems under executive guidance.
-          </p>
-        </div>
-
-        <!-- Induction Clinic 1 -->
-        <h3 style="color: #fff; font-size: 20px; font-weight: 700; margin-top: 20px; margin-bottom: 8px;">
-          Induction Business Clinic · Foundation Series
-        </h3>
-        <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px;">
-          Applied academic theory for junior consulting, business fundamentals, and quantitative decisions.
-        </p>
-
-        <div class="gmba-clinics-grid reveal">
-          <div class="gmba-clinic-card">
-            <div class="gmba-clinic-img-wrap">
-              <img src="../../images/gmba/A-business-fundamentals.webp" alt="Business Fundamentals" class="gmba-clinic-img">
-            </div>
-            <h4 class="gmba-clinic-title">Business Fundamentals</h4>
-            <p class="gmba-clinic-desc">
-              Core applications of modern management and project execution with a live enterprise business use case.
-            </p>
-          </div>
-
-          <div class="gmba-clinic-card">
-            <div class="gmba-clinic-img-wrap">
-              <img src="../../images/gmba/b-economics.webp" alt="Applied Economics" class="gmba-clinic-img">
-            </div>
-            <h4 class="gmba-clinic-title">Applied Economics</h4>
-            <p class="gmba-clinic-desc">
-              Macro &amp; micro-economic fundamentals, monetary shifts, and global financial news analysis.
-            </p>
-          </div>
-
-          <div class="gmba-clinic-card">
-            <div class="gmba-clinic-img-wrap">
-              <img src="../../images/gmba/C-business-reserch.webp" alt="Business Research" class="gmba-clinic-img">
-            </div>
-            <h4 class="gmba-clinic-title">Business Research</h4>
-            <p class="gmba-clinic-desc">
-              Rigorous quantitative and qualitative research methodologies to guide boardroom decision-making.
-            </p>
-          </div>
-
-          <div class="gmba-clinic-card">
-            <div class="gmba-clinic-img-wrap">
-              <img src="../../images/gmba/d-statetics.webp" alt="Business Statistics" class="gmba-clinic-img">
-            </div>
-            <h4 class="gmba-clinic-title">Business Statistics</h4>
-            <p class="gmba-clinic-desc">
-              Empirical quantitative techniques designed to make emerging managers thoroughly number-friendly.
-            </p>
-          </div>
-        </div>
-
-        <!-- Induction Clinic 2 -->
-        <h3 style="color: #fff; font-size: 20px; font-weight: 700; margin-top: 40px; margin-bottom: 8px;">
-          Induction Business Clinic 2 · Emerging Frontiers
-        </h3>
-        <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px;">
-          Data-driven problem solving, geopolitical risk analysis, and artificial intelligence integration.
-        </p>
-
-        <div class="gmba-clinics-grid reveal">
-          <div class="gmba-clinic-card">
-            <div class="gmba-clinic-img-wrap">
-              <img src="../../images/gmba/A-business-analytics.webp" alt="Business Analytics" class="gmba-clinic-img">
-            </div>
-            <h4 class="gmba-clinic-title">Business Analytics</h4>
-            <p class="gmba-clinic-desc">
-              Build a data-driven intuition to extract insights and execute smarter, faster business strategies.
-            </p>
-          </div>
-
-          <div class="gmba-clinic-card">
-            <div class="gmba-clinic-img-wrap">
-              <img src="../../images/gmba/B-geopolitcs.webp" alt="Geopolitics and Global Risk" class="gmba-clinic-img">
-            </div>
-            <h4 class="gmba-clinic-title">Geopolitics &amp; Trade</h4>
-            <p class="gmba-clinic-desc">
-              Understand international power shifts, trade pacts, and how global dynamics reshape market risk.
-            </p>
-          </div>
-
-          <div class="gmba-clinic-card">
-            <div class="gmba-clinic-img-wrap">
-              <img src="../../images/gmba/c-ai-fundamentals.webp" alt="AI Fundamentals" class="gmba-clinic-img">
-            </div>
-            <h4 class="gmba-clinic-title">AI Fundamentals</h4>
-            <p class="gmba-clinic-desc">
-              Master essential Artificial Intelligence paradigms to remain competitive in future-ready business roles.
-            </p>
-          </div>
-
-          <div class="gmba-clinic-card">
-            <div class="gmba-clinic-img-wrap">
-              <img src="../../images/gmba/D-Basic-Accounting.webp" alt="Basic Accounting" class="gmba-clinic-img">
-            </div>
-            <h4 class="gmba-clinic-title">Managerial Accounting</h4>
-            <p class="gmba-clinic-desc">
-              Achieve financial balance-sheet clarity and cash flow stewardship indispensable for corporate leadership.
-            </p>
-          </div>
-        </div>
-
-        <!-- Start-up Workshop Details -->
-        <div class="gmba-admission-box reveal" style="margin-top: 40px;">
-          <div class="gmba-adm-col">
-            <h3>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              Global Start-up Workshop Pillars
-            </h3>
-            <div class="gmba-req-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div><strong>Foundational Components:</strong> Idea generation, market validation, Business Model Canvas, and financial forecasting.</div>
-            </div>
-            <div class="gmba-req-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div><strong>Mentorship &amp; Support:</strong> Guidance from Entrepreneurs-in-Residence, peer review clinics, and angel investor access.</div>
-            </div>
-            <div class="gmba-req-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div><strong>Practical Skills:</strong> High-impact elevator pitching, product prototyping, digital literacy, and strategic alliance building.</div>
-            </div>
-            <div class="gmba-req-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div><strong>Real-World Incubation:</strong> Venture plan competitions, seed funding, and corporate incubation acceleration.</div>
-            </div>
-          </div>
-
-          <div class="gmba-adm-col">
-            <h3>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-              Master Placement Clinics
-            </h3>
-            <div class="gmba-req-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div><strong>Placement Acumen Training:</strong> Executive presence, behavioral competencies, and mock assessment centers.</div>
-            </div>
-            <div class="gmba-req-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div><strong>Corporate Simulation:</strong> Advanced Excel modeling, debate rounds, case study competitions, and technical interviews.</div>
-            </div>
-            <div class="gmba-req-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div><strong>Diversity &amp; Inclusion:</strong> Cross-cultural team management, inclusive leadership, and global sensitivity.</div>
-            </div>
-            <div class="gmba-req-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div><strong>Industry Fitment &amp; Aptitude:</strong> Psychometric profiling, cognitive speed test preparation, and domain specialization drills.</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== CURRICULUM ACCORDION & TABS ==================== -->
-    <section class="section" id="curriculum">
-      <div class="container">
-        
-        <div class="section-heading reveal">
-          <div>
-            <span class="gmba-subhead">Comprehensive Academic Framework</span>
-            <h2>Trimester-Wise Program Details &amp; Syllabi<span class="period">.</span></h2>
-          </div>
-          <p>
-            Explore each term's detailed subject breakdown across Lexicon MILE Pune (Terms 1–2 &amp; 5) and the University of South Wales, UK (Terms 3–4).
-          </p>
-        </div>
-
-        <!-- Curriculum Nav Tabs -->
-        <div class="gmba-curriculum-tabs reveal">
-          <button class="gmba-tab-btn active" data-tab="term1">Term 1 · Lexicon MILE (40 Credits)</button>
-          <button class="gmba-tab-btn" data-tab="term2">Term 2 · Lexicon MILE (40 Credits)</button>
-          <button class="gmba-tab-btn" data-tab="term3">Term 3 · USW, UK (Spring Term)</button>
-          <button class="gmba-tab-btn" data-tab="term4">Term 4 · USW, UK (Summer Term)</button>
-          <button class="gmba-tab-btn" data-tab="term5">Term 5 · Capstone &amp; Launch</button>
-        </div>
-
-        <!-- Term 1 Panel -->
-        <div class="gmba-curriculum-panel active" id="term1">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
-            <h3 style="color: #fff; margin: 0; font-size: 19px;">Term 1: Delivered at Lexicon MILE, Pune</h3>
-            <span style="color: #10b981; font-weight: 700; background: rgba(16, 185, 129, 0.12); padding: 4px 12px; border-radius: 6px; font-size: 13px;">Total: 40 Credits</span>
-          </div>
-          <div style="overflow-x: auto;">
-            <table class="gmba-table">
-              <thead>
-                <tr>
-                  <th style="width: 80px;">Sr. No.</th>
-                  <th>Name of Subject</th>
-                  <th style="width: 150px; text-align: right;">Credits</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Organization Behaviour and Human Resource Management</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Leadership Skills</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Introduction to Marketing</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Future Trends in Marketing</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Managerial Accounting</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Financial Management</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>Operations Management</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>Evolving Technologies</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th colspan="2">Total Credentials Earned</th>
-                  <td style="text-align: right;">40 Credits</td>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-        </div>
-
-        <!-- Term 2 Panel -->
-        <div class="gmba-curriculum-panel" id="term2">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
-            <h3 style="color: #fff; margin: 0; font-size: 19px;">Term 2: Delivered at Lexicon MILE, Pune</h3>
-            <span style="color: #10b981; font-weight: 700; background: rgba(16, 185, 129, 0.12); padding: 4px 12px; border-radius: 6px; font-size: 13px;">Total: 40 Credits</span>
-          </div>
-          <div style="overflow-x: auto;">
-            <table class="gmba-table">
-              <thead>
-                <tr>
-                  <th style="width: 80px;">Sr. No.</th>
-                  <th>Name of Subject</th>
-                  <th style="width: 150px; text-align: right;">Credits</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Cross Culture Learning</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Business Ethics and Corporate Social Responsibility</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Industrial Marketing</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>International Marketing</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Corporate Finance</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Security Analysis and Portfolio Management (SAPM)</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>Production Planning &amp; Control (PPC)</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>Service in Operations</td>
-                  <td style="text-align: right;">5</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th colspan="2">Total Credentials Earned</th>
-                  <td style="text-align: right;">40 Credits</td>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-        </div>
-
-        <!-- Term 3 Panel -->
-        <div class="gmba-curriculum-panel" id="term3">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
-            <h3 style="color: #fff; margin: 0; font-size: 19px;">Term 3 (Spring Term): Delivered at University of South Wales, UK</h3>
-            <span style="color: #fbbf24; font-weight: 700; background: rgba(245, 158, 11, 0.15); padding: 4px 12px; border-radius: 6px; font-size: 13px;">60 UK Credits</span>
-          </div>
-          <p style="color: #cbd5e1; font-size: 14.5px; line-height: 1.6; margin-bottom: 20px;">
-            Students relocate to the UK for full-time academic immersion at the University of South Wales. Modules focus on transnational executive decision-making, global systemic risks, and cross-border consulting practices.
-          </p>
-          <div style="overflow-x: auto;">
-            <table class="gmba-table">
-              <thead>
-                <tr>
-                  <th style="width: 80px;">Sr. No.</th>
-                  <th>Core UK Module</th>
-                  <th style="width: 200px;">Delivery Format</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><strong>Global Strategy and Decision-Making</strong> &mdash; Navigating competitive disruption in international markets</td>
-                  <td>Lectures, Case Seminars</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td><strong>Global Challenges &amp; Geopolitics</strong> &mdash; Economic power shifts, climate risk, and global trade compliance</td>
-                  <td>Executive Workshops</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td><strong>Project Management and Consultancy Skills</strong> &mdash; Professional project execution framework for clients</td>
-                  <td>Live Client Practicum</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Term 4 Panel -->
-        <div class="gmba-curriculum-panel" id="term4">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
-            <h3 style="color: #fff; margin: 0; font-size: 19px;">Term 4 (Summer Term): Delivered at USW, UK &amp; British Industry</h3>
-            <span style="color: #fbbf24; font-weight: 700; background: rgba(245, 158, 11, 0.15); padding: 4px 12px; border-radius: 6px; font-size: 13px;">60 UK Credits</span>
-          </div>
-          <p style="color: #cbd5e1; font-size: 14.5px; line-height: 1.6; margin-bottom: 20px;">
-            The defining experiential semester: immersion inside UK corporate operations coupled with an intensive specialization capstone dissertation.
-          </p>
-          <div style="overflow-x: auto;">
-            <table class="gmba-table">
-              <thead>
-                <tr>
-                  <th style="width: 80px;">Sr. No.</th>
-                  <th>Capstone Element</th>
-                  <th>Corporate Outcome</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><strong>3–4 Month UK Work Placement</strong></td>
-                  <td>Direct corporate internship with British and multinational organizations across England &amp; Wales.</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td><strong>Specialization-Specific Capstone Project</strong></td>
-                  <td>Comprehensive strategic research dissertation demonstrating master's level domain authority.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Term 5 Panel -->
-        <div class="gmba-curriculum-panel" id="term5">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
-            <h3 style="color: #fff; margin: 0; font-size: 19px;">Term 5: Career Transition &amp; Executive Placement</h3>
-            <span style="color: #38bdf8; font-weight: 700; background: rgba(56, 189, 248, 0.15); padding: 4px 12px; border-radius: 6px; font-size: 13px;">Degree Completion</span>
-          </div>
-          <p style="color: #cbd5e1; font-size: 14.5px; line-height: 1.6; margin-bottom: 20px;">
-            Integration of UK international exposure into long-term corporate trajectory through industry preparedness, final dissertation evaluation, and multinational placement drives.
-          </p>
-          <ul class="gmba-pillar-list" style="max-width: 800px;">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Industry Preparedness Project:</strong> Corporate synthesis combining Indian market dynamism with UK international benchmarks.</span>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Final Master's Dissertation Defense:</strong> Evaluated in association with USW faculty advisors.</span>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Multinational Placement Drives:</strong> Direct recruitment pathways with top UK, European, and Indian MNCs.</span>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 10+ PROFESSIONAL CERTIFICATIONS ==================== -->
-    <section class="section" id="certifications" style="background: rgba(8, 13, 26, 0.4); border-top: 1px solid rgba(255, 255, 255, 0.05);">
-      <div class="container">
-        
-        <div class="section-heading reveal">
-          <div>
-            <span class="gmba-subhead">Value-Added Credentials</span>
-            <h2>10+ Micro-Credentials &amp; Specialization Certifications<span class="period">.</span></h2>
-          </div>
-          <p>
-            Embedded professional certifications earned alongside your MBA Global to ensure unmatched competitive advantage across global recruitment desks.
-          </p>
-        </div>
-
-        <div class="gmba-certs-grid reveal">
-          <div class="gmba-cert-card">
-            <div class="gmba-cert-icon-wrap">
-              <img src="../../images/gmba/risk.webp" alt="Financial Risk Management" class="gmba-cert-img">
-            </div>
-            <h4 class="gmba-cert-title">Financial Risk Management</h4>
-          </div>
-
-          <div class="gmba-cert-card">
-            <div class="gmba-cert-icon-wrap">
-              <img src="../../images/gmba/global.webp" alt="Global Talent Acquisition & NLP" class="gmba-cert-img">
-            </div>
-            <h4 class="gmba-cert-title">Global Talent &amp; NLP</h4>
-          </div>
-
-          <div class="gmba-cert-card">
-            <div class="gmba-cert-icon-wrap">
-              <img src="../../images/gmba/planning.webp" alt="Marketing 6.0 Tools" class="gmba-cert-img">
-            </div>
-            <h4 class="gmba-cert-title">Marketing 6.0 Tools</h4>
-          </div>
-
-          <div class="gmba-cert-card">
-            <div class="gmba-cert-icon-wrap">
-              <img src="../../images/gmba/Data-visual.webp" alt="Global Strategy & Emerging Markets" class="gmba-cert-img">
-            </div>
-            <h4 class="gmba-cert-title">Global Strategy &amp; Markets</h4>
-          </div>
-
-          <div class="gmba-cert-card">
-            <div class="gmba-cert-icon-wrap">
-              <img src="../../images/gmba/net-planning.webp" alt="Project Management & Consultancy" class="gmba-cert-img">
-            </div>
-            <h4 class="gmba-cert-title">Project Mgmt &amp; Consulting</h4>
-          </div>
-
-          <div class="gmba-cert-card">
-            <div class="gmba-cert-icon-wrap">
-              <img src="../../images/gmba/golbal-outage.webp" alt="Global Challenges" class="gmba-cert-img">
-            </div>
-            <h4 class="gmba-cert-title">Global Challenges &amp; Risk</h4>
-          </div>
-
-          <div class="gmba-cert-card">
-            <div class="gmba-cert-icon-wrap">
-              <img src="../../images/gmba/training.webp" alt="Placement Acumen" class="gmba-cert-img">
-            </div>
-            <h4 class="gmba-cert-title">Placement Acumen Mastery</h4>
-          </div>
-
-          <div class="gmba-cert-card">
-            <div class="gmba-cert-icon-wrap">
-              <img src="../../images/gmba/industry-4.webp" alt="Industry Preparedness" class="gmba-cert-img">
-            </div>
-            <h4 class="gmba-cert-title">Advanced Excel &amp; Mock Labs</h4>
-          </div>
-
-          <div class="gmba-cert-card">
-            <div class="gmba-cert-icon-wrap">
-              <img src="../../images/gmba/join-hands.webp" alt="Diversity and Inclusion" class="gmba-cert-img">
-            </div>
-            <h4 class="gmba-cert-title">Diversity &amp; Inclusion</h4>
-          </div>
-
-          <div class="gmba-cert-card">
-            <div class="gmba-cert-icon-wrap">
-              <img src="../../images/gmba/post-gard.webp" alt="Aptitude & Cognitive Speed" class="gmba-cert-img">
-            </div>
-            <h4 class="gmba-cert-title">Aptitude &amp; Cognitive Speed</h4>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== PROGRAM OBJECTIVES ==================== -->
-    <section class="section" id="objectives">
-      <div class="container">
-        
-        <div class="section-heading reveal">
-          <div>
-            <span class="gmba-subhead">Leadership Transformation</span>
-            <h2>Global MBA Program Objectives<span class="period">.</span></h2>
-          </div>
-          <p>
-            Graduates of the Global MBA program emerge equipped with four core pillars of global management competence.
-          </p>
-        </div>
-
-        <div class="gmba-obj-grid reveal">
-          <div class="gmba-obj-card">
-            <div class="gmba-obj-img-wrap">
-              <img src="../../images/gmba/global-leadership-skill.webp" alt="Global Leadership Skills" class="gmba-obj-img">
-            </div>
-            <div class="gmba-obj-content">
-              <h3 class="gmba-obj-title">Global Leadership Skills</h3>
-              <p class="gmba-obj-desc">
-                Leading teams and complex business organizations across diverse geographies, time zones, and regulatory environments.
-              </p>
-            </div>
-          </div>
-
-          <div class="gmba-obj-card">
-            <div class="gmba-obj-img-wrap">
-              <img src="../../images/gmba/team.webp" alt="Multicultural Adaptability" class="gmba-obj-img">
-            </div>
-            <div class="gmba-obj-content">
-              <h3 class="gmba-obj-title">Multicultural Adaptability</h3>
-              <p class="gmba-obj-desc">
-                Thriving within diverse work settings, bridging cultural nuances, and building high-trust international cohorts.
-              </p>
-            </div>
-          </div>
-
-          <div class="gmba-obj-card">
-            <div class="gmba-obj-img-wrap">
-              <img src="../../images/gmba/Lead-the-way.webp" alt="Strategic Decision-Making" class="gmba-obj-img">
-            </div>
-            <div class="gmba-obj-content">
-              <h3 class="gmba-obj-title">Strategic Decision-Making</h3>
-              <p class="gmba-obj-desc">
-                Navigating complex trade systems, currency volatility, and algorithmic disruption with data-driven strategic clarity.
-              </p>
-            </div>
-          </div>
-
-          <div class="gmba-obj-card">
-            <div class="gmba-obj-img-wrap">
-              <img src="../../images/gmba/career-accelerator.webp" alt="Career Acceleration" class="gmba-obj-img">
-            </div>
-            <div class="gmba-obj-content">
-              <h3 class="gmba-obj-title">Career Acceleration</h3>
-              <p class="gmba-obj-desc">
-                Immediate pathways into Fortune 500 multinationals, cross-border technology scale-ups, and prestigious consulting houses.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== STUDENT EXPERIENCE & PHOTO GALLERY ==================== -->
-    <section class="section" id="student-experience" style="background: rgba(8, 13, 26, 0.5); border-top: 1px solid rgba(255, 255, 255, 0.05);">
-      <div class="container">
-        
-        <div class="section-heading reveal">
-          <div>
-            <span class="gmba-subhead">Campus &amp; UK Immersions</span>
-            <h2>Student Experience · Life Across Borders<span class="period">.</span></h2>
-          </div>
-          <p>
-            The Global MBA is more than lectures — it is about shaping well-rounded global citizens who thrive anywhere on earth.
-          </p>
-        </div>
-
-        <!-- 4 Pillars of Experience -->
-        <div class="gmba-features-grid reveal" style="margin-bottom: 30px;">
-          <div class="gmba-feature-card">
-            <div class="gmba-feature-icon" style="background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.3); color: #fbbf24;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
-            <h4 class="gmba-feature-title">International Residencies</h4>
-            <p class="gmba-feature-desc">Study abroad modules and campus residency at the University of South Wales, UK.</p>
-          </div>
-
-          <div class="gmba-feature-card">
-            <div class="gmba-feature-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-            </div>
-            <h4 class="gmba-feature-title">Networking Opportunities</h4>
-            <p class="gmba-feature-desc">Collaborate with British executives, international faculty, and multinational mentors.</p>
-          </div>
-
-          <div class="gmba-feature-card">
-            <div class="gmba-feature-icon" style="background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3); color: #10b981;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <h4 class="gmba-feature-title">Global Conferences</h4>
-            <p class="gmba-feature-desc">Participate in European management summits, research forums, and business conclaves.</p>
-          </div>
-
-          <div class="gmba-feature-card">
-            <div class="gmba-feature-icon" style="background: rgba(168, 85, 247, 0.12); border-color: rgba(168, 85, 247, 0.3); color: #c084fc;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <h4 class="gmba-feature-title">Cross-Cultural Teams</h4>
-            <p class="gmba-feature-desc">Simulate real-world transnational team operations with peers from over 120 nations.</p>
-          </div>
-        </div>
-
-        <!-- Real Gallery Photos -->
-        <div class="gmba-gallery-grid reveal">
-          <div class="gmba-gallery-item">
-            <img src="../../images/gmba/global-mba-1-320x240.jpg" alt="MBA Global International Delegation" class="gmba-gallery-img" loading="lazy">
-          </div>
-          <div class="gmba-gallery-item">
-            <img src="../../images/gmba/global-mba-2.jpg" alt="MBA Global Classroom Conclave" class="gmba-gallery-img" loading="lazy">
-          </div>
-          <div class="gmba-gallery-item">
-            <img src="../../images/gmba/global-mba-4.jpg" alt="MBA Global Corporate Visit" class="gmba-gallery-img" loading="lazy">
-          </div>
-          <div class="gmba-gallery-item">
-            <img src="../../images/gmba/global-mba-9.jpg" alt="MBA Global Students Presentation" class="gmba-gallery-img" loading="lazy">
-          </div>
-          <div class="gmba-gallery-item">
-            <img src="../../images/gmba/global-mba-11.jpg" alt="MBA Global International Forum" class="gmba-gallery-img" loading="lazy">
-          </div>
-          <div class="gmba-gallery-item">
-            <img src="../../images/gmba/global-mba-25.jpg" alt="MBA Global Group Discussion" class="gmba-gallery-img" loading="lazy">
-          </div>
-          <div class="gmba-gallery-item">
-            <img src="../../images/gmba/global-mba-28.jpg" alt="MBA Global UK Campus Experience" class="gmba-gallery-img" loading="lazy">
-          </div>
-          <div class="gmba-gallery-item">
-            <img src="../../images/gmba/img-global-mba.webp" alt="MBA Global Leadership Summit" class="gmba-gallery-img" loading="lazy">
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== CAREER OUTCOMES ==================== -->
-    <section class="section" id="careers">
-      <div class="container">
-        
-        <div class="section-heading reveal">
-          <div>
-            <span class="gmba-subhead">High-Impact Global Horizons</span>
-            <h2>Careers After Global MBA Program<span class="period">.</span></h2>
-          </div>
-          <p>
-            Equipping graduates with domain authority and cross-cultural executive acumen for pivotal roles in global enterprises.
-          </p>
-        </div>
-
-        <div class="gmba-roles-grid reveal">
-          <div class="gmba-role-card">
-            <div class="gmba-role-icon">
-              <img src="../../images/gmba/digital-manager.webp" alt="Global Supply Chain Manager" class="gmba-role-img">
-            </div>
-            <div>
-              <h3 class="gmba-role-title">Global Supply Chain Manager</h3>
-              <span class="gmba-role-salary">UK &amp; Multinational Scale</span>
-            </div>
-          </div>
-
-          <div class="gmba-role-card">
-            <div class="gmba-role-icon">
-              <img src="../../images/gmba/Marketing.webp" alt="Multinational Marketing Manager" class="gmba-role-img">
-            </div>
-            <div>
-              <h3 class="gmba-role-title">Multinational Marketing Manager</h3>
-              <span class="gmba-role-salary">Global Brand Custodian</span>
-            </div>
-          </div>
-
-          <div class="gmba-role-card">
-            <div class="gmba-role-icon">
-              <img src="../../images/gmba/internal-hr-manager.webp" alt="International HR Manager" class="gmba-role-img">
-            </div>
-            <div>
-              <h3 class="gmba-role-title">International HR Manager</h3>
-              <span class="gmba-role-salary">Cross-Border People Lead</span>
-            </div>
-          </div>
-
-          <div class="gmba-role-card">
-            <div class="gmba-role-icon">
-              <img src="../../images/gmba/international-business-manager.webp" alt="Manager - International Business" class="gmba-role-img">
-            </div>
-            <div>
-              <h3 class="gmba-role-title">Manager &ndash; International Business</h3>
-              <span class="gmba-role-salary">Global Trade Expansion</span>
-            </div>
-          </div>
-
-          <div class="gmba-role-card">
-            <div class="gmba-role-icon">
-              <img src="../../images/gmba/project-manager.webp" alt="Project Manager" class="gmba-role-img">
-            </div>
-            <div>
-              <h3 class="gmba-role-title">Project / Engagement Manager</h3>
-              <span class="gmba-role-salary">Global Consulting Delivery</span>
-            </div>
-          </div>
-
-          <div class="gmba-role-card">
-            <div class="gmba-role-icon">
-              <img src="../../images/gmba/business-finance-manager.webp" alt="Manager Business Finance" class="gmba-role-img">
-            </div>
-            <div>
-              <h3 class="gmba-role-title">Manager &ndash; Business Finance</h3>
-              <span class="gmba-role-salary">Transnational Capital Planning</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== ADMISSION & UK PROGRESSION CRITERIA ==================== -->
-    <div id="admissions"></div>
-    <section class="section" id="admission-criteria" style="background: rgba(8, 13, 26, 0.4); border-top: 1px solid rgba(255, 255, 255, 0.05);">
-      <div class="container">
-        
-        <div class="section-heading reveal">
-          <div>
-            <span class="gmba-subhead">Admissions &amp; Progression</span>
-            <h2>Entry Requirements &amp; Progression to Term 3 (UK)<span class="period">.</span></h2>
-          </div>
-          <p>
-            At Lexicon MILE, our admission process goes beyond selection; it is a personalized roadmap to understand the leadership role you aspire to play.
-          </p>
-        </div>
-
-        <div class="gmba-admission-box reveal">
-          <!-- Left: Basic Eligibility -->
-          <div class="gmba-adm-col">
-            <h3>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-              Entry Requirements (India Enrolment)
-            </h3>
-            <div class="gmba-req-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div><strong>Academic Qualification:</strong> Bachelor's Degree in any discipline from a recognized university with a minimum aggregate of <strong>55%</strong>.</div>
-            </div>
-            <div class="gmba-req-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div><strong>Valid Passport:</strong> Mandatory at the time of admission for international student pathway registration.</div>
-            </div>
-            <div class="gmba-req-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div><strong>Selection Interview:</strong> Candidate profile evaluation, statement of intent, and personal interview with the admissions board.</div>
-            </div>
-            <div style="margin-top: 24px;">
-              <a href="../../global-mba-usw-uk.html" class="button button-outline" style="border-color: rgba(56, 189, 248, 0.4); color: #38bdf8; font-size: 13px;">
-                View Detailed Fee Schedule <span>&rarr;</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Right: Criteria to Progress to Term 3 (UK) -->
-          <div class="gmba-adm-col">
-            <h3>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-              Criteria to Progress to Term 3 (UK Campus)
-            </h3>
-            <div class="gmba-req-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div><strong>Pass Terms 1 &amp; 2:</strong> Successfully clear all 16 subjects across Term 1 and Term 2 (80 credentials) at Lexicon MILE.</div>
-            </div>
-            <div class="gmba-req-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div><strong>English Proficiency:</strong> IELTS Academic overall band score of <strong>6.0 with no band below 5.5</strong> (or USW-approved equivalent test).</div>
-            </div>
-            <div class="gmba-req-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div><strong>UK Student Visa:</strong> Successful grant of UK General Student Visa (Tier 4 / Student Route). Full documentation guidance provided on campus.</div>
-            </div>
-            <div style="margin-top: 24px;">
-              <a href="https://admissions.lexiconmile.com/" target="_blank" rel="noopener noreferrer" class="button" style="font-size: 13px;">
-                Start Your Online Application <span>↗</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== PLACEMENTS & RECRUITMENT PARTNERS ==================== -->
-    <section class="section" id="placements">
-      <div class="container">
-        
-        <div class="section-heading reveal">
-          <div>
-            <span class="gmba-subhead">Global Placement Track Record</span>
-            <h2>Average Placements: &#163;30,000 to &#163;40,000 (30 to 40 LPA)<span class="period">.</span></h2>
-          </div>
-          <p>
-            MBA Global graduates secure premier executive placements across United Kingdom corporations, European enterprises, and global capability centers.
-          </p>
-        </div>
-
-        <div class="gmba-recruiters-grid reveal">
-          <div class="gmba-recruiter-card">
-            <img src="../../images/gmba/h-simens.webp" alt="Siemens" class="gmba-recruiter-img" loading="lazy">
-          </div>
-          <div class="gmba-recruiter-card">
-            <img src="../../images/gmba/h-housekeep.webp" alt="Housekeep UK" class="gmba-recruiter-img" loading="lazy">
-          </div>
-          <div class="gmba-recruiter-card">
-            <img src="../../images/gmba/h-aviva.webp" alt="Aviva" class="gmba-recruiter-img" loading="lazy">
-          </div>
-          <div class="gmba-recruiter-card">
-            <img src="../../images/gmba/h-british-gas.webp" alt="British Gas" class="gmba-recruiter-img" loading="lazy">
-          </div>
-          <div class="gmba-recruiter-card">
-            <img src="../../images/gmba/h-lloydsbank.webp" alt="Lloyds Bank" class="gmba-recruiter-img" loading="lazy">
-          </div>
-          <div class="gmba-recruiter-card">
-            <img src="../../images/gmba/h-negd.webp" alt="NeGD" class="gmba-recruiter-img" loading="lazy">
-          </div>
-          <div class="gmba-recruiter-card">
-            <img src="../../images/gmba/h-tata.webp" alt="Tata Group" class="gmba-recruiter-img" loading="lazy">
-          </div>
-          <div class="gmba-recruiter-card">
-            <img src="../../images/gmba/h-vereigenmedia.webp" alt="Vereigen Media" class="gmba-recruiter-img" loading="lazy">
-          </div>
-          <div class="gmba-recruiter-card">
-            <img src="../../images/gmba/h-allstate.webp" alt="Allstate" class="gmba-recruiter-img" loading="lazy">
-          </div>
-          <div class="gmba-recruiter-card">
-            <img src="../../images/gmba/h-bnymellon.webp" alt="BNY Mellon" class="gmba-recruiter-img" loading="lazy">
-          </div>
-          <div class="gmba-recruiter-card">
-            <img src="../../images/gmba/h-eclerx.webp" alt="eClerx" class="gmba-recruiter-img" loading="lazy">
-          </div>
-          <div class="gmba-recruiter-card">
-            <img src="../../images/gmba/h-bt.webp" alt="British Telecom" class="gmba-recruiter-img" loading="lazy">
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== FREQUENTLY ASKED QUESTIONS ==================== -->
-    <div id="faq"></div>
-    <section class="section" id="faqs" style="background: rgba(8, 13, 26, 0.4); border-top: 1px solid rgba(255, 255, 255, 0.05);">
-      <div class="container">
-        
-        <div class="section-heading reveal">
-          <div>
-            <span class="gmba-subhead">Clarity &amp; Transparency</span>
-            <h2>Frequently Asked Questions<span class="period">.</span></h2>
-          </div>
-          <p>
-            Common questions regarding UK visas, credits, internships, degrees, and academic progression.
-          </p>
-        </div>
-
-        <div class="gmba-faq-list reveal">
-          <!-- FAQ 1 -->
-          <div class="gmba-faq-item open">
-            <div class="gmba-faq-header">
-              <span>Which institution officially awards the MBA Global degree?</span>
-              <span class="gmba-faq-icon">+</span>
-            </div>
-            <div class="gmba-faq-content">
-              Upon successful completion of the full program (60 credits at Lexicon MILE + 120 credits at USW), the degree is awarded directly by the <strong>University of South Wales, UK</strong>. USW is a recognized UK public university accredited under the Royal Privy Council and Quality Assurance Agency (QAA).
-            </div>
-          </div>
-
-          <!-- FAQ 2 -->
-          <div class="gmba-faq-item">
-            <div class="gmba-faq-header">
-              <span>What is the visa success record for the UK component?</span>
-              <span class="gmba-faq-icon">+</span>
-            </div>
-            <div class="gmba-faq-content">
-              Across 7 completed batches, Lexicon MILE has maintained a <strong>0% visa rejection rate</strong>. Students receive step-by-step documentation guidance, bank balance verification assistance, interview mock trials, and official CAS letters directly from the University of South Wales.
-            </div>
-          </div>
-
-          <!-- FAQ 3 -->
-          <div class="gmba-faq-item">
-            <div class="gmba-faq-header">
-              <span>Are healthcare services covered while studying in the UK?</span>
-              <span class="gmba-faq-icon">+</span>
-            </div>
-            <div class="gmba-faq-content">
-              Yes. As part of the UK student visa process, students pay the National Health Service (NHS) immigration health surcharge, which grants them comprehensive free medical treatment under the British National Health Service during their stay in the UK.
-            </div>
-          </div>
-
-          <!-- FAQ 4 -->
-          <div class="gmba-faq-item">
-            <div class="gmba-faq-header">
-              <span>What is the English language proficiency requirement?</span>
-              <span class="gmba-faq-icon">+</span>
-            </div>
-            <div class="gmba-faq-content">
-              To progress to Term 3 in the UK, students must attain an <strong>IELTS Academic overall band of 6.0 with no component band below 5.5</strong> (or an equivalent USW-recognized test). Intensive IELTS training and UK communication coaching are provided on campus during Term 1 at Lexicon MILE.
-            </div>
-          </div>
-
-          <!-- FAQ 5 -->
-          <div class="gmba-faq-item">
-            <div class="gmba-faq-header">
-              <span>How does the 3–4 month UK internship work?</span>
-              <span class="gmba-faq-icon">+</span>
-            </div>
-            <div class="gmba-faq-content">
-              During Term 4 in the UK, students undertake a mandatory 3 to 4 months corporate placement with companies in the UK or overseas, facilitated through USW's career network and our corporate partnership with RSR Global UK.
-            </div>
-          </div>
-        </div>
-
-        <!-- High-Impact Bottom Call to Action Strip -->
-        <div class="gmba-cta-strip reveal">
-          <div class="gmba-cta-text">
-            <h3>Advance to Leadership on the World Stage</h3>
-            <p>
-              Admissions are actively open for the <strong>MBA Global (USW, UK) Batch 2027–29</strong>. Secure your international management seat and embark on an unforgettable dual-country journey.
-            </p>
-          </div>
-          <div class="gmba-cta-buttons">
-            <a href="https://admissions.lexiconmile.com/" target="_blank" rel="noopener noreferrer" class="button">
-              Apply Online Now <span>↗</span>
-            </a>
-            <a href="../../contact.html" class="button button-outline">
-              Talk to Advisor <span>&rarr;</span>
-            </a>
-          </div>
-        </div>
-
+        <div class="cta-bottom"><span>THE FUTURE DOESN'T WAIT. NEITHER SHOULD YOU.</span><span>LEXICON MILE &bull; UNIVERSITY OF SOUTH WALES, UK</span></div>
       </div>
     </section>
 
@@ -2530,52 +2146,53 @@
 
   <div id="footer"></div>
 
-  <!-- Scripts -->
+  <!-- Shared Component Loader -->
   <script src="../../js/components.js"></script>
 
   <script>
-    function initGmbaInteractivity() {
-      // Tab switching for curriculum
-      const tabBtns = document.querySelectorAll('.gmba-tab-btn');
-      const panels = document.querySelectorAll('.gmba-curriculum-panel');
+    document.addEventListener('DOMContentLoaded', () => {
+      const accordionItems = document.querySelectorAll('.pgdm-accordion-item');
+      accordionItems.forEach(item => {
+        const header = item.querySelector('.pgdm-accordion-header');
+        if (!header) return;
+
+        header.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          accordionItems.forEach(other => {
+            other.classList.remove('active');
+            const h = other.querySelector('.pgdm-accordion-header');
+            if (h) h.setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isActive) {
+            item.classList.add('active');
+            header.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      const tabBtns = document.querySelectorAll('.curriculum-tab-btn');
+      const tabPanels = document.querySelectorAll('.curriculum-tab-content');
 
       tabBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-          const targetTab = this.getAttribute('data-tab');
+        btn.addEventListener('click', () => {
+          const targetTab = btn.getAttribute('data-tab');
+          tabBtns.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          tabPanels.forEach(p => p.classList.remove('active'));
 
-          tabBtns.forEach(b => b.classList.remove('active'));
-          panels.forEach(p => p.classList.remove('active'));
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
 
-          this.classList.add('active');
           const activePanel = document.getElementById(targetTab);
           if (activePanel) {
             activePanel.classList.add('active');
           }
         });
       });
-
-      // FAQ Accordion Toggle
-      const faqItems = document.querySelectorAll('.gmba-faq-item');
-      faqItems.forEach(item => {
-        const header = item.querySelector('.gmba-faq-header');
-        if (header) {
-          header.addEventListener('click', function() {
-            const isOpen = item.classList.contains('open');
-            faqItems.forEach(i => i.classList.remove('open'));
-            if (!isOpen) {
-              item.classList.add('open');
-            }
-          });
-        }
-      });
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initGmbaInteractivity);
-    } else {
-      initGmbaInteractivity();
-    }
+    });
   </script>
 </body>
 </html>
-
