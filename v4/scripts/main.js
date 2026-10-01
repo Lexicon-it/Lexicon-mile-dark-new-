@@ -49,8 +49,7 @@ const megaMenuData = {
   },
   'mba-global': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">MBA GLOBAL TRACKS</h4>
-               <a href="global-mba.html" class="mega-link" style="margin-bottom: 4px;">MBA Global Overview <span>↗</span></a>
-               <a href="global-mba-usw-uk.html" class="mega-link" style="margin-bottom: 4px;">MBA Global · USW, UK <span>↗</span></a>
+               <a href="global-mba.html" class="mega-link" style="margin-bottom: 4px;">MBA Global · USW, UK <span>↗</span></a>
                <a href="mba-in-business-analytics.html" class="mega-link" style="margin-bottom: 4px;">MBA Global · INTI, Malaysia <span>↗</span></a>
                <a href="sbs.html" class="mega-link">MBA Global · SBS Swiss Business School <span>↗</span></a>`,
     image: `<img src="images/global.jpg" alt="MBA Global" class="mega-image">`
