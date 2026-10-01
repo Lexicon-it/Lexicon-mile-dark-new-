@@ -13874,7 +13874,7 @@ a.mega-link-large {
 }
 
 /* ==========================================================================
-   PATCH 19: AI LAB TRIMESTERS 2-COLUMN GRID (2 in first row, 2 in second row, 2 in all rows)
+   PATCH 19: AI LAB TRIMESTERS 2-COLUMN GRID (2 PER ROW ON ALL SCREENS INCL. MOBILE)
    ========================================================================== */
 
 .trimesters-grid-4x2,
@@ -13892,6 +13892,8 @@ a.mega-link-large {
     min-height: auto;
     height: 100%;
     box-sizing: border-box;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 .trimesters-grid .award-item h3,
@@ -13904,8 +13906,62 @@ a.mega-link-large {
     .trimesters-grid-4x2,
     .trimesters-grid-2x2,
     .trimesters-grid {
-        grid-template-columns: 1fr !important;
-        gap: 1.5rem !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .trimesters-grid .award-item,
+    .trimesters-grid-4x2 .award-item,
+    .trimesters-grid-2x2 .award-item {
+        padding: 16px 12px !important;
+    }
+
+    .trimesters-grid .award-index {
+        font-size: 0.8rem !important;
+        margin-bottom: 6px !important;
+    }
+
+    .trimesters-grid .award-item h3 {
+        font-size: 1.05rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .trimesters-grid .award-subtitle {
+        font-size: 12.5px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .trimesters-grid .trimester-output {
+        font-size: 11.5px !important;
+        line-height: 1.35 !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .trimesters-grid-4x2,
+    .trimesters-grid-2x2,
+    .trimesters-grid {
+        gap: 8px !important;
+    }
+
+    .trimesters-grid .award-item,
+    .trimesters-grid-4x2 .award-item,
+    .trimesters-grid-2x2 .award-item {
+        padding: 12px 9px !important;
+    }
+
+    .trimesters-grid .award-item h3 {
+        font-size: 0.95rem !important;
+    }
+
+    .trimesters-grid .award-subtitle {
+        font-size: 11.5px !important;
+    }
+
+    .trimesters-grid .trimester-output {
+        font-size: 11px !important;
     }
 }
 
