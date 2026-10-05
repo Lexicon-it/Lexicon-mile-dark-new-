@@ -131,7 +131,7 @@
       right: 0;
       width: 65%;
       height: 100%;
-      background-image: url("../../images/courses/bba-program-banner.png');
+      background-image: url('../../images/activities/01-helix-accent.png');
       background-size: cover;
       background-position: center right;
       background-repeat: no-repeat;
@@ -1218,44 +1218,45 @@
       margin: 0;
     }
 
-    /* Placements Grid */
-    .recruiters-strip {
+    /* Recruiter Showcase - High Contrast White Elevated Cards (PGDM Standard) */
+    .recruiter-logos-row {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 16px;
-      margin-top: 36px;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 12px;
+      margin: 28px 0;
     }
 
-    .recruiter-box {
-      background: rgba(13, 20, 36, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    .recruiter-logo-box {
+      background: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.85);
       border-radius: 12px;
-      padding: 16px;
+      padding: 10px 16px;
+      height: 70px;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 70px;
-      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .recruiter-box:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(56, 189, 248, 0.35);
-      transform: scale(1.04);
+    .recruiter-logo-box:hover {
+      background: #ffffff;
+      border-color: rgba(255, 208, 102, 0.85);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45), 0 0 16px rgba(255, 208, 102, 0.25);
     }
 
-    .recruiter-box img {
-      max-height: 38px;
-      max-width: 90%;
+    .recruiter-logo-box img {
+      max-width: 100%;
+      max-height: 48px;
       object-fit: contain;
-      filter: grayscale(1) brightness(1.8);
-      opacity: 0.75;
-      transition: all 0.25s ease;
-    }
-
-    .recruiter-box:hover img {
       filter: none;
       opacity: 1;
+      transition: transform 0.25s ease;
+    }
+
+    .recruiter-logo-box:hover img {
+      transform: scale(1.06);
     }
 
     /* ==========================================================================
@@ -1328,109 +1329,7 @@
       color: #94a3b8;
     }
 
-    /* ==========================================================================
-       SECTION 11: BOTTOM FINAL CTA BANNER
-       ========================================================================== */
-    .cta-card {
-      background: linear-gradient(135deg, rgba(13, 20, 36, 0.95) 0%, rgba(6, 11, 20, 0.98) 100%);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      border-radius: 24px;
-      padding: 48px;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
-      margin-bottom: 70px;
-    }
 
-    .cta-inner {
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .cta-heading {
-      font-size: clamp(28px, 3.2vw, 42px);
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.15;
-      margin: 0 0 16px 0;
-    }
-
-    .cta-heading em {
-      font-family: 'Instrument Serif', Georgia, serif;
-      font-style: italic;
-      color: #38bdf8;
-    }
-
-    .cta-desc {
-      font-size: 15.5px;
-      line-height: 1.65;
-      color: #cbd5e1;
-      margin-bottom: 28px;
-      max-width: 580px;
-    }
-
-    .cta-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 24px;
-    }
-
-    .cta-contact-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      font-size: 13.5px;
-      color: #94a3b8;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .cta-image-wrapper {
-      position: relative;
-      border-radius: 16px;
-      overflow: hidden;
-      aspect-ratio: 4/3;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-    }
-
-    .cta-image-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .cta-arrow {
-      position: absolute;
-      bottom: 14px;
-      right: 14px;
-      background: #0b63ce;
-      color: #fff;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .cta-bottom {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 36px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      color: #64748b;
-      font-weight: 700;
-    }
 
     /* Modal Styles */
     .modal-backdrop {
@@ -1511,15 +1410,15 @@
       .pgdm-focus-grid { grid-template-columns: repeat(3, 1fr); }
       .pgdm-spec-grid { grid-template-columns: repeat(2, 1fr); }
       .sch-grid { grid-template-columns: repeat(2, 1fr); }
-      .recruiters-strip { grid-template-columns: repeat(4, 1fr); }
+      .recruiter-logos-row { grid-template-columns: repeat(4, 1fr); }
     }
 
     @media (max-width: 900px) {
       .pgdm-lab-grid { grid-template-columns: 1fr; }
       .curriculum-semester-grid { grid-template-columns: 1fr; }
-      .cta-inner { grid-template-columns: 1fr; }
       .pgdm-eligibility-grid { grid-template-columns: 1fr; }
       .bank-details-grid { grid-template-columns: 1fr; }
+      .recruiter-logos-row { grid-template-columns: repeat(3, 1fr); }
     }
 
     @media (max-width: 640px) {
@@ -1528,8 +1427,7 @@
       .pgdm-focus-grid { grid-template-columns: 1fr; }
       .pgdm-spec-grid { grid-template-columns: 1fr; }
       .sch-grid { grid-template-columns: 1fr; }
-      .recruiters-strip { grid-template-columns: repeat(2, 1fr); }
-      .cta-card { padding: 28px 20px; }
+      .recruiter-logos-row { grid-template-columns: repeat(2, 1fr); }
     }
 
     @keyframes fadeIn {
@@ -1773,7 +1671,7 @@
         <div class="pgdm-focus-grid">
           
           <div class="pgdm-focus-card reveal">
-            <img src="../../images/courses/course3.png" alt="Managerial Economics & Accounting" class="pgdm-focus-img" loading="lazy">
+            <img src="../../images/pgdm/BUSINESS-EXPERTISE.webp" alt="Managerial Economics & Accounting" class="pgdm-focus-img" loading="lazy">
             <div class="pgdm-focus-body">
               <span class="pgdm-focus-tag">FOUNDATION</span>
               <h4>Economics &amp; Accounting</h4>
@@ -1782,7 +1680,7 @@
           </div>
 
           <div class="pgdm-focus-card reveal">
-            <img src="../../images/courses/course4.png" alt="Applied Business Analytics & Tech" class="pgdm-focus-img" loading="lazy">
+            <img src="../../images/pgdm/DIGITAL-TRANSFORMATION.webp" alt="Applied Business Analytics & Tech" class="pgdm-focus-img" loading="lazy">
             <div class="pgdm-focus-body">
               <span class="pgdm-focus-tag">ANALYTICS</span>
               <h4>Analytics &amp; Tech Tools</h4>
@@ -1791,7 +1689,7 @@
           </div>
 
           <div class="pgdm-focus-card reveal">
-            <img src="../../images/courses/course1.png" alt="Brand Strategy & Modern Marketing" class="pgdm-focus-img" loading="lazy">
+            <img src="../../images/pgdm/ENTREPRENEURIAL-MINDSET.webp" alt="Brand Strategy & Modern Marketing" class="pgdm-focus-img" loading="lazy">
             <div class="pgdm-focus-body">
               <span class="pgdm-focus-tag">GROWTH</span>
               <h4>Brand Strategy &amp; Marketing</h4>
@@ -1800,7 +1698,7 @@
           </div>
 
           <div class="pgdm-focus-card reveal">
-            <img src="../../images/courses/course2.png" alt="Talent Strategy & Organizational Behavior" class="pgdm-focus-img" loading="lazy">
+            <img src="../../images/pgdm/INTERDISCIPLINARY-APPROACH.webp" alt="Talent Strategy & Organizational Behavior" class="pgdm-focus-img" loading="lazy">
             <div class="pgdm-focus-body">
               <span class="pgdm-focus-tag">PEOPLE</span>
               <h4>Talent &amp; HR Strategy</h4>
@@ -2667,19 +2565,28 @@
           </div>
         </div>
 
-        <div class="recruiters-strip reveal">
-          <div class="recruiter-box"><img src="../../images/recruiters/r1.jpg" alt="Recruiter Logo" loading="lazy"></div>
-          <div class="recruiter-box"><img src="../../images/recruiters/r2.jpg" alt="Recruiter Logo" loading="lazy"></div>
-          <div class="recruiter-box"><img src="../../images/recruiters/r3.jpg" alt="Recruiter Logo" loading="lazy"></div>
-          <div class="recruiter-box"><img src="../../images/recruiters/r4.jpg" alt="Recruiter Logo" loading="lazy"></div>
-          <div class="recruiter-box"><img src="../../images/recruiters/r5.jpg" alt="Recruiter Logo" loading="lazy"></div>
-          <div class="recruiter-box"><img src="../../images/recruiters/r6.jpg" alt="Recruiter Logo" loading="lazy"></div>
-          <div class="recruiter-box"><img src="../../images/recruiters/r7.jpg" alt="Recruiter Logo" loading="lazy"></div>
-          <div class="recruiter-box"><img src="../../images/recruiters/r8.jpg" alt="Recruiter Logo" loading="lazy"></div>
-          <div class="recruiter-box"><img src="../../images/recruiters/r9.jpg" alt="Recruiter Logo" loading="lazy"></div>
-          <div class="recruiter-box"><img src="../../images/recruiters/r10.jpg" alt="Recruiter Logo" loading="lazy"></div>
-          <div class="recruiter-box"><img src="../../images/recruiters/r11.jpg" alt="Recruiter Logo" loading="lazy"></div>
-          <div class="recruiter-box"><img src="../../images/recruiters/r12.jpg" alt="Recruiter Logo" loading="lazy"></div>
+        <!-- Recruiter Logos Grid -->
+        <div class="recruiter-logos-row reveal">
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_1_Apple-Logo-1.png" alt="Apple" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_7_IDFC.jpg" alt="IDFC FIRST Bank" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_5_LLOYDS-BANKNEG-1002x709-1.png" alt="Lloyds Bank" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_9_bharat.jpg" alt="Bharat Forge" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_10_8.jpg" alt="WNS Global" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_15_14.jpg" alt="Amazon" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_18_17.jpg" alt="LG Electronics" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_20_21.jpg" alt="CRISIL" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_24_28.jpg" alt="Poonawalla Fincorp" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_17_16.jpg" alt="Tata Group" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_30_44.jpg" alt="ICICI Securities" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_33_51.jpg" alt="Asian Paints" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_37_61.jpg" alt="KPMG" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_41_83.jpg" alt="Larsen & Toubro" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_45_93.jpg" alt="IBM" loading="lazy"></div>
+          <div class="recruiter-logo-box"><img src="../../images/recruiters/recruiter_50_115.jpg" alt="Videocon" loading="lazy"></div>
+        </div>
+
+        <div style="text-align: center; margin-top: 32px;">
+          <a href="../../our-recruiters.html" class="button button-outline">View All 500+ Recruiters <span>&rarr;</span></a>
         </div>
       </div>
     </section>
@@ -2754,47 +2661,40 @@
     </section>
 
     <!-- ==========================================================================
-         SECTION 12: BOTTOM FINAL CTA BANNER
+         SECTION 12: BOTTOM FINAL ASSISTANCE & ACTION BANNER (MATCHING PGDM STANDARD)
          ========================================================================== -->
-    <section class="section" id="apply">
-      <div class="container">
-        <div class="cta-card reveal">
-          <div class="cta-inner">
-            <div>
-              <p class="eyebrow" style="color: #38bdf8;">ADMISSIONS OPEN &middot; BATCH 2027&ndash;29</p>
-              <h2 class="cta-heading">Launch Your Career with an <em>Industry-Ready BBA.</em></h2>
-              <p class="cta-desc">
-                Gain SPPU degree accreditation, hands-on enterprise tools, live corporate internships, and an unbeatable career headstart at Lexicon MILE, Pune.
-              </p>
-              <div class="cta-actions">
-                <a href="https://admissions.lexiconmile.com/" target="_blank" rel="noopener noreferrer" class="helix-btn-primary">
-                  Start Online Application <span>&nearr;</span>
-                </a>
-                <button type="button" class="helix-btn-secondary" id="btn-open-brochure-bottom">
-                  Download Brochure <span>&darr;</span>
-                </button>
-              </div>
-              <div class="cta-contact-bar">
-                <div>
-                  <strong style="color: #fff;">Direct Admissions Hotline:</strong>
-                  <a href="tel:+919967427278" style="color: #38bdf8; text-decoration: none; margin-left: 6px;">+91 99674 27278</a>
-                </div>
-                <div>
-                  <strong style="color: #fff;">Email Desk:</strong>
-                  <a href="mailto:admissions@mile.education" style="color: #38bdf8; text-decoration: none; margin-left: 6px;">admissions@mile.education</a>
-                </div>
-              </div>
+    <section class="final-cta" id="admissions">
+      <div class="cta-orb" aria-hidden="true"></div>
+      <div class="container reveal">
+        <div class="cta-main-layout">
+          <div class="cta-text-content">
+            <p class="eyebrow"><span class="status-dot"></span>BBA ADMISSIONS OPEN 2027–29</p>
+            <h2>Start Your BBA<br>Journey <span>Today.</span></h2>
+            <p>Ready to Step In as a Day Zero Professional?<br>Secure your seat and early scholarship consideration.</p>
+            <div class="cta-buttons">
+              <a href="https://admissions.lexiconmile.com/" target="_blank" class="button">Apply Now <span>↗</span></a>
+              <button type="button" class="button button-outline" id="btn-open-brochure-bottom">Download Brochure <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px; vertical-align: text-bottom;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg></button>
             </div>
-            <div class="cta-image-wrapper">
-              <img src="../../images/06.Banner.png" alt="Lexicon MILE Campus" loading="lazy">
-              <span class="cta-arrow" aria-hidden="true">&nearr;</span>
+            
+            <!-- Direct Contact Row -->
+            <div style="margin-top: 30px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-wrap: wrap; gap: 24px; font-size: 13.5px; color: #94a3b8;">
+              <div>
+                <strong style="color: #fff;">Direct Admissions Hotline:</strong>
+                <a href="tel:+919967427278" style="color: #38bdf8; text-decoration: none; margin-left: 6px;">+91 99674 27278</a> &bull;
+                <a href="tel:+918956059559" style="color: #38bdf8; text-decoration: none; margin-left: 6px;">+91 89560 59559</a>
+              </div>
+              <div>
+                <strong style="color: #fff;">Email Desk:</strong>
+                <a href="mailto:admissions@mile.education" style="color: #38bdf8; text-decoration: none; margin-left: 6px;">admissions@mile.education</a>
+              </div>
             </div>
           </div>
-          <div class="cta-bottom">
-            <span>THE FUTURE DOESN'T WAIT. NEITHER SHOULD YOU.</span>
-            <span>LEXICON MILE &middot; PUNE</span>
+          <div class="cta-image-wrapper">
+            <img src="../../images/06.Banner.png" alt="Campus environment" loading="lazy">
+            <span class="cta-arrow" aria-hidden="true">↗</span>
           </div>
         </div>
+        <div class="cta-bottom"><span>THE FUTURE DOESN'T WAIT. NEITHER SHOULD YOU.</span><span>LEXICON MILE / PUNE</span></div>
       </div>
     </section>
 
@@ -2957,7 +2857,7 @@
 
       setTimeout(() => {
         const link = document.createElement('a');
-        link.href = 'mandatory-disclosure-lexicon-mile.html';
+        link.href = '../../mandatory-disclosure-lexicon-mile.html';
         link.target = '_blank';
         link.click();
       }, 1000);

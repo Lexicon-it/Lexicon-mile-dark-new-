@@ -11564,38 +11564,756 @@ a.mega-link-large {
     margin: 0;
 }
 
-/* Dedicated Visiting Industry Leaders Container */
-.visiting-faculty-container {
-    background: radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.08) 0%, transparent 60%), rgba(10, 16, 28, 0.65);
-    border: 1px solid rgba(245, 158, 11, 0.2);
-    border-radius: 24px;
-    padding: 42px 36px 45px;
-    margin: 60px 0 70px;
-    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.5);
+/* ==========================================================================
+   RESIDENT FACULTY BENTO SECTION (REFERENCE DESIGN SPEC)
+   ========================================================================== */
+.resident-faculty-showcase {
     position: relative;
+    padding: 35px 0 65px;
+    margin-bottom: 50px;
+    overflow: visible;
 }
 
+/* Atmospheric Glows & Dot Matrix (Pure CSS) */
+.resident-glow-ambient {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    opacity: 0.65;
+}
+
+.resident-glow-left {
+    top: -30px;
+    left: -40px;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(0, 180, 255, 0.14) 0%, rgba(0, 140, 255, 0.05) 50%, transparent 70%);
+}
+
+.resident-glow-right {
+    top: 40px;
+    right: -40px;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, rgba(56, 189, 248, 0.04) 50%, transparent 70%);
+}
+
+.resident-dots-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+    background-size: 26px 26px;
+    mask-image: radial-gradient(ellipse at 50% 30%, rgba(0, 0, 0, 0.8) 0%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 30%, rgba(0, 0, 0, 0.8) 0%, transparent 75%);
+    opacity: 0.55;
+}
+
+/* Center Section Header */
+.resident-section-header {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 46px;
+    position: relative;
+    z-index: 1;
+}
+
+.resident-header-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(6, 182, 212, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.35);
+    color: #38bdf8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 9999px;
+    box-shadow: 0 0 16px rgba(6, 182, 212, 0.16);
+    margin-bottom: 16px;
+}
+
+.resident-header-icon {
+    width: 14px;
+    height: 14px;
+    color: #38bdf8;
+}
+
+.resident-header-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 14px 0;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+.resident-cyan-text {
+    color: #00b4d8;
+    background: linear-gradient(135deg, #38bdf8 0%, #00b4d8 55%, #0284c7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.resident-header-desc {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: #94a3b8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Bento Grid Parent */
+.resident-bento-grid {
+    display: grid;
+    grid-template-columns: 370px 1fr;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+    align-items: stretch;
+}
+
+.resident-bento-grid.single-column-active {
+    grid-template-columns: 1fr;
+}
+
+/* Corner Pill Badge for Cards */
+.resident-corner-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    background: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.28);
+    color: #38bdf8;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    pointer-events: none;
+}
+
+/* Accent Bars */
+.resident-accent-bar {
+    background: #00b4d8;
+    border-radius: 2px;
+}
+
+.resident-accent-bar.featured-bar {
+    width: 34px;
+    height: 3px;
+    margin: 10px 0 18px 0;
+}
+
+.resident-accent-bar.compact-bar {
+    width: 26px;
+    height: 2px;
+    margin-top: 5px;
+}
+
+/* Status Indicator (Green Dot + Text) */
+.resident-status-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11.5px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.resident-status-dot {
+    width: 6.5px;
+    height: 6.5px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.85);
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+/* Tags in Cards */
+.faculty-tags-list .faculty-tag-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 7px;
+    color: #cbd5e1;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.faculty-tags-list .faculty-tag-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+.faculty-tag-icon {
+    width: 12px;
+    height: 12px;
+    color: #94a3b8;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   LEFT FEATURED CARD (Mr. Neeraj Sharma)
+   ========================================================================== */
+.faculty-card.resident-featured-card {
+    background: linear-gradient(165deg, rgba(8, 24, 48, 0.8) 0%, rgba(5, 14, 28, 0.95) 100%);
+    border: 1px solid rgba(0, 180, 255, 0.32);
+    border-radius: 22px;
+    padding: 32px 28px 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 180, 255, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faculty-card.resident-featured-card::before {
+    display: none;
+}
+
+.faculty-card.resident-featured-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 210, 255, 0.6);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.72), 0 0 35px rgba(0, 180, 255, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+/* Watermark */
+.featured-card-watermark {
+    position: absolute;
+    right: 12px;
+    top: 75px;
+    width: 155px;
+    height: 155px;
+    pointer-events: none;
+    opacity: 0.22;
+    z-index: 0;
+}
+
+/* Avatar */
+.featured-avatar-halo {
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    padding: 3px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 22px;
+    background: linear-gradient(135deg, #00d2ff, #0066cc);
+    box-shadow: 0 0 0 4px rgba(0, 210, 255, 0.22), 0 0 26px rgba(0, 210, 255, 0.35);
+    flex-shrink: 0;
+}
+
+.featured-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    background: #0b1329;
+}
+
+.faculty-name.featured-name {
+    font-size: 25px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 6px 0;
+    line-height: 1.25;
+    position: relative;
+    z-index: 1;
+}
+
+.faculty-role.featured-role {
+    font-size: 14px;
+    font-weight: 600;
+    color: #38bdf8;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.faculty-tags-list.featured-tags-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.faculty-tags-list.featured-tags-wrap .faculty-tag-item {
+    padding: 5px 12px;
+    font-size: 11.5px;
+}
+
+.faculty-bio.featured-bio {
+    font-size: 13px;
+    line-height: 1.65;
+    color: #94a3b8;
+    margin: 0 0 24px 0;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.faculty-card-footer.featured-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 18px;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.resident-view-profile-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 18px;
+    background: rgba(0, 180, 255, 0.08);
+    border: 1px solid rgba(0, 180, 255, 0.45);
+    border-radius: 9px;
+    color: #38bdf8;
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.resident-view-profile-btn .btn-arrow {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.25s ease;
+}
+
+.resident-view-profile-btn:hover {
+    background: rgba(0, 180, 255, 0.22);
+    border-color: #00d2ff;
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(0, 210, 255, 0.35);
+    transform: translateY(-1px);
+}
+
+.resident-view-profile-btn:hover .btn-arrow {
+    transform: translateX(3px);
+}
+
+/* ==========================================================================
+   RIGHT SUBGRID (4 COMPACT CARDS)
+   ========================================================================== */
+.resident-subgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.faculty-card.resident-compact-card {
+    background: linear-gradient(165deg, rgba(8, 20, 42, 0.72) 0%, rgba(5, 12, 26, 0.88) 100%);
+    border: 1px solid rgba(0, 180, 255, 0.24);
+    border-radius: 18px;
+    padding: 22px 20px 18px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45), 0 0 20px rgba(0, 180, 255, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faculty-card.resident-compact-card::before {
+    display: none;
+}
+
+.faculty-card.resident-compact-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 210, 255, 0.55);
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.65), 0 0 26px rgba(0, 180, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.compact-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+    padding-right: 90px;
+}
+
+.compact-avatar-halo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 2.5px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #00d2ff, #0066cc);
+    box-shadow: 0 0 0 3px rgba(0, 210, 255, 0.2), 0 0 16px rgba(0, 210, 255, 0.28);
+}
+
+.compact-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    background: #0b1329;
+}
+
+.compact-header-meta {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.faculty-name.compact-name {
+    font-size: 16.5px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 3px 0;
+    line-height: 1.25;
+}
+
+.faculty-role.compact-role {
+    font-size: 11.8px;
+    font-weight: 600;
+    color: #38bdf8;
+    margin: 0;
+    line-height: 1.35;
+}
+
+.faculty-tags-list.compact-tags-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 0 0 10px 0;
+}
+
+.faculty-tags-list.compact-tags-wrap .faculty-tag-item {
+    padding: 3.5px 8.5px;
+    font-size: 10.8px;
+}
+
+.faculty-bio.compact-bio {
+    font-size: 11.8px;
+    line-height: 1.55;
+    color: #94a3b8;
+    margin: 0 0 14px 0;
+    flex-grow: 1;
+}
+
+.faculty-card-footer.compact-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 12px;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.compact-footer .resident-view-profile-btn {
+    padding: 6px 13px;
+    font-size: 11.5px;
+    border-radius: 8px;
+}
+
+.resident-action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #38bdf8;
+    font-size: 11.8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.resident-action-link .link-arrow {
+    width: 13px;
+    height: 13px;
+    transition: transform 0.2s ease;
+}
+
+.resident-action-link:hover {
+    color: #ffffff;
+}
+
+.resident-action-link:hover .link-arrow {
+    transform: translateX(3px);
+}
+
+/* Resident Card Contact Link */
+.resident-contact-row {
+    margin: auto 0 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.resident-contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 10px;
+    background: rgba(14, 165, 233, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    border-radius: 8px;
+    font-size: 11.4px;
+    font-family: inherit;
+    font-weight: 500;
+    color: #bae6fd;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    max-width: 100%;
+}
+
+.resident-contact-link:hover {
+    background: rgba(14, 165, 233, 0.18);
+    border-color: rgba(56, 189, 248, 0.55);
+    color: #ffffff;
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.22);
+    transform: translateY(-1px);
+}
+
+.resident-email-icon {
+    width: 13.5px;
+    height: 13.5px;
+    flex-shrink: 0;
+    color: #38bdf8;
+    transition: transform 0.2s ease;
+}
+
+.resident-contact-link:hover .resident-email-icon {
+    transform: scale(1.12);
+}
+
+.resident-featured-card .resident-contact-row {
+    margin: auto 0 16px 0;
+}
+
+.resident-featured-card .resident-contact-link {
+    font-size: 12.4px;
+    padding: 6.5px 12px;
+}
+
+.resident-featured-card .resident-email-icon {
+    width: 14.5px;
+    height: 14.5px;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS FOR RESIDENT SECTION
+   ========================================================================== */
+@media (max-width: 1100px) {
+    .resident-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .faculty-card.resident-featured-card {
+        max-width: 100%;
+    }
+
+    .featured-avatar-halo {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 16px;
+    }
+
+    .faculty-name.featured-name {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .resident-header-title {
+        font-size: 30px;
+    }
+
+    .resident-header-desc {
+        font-size: 14px;
+    }
+
+    .resident-subgrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .compact-card-header {
+        padding-right: 0;
+        margin-top: 24px;
+    }
+
+    .resident-corner-badge {
+        top: 14px;
+        right: 14px;
+    }
+
+    .faculty-card.resident-featured-card {
+        padding: 24px 18px;
+    }
+
+    .faculty-card.resident-compact-card {
+        padding: 18px 16px;
+    }
+}
+
+/* ==========================================================================
+   VISITING INDUSTRY LEADERS BENTO SECTION (MATCHING RESIDENT SPEC)
+   ========================================================================== */
+.visiting-faculty-showcase {
+    position: relative;
+    padding: 35px 0 65px;
+    margin-bottom: 50px;
+    overflow: visible;
+}
+
+/* Atmospheric Glows & Dot Matrix (Pure CSS) */
+.visiting-glow-ambient {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    opacity: 0.65;
+}
+
+.visiting-glow-left {
+    top: -30px;
+    left: -40px;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(0, 180, 216, 0.14) 0%, rgba(11, 99, 206, 0.04) 50%, transparent 70%);
+}
+
+.visiting-glow-right {
+    top: 40px;
+    right: -40px;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(72, 202, 228, 0.12) 0%, rgba(0, 180, 216, 0.04) 50%, transparent 70%);
+}
+
+.visiting-dots-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+    background-size: 26px 26px;
+    mask-image: radial-gradient(ellipse at 50% 30%, rgba(0, 0, 0, 0.8) 0%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 30%, rgba(0, 0, 0, 0.8) 0%, transparent 75%);
+    opacity: 0.55;
+}
+
+/* Center Section Header */
+.visiting-section-header {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 36px;
+    position: relative;
+    z-index: 1;
+}
+
+.visiting-header-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    color: #fbbf24;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 9999px;
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.16);
+    margin-bottom: 16px;
+}
+
+.visiting-header-icon {
+    width: 14px;
+    height: 14px;
+    color: #fbbf24;
+}
+
+.visiting-header-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 14px 0;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+.visiting-cyan-text,
+.visiting-gold-text {
+    color: #00b4d8;
+    background: linear-gradient(135deg, #38bdf8 0%, #00b4d8 55%, #0284c7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.visiting-header-desc {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: #94a3b8;
+    max-width: 720px;
+    margin: 0 auto 30px;
+}
+
+/* Understanding Strip (3-Cards Highlight) */
 .visiting-understanding-strip {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    margin: 25px 0 35px;
+    margin: 0 auto 36px;
+    max-width: 1200px;
+    position: relative;
+    z-index: 1;
 }
 
 .visiting-understanding-card {
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(245, 158, 11, 0.14);
+    border: 1px solid rgba(0, 180, 255, 0.18);
     border-radius: 14px;
     padding: 18px 20px;
     display: flex;
     flex-direction: column;
     gap: 6px;
-    transition: transform 0.25s ease, border-color 0.25s ease;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    backdrop-filter: blur(10px);
 }
 
 .visiting-understanding-card:hover {
     transform: translateY(-3px);
-    border-color: rgba(245, 158, 11, 0.35);
+    border-color: rgba(0, 210, 255, 0.45);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 180, 255, 0.12);
 }
 
 .visiting-understanding-card-header {
@@ -11607,14 +12325,14 @@ a.mega-link-large {
 .visiting-understanding-icon {
     width: 22px;
     height: 22px;
-    color: #ffd066;
+    color: #38bdf8;
     flex-shrink: 0;
 }
 
 .visiting-understanding-card h4 {
     font-size: 14px;
     font-weight: 700;
-    color: #ffd066;
+    color: #38bdf8;
     margin: 0;
 }
 
@@ -11625,13 +12343,293 @@ a.mega-link-large {
     margin: 0;
 }
 
-@media (max-width: 1024px) {
+/* Bento Grid Parent */
+.visiting-bento-grid {
+    display: grid;
+    grid-template-columns: 370px 1fr;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+    align-items: stretch;
+}
+
+.visiting-bento-grid.single-column-active {
+    grid-template-columns: 1fr;
+}
+
+/* Visiting Cards Grid (Uniform Compact Cards) */
+.visiting-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 22px;
+    position: relative;
+    z-index: 1;
+    align-items: stretch;
+}
+
+@media (max-width: 768px) {
+    .visiting-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+
+/* Corner Pill Badge for Cards */
+.visiting-corner-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: #fbbf24;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    pointer-events: none;
+}
+
+/* Accent Bars */
+.visiting-accent-bar {
+    background: #00b4d8;
+    border-radius: 2px;
+}
+
+.visiting-accent-bar.featured-bar {
+    width: 34px;
+    height: 3px;
+    margin: 10px 0 18px 0;
+}
+
+.visiting-accent-bar.compact-bar {
+    width: 26px;
+    height: 2px;
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+   LEFT FEATURED CARD (Ms. Heena Gandhi)
+   ========================================================================== */
+.faculty-card.visiting-featured-card {
+    background: linear-gradient(165deg, rgba(8, 24, 48, 0.8) 0%, rgba(5, 14, 28, 0.95) 100%);
+    border: 1px solid rgba(0, 180, 255, 0.32);
+    border-radius: 22px;
+    padding: 32px 28px 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 180, 255, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faculty-card.visiting-featured-card::before {
+    display: none;
+}
+
+.faculty-card.visiting-featured-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 210, 255, 0.6);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.72), 0 0 35px rgba(0, 180, 255, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.visiting-featured-watermark {
+    position: absolute;
+    right: 12px;
+    top: 75px;
+    width: 155px;
+    height: 155px;
+    pointer-events: none;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.visiting-featured-avatar-halo {
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    padding: 3px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 22px;
+    background: linear-gradient(135deg, #00d2ff, #0066cc);
+    box-shadow: 0 0 0 4px rgba(0, 210, 255, 0.22), 0 0 26px rgba(0, 180, 255, 0.35);
+    flex-shrink: 0;
+}
+
+.faculty-role.visiting-featured-role {
+    font-size: 14px;
+    font-weight: 600;
+    color: #38bdf8;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.visiting-view-profile-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 18px;
+    background: rgba(0, 180, 255, 0.08);
+    border: 1px solid rgba(0, 180, 255, 0.45);
+    border-radius: 9px;
+    color: #38bdf8;
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.visiting-view-profile-btn .btn-arrow {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.25s ease;
+}
+
+.visiting-view-profile-btn:hover {
+    background: rgba(0, 180, 255, 0.22);
+    border-color: #00d2ff;
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(0, 210, 255, 0.35);
+    transform: translateY(-1px);
+}
+
+.visiting-view-profile-btn:hover .btn-arrow {
+    transform: translateX(3px);
+}
+
+/* ==========================================================================
+   RIGHT SUBGRID (4 COMPACT VISITING CARDS)
+   ========================================================================== */
+.visiting-subgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.faculty-card.visiting-compact-card {
+    background: linear-gradient(165deg, rgba(8, 20, 42, 0.72) 0%, rgba(5, 12, 26, 0.88) 100%);
+    border: 1px solid rgba(0, 180, 255, 0.24);
+    border-radius: 18px;
+    padding: 22px 20px 18px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45), 0 0 20px rgba(0, 180, 255, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faculty-card.visiting-compact-card::before {
+    display: none;
+}
+
+.faculty-card.visiting-compact-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 210, 255, 0.55);
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.65), 0 0 26px rgba(0, 180, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.visiting-compact-avatar-halo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 2.5px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #00d2ff, #0066cc);
+    box-shadow: 0 0 0 3px rgba(0, 210, 255, 0.2), 0 0 16px rgba(0, 210, 255, 0.28);
+}
+
+.faculty-role.visiting-compact-role {
+    font-size: 11.8px;
+    font-weight: 600;
+    color: #38bdf8;
+    margin: 0;
+    line-height: 1.35;
+}
+
+.visiting-action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #38bdf8;
+    font-size: 11.8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.visiting-action-link .link-arrow {
+    width: 13px;
+    height: 13px;
+    transition: transform 0.2s ease;
+}
+
+.visiting-action-link:hover {
+    color: #ffffff;
+}
+
+.visiting-action-link:hover .link-arrow {
+    transform: translateX(3px);
+}
+
+/* Responsive Visiting Section */
+@media (max-width: 1100px) {
+    .visiting-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .faculty-card.visiting-featured-card {
+        max-width: 100%;
+    }
+
+    .visiting-featured-avatar-halo {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 16px;
+    }
+
     .visiting-understanding-strip {
         grid-template-columns: 1fr;
     }
+}
 
-    .visiting-faculty-container {
-        padding: 30px 22px 35px;
+@media (max-width: 768px) {
+    .visiting-header-title {
+        font-size: 30px;
+    }
+
+    .visiting-header-desc {
+        font-size: 14px;
+    }
+
+    .visiting-subgrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .visiting-corner-badge {
+        top: 14px;
+        right: 14px;
+    }
+
+    .faculty-card.visiting-featured-card {
+        padding: 24px 18px;
+    }
+
+    .faculty-card.visiting-compact-card {
+        padding: 18px 16px;
     }
 }
 

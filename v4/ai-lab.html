@@ -73,6 +73,145 @@
         font-size: 11px !important;
       }
     }
+
+    /* HyperBuild Lab Infrastructure Showcase Styles */
+    .lab-infrastructure-section {
+      background: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.08) 0%, rgba(5, 7, 12, 0) 70%), #05070c;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .lab-bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .lab-bento-card {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      background: #090e1a;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .lab-bento-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(56, 189, 248, 0.45);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(56, 189, 248, 0.15);
+    }
+    .lab-bento-card.col-8 {
+      grid-column: span 8;
+    }
+    .lab-bento-card.col-4 {
+      grid-column: span 4;
+    }
+    .lab-bento-card.col-6 {
+      grid-column: span 6;
+    }
+    .lab-bento-media {
+      position: relative;
+      width: 100%;
+      height: 290px;
+      overflow: hidden;
+    }
+    .lab-bento-card.col-8 .lab-bento-media {
+      height: 340px;
+    }
+    .lab-bento-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .lab-bento-card:hover .lab-bento-media img {
+      transform: scale(1.04);
+    }
+    .lab-bento-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(5, 7, 12, 0.1) 0%, rgba(5, 7, 12, 0.45) 50%, rgba(5, 7, 12, 0.95) 100%);
+      pointer-events: none;
+    }
+    .lab-bento-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 14px;
+      background: rgba(5, 7, 12, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 50px;
+      color: #7dd3fc;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+    .lab-bento-badge .dot {
+      width: 6.5px;
+      height: 6.5px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 8px #38bdf8;
+    }
+    .lab-bento-info {
+      padding: 22px 24px;
+      background: #090e1a;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .lab-bento-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 8px 0;
+      line-height: 1.35;
+    }
+    .lab-bento-desc {
+      font-size: 13.5px;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin: 0 0 16px 0;
+      flex-grow: 1;
+    }
+    .lab-bento-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      padding-top: 12px;
+    }
+    .lab-spec-chip {
+      font-size: 11.5px;
+      padding: 3px 9px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 6px;
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+    @media (max-width: 992px) {
+      .lab-bento-card.col-8,
+      .lab-bento-card.col-4,
+      .lab-bento-card.col-6 {
+        grid-column: span 12;
+      }
+      .lab-bento-media,
+      .lab-bento-card.col-8 .lab-bento-media {
+        height: 240px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -82,7 +221,7 @@
     <!-- Hero Section -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="hero-slider" aria-hidden="true">
-        <div class="hero-slide active" style="background-image: url('images/ai-hyperbuild-lab.jpg'); background-position: right center; background-attachment: scroll; background-size: cover; filter: saturate(1.1) brightness(0.95);"></div>
+        <div class="hero-slide active" style="background-image: url('images/ai-lab/hyperbuild-master-overview.webp'); background-position: right center; background-attachment: scroll; background-size: cover; filter: saturate(1.1) brightness(0.95);"></div>
       </div>
       <div class="hero-shade" style="background: linear-gradient(90deg, rgba(5,7,12,0.98) 0%, rgba(5,7,12,0.94) 40%, rgba(5,7,12,0.45) 75%, rgba(5,7,12,0.15) 100%), linear-gradient(0deg, #05070c 0%, transparent 35%, rgba(5,7,12,0.6) 100%);"></div>
       <span class="hero-coordinate">India's First AI-Powered PGDM</span>
@@ -127,7 +266,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;">
           <article class="life-card reveal">
             <div class="life-image" style="height: 220px; margin-bottom: 0.5rem;">
-              <img src="images/ai-lab/solve-problems.jpg" alt="Solve Real Business Problems" loading="lazy">
+              <img src="images/ai-lab/hyperbuild-dell-workstations.webp" alt="Solve Real Business Problems on Dual Dell Workstations" loading="lazy">
             </div>
             <h3>Solve Real Business Problems</h3>
             <p>Using AI to address actual challenges faced by businesses. Not hypothetical case studies, but live projects with measurable impact.</p>
@@ -141,24 +280,24 @@
           </article>
           <article class="life-card reveal" style="transition-delay: 200ms;">
             <div class="life-image" style="height: 220px; margin-bottom: 0.5rem;">
-              <img src="images/ai-lab/deployable-outputs.jpg" alt="Produce Deployable Outputs" loading="lazy">
+              <img src="images/ai-lab/hyperbuild-workstation-pods.webp" alt="Produce Deployable Outputs in AI Lab" loading="lazy">
             </div>
             <h3>Produce Deployable Outputs</h3>
             <p>Create AI applications, dashboards, and automated workflows that are ready to be deployed in live business environments.</p>
           </article>
           <article class="life-card reveal">
             <div class="life-image" style="height: 220px; margin-bottom: 0.5rem;">
-              <img src="images/collaboration.jpg" alt="Industry Projects & Revenue" loading="lazy">
+              <img src="images/ai-lab/hyperbuild-think-tank-wall.webp" alt="Industry Projects & Revenue in Think Tank" loading="lazy">
             </div>
             <h3>Industry Projects & Revenue</h3>
             <p>Work on live projects from MSMEs, startups, and ecosystem companies. Build solutions that get deployed and earn while learning.</p>
           </article>
           <article class="life-card reveal" style="transition-delay: 100ms;">
             <div class="life-image" style="height: 220px; margin-bottom: 0.5rem;">
-              <img src="images/guest-speakers.jpg" alt="No Theory Exams" loading="lazy">
+              <img src="images/ai-lab/hyperbuild-ideation-room.webp" alt="Ideation Room & Collaborative Prototyping" loading="lazy">
             </div>
             <h3>No Theory Exams</h3>
-            <p>Assessed on working prototypes, business impact, and presentations. Build capability, not memorize theory.</p>
+            <p>Assessed on working prototypes, business impact, and presentations in our collaborative Ideation Pods.</p>
           </article>
           <article class="life-card reveal" style="transition-delay: 200ms;">
             <div class="life-image" style="height: 220px; margin-bottom: 0.5rem;">
@@ -168,6 +307,106 @@
             <p>Recruiters don't ask for certificates. They ask: "What have you built?" Show them your AI portfolio.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION: REAL PHYSICAL LAB ARCHITECTURE SHOWCASE ============ -->
+    <section class="section lab-infrastructure-section" id="lab-spaces">
+      <div class="container">
+        
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">PHYSICAL LAB ARCHITECTURE</p>
+            <h2>Inside The HyperBuild AI Lab Facility<span class="period">.</span></h2>
+          </div>
+          <p>A purpose-engineered, high-performance computing sandbox and ideation ecosystem established right on the Lexicon MILE campus for daily enterprise AI sprints, boardroom modeling, and prototype deployment.</p>
+        </div>
+
+        <div class="lab-bento-grid">
+          
+          <!-- Bento 1: Master Computing Floor (Col-8) -->
+          <div class="lab-bento-card col-8 reveal">
+            <div class="lab-bento-media">
+              <img src="images/ai-lab/hyperbuild-master-overview.webp" alt="HyperBuild Master Computing Floor & Workstations" loading="lazy">
+              <div class="lab-bento-overlay"></div>
+              <span class="lab-bento-badge">
+                <span class="dot"></span> MASTER COMPUTING CLUSTER
+              </span>
+            </div>
+            <div class="lab-bento-info">
+              <h3 class="lab-bento-title">High-Performance AI Workstations &amp; Decision Pods</h3>
+              <p class="lab-bento-desc">Fully configured student pods equipped with dedicated GPU computing, dual Dell high-resolution displays, and high-speed local network clusters enabling students to run complex simulations without latency.</p>
+              <div class="lab-bento-specs">
+                <span class="lab-spec-chip">5 Hours Daily Access</span>
+                <span class="lab-spec-chip">Dual-Screen Desks</span>
+                <span class="lab-spec-chip">Ergonomic Mesh Seating</span>
+                <span class="lab-spec-chip">High-Speed Fiber Network</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 2: Ideation Room & Think Tank (Col-4) -->
+          <div class="lab-bento-card col-4 reveal">
+            <div class="lab-bento-media">
+              <img src="images/ai-lab/hyperbuild-ideation-room.webp" alt="HyperBuild Ideation Room and Collaborative Think Tank" loading="lazy">
+              <div class="lab-bento-overlay"></div>
+              <span class="lab-bento-badge">
+                <span class="dot"></span> THINK TANK POD
+              </span>
+            </div>
+            <div class="lab-bento-info">
+              <h3 class="lab-bento-title">Ideation Room &amp; Problem Definition Booth</h3>
+              <p class="lab-bento-desc">A glass-partitioned collaborative space designed for brainstorming, prompt-engineering sprints, and testing business logic across Gemini, Claude, OpenAI, and Microsoft Copilot Studio.</p>
+              <div class="lab-bento-specs">
+                <span class="lab-spec-chip">Glass-Partitioned</span>
+                <span class="lab-spec-chip">Prompt Engineering Hub</span>
+                <span class="lab-spec-chip">Multimodal Sandboxes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 3: Tech Word Cloud Wall (Col-6) -->
+          <div class="lab-bento-card col-6 reveal">
+            <div class="lab-bento-media">
+              <img src="images/ai-lab/hyperbuild-think-tank-wall.webp" alt="Technology and Skills Innovation Wall" loading="lazy">
+              <div class="lab-bento-overlay"></div>
+              <span class="lab-bento-badge">
+                <span class="dot"></span> DOMAIN INTELLIGENCE
+              </span>
+            </div>
+            <div class="lab-bento-info">
+              <h3 class="lab-bento-title">20+ Enterprise AI Competency Domains</h3>
+              <p class="lab-bento-desc">Surrounded by interactive learning frameworks covering Machine Learning, Robotics, Cyber Security, Decision Intelligence, and Business Analytics — keeping scholars focused on real commercial applications.</p>
+              <div class="lab-bento-specs">
+                <span class="lab-spec-chip">Critical Thinking</span>
+                <span class="lab-spec-chip">NLP &amp; Predictive Modeling</span>
+                <span class="lab-spec-chip">Process Automation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 4: Executive Presentation Suite (Col-6) -->
+          <div class="lab-bento-card col-6 reveal">
+            <div class="lab-bento-media">
+              <img src="images/ai-lab/hyperbuild-workstation-pods.webp" alt="AI Decision Models and Presentation Suite" loading="lazy">
+              <div class="lab-bento-overlay"></div>
+              <span class="lab-bento-badge">
+                <span class="dot"></span> BOARDROOM PROTOTYPING
+              </span>
+            </div>
+            <div class="lab-bento-info">
+              <h3 class="lab-bento-title">AI Decision &amp; Boardroom Demo Suites</h3>
+              <p class="lab-bento-desc">Equipped with centralized presentation monitors and presentation easels where student teams pitch live AI MVPs, operational dashboards, and client automation workflows directly to industry juries.</p>
+              <div class="lab-bento-specs">
+                <span class="lab-spec-chip">Live Screen Casting</span>
+                <span class="lab-spec-chip">Industry Jury Demos</span>
+                <span class="lab-spec-chip">Client Project Defense</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
 

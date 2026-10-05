@@ -95,10 +95,10 @@
         <div class="faculty-controls-panel reveal">
           <div class="faculty-filter-tabs" role="tablist" aria-label="Faculty Categories">
             <button class="faculty-tab-btn active" data-filter="all" role="tab" aria-selected="true">
-              All Sections <span class="faculty-tab-badge" id="count-all">10</span>
+              All Sections <span class="faculty-tab-badge" id="count-all">9</span>
             </button>
             <button class="faculty-tab-btn" data-filter="resident" role="tab" aria-selected="false">
-              Resident Faculty <span class="faculty-tab-badge" id="count-resident">5</span>
+              Resident Faculty <span class="faculty-tab-badge" id="count-resident">4</span>
             </button>
             <button class="faculty-tab-btn" data-filter="visiting" role="tab" aria-selected="false">
               Visiting Industry Leaders <span class="faculty-tab-badge" id="count-visiting">5</span>
@@ -124,146 +124,278 @@
         <!-- ==========================================================================
              SECTION 1: RESIDENT FACULTY
              ========================================================================== -->
-        <section class="faculty-section reveal" id="resident-section">
-          <div class="faculty-section-head">
-            <span class="eyebrow eyebrow-resident">ACADEMIC FOUNDATION &middot; SCHOLARSHIP</span>
-            <h2>Resident Faculty<span class="period">.</span></h2>
-            <p>Our resident faculty form the academic bedrock at Lexicon MILE. Combining doctoral scholarship, active research, and academic leadership across core disciplines, they deliver rigorous foundational management theory, mentor student cohorts daily, and guide Day Zero career readiness.</p>
+        <section class="resident-faculty-showcase reveal" id="resident-section">
+          <!-- Atmospheric Glows & Dot Grid Canvas (Pure CSS) -->
+          <div class="resident-glow-ambient resident-glow-left" aria-hidden="true"></div>
+          <div class="resident-glow-ambient resident-glow-right" aria-hidden="true"></div>
+          <div class="resident-dots-canvas" aria-hidden="true"></div>
+
+          <!-- Section Head -->
+          <div class="resident-section-header">
+            <div class="resident-header-pill">
+              <svg class="resident-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              <span>RESIDENT FACULTY</span>
+            </div>
+            <h2 class="resident-header-title">Our <span class="resident-cyan-text">Resident</span> Faculty</h2>
+            <p class="resident-header-desc">Experienced academicians and industry mentors guiding students with real-world insights, global exposure, and career-focused learning.</p>
           </div>
 
-          <div class="faculty-cards-grid" id="resident-grid">
+          <!-- Bento Grid Container -->
+          <div class="resident-bento-grid" id="resident-grid">
 
-            <!-- 1. Mr. Neeraj Sharma -->
-            <article class="faculty-card resident" data-category="resident" data-keywords="neeraj sharma institute director leadership strategic governance administration management">
-              <div class="faculty-card-top">
-                <div class="faculty-avatar-container">
-                  <img src="images/trustees/neeraj-sharma.webp" alt="Mr. Neeraj Sharma" class="faculty-avatar-img" loading="lazy">
-                </div>
-                <span class="faculty-badge badge-resident">Resident Faculty</span>
+            <!-- 1. Mr. Neeraj Sharma (Featured Card) -->
+            <article class="faculty-card resident resident-featured-card" data-category="resident" data-keywords="neeraj sharma institute director leadership strategic governance administration management">
+              <!-- Watermark Graphic Motif (Lexicon Brand Motif) -->
+              <div class="featured-card-watermark" aria-hidden="true">
+                <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="20" fill="#00b4d8" fill-opacity="0.35"/>
+                  <circle cx="110" cy="50" r="20" fill="#00b4d8" fill-opacity="0.45"/>
+                  <circle cx="50" cy="110" r="20" fill="#00b4d8" fill-opacity="0.25"/>
+                  <circle cx="110" cy="110" r="20" fill="#00b4d8" fill-opacity="0.5"/>
+                  <path d="M50 50 Q80 50 110 50" stroke="#00b4d8" stroke-width="18" stroke-linecap="round" stroke-opacity="0.35"/>
+                  <path d="M110 50 Q110 80 110 110" stroke="#00b4d8" stroke-width="18" stroke-linecap="round" stroke-opacity="0.45"/>
+                  <path d="M50 50 Q50 80 50 110" stroke="#00b4d8" stroke-width="18" stroke-linecap="round" stroke-opacity="0.25"/>
+                </svg>
               </div>
-              <h3 class="faculty-name">Mr. Neeraj Sharma</h3>
-              <p class="faculty-role">Institute Director, Lexicon MILE</p>
-              <div class="faculty-tags-list">
-                <span class="faculty-tag-item">Institutional Leadership</span>
-                <span class="faculty-tag-item">Strategic Management</span>
-                <span class="faculty-tag-item">Governance</span>
+
+              <!-- Top Right Pill Tag -->
+              <span class="resident-corner-badge">RESIDENT FACULTY</span>
+
+              <!-- Featured Avatar with Cyan Glow -->
+              <div class="featured-avatar-halo">
+                <img src="images/faculty/neeraj-sharma.webp" alt="Mr. Neeraj Sharma" class="featured-avatar-img" loading="lazy">
               </div>
-              <p class="faculty-bio">Educational visionary steering Lexicon MILE with over two decades of transformative leadership in higher education, institutional strategy, industry partnerships, and building Day Zero Corporate Professionals.</p>
-              <div class="faculty-card-footer">
-                <div class="faculty-mentorship-note">
-                  <span></span> Executive Mentorship
+
+              <!-- Name & Title -->
+              <h3 class="faculty-name featured-name">Mr. Neeraj Sharma</h3>
+              <p class="faculty-role featured-role">Institute Director, Lexicon MILE</p>
+              <div class="resident-accent-bar featured-bar"></div>
+
+              <!-- Tags / Chips -->
+              <div class="faculty-tags-list featured-tags-wrap">
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="21" x2="21" y2="21"></line><line x1="3" y1="10" x2="21" y2="10"></line><polyline points="5 6 12 3 19 6"></polyline><line x1="4" y1="10" x2="4" y2="21"></line><line x1="20" y1="10" x2="20" y2="21"></line><line x1="8" y1="14" x2="8" y2="17"></line><line x1="12" y1="14" x2="12" y2="17"></line><line x1="16" y1="14" x2="16" y2="17"></line></svg>
+                  Institutional Leadership
+                </span>
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                  Strategic Management
+                </span>
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  Governance
+                </span>
+              </div>
+
+              <!-- Bio -->
+              <p class="faculty-bio featured-bio">Educational visionary steering Lexicon MILE with over two decades of transformative leadership in higher education, institutional strategy, industry partnerships, and building Day Zero Corporate Professionals.</p>
+
+              <!-- Official Contact Link -->
+              <div class="resident-contact-row">
+                <a href="mailto:neeraj.sharma@mile.education" class="resident-contact-link" title="Contact Mr. Neeraj Sharma">
+                  <svg class="resident-email-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                  <span>neeraj.sharma@mile.education</span>
+                </a>
+              </div>
+
+              <!-- Footer -->
+              <div class="faculty-card-footer featured-footer">
+                <div class="resident-status-item">
+                  <span class="resident-status-dot"></span>
+                  <span class="resident-status-text">Executive Mentorship</span>
                 </div>
-                <a href="about-lexicon.html" class="faculty-connect-btn">View Profile <span>&rarr;</span></a>
+                <a href="vice-chairmans-desk.html" class="resident-view-profile-btn">
+                  <span>Visit Profile</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
               </div>
             </article>
 
-            <!-- 2. Dr. Raju Varghese -->
-            <article class="faculty-card resident" data-category="resident" data-keywords="dr raju varghese director global programs international campus cross border dubai malaysia immersion">
-              <div class="faculty-card-top">
-                <div class="faculty-avatar-container">
-                  <img src="images/faculty/raju-varghese.webp" alt="Dr. Raju Varghese" class="faculty-avatar-img" loading="lazy">
-                </div>
-                <span class="faculty-badge badge-resident">Resident Faculty</span>
-              </div>
-              <h3 class="faculty-name">Dr. Raju Varghese</h3>
-              <p class="faculty-role">Director - Global Programs &amp; International Campus</p>
-              <div class="faculty-tags-list">
-                <span class="faculty-tag-item">Global Immersions</span>
-                <span class="faculty-tag-item">International Business</span>
-                <span class="faculty-tag-item">Academic Alliances</span>
-              </div>
-              <p class="faculty-bio">Directs Lexicon MILE's international programs across Malaysia and Dubai, driving cross-border university collaborations, international internships, and global market readiness for management cohorts.</p>
-              <div class="faculty-card-footer">
-                <div class="faculty-mentorship-note">
-                  <span></span> Global Immersion Lead
-                </div>
-                <a href="global-mba.html" class="faculty-connect-btn">Global Programs <span>&rarr;</span></a>
-              </div>
-            </article>
+            <!-- RIGHT 2x2 Subgrid -->
+            <div class="resident-subgrid">
 
-            <!-- 3. Mr. Neeraj Singh Rathore -->
-            <article class="faculty-card resident" data-category="resident" data-keywords="neeraj singh rathore assistant professor marketing career development services placements brand">
-              <div class="faculty-card-top">
-                <div class="faculty-avatar-container">
-                  <img src="images/faculty/neeraj-singh.webp" alt="Mr. Neeraj Singh Rathore" class="faculty-avatar-img" loading="lazy">
+              <!-- 2. Dr. Raju Varghese -->
+              <article class="faculty-card resident resident-compact-card" data-category="resident" data-keywords="dr raju varghese raju.varghese@mile.education director global programs international campus cross border dubai malaysia immersion">
+                <span class="resident-corner-badge">RESIDENT FACULTY</span>
+                <div class="compact-card-header">
+                  <div class="compact-avatar-halo">
+                    <img src="images/faculty/raju-varghese.webp" alt="Dr. Raju Varghese" class="compact-avatar-img" loading="lazy">
+                  </div>
+                  <div class="compact-header-meta">
+                    <h3 class="faculty-name compact-name">Dr. Raju Varghese</h3>
+                    <p class="faculty-role compact-role">Director - Global Programs &amp; International Campus</p>
+                    <div class="resident-accent-bar compact-bar"></div>
+                  </div>
                 </div>
-                <span class="faculty-badge badge-resident">Resident Faculty</span>
-              </div>
-              <h3 class="faculty-name">Mr. Neeraj Singh Rathore</h3>
-              <p class="faculty-role">Assistant Professor - Marketing &amp; Career Development Services</p>
-              <div class="faculty-tags-list">
-                <span class="faculty-tag-item">Brand Marketing</span>
-                <span class="faculty-tag-item">Career Development</span>
-                <span class="faculty-tag-item">Consumer Insights</span>
-              </div>
-              <p class="faculty-bio">Integrates fundamental marketing models with corporate placement preparation, mentoring students on strategic brand building, market outreach, and executive recruitment interviews.</p>
-              <div class="faculty-card-footer">
-                <div class="faculty-mentorship-note">
-                  <span></span> Career Services Mentor
-                </div>
-                <a href="placement.html" class="faculty-connect-btn">Placement Cell <span>&rarr;</span></a>
-              </div>
-            </article>
 
-            <!-- 4. Mr. Deepak Gupta -->
-            <article class="faculty-card resident" data-category="resident" data-keywords="deepak gupta assistant professor analytics business data science modeling decision making">
-              <div class="faculty-card-top">
-                <div class="faculty-avatar-container">
-                  <img src="images/faculty/deepak-gupta.webp" alt="Mr. Deepak Gupta" class="faculty-avatar-img" loading="lazy">
+                <div class="faculty-tags-list compact-tags-wrap">
+                  <span class="faculty-tag-item">
+                    <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    Global Immersions
+                  </span>
+                  <span class="faculty-tag-item">
+                    <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg>
+                    International Business
+                  </span>
+                  <span class="faculty-tag-item">
+                    <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                    Academic Alliances
+                  </span>
                 </div>
-                <span class="faculty-badge badge-resident">Resident Faculty</span>
-              </div>
-              <h3 class="faculty-name">Mr. Deepak Gupta</h3>
-              <p class="faculty-role">Assistant Professor - Analytics, Lexicon MILE</p>
-              <div class="faculty-tags-list">
-                <span class="faculty-tag-item">Business Analytics</span>
-                <span class="faculty-tag-item">Predictive Modeling</span>
-                <span class="faculty-tag-item">Data Decisioning</span>
-              </div>
-              <p class="faculty-bio">Specialist in quantitative analysis, predictive statistical models, and modern business intelligence tools, training students to turn complex datasets into actionable business strategies.</p>
-              <div class="faculty-card-footer">
-                <div class="faculty-mentorship-note">
-                  <span></span> Analytics Domain Mentor
-                </div>
-                <a href="pgdm.html" class="faculty-connect-btn">Course Modules <span>&rarr;</span></a>
-              </div>
-            </article>
 
-            <!-- 5. Ms. Kavita Pareek -->
-            <article class="faculty-card resident" data-category="resident" data-keywords="kavita pareek assistant professor management academic operations human relations student welfare">
-              <div class="faculty-card-top">
-                <div class="faculty-avatar-container">
-                  <img src="images/faculty/kavita-pareek.webp" alt="Ms. Kavita Pareek" class="faculty-avatar-img" loading="lazy">
-                </div>
-                <span class="faculty-badge badge-resident">Resident Faculty</span>
-              </div>
-              <h3 class="faculty-name">Ms. Kavita Pareek</h3>
-              <p class="faculty-role">Assistant Professor, Lexicon MILE</p>
-              <div class="faculty-tags-list">
-                <span class="faculty-tag-item">General Management</span>
-                <span class="faculty-tag-item">Academic Operations</span>
-                <span class="faculty-tag-item">Student Development</span>
-              </div>
-              <p class="faculty-bio">Dedicated academician leading foundational management studies, experiential student workshops, and curriculum coordination to ensure seamless learning continuity and academic rigor.</p>
-              <div class="faculty-card-footer">
-                <div class="faculty-mentorship-note">
-                  <span></span> Academic Operations
-                </div>
-                <a href="admission-guide.html" class="faculty-connect-btn">Admissions <span>&rarr;</span></a>
-              </div>
-            </article>
+                <p class="faculty-bio compact-bio">Directs Lexicon MILE's international programs across Malaysia and Dubai, driving cross-border university collaborations, international internships, and global market readiness for management cohorts.</p>
 
+                <!-- Official Contact Link -->
+                <div class="resident-contact-row">
+                  <a href="mailto:raju.varghese@mile.education" class="resident-contact-link" title="Contact Dr. Raju Varghese">
+                    <svg class="resident-email-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    <span>raju.varghese@mile.education</span>
+                  </a>
+                </div>
+
+                <div class="faculty-card-footer compact-footer">
+                  <div class="resident-status-item">
+                    <span class="resident-status-dot"></span>
+                    <span class="resident-status-text">Global Immersion Lead</span>
+                  </div>
+                  <a href="raju-varghese.html" class="resident-view-profile-btn">
+                    <span>Visit Profile</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- 3. Mr. Neeraj Singh Rathore -->
+              <article class="faculty-card resident resident-compact-card" data-category="resident" data-keywords="neeraj singh rathore neeraj.rathore@mile.education assistant professor marketing career development services placements brand">
+                <span class="resident-corner-badge">RESIDENT FACULTY</span>
+                <div class="compact-card-header">
+                  <div class="compact-avatar-halo">
+                    <img src="images/faculty/neeraj-singh.webp" alt="Mr. Neeraj Singh Rathore" class="compact-avatar-img" loading="lazy">
+                  </div>
+                  <div class="compact-header-meta">
+                    <h3 class="faculty-name compact-name">Mr. Neeraj Singh Rathore</h3>
+                    <p class="faculty-role compact-role">Assistant Professor - Marketing &amp; Career Development Services</p>
+                    <div class="resident-accent-bar compact-bar"></div>
+                  </div>
+                </div>
+
+                <div class="faculty-tags-list compact-tags-wrap">
+                  <span class="faculty-tag-item">
+                    <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 13v-2z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>
+                    Brand Marketing
+                  </span>
+                  <span class="faculty-tag-item">
+                    <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                    Career Development
+                  </span>
+                  <span class="faculty-tag-item">
+                    <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Consumer Insights
+                  </span>
+                </div>
+
+                <p class="faculty-bio compact-bio">Integrates fundamental marketing models with corporate placement preparation, mentoring students on strategic brand building, market outreach, and executive recruitment interviews.</p>
+
+                <!-- Official Contact Link -->
+                <div class="resident-contact-row">
+                  <a href="mailto:neeraj.rathore@mile.education" class="resident-contact-link" title="Contact Mr. Neeraj Singh Rathore">
+                    <svg class="resident-email-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    <span>neeraj.rathore@mile.education</span>
+                  </a>
+                </div>
+
+                <div class="faculty-card-footer compact-footer">
+                  <div class="resident-status-item">
+                    <span class="resident-status-dot"></span>
+                    <span class="resident-status-text">Career Services Mentor</span>
+                  </div>
+                  <a href="neeraj-singh-rathore.html" class="resident-view-profile-btn">
+                    <span>Visit Profile</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- 4. Mr. Deepak Gupta -->
+              <article class="faculty-card resident resident-compact-card" data-category="resident" data-keywords="deepak gupta deepak.gupta@mile.education assistant professor analytics business data science modeling decision making">
+                <span class="resident-corner-badge">RESIDENT FACULTY</span>
+                <div class="compact-card-header">
+                  <div class="compact-avatar-halo">
+                    <img src="images/faculty/deepak-gupta.webp" alt="Mr. Deepak Gupta" class="compact-avatar-img" loading="lazy">
+                  </div>
+                  <div class="compact-header-meta">
+                    <h3 class="faculty-name compact-name">Mr. Deepak Gupta</h3>
+                    <p class="faculty-role compact-role">Assistant Professor - Analytics, Lexicon MILE</p>
+                    <div class="resident-accent-bar compact-bar"></div>
+                  </div>
+                </div>
+
+                <div class="faculty-tags-list compact-tags-wrap">
+                  <span class="faculty-tag-item">
+                    <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    Business Analytics
+                  </span>
+                  <span class="faculty-tag-item">
+                    <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    Predictive Modeling
+                  </span>
+                  <span class="faculty-tag-item">
+                    <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    Data Decisioning
+                  </span>
+                </div>
+
+                <p class="faculty-bio compact-bio">Specialist in quantitative analysis, predictive statistical models, and modern business intelligence tools, training students to turn complex datasets into actionable business strategies.</p>
+
+                <!-- Official Contact Link -->
+                <div class="resident-contact-row">
+                  <a href="mailto:deepak.gupta@mile.education" class="resident-contact-link" title="Contact Mr. Deepak Gupta">
+                    <svg class="resident-email-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    <span>deepak.gupta@mile.education</span>
+                  </a>
+                </div>
+
+                <div class="faculty-card-footer compact-footer">
+                  <div class="resident-status-item">
+                    <span class="resident-status-dot"></span>
+                    <span class="resident-status-text">Analytics Domain Mentor</span>
+                  </div>
+                  <a href="deepak-gupta.html" class="resident-view-profile-btn">
+                    <span>Visit Profile</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                </div>
+              </article>
+
+            </div>
           </div>
         </section>
 
         <!-- ==========================================================================
              SECTION 2: VISITING INDUSTRY LEADERS (DEDICATED SECTION & STRUCTURE)
              ========================================================================== -->
-        <section class="visiting-faculty-container reveal" id="visiting-section">
-          <div class="faculty-section-head">
-            <span class="eyebrow eyebrow-visiting">BOARDROOM WISDOM &middot; PRACTITIONER LEADERSHIP</span>
-            <h2>Visiting Industry Leaders<span class="period">.</span></h2>
-            <p>To ensure management education stays synchronized with real-world business challenges, Lexicon MILE brings senior corporate practitioners, enterprise consultants, legal advisors, and financial modelers directly into the classroom. These visiting leaders conduct specialized, hands-on modules—translating emerging market disruptions, regulatory shifts, and corporate decision tools into practical competencies.</p>
+        <section class="visiting-faculty-showcase reveal" id="visiting-section">
+          <!-- Atmospheric Glows & Dot Grid Canvas (Pure CSS) -->
+          <div class="visiting-glow-ambient visiting-glow-left" aria-hidden="true"></div>
+          <div class="visiting-glow-ambient visiting-glow-right" aria-hidden="true"></div>
+          <div class="visiting-dots-canvas" aria-hidden="true"></div>
+
+          <!-- Section Head -->
+          <div class="visiting-section-header">
+            <div class="visiting-header-pill">
+              <svg class="visiting-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <span>VISITING INDUSTRY LEADERS</span>
+            </div>
+            <h2 class="visiting-header-title">Our <span class="visiting-cyan-text">Visiting</span> Leaders</h2>
+            <p class="visiting-header-desc">Senior corporate practitioners, enterprise consultants, and boardroom advisors translating emerging market disruptions and executive decision tools into practical competencies.</p>
           </div>
 
           <!-- Feature / Understanding Highlights -->
@@ -305,125 +437,221 @@
             </div>
           </div>
 
-          <div class="faculty-cards-grid" id="visiting-grid" style="margin-bottom: 0;">
+          <!-- Visiting Cards Grid Container (Uniform Compact Cards) -->
+          <div class="visiting-cards-grid" id="visiting-grid">
 
-            <!-- 6. Ms. Heena Gandhi -->
-            <article class="faculty-card visiting" data-category="visiting" data-keywords="heena gandhi business economics visiting industry leader macroeconomic trade fiscal policy">
-              <div class="faculty-card-top">
-                <div class="faculty-avatar-container">
-                  <img src="images/faculty/heena-gandhi.webp" alt="Ms. Heena Gandhi" class="faculty-avatar-img" loading="lazy">
+            <!-- 1. Ms. Heena Gandhi -->
+            <article class="faculty-card visiting visiting-compact-card" data-category="visiting" data-keywords="heena gandhi business economics visiting industry leader macroeconomic trade fiscal policy">
+              <span class="visiting-corner-badge">VISITING LEADER</span>
+              <div class="compact-card-header">
+                <div class="visiting-compact-avatar-halo">
+                  <img src="images/faculty/heena-gandhi.webp" alt="Ms. Heena Gandhi" class="compact-avatar-img" loading="lazy">
                 </div>
-                <span class="faculty-badge badge-visiting">Visiting Leader</span>
-              </div>
-              <h3 class="faculty-name">Ms. Heena Gandhi</h3>
-              <p class="faculty-role">Visiting Faculty &ndash; Business Economics</p>
-              <div class="faculty-tags-list">
-                <span class="faculty-tag-item">Business Economics</span>
-                <span class="faculty-tag-item">Macro Analysis</span>
-                <span class="faculty-tag-item">Market Dynamics</span>
-              </div>
-              <p class="faculty-bio">Brings deep economic insights into the classroom, dissecting national fiscal policies, global trade movements, and market demand dynamics for strategic management application.</p>
-              <div class="faculty-card-footer">
-                <div class="faculty-mentorship-note">
-                  <span></span> Economics Advisor
+                <div class="compact-header-meta">
+                  <h3 class="faculty-name compact-name">Ms. Heena Gandhi</h3>
+                  <p class="faculty-role visiting-compact-role">Visiting Faculty &ndash; Business Economics</p>
+                  <div class="visiting-accent-bar compact-bar"></div>
                 </div>
-                <a href="faculty-mentors.html" class="faculty-connect-btn">Mentorship Model <span>&rarr;</span></a>
+              </div>
+
+              <div class="faculty-tags-list compact-tags-wrap">
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                  Business Economics
+                </span>
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                  Macro Analysis
+                </span>
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  Market Dynamics
+                </span>
+              </div>
+
+              <p class="faculty-bio compact-bio">Brings deep economic insights into the classroom, dissecting national fiscal policies, global trade movements, and market demand dynamics for strategic management application.</p>
+
+              <div class="faculty-card-footer compact-footer">
+                <div class="resident-status-item">
+                  <span class="resident-status-dot"></span>
+                  <span class="resident-status-text">Economics Advisor</span>
+                </div>
+                <a href="faculty-mentors.html" class="visiting-action-link">
+                  <span>Mentorship Model</span>
+                  <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
               </div>
             </article>
 
-            <!-- 7. Kashmira Lonkar -->
-            <article class="faculty-card visiting" data-category="visiting" data-keywords="kashmira lonkar legal aspects of business corporate law intellectual property compliance governance">
-              <div class="faculty-card-top">
-                <div class="faculty-avatar-container">
-                  <img src="images/faculty/kashmira-lonkar.webp" alt="Kashmira Lonkar" class="faculty-avatar-img" loading="lazy">
+            <!-- 2. Kashmira Lonkar -->
+            <article class="faculty-card visiting visiting-compact-card" data-category="visiting" data-keywords="kashmira lonkar legal aspects of business corporate law intellectual property compliance governance">
+              <span class="visiting-corner-badge">VISITING LEADER</span>
+              <div class="compact-card-header">
+                <div class="visiting-compact-avatar-halo">
+                  <img src="images/faculty/kashmira-lonkar.webp" alt="Kashmira Lonkar" class="compact-avatar-img" loading="lazy">
                 </div>
-                <span class="faculty-badge badge-visiting">Visiting Leader</span>
-              </div>
-              <h3 class="faculty-name">Kashmira Lonkar</h3>
-              <p class="faculty-role">Visiting Faculty &ndash; Legal Aspects of Business</p>
-              <div class="faculty-tags-list">
-                <span class="faculty-tag-item">Corporate Law</span>
-                <span class="faculty-tag-item">IP Rights &amp; Contracts</span>
-                <span class="faculty-tag-item">Regulatory Governance</span>
-              </div>
-              <p class="faculty-bio">Equips management graduates with vital knowledge in corporate compliance, commercial dispute resolution, contract negotiation, and protecting intellectual capital in business.</p>
-              <div class="faculty-card-footer">
-                <div class="faculty-mentorship-note">
-                  <span></span> Legal Advisory
+                <div class="compact-header-meta">
+                  <h3 class="faculty-name compact-name">Kashmira Lonkar</h3>
+                  <p class="faculty-role visiting-compact-role">Visiting Faculty &ndash; Legal Aspects of Business</p>
+                  <div class="visiting-accent-bar compact-bar"></div>
                 </div>
-                <a href="faculty-mentors.html" class="faculty-connect-btn">Mentorship Model <span>&rarr;</span></a>
+              </div>
+
+              <div class="faculty-tags-list compact-tags-wrap">
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg>
+                  Corporate Law
+                </span>
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  IP Rights &amp; Contracts
+                </span>
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  Regulatory Governance
+                </span>
+              </div>
+
+              <p class="faculty-bio compact-bio">Equips management graduates with vital knowledge in corporate compliance, commercial dispute resolution, contract negotiation, and protecting intellectual capital in business.</p>
+
+              <div class="faculty-card-footer compact-footer">
+                <div class="resident-status-item">
+                  <span class="resident-status-dot"></span>
+                  <span class="resident-status-text">Legal Advisory</span>
+                </div>
+                <a href="faculty-mentors.html" class="visiting-action-link">
+                  <span>Mentorship Model</span>
+                  <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
               </div>
             </article>
 
-            <!-- 8. Prof Sangram Bagade -->
-            <article class="faculty-card visiting" data-category="visiting" data-keywords="prof sangram bagade spreadsheets models financial modeling decision analytics quantitative">
-              <div class="faculty-card-top">
-                <div class="faculty-avatar-container">
-                  <img src="images/faculty/sangram-bagade.webp" alt="Prof Sangram Bagade" class="faculty-avatar-img" loading="lazy">
+            <!-- 3. Prof Sangram Bagade -->
+            <article class="faculty-card visiting visiting-compact-card" data-category="visiting" data-keywords="prof sangram bagade spreadsheets models financial modeling decision analytics quantitative">
+              <span class="visiting-corner-badge">VISITING LEADER</span>
+              <div class="compact-card-header">
+                <div class="visiting-compact-avatar-halo">
+                  <img src="images/faculty/sangram-bagade.webp" alt="Prof Sangram Bagade" class="compact-avatar-img" loading="lazy">
                 </div>
-                <span class="faculty-badge badge-visiting">Visiting Leader</span>
-              </div>
-              <h3 class="faculty-name">Prof Sangram Bagade</h3>
-              <p class="faculty-role">Visiting Faculty &ndash; Spreadsheets &amp; Models</p>
-              <div class="faculty-tags-list">
-                <span class="faculty-tag-item">Spreadsheet Modeling</span>
-                <span class="faculty-tag-item">Financial Models</span>
-                <span class="faculty-tag-item">Quantitative Analysis</span>
-              </div>
-              <p class="faculty-bio">Hands-on modeling expert instructing students in advanced spreadsheet frameworks, simulation modeling, cost estimation, and corporate scenario evaluation tools.</p>
-              <div class="faculty-card-footer">
-                <div class="faculty-mentorship-note">
-                  <span></span> Modeling Practitioner
+                <div class="compact-header-meta">
+                  <h3 class="faculty-name compact-name">Prof Sangram Bagade</h3>
+                  <p class="faculty-role visiting-compact-role">Visiting Faculty &ndash; Spreadsheets &amp; Models</p>
+                  <div class="visiting-accent-bar compact-bar"></div>
                 </div>
-                <a href="faculty-mentors.html" class="faculty-connect-btn">Mentorship Model <span>&rarr;</span></a>
+              </div>
+
+              <div class="faculty-tags-list compact-tags-wrap">
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line></svg>
+                  Spreadsheet Modeling
+                </span>
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                  Financial Models
+                </span>
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  Quantitative Analysis
+                </span>
+              </div>
+
+              <p class="faculty-bio compact-bio">Hands-on modeling expert instructing students in advanced spreadsheet frameworks, simulation modeling, cost estimation, and corporate scenario evaluation tools.</p>
+
+              <div class="faculty-card-footer compact-footer">
+                <div class="resident-status-item">
+                  <span class="resident-status-dot"></span>
+                  <span class="resident-status-text">Modeling Practitioner</span>
+                </div>
+                <a href="faculty-mentors.html" class="visiting-action-link">
+                  <span>Mentorship Model</span>
+                  <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
               </div>
             </article>
 
-            <!-- 9. Prof Rachna Arora -->
-            <article class="faculty-card visiting" data-category="visiting" data-keywords="prof rachna arora organisational behavior hr human resources leadership culture emotional intelligence">
-              <div class="faculty-card-top">
-                <div class="faculty-avatar-container">
-                  <img src="images/faculty/rachna-arora.webp" alt="Prof Rachna Arora" class="faculty-avatar-img" loading="lazy">
+            <!-- 4. Prof Rachna Arora -->
+            <article class="faculty-card visiting visiting-compact-card" data-category="visiting" data-keywords="prof rachna arora organisational behavior hr human resources leadership culture emotional intelligence">
+              <span class="visiting-corner-badge">VISITING LEADER</span>
+              <div class="compact-card-header">
+                <div class="visiting-compact-avatar-halo">
+                  <img src="images/faculty/rachna-arora.webp" alt="Prof Rachna Arora" class="compact-avatar-img" loading="lazy">
                 </div>
-                <span class="faculty-badge badge-visiting">Visiting Leader</span>
-              </div>
-              <h3 class="faculty-name">Prof Rachna Arora</h3>
-              <p class="faculty-role">Visiting Faculty &ndash; Organisational Behavior</p>
-              <div class="faculty-tags-list">
-                <span class="faculty-tag-item">Organisational Behavior</span>
-                <span class="faculty-tag-item">Leadership Dynamics</span>
-                <span class="faculty-tag-item">People Management</span>
-              </div>
-              <p class="faculty-bio">Specializes in workplace psychology, team dynamics, and cross-functional leadership, nurturing high empathy, cultural adaptability, and effective people leadership in future managers.</p>
-              <div class="faculty-card-footer">
-                <div class="faculty-mentorship-note">
-                  <span></span> People &amp; Culture Mentor
+                <div class="compact-header-meta">
+                  <h3 class="faculty-name compact-name">Prof Rachna Arora</h3>
+                  <p class="faculty-role visiting-compact-role">Visiting Faculty &ndash; Organisational Behavior</p>
+                  <div class="visiting-accent-bar compact-bar"></div>
                 </div>
-                <a href="faculty-mentors.html" class="faculty-connect-btn">Mentorship Model <span>&rarr;</span></a>
+              </div>
+
+              <div class="faculty-tags-list compact-tags-wrap">
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                  Organisational Behavior
+                </span>
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  Leadership Dynamics
+                </span>
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  People Management
+                </span>
+              </div>
+
+              <p class="faculty-bio compact-bio">Specializes in workplace psychology, team dynamics, and cross-functional leadership, nurturing high empathy, cultural adaptability, and effective people leadership in future managers.</p>
+
+              <div class="faculty-card-footer compact-footer">
+                <div class="resident-status-item">
+                  <span class="resident-status-dot"></span>
+                  <span class="resident-status-text">People &amp; Culture Mentor</span>
+                </div>
+                <a href="faculty-mentors.html" class="visiting-action-link">
+                  <span>Mentorship Model</span>
+                  <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
               </div>
             </article>
 
-            <!-- 10. Prof Vidhya Vishwanath -->
-            <article class="faculty-card visiting" data-category="visiting" data-keywords="prof vidhya vishwanath business communication executive presence boardroom presentation soft skills">
-              <div class="faculty-card-top">
-                <div class="faculty-avatar-container">
-                  <img src="images/faculty/vidhya-vishwanath.webp" alt="Prof Vidhya Vishwanath" class="faculty-avatar-img" loading="lazy">
+            <!-- 5. Prof Vidhya Vishwanath -->
+            <article class="faculty-card visiting visiting-compact-card" data-category="visiting" data-keywords="prof vidhya vishwanath business communication executive presence boardroom presentation soft skills">
+              <span class="visiting-corner-badge">VISITING LEADER</span>
+              <div class="compact-card-header">
+                <div class="visiting-compact-avatar-halo">
+                  <img src="images/faculty/vidhya-vishwanath.webp" alt="Prof Vidhya Vishwanath" class="compact-avatar-img" loading="lazy">
                 </div>
-                <span class="faculty-badge badge-visiting">Visiting Leader</span>
-              </div>
-              <h3 class="faculty-name">Prof Vidhya Vishwanath</h3>
-              <p class="faculty-role">Visiting Faculty &ndash; Business Communication</p>
-              <div class="faculty-tags-list">
-                <span class="faculty-tag-item">Business Communication</span>
-                <span class="faculty-tag-item">Executive Presence</span>
-                <span class="faculty-tag-item">Persuasive Rhetoric</span>
-              </div>
-              <p class="faculty-bio">Coaches students in boardroom communications, negotiation dynamics, corporate storytelling, and executive presence to ensure commanding articulation in high-stakes environments.</p>
-              <div class="faculty-card-footer">
-                <div class="faculty-mentorship-note">
-                  <span></span> Executive Communication
+                <div class="compact-header-meta">
+                  <h3 class="faculty-name compact-name">Prof Vidhya Vishwanath</h3>
+                  <p class="faculty-role visiting-compact-role">Visiting Faculty &ndash; Business Communication</p>
+                  <div class="visiting-accent-bar compact-bar"></div>
                 </div>
-                <a href="faculty-mentors.html" class="faculty-connect-btn">Mentorship Model <span>&rarr;</span></a>
+              </div>
+
+              <div class="faculty-tags-list compact-tags-wrap">
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  Business Communication
+                </span>
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                  Executive Presence
+                </span>
+                <span class="faculty-tag-item">
+                  <svg class="faculty-tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 13v-2z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>
+                  Persuasive Rhetoric
+                </span>
+              </div>
+
+              <p class="faculty-bio compact-bio">Coaches students in boardroom communications, negotiation dynamics, corporate storytelling, and executive presence to ensure commanding articulation in high-stakes environments.</p>
+
+              <div class="faculty-card-footer compact-footer">
+                <div class="resident-status-item">
+                  <span class="resident-status-dot"></span>
+                  <span class="resident-status-text">Executive Communication</span>
+                </div>
+                <a href="faculty-mentors.html" class="visiting-action-link">
+                  <span>Mentorship Model</span>
+                  <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
               </div>
             </article>
 
@@ -521,13 +749,15 @@
           const name = (card.querySelector('.faculty-name')?.textContent || '').toLowerCase();
           const role = (card.querySelector('.faculty-role')?.textContent || '').toLowerCase();
           const bio = (card.querySelector('.faculty-bio')?.textContent || '').toLowerCase();
+          const contact = (card.querySelector('.resident-contact-link')?.textContent || '').toLowerCase();
           
           const matchesCategory = (currentFilter === 'all' || currentFilter === 'resident');
           const matchesSearch = !query || 
             keywords.includes(query) || 
             name.includes(query) || 
             role.includes(query) || 
-            bio.includes(query);
+            bio.includes(query) ||
+            contact.includes(query);
 
           if (matchesCategory && matchesSearch) {
             card.style.display = 'flex';
@@ -562,6 +792,19 @@
         // Toggle Section visibility
         if (residentSection) {
           residentSection.style.display = (residentVisible > 0) ? 'block' : 'none';
+          const bentoGrid = residentSection.querySelector('.resident-bento-grid');
+          const featuredCard = residentSection.querySelector('.resident-featured-card');
+          const subgrid = residentSection.querySelector('.resident-subgrid');
+          if (bentoGrid && featuredCard && subgrid) {
+            const isFeaturedVisible = featuredCard.style.display !== 'none';
+            const compactVisibleCount = subgrid.querySelectorAll('.resident-compact-card:not([style*="display: none"])').length;
+            subgrid.style.display = compactVisibleCount > 0 ? 'grid' : 'none';
+            if (!isFeaturedVisible || compactVisibleCount === 0) {
+              bentoGrid.classList.add('single-column-active');
+            } else {
+              bentoGrid.classList.remove('single-column-active');
+            }
+          }
         }
         if (visitingSection) {
           visitingSection.style.display = (visitingVisible > 0) ? 'block' : 'none';
