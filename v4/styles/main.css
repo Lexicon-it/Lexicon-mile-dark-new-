@@ -13976,3 +13976,28 @@ a.mega-link-large {
     }
 }
 
+/* ==========================================================================
+   PATCH 20: LEGACY SECTION MOBILE FIX (BACKGROUND & GRID)
+   ========================================================================== */
+@media (max-width: 991px) {
+    .legacy-section {
+        background: #061b45 !important;
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    .legacy-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1.05fr !important;
+        gap: 30px 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .legacy-grid {
+        grid-template-columns: 1fr 1.05fr !important;
+    }
+}
+
