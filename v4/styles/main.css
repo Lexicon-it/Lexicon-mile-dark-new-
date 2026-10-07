@@ -1460,6 +1460,34 @@ a.mega-link-large {
     gap: 22px
 }
 
+.faculty-marquee-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 10px 0 20px;
+}
+
+.faculty-marquee-track {
+    display: flex;
+    gap: 22px;
+    width: max-content;
+    animation: scroll-faculty 35s linear infinite;
+}
+
+.faculty-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.faculty-marquee-track .leader-card {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+@keyframes scroll-faculty {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 11px)); }
+}
+
 .portrait {
     height: 318px;
     border-radius: 8px;
