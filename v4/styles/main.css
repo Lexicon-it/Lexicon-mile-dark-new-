@@ -16123,3 +16123,18 @@ a.mega-link-large {
 }
 .hero, .pgdm-hero-banner { padding-top: 115px !important; }
 @media (max-width: 991px) { .hero, .pgdm-hero-banner { padding-top: 95px !important; } }
+
+/* ==========================================================================
+   PATCH 23: FIX HERO OVERLAP ON SHORT SCREENS
+   ========================================================================== */
+@media (max-height: 850px) {
+  .hero {
+    height: auto !important;
+    padding-bottom: 40px !important;
+  }
+  .hero-bottom {
+    position: relative !important;
+    bottom: auto !important;
+    margin-top: 40px !important;
+  }
+}
