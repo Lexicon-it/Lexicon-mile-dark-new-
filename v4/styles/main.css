@@ -847,14 +847,18 @@ a.mega-link-large {
 
 /* Hero */
 .hero {
-    min-height: 780px;
-    height: calc(100svh - 35px);
-    max-height: 1100px;
+    min-height: 580px;
+    min-height: calc(100svh - 35px);
+    height: auto;
     position: relative;
     isolation: isolate;
     display: flex;
-    align-items: center;
-    overflow: hidden
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 118px;
+    padding-bottom: 42px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .hero-slider {
@@ -886,34 +890,39 @@ a.mega-link-large {
 }
 
 .hero-content {
-    padding-top: 100px;
-    padding-bottom: 86px
+    margin-top: 0;
+    margin-bottom: auto;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .hero .eyebrow {
     font-size: 13px;
     color: #e3e9f4;
     letter-spacing: .2em;
-    margin-bottom: 24px
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .accent-line {
     width: 28px;
     height: 2px;
-    background: var(--red)
+    background: var(--red);
 }
 
 .hero h1 {
-    font-size: clamp(74px, 7.6vw, 110px);
+    font-size: clamp(54px, min(7.4vw, 12.2vh), 106px);
     line-height: 1.015;
     letter-spacing: -.065em;
     font-weight: 760;
-    max-width: 780px
+    max-width: 780px;
 }
 
 .next-word {
     position: relative;
-    display: inline-block
+    display: inline-block;
 }
 
 .next-word svg {
@@ -925,20 +934,27 @@ a.mega-link-large {
     fill: none;
     stroke: var(--blue);
     stroke-width: 3;
-    overflow: visible
+    overflow: visible;
 }
 
 .hero-description {
     font-size: 16px;
     color: #c1c8d3;
-    line-height: 1.7;
-    margin-top: 30px
+    line-height: 1.65;
+    margin-top: 22px;
 }
 
 .hero-buttons {
     display: flex;
     gap: 12px;
-    margin-top: 29px
+    margin-top: 22px;
+}
+
+.hero-buttons .button {
+    padding: 16px 24px;
+    min-height: 52px;
+    gap: 32px;
+    font-size: 13px;
 }
 
 .hero-programs {
@@ -947,52 +963,58 @@ a.mega-link-large {
     color: #a3aec1;
     display: flex;
     gap: 13px;
-    margin-top: 20px
+    margin-top: 18px;
 }
 
 .hero-programs span {
-    color: #647084
+    color: #647084;
 }
 
 .hero-coordinate {
     position: absolute;
     right: 40px;
-    top: 145px;
+    top: 140px;
     writing-mode: vertical-rl;
     font-size: 14px;
     color: #d4ddeb;
-    letter-spacing: .2em
+    letter-spacing: .2em;
 }
 
 .hero-bottom {
     position: absolute;
-    bottom: 28px;
+    bottom: 24px;
     left: 0;
     right: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px
+    justify-content: flex-end;
+    gap: 24px;
 }
 
 .hero-bottom>p {
     font-size: 13px;
     letter-spacing: .025em;
-    color: #c5cede
+    color: #c5cede;
 }
 
 .hero-bottom>p span {
     padding: 0 13px;
-    color: var(--red)
+    color: var(--red);
 }
 
 .scroll-cue {
     display: flex;
     gap: 13px;
     align-items: center;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: .15em;
-    color: #a9b5c7
+    color: #a9b5c7;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.scroll-cue:hover {
+    color: #fff;
 }
 
 .scroll-cue>span {
@@ -1003,7 +1025,7 @@ a.mega-link-large {
     display: grid;
     place-items: center;
     font-size: 16px;
-    color: #fff
+    color: #fff;
 }
 
 .hero-stats {
@@ -2945,11 +2967,11 @@ a.mega-link-large {
     }
 
     .hero-content {
-        padding-top: 80px
+        padding-top: 0
     }
 
     .hero-description {
-        font-size: 18px
+        font-size: 16px
     }
 
     .primary-nav a {
@@ -3486,14 +3508,14 @@ a.mega-link-large {
         bottom: auto;
         margin-top: 30px;
         margin-bottom: 25px;
-        justify-content: space-between
+        justify-content: flex-start
     }
 
     .hero-bottom>p {
-        font-size: 14px;
-        max-width: 175px;
-        line-height: 1.9;
-        text-align: right
+        font-size: 13px;
+        max-width: 100%;
+        line-height: 1.6;
+        text-align: left
     }
 
     .hero-bottom>p span {

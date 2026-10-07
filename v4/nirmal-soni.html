@@ -191,51 +191,50 @@
       grid-template-columns: 360px 1fr;
       gap: 36px;
       margin-top: 36px;
+      align-items: start;
     }
 
-    @media (max-width: 992px) {
-      .profile-dossier-layout {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Left Column: Sidebar Profile Card */
+    /* Left Sidebar Card */
     .profile-sidebar-card {
       background: var(--fp-card-bg);
       border: 1px solid var(--fp-card-border);
       border-radius: 20px;
-      padding: 32px 24px;
+      padding: 30px;
       position: sticky;
       top: 100px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
     }
 
     .profile-avatar-box {
       width: 100%;
-      max-width: 260px;
-      aspect-ratio: 1 / 1;
-      margin: 0 auto 24px auto;
-      border-radius: 18px;
+      aspect-ratio: 1/1;
+      border-radius: 16px;
       overflow: hidden;
-      border: 2px solid rgba(56, 189, 248, 0.3);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(56, 189, 248, 0.18);
+      margin-bottom: 22px;
       position: relative;
+      border: 2px solid rgba(56, 189, 248, 0.35);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 24px rgba(11, 99, 206, 0.25);
+      background: #080d1a;
     }
 
     .profile-avatar-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top center;
       display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .profile-avatar-box:hover img {
+      transform: scale(1.04);
     }
 
     .sidebar-name {
       font-size: 22px;
-      font-weight: 800;
+      font-weight: 750;
       color: #ffffff;
-      text-align: center;
       margin: 0 0 6px 0;
     }
 
@@ -243,41 +242,40 @@
       font-size: 13.5px;
       color: #38bdf8;
       font-weight: 600;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .sidebar-chips-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      justify-content: center;
-      margin-bottom: 24px;
-    }
-
-    .sidebar-chip {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #cbd5e1;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 11.5px;
-      font-weight: 500;
+      line-height: 1.4;
+      margin-bottom: 16px;
     }
 
     .sidebar-divider {
       height: 1px;
       background: rgba(255, 255, 255, 0.08);
-      margin: 20px 0;
+      margin: 18px 0;
+    }
+
+    .sidebar-chips-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar-chip {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
     }
 
     .fact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
       list-style: none;
       padding: 0;
       margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
     }
 
     .fact-item {
@@ -288,84 +286,69 @@
 
     .fact-label {
       font-size: 11px;
-      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #64748b;
+      letter-spacing: 0.08em;
+      color: var(--fp-text-muted);
+      font-weight: 700;
     }
 
     .fact-val {
-      font-size: 13px;
-      color: #e2e8f0;
-      font-weight: 500;
-      line-height: 1.45;
+      font-size: 13.5px;
+      color: #f1f5f9;
+      font-weight: 600;
+      line-height: 1.4;
     }
 
     .sidebar-cta-btn {
-      display: flex;
+      width: 100%;
+      margin-top: 22px;
+      padding: 12px;
+      border-radius: 10px;
+      background: #0b63ce;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      width: 100%;
-      margin-top: 24px;
-      padding: 12px 18px;
-      background: linear-gradient(135deg, #0b63ce, #0284c7);
-      color: #ffffff;
-      border-radius: 12px;
-      font-size: 13.5px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 15px rgba(11, 99, 206, 0.35);
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(11, 99, 206, 0.4);
+      border: 1px solid rgba(56, 189, 248, 0.3);
     }
 
     .sidebar-cta-btn:hover {
-      background: linear-gradient(135deg, #0284c7, #38bdf8);
-      box-shadow: 0 6px 22px rgba(56, 189, 248, 0.4);
+      background: #084999;
       transform: translateY(-2px);
+      color: #fff;
     }
 
-    /* Right Column: Detailed Dossier */
-    .profile-main-dossier {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-    }
-
+    /* Right Dossier Content Cards */
     .dossier-card {
       background: var(--fp-card-bg);
       border: 1px solid var(--fp-card-border);
       border-radius: 20px;
-      padding: 34px 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      padding: 36px;
+      margin-bottom: 28px;
       position: relative;
-      overflow: hidden;
-    }
-
-    .dossier-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: linear-gradient(to bottom, #38bdf8, #0b63ce);
-      opacity: 0.8;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(12px);
     }
 
     .dossier-card-title {
-      font-size: 21px;
-      font-weight: 800;
+      font-size: 22px;
+      font-weight: 750;
       color: #ffffff;
-      margin: 0 0 18px 0;
+      margin: 0 0 16px 0;
       display: flex;
       align-items: center;
       gap: 12px;
     }
 
     .dossier-card-title svg {
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
       color: #38bdf8;
       flex-shrink: 0;
     }
@@ -374,7 +357,7 @@
       font-size: 15px;
       line-height: 1.75;
       color: #cbd5e1;
-      margin: 0 0 16px 0;
+      margin-bottom: 16px;
     }
 
     .dossier-text:last-child {
@@ -382,53 +365,47 @@
     }
 
     .quote-box {
-      background: rgba(56, 189, 248, 0.06);
+      background: rgba(11, 99, 206, 0.1);
       border-left: 3px solid #38bdf8;
-      padding: 18px 22px;
       border-radius: 0 12px 12px 0;
-      margin: 20px 0;
-      font-style: italic;
-      color: #e0f2fe;
-      font-size: 15px;
-      line-height: 1.65;
+      padding: 20px 24px;
+      margin: 24px 0;
     }
 
     .quote-box p {
+      font-size: 15.5px;
+      font-style: italic;
+      color: #e2e8f0;
+      line-height: 1.65;
       margin: 0;
     }
 
-    /* Initiative / Domain Cards Grid */
+    /* Grid for Pillars / Initiatives */
     .initiatives-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
+      gap: 18px;
       margin-top: 20px;
-    }
-
-    @media (max-width: 680px) {
-      .initiatives-grid {
-        grid-template-columns: 1fr;
-      }
     }
 
     .initiative-card {
       background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 14px;
       padding: 20px;
       transition: all 0.25s ease;
     }
 
     .initiative-card:hover {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(56, 189, 248, 0.3);
+      background: rgba(11, 99, 206, 0.08);
+      border-color: rgba(56, 189, 248, 0.35);
       transform: translateY(-2px);
     }
 
     .initiative-card h4 {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 700;
-      color: #38bdf8;
+      color: #fff;
       margin: 0 0 8px 0;
       display: flex;
       align-items: center;
@@ -436,16 +413,38 @@
     }
 
     .initiative-card h4 svg {
-      width: 17px;
-      height: 17px;
+      width: 18px;
+      height: 18px;
+      color: #38bdf8;
       flex-shrink: 0;
     }
 
     .initiative-card p {
-      font-size: 13px;
-      line-height: 1.6;
+      font-size: 13.5px;
       color: #94a3b8;
+      line-height: 1.6;
       margin: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .profile-dossier-layout {
+        grid-template-columns: 1fr;
+      }
+      .profile-sidebar-card {
+        position: static;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+      .associated-programs-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .initiatives-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* Associated Programs Row */
@@ -453,47 +452,42 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
-      margin-top: 18px;
-    }
-
-    @media (max-width: 768px) {
-      .associated-programs-row {
-        grid-template-columns: 1fr;
-      }
+      margin-top: 20px;
     }
 
     .assoc-program-card {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 14px;
-      padding: 18px;
-      text-decoration: none;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      text-decoration: none;
       transition: all 0.25s ease;
     }
 
     .assoc-program-card:hover {
-      border-color: rgba(56, 189, 248, 0.4);
-      background: rgba(56, 189, 248, 0.05);
+      border-color: rgba(56, 189, 248, 0.45);
+      background: rgba(11, 99, 206, 0.12);
       transform: translateY(-3px);
     }
 
     .assoc-program-tag {
       font-size: 10.5px;
       font-weight: 700;
-      color: #ffd066;
-      letter-spacing: 0.06em;
+      color: #38bdf8;
       text-transform: uppercase;
-      margin-bottom: 6px;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
     }
 
     .assoc-program-card h4 {
-      font-size: 15.5px;
+      font-size: 16px;
       font-weight: 700;
-      color: #ffffff;
+      color: #fff;
       margin: 0 0 8px 0;
+      line-height: 1.35;
     }
 
     .assoc-program-link {
@@ -555,7 +549,7 @@
             </div>
 
             <h2 class="sidebar-name">Dr. Nirmal Chandrakant Soni</h2>
-            <div class="sidebar-role">Principal &amp; Professor<br><span style="font-size: 12px; color: #94a3b8; font-weight: 400;">Institute of Leadership and Management, Pune (SPPU)</span></div>
+            <div class="sidebar-role">Principal &amp; Professor, Lexicon MILE</div>
 
             <div class="sidebar-chips-wrap">
               <span class="sidebar-chip">Management Studies</span>
@@ -574,27 +568,23 @@
               </li>
               <li class="fact-item">
                 <span class="fact-label">Highest Qualifications</span>
-                <span class="fact-val">Doctorate (Ph.D.) &ndash; School of Social Sciences, Gujarat University<br>Master’s in Management &amp; Economic Administration &ndash; MDSU, Ajmer</span>
+                <span class="fact-val">Doctorate (Ph.D.) &ndash; Gujarat University<br>Master’s in Management &amp; Economic Admin &ndash; MDSU</span>
               </li>
               <li class="fact-item">
-                <span class="fact-label">Professional Accreditations</span>
+                <span class="fact-label">National Accreditations</span>
                 <span class="fact-val">UGC-GSET Qualified &bull; ICSI Foundation &amp; Intermediate</span>
               </li>
               <li class="fact-item">
-                <span class="fact-label">Prior Academic Leadership</span>
-                <span class="fact-val">Former Associate Professor &ndash; Balaji Institute of International Business (BIIB), Sri Balaji University, Pune</span>
+                <span class="fact-label">Academic Governance</span>
+                <span class="fact-val">Principal &amp; Professor &bull; ILM (Affiliated with SPPU)</span>
               </li>
               <li class="fact-item">
-                <span class="fact-label">Professional Memberships</span>
-                <span class="fact-val">Honorary Member &ndash; Indo Global Chambers of Commerce, Industry &amp; Agriculture (IGCCIA)<br>Life Member &ndash; International Commerce Association</span>
+                <span class="fact-label">Department</span>
+                <span class="fact-val">Department of Leadership &amp; Management Studies</span>
               </li>
               <li class="fact-item">
-                <span class="fact-label">Civic &amp; Behavioural Impact</span>
-                <span class="fact-val">NGO Advocate for Traffic Safety &bull; Life Coach &ndash; Landmark Education’s Breakthrough Technologies</span>
-              </li>
-              <li class="fact-item">
-                <span class="fact-label">Campus &amp; University</span>
-                <span class="fact-val">Pune Campus &bull; Affiliated with Savitribai Phule Pune University (SPPU)</span>
+                <span class="fact-label">Campus Location</span>
+                <span class="fact-val">Lexicon MILE Campus, Wagholi, Pune</span>
               </li>
               <li class="fact-item">
                 <span class="fact-label">Official Contact</span>
@@ -659,7 +649,7 @@
 
                 <div class="initiative-card">
                   <h4>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10z"></path></svg>
                     Environmental Studies &amp; Externalities
                   </h4>
                   <p>In-depth research on aesthetic pollution, environmental degradation, negative commercial externalities, and sustainable policy frameworks for business ecosystems.</p>
@@ -678,49 +668,33 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                     Behavioural Leadership &amp; Coaching
                   </h4>
-                  <p>Empowering scholars with personal mastery, ethical accountability, and transformative self-leadership drawn from executive life coaching methodologies.</p>
+                  <p>Empowering scholars with personal mastery, ethical accountability, and transformative self-leadership drawn from executive life coaching methodologies and civic engagement.</p>
                 </div>
               </div>
             </div>
 
-            <!-- Card 3: Academic Qualifications & Research Contributions -->
+            <!-- Card 3: Academic Credentials, Scholarly Research & Leadership Journey -->
             <div class="dossier-card">
               <h3 class="dossier-card-title">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-                Academic Credentials &amp; Scholarly Research
+                Academic Credentials, Scholarly Research &amp; Leadership Journey
               </h3>
               <p class="dossier-text">
-                Dr. Soni holds rigorous academic qualifications and professional accreditations spanning prestigious universities and premier national institutions:
+                Dr. Soni holds rigorous academic qualifications, professional accreditations, and distinguished leadership appointments spanning premier national universities and professional bodies:
               </p>
               <ul style="color: #cbd5e1; font-size: 14.5px; line-height: 1.75; padding-left: 20px; margin: 16px 0;">
-                <li><strong>Doctor of Philosophy (Ph.D.):</strong> Awarded by the renowned <strong>School of Social Sciences, Gujarat University</strong>, focusing on development economics, policy, and social sciences.</li>
-                <li><strong>Master’s Degree in Management &amp; Economic Administration:</strong> Conferred by <strong>Maharshi Dayanand Saraswati University (MDSU), Ajmer</strong>, establishing deep foundations in macroeconomic administration and corporate governance.</li>
+                <li><strong>Doctor of Philosophy (Ph.D.):</strong> Conferred by the renowned <strong>School of Social Sciences, Gujarat University</strong>, focusing on development economics, policy, and societal frameworks.</li>
+                <li><strong>Master’s Degree in Management &amp; Economic Administration:</strong> Awarded by <strong>Maharshi Dayanand Saraswati University (MDSU), Ajmer</strong>, establishing deep foundations in macroeconomic administration and corporate governance.</li>
                 <li><strong>Company Secretaryship Qualifications:</strong> Successfully completed the <strong>Foundation and Intermediate levels</strong> of the Company Secretaryship programme conducted by the <strong>Institute of Company Secretaries of India (ICSI)</strong>.</li>
                 <li><strong>National Eligibility Accreditation:</strong> Qualified the <strong>UGC-GSET</strong>, verifying highest national standards in university teaching and academic scholarship.</li>
-                <li><strong>Scholarly Research &amp; Publications:</strong> Research primarily investigates Development and Environmental Studies, specifically the socioeconomic implications of <strong>aesthetic pollution and negative externalities</strong>. He has presented his peer-reviewed research across national and international academic conferences and published widely in scholarly journals.</li>
+                <li><strong>Academic Leadership Career (Since 2000):</strong> Over 24 years of academic leadership, including serving as Associate Professor at <strong>Balaji Institute of International Business (BIIB, Sri Balaji University, Pune)</strong>, and currently as Principal &amp; Professor at the <strong>Institute of Leadership and Management, Pune</strong> (Affiliated with SPPU).</li>
+                <li><strong>Scholarly Research &amp; Publications:</strong> Specializes in Development and Environmental Studies, particularly the socioeconomic implications of <strong>aesthetic pollution and negative externalities</strong>, with presentations across national/international conferences and publications in peer-reviewed journals.</li>
+                <li><strong>Professional Associations &amp; Memberships:</strong> Honorary Member of the <strong>Indo Global Chambers of Commerce, Industry and Agriculture (IGCCIA)</strong> and Life Member of the <strong>International Commerce Association</strong>.</li>
+                <li><strong>Civic Advocacy &amp; Behavioral Transformation:</strong> Active NGO advocate for <strong>traffic safety and civic responsibility</strong>, and certified Life Coach with <strong>Landmark Education’s Breakthrough Technologies</strong> supporting youth potential.</li>
               </ul>
             </div>
 
-            <!-- Card 4: Academic Leadership Career & Social Advocacy -->
-            <div class="dossier-card">
-              <h3 class="dossier-card-title">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                Career Journey, Professional Associations &amp; Civic Impact
-              </h3>
-              <p class="dossier-text">
-                Beginning his academic career in <strong>2000</strong>, Dr. Soni has held distinguished academic and administrative leadership roles across top-tier management institutions for over twenty-four years:
-              </p>
-              <ul style="color: #cbd5e1; font-size: 14.5px; line-height: 1.75; padding-left: 20px; margin: 16px 0;">
-                <li><strong>Balaji Institute of International Business (BIIB, Sri Balaji University, Pune):</strong> Served as Associate Professor, teaching international business management, research methodologies, and development economics.</li>
-                <li><strong>Principal &amp; Professor:</strong> Serving at the <strong>Institute of Leadership and Management, Pune</strong>, affiliated with Savitribai Phule Pune University (SPPU), guiding academic programs, faculty development, and university examination governance.</li>
-                <li><strong>Indo Global Chambers of Commerce, Industry and Agriculture (IGCCIA):</strong> Serving as an <strong>Honorary Member</strong>, actively contributing to industry-academia linkages, trade dialogues, and regional economic development.</li>
-                <li><strong>International Commerce Association:</strong> Proud <strong>Life Member</strong>, collaborating with global academics to foster high-impact commerce and trade research.</li>
-                <li><strong>Civic &amp; Road Safety Advocacy:</strong> Associated with an NGO dedicated to <strong>traffic safety, civic responsibility, and public awareness</strong>, instilling community consciousness in students and citizens alike.</li>
-                <li><strong>Behavioural Development &amp; Life Coach:</strong> Contributed as a Life Coach with <strong>Landmark Education’s Breakthrough Technologies</strong>, spearheading human-potential and behavioral-transformation initiatives.</li>
-              </ul>
-            </div>
-
-            <!-- Card 5: Associated Academic Programs -->
+            <!-- Card 4: Associated Academic Programs -->
             <div class="dossier-card">
               <h3 class="dossier-card-title">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
