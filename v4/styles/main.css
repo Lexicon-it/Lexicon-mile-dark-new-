@@ -15669,14 +15669,15 @@ a.mega-link-large {
     font-size: 12px;
     color: var(--muted);
     transition: transform 0.3s ease;
+    transform: rotate(0deg) !important;
 }
 
-.mobile-nav-details[open] summary::after {
-    transform: rotate(180deg);
+.mobile-nav-details[open] > summary::after {
+    transform: rotate(180deg) !important;
 }
 
 /* Remove bottom border from summary when open */
-.mobile-nav-details[open] summary {
+.mobile-nav-details[open] > summary {
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
@@ -15728,16 +15729,18 @@ a.mega-link-large {
     color: var(--muted, #94a3b8);
     margin-left: auto;
     transition: transform 0.3s ease, color 0.2s ease;
+    transform: rotate(0deg) !important;
 }
 
 .mobile-sub-details[open] > .mobile-sub-summary::after {
-    transform: rotate(180deg);
+    transform: rotate(180deg) !important;
     color: #4a8ae2;
 }
 
 .mobile-sub-details[open] > .mobile-sub-summary {
     color: #ffffff;
 }
+
 
 .mobile-sub-submenu {
     padding-left: 14px;

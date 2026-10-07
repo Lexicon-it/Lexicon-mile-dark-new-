@@ -1,0 +1,248 @@
+- generic [active] [ref=f4e1]:
+  - link "Skip to content" [ref=f4e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f4e4]:
+    - generic [ref=f4e5]:
+      - generic [ref=f4e6]: Admission Open 2027
+      - link "+91 9967427278" [ref=f4e8] [cursor=pointer]:
+        - /url: tel:+919967427278
+      - link "admissions@mile.education" [ref=f4e10] [cursor=pointer]:
+        - /url: mailto:admissions@mile.education
+    - navigation "Secondary navigation" [ref=f4e11]:
+      - link "Campus Tour" [ref=f4e12] [cursor=pointer]:
+        - /url: http://localhost:8089/campus-tour.html
+      - link "Events & Webinar" [ref=f4e13] [cursor=pointer]:
+        - /url: http://localhost:8089/events-webinars.html
+      - link "Partnerships" [ref=f4e14] [cursor=pointer]:
+        - /url: http://localhost:8089/partnerships.html
+      - link "Alumni" [ref=f4e15] [cursor=pointer]:
+        - /url: http://localhost:8089/alumni.html
+      - link "Virtual Tour" [ref=f4e16] [cursor=pointer]:
+        - /url: http://localhost:8089/virtual-tour.html
+  - banner [ref=f4e17]:
+    - generic [ref=f4e18]:
+      - link "Lexicon MILE home" [ref=f4e19] [cursor=pointer]:
+        - /url: http://localhost:8089/index.html
+        - img "Lexicon MILE" [ref=f4e20]
+      - navigation "Main navigation" [ref=f4e21]:
+        - link "ABOUT US" [ref=f4e23] [cursor=pointer]:
+          - /url: "#about"
+        - link "AI LABS" [ref=f4e27] [cursor=pointer]:
+          - /url: http://localhost:8089/ai-lab.html
+        - link "PROGRAMS" [ref=f4e29] [cursor=pointer]:
+          - /url: "#programs"
+        - link "ADMISSIONS" [ref=f4e33] [cursor=pointer]:
+          - /url: "#admissions"
+        - link "FACULTY & MENTORS" [ref=f4e37] [cursor=pointer]:
+          - /url: "#faculty"
+        - link "PLACEMENTS" [ref=f4e41] [cursor=pointer]:
+          - /url: "#placements"
+        - link "MORE" [ref=f4e45] [cursor=pointer]:
+          - /url: "#student-life"
+        - link "CONTACT" [ref=f4e49] [cursor=pointer]:
+          - /url: http://localhost:8089/contact.html
+      - link "APPLY NOW ↗" [ref=f4e50] [cursor=pointer]:
+        - /url: https://admissions.lexiconmile.com/
+        - text: APPLY NOW
+        - generic [ref=f4e51]: ↗
+  - text: ▼ ▼ ▼ ▼ ▼ ▼ ▼
+  - main [ref=f4e52]:
+    - generic [ref=f4e54]:
+      - navigation "Breadcrumb" [ref=f4e55]:
+        - link "Home" [ref=f4e56] [cursor=pointer]:
+          - /url: index.html
+        - generic [ref=f4e57]: /
+        - link "About Us" [ref=f4e58] [cursor=pointer]:
+          - /url: about-lexicon.html
+        - generic [ref=f4e59]: /
+        - generic [ref=f4e60]: From the Vice Chairman's Desk
+      - generic [ref=f4e61]:
+        - generic [ref=f4e62]:
+          - paragraph [ref=f4e63]: VICE CHAIRMAN · THE LEXICON GROUP
+          - heading "From the Vice Chairman’s Desk." [level=1] [ref=f4e64]
+        - paragraph [ref=f4e65]: Inspiring contemporary pedagogies, ethical leadership, and empowering agile minds across India.
+    - generic [ref=f4e67]:
+      - generic [ref=f4e68]:
+        - complementary [ref=f4e69]:
+          - generic [ref=f4e70]:
+            - img "Mr. Neeraj Sharma, Vice Chairman of The Lexicon Group" [ref=f4e72]
+            - generic [ref=f4e73]:
+              - generic [ref=f4e74]: Vice Chairman & Director
+              - heading "Mr. Neeraj Sharma" [level=2] [ref=f4e75]
+              - paragraph [ref=f4e76]:
+                - text: Vice Chairman
+                - strong [ref=f4e77]: The Lexicon Group of Institutes
+              - generic [ref=f4e78]:
+                - generic [ref=f4e79]: Industry Relevance
+                - generic [ref=f4e80]: Contemporary Pedagogy
+                - generic [ref=f4e81]: Global Standards
+          - generic [ref=f4e82]: “A genuine smile with glitter in the eyes of the student is the only true return on investment in the noble pursuit of education.”
+        - article [ref=f4e83]:
+          - generic [ref=f4e84]:
+            - heading "Dear Students, Parents, & Well-Wishers," [level=2] [ref=f4e85]
+            - generic [ref=f4e86]:
+              - paragraph [ref=f4e87]: The Lexicon Management Institute of Leadership & Excellence carries a legacy as old as 2006, when the first Lexicon International School was established in Wagholi. Lexicon Management Institute of Leadership & Excellence was formed in the year 2009 and we have successfully completed a decade and more of excellence in higher management education.
+              - paragraph [ref=f4e88]: Lexicon Management Institute of Leadership & Excellence has achieved a great feat within a short span of time. Embarking on the path of successfully running a business school situated in Pune has not been a cake walk. We have been strong in our resolution to provide an ever evolving and expanding high quality education inculcating each domain of knowledge and catering only the best to the inquisitive and intellectual minds of India.
+              - paragraph [ref=f4e90]: “The USP of Lexicon MILE lies in its contemporary pedagogies which, in coalition with positive outlook, enviable global standards and great emphasis on moral values, makes us a league apart from our contemporaries.”
+              - paragraph [ref=f4e91]: We take great pride in imparting traditional and social responsibilities, which are invoked in our scholars via frequent and timely celebration of all festivals in accordance with the spirit of national secularism. We are highly conscious of the great challenges which lie ahead on this path of nation building which requires great dedication and humble service from the entire Lexicon MILE family. Still, there is a lot which is left to be done.
+              - paragraph [ref=f4e92]: There is a gap in the need of industry for skilled, efficient, adaptable and honest human resources as only 70% of students studying in business schools are employable. To bridge this gap, the most talented team at Lexicon MILE with the help of extremely enlightened people from academia have created the syllabus and processes which are in sync with today’s industry needs. To explore, innovate and execute is a habit of Lexiconites.
+              - paragraph [ref=f4e93]: "Last but not the least are these famous lines from Robert Frost: “But I have promises to keep & miles to go before I sleep.”"
+          - generic [ref=f4e94]:
+            - generic [ref=f4e95]:
+              - generic [ref=f4e96]: Mr. Neeraj Sharma
+              - paragraph [ref=f4e97]: Vice Chairman, The Lexicon Group
+            - generic [ref=f4e98]:
+              - generic [ref=f4e99]: Executive Leadership
+              - strong [ref=f4e100]: The Lexicon Group · Vice Chairman's Office
+      - generic [ref=f4e101]:
+        - generic [ref=f4e102]:
+          - paragraph [ref=f4e103]: OUR GUIDING PRINCIPLES
+          - heading "Pillars of the Lexicon Philosophy." [level=2] [ref=f4e104]
+        - paragraph [ref=f4e105]: The foundational ideals established in 2006 that continue to shape education, character, and leadership.
+      - generic [ref=f4e106]:
+        - generic [ref=f4e107]:
+          - generic [ref=f4e108]: "01"
+          - heading "Contemporary Pedagogy" [level=3] [ref=f4e109]
+          - paragraph [ref=f4e110]: Evolving curriculums designed with academic visionaries and industry captains, blending global standards with grounded traditional values.
+        - generic [ref=f4e111]:
+          - generic [ref=f4e112]: "02"
+          - heading "Bridging Employability" [level=3] [ref=f4e113]
+          - paragraph [ref=f4e114]: Closing the industry-academia gap with rigorous practical training, 20+ specialized certifications, and hands-on corporate project execution.
+        - generic [ref=f4e115]:
+          - generic [ref=f4e116]: "03"
+          - heading "Social Responsibility" [level=3] [ref=f4e117]
+          - paragraph [ref=f4e118]: Fostering cultural empathy, secular values, and nation-building dedication that prepares students to lead businesses with conscience.
+    - generic [ref=f4e121]:
+      - generic [ref=f4e122]:
+        - generic [ref=f4e123]:
+          - paragraph [ref=f4e124]: ADMISSIONS OPEN 2026–28
+          - heading "Your Next Chapter Starts Here." [level=2] [ref=f4e125]: Your Next ChapterStarts Here.
+          - paragraph [ref=f4e126]: Build the skills, network and perspective to lead in an evolving business world under the guidance of visionary leaders.
+          - generic [ref=f4e127]:
+            - link "Apply Now ↗" [ref=f4e128] [cursor=pointer]:
+              - /url: https://admissions.lexiconmile.com/
+              - text: Apply Now
+              - generic [ref=f4e129]: ↗
+            - link "Explore Programs ↗" [ref=f4e130] [cursor=pointer]:
+              - /url: index.html#programs
+              - text: Explore Programs
+              - generic [ref=f4e131]: ↗
+            - link "Connect With Admissions ↗" [ref=f4e132] [cursor=pointer]:
+              - /url: contact.html
+              - text: Connect With Admissions
+              - generic [ref=f4e133]: ↗
+        - generic [ref=f4e134]:
+          - img "Lexicon MILE Campus Building" [ref=f4e135]
+          - generic [aria-hidden]: ↗
+      - generic [ref=f4e136]:
+        - generic [ref=f4e137]: THE FUTURE DOESN'T WAIT. NEITHER SHOULD YOU.
+        - generic [ref=f4e138]: LEXICON MILE / PUNE
+  - contentinfo [ref=f4e139]:
+    - generic [ref=f4e140]:
+      - generic [ref=f4e141]:
+        - generic [ref=f4e142]:
+          - link "Lexicon MILE home" [ref=f4e143] [cursor=pointer]:
+            - /url: http://localhost:8089/index.html
+            - img "Lexicon MILE" [ref=f4e144]
+          - paragraph [ref=f4e145]: Building future-ready leaders through industry-integrated business education.
+          - generic [ref=f4e146]: Pune, Maharashtra, India
+          - link "Let's start a conversation ↗" [ref=f4e149] [cursor=pointer]:
+            - /url: http://localhost:8089/contact.html
+        - generic [ref=f4e150]:
+          - heading "QUICK LINKS" [level=3] [ref=f4e151]
+          - link "PGDM Fee Portal" [ref=f4e152] [cursor=pointer]:
+            - /url: http://localhost:8089/fee.html
+          - link "Contact" [ref=f4e153] [cursor=pointer]:
+            - /url: http://localhost:8089/contact.html
+          - link "Careers" [ref=f4e154] [cursor=pointer]:
+            - /url: http://localhost:8089/careers-at-lexicon-mile.html
+          - link "Blog" [ref=f4e155] [cursor=pointer]:
+            - /url: http://localhost:8089/lexicon-blog.html
+          - link "Events & Webinar" [ref=f4e156] [cursor=pointer]:
+            - /url: http://localhost:8089/events-webinars.html
+          - link "Partnerships" [ref=f4e157] [cursor=pointer]:
+            - /url: http://localhost:8089/partnerships.html
+          - link "Alumni" [ref=f4e158] [cursor=pointer]:
+            - /url: http://localhost:8089/alumni.html
+          - link "Campus Tour" [ref=f4e159] [cursor=pointer]:
+            - /url: http://localhost:8089/campus-tour.html
+          - link "360° Virtual Tour" [ref=f4e160] [cursor=pointer]:
+            - /url: http://localhost:8089/virtual-tour.html
+        - generic [ref=f4e161]:
+          - heading "PGDM/MBA GLOBAL" [level=3] [ref=f4e162]
+          - link "PGDM Eligibility" [ref=f4e163] [cursor=pointer]:
+            - /url: http://localhost:8089/admission.html#eligibility
+          - link "How to Apply for MBA Global" [ref=f4e164] [cursor=pointer]:
+            - /url: http://localhost:8089/admission.html#how-to-apply
+          - link "PGDM/MBA Global Course Fees" [ref=f4e165] [cursor=pointer]:
+            - /url: http://localhost:8089/fee.html
+          - link "PGDM/MBA Global Scholarship" [ref=f4e166] [cursor=pointer]:
+            - /url: http://localhost:8089/scholarship.html
+        - generic [ref=f4e167]:
+          - heading "EXPLORE" [level=3] [ref=f4e168]
+          - link "FAQ'S" [ref=f4e169] [cursor=pointer]:
+            - /url: http://localhost:8089/faqs.html
+          - link "Mandatory Disclosure" [ref=f4e170] [cursor=pointer]:
+            - /url: http://localhost:8089/mandatory-disclosure-lexicon-mile.html
+          - 'link "Self Assessment Report (SAAR) : Marketing & Finance" [ref=f4e171] [cursor=pointer]':
+            - /url: https://lexiconmile.com/wp-content/uploads/2027/02/Updated-Self-Assesment-Report-SAR-Marketing-Finance-submitted-on-31st-Jan-2027.pdf
+          - link "Audit Report" [ref=f4e172] [cursor=pointer]:
+            - /url: https://lexiconmile.com/wp-content/uploads/2027/02/Audit-Report.pdf
+          - link "Student Rules & Regulation" [ref=f4e173] [cursor=pointer]:
+            - /url: http://localhost:8089/student-rules-regulations.html
+          - link "Partnerships" [ref=f4e174] [cursor=pointer]:
+            - /url: http://localhost:8089/partnerships.html
+          - link "Research Publications" [ref=f4e175] [cursor=pointer]:
+            - /url: http://localhost:8089/research.html
+          - link "Anti Ragging Cell" [ref=f4e176] [cursor=pointer]:
+            - /url: https://lexiconmile.com/wp-content/uploads/2025/11/Anti-Ragging-Committee.pdf
+        - generic [ref=f4e177]:
+          - heading "INFORMATION" [level=3] [ref=f4e178]
+          - generic [ref=f4e179]:
+            - strong [ref=f4e180]: For Admission Enquiries
+            - generic [ref=f4e181]: "Phone: +91 99674 27278"
+            - generic [ref=f4e182]: "Phone: +91 8956059559"
+            - generic [ref=f4e183]: "Email: admissions@mile.education"
+          - generic [ref=f4e184]:
+            - strong [ref=f4e185]: For Placement Queries
+            - generic [ref=f4e186]: "Phone: +91 99674 27278"
+            - generic [ref=f4e187]: "Email: placements@mile.education"
+          - generic [ref=f4e188]:
+            - strong [ref=f4e189]: For Other Queries
+            - generic [ref=f4e190]: "Phone: +91 91460 14951"
+            - generic [ref=f4e191]: "Email: info@mile.education"
+      - generic [aria-hidden] [ref=f4e192]: LEARN IT BUILD IT LIVE IT
+      - generic [ref=f4e193]:
+        - generic [ref=f4e194]:
+          - generic [ref=f4e195]:
+            - link "Privacy Policy" [ref=f4e196] [cursor=pointer]:
+              - /url: http://localhost:8089/privacy-policy.html
+            - link "Terms & Conditions" [ref=f4e197] [cursor=pointer]:
+              - /url: http://localhost:8089/terms-conditions.html
+          - generic [ref=f4e198]:
+            - link "Facebook" [ref=f4e199] [cursor=pointer]:
+              - /url: https://www.facebook.com/LexiconMILE
+            - link "Instagram" [ref=f4e202] [cursor=pointer]:
+              - /url: https://www.instagram.com/lexicon_mile_/
+            - link "YouTube" [ref=f4e205] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCufTVHSl_Md5L9zeWUBwsew
+            - link "LinkedIn" [ref=f4e208] [cursor=pointer]:
+              - /url: https://www.linkedin.com/school/lexicon-mile/
+            - link "WhatsApp" [ref=f4e211] [cursor=pointer]:
+              - /url: https://api.whatsapp.com/send/?phone=%2B919967427278&text&type=phone_number&app_absent=0
+        - generic [ref=f4e214]: An initiative of Sukhdev and Kamal Sharma Educational Trust
+        - generic [ref=f4e215]:
+          - generic [ref=f4e216]: © Copyright LexiconMile. All Rights Reserved. Designed by Lexicon
+          - link "Back to top" [ref=f4e217] [cursor=pointer]:
+            - /url: "#"
+            - text: BACK TO TOP ↑
+  - complementary "Quick actions" [ref=f4e218]:
+    - button "Apply now" [ref=f4e219] [cursor=pointer]
+    - button "Download brochure" [ref=f4e222] [cursor=pointer]
+    - button "WhatsApp contact information" [ref=f4e225] [cursor=pointer]
+    - button "Call contact information" [ref=f4e228] [cursor=pointer]
+  - status
+  - generic [aria-hidden]:
+    - generic:
+      - button: ×
+      - iframe [ref=f4e231]
