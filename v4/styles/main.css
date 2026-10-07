@@ -1496,6 +1496,34 @@ a.mega-link-large {
     gap: 22px
 }
 
+.faculty-marquee-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 10px 0 20px;
+}
+
+.faculty-marquee-track {
+    display: flex;
+    gap: 22px;
+    width: max-content;
+    animation: scroll-faculty 35s linear infinite;
+}
+
+.faculty-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.faculty-marquee-track .leader-card {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+@keyframes scroll-faculty {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 11px)); }
+}
+
 .portrait {
     height: 318px;
     border-radius: 8px;
@@ -5879,9 +5907,9 @@ a.mega-link-large {
 /* ==========================================================================
    SECTION 3: SCALE & IMPACT (4 BALANCED LUXURY GLASS CARDS)
    ========================================================================== */
-.about-impact-section {
-    padding: 72px 0 68px;
-    background: radial-gradient(circle at 50% 50%, rgba(7, 59, 145, 0.12) 0%, #05070c 80%);
+.legacy-section {
+    padding: 60px 0;
+    background: #061b45;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     position: relative;
@@ -16004,14 +16032,15 @@ a.mega-link-large {
     font-size: 12px;
     color: var(--muted);
     transition: transform 0.3s ease;
+    transform: rotate(0deg) !important;
 }
 
-.mobile-nav-details[open] summary::after {
-    transform: rotate(180deg);
+.mobile-nav-details[open] > summary::after {
+    transform: rotate(180deg) !important;
 }
 
 /* Remove bottom border from summary when open */
-.mobile-nav-details[open] summary {
+.mobile-nav-details[open] > summary {
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
@@ -16063,16 +16092,18 @@ a.mega-link-large {
     color: var(--muted, #94a3b8);
     margin-left: auto;
     transition: transform 0.3s ease, color 0.2s ease;
+    transform: rotate(0deg) !important;
 }
 
 .mobile-sub-details[open] > .mobile-sub-summary::after {
-    transform: rotate(180deg);
+    transform: rotate(180deg) !important;
     color: #4a8ae2;
 }
 
 .mobile-sub-details[open] > .mobile-sub-summary {
     color: #ffffff;
 }
+
 
 .mobile-sub-submenu {
     padding-left: 14px;
@@ -16254,5 +16285,143 @@ a.mega-link-large {
         max-height: 56px !important;
         width: auto !important;
     }
+}
+
+/* ==========================================================================
+   PATCH 20: LEGACY SECTION MOBILE FIX (BACKGROUND & GRID)
+   ========================================================================== */
+@media (max-width: 991px) {
+    .legacy-section {
+        background: #061b45 !important;
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    .legacy-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1.05fr !important;
+        gap: 30px 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .legacy-grid {
+        grid-template-columns: 1fr 1.05fr !important;
+    }
+}
+
+/* ==========================================================================
+   VIDEO MARQUEE SECTION
+   ========================================================================== */
+.video-marquee-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 20px 0 40px;
+}
+
+.video-marquee-track {
+    display: flex;
+    gap: 22px;
+    width: max-content;
+    animation: scroll-videos 55s linear infinite;
+}
+
+.video-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.video-card {
+    width: 380px;
+    height: 240px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #090e17;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: block;
+    padding: 15px;
+}
+
+.video-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.video-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: filter 0.3s ease;
+}
+
+.video-card:hover img {
+    filter: brightness(1.1);
+}
+
+.video-card .play-button {
+    top: 30px;
+    left: 30px;
+    width: 46px;
+    height: 46px;
+}
+
+@keyframes scroll-videos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 11px)); }
+}
+
+/* ==========================================================================
+   RECRUITER MARQUEE SECTION
+   ========================================================================== */
+.recruiter-marquee-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+    margin: 40px auto 30px;
+}
+
+.recruiter-marquee-track {
+    display: flex;
+    gap: 15px;
+    width: max-content;
+    animation: scroll-recruiters 45s linear infinite;
+}
+
+.recruiter-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.recruiter-marquee-card {
+    width: 200px;
+    height: 120px;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.05);
+    overflow: hidden;
+}
+
+.recruiter-marquee-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: none;
+    mix-blend-mode: multiply;
+}
+
+@keyframes scroll-recruiters {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 7.5px)); }
 }
 

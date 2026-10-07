@@ -369,14 +369,14 @@ const awardsGrid = document.getElementById('awards-grid');
 if (awardsGrid) awardsGrid.innerHTML = awards.map((award, index) => `<article class="award-item reveal"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#award"/></svg><span class="award-index">${String(index + 1).padStart(2, '0')}</span><h3>${award.title}</h3><p class="award-subtitle">${award.subtitle}</p></article>`).join('');
 
 const activities = [
-  { title: 'Clubs & Communities', image: 'activities/act1', description: 'Find your people. Exchange perspectives. Build something bigger together.' },
-  { title: 'Competitions', image: 'activities/act2', description: 'Take on new challenges and turn bold ideas into your competitive edge.' },
-  { title: 'Events & Experiences', image: 'activities/act3', description: 'Be part of the moments, conversations and celebrations that stay with you.' },
-  { title: 'Industry Visits', image: 'activities/act4', description: 'Go behind the scenes and see the world of business in motion.' },
-  { title: 'Workshops', image: 'activities/act5', description: 'Get hands-on with new tools, fresh perspectives and real-world skills.' },
-  { title: 'Student Activities', image: 'activities/act6', description: 'Make room for curiosity, collaboration and a little friendly competition.' },
-  { title: 'Entrepreneurship', image: 'activities/act7', description: 'Challenge assumptions. Test an idea. Take the first step towards building it.' },
-  { title: 'Leadership', image: 'activities/act8', description: 'Learn to inspire a team, take ownership and create meaningful change.' }
+  { title: 'Clubs & Communities', image: 'degree/Clubs & Communities', description: 'Find your people. Exchange perspectives. Build something bigger together.' },
+  { title: 'Competitions', image: 'degree/Competitions', description: 'Take on new challenges and turn bold ideas into your competitive edge.' },
+  { title: 'Events & Experiences', image: 'degree/Events & Experiences', description: 'Be part of the moments, conversations and celebrations that stay with you.' },
+  { title: 'Industry Visits', image: 'degree/Industry Visits', description: 'Go behind the scenes and see the world of business in motion.' },
+  { title: 'Workshops', image: 'degree/Workshops', description: 'Get hands-on with new tools, fresh perspectives and real-world skills.' },
+  { title: 'Student Activities', image: 'degree/Student Activities', description: 'Make room for curiosity, collaboration and a little friendly competition.' },
+  { title: 'Entrepreneurship', image: 'degree/Entrepreneurship', description: 'Challenge assumptions. Test an idea. Take the first step towards building it.' },
+  { title: 'Leadership', image: 'degree/Leadership', description: 'Learn to inspire a team, take ownership and create meaningful change.' }
 ];
 const lifeTrackEl = document.getElementById('life-track');
 if (lifeTrackEl) lifeTrackEl.innerHTML = activities.map((activity, index) => `<article class="life-card"><div class="life-image"><img src="images/${activity.image}.jpg" alt="Illustrative ${activity.title.toLowerCase()} experience" loading="lazy" width="700" height="470"><span>${String(index + 1).padStart(2, '0')}</span></div><h3>${activity.title}</h3><p>${activity.description}</p></article>`).join('');

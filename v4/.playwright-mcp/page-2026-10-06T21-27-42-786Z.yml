@@ -1,0 +1,426 @@
+- generic [active] [ref=f10e1]:
+  - link "Skip to content" [ref=f10e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f10e3]:
+    - generic [ref=f10e4]:
+      - link "Lexicon MILE home" [ref=f10e5] [cursor=pointer]:
+        - /url: http://localhost:8089/index.html
+        - img "Lexicon MILE" [ref=f10e6]
+      - button "Open menu" [ref=f10e7] [cursor=pointer]
+  - text: ▼ ▼ ▼ ▼ ▼ ▼ ▼
+  - main [ref=f10e11]:
+    - generic [ref=f10e13]:
+      - navigation "Breadcrumb" [ref=f10e14]:
+        - link "Home" [ref=f10e15] [cursor=pointer]:
+          - /url: index.html
+        - generic [ref=f10e16]: /
+        - link "About Us" [ref=f10e17] [cursor=pointer]:
+          - /url: about-lexicon.html
+        - generic [ref=f10e18]: /
+        - generic [ref=f10e19]: From the Vice Chairman's Desk
+      - generic [ref=f10e20]:
+        - generic [ref=f10e21]:
+          - generic [ref=f10e22]: Est. 2006 Educational Legacy
+          - generic [ref=f10e25]: Bridging the 70% Employability Gap
+          - generic [ref=f10e29]: Values, Ethics & Conscience
+        - generic [ref=f10e32]: EXECUTIVE LEADERSHIP · THE LEXICON GROUP
+        - heading "From the Vice Chairman’s Desk." [level=1] [ref=f10e34]
+        - paragraph [ref=f10e35]: Inspiring contemporary pedagogies, ethical leadership, and empowering agile minds across India to lead with confidence, competence, and humility.
+      - generic [ref=f10e37]:
+        - generic [ref=f10e38]:
+          - img "Mr. Neeraj Sharma, Vice Chairman of The Lexicon Group" [ref=f10e39]
+          - generic [ref=f10e40]:
+            - generic [ref=f10e41]: ►
+            - generic [ref=f10e42]: Executive Perspective · 3 Min Read
+        - generic [ref=f10e43]:
+          - generic [ref=f10e44]:
+            - generic [ref=f10e45]: Vice Chairman & Director
+            - generic [ref=f10e46]: The Lexicon Group of Institutes
+          - heading "Mr. Neeraj Sharma" [level=2] [ref=f10e47]
+          - paragraph [ref=f10e48]: Guiding higher management excellence, pedagogical innovation, and holistic student empowerment.
+          - paragraph [ref=f10e50]: “A genuine smile with glitter in the eyes of the student is the only true return on investment in the noble pursuit of education.”
+          - generic [ref=f10e51]:
+            - generic [ref=f10e52]: Industry Relevance
+            - generic [ref=f10e53]: Contemporary Pedagogy
+            - generic [ref=f10e54]: Global Standards
+            - generic [ref=f10e55]: Social Responsibility
+            - generic [ref=f10e56]: Ethical Governance
+    - generic [ref=f10e58]:
+      - generic [ref=f10e59]:
+        - generic [ref=f10e60]: OUR GUIDING ETHOS
+        - heading "Pillars of the Lexicon Philosophy." [level=2] [ref=f10e62]
+        - paragraph [ref=f10e63]: The foundational ideals established in 2006 that continue to shape education, character, and leadership across all institutions.
+      - generic [ref=f10e64]:
+        - generic [ref=f10e65]:
+          - heading "Contemporary Pedagogy" [level=3] [ref=f10e70]
+          - paragraph [ref=f10e71]: Evolving curriculums designed in coalition with academic visionaries and industry captains, blending rigorous international benchmarks with grounded traditional values.
+          - generic [ref=f10e72]:
+            - generic [ref=f10e73]: Dynamic Syllabus · Real-world Cases
+            - generic [ref=f10e74]: →
+        - generic [ref=f10e75]:
+          - heading "Bridging Employability" [level=3] [ref=f10e80]
+          - paragraph [ref=f10e81]: Overcoming the 70% industry employability gap with intensive practical application, 20+ specialized certifications, and immersive hands-on project execution.
+          - generic [ref=f10e82]:
+            - generic [ref=f10e83]: Day-One Ready · 20+ Certifications
+            - generic [ref=f10e84]: →
+        - generic [ref=f10e85]:
+          - heading "Social Responsibility" [level=3] [ref=f10e89]
+          - paragraph [ref=f10e90]: Fostering cultural empathy, secular values, and nation-building dedication that prepares students to lead businesses with moral fortitude and human conscience.
+          - generic [ref=f10e91]:
+            - generic [ref=f10e92]: Secular Values · Ethical Leadership
+            - generic [ref=f10e93]: →
+    - generic [ref=f10e96]:
+      - complementary [ref=f10e97]:
+        - generic [ref=f10e98]:
+          - img "Lexicon MILE Campus Building" [ref=f10e99]
+          - generic [ref=f10e100]: Pune Campus
+        - generic [ref=f10e101]:
+          - generic [ref=f10e102]:
+            - generic [ref=f10e103]: 15+
+            - generic [ref=f10e104]: Years of Higher Management Excellence (Est. 2009)
+          - generic [ref=f10e105]:
+            - generic [ref=f10e106]: 100%
+            - generic [ref=f10e107]: Mentorship Commitment with Fortune 500 CXOs
+        - generic [ref=f10e112]:
+          - strong [ref=f10e113]: Executive Leadership Directive
+          - generic [ref=f10e114]: The Lexicon Group · Vice Chairman's Desk
+      - article [ref=f10e115]:
+        - generic [ref=f10e116]:
+          - generic [ref=f10e117]: OFFICIAL ADDRESS
+          - heading "Dear Students, Parents, & Well-Wishers," [level=2] [ref=f10e119]
+        - generic [ref=f10e120]:
+          - paragraph [ref=f10e121]: The Lexicon Management Institute of Leadership & Excellence carries a legacy as old as 2006, when the first Lexicon International School was established in Wagholi. Lexicon Management Institute of Leadership & Excellence was formed in the year 2009 and we have successfully completed a decade and more of excellence in higher management education.
+          - paragraph [ref=f10e122]: Lexicon Management Institute of Leadership & Excellence has achieved a great feat within a short span of time. Embarking on the path of successfully running a business school situated in Pune has not been a cake walk. We have been strong in our resolution to provide an ever evolving and expanding high quality education inculcating each domain of knowledge and catering only the best to the inquisitive and intellectual minds of India.
+          - paragraph [ref=f10e124]: “The USP of Lexicon MILE lies in its contemporary pedagogies which, in coalition with positive outlook, enviable global standards and great emphasis on moral values, makes us a league apart from our contemporaries.”
+          - paragraph [ref=f10e125]: We take great pride in imparting traditional and social responsibilities, which are invoked in our scholars via frequent and timely celebration of all festivals in accordance with the spirit of national secularism. We are highly conscious of the great challenges which lie ahead on this path of nation building which requires great dedication and humble service from the entire Lexicon MILE family. Still, there is a lot which is left to be done.
+          - paragraph [ref=f10e126]: There is a gap in the need of industry for skilled, efficient, adaptable and honest human resources as only 70% of students studying in business schools are employable. To bridge this gap, the most talented team at Lexicon MILE with the help of extremely enlightened people from academia have created the syllabus and processes which are in sync with today’s industry needs. To explore, innovate and execute is a habit of Lexiconites.
+          - generic [ref=f10e127]:
+            - text: "Last but not the least are these famous lines from Robert Frost:"
+            - strong [ref=f10e128]: “But I have promises to keep & miles to go before I sleep.”
+        - generic [ref=f10e129]:
+          - generic [ref=f10e130]:
+            - generic [ref=f10e131]: Mr. Neeraj Sharma
+            - heading "Mr. Neeraj Sharma" [level=3] [ref=f10e132]
+            - paragraph [ref=f10e133]: Vice Chairman, The Lexicon Group of Institutes
+          - generic [ref=f10e134]:
+            - generic [ref=f10e135]: Office of the Vice Chairman
+            - strong [ref=f10e136]: Lexicon MILE · Pune
+    - generic [ref=f10e138]:
+      - generic [ref=f10e139]:
+        - generic [ref=f10e140]: STRATEGIC FOCUS
+        - heading "Programs Guided by Leadership Vision." [level=2] [ref=f10e142]
+        - paragraph [ref=f10e143]: Curated pathways engineered under executive guidance to produce agile, industry-ready, and conscientious leaders for an evolving global economy.
+      - generic [ref=f10e144]:
+        - generic [ref=f10e145]:
+          - generic [ref=f10e146]:
+            - img "Post Graduate Diploma in Management (PGDM)" [ref=f10e147]
+            - generic [ref=f10e148]: Flagship PGDM
+          - generic [ref=f10e149]:
+            - heading "Post Graduate Diploma in Management (PGDM)" [level=3] [ref=f10e150]
+            - paragraph [ref=f10e151]: AICTE-approved 2-year full-time curriculum with dual specializations in Marketing, Finance, HR & Business Analytics.
+            - generic [ref=f10e152]:
+              - generic [ref=f10e153]: 2 Years · Full Time
+              - link "Explore Program →" [ref=f10e154] [cursor=pointer]:
+                - /url: pgdm.html
+        - generic [ref=f10e155]:
+          - generic [ref=f10e156]:
+            - img "Global MBA Program" [ref=f10e157]
+            - generic [ref=f10e158]: Global Track
+          - generic [ref=f10e159]:
+            - heading "Global MBA Alliances" [level=3] [ref=f10e160]
+            - paragraph [ref=f10e161]: Dual degree pathways with University of South Wales (UK) and international business schools for overseas exposure.
+            - generic [ref=f10e162]:
+              - generic [ref=f10e163]: International · Dual Degree
+              - link "Explore Program →" [ref=f10e164] [cursor=pointer]:
+                - /url: global-mba.html
+        - generic [ref=f10e165]:
+          - generic [ref=f10e166]:
+            - img "AI & Emerging Tech Lab" [ref=f10e167]
+            - generic [ref=f10e168]: Innovation Hub
+          - generic [ref=f10e169]:
+            - heading "AI & Emerging Technologies Lab" [level=3] [ref=f10e170]
+            - paragraph [ref=f10e171]: Hands-on sandbox empowering future managers with generative AI, prompt engineering, predictive models, and automation.
+            - generic [ref=f10e172]:
+              - generic [ref=f10e173]: Applied Tech · Modern Lab
+              - link "Explore Program →" [ref=f10e174] [cursor=pointer]:
+                - /url: ai-lab.html
+        - generic [ref=f10e175]:
+          - generic [ref=f10e176]:
+            - img "20+ Industry Certifications" [ref=f10e177]
+            - generic [ref=f10e178]: Employability
+          - generic [ref=f10e179]:
+            - heading "20+ Industry-Recognized Certifications" [level=3] [ref=f10e180]
+            - paragraph [ref=f10e181]: Embedded skill suites including SAP, Six Sigma Green Belt, Advanced Excel, Supply Chain, and Digital Marketing.
+            - generic [ref=f10e182]:
+              - generic [ref=f10e183]: Multi-Certified · Industry Synced
+              - link "View Details →" [ref=f10e184] [cursor=pointer]:
+                - /url: admission.html
+        - generic [ref=f10e185]:
+          - generic [ref=f10e186]:
+            - img "Executive Mentorship Network" [ref=f10e187]
+            - generic [ref=f10e188]: Leadership Network
+          - generic [ref=f10e189]:
+            - heading "A Mentor Every MILE" [level=3] [ref=f10e190]
+            - paragraph [ref=f10e191]: One-on-one executive mentorship pairing students with Fortune 500 CXOs, alumni leaders, and industry practitioners.
+            - generic [ref=f10e192]:
+              - generic [ref=f10e193]: Direct Access · 1-on-1 Coaching
+              - link "Meet Mentors →" [ref=f10e194] [cursor=pointer]:
+                - /url: faculty-mentors.html
+        - generic [ref=f10e195]:
+          - generic [ref=f10e196]:
+            - img "Social Responsibility and Ethics" [ref=f10e197]
+            - generic [ref=f10e198]: Ethical Values
+          - generic [ref=f10e199]:
+            - heading "Social Immersion & Nation Building" [level=3] [ref=f10e200]
+            - paragraph [ref=f10e201]: Community engagement, rural immersions, and secular cultural celebrations fostering empathetic, conscience-driven leadership.
+            - generic [ref=f10e202]:
+              - generic [ref=f10e203]: Cultural Empathy · Ethics
+              - link "Discover Life →" [ref=f10e204] [cursor=pointer]:
+                - /url: campus-life.html
+    - generic [ref=f10e207]:
+      - generic [ref=f10e208]:
+        - generic [ref=f10e209]:
+          - generic [ref=f10e210]: THE LEXICON ECOSYSTEM
+          - heading "Empowering Over 25,000+ Learners Across The Lexicon Group." [level=2] [ref=f10e212]
+          - paragraph [ref=f10e213]: From foundational schooling in Wagholi to premier business and hospitality education, our institutions build agile, resilient thinkers ready to serve humanity and lead enterprises with honor.
+          - link "Discover Our 20-Year Legacy →" [ref=f10e214] [cursor=pointer]:
+            - /url: about-lexicon.html
+            - text: Discover Our 20-Year Legacy
+            - generic [ref=f10e215]: →
+        - img "Lexicon Campus Library and Learners" [ref=f10e217]
+      - generic [ref=f10e218]:
+        - generic [ref=f10e224]:
+          - heading "Decade+ Higher Ed Legacy" [level=4] [ref=f10e225]
+          - paragraph [ref=f10e226]: Nurturing agile business minds since MILE was established in 2009.
+        - generic [ref=f10e234]:
+          - heading "500+ Corporate Recruiters" [level=4] [ref=f10e235]
+          - paragraph [ref=f10e236]: Trusted partnerships with Fortune 500, MNCs, and emerging unicorns.
+        - generic [ref=f10e242]:
+          - heading "Global Academic Benchmarks" [level=4] [ref=f10e243]
+          - paragraph [ref=f10e244]: International collaborations, global curricula, and ethical governance.
+    - generic [ref=f10e246]:
+      - generic [ref=f10e247]:
+        - generic [ref=f10e248]: VOICES OF THE MILE FAMILY
+        - heading "Reflections from Our Community." [level=2] [ref=f10e250]
+        - paragraph [ref=f10e251]: Perspectives from students, leadership, and industry partners on experiencing transformative growth at Lexicon MILE.
+      - generic [ref=f10e252]:
+        - generic [ref=f10e253]:
+          - paragraph [ref=f10e254]: “Lexicon MILE did not merely prepare me for corporate interviews; it reshaped how I think, analyze, and lead teams under pressure. The direct mentorship from our leadership instilled unshakeable self-belief.”
+          - generic [ref=f10e255]:
+            - img "Rutuja Dhumal" [ref=f10e256]
+            - generic [ref=f10e257]:
+              - heading "Rutuja Dhumal" [level=4] [ref=f10e258]
+              - paragraph [ref=f10e259]: PGDM Alumni · Marketing Strategist
+        - generic [ref=f10e260]:
+          - generic [ref=f10e261]:
+            - generic [ref=f10e262]: “
+            - paragraph [ref=f10e263]: A genuine smile with glitter in the eyes of the student is the only true return on investment in the noble pursuit of education.
+          - generic [ref=f10e264]:
+            - img "Mr. Neeraj Sharma" [ref=f10e265]
+            - generic [ref=f10e266]:
+              - heading "Mr. Neeraj Sharma" [level=4] [ref=f10e267]
+              - paragraph [ref=f10e268]: Vice Chairman, The Lexicon Group
+        - generic [ref=f10e269]:
+          - paragraph [ref=f10e270]: “What distinguishes Lexicon MILE candidates in the corporate sector is their combination of practical technical fluency and grounded humility. They hit the ground running from Day 1.”
+          - generic [ref=f10e271]:
+            - img "Industry Corporate Recruiter" [ref=f10e272]
+            - generic [ref=f10e273]:
+              - heading "Industry Talent Lead" [level=4] [ref=f10e274]
+              - paragraph [ref=f10e275]: Fortune 500 Financial Services
+    - generic [ref=f10e278]:
+      - generic [ref=f10e279]:
+        - img "Mr. Neeraj Sharma Mentoring" [ref=f10e281]
+        - generic [ref=f10e282]:
+          - heading "Executive Insights" [level=3] [ref=f10e283]
+          - paragraph [ref=f10e284]: Have an academic inquiry or seeking guidance directly from the Vice Chairman's office?
+          - link "Contact Leadership Office →" [ref=f10e285] [cursor=pointer]:
+            - /url: mailto:admissions@mile.education
+      - generic [ref=f10e286]:
+        - generic [ref=f10e287]: LEADERSHIP PERSPECTIVES
+        - heading "Frequently Asked Questions." [level=2] [ref=f10e289]
+        - paragraph [ref=f10e290]: Direct insights from Mr. Neeraj Sharma addressing the critical challenges in management education, corporate readiness, and ethical leadership.
+        - generic [ref=f10e291]:
+          - generic [ref=f10e292]:
+            - button "How does Lexicon MILE address the 70% industry employability gap? +" [expanded] [ref=f10e293] [cursor=pointer]:
+              - generic [ref=f10e294]: How does Lexicon MILE address the 70% industry employability gap?
+              - generic [ref=f10e295]: +
+            - paragraph [ref=f10e297]: By continually updating our curriculum alongside senior corporate CXOs and academic visionaries. We integrate 20+ real-time industry certifications (such as SAP, Six Sigma, and Digital Marketing), mandatory corporate internships, and live simulation projects so students graduate day-one ready to execute without needing months of onboarding retraining.
+          - generic [ref=f10e298]:
+            - button "What makes \"Contemporary Pedagogy\" distinct from traditional lecturing? +" [ref=f10e299] [cursor=pointer]:
+              - generic [ref=f10e300]: What makes "Contemporary Pedagogy" distinct from traditional lecturing?
+              - generic [ref=f10e301]: +
+            - paragraph [ref=f10e302]: Contemporary pedagogy abandons static textbooks in favor of active, experiential methodologies. Our students tackle real corporate case studies, collaborate in our AI & Emerging Tech labs, engage in cross-disciplinary business simulations, and receive direct 1-on-1 coaching from industry practitioners through "A Mentor Every MILE."
+          - generic [ref=f10e303]:
+            - button "Why are traditional values and secular celebrations emphasized in a B-school? +" [ref=f10e304] [cursor=pointer]:
+              - generic [ref=f10e305]: Why are traditional values and secular celebrations emphasized in a B-school?
+              - generic [ref=f10e306]: +
+            - paragraph [ref=f10e307]: Technical brilliance without a moral compass leads to fragile enterprises. At Lexicon MILE, we take immense pride in national secularism and celebrating diverse festivals. This grounds our future managers in human empathy, cultural respect, and civic consciousness, ensuring they lead organizations that actively contribute to nation building.
+          - generic [ref=f10e308]:
+            - button "What is your personal advice to aspiring students entering Lexicon MILE? +" [ref=f10e309] [cursor=pointer]:
+              - generic [ref=f10e310]: What is your personal advice to aspiring students entering Lexicon MILE?
+              - generic [ref=f10e311]: +
+            - paragraph [ref=f10e312]: Believe deeply in your inherent potential. Education is not merely about landing a placement; it is about self-transformation and character. As Robert Frost famously wrote, you have promises to keep and miles to go before you sleep. Cultivate humility, embrace curiosity, and make exploration a permanent habit.
+    - generic [ref=f10e314]:
+      - generic [ref=f10e315]:
+        - generic [ref=f10e316]: THOUGHT LEADERSHIP
+        - heading "Perspectives & Editorial Notes." [level=2] [ref=f10e318]
+        - paragraph [ref=f10e319]: Essays, addresses, and research insights published by the leadership of Lexicon MILE on the future of work and education.
+      - generic [ref=f10e320]:
+        - link "Rethinking Management Pedagogy Pedagogy 4 Min Read Rethinking Management Pedagogy for the Age of AI & Automation Read Insight →" [ref=f10e321] [cursor=pointer]:
+          - /url: blog.html
+          - img "Rethinking Management Pedagogy" [ref=f10e323]
+          - generic [ref=f10e324]:
+            - generic [ref=f10e325]:
+              - generic [ref=f10e326]: Pedagogy
+              - generic [ref=f10e327]: 4 Min Read
+            - heading "Rethinking Management Pedagogy for the Age of AI & Automation" [level=4] [ref=f10e328]
+            - text: Read Insight →
+        - 'link "Ethical Leadership Leadership 5 Min Read Beyond Balance Sheets: Why Conscience-Led Enterprises Outlast Trends Read Insight →" [ref=f10e329] [cursor=pointer]':
+          - /url: blog.html
+          - img "Ethical Leadership" [ref=f10e331]
+          - generic [ref=f10e332]:
+            - generic [ref=f10e333]:
+              - generic [ref=f10e334]: Leadership
+              - generic [ref=f10e335]: 5 Min Read
+            - 'heading "Beyond Balance Sheets: Why Conscience-Led Enterprises Outlast Trends" [level=4] [ref=f10e336]'
+            - text: Read Insight →
+        - 'link "From Wagholi to Global Stature Legacy 6 Min Read From Wagholi in 2006 to Global Stature: The Lexicon Journey Read Insight →" [ref=f10e337] [cursor=pointer]':
+          - /url: blog.html
+          - img "From Wagholi to Global Stature" [ref=f10e339]
+          - generic [ref=f10e340]:
+            - generic [ref=f10e341]:
+              - generic [ref=f10e342]: Legacy
+              - generic [ref=f10e343]: 6 Min Read
+            - 'heading "From Wagholi in 2006 to Global Stature: The Lexicon Journey" [level=4] [ref=f10e344]'
+            - text: Read Insight →
+        - 'link "Closing Employability Gap Industry Sync 5 Min Read Closing the 70% Employability Gap: Practical Roadmaps for Business Schools Read Insight →" [ref=f10e345] [cursor=pointer]':
+          - /url: blog.html
+          - img "Closing Employability Gap" [ref=f10e347]
+          - generic [ref=f10e348]:
+            - generic [ref=f10e349]:
+              - generic [ref=f10e350]: Industry Sync
+              - generic [ref=f10e351]: 5 Min Read
+            - 'heading "Closing the 70% Employability Gap: Practical Roadmaps for Business Schools" [level=4] [ref=f10e352]'
+            - text: Read Insight →
+    - generic [ref=f10e355]:
+      - generic [ref=f10e356]:
+        - generic [ref=f10e357]: ADMISSIONS OPEN 2026–28
+        - heading "Are You Ready to Lead with Vision, Character, & Excellence?" [level=2] [ref=f10e359]
+        - paragraph [ref=f10e360]: Step into an academic environment where contemporary pedagogy meets compassionate mentorship. Begin your journey toward transformative leadership today.
+        - generic [ref=f10e361]:
+          - link "Apply for Admissions 2026–28 →" [ref=f10e362] [cursor=pointer]:
+            - /url: https://admissions.lexiconmile.com/
+          - link "Connect with Admissions Office →" [ref=f10e363] [cursor=pointer]:
+            - /url: contact.html
+      - img "Lexicon MILE Academic Community" [ref=f10e365]
+  - contentinfo [ref=f10e366]:
+    - generic [ref=f10e367]:
+      - generic [ref=f10e368]:
+        - generic [ref=f10e369]:
+          - link "Lexicon MILE home" [ref=f10e370] [cursor=pointer]:
+            - /url: http://localhost:8089/index.html
+            - img "Lexicon MILE" [ref=f10e371]
+          - paragraph [ref=f10e372]: Building future-ready leaders through industry-integrated business education.
+          - generic [ref=f10e373]: Pune, Maharashtra, India
+          - link "Let's start a conversation ↗" [ref=f10e376] [cursor=pointer]:
+            - /url: http://localhost:8089/contact.html
+        - generic [ref=f10e377]:
+          - heading "QUICK LINKS" [level=3] [ref=f10e378]
+          - link "PGDM Fee Portal" [ref=f10e379] [cursor=pointer]:
+            - /url: http://localhost:8089/fee.html
+          - link "Contact" [ref=f10e380] [cursor=pointer]:
+            - /url: http://localhost:8089/contact.html
+          - link "Careers" [ref=f10e381] [cursor=pointer]:
+            - /url: http://localhost:8089/careers-at-lexicon-mile.html
+          - link "Blog" [ref=f10e382] [cursor=pointer]:
+            - /url: http://localhost:8089/lexicon-blog.html
+          - link "Events & Webinar" [ref=f10e383] [cursor=pointer]:
+            - /url: http://localhost:8089/events-webinars.html
+          - link "Partnerships" [ref=f10e384] [cursor=pointer]:
+            - /url: http://localhost:8089/partnerships.html
+          - link "Alumni" [ref=f10e385] [cursor=pointer]:
+            - /url: http://localhost:8089/alumni.html
+          - link "Campus Tour" [ref=f10e386] [cursor=pointer]:
+            - /url: http://localhost:8089/campus-tour.html
+          - link "360° Virtual Tour" [ref=f10e387] [cursor=pointer]:
+            - /url: http://localhost:8089/virtual-tour.html
+        - generic [ref=f10e388]:
+          - heading "PGDM/MBA GLOBAL" [level=3] [ref=f10e389]
+          - link "PGDM Eligibility" [ref=f10e390] [cursor=pointer]:
+            - /url: http://localhost:8089/admission.html#eligibility
+          - link "How to Apply for MBA Global" [ref=f10e391] [cursor=pointer]:
+            - /url: http://localhost:8089/admission.html#how-to-apply
+          - link "PGDM/MBA Global Course Fees" [ref=f10e392] [cursor=pointer]:
+            - /url: http://localhost:8089/fee.html
+          - link "PGDM/MBA Global Scholarship" [ref=f10e393] [cursor=pointer]:
+            - /url: http://localhost:8089/scholarship.html
+        - generic [ref=f10e394]:
+          - heading "EXPLORE" [level=3] [ref=f10e395]
+          - link "FAQ'S" [ref=f10e396] [cursor=pointer]:
+            - /url: http://localhost:8089/faqs.html
+          - link "Mandatory Disclosure" [ref=f10e397] [cursor=pointer]:
+            - /url: http://localhost:8089/mandatory-disclosure-lexicon-mile.html
+          - 'link "Self Assessment Report (SAAR) : Marketing & Finance" [ref=f10e398] [cursor=pointer]':
+            - /url: https://lexiconmile.com/wp-content/uploads/2027/02/Updated-Self-Assesment-Report-SAR-Marketing-Finance-submitted-on-31st-Jan-2027.pdf
+          - link "Audit Report" [ref=f10e399] [cursor=pointer]:
+            - /url: https://lexiconmile.com/wp-content/uploads/2027/02/Audit-Report.pdf
+          - link "Student Rules & Regulation" [ref=f10e400] [cursor=pointer]:
+            - /url: http://localhost:8089/student-rules-regulations.html
+          - link "Partnerships" [ref=f10e401] [cursor=pointer]:
+            - /url: http://localhost:8089/partnerships.html
+          - link "Research Publications" [ref=f10e402] [cursor=pointer]:
+            - /url: http://localhost:8089/research.html
+          - link "Anti Ragging Cell" [ref=f10e403] [cursor=pointer]:
+            - /url: https://lexiconmile.com/wp-content/uploads/2025/11/Anti-Ragging-Committee.pdf
+        - generic [ref=f10e404]:
+          - heading "INFORMATION" [level=3] [ref=f10e405]
+          - generic [ref=f10e406]:
+            - strong [ref=f10e407]: For Admission Enquiries
+            - generic [ref=f10e408]: "Phone: +91 99674 27278"
+            - generic [ref=f10e409]: "Phone: +91 8956059559"
+            - generic [ref=f10e410]: "Email: admissions@mile.education"
+          - generic [ref=f10e411]:
+            - strong [ref=f10e412]: For Placement Queries
+            - generic [ref=f10e413]: "Phone: +91 99674 27278"
+            - generic [ref=f10e414]: "Email: placements@mile.education"
+          - generic [ref=f10e415]:
+            - strong [ref=f10e416]: For Other Queries
+            - generic [ref=f10e417]: "Phone: +91 91460 14951"
+            - generic [ref=f10e418]: "Email: info@mile.education"
+      - generic [aria-hidden] [ref=f10e419]: LEARN IT BUILD IT LIVE IT
+      - generic [ref=f10e420]:
+        - generic [ref=f10e421]:
+          - generic [ref=f10e422]:
+            - link "Privacy Policy" [ref=f10e423] [cursor=pointer]:
+              - /url: http://localhost:8089/privacy-policy.html
+            - link "Terms & Conditions" [ref=f10e424] [cursor=pointer]:
+              - /url: http://localhost:8089/terms-conditions.html
+          - generic [ref=f10e425]:
+            - link "Facebook" [ref=f10e426] [cursor=pointer]:
+              - /url: https://www.facebook.com/LexiconMILE
+            - link "Instagram" [ref=f10e429] [cursor=pointer]:
+              - /url: https://www.instagram.com/lexicon_mile_/
+            - link "YouTube" [ref=f10e432] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCufTVHSl_Md5L9zeWUBwsew
+            - link "LinkedIn" [ref=f10e435] [cursor=pointer]:
+              - /url: https://www.linkedin.com/school/lexicon-mile/
+            - link "WhatsApp" [ref=f10e438] [cursor=pointer]:
+              - /url: https://api.whatsapp.com/send/?phone=%2B919967427278&text&type=phone_number&app_absent=0
+        - generic [ref=f10e441]: An initiative of Sukhdev and Kamal Sharma Educational Trust
+        - generic [ref=f10e442]:
+          - generic [ref=f10e443]: © Copyright LexiconMile. All Rights Reserved. Designed by Lexicon
+          - link "Back to top" [ref=f10e444] [cursor=pointer]:
+            - /url: "#"
+            - text: BACK TO TOP ↑
+  - generic [ref=f10e445]:
+    - button "Apply Now ↗" [ref=f10e446] [cursor=pointer]:
+      - text: Apply Now
+      - generic [ref=f10e447]: ↗
+    - button "Brochure ↓" [ref=f10e448] [cursor=pointer]:
+      - text: Brochure
+      - generic [ref=f10e449]: ↓
+  - status
+  - generic [aria-hidden]:
+    - generic:
+      - button: ×
+      - iframe [ref=f10e450]
