@@ -16107,3 +16107,19 @@ a.mega-link-large {
 
 .hero, .pgdm-hero-banner { padding-top: 105px !important; }
 @media (max-width: 991px) { .hero, .pgdm-hero-banner { padding-top: 90px !important; } }
+
+/* ==========================================================================
+   PATCH 22: FURTHER INCREASE LOGO HEIGHT AND HEADER HEIGHT
+   ========================================================================== */
+.site-header { height: 115px !important; }
+.brand-logo { height: 100px !important; max-height: 100px !important; }
+.footer-brand .brand-logo { height: 105px !important; max-height: 105px !important; }
+
+@media (max-width: 991px) {
+  .site-header { height: 95px !important; }
+  .brand-logo { height: 80px !important; max-height: 80px !important; }
+  .mobile-menu-top .brand-logo { height: 80px !important; max-height: 80px !important; }
+  .footer-brand .brand-logo { height: 85px !important; max-height: 85px !important; }
+}
+.hero, .pgdm-hero-banner { padding-top: 125px !important; }
+@media (max-width: 991px) { .hero, .pgdm-hero-banner { padding-top: 105px !important; } }
