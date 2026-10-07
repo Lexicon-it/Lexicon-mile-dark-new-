@@ -24,7 +24,7 @@ const megaMenuData = {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">FROM THE VICE CHAIRMAN'S DESK</h4>
                <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Driving contemporary pedagogies, ethical leadership, and industry-synced management education. Vice Chairman Mr. Neeraj Sharma shares his directive on bridging the corporate employability gap and fostering global standards.</p>
                <a href="vice-chairmans-desk.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Read Vice Chairman's Full Address <span>↗</span></a>`,
-    image: `<img src="images/trustees/neeraj%20sir.png" alt="Mr. Neeraj Sharma, Vice Chairman" class="mega-image">`
+    image: `<img src="images/trustees/neeraj-sir.png" alt="Mr. Neeraj Sharma, Vice Chairman" class="mega-image">`
   },
   'governing-body': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">BOARD OF GOVERNORS</h4>
