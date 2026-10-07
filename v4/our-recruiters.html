@@ -222,28 +222,21 @@
     }
 
     .sector-showcase-card {
-      background: #0d1422;
+      background: rgba(10, 16, 28, 0.6);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 14px;
       padding: 24px 22px;
       position: relative;
       overflow: hidden;
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-
-    .sector-showcase-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #073b91, #669def);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
     }
 
     .sector-showcase-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-3px);
       border-color: rgba(102, 157, 239, 0.35);
+      background: rgba(14, 23, 38, 0.7);
     }
 
     .sector-showcase-header {

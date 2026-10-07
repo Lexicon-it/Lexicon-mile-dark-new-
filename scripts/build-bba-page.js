@@ -1,0 +1,2995 @@
+const fs = require('fs');
+const path = require('path');
+
+const bbaHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070C">
+  <title>BBA Programme in Pune | AI-Integrated Industry-Ready Program | Lexicon MILE</title>
+  <meta name="description" content="Join the BBA programme at Lexicon MILE Pune affiliated to SPPU. Industry-integrated curriculum with AI skills, 5 specializations, 9 corporate certifications, and strong placement support.">
+  <link rel="canonical" href="https://lexiconmile.com/programs/bba/">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BBA Programme in Pune | AI-Integrated Industry-Ready Program | Lexicon MILE">
+  <meta property="og:description" content="Join the BBA programme at Lexicon MILE Pune. Industry-integrated curriculum with AI skills, 5 specializations, global exposure, and strong placement support.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://lexiconmile.com/programs/bba/">
+  <meta property="og:image" content="images/courses/bba-program-banner.png">
+  <meta property="og:site_name" content="Lexicon MILE">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BBA Programme in Pune | Lexicon MILE">
+  <meta name="twitter:description" content="SPPU-affiliated 3-year BBA degree with AI integration, 5 specializations, and 9 enterprise tool certifications.">
+  <meta name="twitter:image" content="images/courses/bba-program-banner.png">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Course",
+        "@id": "https://lexiconmile.com/programs/bba/#course",
+        "name": "Bachelor of Business Administration (BBA)",
+        "description": "3-Year full-time BBA programme affiliated with Savitribai Phule Pune University (SPPU) with optional 4th Year NEP Honors track, 5 career specializations, and 9 enterprise certifications.",
+        "provider": {
+          "@type": "EducationalOrganization",
+          "name": "Lexicon Management Institute of Leadership & Excellence (Lexicon MILE)",
+          "url": "https://lexiconmile.com",
+          "logo": "https://lexiconmile.com/assets/lexicon_mile_logo.svg"
+        },
+        "educationalCredentialAwarded": "Bachelor of Business Administration (BBA)",
+        "timeToComplete": "P3Y",
+        "occupationalCategory": "Business Management, Finance, Marketing, Human Resources, Agri-Business, Services",
+        "coursePrerequisites": "10+2 Higher Secondary Certificate in any stream (Science, Commerce, or Arts) with non-zero positive score in CUET-UG or MAH-BBA/BCA CET."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexiconmile.com/programs/bba/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexiconmile.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Programs",
+            "item": "https://lexiconmile.com/programs.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "BBA",
+            "item": "https://lexiconmile.com/programs/bba/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       BBA Production Styles - High Aesthetic Dark Theme (Matching PGDM Design System)
+       ========================================================================== */
+    :root {
+      --bba-accent: #38bdf8;
+      --bba-blue: #0b63ce;
+      --bba-glow: rgba(56, 189, 248, 0.18);
+      --bba-card-bg: rgba(13, 20, 36, 0.85);
+      --bba-card-border: rgba(255, 255, 255, 0.1);
+      --bba-text-muted: #94a3b8;
+      --bba-text-light: #e2e8f0;
+      --bba-gold: #ffd066;
+    }
+
+    body {
+      background-color: #05070c;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section - Helix Architecture */
+    .pgdm-hero-banner {
+      position: relative;
+      background-color: #05070c;
+      overflow: hidden;
+      padding-top: 140px !important;
+      padding-bottom: 50px !important;
+      min-height: 94vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .pgdm-hero-banner::before {
+      display: none !important;
+    }
+
+    .helix-bg-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .helix-bg-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65%;
+      height: 100%;
+      background-image: url('images/courses/bba-program-banner.png');
+      background-size: cover;
+      background-position: center right;
+      background-repeat: no-repeat;
+      opacity: 0.32;
+      filter: brightness(0.85) contrast(1.2) hue-rotate(190deg) saturate(1.15);
+      mix-blend-mode: screen;
+    }
+
+    .helix-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: 
+        linear-gradient(90deg, #05070c 0%, #05070c 38%, rgba(5, 7, 12, 0.85) 55%, rgba(5, 7, 12, 0.25) 75%, rgba(5, 7, 12, 0.5) 100%),
+        linear-gradient(180deg, #05070c 0%, transparent 18%, transparent 80%, #05070c 100%),
+        radial-gradient(ellipse at 80% 45%, rgba(11, 99, 206, 0.35) 0%, rgba(56, 189, 248, 0.12) 40%, transparent 70%);
+    }
+
+    .pgdm-hero-container {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .helix-content-wrap {
+      max-width: 960px;
+      margin-bottom: 48px;
+    }
+
+    .helix-badge-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .helix-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0b63ce 0%, #0284c7 100%);
+      color: #ffffff;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
+      box-shadow: 0 2px 10px rgba(11, 99, 206, 0.4);
+    }
+
+    .helix-badge-text {
+      color: #94a3b8;
+      font-size: 13.5px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .helix-title {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: clamp(38px, 4.6vw, 68px);
+      font-weight: 600;
+      line-height: 1.08;
+      color: #ffffff;
+      margin: 0 0 22px 0;
+      max-width: 960px;
+      letter-spacing: -0.035em;
+    }
+
+    .helix-title em {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic;
+      color: #38bdf8;
+      font-weight: 400;
+      padding: 0 4px;
+      letter-spacing: -0.01em;
+      text-shadow: 0 0 28px rgba(56, 189, 248, 0.45);
+    }
+
+    .helix-desc {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16.5px;
+      line-height: 1.65;
+      color: #cbd5e1;
+      max-width: 840px;
+      margin-bottom: 32px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .helix-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 28px;
+      align-items: center;
+    }
+
+    .helix-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0b63ce;
+      color: #ffffff;
+      padding: 13px 26px;
+      border-radius: 8px;
+      font-size: 14.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 18px rgba(11, 99, 206, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .helix-btn-primary:hover {
+      background: #0952ab;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(11, 99, 206, 0.6);
+      color: #ffffff;
+    }
+
+    .helix-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(13, 20, 36, 0.7);
+      color: #f1f5f9;
+      padding: 13px 24px;
+      border-radius: 8px;
+      font-size: 14.5px;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .helix-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+      color: #ffffff;
+    }
+
+    .helix-meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+      font-size: 13.5px;
+      color: #94a3b8;
+    }
+
+    .helix-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .helix-meta-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 8px #38bdf8;
+    }
+
+    /* Glass Dock Stats Strip */
+    .glass-dock-strip {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+      width: 100%;
+    }
+
+    .glass-dock-col {
+      background: rgba(13, 20, 36, 0.78);
+      padding: 24px 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .glass-dock-col:hover {
+      background: rgba(20, 30, 52, 0.95);
+    }
+
+    .glass-dock-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .glass-dock-indicator .pulse-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 8px #38bdf8;
+    }
+
+    .glass-dock-label {
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #94a3b8;
+      font-weight: 600;
+    }
+
+    .glass-dock-val {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 4px;
+      letter-spacing: -0.02em;
+    }
+
+    .glass-dock-val.accent {
+      color: #38bdf8;
+    }
+
+    .glass-dock-val.gold {
+      color: #ffd066;
+    }
+
+    .glass-dock-sub {
+      font-size: 11.5px;
+      color: #64748b;
+      line-height: 1.35;
+    }
+
+    /* ==========================================================================
+       SECTION 2: 4-PILLAR OBJECTIVES GRID
+       ========================================================================== */
+    .pgdm-objectives-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .pgdm-obj-card {
+      background: var(--bba-card-bg);
+      border: 1px solid var(--bba-card-border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      backdrop-filter: blur(12px);
+    }
+
+    .pgdm-obj-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 24px rgba(56, 189, 248, 0.12);
+    }
+
+    .pgdm-obj-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .pgdm-obj-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #38bdf8;
+    }
+
+    .pgdm-obj-num {
+      font-family: monospace;
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 700;
+    }
+
+    .pgdm-obj-card h3 {
+      font-size: 19px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 12px 0;
+      line-height: 1.3;
+    }
+
+    .pgdm-obj-card p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: #94a3b8;
+      margin: 0 0 20px 0;
+      flex-grow: 1;
+    }
+
+    .pgdm-obj-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .pgdm-obj-tag {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       SECTION 3: KEY FOCUS AREAS (5 CARDS)
+       ========================================================================== */
+    .pgdm-focus-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .pgdm-focus-card {
+      background: var(--bba-card-bg);
+      border: 1px solid var(--bba-card-border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+
+    .pgdm-focus-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 189, 248, 0.35);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .pgdm-focus-img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .pgdm-focus-card:hover .pgdm-focus-img {
+      transform: scale(1.05);
+    }
+
+    .pgdm-focus-body {
+      padding: 18px 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .pgdm-focus-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .pgdm-focus-body h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .pgdm-focus-body p {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* ==========================================================================
+       SECTION 4: SPECIALIZATION TRACKS (5 TRACKS)
+       ========================================================================== */
+    .pgdm-spec-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .pgdm-spec-card {
+      background: var(--bba-card-bg);
+      border: 1px solid var(--bba-card-border);
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s ease;
+      position: relative;
+    }
+
+    .pgdm-spec-card:hover {
+      border-color: rgba(56, 189, 248, 0.45);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .pgdm-spec-code {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      align-self: flex-start;
+    }
+
+    .pgdm-spec-card h3 {
+      font-size: 21px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 10px 0;
+    }
+
+    .pgdm-spec-card p {
+      font-size: 14px;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin: 0 0 20px 0;
+    }
+
+    .pgdm-spec-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pgdm-spec-bullets li {
+      font-size: 13px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pgdm-spec-bullets li::before {
+      content: '✓';
+      color: #38bdf8;
+      font-weight: bold;
+    }
+
+    .pgdm-spec-link {
+      margin-top: auto;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #38bdf8;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pgdm-spec-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
+       SECTION 5: PROGRAM SPOTLIGHT (HYPERBUILD AI LAB)
+       ========================================================================== */
+    .pgdm-lab-spotlight {
+      background: linear-gradient(135deg, rgba(13, 20, 36, 0.95) 0%, rgba(6, 11, 20, 0.98) 100%);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 24px;
+      padding: 48px;
+      margin-top: 40px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    .pgdm-lab-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .pgdm-lab-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 6px 14px;
+      border-radius: 20px;
+      color: #38bdf8;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .pgdm-lab-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 16px 0;
+      line-height: 1.2;
+    }
+
+    .pgdm-lab-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #cbd5e1;
+      margin-bottom: 24px;
+    }
+
+    .pgdm-lab-quote {
+      background: rgba(255, 255, 255, 0.04);
+      border-left: 3px solid #38bdf8;
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 28px;
+    }
+
+    .pgdm-lab-quote p {
+      font-size: 14px;
+      font-style: italic;
+      color: #94a3b8;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .pgdm-lab-modules {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .pgdm-lab-mod-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      color: #e2e8f0;
+    }
+
+    .pgdm-lab-mod-item svg {
+      color: #38bdf8;
+      flex-shrink: 0;
+    }
+
+    .pgdm-terminal-card {
+      background: #080d1a;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .terminal-header {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .terminal-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .terminal-dots span:nth-child(1) { background: #ef4444; }
+    .terminal-dots span:nth-child(2) { background: #f59e0b; }
+    .terminal-dots span:nth-child(3) { background: #10b981; }
+
+    .terminal-title {
+      font-size: 11.5px;
+      font-family: monospace;
+      color: #94a3b8;
+      margin-left: 8px;
+    }
+
+    .terminal-body {
+      padding: 20px;
+      font-family: monospace;
+      font-size: 12.5px;
+      line-height: 1.7;
+      color: #cbd5e1;
+    }
+
+    .terminal-body .cmd { color: #38bdf8; font-weight: bold; }
+    .terminal-body .output { color: #94a3b8; }
+    .terminal-body .success { color: #34d399; }
+
+    /* ==========================================================================
+       SECTION 6: CURRICULUM ARCHITECTURE (TABBED)
+       ========================================================================== */
+    .curriculum-tabs-nav {
+      display: flex;
+      gap: 12px;
+      margin-top: 36px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .curriculum-tab-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 14.5px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .curriculum-tab-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .curriculum-tab-btn.active {
+      color: #fff;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+    }
+
+    .curriculum-tab-content {
+      display: none;
+    }
+
+    .curriculum-tab-content.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .curriculum-semester-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .semester-card {
+      background: var(--bba-card-bg);
+      border: 1px solid var(--bba-card-border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .semester-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .semester-header h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+
+    .semester-badge {
+      font-size: 11px;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .subject-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .subject-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 13.5px;
+      color: #cbd5e1;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .subject-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .subject-tag {
+      font-size: 10.5px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #94a3b8;
+      white-space: nowrap;
+    }
+
+    /* ==========================================================================
+       SECTION 7: CERTIFICATIONS MARQUEE
+       ========================================================================== */
+    .cert-marquee-wrap {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 24px 0;
+      margin-top: 30px;
+    }
+
+    .cert-marquee-wrap::before,
+    .cert-marquee-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .cert-marquee-wrap::before {
+      left: 0;
+      background: linear-gradient(90deg, #05070c 0%, transparent 100%);
+    }
+
+    .cert-marquee-wrap::after {
+      right: 0;
+      background: linear-gradient(270deg, #05070c 0%, transparent 100%);
+    }
+
+    .cert-marquee-track {
+      display: inline-flex;
+      gap: 20px;
+      animation: certMarquee 28s linear infinite;
+    }
+
+    .cert-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(13, 20, 36, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      padding: 8px 20px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #fff;
+      backdrop-filter: blur(8px);
+    }
+
+    .cert-pill img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
+    @keyframes certMarquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ==========================================================================
+       SECTION 8: FEE STRUCTURE & OFFICIAL BANK DETAILS
+       ========================================================================== */
+    .fee-tabs-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      margin-bottom: 24px;
+    }
+
+    .fee-tab-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .fee-tab-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .fee-tab-btn.active {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
+    }
+
+    .fee-tab-panel {
+      display: none;
+    }
+
+    .fee-tab-panel.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .fee-table-wrap {
+      overflow-x: auto;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      background: var(--bba-card-bg);
+      margin-bottom: 24px;
+    }
+
+    .fee-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13.5px;
+    }
+
+    .fee-table th {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 14px 18px;
+      color: #fff;
+      font-weight: 700;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .fee-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+    }
+
+    .fee-table tr.total-row td {
+      background: rgba(56, 189, 248, 0.08);
+      color: #fff;
+      font-weight: 700;
+      border-top: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .bank-details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .bank-card {
+      background: var(--bba-card-bg);
+      border: 1px solid var(--bba-card-border);
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .bank-card__header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .bank-card__badge {
+      font-size: 11px;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .bank-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+
+    .bank-details-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .bank-details-list li {
+      display: flex;
+      justify-content: space-between;
+      color: #94a3b8;
+    }
+
+    .bank-details-list li strong {
+      color: #fff;
+    }
+
+    .copy-account-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .copy-account-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    /* Policy Box */
+    .policy-box {
+      background: rgba(13, 20, 36, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 22px;
+      margin-top: 24px;
+    }
+
+    .policy-box h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .policy-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    .policy-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    /* Scholarships 4 Grid */
+    .sch-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .sch-card {
+      background: var(--bba-card-bg);
+      border: 1px solid var(--bba-card-border);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sch-amount {
+      font-size: 24px;
+      font-weight: 800;
+      color: #ffd066;
+      margin-bottom: 6px;
+    }
+
+    .sch-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 8px 0;
+    }
+
+    .sch-card p {
+      font-size: 12.5px;
+      color: #94a3b8;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Eligibility 3 Grid */
+    .pgdm-eligibility-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 36px;
+    }
+
+    .pgdm-elig-card {
+      background: var(--bba-card-bg);
+      border: 1px solid var(--bba-card-border);
+      border-radius: 16px;
+      padding: 28px;
+      position: relative;
+    }
+
+    .pgdm-elig-num {
+      font-family: monospace;
+      font-size: 13px;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .pgdm-elig-card h3 {
+      font-size: 19px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 10px 0;
+    }
+
+    .pgdm-elig-card p {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #94a3b8;
+      margin: 0;
+    }
+
+    /* Placements Grid */
+    .recruiters-strip {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .recruiter-box {
+      background: rgba(13, 20, 36, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+      transition: all 0.25s ease;
+    }
+
+    .recruiter-box:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(56, 189, 248, 0.35);
+      transform: scale(1.04);
+    }
+
+    .recruiter-box img {
+      max-height: 38px;
+      max-width: 90%;
+      object-fit: contain;
+      filter: grayscale(1) brightness(1.8);
+      opacity: 0.75;
+      transition: all 0.25s ease;
+    }
+
+    .recruiter-box:hover img {
+      filter: none;
+      opacity: 1;
+    }
+
+    /* ==========================================================================
+       SECTION 10: ACCORDION FAQS
+       ========================================================================== */
+    .faq-container {
+      max-width: 900px;
+      margin: 36px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .pgdm-accordion-item {
+      background: var(--bba-card-bg);
+      border: 1px solid var(--bba-card-border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .pgdm-accordion-item.active {
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .pgdm-accordion-header {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .pgdm-accordion-header .chevron {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s ease;
+      color: #38bdf8;
+      flex-shrink: 0;
+    }
+
+    .pgdm-accordion-item.active .chevron {
+      transform: rotate(180deg);
+    }
+
+    .pgdm-accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 24px;
+    }
+
+    .pgdm-accordion-item.active .pgdm-accordion-body {
+      max-height: 300px;
+      padding: 0 24px 22px;
+    }
+
+    .pgdm-accordion-body p {
+      margin: 0;
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #94a3b8;
+    }
+
+    /* ==========================================================================
+       SECTION 11: BOTTOM FINAL CTA BANNER
+       ========================================================================== */
+    .cta-card {
+      background: linear-gradient(135deg, rgba(13, 20, 36, 0.95) 0%, rgba(6, 11, 20, 0.98) 100%);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 24px;
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      margin-bottom: 70px;
+    }
+
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .cta-heading {
+      font-size: clamp(28px, 3.2vw, 42px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+      margin: 0 0 16px 0;
+    }
+
+    .cta-heading em {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic;
+      color: #38bdf8;
+    }
+
+    .cta-desc {
+      font-size: 15.5px;
+      line-height: 1.65;
+      color: #cbd5e1;
+      margin-bottom: 28px;
+      max-width: 580px;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .cta-contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 13.5px;
+      color: #94a3b8;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .cta-image-wrapper {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .cta-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cta-arrow {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      background: #0b63ce;
+      color: #fff;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .cta-bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: #64748b;
+      font-weight: 700;
+    }
+
+    /* Modal Styles */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .modal-card {
+      background: #0d1424;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 20px;
+      padding: 36px;
+      max-width: 480px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 26px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-form-group {
+      margin-bottom: 16px;
+    }
+
+    .modal-form-group label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+    }
+
+    .modal-form-group input,
+    .modal-form-group select {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: #fff;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    .modal-form-group input:focus,
+    .modal-form-group select:focus {
+      outline: none;
+      border-color: #38bdf8;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .glass-dock-strip { grid-template-columns: repeat(3, 1fr); }
+      .pgdm-objectives-grid { grid-template-columns: repeat(2, 1fr); }
+      .pgdm-focus-grid { grid-template-columns: repeat(3, 1fr); }
+      .pgdm-spec-grid { grid-template-columns: repeat(2, 1fr); }
+      .sch-grid { grid-template-columns: repeat(2, 1fr); }
+      .recruiters-strip { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    @media (max-width: 900px) {
+      .pgdm-lab-grid { grid-template-columns: 1fr; }
+      .curriculum-semester-grid { grid-template-columns: 1fr; }
+      .cta-inner { grid-template-columns: 1fr; }
+      .pgdm-eligibility-grid { grid-template-columns: 1fr; }
+      .bank-details-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .glass-dock-strip { grid-template-columns: repeat(2, 1fr); }
+      .pgdm-objectives-grid { grid-template-columns: 1fr; }
+      .pgdm-focus-grid { grid-template-columns: 1fr; }
+      .pgdm-spec-grid { grid-template-columns: 1fr; }
+      .sch-grid { grid-template-columns: 1fr; }
+      .recruiters-strip { grid-template-columns: repeat(2, 1fr); }
+      .cta-card { padding: 28px 20px; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Global Shared Navigation Header -->
+  <div id="header"></div>
+
+  <main id="main">
+    <!-- ==========================================================================
+         HERO SECTION: SIGNATURE HELIX HERO ARCHITECTURE
+         ========================================================================== -->
+    <section class="pgdm-hero-banner" id="hero">
+      <div class="helix-bg-layer" aria-hidden="true">
+        <div class="helix-bg-img"></div>
+        <div class="helix-bg-overlay"></div>
+      </div>
+
+      <div class="pgdm-hero-container">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav class="about-breadcrumbs" aria-label="Breadcrumb" style="margin-bottom: 24px;">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="programs.html">Programs</a>
+          <span>/</span>
+          <span style="color: #38bdf8; font-weight: 600;">BBA &middot; Savitribai Phule Pune University</span>
+        </nav>
+
+        <div class="helix-content-wrap">
+          <div class="helix-badge-wrap">
+            <span class="helix-badge-pill">SPPU AFFILIATED &middot; BATCH 2027&ndash;29</span>
+            <span class="helix-badge-text">UGC Recognized &middot; Optional 4th Year NEP Honors Track</span>
+          </div>
+
+          <h1 class="helix-title">
+            Bachelor of Business Administration<br>
+            <em>Industry-Ready Leadership.</em>
+          </h1>
+
+          <p class="helix-desc">
+            The BBA Program at <strong>Lexicon MILE</strong> combines foundational management disciplines with practical business analytics, enterprise tool certifications, and corporate exposure under <strong>Savitribai Phule Pune University (SPPU)</strong>. Designed to graduate confident professionals ready to excel from Day Zero.
+          </p>
+
+          <div class="helix-actions">
+            <a href="https://admissions.lexiconmile.com/" target="_blank" rel="noopener noreferrer" class="helix-btn-primary">
+              Apply for 2027&ndash;29 <span>&nearr;</span>
+            </a>
+            <button type="button" class="helix-btn-secondary" id="btn-open-brochure">
+              Download Brochure <span>&darr;</span>
+            </button>
+            <a href="#fee-structure" class="helix-btn-secondary">
+              Fee Structure &rarr;
+            </a>
+          </div>
+
+          <div class="helix-meta-strip">
+            <div class="helix-meta-item">
+              <span class="helix-meta-dot"></span>
+              <span>Savitribai Phule Pune University Affiliated</span>
+            </div>
+            <div class="helix-meta-item">
+              <span class="helix-meta-dot"></span>
+              <span>3-Year Full-Time (+ 4th Yr NEP Option)</span>
+            </div>
+            <div class="helix-meta-item">
+              <span class="helix-meta-dot"></span>
+              <span>5 Career Specializations</span>
+            </div>
+            <div class="helix-meta-item">
+              <span class="helix-meta-dot"></span>
+              <span>9 Enterprise Tool Certifications</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Executive Glass Dock Stats Strip -->
+        <div class="glass-dock-strip reveal">
+          <div class="glass-dock-col">
+            <div class="glass-dock-indicator">
+              <span class="pulse-dot"></span>
+              <span class="glass-dock-label">Duration</span>
+            </div>
+            <div class="glass-dock-val accent">3 Years</div>
+            <div class="glass-dock-sub">+ 4th Yr NEP Honors Track</div>
+          </div>
+
+          <div class="glass-dock-col">
+            <div class="glass-dock-indicator">
+              <span class="pulse-dot"></span>
+              <span class="glass-dock-label">Affiliation</span>
+            </div>
+            <div class="glass-dock-val">SPPU</div>
+            <div class="glass-dock-sub">Pune University &middot; UGC Govt.</div>
+          </div>
+
+          <div class="glass-dock-col">
+            <div class="glass-dock-indicator">
+              <span class="pulse-dot"></span>
+              <span class="glass-dock-label">Specializations</span>
+            </div>
+            <div class="glass-dock-val accent">5 Tracks</div>
+            <div class="glass-dock-sub">Finance, Mktg, HR, Agri, Service</div>
+          </div>
+
+          <div class="glass-dock-col">
+            <div class="glass-dock-indicator">
+              <span class="pulse-dot"></span>
+              <span class="glass-dock-label">Certifications</span>
+            </div>
+            <div class="glass-dock-val">9 Tools</div>
+            <div class="glass-dock-sub">Power BI, Tableau, ERP, AI Studio</div>
+          </div>
+
+          <div class="glass-dock-col">
+            <div class="glass-dock-indicator">
+              <span class="pulse-dot"></span>
+              <span class="glass-dock-label">Total 3-Yr Fee</span>
+            </div>
+            <div class="glass-dock-val gold">&#8377;5.70L</div>
+            <div class="glass-dock-sub">&#8377;1.90L Per Year Installments</div>
+          </div>
+
+          <div class="glass-dock-col">
+            <div class="glass-dock-indicator">
+              <span class="pulse-dot"></span>
+              <span class="glass-dock-label">Readiness</span>
+            </div>
+            <div class="glass-dock-val accent">Day Zero</div>
+            <div class="glass-dock-sub">Corporate Internship Standard</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: 4-PILLAR PROGRAM OBJECTIVES
+         ========================================================================== -->
+    <section class="section" id="objectives">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">CORE GOALS &amp; LEARNING OUTCOMES</p>
+            <h2>Program Objectives<span class="period">.</span></h2>
+            <p class="section-lead">Every academic module is mapped to build measurable professional competence, modern cognitive leadership, and technological agility.</p>
+          </div>
+        </div>
+
+        <div class="pgdm-objectives-grid">
+          
+          <div class="pgdm-obj-card reveal">
+            <div class="pgdm-obj-head">
+              <div class="pgdm-obj-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+              <span class="pgdm-obj-num">01</span>
+            </div>
+            <h3>Strong Business Fundamentals</h3>
+            <p>Deep conceptual mastery and practical application of financial accounting, micro/macro economics, organizational strategy, and brand marketing.</p>
+            <div class="pgdm-obj-tags">
+              <span class="pgdm-obj-tag">Accounting</span>
+              <span class="pgdm-obj-tag">Economics</span>
+              <span class="pgdm-obj-tag">Strategy</span>
+              <span class="pgdm-obj-tag">Marketing</span>
+            </div>
+          </div>
+
+          <div class="pgdm-obj-card reveal">
+            <div class="pgdm-obj-head">
+              <div class="pgdm-obj-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              </div>
+              <span class="pgdm-obj-num">02</span>
+            </div>
+            <h3>Data &amp; AI-Driven Decisions</h3>
+            <p>Hands-on training in business intelligence, automated dashboards, predictive modeling, and generative AI platforms to make algorithmic decisions.</p>
+            <div class="pgdm-obj-tags">
+              <span class="pgdm-obj-tag">Power BI</span>
+              <span class="pgdm-obj-tag">Tableau</span>
+              <span class="pgdm-obj-tag">Excel</span>
+              <span class="pgdm-obj-tag">AI Studio</span>
+            </div>
+          </div>
+
+          <div class="pgdm-obj-card reveal">
+            <div class="pgdm-obj-head">
+              <div class="pgdm-obj-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <span class="pgdm-obj-num">03</span>
+            </div>
+            <h3>Real-World Industry Immersion</h3>
+            <p>Mandatory social internships with NGOs, corporate summer internships, live client assignments, and CEO/Founder interaction series.</p>
+            <div class="pgdm-obj-tags">
+              <span class="pgdm-obj-tag">Internships</span>
+              <span class="pgdm-obj-tag">Live Projects</span>
+              <span class="pgdm-obj-tag">CSR</span>
+              <span class="pgdm-obj-tag">Incubation</span>
+            </div>
+          </div>
+
+          <div class="pgdm-obj-card reveal">
+            <div class="pgdm-obj-head">
+              <div class="pgdm-obj-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="pgdm-obj-num">04</span>
+            </div>
+            <h3>Leadership &amp; Competitive Edge</h3>
+            <p>Executive grooming, high-stakes communication, emotional intelligence, and integrated preparatory coaching for CAT, GMAT, and UPSC.</p>
+            <div class="pgdm-obj-tags">
+              <span class="pgdm-obj-tag">Communication</span>
+              <span class="pgdm-obj-tag">EQ Grooming</span>
+              <span class="pgdm-obj-tag">CAT &amp; GMAT</span>
+              <span class="pgdm-obj-tag">Civils</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: KEY FOCUS AREAS (5 CARDS)
+         ========================================================================== -->
+    <section class="section section-dark" id="focus-areas">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">ACADEMIC FOUNDATION</p>
+            <h2>Key Focus Areas<span class="period">.</span></h2>
+            <p class="section-lead">A balanced undergraduate architecture integrating foundational commerce disciplines with high-demand digital technologies.</p>
+          </div>
+        </div>
+
+        <div class="pgdm-focus-grid">
+          
+          <div class="pgdm-focus-card reveal">
+            <img src="images/courses/course3.png" alt="Managerial Economics & Accounting" class="pgdm-focus-img" loading="lazy">
+            <div class="pgdm-focus-body">
+              <span class="pgdm-focus-tag">FOUNDATION</span>
+              <h4>Economics &amp; Accounting</h4>
+              <p>Master financial statement analysis, cost budgeting, and macro-economic fiscal dynamics.</p>
+            </div>
+          </div>
+
+          <div class="pgdm-focus-card reveal">
+            <img src="images/courses/course4.png" alt="Applied Business Analytics & Tech" class="pgdm-focus-img" loading="lazy">
+            <div class="pgdm-focus-body">
+              <span class="pgdm-focus-tag">ANALYTICS</span>
+              <h4>Analytics &amp; Tech Tools</h4>
+              <p>Turn raw business data into actionable corporate decisions with Power BI, Tableau &amp; Advanced Excel.</p>
+            </div>
+          </div>
+
+          <div class="pgdm-focus-card reveal">
+            <img src="images/courses/course1.png" alt="Brand Strategy & Modern Marketing" class="pgdm-focus-img" loading="lazy">
+            <div class="pgdm-focus-body">
+              <span class="pgdm-focus-tag">GROWTH</span>
+              <h4>Brand Strategy &amp; Marketing</h4>
+              <p>Consumer psychology, omnichannel customer funnels, social algorithms, and modern digital campaigns.</p>
+            </div>
+          </div>
+
+          <div class="pgdm-focus-card reveal">
+            <img src="images/courses/course2.png" alt="Talent Strategy & Organizational Behavior" class="pgdm-focus-img" loading="lazy">
+            <div class="pgdm-focus-body">
+              <span class="pgdm-focus-tag">PEOPLE</span>
+              <h4>Talent &amp; HR Strategy</h4>
+              <p>Modern talent acquisition, labor compliance, HR analytics, and executive organizational dynamics.</p>
+            </div>
+          </div>
+
+          <div class="pgdm-focus-card reveal">
+            <img src="images/courses/bba-program-banner.png" alt="Entrepreneurship & Incubation Lab" class="pgdm-focus-img" loading="lazy">
+            <div class="pgdm-focus-body">
+              <span class="pgdm-focus-tag">INNOVATION</span>
+              <h4>Incubation &amp; Ventures</h4>
+              <p>Validate business models, design pitch decks, and build enterprise startups at the MILE Innovation Lab.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: 5 SPECIALIZATIONS
+         ========================================================================== -->
+    <section class="section" id="specializations">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">CAREER PATHWAYS</p>
+            <h2>5 Career Specializations<span class="period">.</span></h2>
+            <p class="section-lead">Calibrated with contemporary industry hiring requirements and modern entrepreneurial ventures under SPPU:</p>
+          </div>
+        </div>
+
+        <div class="pgdm-spec-grid">
+          
+          <div class="pgdm-spec-card reveal">
+            <span class="pgdm-spec-code">TRACK 01 &middot; FM</span>
+            <h3>Finance Management</h3>
+            <p>Corporate finance, equity valuation, portfolio strategy, FinTech modeling, capital budgeting, and investment banking fundamentals.</p>
+            <ul class="pgdm-spec-bullets">
+              <li>Financial Modeling &amp; Valuation</li>
+              <li>Banking, Insurance &amp; FinTech</li>
+              <li>Portfolio &amp; Wealth Architecture</li>
+            </ul>
+            <a href="https://admissions.lexiconmile.com/" target="_blank" class="pgdm-spec-link">Enquire for Finance &rarr;</a>
+          </div>
+
+          <div class="pgdm-spec-card reveal">
+            <span class="pgdm-spec-code">TRACK 02 &middot; MM</span>
+            <h3>Marketing Management</h3>
+            <p>Digital marketing, consumer neuroscience, brand architecture, performance marketing, social algorithms, and marketing analytics.</p>
+            <ul class="pgdm-spec-bullets">
+              <li>Digital &amp; Performance Marketing</li>
+              <li>Brand Strategy &amp; Advertising</li>
+              <li>Marketing Analytics &amp; Conversion</li>
+            </ul>
+            <a href="https://admissions.lexiconmile.com/" target="_blank" class="pgdm-spec-link">Enquire for Marketing &rarr;</a>
+          </div>
+
+          <div class="pgdm-spec-card reveal">
+            <span class="pgdm-spec-code">TRACK 03 &middot; HRM</span>
+            <h3>Human Resource Management</h3>
+            <p>Talent management, organizational behavior, payroll compliance, modern HR analytics, and employee relations jurisprudence.</p>
+            <ul class="pgdm-spec-bullets">
+              <li>Strategic Talent Acquisition</li>
+              <li>HR Analytics &amp; Payroll Modeling</li>
+              <li>Executive Coaching &amp; Culture</li>
+            </ul>
+            <a href="https://admissions.lexiconmile.com/" target="_blank" class="pgdm-spec-link">Enquire for HR &rarr;</a>
+          </div>
+
+          <div class="pgdm-spec-card reveal">
+            <span class="pgdm-spec-code">TRACK 04 &middot; ABM</span>
+            <h3>Agri-Business Management</h3>
+            <p>Agri-supply chain logistics, commodity trading, rural marketing, food processing management, and AgriTech venture incubation.</p>
+            <ul class="pgdm-spec-bullets">
+              <li>Commodity Trading &amp; Hedging</li>
+              <li>Agri-Supply Chain Logistics</li>
+              <li>Rural Marketing &amp; AgriTech</li>
+            </ul>
+            <a href="https://admissions.lexiconmile.com/" target="_blank" class="pgdm-spec-link">Enquire for Agri-Business &rarr;</a>
+          </div>
+
+          <div class="pgdm-spec-card reveal">
+            <span class="pgdm-spec-code">TRACK 05 &middot; SM</span>
+            <h3>Services Management</h3>
+            <p>Customer experience (CX) blueprinting, luxury brand management, hospitality systems, retail operations, and consulting delivery.</p>
+            <ul class="pgdm-spec-bullets">
+              <li>Customer Experience (CX) Design</li>
+              <li>Hospitality &amp; Luxury Operations</li>
+              <li>Consulting &amp; Retail Systems</li>
+            </ul>
+            <a href="https://admissions.lexiconmile.com/" target="_blank" class="pgdm-spec-link">Enquire for Services &rarr;</a>
+          </div>
+
+          <div class="pgdm-spec-card reveal" style="background: linear-gradient(135deg, rgba(11, 99, 206, 0.15) 0%, rgba(13, 20, 36, 0.9) 100%); border-color: rgba(56, 189, 248, 0.4);">
+            <span class="pgdm-spec-code" style="background: rgba(255, 208, 102, 0.15); color: #ffd066; border-color: rgba(255, 208, 102, 0.4);">NEP 2020 TRACK</span>
+            <h3>Honours &amp; Research Track</h3>
+            <p>Optional 4th Year under the National Education Policy (NEP) for deep research, specialized thesis, and expedited global Master's access.</p>
+            <ul class="pgdm-spec-bullets">
+              <li>Empirical Research Dissertation</li>
+              <li>Direct 1-Year Master's Eligibility</li>
+              <li>Advanced Corporate Consulting Project</li>
+            </ul>
+            <a href="#fee-structure" class="pgdm-spec-link" style="color: #ffd066;">View 4-Yr Fee &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: PROGRAM SPOTLIGHT (HYPERBUILD AI LAB)
+         ========================================================================== -->
+    <section class="section" id="ai-lab">
+      <div class="container">
+        <div class="pgdm-lab-spotlight reveal">
+          <div class="pgdm-lab-grid">
+            
+            <div>
+              <span class="pgdm-lab-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                INNOVATION SPOTLIGHT &middot; HYPERBUILD AI LAB
+              </span>
+              <h2 class="pgdm-lab-title">Hands-On AI &amp; Business Intelligence from Day One.</h2>
+              <p class="pgdm-lab-desc">
+                Undergraduate management students shouldn't just read about technologies in textbooks. In the <strong>Lexicon MILE HyperBuild AI Lab</strong>, BBA students actively prompt, automate workflows, and build interactive intelligence models with industry-standard platforms.
+              </p>
+
+              <div class="pgdm-lab-quote">
+                <p>&ldquo;In an economy driven by AI and analytics, an undergraduate management degree must train thinkers and builders, not passive test-takers.&rdquo;</p>
+              </div>
+
+              <div class="pgdm-lab-modules">
+                <div class="pgdm-lab-mod-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Power BI Dashboard Design</span>
+                </div>
+                <div class="pgdm-lab-mod-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Tableau Visual Storytelling</span>
+                </div>
+                <div class="pgdm-lab-mod-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Advanced Financial Modeling</span>
+                </div>
+                <div class="pgdm-lab-mod-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Odoo Enterprise ERP Systems</span>
+                </div>
+                <div class="pgdm-lab-mod-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Copilot Studio Automations</span>
+                </div>
+                <div class="pgdm-lab-mod-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Google AI Multimodal Workflows</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Terminal Console Card -->
+            <div class="pgdm-terminal-card">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span class="terminal-title">hyperbuild-bba-console ~ v2.4</span>
+              </div>
+              <div class="terminal-body">
+                <div><span class="cmd">&gt; init_bba_workflow</span> --student=undergraduate</div>
+                <div class="output">[OK] Initializing SPPU Foundation Modules...</div>
+                <div class="output">[OK] Connecting HyperBuild Enterprise Sandbox...</div>
+                <div style="margin-top: 10px;"><span class="cmd">&gt; load_certifications</span></div>
+                <div class="output">&bull; Microsoft Power BI: Active</div>
+                <div class="output">&bull; Tableau Software: Visualizing KPIs</div>
+                <div class="output">&bull; Odoo ERP: Supply Chain &amp; CRM Linked</div>
+                <div class="output">&bull; Copilot Studio: Prompt Automated</div>
+                <div style="margin-top: 10px;"><span class="cmd">&gt; run_simulation</span> --target=day_zero_readiness</div>
+                <div class="success">&check; 9 Enterprise Tool Modules Completed</div>
+                <div class="success">&check; Social Internship &amp; Corporate Stint Verified</div>
+                <div class="success">&check; Status: Industry-Ready Professional</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: COMPREHENSIVE CURRICULUM ARCHITECTURE (TABBED)
+         ========================================================================== -->
+    <section class="section section-dark" id="curriculum">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">ACADEMIC RIGOR</p>
+            <h2>Comprehensive Curriculum Architecture<span class="period">.</span></h2>
+            <p class="section-lead">A structured, semester-by-semester learning progression affiliated with SPPU, combining core business theory with practical tool certifications.</p>
+          </div>
+        </div>
+
+        <div class="curriculum-tabs-nav reveal" role="tablist">
+          <button type="button" class="curriculum-tab-btn active" role="tab" aria-selected="true" data-tab="year-1">
+            Year 1 &middot; Foundations (Sem I &amp; II)
+          </button>
+          <button type="button" class="curriculum-tab-btn" role="tab" aria-selected="false" data-tab="year-2">
+            Year 2 &middot; Specializations (Sem III &amp; IV)
+          </button>
+          <button type="button" class="curriculum-tab-btn" role="tab" aria-selected="false" data-tab="year-3">
+            Year 3 &middot; Strategy &amp; Internships (Sem V &amp; VI)
+          </button>
+          <button type="button" class="curriculum-tab-btn" role="tab" aria-selected="false" data-tab="year-4">
+            Optional Year 4 &middot; NEP Honours &amp; Research
+          </button>
+        </div>
+
+        <!-- Year 1 Content -->
+        <div class="curriculum-tab-content active" id="year-1" role="tabpanel">
+          <div class="curriculum-semester-grid">
+            
+            <div class="semester-card">
+              <div class="semester-header">
+                <h4>Semester I &middot; Core Fundamentals</h4>
+                <span class="semester-badge">FOUNDATION</span>
+              </div>
+              <ul class="subject-list">
+                <li class="subject-item">
+                  <span>Principles of Management &amp; Organizational Behavior</span>
+                  <span class="subject-tag">Core</span>
+                </li>
+                <li class="subject-item">
+                  <span>Business Communication &amp; Executive Writing</span>
+                  <span class="subject-tag">Skill</span>
+                </li>
+                <li class="subject-item">
+                  <span>Financial Accounting &amp; Ledger Dynamics</span>
+                  <span class="subject-tag">Core</span>
+                </li>
+                <li class="subject-item">
+                  <span>Micro Economics for Business Decision Making</span>
+                  <span class="subject-tag">Core</span>
+                </li>
+                <li class="subject-item">
+                  <span>Advanced Excel &amp; Business Data Spreadsheets</span>
+                  <span class="subject-tag">Tool Cert</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="semester-card">
+              <div class="semester-header">
+                <h4>Semester II &middot; Operations &amp; Strategy</h4>
+                <span class="semester-badge">APPLIED</span>
+              </div>
+              <ul class="subject-list">
+                <li class="subject-item">
+                  <span>Marketing Management Principles &amp; Market Research</span>
+                  <span class="subject-tag">Core</span>
+                </li>
+                <li class="subject-item">
+                  <span>Macro Economics &amp; Indian Financial Policy</span>
+                  <span class="subject-tag">Core</span>
+                </li>
+                <li class="subject-item">
+                  <span>Cost Accounting &amp; Management Control</span>
+                  <span class="subject-tag">Core</span>
+                </li>
+                <li class="subject-item">
+                  <span>Business Statistics &amp; Quantitative Methods</span>
+                  <span class="subject-tag">Core</span>
+                </li>
+                <li class="subject-item">
+                  <span>Social Internship Project (NGO / CSR Immersion)</span>
+                  <span class="subject-tag">Practical</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Year 2 Content -->
+        <div class="curriculum-tab-content" id="year-2" role="tabpanel">
+          <div class="curriculum-semester-grid">
+            
+            <div class="semester-card">
+              <div class="semester-header">
+                <h4>Semester III &middot; Specialization Inception</h4>
+                <span class="semester-badge">SPECIALIZATION</span>
+              </div>
+              <ul class="subject-list">
+                <li class="subject-item">
+                  <span>Human Resource Management &amp; Talent Relations</span>
+                  <span class="subject-tag">Core</span>
+                </li>
+                <li class="subject-item">
+                  <span>Production &amp; Operations Logistics</span>
+                  <span class="subject-tag">Core</span>
+                </li>
+                <li class="subject-item">
+                  <span>Specialization Core Subject - I (FM / MM / HRM / ABM / SM)</span>
+                  <span class="subject-tag">Track</span>
+                </li>
+                <li class="subject-item">
+                  <span>Tableau &amp; Power BI Enterprise Visualizations</span>
+                  <span class="subject-tag">Tool Cert</span>
+                </li>
+                <li class="subject-item">
+                  <span>Business Laws &amp; Corporate Governance</span>
+                  <span class="subject-tag">Core</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="semester-card">
+              <div class="semester-header">
+                <h4>Semester IV &middot; Enterprise Applications</h4>
+                <span class="semester-badge">ENTERPRISE</span>
+              </div>
+              <ul class="subject-list">
+                <li class="subject-item">
+                  <span>Entrepreneurship Development &amp; Venture Creation</span>
+                  <span class="subject-tag">Core</span>
+                </li>
+                <li class="subject-item">
+                  <span>Specialization Core Subject - II (Advanced Domain)</span>
+                  <span class="subject-tag">Track</span>
+                </li>
+                <li class="subject-item">
+                  <span>Odoo ERP &amp; Integrated Enterprise Systems</span>
+                  <span class="subject-tag">Tool Cert</span>
+                </li>
+                <li class="subject-item">
+                  <span>Research Methodology &amp; Business Analytics</span>
+                  <span class="subject-tag">Core</span>
+                </li>
+                <li class="subject-item">
+                  <span>Mandatory Summer Corporate Internship (6-8 Weeks)</span>
+                  <span class="subject-tag">Internship</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Year 3 Content -->
+        <div class="curriculum-tab-content" id="year-3" role="tabpanel">
+          <div class="curriculum-semester-grid">
+            
+            <div class="semester-card">
+              <div class="semester-header">
+                <h4>Semester V &middot; Strategic Leadership</h4>
+                <span class="semester-badge">STRATEGY</span>
+              </div>
+              <ul class="subject-list">
+                <li class="subject-item">
+                  <span>Strategic Management &amp; Business Policy</span>
+                  <span class="subject-tag">Core</span>
+                </li>
+                <li class="subject-item">
+                  <span>Specialization Advanced Track - III</span>
+                  <span class="subject-tag">Track</span>
+                </li>
+                <li class="subject-item">
+                  <span>Specialization Advanced Track - IV</span>
+                  <span class="subject-tag">Track</span>
+                </li>
+                <li class="subject-item">
+                  <span>Copilot Studio &amp; AI Workflow Automation</span>
+                  <span class="subject-tag">Tool Cert</span>
+                </li>
+                <li class="subject-item">
+                  <span>Internship Viva-Voce &amp; Executive Case Defense</span>
+                  <span class="subject-tag">Evaluation</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="semester-card">
+              <div class="semester-header">
+                <h4>Semester VI &middot; Capstone &amp; Corporate Launch</h4>
+                <span class="semester-badge">CAPSTONE</span>
+              </div>
+              <ul class="subject-list">
+                <li class="subject-item">
+                  <span>Total Quality Management &amp; Global Operations</span>
+                  <span class="subject-tag">Core</span>
+                </li>
+                <li class="subject-item">
+                  <span>Specialization Elective - V (Industry Sector Deep Dive)</span>
+                  <span class="subject-tag">Track</span>
+                </li>
+                <li class="subject-item">
+                  <span>Specialization Elective - VI (Applied Domain Project)</span>
+                  <span class="subject-tag">Track</span>
+                </li>
+                <li class="subject-item">
+                  <span>Comprehensive Live Client Capstone Project</span>
+                  <span class="subject-tag">Capstone</span>
+                </li>
+                <li class="subject-item">
+                  <span>Day Zero Corporate Placement Drives</span>
+                  <span class="subject-tag">Career</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Year 4 Content -->
+        <div class="curriculum-tab-content" id="year-4" role="tabpanel">
+          <div class="curriculum-semester-grid">
+            
+            <div class="semester-card">
+              <div class="semester-header">
+                <h4>Semester VII &middot; Advanced Research Inception</h4>
+                <span class="semester-badge">HONOURS</span>
+              </div>
+              <ul class="subject-list">
+                <li class="subject-item">
+                  <span>Advanced Econometrics &amp; Statistical Modeling</span>
+                  <span class="subject-tag">Honours</span>
+                </li>
+                <li class="subject-item">
+                  <span>Philosophy of Research &amp; Academic Publication Ethics</span>
+                  <span class="subject-tag">Honours</span>
+                </li>
+                <li class="subject-item">
+                  <span>Independent Literature Review &amp; Problem Formulation</span>
+                  <span class="subject-tag">Research</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="semester-card">
+              <div class="semester-header">
+                <h4>Semester VIII &middot; Thesis Defense &amp; Global Access</h4>
+                <span class="semester-badge">RESEARCH</span>
+              </div>
+              <ul class="subject-list">
+                <li class="subject-item">
+                  <span>Full Empirical Thesis Defense &amp; Publication</span>
+                  <span class="subject-tag">Dissertation</span>
+                </li>
+                <li class="subject-item">
+                  <span>Direct 1-Year Master's Degree Eligibility Pathway</span>
+                  <span class="subject-tag">Global</span>
+                </li>
+                <li class="subject-item">
+                  <span>Senior Consulting Practicum &amp; Incubator Fellowship</span>
+                  <span class="subject-tag">Practicum</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7: EMPLOYMENT ENHANCING CERTIFICATIONS (MARQUEE)
+         ========================================================================== -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">ENTERPRISE CREDENTIALS</p>
+            <h2>9 Employment-Enhancing Certifications<span class="period">.</span></h2>
+            <p class="section-lead">Integrated seamlessly into the 3-year curriculum to ensure students graduate with proven, hands-on tool mastery.</p>
+          </div>
+        </div>
+
+        <div class="cert-marquee-wrap reveal">
+          <div class="cert-marquee-track">
+            <!-- Set 1 -->
+            <div class="cert-pill"><img src="images/tools/excel.png" alt="Excel" loading="lazy"><span>Advanced Excel</span></div>
+            <div class="cert-pill"><img src="images/tools/power-bi.png" alt="Power BI" loading="lazy"><span>Power BI</span></div>
+            <div class="cert-pill"><img src="images/tools/tableau.png" alt="Tableau" loading="lazy"><span>Tableau</span></div>
+            <div class="cert-pill"><img src="images/tools/knime.svg" alt="KNIME" loading="lazy"><span>KNIME Analytics</span></div>
+            <div class="cert-pill"><img src="images/tools/orange.svg" alt="Orange" loading="lazy"><span>Orange Data Mining</span></div>
+            <div class="cert-pill"><img src="images/tools/odoo.svg" alt="Odoo" loading="lazy"><span>Odoo ERP</span></div>
+            <div class="cert-pill"><img src="images/tools/copilot.png" alt="Copilot" loading="lazy"><span>Copilot Studio</span></div>
+            <div class="cert-pill"><img src="images/tools/google-ai.png" alt="Google AI" loading="lazy"><span>Google AI Studio</span></div>
+            <div class="cert-pill"><span>SuiteCRM Operations</span></div>
+
+            <!-- Set 2 (for infinite continuous scroll) -->
+            <div class="cert-pill"><img src="images/tools/excel.png" alt="Excel" loading="lazy"><span>Advanced Excel</span></div>
+            <div class="cert-pill"><img src="images/tools/power-bi.png" alt="Power BI" loading="lazy"><span>Power BI</span></div>
+            <div class="cert-pill"><img src="images/tools/tableau.png" alt="Tableau" loading="lazy"><span>Tableau</span></div>
+            <div class="cert-pill"><img src="images/tools/knime.svg" alt="KNIME" loading="lazy"><span>KNIME Analytics</span></div>
+            <div class="cert-pill"><img src="images/tools/orange.svg" alt="Orange" loading="lazy"><span>Orange Data Mining</span></div>
+            <div class="cert-pill"><img src="images/tools/odoo.svg" alt="Odoo" loading="lazy"><span>Odoo ERP</span></div>
+            <div class="cert-pill"><img src="images/tools/copilot.png" alt="Copilot" loading="lazy"><span>Copilot Studio</span></div>
+            <div class="cert-pill"><img src="images/tools/google-ai.png" alt="Google AI" loading="lazy"><span>Google AI Studio</span></div>
+            <div class="cert-pill"><span>SuiteCRM Operations</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 8: TRANSPARENT FEE STRUCTURE & BANK DETAILS
+         ========================================================================== -->
+    <section class="section section-dark" id="fee-structure">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">TRANSPARENT FINANCIALS</p>
+            <h2>Fee Structure &amp; Official Bank Details<span class="period">.</span></h2>
+            <p class="section-lead">Clear, scheduled fee installments approved under Savitribai Phule Pune University and institute policies.</p>
+          </div>
+        </div>
+
+        <div class="fee-tabs-nav reveal">
+          <button type="button" class="fee-tab-btn active" onclick="switchFeeTab('year1', this)">Year-1 (AY 2027-28)</button>
+          <button type="button" class="fee-tab-btn" onclick="switchFeeTab('year2', this)">Year-2 (AY 2028-29)</button>
+          <button type="button" class="fee-tab-btn" onclick="switchFeeTab('year3', this)">Year-3 (AY 2029-30)</button>
+          <button type="button" class="fee-tab-btn" onclick="switchFeeTab('year4', this)">Optional Year-4 Honours</button>
+          <button type="button" class="fee-tab-btn" onclick="switchFeeTab('summary', this)">3-Year Summary</button>
+        </div>
+
+        <!-- Year 1 Panel -->
+        <div id="fee-panel-year1" class="fee-tab-panel active">
+          <div class="fee-table-wrap">
+            <table class="fee-table">
+              <thead>
+                <tr>
+                  <th style="width: 80px;">S.No.</th>
+                  <th>Particulars</th>
+                  <th>Amount</th>
+                  <th>Payment Schedule</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><strong>Enrolment Fee</strong></td>
+                  <td>Rs. 15,000/-</td>
+                  <td>Immediate on receipt of admission offer letter (Part of tuition)</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><strong>Part-A Tuition Fee</strong></td>
+                  <td>Rs. 20,000/-</td>
+                  <td>On or before reporting to campus</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><strong>Development Fee</strong></td>
+                  <td>Rs. 3,500/-</td>
+                  <td>Payable at campus reporting</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td><strong>Part-B Industry Professional Skills Fees</strong></td>
+                  <td>Rs. 1,51,500/-</td>
+                  <td>Payable as per installment schedule</td>
+                </tr>
+                <tr class="total-row">
+                  <td>&bull;</td>
+                  <td><strong>Total Year 1 Fee</strong></td>
+                  <td colspan="2"><strong>Rs. 1,90,000/- (One Lakh Ninety Thousand Only)</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Year 2 Panel -->
+        <div id="fee-panel-year2" class="fee-tab-panel">
+          <div class="fee-table-wrap">
+            <table class="fee-table">
+              <thead>
+                <tr>
+                  <th style="width: 80px;">S.No.</th>
+                  <th>Particulars</th>
+                  <th>Amount</th>
+                  <th>Payment Schedule</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><strong>Part-A Tuition Fee</strong></td>
+                  <td>Rs. 35,000/-</td>
+                  <td>On or before 30th June 2028</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><strong>Development Fee</strong></td>
+                  <td>Rs. 3,500/-</td>
+                  <td>On or before 30th June 2028</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><strong>Part-B Industry Professional Skills Fees</strong></td>
+                  <td>Rs. 1,51,500/-</td>
+                  <td>Payable as per installment schedule</td>
+                </tr>
+                <tr class="total-row">
+                  <td>&bull;</td>
+                  <td><strong>Total Year 2 Fee</strong></td>
+                  <td colspan="2"><strong>Rs. 1,90,000/- (One Lakh Ninety Thousand Only)</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Year 3 Panel -->
+        <div id="fee-panel-year3" class="fee-tab-panel">
+          <div class="fee-table-wrap">
+            <table class="fee-table">
+              <thead>
+                <tr>
+                  <th style="width: 80px;">S.No.</th>
+                  <th>Particulars</th>
+                  <th>Amount</th>
+                  <th>Payment Schedule</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><strong>Part-A Tuition Fee</strong></td>
+                  <td>Rs. 35,000/-</td>
+                  <td>On or before 30th June 2029</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><strong>Development Fee</strong></td>
+                  <td>Rs. 3,500/-</td>
+                  <td>On or before 30th June 2029</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><strong>Part-B Industry Professional Skills Fees</strong></td>
+                  <td>Rs. 1,51,500/-</td>
+                  <td>Payable as per installment schedule</td>
+                </tr>
+                <tr class="total-row">
+                  <td>&bull;</td>
+                  <td><strong>Total Year 3 Fee</strong></td>
+                  <td colspan="2"><strong>Rs. 1,90,000/- (One Lakh Ninety Thousand Only)</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Year 4 Panel -->
+        <div id="fee-panel-year4" class="fee-tab-panel">
+          <div class="fee-table-wrap">
+            <table class="fee-table">
+              <thead>
+                <tr>
+                  <th style="width: 80px;">S.No.</th>
+                  <th>Particulars</th>
+                  <th>Amount</th>
+                  <th>Payment Schedule</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><strong>Part-A Tuition Fee</strong></td>
+                  <td>Rs. 35,000/-</td>
+                  <td>On or before 30th June 2030</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><strong>Development Fee</strong></td>
+                  <td>Rs. 3,500/-</td>
+                  <td>On or before 30th June 2030</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><strong>Part-B Honours &amp; Research Skills Fees</strong></td>
+                  <td>Rs. 1,11,500/-</td>
+                  <td>Payable as per installment schedule</td>
+                </tr>
+                <tr class="total-row">
+                  <td>&bull;</td>
+                  <td><strong>Total Year 4 (Honours &amp; Research)</strong></td>
+                  <td colspan="2"><strong>Rs. 1,50,000/- (One Lakh Fifty Thousand Only)</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Summary Panel -->
+        <div id="fee-panel-summary" class="fee-tab-panel">
+          <div class="fee-table-wrap">
+            <table class="fee-table">
+              <thead>
+                <tr>
+                  <th>Academic Period</th>
+                  <th>Core Components</th>
+                  <th>Yearly Fee</th>
+                  <th>Cumulative Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Year 1</strong></td>
+                  <td>Enrolment + Tuition + Development + Professional Skills</td>
+                  <td>Rs. 1,90,000/-</td>
+                  <td>Rs. 1,90,000/-</td>
+                </tr>
+                <tr>
+                  <td><strong>Year 2</strong></td>
+                  <td>Tuition + Development + Professional Skills</td>
+                  <td>Rs. 1,90,000/-</td>
+                  <td>Rs. 3,80,000/-</td>
+                </tr>
+                <tr>
+                  <td><strong>Year 3</strong></td>
+                  <td>Tuition + Development + Professional Skills</td>
+                  <td>Rs. 1,90,000/-</td>
+                  <td>Rs. 5,70,000/-</td>
+                </tr>
+                <tr class="total-row">
+                  <td colspan="2"><strong>Grand Total (3-Year BBA Degree)</strong></td>
+                  <td colspan="2"><strong>Rs. 5,70,000/- (Five Lakh Seventy Thousand Only)</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Optional Year 4</strong></td>
+                  <td>Honours &amp; Research Year-4 (AY 2030-31)</td>
+                  <td>Rs. 1,50,000/-</td>
+                  <td>Rs. 7,20,000/- (4-Year Honours Total)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Official Bank Account Details -->
+        <div class="bank-details-grid reveal">
+          <div class="bank-card">
+            <div class="bank-card__header">
+              <span class="bank-card__badge">Part-A Fees</span>
+              <h4>University Tuition &amp; Development A/C</h4>
+            </div>
+            <ul class="bank-details-list">
+              <li><span>Beneficiary Name:</span> <strong>Lexicon Management Institute of Leadership &amp; Excellence</strong></li>
+              <li><span>Bank Name:</span> <strong>Kotak Mahindra Bank Ltd</strong></li>
+              <li><span>Branch:</span> <strong>Ramwadi, Pune</strong></li>
+              <li><span>Account Number:</span> <strong>2945139784 (Saving)</strong></li>
+              <li><span>IFSC Code:</span> <strong>KKBK0000730</strong></li>
+            </ul>
+            <button type="button" class="copy-account-btn" onclick="copyBankInfo('2945139784', 'KKBK0000730', this)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span>Copy Part-A Account Details</span>
+            </button>
+          </div>
+
+          <div class="bank-card">
+            <div class="bank-card__header">
+              <span class="bank-card__badge" style="background: rgba(59,130,246,0.12); color: #60a5fa; border-color: rgba(59,130,246,0.3);">Part-B Fees</span>
+              <h4>Industry Professional Skills A/C</h4>
+            </div>
+            <ul class="bank-details-list">
+              <li><span>Beneficiary Name:</span> <strong>Lexicon Management Institute of Leadership &amp; Excellence</strong></li>
+              <li><span>Bank Name:</span> <strong>Kotak Mahindra Bank Ltd</strong></li>
+              <li><span>Branch:</span> <strong>Ramwadi, Pune</strong></li>
+              <li><span>Account Number:</span> <strong>5111793292 (Current)</strong></li>
+              <li><span>IFSC Code:</span> <strong>KKBK0000730</strong></li>
+            </ul>
+            <button type="button" class="copy-account-btn" onclick="copyBankInfo('5111793292', 'KKBK0000730', this)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span>Copy Part-B Account Details</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Institutional Scholarships -->
+        <div style="margin-top: 40px;">
+          <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 8px;">Institutional Scholarships</h3>
+          <p style="font-size: 14px; color: #94a3b8; margin: 0 0 20px 0;">Merit and category-based financial aid for eligible undergraduate scholars:</p>
+          
+          <div class="sch-grid reveal">
+            <div class="sch-card">
+              <div class="sch-amount">&#8377;25,000</div>
+              <h4>Academic Excellence</h4>
+              <p>For students securing 85%+ in Class 10th and 12th board exams.</p>
+            </div>
+            <div class="sch-card">
+              <div class="sch-amount">&#8377;20,000</div>
+              <h4>Sibling Scholarship</h4>
+              <p>Applicable if a real sibling is enrolled in Lexicon Group.</p>
+            </div>
+            <div class="sch-card">
+              <div class="sch-amount">&#8377;20,000</div>
+              <h4>Defence &amp; Armed Forces</h4>
+              <p>For children of Defence, Police, and Armed Forces personnel.</p>
+            </div>
+            <div class="sch-card">
+              <div class="sch-amount">&#8377;20,000</div>
+              <h4>Differently-Abled Support</h4>
+              <p>Applicable for students with certified disability benchmark of 30%+.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 9: ELIGIBILITY & ADMISSION ROADMAP (3 CARDS)
+         ========================================================================== -->
+    <section class="section" id="eligibility">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">REQUIREMENTS</p>
+            <h2>Eligibility Criteria &amp; Roadmap<span class="period">.</span></h2>
+            <p class="section-lead">A transparent 3-step qualification benchmark compliant with Savitribai Phule Pune University norms:</p>
+          </div>
+        </div>
+
+        <div class="pgdm-eligibility-grid">
+          
+          <div class="pgdm-elig-card reveal">
+            <span class="pgdm-elig-num">CRITERION 01</span>
+            <h3>10+2 Qualification</h3>
+            <p>Successful completion of 10+2 Higher Secondary Certificate (HSC) or equivalent examination from a recognized State/Central Board in <strong>any academic stream</strong> (Science, Commerce, or Arts).</p>
+          </div>
+
+          <div class="pgdm-elig-card reveal">
+            <span class="pgdm-elig-num">CRITERION 02</span>
+            <h3>Entrance Score</h3>
+            <p>Valid non-zero positive score in the <strong>Common University Entrance Test (CUET-UG)</strong> OR in <strong>MAH-BBA/BCA/BMS CET 2027</strong> conducted by the competent State CET Cell.</p>
+          </div>
+
+          <div class="pgdm-elig-card reveal">
+            <span class="pgdm-elig-num">CRITERION 03</span>
+            <h3>Personal Interaction &amp; Verification</h3>
+            <p>Personal interaction with Lexicon MILE academic mentors evaluating communication aptitude, career clarity, and student motivation followed by official document verification.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 10: PLACEMENTS & RECRUITER PARTNERS
+         ========================================================================== -->
+    <section class="section section-dark" id="placements">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">CAREER OUTCOMES</p>
+            <h2>Our Recruiting Partners<span class="period">.</span></h2>
+            <p class="section-lead">Graduates of Lexicon MILE programs are recruited across multinational consulting firms, FMCG conglomerates, tech leaders, and banking giants.</p>
+          </div>
+        </div>
+
+        <div class="recruiters-strip reveal">
+          <div class="recruiter-box"><img src="images/recruiters/r1.jpg" alt="Recruiter Logo" loading="lazy"></div>
+          <div class="recruiter-box"><img src="images/recruiters/r2.jpg" alt="Recruiter Logo" loading="lazy"></div>
+          <div class="recruiter-box"><img src="images/recruiters/r3.jpg" alt="Recruiter Logo" loading="lazy"></div>
+          <div class="recruiter-box"><img src="images/recruiters/r4.jpg" alt="Recruiter Logo" loading="lazy"></div>
+          <div class="recruiter-box"><img src="images/recruiters/r5.jpg" alt="Recruiter Logo" loading="lazy"></div>
+          <div class="recruiter-box"><img src="images/recruiters/r6.jpg" alt="Recruiter Logo" loading="lazy"></div>
+          <div class="recruiter-box"><img src="images/recruiters/r7.jpg" alt="Recruiter Logo" loading="lazy"></div>
+          <div class="recruiter-box"><img src="images/recruiters/r8.jpg" alt="Recruiter Logo" loading="lazy"></div>
+          <div class="recruiter-box"><img src="images/recruiters/r9.jpg" alt="Recruiter Logo" loading="lazy"></div>
+          <div class="recruiter-box"><img src="images/recruiters/r10.jpg" alt="Recruiter Logo" loading="lazy"></div>
+          <div class="recruiter-box"><img src="images/recruiters/r11.jpg" alt="Recruiter Logo" loading="lazy"></div>
+          <div class="recruiter-box"><img src="images/recruiters/r12.jpg" alt="Recruiter Logo" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 11: FREQUENTLY ASKED QUESTIONS (ACCORDION)
+         ========================================================================== -->
+    <section class="section" id="faqs">
+      <div class="container">
+        <div class="section-heading reveal text-center">
+          <div>
+            <p class="eyebrow">COMMON QUESTIONS</p>
+            <h2>Frequently Asked Questions<span class="period">.</span></h2>
+            <p class="section-lead">Find clear answers regarding degree affiliation, admissions, certifications, and hostel accommodations.</p>
+          </div>
+        </div>
+
+        <div class="faq-container">
+          
+          <div class="pgdm-accordion-item active">
+            <button type="button" class="pgdm-accordion-header" aria-expanded="true">
+              <span>Is the BBA program at Lexicon MILE affiliated to Pune University?</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="pgdm-accordion-body">
+              <p>Yes. The BBA Program at Lexicon MILE is officially affiliated with <strong>Savitribai Phule Pune University (SPPU)</strong>, recognized by the UGC and Government of Maharashtra.</p>
+            </div>
+          </div>
+
+          <div class="pgdm-accordion-item">
+            <button type="button" class="pgdm-accordion-header" aria-expanded="false">
+              <span>Can students from Science or Arts streams apply for the BBA course?</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="pgdm-accordion-body">
+              <p>Yes, absolutely. Students from any stream &mdash; <strong>Science, Commerce, or Arts</strong> &mdash; who have completed their 10+2 examinations with a valid CET or CUET-UG score are eligible to apply.</p>
+            </div>
+          </div>
+
+          <div class="pgdm-accordion-item">
+            <button type="button" class="pgdm-accordion-header" aria-expanded="false">
+              <span>What is the 4th Year Honours Track under NEP 2020?</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="pgdm-accordion-body">
+              <p>Under the National Education Policy (NEP 2020), students completing the 3-year BBA degree may opt for a 4th year in Honours and Research. This gives direct eligibility to apply for 1-year Master's programs globally or in India.</p>
+            </div>
+          </div>
+
+          <div class="pgdm-accordion-item">
+            <button type="button" class="pgdm-accordion-header" aria-expanded="false">
+              <span>Are the 9 enterprise certifications included in the course curriculum?</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="pgdm-accordion-body">
+              <p>Yes. All 9 tools &mdash; including Advanced Excel, Tableau, Power BI, Odoo ERP, SuiteCRM, Copilot Studio, and Google AI Studio &mdash; are delivered in a structured, semester-wise manner as part of the Part-B professional skills framework.</p>
+            </div>
+          </div>
+
+          <div class="pgdm-accordion-item">
+            <button type="button" class="pgdm-accordion-header" aria-expanded="false">
+              <span>What internship opportunities are provided during the degree?</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="pgdm-accordion-body">
+              <p>Students participate in mandatory Social Internships with NGOs/CSR initiatives in Year 1, followed by a mandatory 6 to 8-week Corporate Summer Internship with leading startups and corporate multinationals in Year 2.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 12: BOTTOM FINAL CTA BANNER
+         ========================================================================== -->
+    <section class="section" id="apply">
+      <div class="container">
+        <div class="cta-card reveal">
+          <div class="cta-inner">
+            <div>
+              <p class="eyebrow" style="color: #38bdf8;">ADMISSIONS OPEN &middot; BATCH 2027&ndash;29</p>
+              <h2 class="cta-heading">Launch Your Career with an <em>Industry-Ready BBA.</em></h2>
+              <p class="cta-desc">
+                Gain SPPU degree accreditation, hands-on enterprise tools, live corporate internships, and an unbeatable career headstart at Lexicon MILE, Pune.
+              </p>
+              <div class="cta-actions">
+                <a href="https://admissions.lexiconmile.com/" target="_blank" rel="noopener noreferrer" class="helix-btn-primary">
+                  Start Online Application <span>&nearr;</span>
+                </a>
+                <button type="button" class="helix-btn-secondary" id="btn-open-brochure-bottom">
+                  Download Brochure <span>&darr;</span>
+                </button>
+              </div>
+              <div class="cta-contact-bar">
+                <div>
+                  <strong style="color: #fff;">Direct Admissions Hotline:</strong>
+                  <a href="tel:+919967427278" style="color: #38bdf8; text-decoration: none; margin-left: 6px;">+91 99674 27278</a>
+                </div>
+                <div>
+                  <strong style="color: #fff;">Email Desk:</strong>
+                  <a href="mailto:admissions@mile.education" style="color: #38bdf8; text-decoration: none; margin-left: 6px;">admissions@mile.education</a>
+                </div>
+              </div>
+            </div>
+            <div class="cta-image-wrapper">
+              <img src="images/06.Banner.png" alt="Lexicon MILE Campus" loading="lazy">
+              <span class="cta-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </div>
+          <div class="cta-bottom">
+            <span>THE FUTURE DOESN'T WAIT. NEITHER SHOULD YOU.</span>
+            <span>LEXICON MILE &middot; PUNE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- ==========================================================================
+       INTERACTIVE BROCHURE DOWNLOAD MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="brochure-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      
+      <span style="font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #38bdf8; display: block; margin-bottom: 8px;">INSTANT ACCESS</span>
+      <h3 id="modal-title" style="font-size: 22px; font-weight: 700; color: #fff; margin: 0 0 10px 0;">Download BBA 2027&ndash;29 Brochure</h3>
+      <p style="font-size: 13px; color: #94a3b8; margin-bottom: 20px;">Please enter your details to receive the comprehensive course curriculum, fee schedule, and scholarship guidelines.</p>
+
+      <form id="brochure-form" onsubmit="handleBrochureSubmit(event)">
+        <div class="modal-form-group">
+          <label for="b-name">Full Name *</label>
+          <input type="text" id="b-name" required placeholder="e.g. Aditi Kulkarni">
+        </div>
+
+        <div class="modal-form-group">
+          <label for="b-email">Email Address *</label>
+          <input type="email" id="b-email" required placeholder="aditi@example.com">
+        </div>
+
+        <div class="modal-form-group">
+          <label for="b-phone">Mobile Number *</label>
+          <input type="tel" id="b-phone" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+        </div>
+
+        <div class="modal-form-group">
+          <label for="b-spec">Interested Specialization</label>
+          <select id="b-spec">
+            <option value="Finance Management">Finance Management</option>
+            <option value="Marketing Management">Marketing Management</option>
+            <option value="Human Resource Management">Human Resource Management</option>
+            <option value="Agri-Business Management">Agri-Business Management</option>
+            <option value="Services Management">Services Management</option>
+          </select>
+        </div>
+
+        <button type="submit" class="button" style="width: 100%; margin-top: 10px; justify-content: center; background: #0b63ce; color: #fff; border: none; padding: 12px; border-radius: 8px; font-weight: 700; cursor: pointer;">
+          Download Official Brochure Now <span>&darr;</span>
+        </button>
+
+        <div id="modal-success" style="display: none; margin-top: 15px; padding: 12px; border-radius: 8px; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; font-size: 13px; text-align: center;">
+          &check; Brochure download starting! Our academic counselor will connect with you shortly.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Shared Component Loader -->
+  <script src="js/components.js"></script>
+
+  <!-- Interactive Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Accordion / Collapsible behavior (User Rule)
+      const accordionItems = document.querySelectorAll('.pgdm-accordion-item');
+      accordionItems.forEach(item => {
+        const header = item.querySelector('.pgdm-accordion-header');
+        if (!header) return;
+
+        header.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          
+          accordionItems.forEach(other => {
+            other.classList.remove('active');
+            const h = other.querySelector('.pgdm-accordion-header');
+            if (h) h.setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isActive) {
+            item.classList.add('active');
+            header.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // 2. Curriculum Tabs Switcher
+      const tabBtns = document.querySelectorAll('.curriculum-tab-btn');
+      const tabPanels = document.querySelectorAll('.curriculum-tab-content');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetTab = btn.getAttribute('data-tab');
+
+          tabBtns.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          tabPanels.forEach(p => p.classList.remove('active'));
+
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+
+          const activePanel = document.getElementById(targetTab);
+          if (activePanel) {
+            activePanel.classList.add('active');
+          }
+        });
+      });
+
+      // 3. Modal Open / Close Logic
+      const modal = document.getElementById('brochure-modal');
+      const openBtn1 = document.getElementById('btn-open-brochure');
+      const openBtn2 = document.getElementById('btn-open-brochure-bottom');
+      const closeBtn = document.getElementById('modal-close-btn');
+
+      const openModal = () => { if (modal) modal.classList.add('open'); };
+      const closeModal = () => { if (modal) modal.classList.remove('open'); };
+
+      if (openBtn1) openBtn1.addEventListener('click', openModal);
+      if (openBtn2) openBtn2.addEventListener('click', openModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.classList.contains('open')) {
+          closeModal();
+        }
+      });
+    });
+
+    // 4. Fee Tab Switcher
+    function switchFeeTab(tabKey, btnElement) {
+      document.querySelectorAll('.fee-tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.fee-tab-panel').forEach(panel => panel.classList.remove('active'));
+
+      if (btnElement) btnElement.classList.add('active');
+      const targetPanel = document.getElementById('fee-panel-' + tabKey);
+      if (targetPanel) targetPanel.classList.add('active');
+    }
+
+    // 5. Copy Bank Details
+    function copyBankInfo(acc, ifsc, btn) {
+      const textToCopy = 'Account Number: ' + acc + '\\nIFSC Code: ' + ifsc + '\\nBank: Kotak Mahindra Bank\\nBeneficiary: Lexicon Management Institute of Leadership & Excellence';
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<span style="color: #34d399;">&check; Copied to Clipboard!</span>';
+        setTimeout(() => { btn.innerHTML = originalText; }, 2500);
+      });
+    }
+
+    // 6. Form submission handler
+    function handleBrochureSubmit(e) {
+      e.preventDefault();
+      const successBox = document.getElementById('modal-success');
+      if (successBox) successBox.style.display = 'block';
+
+      setTimeout(() => {
+        const link = document.createElement('a');
+        link.href = 'mandatory-disclosure-lexicon-mile.html';
+        link.target = '_blank';
+        link.click();
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
+`;
+
+fs.writeFileSync(path.join(__dirname, '..', 'v4', 'bba.html'), bbaHtml, 'utf8');
+console.log('Successfully generated modernised v4/bba.html matching PGDM blueprint!');
+
+// Also create mirror in v4/programs/bba/index.html
+const bbaMirrorDir = path.join(__dirname, '..', 'v4', 'programs', 'bba');
+if (!fs.existsSync(bbaMirrorDir)) {
+  fs.mkdirSync(bbaMirrorDir, { recursive: true });
+}
+
+let mirrorHtml = bbaHtml
+  .replace(/(href|src|poster)=["']styles\//g, '$1="../../styles/')
+  .replace(/(href|src|poster)=["']assets\//g, '$1="../../assets/')
+  .replace(/(href|src|poster)=["']images\//g, '$1="../../images/')
+  .replace(/(href|src|poster)=["']js\//g, '$1="../../js/')
+  .replace(/url\(["']?images\//g, 'url("../../images/')
+  .replace(/url\(["']?assets\//g, 'url("../../assets/')
+  .replace(/href=["']index\.html["']/g, 'href="../../index.html"')
+  .replace(/href=["']programs\.html["']/g, 'href="../../programs.html"')
+  .replace(/href=["']bba\.html["']/g, 'href="index.html"');
+
+fs.writeFileSync(path.join(bbaMirrorDir, 'index.html'), mirrorHtml, 'utf8');
+console.log('Successfully generated mirror v4/programs/bba/index.html');
+
