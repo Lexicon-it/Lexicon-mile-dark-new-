@@ -4,6 +4,7 @@
     font-weight: 100 900;
     font-display: swap
 }
+
 @import url('elementor-theme.css');
 
 :root {
@@ -1542,8 +1543,13 @@ a.mega-link-large {
 }
 
 @keyframes scroll-faculty {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-50% - 11px)); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 11px));
+    }
 }
 
 .portrait {
@@ -2546,6 +2552,7 @@ a.mega-link-large {
         align-items: flex-start;
         gap: 40px;
     }
+
     .cta-image-wrapper {
         width: 100%;
         max-width: 100%;
@@ -4375,6 +4382,7 @@ a.mega-link-large {
         scroll-behavior: auto
     }
 }
+
 /* --------------------------------------------------------------------------
    Learn Practically by Building Real Businesses (Stacking Cards on Scroll)
    -------------------------------------------------------------------------- */
@@ -4951,7 +4959,7 @@ a.mega-link-large {
     .stack-media-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.65) 100%);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.65) 100%);
     }
 
     .stack-media-badge-text {
@@ -4980,9 +4988,11 @@ a.mega-link-large {
     padding-bottom: 10px;
     scrollbar-width: none;
 }
+
 .recruiter-grid::-webkit-scrollbar {
     display: none;
 }
+
 .recruiter-card {
     background: #11141c;
     padding: 25px 30px;
@@ -4993,14 +5003,45 @@ a.mega-link-large {
     justify-content: center;
     min-width: 200px;
     text-align: center;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
-.recruiter-box-header h3 { font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 0.25rem; }
-.recruiter-box-header p { font-size: 0.95rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem; }
-.recruiter-logos { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
-@media (max-width: 768px) { .recruiter-logos { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 480px) { .recruiter-logos { grid-template-columns: repeat(2, 1fr); } }
-.recruiter-logos img { width: 100%; border-radius: 4px; display: block; }
+
+.recruiter-box-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.recruiter-box-header p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+.recruiter-logos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .recruiter-logos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .recruiter-logos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.recruiter-logos img {
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+}
 
 
 /* ==========================================================================
@@ -6156,11 +6197,13 @@ a.mega-link-large {
     .trustees-tier-2 .trustee-card {
         flex-direction: row;
     }
+
     .trustees-tier-2 .trustee-portrait {
         width: 38%;
         aspect-ratio: auto;
         min-height: 100%;
     }
+
     .trustees-tier-2 .trustee-body {
         width: 62%;
     }
@@ -6542,15 +6585,19 @@ a.mega-link-large {
         grid-template-columns: 1fr;
         gap: 36px;
     }
+
     .hero-metrics-bar {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .pillars-grid {
         grid-template-columns: 1fr;
     }
+
     .about-split-layout {
         grid-template-columns: 1fr;
     }
+
     .milestones-split-layout {
         grid-template-columns: 1fr;
     }
@@ -6558,27 +6605,35 @@ a.mega-link-large {
     .legacy-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .trustees-tier-1 {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .trustees-tier-1 .trustee-card:last-child {
         grid-column: span 2;
     }
+
     .strategic-grid {
         grid-template-columns: 1fr;
     }
+
     .executives-grid-3 {
         grid-template-columns: 1fr;
     }
+
     .awards-grid-9 {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .campus-pillars-row {
         grid-template-columns: 1fr;
     }
+
     .campus-gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .tour-feature-banner {
         flex-direction: column;
         align-items: flex-start;
@@ -6590,13 +6645,16 @@ a.mega-link-large {
         padding-top: 120px;
         padding-bottom: 40px;
     }
+
     .hero-metrics-bar {
         grid-template-columns: 1fr;
     }
+
     .trustees-tier-1,
     .trustees-tier-2 {
         grid-template-columns: 1fr;
     }
+
     .trustees-tier-1 .trustee-card:last-child {
         grid-column: span 1;
     }
@@ -6604,12 +6662,15 @@ a.mega-link-large {
     .legacy-grid {
         grid-template-columns: 1fr;
     }
+
     .awards-grid-9 {
         grid-template-columns: 1fr;
     }
+
     .campus-gallery-grid {
         grid-template-columns: 1fr;
     }
+
     .milestones-card-footer {
         grid-template-columns: 1fr;
     }
@@ -6875,7 +6936,8 @@ a.mega-link-large {
     .group-pillars-grid {
         grid-template-columns: 1fr !important;
     }
-    .milestones-highlight-box > div {
+
+    .milestones-highlight-box>div {
         grid-template-columns: 1fr !important;
         gap: 25px !important;
     }
@@ -7016,6 +7078,7 @@ a.mega-link-large {
 }
 
 @media (max-width: 640px) {
+
     .trustees-main-grid,
     .trustees-secondary-grid {
         grid-template-columns: 1fr;
@@ -7271,23 +7334,28 @@ a.mega-link-large {
 }
 
 @media (max-width: 900px) {
+
     .desk-modal-layout,
     .desk-message-grid {
         grid-template-columns: 1fr;
         gap: 24px;
     }
+
     .desk-modal-author,
     .desk-author-card {
         max-width: 240px;
         margin: 0 auto;
         position: static;
     }
+
     .desk-message-section {
         padding: 24px;
     }
+
     .desk-modal-header {
         padding: 16px 20px;
     }
+
     .desk-modal-scroll-body {
         padding: 20px;
     }
@@ -7908,10 +7976,12 @@ a.mega-link-large {
     .ceo-pillars-strip {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .ceo-main-layout {
         grid-template-columns: 300px 1fr;
         gap: 30px;
     }
+
     .ceo-letter-card {
         padding: 32px;
     }
@@ -7926,11 +7996,13 @@ a.mega-link-large {
     .ceo-main-layout {
         grid-template-columns: 1fr;
     }
+
     .ceo-sidebar-card {
         position: static;
         max-width: 360px;
         margin: 0 auto;
     }
+
     .ceo-commitments-grid {
         grid-template-columns: 1fr;
     }
@@ -7950,15 +8022,19 @@ a.mega-link-large {
     .ceo-pillars-strip {
         grid-template-columns: 1fr;
     }
+
     .ceo-letter-card {
         padding: 24px 20px;
     }
+
     .ceo-salutation {
         font-size: 18px;
     }
+
     .ceo-letter-body p {
         font-size: 14.5px;
     }
+
     .ceo-sign-off-block {
         flex-direction: column;
         align-items: flex-start;
@@ -8148,7 +8224,7 @@ a.mega-link-large {
 }
 
 @media (min-width: 1025px) {
-    .governors-grid-3col > article:last-child:nth-child(3n+1) {
+    .governors-grid-3col>article:last-child:nth-child(3n+1) {
         grid-column: 2;
     }
 }
@@ -8186,7 +8262,7 @@ a.mega-link-large {
         gap: 40px 24px;
     }
 
-    .governors-grid-3col > article:last-child:nth-child(2n+1) {
+    .governors-grid-3col>article:last-child:nth-child(2n+1) {
         grid-column: 1 / -1;
         max-width: 380px;
         margin: 0 auto;
@@ -8194,12 +8270,13 @@ a.mega-link-large {
 }
 
 @media (max-width: 720px) {
+
     .governors-grid-3col,
     .governors-stat-strip {
         grid-template-columns: 1fr;
         gap: 36px;
     }
-    
+
     .governor-thumb-wrap img,
     .governor-emblem-icon {
         width: 124px;
@@ -9859,6 +9936,7 @@ a.mega-link-large {
     .hta-stepper-track {
         grid-template-columns: 1fr;
     }
+
     .hta-prereq-box {
         grid-template-columns: 1fr;
     }
@@ -10600,8 +10678,8 @@ a.mega-link-large {
 
 .guide-hero {
     background: radial-gradient(circle at 80% 20%, rgba(102, 157, 239, 0.12), transparent 45%),
-                radial-gradient(circle at 10% 70%, rgba(255, 208, 102, 0.08), transparent 40%),
-                #05070c;
+        radial-gradient(circle at 10% 70%, rgba(255, 208, 102, 0.08), transparent 40%),
+        #05070c;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     padding-top: 130px;
     padding-bottom: 36px;
@@ -11077,8 +11155,17 @@ a.mega-link-large {
 }
 
 @keyframes livePulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(1.3); }
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(1.3);
+    }
 }
 
 .guide-faq-help-card h4 {
@@ -11201,10 +11288,21 @@ a.mega-link-large {
     width: fit-content;
 }
 
-.accordion-category-tag.gold { color: #ffd066; }
-.accordion-category-tag.blue { color: #669def; }
-.accordion-category-tag.cyan { color: #4ee3c2; }
-.accordion-category-tag.purple { color: #c084fc; }
+.accordion-category-tag.gold {
+    color: #ffd066;
+}
+
+.accordion-category-tag.blue {
+    color: #669def;
+}
+
+.accordion-category-tag.cyan {
+    color: #4ee3c2;
+}
+
+.accordion-category-tag.purple {
+    color: #c084fc;
+}
 
 .accordion-header-title {
     font-size: 15px;
@@ -11361,6 +11459,7 @@ a.mega-link-large {
 .faq-action-link.gold {
     color: #ffd066;
 }
+
 .faq-action-link.gold:hover {
     color: #ffe08a;
 }
@@ -11368,6 +11467,7 @@ a.mega-link-large {
 .faq-action-link.cyan {
     color: #4ee3c2;
 }
+
 .faq-action-link.cyan:hover {
     color: #7ef1d8;
 }
@@ -11390,8 +11490,8 @@ a.mega-link-large {
 
 .loan-hero {
     background: radial-gradient(circle at 85% 25%, rgba(78, 227, 194, 0.12), transparent 45%),
-                radial-gradient(circle at 15% 75%, rgba(102, 157, 239, 0.1), transparent 40%),
-                #05070c;
+        radial-gradient(circle at 15% 75%, rgba(102, 157, 239, 0.1), transparent 40%),
+        #05070c;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     padding-top: 130px;
     padding-bottom: 40px;
@@ -11982,8 +12082,8 @@ a.mega-link-large {
 
 .mentors-hero {
     background: radial-gradient(circle at 80% 20%, rgba(102, 157, 239, 0.12), transparent 45%),
-                radial-gradient(circle at 15% 75%, rgba(255, 208, 102, 0.08), transparent 40%),
-                #05070c;
+        radial-gradient(circle at 15% 75%, rgba(255, 208, 102, 0.08), transparent 40%),
+        #05070c;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     padding-top: 130px;
     padding-bottom: 36px;
@@ -14216,8 +14316,15 @@ a.mega-link-large {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Placed Student Cards Grid */
@@ -14462,6 +14569,7 @@ a.mega-link-large {
 
 /* Responsive Rules for Placement Page */
 @media (max-width: 1100px) {
+
     .placement-metrics-grid,
     .placement-highlights-grid,
     .placement-recruiter-impact,
@@ -14480,6 +14588,7 @@ a.mega-link-large {
 }
 
 @media (max-width: 768px) {
+
     .placement-metrics-grid,
     .placement-highlights-grid,
     .placement-recruiter-impact,
@@ -14813,6 +14922,7 @@ a.mega-link-large {
         opacity: 0;
         transform: translateY(8px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -15326,6 +15436,7 @@ a.mega-link-large {
 
 /* Responsive Rules for Recruitment Page */
 @media (max-width: 1024px) {
+
     .recruitment-metrics-strip,
     .recruitment-infra-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -15457,7 +15568,11 @@ a.mega-link-large {
 }
 
 /* Comfortable offset for fixed navigation headers */
-#fee-structure, #fee, #fees, [id="fee-structure"], [id="fee"] {
+#fee-structure,
+#fee,
+#fees,
+[id="fee-structure"],
+[id="fee"] {
     scroll-margin-top: 100px;
 }
 
@@ -15530,12 +15645,13 @@ a.mega-link-large {
 
 .video-modal-iframe-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
     background: #000;
     border-radius: 12px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
 
 .video-modal-iframe-container iframe {
@@ -15552,147 +15668,186 @@ a.mega-link-large {
    GLOBAL RESPONSIVE SAFEGUARDS & MOBILE OPTIMIZATIONS
    ========================================================================== */
 @media (max-width: 768px) {
-  /* Prevent horizontal scrolling globally without breaking sticky headers */
-  html, body {
-    overflow-x: clip !important;
-    max-width: 100vw;
-  }
 
-  /* Images, videos, and objects must scale */
-  img, video, iframe, embed, object {
-    max-width: 100% !important;
-    height: auto;
-  }
-  
-  /* Enable horizontal scrolling for overflowing tables */
-  .table-container, table, .hmct-table {
-    display: block !important;
-    width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap; /* Prevents text from squishing unreadably */
-  }
+    /* Prevent horizontal scrolling globally without breaking sticky headers */
+    html,
+    body {
+        overflow-x: clip !important;
+        max-width: 100vw;
+    }
 
-  /* Form inputs */
-  input, select, textarea {
-    max-width: 100%;
-  }
+    /* Images, videos, and objects must scale */
+    img,
+    video,
+    iframe,
+    embed,
+    object {
+        max-width: 100% !important;
+        height: auto;
+    }
 
-  /* Reduce massive paddings on mobile */
-  .section, section, .hmct-section, .hmct-section-alt {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-  
-  .container {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-    max-width: 100% !important;
-  }
+    /* Enable horizontal scrolling for overflowing tables */
+    .table-container,
+    table,
+    .hmct-table {
+        display: block !important;
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        /* Prevents text from squishing unreadably */
+    }
 
-  /* Prevent flex layouts from overflowing */
-  .cta-buttons, .hero-cta, .hmct-hero-cta, .buttons-row {
-    flex-wrap: wrap !important;
-    justify-content: center;
-  }
-  
-  /* Fallback for components missing explicit mobile grid overrides */
-  .advantages-grid, .features-eligibility-grid, .gallery-grid, 
-  .recruiters-strip, .curriculum-grid, .stats-strip, .roles-grid, .bank-details-grid {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
-  }
-  
-  .final-cta .cta-main-layout {
-    grid-template-columns: 1fr !important;
-  }
+    /* Form inputs */
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+    }
+
+    /* Reduce massive paddings on mobile */
+    .section,
+    section,
+    .hmct-section,
+    .hmct-section-alt {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        max-width: 100% !important;
+    }
+
+    /* Prevent flex layouts from overflowing */
+    .cta-buttons,
+    .hero-cta,
+    .hmct-hero-cta,
+    .buttons-row {
+        flex-wrap: wrap !important;
+        justify-content: center;
+    }
+
+    /* Fallback for components missing explicit mobile grid overrides */
+    .advantages-grid,
+    .features-eligibility-grid,
+    .gallery-grid,
+    .recruiters-strip,
+    .curriculum-grid,
+    .stats-strip,
+    .roles-grid,
+    .bank-details-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .final-cta .cta-main-layout {
+        grid-template-columns: 1fr !important;
+    }
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
-  /* Tablet fallbacks */
-  .advantages-grid, .features-eligibility-grid, .gallery-grid, 
-  .curriculum-grid, .roles-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-  .recruiters-strip, .stats-strip {
-    grid-template-columns: repeat(3, 1fr) !important;
-  }
-  .final-cta .cta-main-layout {
-    grid-template-columns: 1fr !important;
-  }
+
+    /* Tablet fallbacks */
+    .advantages-grid,
+    .features-eligibility-grid,
+    .gallery-grid,
+    .curriculum-grid,
+    .roles-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .recruiters-strip,
+    .stats-strip {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .final-cta .cta-main-layout {
+        grid-template-columns: 1fr !important;
+    }
 }
+
 /* ==========================================================================
    MOBILE HEADER FIXES (Hamburger Menu & Logo Alignment)
    ========================================================================== */
 @media (max-width: 991px) {
-  /* Move hamburger to the right side */
-  .site-header .header-inner {
-    justify-content: space-between !important;
-    width: 100% !important;
-  }
-  
-  .menu-toggle {
-    margin-left: auto !important;
-  }
-  
-  /* Ensure logo fits cleanly within the header and doesn't overlap the bottom line */
-  .site-header {
-    display: flex;
-    align-items: center;
-  }
-  
-  .brand {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
 
-  .brand-logo {
-    height: 56px !important;
-    max-height: 58px !important;
-    width: auto !important;
-    object-fit: contain;
-    margin-bottom: 0 !important;
-  }
+    /* Move hamburger to the right side */
+    .site-header .header-inner {
+        justify-content: space-between !important;
+        width: 100% !important;
+    }
+
+    .menu-toggle {
+        margin-left: auto !important;
+    }
+
+    /* Ensure logo fits cleanly within the header and doesn't overlap the bottom line */
+    .site-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .brand-logo {
+        height: 56px !important;
+        max-height: 58px !important;
+        width: auto !important;
+        object-fit: contain;
+        margin-bottom: 0 !important;
+    }
 }
 
 /* ==========================================================================
    FURTHER MOBILE REFINEMENTS
    ========================================================================== */
 @media (max-width: 768px) {
-  /* Reduce container and section LR padding to 5px as requested */
-  .section, section, .hmct-section, .hmct-section-alt {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-  }
-  .container {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-  }
-  
-  /* Fix massive gap at bottom of hero section caused by min-height */
-  .hero {
-    min-height: auto !important;
-    height: auto !important;
-    padding-bottom: 20px !important;
-  }
-  
-  /* Reduce gap between 'LEARN IT, BUILD IT, LIVE IT' */
-  #hero-heading {
-    line-height: 1 !important;
-  }
-  #hero-heading br {
-    display: block;
-    content: "";
-    margin-top: -8px;
-  }
 
-  /* 'Where Ambition Meets Opportunity' recruiter grid 2 columns */
-  .recruiter-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
-  }
+    /* Reduce container and section LR padding to 5px as requested */
+    .section,
+    section,
+    .hmct-section,
+    .hmct-section-alt {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .container {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    /* Fix massive gap at bottom of hero section caused by min-height */
+    .hero {
+        min-height: auto !important;
+        height: auto !important;
+        padding-bottom: 20px !important;
+    }
+
+    /* Reduce gap between 'LEARN IT, BUILD IT, LIVE IT' */
+    #hero-heading {
+        line-height: 1 !important;
+    }
+
+    #hero-heading br {
+        display: block;
+        content: "";
+        margin-top: -8px;
+    }
+
+    /* 'Where Ambition Meets Opportunity' recruiter grid 2 columns */
+    .recruiter-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
 }
+
 /* ==========================================================================
    PATCH 3: HEADER LINE FIX, STICKY DARK BG, AND STUDENT SPEAK LAYOUT
    ========================================================================== */
@@ -15701,305 +15856,350 @@ a.mega-link-large {
 .stories-grid {
     grid-template-columns: repeat(3, 1fr) !important;
 }
+
 .story-stack {
     display: contents !important;
 }
+
 .story-card.story-feature {
     height: 245px !important;
 }
+
 @media (max-width: 991px) {
-  .stories-grid {
-      grid-template-columns: 1fr !important;
-  }
+    .stories-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
 
 /* 2. Fix mobile header, recruiter grid, and practically gap */
 @media (max-width: 991px) {
-  /* Hide the top-bar completely on mobile so its border line disappears */
-  .top-bar {
-      display: none !important;
-  }
 
-  /* Make header sticky with dark bg, remove negative margin to stop overlapping */
-  .site-header {
-      background: #070c16f5 !important;
-      border-bottom: 1px solid #ffffff30 !important;
-      position: sticky !important;
-      top: 0 !important;
-      z-index: 100 !important;
-      margin-bottom: 0 !important;
-      backdrop-filter: blur(15px);
-      height: 74px !important;
-      display: flex !important;
-      align-items: center !important;
-  }
+    /* Hide the top-bar completely on mobile so its border line disappears */
+    .top-bar {
+        display: none !important;
+    }
 
-  .brand-logo {
-      height: 56px !important;
-      max-height: 58px !important;
-      width: auto !important;
-  }
+    /* Make header sticky with dark bg, remove negative margin to stop overlapping */
+    .site-header {
+        background: #070c16f5 !important;
+        border-bottom: 1px solid #ffffff30 !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 100 !important;
+        margin-bottom: 0 !important;
+        backdrop-filter: blur(15px);
+        height: 74px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
 
-  /* Since header is no longer overlapping, adjust hero padding */
-  .hero, .pgdm-hero-banner {
-      padding-top: 85px !important;
-  }
+    .brand-logo {
+        height: 56px !important;
+        max-height: 58px !important;
+        width: auto !important;
+    }
 
-  /* Force grid instead of flex for recruiter grid so 1x2 layout applies */
-  .recruiter-grid, .recruiters-strip {
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr) !important;
-      gap: 12px !important;
-  }
-  .recruiter-card {
-      width: 100% !important;
-  }
+    /* Since header is no longer overlapping, adjust hero padding */
+    .hero,
+    .pgdm-hero-banner {
+        padding-top: 85px !important;
+    }
 
-  /* Reduce massive 220px gap between Learn it, Build it, Live it */
-  .practically-card.stack-card:not(:last-child) {
-      margin-bottom: 30px !important;
-  }
+    /* Force grid instead of flex for recruiter grid so 1x2 layout applies */
+    .recruiter-grid,
+    .recruiters-strip {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .recruiter-card {
+        width: 100% !important;
+    }
+
+    /* Reduce massive 220px gap between Learn it, Build it, Live it */
+    .practically-card.stack-card:not(:last-child) {
+        margin-bottom: 30px !important;
+    }
 }
+
 /* ==========================================================================
    PATCH 4: REMOVE LR PADDING ON MOBILE
    ========================================================================== */
 @media (max-width: 991px) {
-  .section, section, .hmct-section, .hmct-section-alt {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    margin: 0 !important;
-  }
-  
-  /* If programs grid has gaps or margins that add to the sides, clear them */
-  .programs-grid {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
+
+    .section,
+    section,
+    .hmct-section,
+    .hmct-section-alt {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* If programs grid has gaps or margins that add to the sides, clear them */
+    .programs-grid {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
 }
+
 /* ==========================================================================
    PATCH 5: SET LR PADDING TO 2PX ON MOBILE
    ========================================================================== */
 @media (max-width: 991px) {
-  .section, section, .hmct-section, .hmct-section-alt {
-    padding-left: 2px !important;
-    padding-right: 2px !important;
-  }
-  .container {
-    padding-left: 2px !important;
-    padding-right: 2px !important;
-  }
+
+    .section,
+    section,
+    .hmct-section,
+    .hmct-section-alt {
+        padding-left: 2px !important;
+        padding-right: 2px !important;
+    }
+
+    .container {
+        padding-left: 2px !important;
+        padding-right: 2px !important;
+    }
 }
+
 /* ==========================================================================
    PATCH 6: LEARN IT, BUILD IT, LIVE IT IMAGE FULL WIDTH
    ========================================================================== */
 @media (max-width: 991px) {
-  /* Reduce the card's horizontal padding so the image can stretch edge-to-edge (with 2px gap) */
-  .practically-card.stack-card {
-      padding: 18px 2px 22px !important;
-  }
 
-  /* Restore padding for the text content so it doesn't touch the edge of the card */
-  .stack-content-col {
-      padding-left: 16px !important;
-      padding-right: 16px !important;
-  }
-  
-  /* Match the image border radius to the card's 24px radius minus the 2px padding */
-  .stack-media-col {
-      border-radius: 22px !important;
-  }
-  .stack-media-col img {
-      border-radius: 22px !important;
-  }
+    /* Reduce the card's horizontal padding so the image can stretch edge-to-edge (with 2px gap) */
+    .practically-card.stack-card {
+        padding: 18px 2px 22px !important;
+    }
+
+    /* Restore padding for the text content so it doesn't touch the edge of the card */
+    .stack-content-col {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    /* Match the image border radius to the card's 24px radius minus the 2px padding */
+    .stack-media-col {
+        border-radius: 22px !important;
+    }
+
+    .stack-media-col img {
+        border-radius: 22px !important;
+    }
 }
+
 /* ==========================================================================
    PATCH 7: FORCE LEARN IT IMAGE FULL WIDTH
    ========================================================================== */
 @media (max-width: 991px) {
-  /* Force the flex container to stretch children to full width instead of centering */
-  .stack-card-inner {
-      align-items: stretch !important;
-      width: 100% !important;
-  }
-  
-  /* Force media column to 100% width */
-  .stack-media-col {
-      width: 100% !important;
-      border-radius: 22px !important;
-      margin: 0 !important;
-  }
 
-  /* Make sure the image covers the container */
-  .stack-img {
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: cover !important;
-      border-radius: 22px !important;
-  }
-  
-  /* Re-assert the card padding to ensure 2px left/right gap */
-  .practically-card.stack-card {
-      padding: 18px 2px 22px !important;
-      width: 100% !important;
-  }
+    /* Force the flex container to stretch children to full width instead of centering */
+    .stack-card-inner {
+        align-items: stretch !important;
+        width: 100% !important;
+    }
+
+    /* Force media column to 100% width */
+    .stack-media-col {
+        width: 100% !important;
+        border-radius: 22px !important;
+        margin: 0 !important;
+    }
+
+    /* Make sure the image covers the container */
+    .stack-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 22px !important;
+    }
+
+    /* Re-assert the card padding to ensure 2px left/right gap */
+    .practically-card.stack-card {
+        padding: 18px 2px 22px !important;
+        width: 100% !important;
+    }
 }
+
 /* ==========================================================================
    PATCH 8: ALIGN IMAGE AND CONTENT WIDTH
    ========================================================================== */
 @media (max-width: 991px) {
-  /* Set consistent padding on the white card so image and text align perfectly */
-  .practically-card.stack-card {
-      padding: 18px 16px 22px !important;
-  }
 
-  /* Remove the individual text padding since the card now handles it */
-  .stack-content-col {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-  }
+    /* Set consistent padding on the white card so image and text align perfectly */
+    .practically-card.stack-card {
+        padding: 18px 16px 22px !important;
+    }
+
+    /* Remove the individual text padding since the card now handles it */
+    .stack-content-col {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 }
+
 /* ==========================================================================
    PATCH 9: LEARN IT TEXT BEFORE IMAGE ON MOBILE
    ========================================================================== */
 @media (max-width: 991px) {
-  /* Reorder the columns so text comes first */
-  .stack-content-col {
-      order: 1 !important;
-      padding-top: 5px !important;     /* Card already provides top padding */
-      padding-bottom: 20px !important; /* Creates a clean gap between text and image */
-  }
-  
-  .stack-media-col {
-      order: 2 !important;
-  }
+
+    /* Reorder the columns so text comes first */
+    .stack-content-col {
+        order: 1 !important;
+        padding-top: 5px !important;
+        /* Card already provides top padding */
+        padding-bottom: 20px !important;
+        /* Creates a clean gap between text and image */
+    }
+
+    .stack-media-col {
+        order: 2 !important;
+    }
 }
+
 /* ==========================================================================
    PATCH 10: "LEARN IT" BADGE BEFORE IMAGE, TITLE/DESC AFTER IMAGE
    ========================================================================== */
 @media (max-width: 991px) {
-  /* Flatten the content column so its children become direct flex items of stack-card-inner */
-  .stack-content-col {
-      display: contents !important;
-  }
 
-  /* 1. The Badge comes first */
-  .stack-tag-badge {
-      order: 1 !important;
-      margin-top: 5px !important;
-      margin-bottom: 20px !important; /* Gap between badge and image */
-  }
+    /* Flatten the content column so its children become direct flex items of stack-card-inner */
+    .stack-content-col {
+        display: contents !important;
+    }
 
-  /* 2. The Image comes right after the badge */
-  .stack-media-col {
-      order: 2 !important;
-      margin-bottom: 20px !important; /* Gap between image and title */
-  }
+    /* 1. The Badge comes first */
+    .stack-tag-badge {
+        order: 1 !important;
+        margin-top: 5px !important;
+        margin-bottom: 20px !important;
+        /* Gap between badge and image */
+    }
 
-  /* 3. The Title comes after the image */
-  .stack-card-title {
-      order: 3 !important;
-      margin-top: 0 !important;
-  }
+    /* 2. The Image comes right after the badge */
+    .stack-media-col {
+        order: 2 !important;
+        margin-bottom: 20px !important;
+        /* Gap between image and title */
+    }
 
-  /* 4. The Description or Outcome Box comes last */
-  .stack-card-desc,
-  .stack-outcome-box {
-      order: 4 !important;
-  }
+    /* 3. The Title comes after the image */
+    .stack-card-title {
+        order: 3 !important;
+        margin-top: 0 !important;
+    }
+
+    /* 4. The Description or Outcome Box comes last */
+    .stack-card-desc,
+    .stack-outcome-box {
+        order: 4 !important;
+    }
 }
+
 /* ==========================================================================
    PATCH 11: HERO BOTTOM TEXT RIGHT PADDING ON MOBILE
    ========================================================================== */
 @media (max-width: 991px) {
-  .hero-bottom > p {
-      text-align: right !important;
-      padding-right: 14px !important;
-  }
+    .hero-bottom>p {
+        text-align: right !important;
+        padding-right: 14px !important;
+    }
 }
+
 /* ==========================================================================
    PATCH 12: UNIVERSAL MOBILE RESPONSIVENESS (FOOTER UNTOUCHED)
    ========================================================================== */
 @media (max-width: 991px) {
-  /* Restore the original footer container padding since patch 4/5 stripped it globally */
-  .site-footer .container {
-      padding-left: 15px !important;
-      padding-right: 15px !important;
-  }
 
-  /* 3. Universal grid fixes for other pages */
-  /* Any element that behaves as a grid should gracefully collapse to 1 column if it's struggling */
-  section[class*="grid"] {
-      grid-template-columns: 1fr !important;
-  }
-  
-  /* Ensure images don't break out of containers */
-  img {
-      max-width: 100% !important;
-      height: auto;
-  }
+    /* Restore the original footer container padding since patch 4/5 stripped it globally */
+    .site-footer .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* 3. Universal grid fixes for other pages */
+    /* Any element that behaves as a grid should gracefully collapse to 1 column if it's struggling */
+    section[class*="grid"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Ensure images don't break out of containers */
+    img {
+        max-width: 100% !important;
+        height: auto;
+    }
 }
+
 /* ==========================================================================
    PATCH 13: FOOTER BRANDING INLINE (LOGO LEFT, TEXT RIGHT)
    ========================================================================== */
 @media (max-width: 991px) {
-  .footer-brand {
-      display: grid !important;
-      grid-template-columns: auto 1fr !important;
-      gap: 0 20px !important; /* 20px gap between logo and text */
-      align-items: start !important;
-  }
-  
-  /* Place logo in the left column, spanning all 3 rows */
-  .footer-brand > a.brand {
-      grid-column: 1 !important;
-      grid-row: 1 / span 3 !important;
-  }
-  
-  /* Stack the text elements in the right column */
-  .footer-brand > p {
-      grid-column: 2 !important;
-      grid-row: 1 !important;
-      margin-top: 0 !important; /* Override the 20px margin */
-  }
-  
-  .footer-brand > span.footer-location {
-      grid-column: 2 !important;
-      grid-row: 2 !important;
-      margin-top: 5px !important;
-  }
-  
-  .footer-brand > a.text-link {
-      grid-column: 2 !important;
-      grid-row: 3 !important;
-      margin-top: 10px !important;
-  }
+    .footer-brand {
+        display: grid !important;
+        grid-template-columns: auto 1fr !important;
+        gap: 0 20px !important;
+        /* 20px gap between logo and text */
+        align-items: start !important;
+    }
+
+    /* Place logo in the left column, spanning all 3 rows */
+    .footer-brand>a.brand {
+        grid-column: 1 !important;
+        grid-row: 1 / span 3 !important;
+    }
+
+    /* Stack the text elements in the right column */
+    .footer-brand>p {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        margin-top: 0 !important;
+        /* Override the 20px margin */
+    }
+
+    .footer-brand>span.footer-location {
+        grid-column: 2 !important;
+        grid-row: 2 !important;
+        margin-top: 5px !important;
+    }
+
+    .footer-brand>a.text-link {
+        grid-column: 2 !important;
+        grid-row: 3 !important;
+        margin-top: 10px !important;
+    }
 }
+
 /* ==========================================================================
    PATCH 14: ALIGN FOOTER BRAND TEXT TO RIGHT
    ========================================================================== */
 @media (max-width: 991px) {
-  .footer-brand > p,
-  .footer-brand > span.footer-location,
-  .footer-brand > a.text-link {
-      text-align: right !important;
-      justify-self: end !important; 
-  }
+
+    .footer-brand>p,
+    .footer-brand>span.footer-location,
+    .footer-brand>a.text-link {
+        text-align: right !important;
+        justify-self: end !important;
+    }
 }
+
 /* ==========================================================================
    PATCH 15: INCREASE FOOTER LOGO SIZE
    ========================================================================== */
 @media (max-width: 991px) {
-  .footer-brand .brand-logo {
-      max-height: 75px !important; /* Increased from 40px */
-      width: auto !important;
-  }
+    .footer-brand .brand-logo {
+        max-height: 75px !important;
+        /* Increased from 40px */
+        width: auto !important;
+    }
 }
+
 /* ==========================================================================
    PATCH 16: MOBILE ACCORDION MENU & SLIDE-IN
    ========================================================================== */
@@ -16014,6 +16214,7 @@ a.mega-link-large {
         transform: translateX(-100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -16057,13 +16258,13 @@ a.mega-link-large {
     transform: rotate(0deg) !important;
 }
 
-.mobile-nav-details[open] > summary::after {
+.mobile-nav-details[open]>summary::after {
     transform: rotate(180deg) !important;
 }
 
 /* Remove bottom border from summary when open */
-.mobile-nav-details[open] > summary {
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+.mobile-nav-details[open]>summary {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* 3. Submenu Links */
@@ -16072,13 +16273,13 @@ a.mega-link-large {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid var(--border);
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
 }
 
 .mobile-submenu a {
     font-size: 17px !important;
     padding: 14px 0 !important;
-    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
 
 .mobile-submenu a:last-child {
@@ -16117,12 +16318,12 @@ a.mega-link-large {
     transform: rotate(0deg) !important;
 }
 
-.mobile-sub-details[open] > .mobile-sub-summary::after {
+.mobile-sub-details[open]>.mobile-sub-summary::after {
     transform: rotate(180deg) !important;
     color: #4a8ae2;
 }
 
-.mobile-sub-details[open] > .mobile-sub-summary {
+.mobile-sub-details[open]>.mobile-sub-summary {
     color: #ffffff;
 }
 
@@ -16156,54 +16357,62 @@ a.mega-link-large {
     .mobile-nav-details summary {
         font-size: 18px;
     }
+
     .mobile-submenu a {
         font-size: 15px !important;
     }
+
     .mobile-sub-summary {
         font-size: 15px !important;
     }
+
     .mobile-sub-submenu a {
         font-size: 13.5px !important;
     }
 }
+
 /* ==========================================================================
    PATCH 17: MOBILE MENU BLACK BG & NO BORDERS
    ========================================================================== */
 @media (max-width: 991px) {
-  /* 1. Make the background pure black */
-  .mobile-menu {
-      background: #000000 !important;
-  }
-  
-  /* 2. Remove all borders between menu items and submenus */
-  .mobile-menu nav a,
-  .mobile-nav-details summary,
-  .mobile-nav-details[open] summary,
-  .mobile-submenu,
-  .mobile-submenu a,
-  .mobile-sub-summary,
-  .mobile-sub-details[open] .mobile-sub-summary,
-  .mobile-sub-submenu,
-  .mobile-sub-submenu a {
-      border-bottom: none !important;
-  }
-  
-  /* 3. Push the custom dropdown arrow all the way to the right */
-  .mobile-nav-details summary::after,
-  .mobile-sub-summary::after {
-      margin-left: auto !important;
-  }
+
+    /* 1. Make the background pure black */
+    .mobile-menu {
+        background: #000000 !important;
+    }
+
+    /* 2. Remove all borders between menu items and submenus */
+    .mobile-menu nav a,
+    .mobile-nav-details summary,
+    .mobile-nav-details[open] summary,
+    .mobile-submenu,
+    .mobile-submenu a,
+    .mobile-sub-summary,
+    .mobile-sub-details[open] .mobile-sub-summary,
+    .mobile-sub-submenu,
+    .mobile-sub-submenu a {
+        border-bottom: none !important;
+    }
+
+    /* 3. Push the custom dropdown arrow all the way to the right */
+    .mobile-nav-details summary::after,
+    .mobile-sub-summary::after {
+        margin-left: auto !important;
+    }
 }
+
 /* ==========================================================================
    PATCH 18: GLOBAL STICKY HEADER (DESKTOP & MOBILE)
    ========================================================================== */
 
-#header, 
+#header,
 .site-header {
     position: sticky !important;
-    top: -1px !important; /* Prevents 1px gap bug on some browsers */
+    top: -1px !important;
+    /* Prevents 1px gap bug on some browsers */
     z-index: 9999 !important;
-    background: #070c16fa !important; /* Solid dark background */
+    background: #070c16fa !important;
+    /* Solid dark background */
     backdrop-filter: blur(8px);
     width: 100%;
     margin-top: 0 !important;
@@ -16239,6 +16448,7 @@ a.mega-link-large {
 }
 
 @media (max-width: 768px) {
+
     .trimesters-grid-4x2,
     .trimesters-grid-2x2,
     .trimesters-grid {
@@ -16276,6 +16486,7 @@ a.mega-link-large {
 }
 
 @media (max-width: 400px) {
+
     .trimesters-grid-4x2,
     .trimesters-grid-2x2,
     .trimesters-grid {
@@ -16320,7 +16531,7 @@ a.mega-link-large {
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
-    
+
     .legacy-grid {
         display: grid !important;
         grid-template-columns: 1fr 1.05fr !important;
@@ -16394,8 +16605,13 @@ a.mega-link-large {
 }
 
 @keyframes scroll-videos {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-50% - 11px)); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 11px));
+    }
 }
 
 /* ==========================================================================
@@ -16430,7 +16646,7 @@ a.mega-link-large {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     overflow: hidden;
 }
 
@@ -16443,7 +16659,114 @@ a.mega-link-large {
 }
 
 @keyframes scroll-recruiters {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-50% - 7.5px)); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 7.5px));
+    }
 }
 
+
+/* ==========================================================================
+   PATCH 21: INCREASE LOGO HEIGHT AND HEADER HEIGHT
+   ========================================================================== */
+.site-header {
+    height: 95px !important;
+}
+
+.brand-logo {
+    height: 80px !important;
+    max-height: 80px !important;
+}
+
+.footer-brand .brand-logo {
+    height: 85px !important;
+    max-height: 85px !important;
+}
+
+@media (max-width: 991px) {
+    .site-header {
+        height: 80px !important;
+    }
+
+    .brand-logo {
+        height: 65px !important;
+        max-height: 65px !important;
+    }
+
+    .mobile-menu-top .brand-logo {
+        height: 65px !important;
+        max-height: 65px !important;
+    }
+
+    .footer-brand .brand-logo {
+        height: 75px !important;
+        max-height: 75px !important;
+    }
+}
+
+.hero,
+.pgdm-hero-banner {
+    padding-top: 105px !important;
+}
+
+@media (max-width: 991px) {
+
+    .hero,
+    .pgdm-hero-banner {
+        padding-top: 90px !important;
+    }
+}
+
+/* ==========================================================================
+   PATCH 22: FURTHER INCREASE LOGO HEIGHT AND HEADER HEIGHT
+   ========================================================================== */
+.site-header {
+    height: 105px !important;
+}
+
+.brand-logo {
+    height: 90px !important;
+    max-height: 90px !important;
+}
+
+.footer-brand .brand-logo {
+    height: 95px !important;
+    max-height: 95px !important;
+}
+
+@media (max-width: 991px) {
+    .site-header {
+        height: 95px !important;
+    }
+
+    .brand-logo {
+        height: 80px !important;
+        max-height: 80px !important;
+    }
+
+    .mobile-menu-top .brand-logo {
+        height: 80px !important;
+        max-height: 80px !important;
+    }
+
+    .footer-brand .brand-logo {
+        height: 85px !important;
+        max-height: 85px !important;
+    }
+}
+
+.hero,
+.pgdm-hero-banner {
+    padding-top: 125px !important;
+}
+
+@media (max-width: 991px) {
+
+    .hero,
+    .pgdm-hero-banner {
+        padding-top: 105px !important;
+    }
+}

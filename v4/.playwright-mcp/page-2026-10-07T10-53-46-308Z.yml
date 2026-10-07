@@ -1,0 +1,851 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: Admission Open 2027
+      - link "+91 9967427278" [ref=e8] [cursor=pointer]:
+        - /url: tel:+919967427278
+      - link "admissions@mile.education" [ref=e10] [cursor=pointer]:
+        - /url: mailto:admissions@mile.education
+    - navigation "Secondary navigation" [ref=e11]:
+      - link "Campus Tour" [ref=e12] [cursor=pointer]:
+        - /url: http://localhost:8080/campus-tour.html
+      - link "Events & Webinar" [ref=e13] [cursor=pointer]:
+        - /url: http://localhost:8080/events-webinars.html
+      - link "Partnerships" [ref=e14] [cursor=pointer]:
+        - /url: http://localhost:8080/partnerships.html
+      - link "Alumni" [ref=e15] [cursor=pointer]:
+        - /url: http://localhost:8080/alumni.html
+      - link "Virtual Tour" [ref=e16] [cursor=pointer]:
+        - /url: http://localhost:8080/virtual-tour.html
+  - banner [ref=e17]:
+    - generic [ref=e18]:
+      - link "Lexicon MILE home":
+        - /url: http://localhost:8080/index.html
+        - img "Lexicon MILE"
+      - navigation "Main navigation" [ref=e19]:
+        - link "ABOUT US" [ref=e21] [cursor=pointer]:
+          - /url: "#about"
+        - link "AI LABS" [ref=e25] [cursor=pointer]:
+          - /url: http://localhost:8080/ai-lab.html
+        - link "PROGRAMS" [ref=e27] [cursor=pointer]:
+          - /url: "#programs"
+        - link "ADMISSIONS" [ref=e31] [cursor=pointer]:
+          - /url: "#admissions"
+        - link "FACULTY & MENTORS" [ref=e35] [cursor=pointer]:
+          - /url: "#faculty"
+        - link "PLACEMENTS" [ref=e39] [cursor=pointer]:
+          - /url: "#placements"
+        - link "MORE" [ref=e43] [cursor=pointer]:
+          - /url: "#student-life"
+        - link "CONTACT" [ref=e47] [cursor=pointer]:
+          - /url: http://localhost:8080/contact.html
+      - link "APPLY NOW ↗" [ref=e48] [cursor=pointer]:
+        - /url: https://admissions.lexiconmile.com/
+        - text: APPLY NOW
+        - generic [ref=e49]: ↗
+  - text: ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼
+  - main [ref=e50]:
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - link "Home" [ref=e55] [cursor=pointer]:
+            - /url: index.html
+          - generic [ref=e56]: /
+          - link "Programs" [ref=e57] [cursor=pointer]:
+            - /url: programs.html
+          - generic [ref=e58]: /
+          - generic [ref=e59]: B.Sc in Hospitality Studies
+        - generic [ref=e60]:
+          - generic [ref=e61]: Admissions Open
+          - generic [ref=e62]: Lexicon HMCT & MILE — UGC & YCMOU Affiliated (Batch 2027–30)
+        - heading [level=1] [ref=e63]:
+          - text: B.Sc in Hospitality Studies for leaders who
+          - emphasis [ref=e64]: craft luxury experiences
+          - text: with global mastery.
+        - paragraph [ref=e65]: A prestigious 3-year undergraduate degree affiliated with Yashwantrao Chavan Maharashtra Open University (Study Center No. 62582). Featuring dual 5-star luxury internships, commercial culinary labs, spoken French and English certifications, and 100% placement assistance.
+        - generic [ref=e66]:
+          - link "Apply Online Now →" [ref=e67] [cursor=pointer]:
+            - /url: https://admissions.lexiconmile.com/
+            - text: Apply Online Now
+            - generic [ref=e68]: →
+          - button "Download Brochure" [ref=e69] [cursor=pointer]
+          - generic [ref=e73]:
+            - generic [ref=e74]: UGC & AIU RECOGNIZED
+            - generic [ref=e75]: •
+            - generic [ref=e76]: DUAL 5-STAR INTERNSHIPS
+            - generic [ref=e77]: •
+            - generic [ref=e78]: NAAC 'A' GRADE
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - generic [ref=e81]: Degree Duration
+          - generic [ref=e84]: 3 Years
+          - generic [ref=e85]: 6 Semesters Full-Time
+          - generic [ref=e86]: NEP 2020 Flexible Framework
+        - generic [ref=e87]:
+          - generic [ref=e88]: University Grade
+          - generic [ref=e91]: NAAC 'A'
+          - generic [ref=e92]: YCMOU Affiliated
+          - generic [ref=e93]: Authorized Study Center No. 62582
+        - generic [ref=e94]:
+          - generic [ref=e95]: Experiential Learning
+          - generic [ref=e98]: Dual
+          - generic [ref=e99]: 5-Star Internships
+          - generic [ref=e100]: Marriott, Taj & Ritz-Carlton
+        - generic [ref=e101]:
+          - generic [ref=e102]: Mentorship Ratio
+          - generic [ref=e105]: 20:1
+          - generic [ref=e106]: Personal Faculty Mentors
+          - generic [ref=e107]: French & Spoken English Badges
+        - generic [ref=e108]:
+          - generic [ref=e109]: Career Assurance
+          - generic [ref=e112]: 100%
+          - generic [ref=e113]: Placement Assistance
+          - generic [ref=e114]: Day Zero Professional Pathway
+    - generic [ref=e116]:
+      - generic [ref=e117]:
+        - generic [ref=e118]: CAREER OUTCOMES • STUDENT SUCCESS
+        - heading [level=2] [ref=e121]:
+          - text: "Program Objectives: Engineered for"
+          - emphasis [ref=e122]: Hospitality Leadership
+          - text: .
+        - paragraph [ref=e123]: "Graduates of the Lexicon HMCT B.Sc in Hospitality Studies emerge with commercial culinary proficiency, fine dining service finesse, luxury hotel rooms division management, and international tourism acumen:"
+      - generic [ref=e124]:
+        - article [ref=e125]:
+          - generic [ref=e126]:
+            - generic [ref=e127]: "01"
+            - generic [ref=e132]: Pillar 01 • Culinary Mastery
+            - heading "Food Production & Kitchen Arts" [level=3] [ref=e133]
+            - paragraph [ref=e134]: End-to-end command over commercial culinary operations, bakery and confectionery, international cuisines, kitchen ergonomics, and HACCP food safety standards.
+            - generic [ref=e135]:
+              - generic [ref=e136]: Culinary Arts
+              - generic [ref=e137]: Bakery & Pastry
+              - generic [ref=e138]: Menu Engineering
+              - generic [ref=e139]: Food Safety (HACCP)
+          - generic [ref=e140]:
+            - generic [ref=e141]: Commercial Labs
+            - generic [ref=e142]: Chef-Led Training
+        - article [ref=e143]:
+          - generic [ref=e144]:
+            - generic [ref=e145]: "02"
+            - generic [ref=e150]: Pillar 02 • Service Finesse
+            - heading "Food & Beverage Operations" [level=3] [ref=e151]
+            - paragraph [ref=e152]: Fine dining banquet management, tableside service etiquette, mixology, inventory control, and customer-first service protocols across 5-star restaurants and bars.
+            - generic [ref=e153]:
+              - generic [ref=e154]: Restaurant Etiquette
+              - generic [ref=e155]: Banquet Planning
+              - generic [ref=e156]: Beverage Service
+              - generic [ref=e157]: Inventory Control
+          - generic [ref=e158]:
+            - generic [ref=e159]: Live Demo Suite
+            - generic [ref=e160]: 5-Star Standards
+        - article [ref=e161]:
+          - generic [ref=e162]:
+            - generic [ref=e163]: "03"
+            - generic [ref=e169]: Pillar 03 • Lodging Excellence
+            - heading "Accommodation & Front Office" [level=3] [ref=e170]
+            - paragraph [ref=e171]: Rooms division leadership, Property Management Systems (Opera PMS), guest check-in automation, executive housekeeping, and VIP concierge management.
+            - generic [ref=e172]:
+              - generic [ref=e173]: Front Office PMS
+              - generic [ref=e174]: Rooms Division
+              - generic [ref=e175]: Housekeeping Tech
+              - generic [ref=e176]: VIP Relations
+          - generic [ref=e177]:
+            - generic [ref=e178]: Mock Hotel Suite
+            - generic [ref=e179]: PMS Certified
+        - article [ref=e180]:
+          - generic [ref=e181]:
+            - generic [ref=e182]: "04"
+            - generic [ref=e188]: Pillar 04 • Global Strategy
+            - heading "Tourism & Entrepreneurship" [level=3] [ref=e189]
+            - paragraph [ref=e190]: Eco-tourism planning, international airline/cruise administration, hospitality marketing, event management, and cloud kitchen startup incubation.
+            - generic [ref=e191]:
+              - generic [ref=e192]: Eco-Tourism
+              - generic [ref=e193]: Hotel Marketing
+              - generic [ref=e194]: Start-up Incubation
+              - generic [ref=e195]: Tour Operations
+          - generic [ref=e196]:
+            - generic [ref=e197]: Day Zero Pro Model
+            - generic [ref=e198]: Global Mobility
+    - generic [ref=e200]:
+      - generic [ref=e201]:
+        - generic [ref=e202]: WORLD-CLASS HOSPITALITY STANDARDS
+        - heading "Key Focus Areas." [level=2] [ref=e203]
+        - paragraph [ref=e204]: "Hospitality leaders who combine operational precision, foreign language fluency, guest psychology, and sustainable management are in unprecedented global demand:"
+      - generic [ref=e205]:
+        - generic [ref=e206]:
+          - img "Expert & Dedicated Faculties" [ref=e208]
+          - generic [ref=e209]:
+            - heading "Expert Faculty" [level=4] [ref=e210]
+            - paragraph [ref=e211]: Mentorship by certified Executive Chefs and seasoned GM-level hospitality academicians.
+        - generic [ref=e212]:
+          - img "Modern Infrastructure" [ref=e214]
+          - generic [ref=e215]:
+            - heading "Culinary Suites" [level=4] [ref=e216]
+            - paragraph [ref=e217]: Commercial-grade kitchen workstations, bakery studios, and demonstration suites.
+        - generic [ref=e218]:
+          - img "Guaranteed Career Opportunities" [ref=e220]
+          - generic [ref=e221]:
+            - heading "Dual 5-Star Internships" [level=4] [ref=e222]
+            - paragraph [ref=e223]: Hands-on industry residencies with luxury chains like Marriott, Conrad, Taj, and Oberoi.
+        - generic [ref=e224]:
+          - img "Beyond the Classrooms" [ref=e226]
+          - generic [ref=e227]:
+            - heading "Beyond Classrooms" [level=4] [ref=e228]
+            - paragraph [ref=e229]: Vineyard excursions, luxury resort audits, flower arranging workshops, and language clubs.
+        - generic [ref=e230]:
+          - img "Prime Location" [ref=e232]
+          - generic [ref=e233]:
+            - heading "Prime Campus" [level=4] [ref=e234]
+            - paragraph [ref=e235]: Centrally located on Pune's educational corridor in Wagholi with sports turfs and Wi-Fi hub.
+    - generic [ref=e237]:
+      - generic [ref=e238]:
+        - generic [ref=e239]: CAREER CONCENTRATIONS
+        - heading "Specializations & Career Tracks." [level=2] [ref=e240]
+        - paragraph [ref=e241]: "Gain multi-disciplinary proficiency across the three bedrock verticals of the multibillion-dollar global hospitality and travel sector:"
+      - generic [ref=e242]:
+        - article [ref=e243]:
+          - img "Culinary Arts & Food Production" [ref=e245]
+          - generic [ref=e246]:
+            - generic [ref=e247]:
+              - generic [ref=e248]: Hospitality Track 01
+              - heading "Culinary Arts & Food Production" [level=3] [ref=e249]
+              - paragraph [ref=e250]: Master foundational to advanced culinary techniques, butchery, sauces, artisanal bakery, confectionery, kitchen sanitation, and cost-controlled menu design.
+              - generic [ref=e251]:
+                - generic [ref=e252]: Basic Food Production
+                - generic [ref=e253]: Bakery & Pastry
+                - generic [ref=e254]: Inventory Control
+                - generic [ref=e255]: HACCP Hygiene
+            - generic [ref=e256]:
+              - generic [ref=e257]: "Career: Executive Chef, Sous Chef, Kitchen GM"
+              - link "Enquire →" [ref=e258] [cursor=pointer]:
+                - /url: https://admissions.lexiconmile.com/
+                - text: Enquire
+                - generic [ref=e259]: →
+        - article [ref=e260]:
+          - img "Food & Beverage Service" [ref=e262]
+          - generic [ref=e263]:
+            - generic [ref=e264]:
+              - generic [ref=e265]: Hospitality Track 02
+              - heading "F&B Service & Restaurant Ops" [level=3] [ref=e266]
+              - paragraph [ref=e267]: Blend formal dining etiquette, international wine appreciation, beverage mixology, banqueting logistics, and high-volume fine dining management.
+              - generic [ref=e268]:
+                - generic [ref=e269]: Restaurant Etiquette
+                - generic [ref=e270]: Banquet Management
+                - generic [ref=e271]: Wine Appreciation
+                - generic [ref=e272]: Barista Arts
+            - generic [ref=e273]:
+              - generic [ref=e274]: "Career: F&B Director, Banquet Manager, Sommelier"
+              - link "Enquire →" [ref=e275] [cursor=pointer]:
+                - /url: https://admissions.lexiconmile.com/
+                - text: Enquire
+                - generic [ref=e276]: →
+        - article [ref=e277]:
+          - img "Accommodation Management and Front Office" [ref=e279]
+          - generic [ref=e280]:
+            - generic [ref=e281]:
+              - generic [ref=e282]: Hospitality Track 03
+              - heading "Rooms Division & Guest Relations" [level=3] [ref=e283]
+              - paragraph [ref=e284]: Lead guest reception, computerized reservations via Opera PMS, VIP guest protocols, revenue yield management, and immaculate housekeeping standards.
+              - generic [ref=e285]:
+                - generic [ref=e286]: Front Office Operations
+                - generic [ref=e287]: Accommodation Mgmt
+                - generic [ref=e288]: Opera PMS Software
+                - generic [ref=e289]: Revenue Management
+            - generic [ref=e290]:
+              - generic [ref=e291]: "Career: Front Office Manager, Duty Manager, Guest GM"
+              - link "Enquire →" [ref=e292] [cursor=pointer]:
+                - /url: https://admissions.lexiconmile.com/
+                - text: Enquire
+                - generic [ref=e293]: →
+      - generic [ref=e294]:
+        - paragraph [ref=e295]:
+          - text: Want to learn more about the
+          - strong [ref=e296]: Dual 5-Star Hotel Internships
+          - text: and
+          - strong [ref=e297]: International Placement Pathways
+          - text: "?"
+        - link "Apply for Hospitality Batch 2027–30 ↗" [ref=e298] [cursor=pointer]:
+          - /url: https://admissions.lexiconmile.com/
+          - text: Apply for Hospitality Batch 2027–30
+          - generic [ref=e299]: ↗
+    - generic [ref=e302]:
+      - generic [ref=e303]:
+        - generic [ref=e304]: PROPRIETARY TRAINING INFRASTRUCTURE
+        - heading "LEXICON HMCT – Applied Hospitality Suite." [level=2] [ref=e307]
+        - generic [ref=e308]: The Hands-on Engine Behind Pune’s Premier 3-Year B.Sc Degree
+        - paragraph [ref=e309]:
+          - strong [ref=e310]: The Lexicon HMCT Immersive Learning Model
+          - text: is structured to prepare graduates who step seamlessly into 5-star hotel environments without needing months of foundational retraining.
+        - paragraph [ref=e311]: Across six intensive semesters, Day Zero Professionals transition from basic culinary prep to advanced banquet management, international menu engineering, computerized reservations (PMS), and live operational supervision.
+        - generic [ref=e312]: “Hospitality is never learned from books alone. It is mastered through precision, technique, service ethics, and real-time practice in luxury environments.”
+        - generic [ref=e313]:
+          - generic [ref=e314]: 01. Commercial Basic & Advanced Kitchens
+          - generic [ref=e318]: 02. High-Tech Bakery & Pastry Studio
+          - generic [ref=e322]: 03. Mock 5-Star Guest Suite & Demo Lab
+          - generic [ref=e326]: 04. Demo Restaurant & Mock Bar Setups
+          - generic [ref=e330]: 05. Amphitheatre with Attached Kitchen
+          - generic [ref=e334]: 06. Dual 5-Star Hotel Residency Model
+        - link "Explore 360° Campus Virtual Tour ↗" [ref=e339] [cursor=pointer]:
+          - /url: campus-tour.html#virtual-tour
+          - text: Explore 360° Campus Virtual Tour
+          - generic [ref=e340]: ↗
+      - generic [ref=e341]:
+        - generic [ref=e342]:
+          - generic [ref=e347]: LEXICON HMCT • INFRASTRUCTURE SUITE
+          - generic [ref=e348]: LIVE LABS
+        - img "Lexicon HMCT Training Kitchen Suite" [ref=e350]
+        - generic [ref=e352]:
+          - generic [ref=e353]:
+            - generic [ref=e354]: PRACTICAL LABS
+            - generic [ref=e355]: 5+ Hours / Week
+          - generic [ref=e356]:
+            - generic [ref=e357]: PREREQUISITE
+            - generic [ref=e358]: 12th Pass Any Stream
+          - generic [ref=e359]:
+            - generic [ref=e360]: STANDARDS
+            - generic [ref=e361]: 100% 5-Star Benchmark
+    - generic [ref=e363]:
+      - generic [ref=e364]:
+        - generic [ref=e365]: ACADEMIC RIGOR • NEP 2020 COMPLIANT
+        - heading "Comprehensive Curriculum Architecture." [level=2] [ref=e366]
+        - paragraph [ref=e367]: "Yashwantrao Chavan Maharashtra Open University (YCMOU) Affiliated 3-Year B.Sc Degree Curriculum · Department of Hotel Management & Catering Technology (Study Center No. 62582):"
+      - tablist [ref=e368]:
+        - tab "Semester 1" [selected] [ref=e369] [cursor=pointer]
+        - tab "Semester 2" [ref=e372] [cursor=pointer]
+        - tab "Semester 3" [ref=e375] [cursor=pointer]
+        - tab "Semester 4" [ref=e378] [cursor=pointer]
+        - tab "Semester 5" [ref=e381] [cursor=pointer]
+        - tab "Semester 6 (Capstone)" [ref=e384] [cursor=pointer]
+      - tabpanel [ref=e387]:
+        - table [ref=e389]:
+          - rowgroup [ref=e390]:
+            - row [ref=e391]:
+              - columnheader "Course Name" [ref=e392]
+              - columnheader "Course Type" [ref=e393]
+              - columnheader "Credits & Category" [ref=e394]
+          - rowgroup [ref=e395]:
+            - row [ref=e396]:
+              - cell "Basic Food Production" [ref=e397]
+              - cell "Major / Compulsory / Theory" [ref=e398]
+              - cell "Foundational Kitchen Theory" [ref=e400]
+            - row [ref=e401]:
+              - cell "Basic Food Production" [ref=e402]
+              - cell "Major / Compulsory / Practical" [ref=e403]
+              - cell "Hands-on Culinary Station Lab" [ref=e405]
+            - row [ref=e406]:
+              - cell "Basic Food and Beverage Service" [ref=e407]
+              - cell "Major / Compulsory / Theory" [ref=e408]
+              - cell "Restaurant Service Operations" [ref=e410]
+            - row [ref=e411]:
+              - cell "Restaurant Etiquette" [ref=e412]
+              - cell "VSC – Vocational Skill Courses / Theory" [ref=e413]
+              - cell "Dining Protocol & Guest Relations" [ref=e415]
+            - row [ref=e416]:
+              - cell "Personality and Career Skill" [ref=e417]
+              - cell "SEC – Skill Enhancement Courses" [ref=e418]
+              - cell "Professional Grooming & Soft Skills" [ref=e420]
+            - row [ref=e421]:
+              - cell "Introduction to Constitution of India" [ref=e422]
+              - cell "VEC – Value Education Courses" [ref=e423]
+              - cell "National Civic Governance" [ref=e425]
+            - row [ref=e426]:
+              - cell "Listening and Speaking Skills" [ref=e427]
+              - cell "AEC – Ability Enhancement Courses" [ref=e428]
+              - cell "Professional English Communication" [ref=e430]
+            - row [ref=e431]:
+              - cell "Biodiversity Of India" [ref=e432]
+              - cell "Open Elective (OE)" [ref=e433]
+              - cell "Environmental & Ecological Awareness" [ref=e435]
+            - row [ref=e436]:
+              - cell "Futuristic Approach For Smart City" [ref=e437]
+              - cell "Open Elective (OE)" [ref=e438]
+              - cell "Smart Urban Infrastructure" [ref=e440]
+            - row [ref=e441]:
+              - 'cell "IKS – Bhartiy Dnyan Parampara: Samajikshastre" [ref=e442]'
+              - cell "IKS – Indian Knowledge System" [ref=e443]
+              - cell "Indian Traditional Heritage" [ref=e445]
+            - row [ref=e446]:
+              - cell "Samajseva-I" [ref=e447]
+              - cell "CC – Co-curriculum Courses" [ref=e448]
+              - cell "Social Outreach & Community Project" [ref=e450]
+    - generic [ref=e452]:
+      - generic [ref=e453]:
+        - generic [ref=e454]: CAREER ACCELERATORS
+        - heading "Employment Enhancing Certifications." [level=2] [ref=e455]
+        - paragraph [ref=e456]: "Earn industry-vetted certifications embedded right into your three-year B.Sc curriculum to ensure you step into luxury hotel brands as an accomplished Day Zero Professional:"
+      - generic [ref=e458]:
+        - generic [ref=e459]: Spoken French for Hoteliers
+        - generic [ref=e464]: Executive English Communication
+        - generic [ref=e468]: HACCP Food Safety & Hygiene
+        - generic [ref=e472]: Wine Tasting & Beverage Service
+        - generic [ref=e476]: Opera PMS Front Office Systems
+        - generic [ref=e481]: Event & Banquet Management
+        - generic [ref=e485]: Barista & Coffee Brewing Arts
+        - generic [ref=e489]: Digital Hospitality Marketing
+        - generic [ref=e494]: Spoken French for Hoteliers
+        - generic [ref=e499]: Executive English Communication
+        - generic [ref=e503]: HACCP Food Safety & Hygiene
+        - generic [ref=e507]: Wine Tasting & Beverage Service
+        - generic [ref=e511]: Opera PMS Front Office Systems
+        - generic [ref=e516]: Event & Banquet Management
+        - generic [ref=e520]: Barista & Coffee Brewing Arts
+        - generic [ref=e524]: Digital Hospitality Marketing
+    - generic [ref=e530]:
+      - generic [ref=e531]:
+        - generic [ref=e532]: INSTITUTIONAL EXCELLENCE
+        - heading "The 15 Lexicon HMCT Advantages." [level=2] [ref=e533]
+        - paragraph [ref=e534]: "Fifteen foundational institutional advantages that empower our hospitality scholars to excel as Day Zero Professionals in 5-star hotel chains and global tourism enterprises:"
+      - generic [ref=e535]:
+        - generic [ref=e536]:
+          - generic [ref=e537]: "01"
+          - generic [ref=e538]: State-of-the-art infrastructure with industry-grade equipment for real-world learning.
+        - generic [ref=e539]:
+          - generic [ref=e540]: "02"
+          - generic [ref=e541]: Educational field trips to wineries, dairy farms, and hotels for experiential, hands-on learning.
+        - generic [ref=e542]:
+          - generic [ref=e543]: "03"
+          - generic [ref=e544]: Focused mentorship through an optimal 20:1 student-teacher ratio, ensuring individual attention.
+        - generic [ref=e545]:
+          - generic [ref=e546]: "04"
+          - generic [ref=e547]: A dedicated mentor for every student to track progress and keep parents informed.
+        - generic [ref=e548]:
+          - generic [ref=e549]: "05"
+          - generic [ref=e550]: Professional certification programs designed for industry relevance and practical skills.
+        - generic [ref=e551]:
+          - generic [ref=e552]: "06"
+          - generic [ref=e553]: Language enhancement through Spoken English and Spoken French certifications.
+        - generic [ref=e554]:
+          - generic [ref=e555]: "07"
+          - generic [ref=e556]: Fully air-conditioned classrooms that ensure a comfortable learning environment.
+        - generic [ref=e557]:
+          - generic [ref=e558]: "08"
+          - generic [ref=e559]: A fully Wi-Fi-enabled campus ensuring seamless digital access for learning and communication.
+        - generic [ref=e560]:
+          - generic [ref=e561]: "09"
+          - generic [ref=e562]: Soundproof amphitheatre with attached kitchen studio for professional demonstrations.
+        - generic [ref=e563]:
+          - generic [ref=e564]: "10"
+          - generic [ref=e565]: Library and reading room access available from 9:00 am to 9:00 pm on all working days.
+        - generic [ref=e566]:
+          - generic [ref=e567]: "11"
+          - generic [ref=e568]: Indoor games room, football turf, and basketball court for a vibrant student campus life.
+        - generic [ref=e569]:
+          - generic [ref=e570]: "12"
+          - generic [ref=e571]: Freshly prepared lunch is available on a subscription basis to ensure a healthy dining experience.
+        - generic [ref=e572]:
+          - generic [ref=e573]: "13"
+          - generic [ref=e574]: Reliable and verified hostel facilities are available through external providers at an additional fee.
+        - generic [ref=e575]:
+          - generic [ref=e576]: "14"
+          - generic [ref=e577]: Extended lab hours provide students with additional time to practice and master essential skills.
+        - generic [ref=e578]:
+          - generic [ref=e579]: "15"
+          - generic [ref=e580]: Located in a prime and easily accessible area, ensuring convenience for students and staff.
+    - generic [ref=e582]:
+      - generic [ref=e583]:
+        - generic [ref=e584]:
+          - generic [ref=e585]: APPROVED FEE STRUCTURE • YCMOU AFFILIATED
+          - heading "Course Fees & Schedule." [level=2] [ref=e586]
+        - link "Dedicated Fee Portal ↗" [ref=e587] [cursor=pointer]:
+          - /url: b-sc-fee-structure.html
+          - generic [ref=e588]: Dedicated Fee Portal
+          - generic [ref=e589]: ↗
+      - paragraph [ref=e590]: "Approved year-by-year fee schedule for the 3-year B.Sc in Hospitality Studies degree in full accordance with YCMOU University norms:"
+      - generic [ref=e591]:
+        - generic [ref=e592]:
+          - generic [ref=e593]: Year 1 (AY 2027–28)
+          - generic [ref=e594]: ₹1,73,408
+          - generic [ref=e595]: Institute Fees (Part-A)
+        - generic [ref=e596]:
+          - generic [ref=e597]: Year 2 (AY 2027–28)
+          - generic [ref=e598]: ₹1,73,408
+          - generic [ref=e599]: Institute Fees (Part-A)
+        - generic [ref=e600]:
+          - generic [ref=e601]: Year 3 (AY 2028–29)
+          - generic [ref=e602]: ₹1,73,410
+          - generic [ref=e603]: Institute Fees (Part-A)
+        - generic [ref=e604]:
+          - generic [ref=e605]: Total Course Fees
+          - generic [ref=e606]: ₹6,50,000 (approx.)
+          - generic [ref=e607]: Part-A ₹5,20,226 + Part-B ₹1,29,774
+      - generic [ref=e608]:
+        - generic [ref=e613]:
+          - text: Avail Scholarships of upto
+          - strong [ref=e614]: ₹50,000*
+          - text: on eligible merit criteria.
+        - link "Apply for Scholarship →" [ref=e615] [cursor=pointer]:
+          - /url: tel:+918855013525
+      - tablist [ref=e616]:
+        - button "Course Fees Overview" [ref=e617] [cursor=pointer]
+        - button "Year 1 Details" [ref=e618] [cursor=pointer]
+        - button "Year 2 Details" [ref=e619] [cursor=pointer]
+        - button "Year 3 Details" [ref=e620] [cursor=pointer]
+        - button "Part-B University Fees" [ref=e621] [cursor=pointer]
+      - table [ref=e624]:
+        - rowgroup [ref=e625]:
+          - row [ref=e626]:
+            - columnheader "Academic Year" [ref=e627]
+            - columnheader "Institute Fees (Part-A)" [ref=e628]
+            - columnheader "University Fees (Part-B)" [ref=e629]
+            - columnheader "Total Annual Fees" [ref=e630]
+        - rowgroup [ref=e631]:
+          - row [ref=e632]:
+            - cell [ref=e633]:
+              - strong [ref=e634]: Year 1
+            - cell "₹1,73,408" [ref=e635]
+            - cell "₹43,258" [ref=e636]
+            - cell "₹2,16,666" [ref=e637]
+          - row [ref=e638]:
+            - cell [ref=e639]:
+              - strong [ref=e640]: Year 2
+            - cell "₹1,73,408" [ref=e641]
+            - cell "₹43,258" [ref=e642]
+            - cell "₹2,16,666" [ref=e643]
+          - row [ref=e644]:
+            - cell [ref=e645]:
+              - strong [ref=e646]: Year 3
+            - cell "₹1,73,410" [ref=e647]
+            - cell "₹43,258" [ref=e648]
+            - cell "₹2,16,668" [ref=e649]
+          - row [ref=e650]:
+            - cell [ref=e651]:
+              - strong [ref=e652]: Total (3 Years)
+            - cell "₹5,20,226" [ref=e653]
+            - cell "₹1,29,774" [ref=e654]
+            - cell "₹6,50,000 (approx.)" [ref=e655]
+      - generic [ref=e656]:
+        - generic [ref=e657]:
+          - heading "Payment Details (HMCT Part-A)" [level=3] [ref=e661]
+          - paragraph [ref=e662]: "Make RTGS / NEFT / NetBanking transfers for Part-A Department fees to the verified trust account:"
+          - generic [ref=e663]:
+            - generic [ref=e664]:
+              - generic [ref=e665]: Beneficiary Name
+              - generic [ref=e666]: Lexicon Management Institute of Leadership & Excellence – A Unit of SKSET
+            - generic [ref=e667]:
+              - generic [ref=e668]: Bank Name
+              - generic [ref=e669]: Kotak Mahindra Bank
+            - generic [ref=e670]:
+              - generic [ref=e671]: Account Number
+              - generic [ref=e672]: "2945139784"
+              - button "Copy" [ref=e673] [cursor=pointer]
+            - generic [ref=e674]:
+              - generic [ref=e675]: IFSC Code
+              - generic [ref=e676]: KKBK0000730
+              - button "Copy" [ref=e677] [cursor=pointer]
+        - generic [ref=e678]:
+          - heading "University Fees (Part-B)" [level=4] [ref=e679]
+          - paragraph [ref=e680]:
+            - text: Pay directly on the official
+            - strong [ref=e681]: YCMOU portal
+            - text: as per the University schedule.
+          - generic [ref=e682]: All transactions subject to Pune jurisdiction.
+      - generic [ref=e683]:
+        - generic [ref=e684]:
+          - heading "Important Notes (HMCT)" [level=4] [ref=e685]
+          - list [ref=e688]:
+            - listitem [ref=e689]: • Part-A covers employability/skills modules; participation requires online consent + affidavit at reporting.
+            - listitem [ref=e690]:
+              - text: • University fees are paid
+              - strong [ref=e691]: directly
+              - text: to YCMOU online; amounts shown are for AY 2025–26 (may be revised for AY 2027–28).
+            - listitem [ref=e692]:
+              - text: •
+              - strong [ref=e693]: Uniform/tool-kit deductions
+              - text: apply on cancellation after measurement/PO (₹15,000 and ₹3,000 respectively).
+            - listitem [ref=e694]: • Pune jurisdiction applies to all disputes.
+        - generic [ref=e695]:
+          - heading "Refund Policy" [level=4] [ref=e696]
+          - list [ref=e699]:
+            - listitem [ref=e700]:
+              - text: •
+              - strong [ref=e701]: "Part A (Department Fees):"
+              - text: Application via email or in person. ₹5,000 non-refundable from registration fee if cancelled
+              - strong [ref=e702]: before course commencement
+              - text: . Refunds processed as per departmental timelines; deductions for issued uniforms/toolkits may apply.
+            - listitem [ref=e703]:
+              - text: •
+              - strong [ref=e704]: "Part B (University Fees):"
+              - text: Refunds processed
+              - strong [ref=e705]: directly by YCMOU
+              - text: per University norms.
+            - listitem [ref=e706]:
+              - text: •
+              - strong [ref=e707]: "General:"
+              - text: All approved refunds initiated within 7 working days. All disputes subject to Pune jurisdiction.
+    - generic [ref=e709]:
+      - generic [ref=e710]:
+        - generic [ref=e711]: ADMISSION STANDARDS • BATCH 2027–30
+        - heading "Eligibility Criteria." [level=2] [ref=e712]
+        - paragraph [ref=e713]: "Review the minimum academic prerequisites required to enroll in the Lexicon HMCT B.Sc in Hospitality Studies:"
+      - generic [ref=e714]:
+        - generic [ref=e715]:
+          - generic [ref=e716]: "01"
+          - heading "12th Pass (Any Stream)" [level=3] [ref=e717]
+          - paragraph [ref=e718]:
+            - text: Candidate should be
+            - strong [ref=e719]: 12th Pass
+            - text: from ICSE, CBSE, IGCSE(ICE), or any State/Central Board recognized by the competent authority.
+        - generic [ref=e720]:
+          - generic [ref=e721]: "02"
+          - heading "Equivalence Certificate" [level=3] [ref=e722]
+          - paragraph [ref=e723]: An equivalence certificate is required from the respective educational board in case the qualifying result is issued in grade/credit points.
+        - generic [ref=e724]:
+          - generic [ref=e725]: "03"
+          - heading "Provisional Admissions" [level=3] [ref=e726]
+          - paragraph [ref=e727]: Candidates currently appearing for their final 12th board examinations are eligible to apply on a provisional basis.
+      - generic [ref=e728]:
+        - generic [ref=e729]:
+          - heading "Looking for Personal Admission Counselling?" [level=4] [ref=e730]
+          - paragraph [ref=e731]: Speak directly with our Department of Hotel Management & Catering Technology admissions desk.
+        - generic [ref=e732]:
+          - link "Call +91 88550 13525" [ref=e733] [cursor=pointer]:
+            - /url: tel:+918855013525
+          - link "Apply Online ↗" [ref=e736] [cursor=pointer]:
+            - /url: https://admissions.lexiconmile.com/
+            - text: Apply Online
+            - generic [ref=e737]: ↗
+    - generic [ref=e739]:
+      - generic [ref=e740]:
+        - generic [ref=e741]: CAMPUS & FACILITIES
+        - heading [level=2] [ref=e742]:
+          - text: A Great Place to
+          - emphasis [ref=e743]: Grow
+          - text: .
+        - paragraph [ref=e744]: "World-class hospitality training infrastructure located at our Wagholi Pune campus, featuring high-grade culinary suites, guest demo labs, and modern auditoriums:"
+      - generic [ref=e745]:
+        - generic [ref=e746] [cursor=pointer]:
+          - img "Flower Arrangement Workshop at Conrad" [ref=e747]
+          - generic [ref=e748]: Flower Arrangement Workshop · Conrad Hotel
+        - generic [ref=e749] [cursor=pointer]:
+          - img "Training Kitchen and Culinary Lab" [ref=e750]
+          - generic [ref=e751]: Advanced Culinary & Training Kitchen Suite
+        - generic [ref=e752] [cursor=pointer]:
+          - img "Bakery and Food Production Lab" [ref=e753]
+          - generic [ref=e754]: Bakery & Food Production Lab
+        - generic [ref=e755] [cursor=pointer]:
+          - img "Hospitality Front Office Reception" [ref=e756]
+          - generic [ref=e757]: Front Office & Guest Relations Suite
+        - generic [ref=e758] [cursor=pointer]:
+          - img "Welcome Lobby" [ref=e759]
+          - generic [ref=e760]: Grand Welcome Lobby & Lounge
+        - generic [ref=e761] [cursor=pointer]:
+          - img "Acoustic Seminar Hall" [ref=e762]
+          - generic [ref=e763]: Acoustic Seminar Hall & Auditorium
+        - generic [ref=e764] [cursor=pointer]:
+          - img "Lexicon Campus Grounds" [ref=e765]
+          - generic [ref=e766]: Campus Football Turf & Recreation Grounds
+        - generic [ref=e767] [cursor=pointer]:
+          - img "Lexicon Campus Exterior Architecture" [ref=e768]
+          - generic [ref=e769]: Campus Architecture · Wagholi Pune
+    - generic [ref=e771]:
+      - generic [ref=e772]:
+        - generic [ref=e773]: INDUSTRY COLLABORATIONS • PROVEN OUTCOMES
+        - heading "Where Our Graduates Excel." [level=2] [ref=e774]
+        - paragraph [ref=e775]: "Top luxury hospitality chains, 5-star hotels, and international travel brands partner with Lexicon HMCT for dual internships and direct campus recruitment:"
+      - generic [ref=e776]:
+        - generic [ref=e777]:
+          - img "Marriott International"
+        - generic [ref=e778]:
+          - img "The Ritz Carlton"
+        - generic [ref=e779]:
+          - img "JW Marriott"
+        - generic [ref=e780]:
+          - img "Conrad Hotels"
+        - generic [ref=e781]:
+          - img "Taj Hotels & Resorts"
+        - generic [ref=e782]:
+          - img "The Oberoi Group"
+        - generic [ref=e783]:
+          - img "Hyatt Regency"
+        - generic [ref=e784]:
+          - img "Westin Hotels"
+        - generic [ref=e785]:
+          - img "Hilton Worldwide"
+        - generic [ref=e786]:
+          - img "Accor Novotel"
+        - generic [ref=e787]:
+          - img "Apple"
+        - generic [ref=e788]:
+          - img "Amazon"
+        - generic [ref=e789]:
+          - img "Tata Group"
+        - generic [ref=e790]:
+          - img "WNS Global"
+        - generic [ref=e791]:
+          - img "KPMG"
+        - generic [ref=e792]:
+          - img "Larsen & Toubro"
+      - generic [ref=e793]:
+        - link "View All Recruiters →" [ref=e794] [cursor=pointer]:
+          - /url: our-recruiters.html
+          - text: View All Recruiters
+          - generic [ref=e795]: →
+        - link "View Placement Report →" [ref=e796] [cursor=pointer]:
+          - /url: placement.html
+          - text: View Placement Report
+          - generic [ref=e797]: →
+        - link "360° Campus Virtual Tour ↗" [ref=e798] [cursor=pointer]:
+          - /url: campus-tour.html#virtual-tour
+          - text: 360° Campus Virtual Tour
+          - generic [ref=e802]: ↗
+    - generic [ref=e804]:
+      - generic [ref=e805]:
+        - generic [ref=e806]: COMMON QUERIES
+        - heading "Frequently Asked Questions." [level=2] [ref=e807]
+        - paragraph [ref=e808]: "Everything you need to know about the B.Sc in Hospitality Studies at Lexicon HMCT & MILE:"
+      - generic [ref=e809]:
+        - generic [ref=e810]:
+          - button "What is the core difference between a B.Sc in Hospitality Studies and a Diploma course?" [expanded] [ref=e811] [cursor=pointer]
+          - paragraph [ref=e817]: The B.Sc in Hospitality Studies is a comprehensive 3-year undergraduate degree program recognized by the UGC and AIU, affiliated with YCMOU. Unlike short diploma certifications, this degree qualifies students for postgraduate study (MBA/PGDM/M.Sc) worldwide, government service exams (UPSC/MPSC), and fast-track managerial training programs (MT) across leading international hotel chains.
+        - generic [ref=e818]:
+          - button "Is the B.Sc in Hospitality Studies degree recognized by UGC and AIU?" [ref=e819] [cursor=pointer]
+          - paragraph [ref=e824]: Yes. The degree is awarded by Yashwantrao Chavan Maharashtra Open University (YCMOU), a state university established by an Act of the Maharashtra State Legislature. It is recognized by the University Grants Commission (UGC) and the Association of Indian Universities (AIU), and holds an ‘A’ Grade accreditation by NAAC. The degree is at par with degrees granted by all Indian universities.
+        - generic [ref=e825]:
+          - button "How does the dual internship program work across 5-star hotel brands?" [ref=e826] [cursor=pointer]
+          - paragraph [ref=e831]: Lexicon HMCT incorporates dual industrial training internships into the 3-year curriculum. Students undergo practical field immersion at leading luxury hotel partners, such as Marriott, The Ritz Carlton, Conrad, Taj, and The Oberoi Group, gaining real-time operational expertise in food production, service, front office, and housekeeping, culminating in a 300-mark capstone internship in Semester 6.
+        - generic [ref=e832]:
+          - button "Do students receive foreign language certifications during the course?" [ref=e833] [cursor=pointer]
+          - paragraph [ref=e838]: Yes. Given the global nature of luxury hospitality, students receive professional certifications in Spoken French and Executive Spoken English as part of their academic curriculum. This language capability gives our graduates a decisive edge during international hotel recruitments and cruise liner interviews.
+        - generic [ref=e839]:
+          - button "What career roles and opportunities are available after graduation?" [ref=e840] [cursor=pointer]
+          - paragraph [ref=e845]: Graduates step directly into corporate Management Trainee (MT) and Operational Trainee (OT) roles across 5-star hotel chains, fine dining restaurant groups, luxury cruise lines, international airlines (cabin crew and ground operations), event management companies, facility management MNCs, and cloud kitchen enterprises.
+        - generic [ref=e846]:
+          - button "How does the Part-A and Part-B fee payment structure work?" [ref=e847] [cursor=pointer]
+          - paragraph [ref=e852]: "The total course fee (approx. ₹6,50,000 for 3 years) is transparently bifurcated: Part-A (₹5,20,226 total; ₹1,73,408 per year) covers Lexicon HMCT department skills modules, lab supplies, professional certifications, and grooming; Part-B (₹1,29,774 total; approx. ₹43,258 per year) is paid directly by the student to YCMOU on the university’s official online portal."
+    - generic [ref=e855]:
+      - generic [ref=e856]:
+        - generic [ref=e857]:
+          - paragraph [ref=e858]: BATCH 2027-30 ADMISSIONS OPEN
+          - heading "Start Your Hospitality Journey Today." [level=2] [ref=e859]: Start Your HospitalityJourney Today.
+          - paragraph [ref=e860]: Ready to Step In as a Day Zero Professional?Secure your seat and early scholarship consideration.
+          - generic [ref=e861]:
+            - link "Apply Now ↗" [ref=e862] [cursor=pointer]:
+              - /url: https://admissions.lexiconmile.com/
+              - text: Apply Now
+              - generic [ref=e863]: ↗
+            - button "Download Brochure" [ref=e864] [cursor=pointer]
+          - generic [ref=e868]:
+            - generic [ref=e869]:
+              - strong [ref=e870]: "HMCT Admissions Helpline:"
+              - link "+91 88550 13525" [ref=e871] [cursor=pointer]:
+                - /url: tel:+918855013525
+              - text: •
+              - link "+91 89560 59559" [ref=e872] [cursor=pointer]:
+                - /url: tel:+918956059559
+            - generic [ref=e873]:
+              - strong [ref=e874]: "Email Desk:"
+              - link "admission.hmct@mile.education" [ref=e875] [cursor=pointer]:
+                - /url: mailto:admission.hmct@mile.education
+        - generic [ref=e876]:
+          - img "Campus environment" [ref=e877]
+          - generic [aria-hidden]: ↗
+      - generic [ref=e878]:
+        - generic [ref=e879]: THE FUTURE DOESN'T WAIT. NEITHER SHOULD YOU.
+        - generic [ref=e880]: LEXICON HMCT & MILE / PUNE
+  - contentinfo [ref=e881]:
+    - generic [ref=e882]:
+      - generic [ref=e883]:
+        - generic [ref=e884]:
+          - link "Lexicon MILE home" [ref=e885] [cursor=pointer]:
+            - /url: http://localhost:8080/index.html
+            - img "Lexicon MILE"
+          - paragraph [ref=e886]: Building future-ready leaders through industry-integrated business education.
+          - generic [ref=e887]: Pune, Maharashtra, India
+          - link "Let's start a conversation ↗" [ref=e889] [cursor=pointer]:
+            - /url: http://localhost:8080/contact.html
+        - generic [ref=e890]:
+          - heading "QUICK LINKS" [level=3] [ref=e891]
+          - link "PGDM Fee Portal" [ref=e892] [cursor=pointer]:
+            - /url: http://localhost:8080/fee.html
+          - link "Contact" [ref=e893] [cursor=pointer]:
+            - /url: http://localhost:8080/contact.html
+          - link "Careers" [ref=e894] [cursor=pointer]:
+            - /url: http://localhost:8080/careers-at-lexicon-mile.html
+          - link "Blog" [ref=e895] [cursor=pointer]:
+            - /url: http://localhost:8080/lexicon-blog.html
+          - link "Events & Webinar" [ref=e896] [cursor=pointer]:
+            - /url: http://localhost:8080/events-webinars.html
+          - link "Partnerships" [ref=e897] [cursor=pointer]:
+            - /url: http://localhost:8080/partnerships.html
+          - link "Alumni" [ref=e898] [cursor=pointer]:
+            - /url: http://localhost:8080/alumni.html
+          - link "Campus Tour" [ref=e899] [cursor=pointer]:
+            - /url: http://localhost:8080/campus-tour.html
+          - link "360° Virtual Tour" [ref=e900] [cursor=pointer]:
+            - /url: http://localhost:8080/virtual-tour.html
+        - generic [ref=e901]:
+          - heading "PGDM/MBA GLOBAL" [level=3] [ref=e902]
+          - link "PGDM Eligibility" [ref=e903] [cursor=pointer]:
+            - /url: http://localhost:8080/admission.html#eligibility
+          - link "How to Apply for MBA Global" [ref=e904] [cursor=pointer]:
+            - /url: http://localhost:8080/admission.html#how-to-apply
+          - link "PGDM/MBA Global Course Fees" [ref=e905] [cursor=pointer]:
+            - /url: http://localhost:8080/fee.html
+          - link "PGDM/MBA Global Scholarship" [ref=e906] [cursor=pointer]:
+            - /url: http://localhost:8080/scholarship.html
+        - generic [ref=e907]:
+          - heading "EXPLORE" [level=3] [ref=e908]
+          - link "FAQ'S" [ref=e909] [cursor=pointer]:
+            - /url: http://localhost:8080/faqs.html
+          - link "Mandatory Disclosure" [ref=e910] [cursor=pointer]:
+            - /url: http://localhost:8080/mandatory-disclosure-lexicon-mile.html
+          - 'link "Self Assessment Report (SAAR) : Marketing & Finance" [ref=e911] [cursor=pointer]':
+            - /url: https://lexiconmile.com/wp-content/uploads/2027/02/Updated-Self-Assesment-Report-SAR-Marketing-Finance-submitted-on-31st-Jan-2027.pdf
+          - link "Audit Report" [ref=e912] [cursor=pointer]:
+            - /url: https://lexiconmile.com/wp-content/uploads/2027/02/Audit-Report.pdf
+          - link "Student Rules & Regulation" [ref=e913] [cursor=pointer]:
+            - /url: http://localhost:8080/student-rules-regulations.html
+          - link "Partnerships" [ref=e914] [cursor=pointer]:
+            - /url: http://localhost:8080/partnerships.html
+          - link "Research Publications" [ref=e915] [cursor=pointer]:
+            - /url: http://localhost:8080/research.html
+          - link "Anti Ragging Cell" [ref=e916] [cursor=pointer]:
+            - /url: https://lexiconmile.com/wp-content/uploads/2025/11/Anti-Ragging-Committee.pdf
+        - generic [ref=e917]:
+          - heading "INFORMATION" [level=3] [ref=e918]
+          - generic [ref=e919]:
+            - strong [ref=e920]: For Admission Enquiries
+            - generic [ref=e921]: "Phone: +91 99674 27278"
+            - generic [ref=e922]: "Phone: +91 8956059559"
+            - generic [ref=e923]: "Email: admissions@mile.education"
+          - generic [ref=e924]:
+            - strong [ref=e925]: For Placement Queries
+            - generic [ref=e926]: "Phone: +91 99674 27278"
+            - generic [ref=e927]: "Email: placements@mile.education"
+          - generic [ref=e928]:
+            - strong [ref=e929]: For Other Queries
+            - generic [ref=e930]: "Phone: +91 91460 14951"
+            - generic [ref=e931]: "Email: info@mile.education"
+      - generic [aria-hidden] [ref=e932]: LEARN IT BUILD IT LIVE IT
+      - generic [ref=e933]:
+        - generic [ref=e934]:
+          - generic [ref=e935]:
+            - link "Privacy Policy" [ref=e936] [cursor=pointer]:
+              - /url: http://localhost:8080/privacy-policy.html
+            - link "Terms & Conditions" [ref=e937] [cursor=pointer]:
+              - /url: http://localhost:8080/terms-conditions.html
+          - generic [ref=e938]:
+            - link "Facebook" [ref=e939] [cursor=pointer]:
+              - /url: https://www.facebook.com/LexiconMILE
+            - link "Instagram" [ref=e942] [cursor=pointer]:
+              - /url: https://www.instagram.com/lexicon_mile_/
+            - link "YouTube" [ref=e945] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCufTVHSl_Md5L9zeWUBwsew
+            - link "LinkedIn" [ref=e948] [cursor=pointer]:
+              - /url: https://www.linkedin.com/school/lexicon-mile/
+            - link "WhatsApp" [ref=e951] [cursor=pointer]:
+              - /url: https://api.whatsapp.com/send/?phone=%2B919967427278&text&type=phone_number&app_absent=0
+        - generic [ref=e954]: An initiative of Sukhdev and Kamal Sharma Educational Trust
+        - generic [ref=e955]:
+          - generic [ref=e956]: © Copyright LexiconMile. All Rights Reserved. Designed by Lexicon
+          - link "Back to top" [ref=e957] [cursor=pointer]:
+            - /url: "#"
+            - text: BACK TO TOP ↑
+  - complementary "Quick actions" [ref=e958]:
+    - button "Apply now" [ref=e959] [cursor=pointer]
+    - button "Download brochure" [ref=e961] [cursor=pointer]
+    - button "WhatsApp contact information" [ref=e963] [cursor=pointer]
+    - button "Call contact information" [ref=e965] [cursor=pointer]
+  - status
