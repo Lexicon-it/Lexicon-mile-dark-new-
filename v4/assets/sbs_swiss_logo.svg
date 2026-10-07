@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70">
+  <!-- SBS Bold Letters in Navy Blue matching official branding -->
+  <text x="0" y="38" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="42" font-weight="900" fill="#073b75" letter-spacing="-1">SBS</text>
+  
+  <!-- Swiss Red Box with Cross -->
+  <g transform="translate(94, 6)">
+    <rect width="36" height="36" rx="6" fill="#e11d48"/>
+    <!-- Swiss White Cross -->
+    <rect x="15" y="8" width="6" height="20" rx="1" fill="#ffffff"/>
+    <rect x="8" y="15" width="20" height="6" rx="1" fill="#ffffff"/>
+  </g>
+
+  <!-- Subtitle: SWISS BUSINESS SCHOOL -->
+  <text x="2" y="55" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#073b75" letter-spacing="1.5">SWISS BUSINESS SCHOOL</text>
+  <text x="180" y="55" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="10" font-weight="800" fill="#e11d48" letter-spacing="1">RAK</text>
+</svg>
