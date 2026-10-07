@@ -155,7 +155,7 @@ const megaMenuData = {
   },
   'scholarships': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">SCHOLARSHIPS</h4>
-               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE offers scholarships designed to recognise academic excellence and support deserving students by reducing the financial burden of management education. For the PGDM 2027–29 batch, scholarships are based on entrance examination performance, with awards up to ₹1,00,000 for CAT, ₹75,000 for CMAT and ₹50,000 for MAT. Scholarships are limited and subject to applicable conditions.</p>
+               <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE offers scholarships designed to recognise academic excellence and support deserving students by reducing the financial burden of management education. For the PGDM 2027–29 batch, scholarships are based on entrance examination performance, with awards up to ₹75,000 for CAT, ₹50,000 for CMAT and ₹25,000 for MAT. Scholarships are limited and subject to applicable conditions.</p>
                <a href="scholarship.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Full Scholarship Criteria & Terms <span>↗</span></a>`,
     image: `<img src="images/placement/scholarship.jpeg" alt="Scholarships" class="mega-image">`
   },
