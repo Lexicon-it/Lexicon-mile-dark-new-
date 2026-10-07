@@ -16065,3 +16065,50 @@ a.mega-link-large {
     100% { transform: translateX(calc(-50% - 11px)); }
 }
 
+/* ==========================================================================
+   RECRUITER MARQUEE SECTION
+   ========================================================================== */
+.recruiter-marquee-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+    margin: 40px auto 30px;
+}
+
+.recruiter-marquee-track {
+    display: flex;
+    gap: 15px;
+    width: max-content;
+    animation: scroll-recruiters 45s linear infinite;
+}
+
+.recruiter-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.recruiter-marquee-card {
+    width: 200px;
+    height: 120px;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.recruiter-marquee-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: none;
+}
+
+@keyframes scroll-recruiters {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 7.5px)); }
+}
+
