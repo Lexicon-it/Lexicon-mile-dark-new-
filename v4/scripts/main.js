@@ -6,7 +6,7 @@ const megaMenuData = {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">OVERVIEW</h4>
                <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Founded in 2006 in Pune, The Lexicon Group has evolved into a premier educational and business leader, empowering individuals at every stage of life through diverse initiatives. The group continues to create opportunities for learning, growth and development with a strong focus on excellence.</p>
                <a href="about-lexicon.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Learn More About Lexicon MILE <span>↗</span></a>`,
-    image: `<img src="images/06.Banner.png" alt="About Lexicon" class="mega-image">`
+    image: `<img src="images/placement/collage%20image.png" alt="About Lexicon" class="mega-image">`
   },
   'lexicon-group': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">LEXICON GROUP</h4>
@@ -127,7 +127,7 @@ const megaMenuData = {
                   </a>
                 </div>
                <p style="color: #b1bfd2; font-size: 12.5px; line-height: 1.5; margin: 0;">Comprehensive breakdown including statutory tuition, development fees, scheduled milestone installments, wire transfer account numbers, and 100% educational loan facilitation.</p>`,
-    image: `<img src="images/campus.jpg" alt="Fees Structure" class="mega-image">`
+    image: `<img src="images/placement/fee structure.jpeg" alt="Fees Structure" class="mega-image">`
   },
   'pgdm-fee-structure': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">PGDM FEE STRUCTURE</h4>
@@ -148,8 +148,8 @@ const megaMenuData = {
   'bba-fee-structure': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 5px;">BBA FEE STRUCTURE</h4>
                <span style="display: inline-block; padding: 3px 8px; background: rgba(240, 86, 36, 0.15); color: #f05624; font-size: 11px; font-weight: 700; border-radius: 4px; margin-bottom: 8px;">Batch 2027–30 · SPPU Pune · NEP 2020</span>
-               <p style="color: #ffffff; font-size: 14px; font-weight: 700; margin: 0 0 6px 0;">3-Year Grand Total: ₹5,70,000 <span style="font-weight: 400; color: #94a3b8; font-size: 12px;">(₹1,90,000 / year)</span></p>
-               <p style="color: #b1bfd2; font-size: 13px; line-height: 1.6; margin-bottom: 10px;">Scheduled across 3 academic years: Enrolment (₹15,000), Part-A Tuition (₹20,000-₹35,000), Development Fee (₹3,500), and Part-B Industry Skills (₹1,51,500). Optional 4th Year Honours at ₹1,50,000.</p>
+               <p style="color: #ffffff; font-size: 14px; font-weight: 700; margin: 0 0 6px 0;">3-Year Grand Total: ₹4,50,000 <span style="font-weight: 400; color: #94a3b8; font-size: 12px;">(₹1,50,000 / year installments)</span></p>
+               <p style="color: #b1bfd2; font-size: 13px; line-height: 1.6; margin-bottom: 10px;">Scheduled across 3 academic years: Enrolment (₹15,000), Part-A Tuition (₹20,000-₹35,000), Development Fee (₹3,500), and Part-B Industry Skills (₹1,11,500). Optional 4th Year Honours at ₹1,50,000.</p>
                <a href="fee-bba.html" class="mega-link" style="color: #f05624; font-weight: 600; font-size: 12px;">View Full BBA Fee Schedule & Bank A/C <span>↗</span></a>`,
     image: `<img src="images/collaboration.jpg" alt="BBA Fees" class="mega-image">`
   },
@@ -157,7 +157,7 @@ const megaMenuData = {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">SCHOLARSHIPS</h4>
                <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE offers scholarships designed to recognise academic excellence and support deserving students by reducing the financial burden of management education. For the PGDM 2027–29 batch, scholarships are based on entrance examination performance, with awards up to ₹1,00,000 for CAT, ₹75,000 for CMAT and ₹50,000 for MAT. Scholarships are limited and subject to applicable conditions.</p>
                <a href="scholarship.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">View Full Scholarship Criteria & Terms <span>↗</span></a>`,
-    image: `<img src="images/hero.jpg" alt="Scholarships" class="mega-image">`
+    image: `<img src="images/placement/scholarship.jpeg" alt="Scholarships" class="mega-image">`
   },
   'admission-guide': {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">ADMISSION GUIDE</h4>
@@ -183,7 +183,7 @@ const megaMenuData = {
     overview: `<h4 class="mega-heading" style="margin-bottom: 6px;">FACULTY DIRECTORY</h4>
                <p style="color: #b1bfd2; font-size: 13.5px; line-height: 1.55; margin: 0 0 10px 0;">Lexicon MILE’s faculty directory brings together accomplished academic scholars and experienced industry practitioners across management, analytics, marketing, business communication and specialised areas.</p>
                <a href="faculty.html" class="mega-link" style="color: #8cb4f5; font-weight: 600; font-size: 12px;">Explore Full Faculty Profiles <span>↗</span></a>`,
-    image: `<img src="images/global.jpg" alt="Faculty Directory" class="mega-image">`
+    image: `<img src="images/placement/faculty directory.jpeg" alt="Faculty Directory" class="mega-image">`
   },
 
   // Placements
